@@ -182,9 +182,9 @@ button.mainbutton:focus
 	width: 175px;
 	margin: 10px;
     border:10px solid white;
-    border-radius: 500px;
-    -webkit-border-radius: 500px;
-    -moz-border-radius: 500px;
+    border-radius: 300px;
+    -webkit-border-radius: 300px;
+    -moz-border-radius: 300px;
 	-webkit-filter: grayscale(100%); 
 	filter: grayscale(100%);
 	filter: gray;
@@ -202,7 +202,6 @@ button.mainbutton:focus
 .about
 {
 	width: 100%;
-
 	background-color: #2AB996;
 }
 .blog
@@ -210,15 +209,17 @@ button.mainbutton:focus
 	margin-bottom: 100px;
 }
 
-.blog p
-{
-	text-align: left;
-}
-.blog h2
-{
-	text-align: left;
+.slider-carousel #date h4 {
+	color: #fff;
+	margin-top: 30px;
+	font-size: 15px;
 }
 
+.hide-bullets {
+	list-style:none;
+	margin-left: -40px;
+	margin-top:20px;
+}
 
 .contact .contact-section
 {
