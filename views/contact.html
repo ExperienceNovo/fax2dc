@@ -1,0 +1,153 @@
+<html lang="en">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<meta charset="utf-8">
+		<title>Welcome to NOVO</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		
+		<link href="../static/css/bootstrap.min.css" rel="stylesheet">
+		<link href="../static/css/styles.css" rel="stylesheet">
+		<link href="favicon.ico" rel="icon" type="image/x-icon" />
+		<link href="../static/css/font-awesome.min.css" rel="stylesheet">
+		<link href="../static/css/bootstrap-social.css" rel="stylesheet" >
+		
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+		<script>window.jQuery || document.write('<script src="../static/js/jquery-2.1.4.min"><\/script>')</script>
+		<!--[if lt IE 9]>
+			<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+		<!--[if lt IE 9]>
+			 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+		<![endif]-->
+
+</head>
+
+<body>
+	<div class="wrapper">
+		<div class="box">
+			<div class="row row-offcanvas row-offcanvas-left">
+				<div class="column col-sm-2 col-xs-1 sidebar-offcanvas" id="sidebar">
+				
+					
+					<div id="logos">
+						<ul class="nav hidden-xs hidden-md" id="lg-menu">
+							<div id="logo" align="center">
+								<img src="../static/img/logo.png"/>
+							</div>
+						</ul>
+						<ul class="nav visible-xs visible-md" id="xs-menu">
+							<div id="xs" align="center">
+								<img src="../static/img/tri.png"/>
+							</div>
+						</ul>
+					</div>
+				   
+					<div id="sidenav" align="center">
+						<ul class="nav hidden-xs" id="lg-menu">
+							<li class="active activeicon"><a href="#" id="load_home"><i class="fa fa-home"></i><span>Home</span></a></li>
+							<li><a href="#" id="load_team" ><i class="fa fa-users"></i><span>The Team</span></a></li>
+							<li><a href="#" id="load_contact"><i class="fa fa-comments"></i><span>Contact</span></a></li>
+							<li><a href="#" id="load_blog"><i class="fa fa-newspaper-o"></i><span>Blog</span></a></li>
+						</ul>
+					</div>
+					
+					<div align="center">
+						<ul class="list-unstyled hidden-xs" id="sidebar-footer">
+							<a href="https://www.facebook.com/experienceNOVO" target="_blank" class="btn btn-social-icon btn-facebook" style="background-color: #1C1C1C"><i class="fa fa-facebook"></i></a>
+							<a class="btn btn-social-icon btn-google" style="background-color: #1C1C1C"><i class="fa fa-google-plus"></i></a>
+							<a class="btn btn-social-icon btn-linkedin" style="background-color: #1C1C1C"><i class="fa fa-linkedin"></i></a>
+							<a href="https://twitter.com/experienceNOVO" target="_blank" class="btn btn-social-icon btn-twitter" style="background-color: #1C1C1C"><i class="fa fa-twitter"></i></a>
+						</ul>
+					</div>
+				  
+					<div align="center" id="icons" >
+						<ul class="nav visible-xs" id="xs-menu">
+							<li class="activeicon"><a href="index.html"><i class="fa fa-home"></i></a></li>
+							<li><a href="#" id="load_team_icon"><i class="fa fa-users"></i></a></li>
+							<li><a href="#" id="load_contact_icon"><i class="fa fa-comments"></i></a></li>
+							<li><a href="#" id="load_blog_icon"><i class="fa fa-newspaper-o"></i></a></li>
+						</ul>
+					</div>
+					
+					<div align="center" id="social">
+						<ul class="nav visible-xs" id="xs-menu">
+							<a href="https://www.facebook.com/experienceNOVO" target="_blank" class="btn btn-social-icon btn-facebook" style="background-color: #1C1C1C"><i class="fa fa-facebook"></i></a>
+							<a target="_blank" class="btn btn-social-icon btn-google" style="background-color: #1C1C1C"><i class="fa fa-google-plus"></i></a>
+							<a target="_blank" class="btn btn-social-icon btn-linkedin" style="background-color: #1C1C1C"><i class="fa fa-linkedin"></i></a>
+							<a target="_blank" class="btn btn-social-icon btn-twitter" style="background-color: #1C1C1C"><i class="fa fa-twitter"></i></a>
+						</ul>
+					</div>
+					
+				</div>
+			  
+				<div class="column col-sm-10 col-xs-11" id="main">
+					<div id="content">
+						<div id="title">
+							<h1><span>Contact</span></h1>
+							<p></p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+		<script src="../static/js/bootstrap.min.js"></script>
+		<script src="../static/js/email.js"></script>
+		
+		<script type="text/javascript">
+			$(function(){
+				$('.nav a').click(function(){
+
+					$('.nav .active').removeClass('active');
+					$(this).addClass('active');
+					$('.nav .activeicon').removeClass('activeicon');
+					$(this).addClass('activeicon');
+
+				});
+			});
+		</script>
+		
+		<script type="text/javascript">
+		
+			$(document).ready( function() {
+				$("#load_home").on("click", function() {
+					$("#content").load("../views/home.html");
+				});
+			});
+			$(document).ready( function() {
+				$("#load_team").on("click", function() {
+					$("#content").load("../views/team.html #content");
+				});
+			});
+			$(document).ready( function() {
+				$("#load_contact").on("click", function() {
+					$("#content").load("../views/contact.html #content");
+				});
+			});
+			$(document).ready( function() {
+				$("#load_blog").on("click", function() {
+					$("#content").load("../views/blog.html #content");
+				});
+			});
+			
+			$(document).ready( function() {
+				$("#load_team_icon").on("click", function() {
+					$("#content").load("../views/team.html #content");
+				});
+			});
+			$(document).ready( function() {
+				$("#load_contact_icon").on("click", function() {
+					$("#content").load("../views/contact.html #content");
+				});
+			});
+			$(document).ready( function() {
+				$("#load_blog_icon").on("click", function() {
+					$("#content").load("../views/blog.html #content");
+				});
+			});
+
+		</script>
+		
+	</body>
+</html>
