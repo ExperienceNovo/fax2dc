@@ -53,7 +53,7 @@
 				  
 					<div align="center" id="icons" >
 						<ul class="nav visible-xs" id="xs-menu">
-							<li class="activeicon"><a href="index.html"><i class="fa fa-home"></i></a></li>
+							<li class="activeicon"><a href="#" id="load_home_icon"><i class="fa fa-home"></i></a></li>
 							<li><a href="#" id="load_team_icon"><i class="fa fa-users"></i></a></li>
 							<li><a href="#" id="load_contact_icon"><i class="fa fa-comments"></i></a></li>
 							<li><a href="#" id="load_blog_icon"><i class="fa fa-newspaper-o"></i></a></li>
@@ -127,7 +127,11 @@
 					$("#content").load("views/blog.html #content");
 				});
 			});
-			
+			$(document).ready( function() {
+				$("#load_home_icon").on("click", function() {
+					$("#content").load("views/home.html");
+				});
+			});
 			$(document).ready( function() {
 				$("#load_team_icon").on("click", function() {
 					$("#content").load("views/team.html #content");
