@@ -134,20 +134,27 @@ hr {
 	margin-bottom: 70px;
 }
 
-
-#title h1 span {
-  background: #F2F2F2;
-  padding: 0 35px;
-  text-align : center;
-  font-family: Jura;
-  font-size: 80px;
-  color: #2AB996;
+.decorated{
+    overflow: hidden;
+    text-align: center;
+ }
+.decorated > span{
+    position: relative;
+    display: inline-block;
 }
-
-#title h1+* {
-  border-top: solid 4px #000;
-  padding-top: 50px;
-  margin-top: -50px;
+.decorated > span:before, .decorated > span:after{
+    content: '';
+    position: absolute;
+    top: 50%;
+    border-bottom: 2px solid;
+    width: 592px;
+    margin: 0 20px;
+}
+.decorated > span:before{
+    right: 100%;
+}
+.decorated > span:after{
+    left: 100%;
 }
 
 
