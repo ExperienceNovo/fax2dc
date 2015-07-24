@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 	<head>
 		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
@@ -10,68 +11,119 @@
 		<link href="favicon.ico" rel="icon" type="image/x-icon" />
 		<link href="static/css/font-awesome.min.css" rel="stylesheet">
 		<link href="static/css/bootstrap-social.css" rel="stylesheet" >
+        <link href="static/css/responsive.css" rel="stylesheet" type="text/css"/>
 
 </head>
 
 <body>
+<div class="index-container">
 	<div class="wrapper">
 		<div class="box">
 			<div class="row row-offcanvas row-offcanvas-left">
-				<div class="column col-sm-2 col-xs-1 sidebar-offcanvas" id="sidebar">
+
+				<div class="col-sm-2 col-xs-2 sidebar-offcanvas" id="sidebar">
 				
-					
-					<div id="logos">
-						<ul class="nav hidden-xs hidden-md" id="lg-menu">
-							<div id="logo" align="center">
-								<img src="static/img/logo.png"/>
-							</div>
-						</ul>
-						<ul class="nav visible-xs visible-md" id="xs-menu">
-							<div id="xs" align="center">
-								<img src="static/img/tri.png"/>
-							</div>
-						</ul>
-					</div>
+                    <div class="nav hidden-xs hidden-sm" id="lg-menu">
+                        <img src="static/img/logo.png"/>
+                    </div>
+                        
+                    <div class="nav visible-xs visible-sm" id="xs">
+                        <img src="static/img/tri.png"/>                                 
+                    </div>
 				   
-					<div id="sidenav" align="center">
-						<ul class="nav hidden-xs" id="lg-menu">
-							<li class="active activeicon"><a href="#" id="load_home"><i class="fa fa-home"></i><span>Home</span></a></li>
-							<li><a href="#" id="load_team" ><i class="fa fa-users"></i><span>The Team</span></a></li>
-							<li><a href="#" id="load_contact"><i class="fa fa-comments"></i><span>Contact</span></a></li>
-							<li><a href="#" id="load_blog"><i class="fa fa-newspaper-o"></i><span>Blog</span></a></li>
-						</ul>
-					</div>
-					
-					<div align="center">
-						<ul class="list-unstyled hidden-xs" id="sidebar-footer">
-							<a href="https://www.facebook.com/experienceNOVO" target="_blank" class="btn btn-social-icon btn-facebook" style="background-color: #1C1C1C"><i class="fa fa-facebook"></i></a>
-							<a class="btn btn-social-icon btn-google" style="background-color: #1C1C1C"><i class="fa fa-google-plus"></i></a>
-							<a class="btn btn-social-icon btn-linkedin" style="background-color: #1C1C1C"><i class="fa fa-linkedin"></i></a>
-							<a href="https://twitter.com/experienceNOVO" target="_blank" class="btn btn-social-icon btn-twitter" style="background-color: #1C1C1C"><i class="fa fa-twitter"></i></a>
-						</ul>
-					</div>
+                        <div id="sidenav">
+                            <div class="row">
+                                    <ul class="nav hidden-xs hidden-sm">
+                                        <li class="active activeicon">
+                                            <a href="#">
+                                                <i class="fa fa-home"></i>
+                                                <span>Home</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" >
+                                                <i class="fa fa-users"></i>
+                                                <span>The Team</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <i class="fa fa-comments"></i>
+                                                <span>Contact</span>
+                                            </a>
+                                        </li>
+                                        <!--<li><a href="#" id="load_blog"><i class="fa fa-newspaper-o"></i><span>Blog</span></a></li> /-->
+                                    </ul>
+                                    <ul class="nav visible-sm" id="lg-2">
+                                        <li class="active activeicon">
+                                            <a href="#">
+                                                <i class="fa fa-home"></i>
+                                                <br>
+                                                <span>Home</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" >
+                                                <i class="fa fa-users"></i>
+                                                <br>
+                                                <span>The Team</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <i class="fa fa-comments"></i>
+                                                <br>
+                                                <span>Contact</span>
+                                            </a>
+                                        </li>
+                                        <!--<li><a href="#" id="load_blog"><i class="fa fa-newspaper-o"></i><span>Blog</span></a></li> /-->
+                                    </ul>
+                            </div>
+                        </div>
+
+				<ul class="list-unstyled hidden-xs" id="sidebar-footer">
+				    <a href="https://www.facebook.com/experienceNOVO" target="_blank" class="btn btn-social-icon btn-facebook" style="background-color: #1C1C1C"><i class="fa fa-facebook"></i></a>
+				    <a class="btn btn-social-icon btn-google" style="background-color: #1C1C1C"><i class="fa fa-google-plus"></i></a>
+				    <a class="btn btn-social-icon btn-linkedin" style="background-color: #1C1C1C"><i class="fa fa-linkedin"></i></a>
+				    <a href="https://twitter.com/experienceNOVO" target="_blank" class="btn btn-social-icon btn-twitter" style="background-color: #1C1C1C"><i class="fa fa-twitter"></i></a>
+				</ul>
 				  
-					<div align="center" id="icons" >
-						<ul class="nav visible-xs" id="xs-menu">
-							<li class="activeicon"><a href="#" id="load_home_icon"><i class="fa fa-home"></i></a></li>
-							<li><a href="#" id="load_team_icon"><i class="fa fa-users"></i></a></li>
-							<li><a href="#" id="load_contact_icon"><i class="fa fa-comments"></i></a></li>
-							<li><a href="#" id="load_blog_icon"><i class="fa fa-newspaper-o"></i></a></li>
-						</ul>
-					</div>
+				<ul class="nav visible-xs" id="xs-menu" style="font-size: 25px">
+				    <li class="activeicon"><a href="#"><i class="fa fa-home"></i></a></li>
+				    <li><a href="#"><i class="fa fa-users"></i></a></li>
+				    <li><a href="#"><i class="fa fa-comments"></i></a></li>
+                    <!-- <li><a href="#" id="load_blog_icon"><i class="fa fa-newspaper-o"></i></a></li> /-->
+				</ul>
+                    
+                <ul class="nav" id="xs-menu-2" style="font-size: 30px">
+				    <li class="activeicon"><a href="#"><i class="fa fa-home "></i></a></li>
+				    <li><a href="#"><i class="fa fa-users"></i></a></li>
+				    <li><a href="#"><i class="fa fa-comments"></i></a></li>
+                    <!-- <li><a href="#" id="load_blog_icon"><i class="fa fa-newspaper-o"></i></a></li> /-->
+				</ul>
 					
-					<div align="center" id="social">
-						<ul class="nav visible-xs" id="xs-menu">
-							<a href="https://www.facebook.com/experienceNOVO" target="_blank" class="btn btn-social-icon btn-facebook" style="background-color: #1C1C1C"><i class="fa fa-facebook"></i></a>
-							<a target="_blank" class="btn btn-social-icon btn-google" style="background-color: #1C1C1C"><i class="fa fa-google-plus"></i></a>
-							<a target="_blank" class="btn btn-social-icon btn-linkedin" style="background-color: #1C1C1C"><i class="fa fa-linkedin"></i></a>
-							<a target="_blank" class="btn btn-social-icon btn-twitter" style="background-color: #1C1C1C"><i class="fa fa-twitter"></i></a>
-						</ul>
-					</div>
+				<ul class="nav visible-sm" id="social-sm">
+                    <div class="col-sm-12">
+                        <a target="_blank" class="btn btn-social-icon btn-facebook" style="background-color: #1C1C1C;"><i class="fa fa-facebook"></i></a>
+                        <a target="_blank" class="btn btn-social-icon btn-google" style="background-color: #1C1C1C"><i class="fa fa-google-plus"></i></a>
+                    </div>
+                    <div class="col-sm-12">
+                        <a target="_blank" class="btn btn-social-icon btn-linkedin" style="background-color: #1C1C1C;"><i class="fa fa-linkedin"></i></a>
+                        <a target="_blank" class="btn btn-social-icon btn-twitter" style="background-color: #1C1C1C"><i class="fa fa-twitter"></i></a>           
+                    </div>
+				</ul>
+                    
+                <ul class="nav visible-xs" id="social">
+                    
+				    <a target="_blank" class="btn btn-social-icon btn-facebook" style="background-color: #1C1C1C"><i class="fa fa-facebook"></i></a>
+				    <a target="_blank" class="btn btn-social-icon btn-google" style="background-color: #1C1C1C"><i class="fa fa-google-plus"></i></a>
+				    <a target="_blank" class="btn btn-social-icon btn-linkedin" style="background-color: #1C1C1C"><i class="fa fa-linkedin"></i></a>
+				    <a target="_blank" class="btn btn-social-icon btn-twitter" style="background-color: #1C1C1C"><i class="fa fa-twitter"></i></a>
+				</ul>
 					
 				</div>
 			  
-				<div class="column col-sm-10 col-xs-11" id="main">
+				<div class="column col-sm-10 col-xs-10" id="main">
 					<div id="content">
 						<div id="home"></div>
 					</div>
@@ -79,7 +131,7 @@
 			</div>
 		</div>
 	</div>
-	
+</div>
 	
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js" type="text/javascript"></script>
 		<script>window.jQuery || document.write('<script src="static/js/jquery-2.1.4.min"><\/script>')</script>
@@ -103,51 +155,6 @@
 
 				});
 			});
-		</script>
-		
-		<script type="text/javascript">
-		
-			$(document).ready( function() {
-				$("#load_home").on("click", function() {
-					$("#content").load("views/home.html");
-				});
-			});
-			$(document).ready( function() {
-				$("#load_team").on("click", function() {
-					$("#content").load("views/team.html");
-				});
-			});
-			$(document).ready( function() {
-				$("#load_contact").on("click", function() {
-					$("#content").load("views/contact.html");
-				});
-			});
-			$(document).ready( function() {
-				$("#load_blog").on("click", function() {
-					$("#content").load("views/blog.html");
-				});
-			});
-			$(document).ready( function() {
-				$("#load_home_icon").on("click", function() {
-					$("#content").load("views/home.html");
-				});
-			});
-			$(document).ready( function() {
-				$("#load_team_icon").on("click", function() {
-					$("#content").load("views/team.html");
-				});
-			});
-			$(document).ready( function() {
-				$("#load_contact_icon").on("click", function() {
-					$("#content").load("views/contact.html");
-				});
-			});
-			$(document).ready( function() {
-				$("#load_blog_icon").on("click", function() {
-					$("#content").load("views/blog.html");
-				});
-			});
-
 		</script>
 		
 		<script type="text/javascript">
