@@ -1,8 +1,4 @@
 {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> beb8a7529cd21f66d1fd3e9e7c0854a3dfde55c3
   "name": "1.0.0",
   "private": true,
   "version": "0.0.0",
@@ -45,55 +41,13 @@
     "debug": "node debug app.js"
   },
   "main": "app.js",
-<<<<<<< HEAD
-=======
-  "name": "NOVO",
-  "version": "0.1.0",
-  "description": "NOVO",
-  "main": "index.js",
-  "scripts": {
-    "start": "node index.js"
-  },
-  "dependencies": {
-    "express": "^4.9.5",
-    "socket.io" : "^1.1.0",
-    "ejs": "~1.0",
-    "jquery" :">=2.1.0",
-    "pg": "2.x",
-    "connect-flash" : "~0.1.1",   
-    "bcrypt-nodejs" : "latest",
-    "utf8" : "2.0.0"
-  },
-  "engines": {
-    "node": "0.10.x"
-  },
->>>>>>> f1b034c18ede326a6331450bda0e713f5207ca49
-=======
->>>>>>> beb8a7529cd21f66d1fd3e9e7c0854a3dfde55c3
+
   "repository": {
     "type": "git",
     "url": "https://github.com/NovoExperience/NOVO.git"
   },
-<<<<<<< HEAD
-<<<<<<< HEAD
+  
   "author": "NOVO",
   "license": ""
 }
-=======
-  "keywords": [
-    "NOVO",
-    "change",
-    "development"
-  ],
-  "author": "NOVO",
-  "contributors": [
-    "Trevor Overman<troverman@gmail.com> (http://www.troverman.com)"
-  ],
-  "license": "MIT"
-}
->>>>>>> f1b034c18ede326a6331450bda0e713f5207ca49
-=======
-  "author": "NOVO",
-  "license": ""
-}
->>>>>>> beb8a7529cd21f66d1fd3e9e7c0854a3dfde55c3
+
