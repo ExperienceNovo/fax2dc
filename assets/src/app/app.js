@@ -1,20 +1,17 @@
 angular.module( 'novo', [
-
     'ui.router',
     'sails.io',
     'angularMoment',
     'lodash',
     'ui.bootstrap',
-
+    'templates-app',
     'services',
     'models',
-
     'novo.sidebar',
     'novo.about',
     'novo.blog',
     'novo.contact',
     'novo.home'
-
 ])
 
 .config( function myAppConfig ( $stateProvider, $urlRouterProvider, $locationProvider ) {
