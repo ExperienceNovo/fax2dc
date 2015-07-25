@@ -10,7 +10,10 @@ angular.module( 'sailng', [
     'sailng.header',
     'sailng.home',
     'sailng.about',
-    'sailng.post'
+    'sailng.member',
+    'sailng.messages',
+    'sailng.post',
+    'sailng.search'
 
 ])
 
