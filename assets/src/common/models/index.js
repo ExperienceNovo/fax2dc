@@ -1,3 +1,6 @@
 angular.module('models', [
-	'models.post'
+	'models.member',
+	'models.message',
+	'models.post',
+	'models.user'
 ]);

@@ -1,4 +1,4 @@
-angular.module( 'novo', [
+angular.module( 'sailng', [
     'ui.router',
     'sails.io',
     'angularMoment',
@@ -7,17 +7,22 @@ angular.module( 'novo', [
     'templates-app',
     'services',
     'models',
-    'novo.sidebar',
-    'novo.about',
-    'novo.blog',
-    'novo.contact',
-    'novo.home'
+    'sailng.header',
+    'sailng.home',
+    'sailng.about',
+    'sailng.member',
+    'sailng.messages',
+    'sailng.post',
+    'sailng.search'
+
 ])
 
 .config( function myAppConfig ( $stateProvider, $urlRouterProvider, $locationProvider ) {
     $urlRouterProvider.when('/about/', '/about');
-    $urlRouterProvider.when('/blog/', '/blog');
-    $urlRouterProvider.when('/contact/', '/contact');
+    $urlRouterProvider.when('/messages/', '/messages');
+    $urlRouterProvider.when('/member/', '/member');
+    $urlRouterProvider.when('/search/', '/search');
+    $urlRouterProvider.when('/post/', '/post');
 
 
     $urlRouterProvider.otherwise(function ($injector, $location) {
@@ -29,7 +34,25 @@ angular.module( 'novo', [
             window.location = $location.$$absUrl;
         }
     });
+
+    /*$routeProvider.when("/", {
+        templateUrl: "/home/index.tpl.html",
+        controller: "HomeCtrl"
+    }).when("/about", {
+        templateUrl: "/about/index.tpl.html",
+        controller: "AboutCtrl"
+    }).when("/messages", {
+        templateUrl: "/messages/index.tpl.html",
+        controller: "MessagesController"
+    }).when("/member", {
+        templateUrl: "/member/index.tpl.html",
+        controller: "MemberCtrl"
+    }).otherwise({
+        redirectTo: "/"
+    });*/
     $locationProvider.html5Mode(true);
+
+
 })
 
 .run( function run () {
