@@ -14,7 +14,7 @@ angular.module( 'novo.home', [
 })
 
 .controller( 'HomeCtrl', function HomeController( $scope, titleService, config ) {
-	titleService.setTitle('conexus');
+	titleService.setTitle('NOVO');
 	$scope.currentUser = config.currentUser;
 
 });
