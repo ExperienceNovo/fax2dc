@@ -1,7 +1,7 @@
-angular.module( 'novo.header', [
+angular.module( 'novo.sidebar', [
 ])
 
-.controller( 'HeaderCtrl', function HeaderController( $scope, $state, config ) {
+.controller( 'SidebarCtrl', function HeaderController( $scope, $state, config ) {
     $scope.currentUser = config.currentUser;
 
     var navItems = [

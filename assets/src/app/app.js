@@ -7,7 +7,7 @@ angular.module( 'novo', [
     'templates-app',
     'services',
     'models',
-    'novo.header',
+    'novo.sidebar',
     'novo.home',
     'novo.about',
     'novo.member',
