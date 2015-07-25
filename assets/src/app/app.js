@@ -1,4 +1,4 @@
-angular.module( 'sailng', [
+angular.module( 'novo', [
     'ui.router',
     'sails.io',
     'angularMoment',
@@ -7,12 +7,12 @@ angular.module( 'sailng', [
     'templates-app',
     'services',
     'models',
-    'sailng.header',
-    'sailng.home',
-    'sailng.about',
-    'sailng.member',
-    'sailng.messages',
-    'sailng.post'
+    'novo.header',
+    'novo.home',
+    'novo.about',
+    'novo.member',
+    'novo.messages',
+    'novo.post'
 
 ])
 

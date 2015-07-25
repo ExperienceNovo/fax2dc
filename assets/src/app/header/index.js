@@ -1,4 +1,4 @@
-angular.module( 'sailng.header', [
+angular.module( 'novo.header', [
 ])
 
 .controller( 'HeaderCtrl', function HeaderController( $scope, $state, config ) {

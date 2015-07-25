@@ -1,4 +1,4 @@
-angular.module( 'sailng.home', [
+angular.module( 'novo.home', [
 ])
 
 .config(function config( $stateProvider ) {

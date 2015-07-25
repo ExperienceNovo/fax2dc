@@ -1,4 +1,4 @@
-angular.module( 'sailng.post', [
+angular.module( 'novo.post', [
 ])
 
 .config(function config( $stateProvider ) {

@@ -1,4 +1,4 @@
-angular.module( 'sailng.member', [
+angular.module( 'novo.member', [
 ])
 
 .config(function config( $stateProvider ) {

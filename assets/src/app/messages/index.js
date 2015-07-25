@@ -1,4 +1,4 @@
-angular.module( 'sailng.messages', [
+angular.module( 'novo.messages', [
 ])
 
 .config(function config( $stateProvider ) {
