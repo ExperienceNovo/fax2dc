@@ -10,18 +10,15 @@ angular.module( 'novo', [
     'novo.sidebar',
     'novo.home',
     'novo.about',
-    'novo.member',
-    'novo.messages',
-    'novo.post'
+    'novo.blog',
+    'novo.contact'
 
 ])
 
 .config( function myAppConfig ( $stateProvider, $urlRouterProvider, $locationProvider ) {
     $urlRouterProvider.when('/about/', '/about');
-    $urlRouterProvider.when('/messages/', '/messages');
-    $urlRouterProvider.when('/member/', '/member');
-    $urlRouterProvider.when('/post/', '/post');
-
+    $urlRouterProvider.when('/blog/', '/blog');
+    $urlRouterProvider.when('/contact/', '/contact');
 
     $urlRouterProvider.otherwise(function ($injector, $location) {
         if ($location.$$url === '/') {
@@ -33,23 +30,7 @@ angular.module( 'novo', [
         }
     });
 
-    /*$routeProvider.when("/", {
-        templateUrl: "/home/index.tpl.html",
-        controller: "HomeCtrl"
-    }).when("/about", {
-        templateUrl: "/about/index.tpl.html",
-        controller: "AboutCtrl"
-    }).when("/messages", {
-        templateUrl: "/messages/index.tpl.html",
-        controller: "MessagesController"
-    }).when("/member", {
-        templateUrl: "/member/index.tpl.html",
-        controller: "MemberCtrl"
-    }).otherwise({
-        redirectTo: "/"
-    });*/
     $locationProvider.html5Mode(true);
-
 
 })
 

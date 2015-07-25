@@ -1,13 +1,13 @@
-angular.module( 'novo.post', [
+angular.module( 'novo.blog', [
 ])
 
 .config(function config( $stateProvider ) {
 	$stateProvider.state( 'post', {
-		url: '/post',
+		url: '/blog',
 		views: {
 			"main": {
-				controller: 'PostCtrl',
-				templateUrl: 'post/index.tpl.html'
+				controller: 'BlogCtrl',
+				templateUrl: 'blog/index.tpl.html'
 			}
 		},
 		resolve: {
@@ -20,7 +20,7 @@ angular.module( 'novo.post', [
 	});
 })
 
-.controller( 'PostCtrl', function PostController( $scope, $sailsSocket, lodash, titleService, config, PostModel, posts) {
+.controller( 'BlogCtrl', function BlogController( $scope, $sailsSocket, lodash, titleService, config, PostModel, posts) {
 	titleService.setTitle('post');
 	$scope.newPost = {};
     $scope.posts = posts;
