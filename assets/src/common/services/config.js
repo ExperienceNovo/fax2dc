@@ -5,7 +5,7 @@ angular.module( 'services.config', ['lodash'])
 	// private vars here if needed
 
 	return {
-		siteName: 'conexus',
+		siteName: 'NOVO',
 		// no trailing slash!
 		siteUrl: '/',
 		apiUrl: '/api',
