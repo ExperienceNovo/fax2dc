@@ -16,15 +16,15 @@
     </head>
 <body>
 
-	<% if (currentUser !== undefined) { %>
+	<% if (true) { %>
 		<script>
 		var currentUser = {
-		id: '<%= currentUser.id %>',
-		username: '<%= currentUser.username %>',
-		email: '<%= currentUser.email %>',
-		first_name: '<%= currentUser.first_name %>',
-		createdAt: '<%= currentUser.createdAt %>',
-		updatedAt: '<%= currentUser.updatedAt %>'
+			id: '<%= currentUser.id %>',
+			username: '<%= currentUser.username %>',
+			email: '<%= currentUser.email %>',
+			first_name: '<%= currentUser.first_name %>',
+			createdAt: '<%= currentUser.createdAt %>',
+			updatedAt: '<%= currentUser.updatedAt %>'
 		};
 		</script>
 	<% } %>
