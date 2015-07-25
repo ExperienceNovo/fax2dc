@@ -1,391 +1,46 @@
-<html lang="en">
-	<head>
-		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
-		<meta charset="utf-8">
-		<title>Welcome to NOVO</title>
-		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-		
-		<link href="static/css/bootstrap.min.css" rel="stylesheet">
-		<link href="static/css/styles.css" rel="stylesheet">
-		<link href="favicon.ico" rel="icon" type="image/x-icon" />
-		<link href="static/css/font-awesome.min.css" rel="stylesheet">
-		<link href="static/css/bootstrap-social.css" rel="stylesheet" >
-		
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-		<script>window.jQuery || document.write('<script src="static/js/jquery-2.1.4.min"><\/script>')</script>
-		<!--[if lt IE 9]>
-			<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
-		<![endif]-->
-		<!--[if lt IE 9]>
-			 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-		<![endif]-->
+<!DOCTYPE html>
+<html ng-app="novo" ng-controller="AppCtrl">
+    <head>
+        <title>NOVO</title>
+        <base href="/">
+        <!-- Viewport mobile tag for sensible mobile support -->
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <link href="http://netdna.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.css" rel="stylesheet">
 
-</head>
 
+        <!--STYLES-->
+        <link rel="stylesheet" href="/styles/importer.css">
+        <!--STYLES END-->
+
+
+    </head>
 <body>
-	<div class="wrapper">
-		<div class="box">
-			<div class="row row-offcanvas row-offcanvas-left">
-				<div class="column col-sm-2 col-xs-1 sidebar-offcanvas" id="sidebar">
-				
-					
-					<div id="logos">
-						<ul class="nav hidden-xs hidden-md" id="lg-menu">
-							<div id="logo" align="center">
-								<img src="static/img/logo.png"/>
-							</div>
-						</ul>
-						<ul class="nav visible-xs visible-md" id="xs-menu">
-							<div id="xs" align="center">
-								<img src="static/img/tri.png"/>
-							</div>
-						</ul>
-					</div>
-				   
-					<div id="sidenav" align="center">
-						<ul class="nav hidden-xs" id="lg-menu">
-							<li class="active activeicon"><a href="#" id="load_home"><i class="fa fa-home"></i><span>Home</span></a></li>
-							<li><a href="#" id="load_team" ><i class="fa fa-users"></i><span>The Team</span></a></li>
-							<li><a href="#" id="load_contact"><i class="fa fa-comments"></i><span>Contact</span></a></li>
-							<li><a href="#" id="load_blog"><i class="fa fa-newspaper-o"></i><span>Blog</span></a></li>
-						</ul>
-					</div>
-					
-					<div align="center">
-						<ul class="list-unstyled hidden-xs" id="sidebar-footer">
-							<a href="https://www.facebook.com/experienceNOVO" target="_blank" class="btn btn-social-icon btn-facebook" style="background-color: #1C1C1C"><i class="fa fa-facebook"></i></a>
-							<a class="btn btn-social-icon btn-google" style="background-color: #1C1C1C"><i class="fa fa-google-plus"></i></a>
-							<a class="btn btn-social-icon btn-linkedin" style="background-color: #1C1C1C"><i class="fa fa-linkedin"></i></a>
-							<a href="https://twitter.com/experienceNOVO" target="_blank" class="btn btn-social-icon btn-twitter" style="background-color: #1C1C1C"><i class="fa fa-twitter"></i></a>
-						</ul>
-					</div>
-				  
-					<div align="center" id="icons" >
-						<ul class="nav visible-xs" id="xs-menu">
-							<li class="activeicon"><a href="index.html"><i class="fa fa-home"></i></a></li>
-							<li><a href="#" id="load_team_icon"><i class="fa fa-users"></i></a></li>
-							<li><a href="#" id="load_contact_icon"><i class="fa fa-comments"></i></a></li>
-							<li><a href="#" id="load_blog_icon"><i class="fa fa-newspaper-o"></i></a></li>
-						</ul>
-					</div>
-					
-					<div align="center" id="social">
-						<ul class="nav visible-xs" id="xs-menu">
-							<a href="https://www.facebook.com/experienceNOVO" target="_blank" class="btn btn-social-icon btn-facebook" style="background-color: #1C1C1C"><i class="fa fa-facebook"></i></a>
-							<a target="_blank" class="btn btn-social-icon btn-google" style="background-color: #1C1C1C"><i class="fa fa-google-plus"></i></a>
-							<a target="_blank" class="btn btn-social-icon btn-linkedin" style="background-color: #1C1C1C"><i class="fa fa-linkedin"></i></a>
-							<a target="_blank" class="btn btn-social-icon btn-twitter" style="background-color: #1C1C1C"><i class="fa fa-twitter"></i></a>
-						</ul>
-					</div>
-					
-				</div>
-			  
+
+	<!--SCRIPTS-->
+	<script src="/bower_components/angular/angular.js"></script>
+	<script src="/bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+	<script src="/bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+	<script src="/bower_components/sails.io.js/dist/sails.io.js"></script>
+	<script src="/bower_components/angularSails/dist/ngsails.io.js"></script>
+	<script src="/bower_components/lodash/lodash.js"></script>
+	<script src="/bower_components/moment/moment.js"></script>
+	<script src="/bower_components/angular-moment/angular-moment.js"></script>
 	
+	<script src="/src/app/about/index.js"></script>
+	<script src="/src/app/app.js"></script>
+	<script src="/src/app/about/index.js"></script>
+	<script src="/src/app/blog/index.js"></script>
+	<script src="/src/app/contact/index.js"></script>
+	<script src="/src/app/home/index.js"></script>
+	<script src="/src/app/sidebar/index.js"></script>
 
-    	<div class="banner">
-        	<div class="container">
-            	<div class="banner-text">
-                	<h2 class="tagline">Welcome</h2>
-                    <p class="under-tagline">Embrace change with NOVO - <br/>a full-measure design, web development, and marketing firm.</p>
-					<button class="mainbutton">Learn More</button>
-                </div>
-            </div>
-        </div>
-    
-    	<div class="services" id="service">
-        	<div class="container">
-            	<div class="section-head">
-                	<h3>Our Services</h3>
-                </div>
-                <div class="services-list">
-					<div class="row">
-						<div class="col-md-4">
-							<i class="fa fa-paint-brush fa-5x"></i>
-							<h2>Design</h2>
-							<p>
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-							Pellentesque molestie mauris nec tellus eleifend, at vulputate augue posuere. 
-							Donec aliquam urna vel lacus vehicula tristique. 
-							Donec non sodales odio. Ut a cursus dui. 
-							</p>
-						</div>
-						<div class="col-md-4">
-							<i class="fa fa-code fa-5x"></i>
-							<h2>Development</h2>
-							<p>
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-							Pellentesque molestie mauris nec tellus eleifend, at vulputate augue posuere. 
-							Donec aliquam urna vel lacus vehicula tristique. 
-							Donec non sodales odio. Ut a cursus dui. 
-							</p>
-						</div>
-						<div class="col-md-4">
-							<i class="fa fa-users fa-5x"></i>
-							<h2>Marketing</h2>
-							<p>
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-							Pellentesque molestie mauris nec tellus eleifend, at vulputate augue posuere. 
-							Donec aliquam urna vel lacus vehicula tristique. 
-							Donec non sodales odio. Ut a cursus dui. 
-							</p>
-						</div>
-					</div>
-                </div>
-            </div>
-        </div>
-    
-		<div id="home2">
-			<div class="desc" align="center">
-				<div class="container">
-					<h3>Meet The Team</h3>
-					<div id="team">
-						<div class="col-md-3">
-							<img src="static/img/team/val.png" />
-							<h2>Valentino</h2>
-							<h2 style="color: #BDBDBD">Front-End <br> Development</h2>
-						</div>
-						<div class="col-md-3">
-							<img src="static/img/team/garrett.png" />
-							<h2>Garrett</h2>
-							<h2 style="color: #BDBDBD">Marketing and <br> Content</h2>
-						</div>
-						<div class="col-md-3">
-							<img src="static/img/team/trevor.png" />
-							<h2>Trevor</h2>
-							<h2 style="color: #BDBDBD">Back-End <br> Development</h2>
-						</div>
-						<div class="col-md-3">
-							<img src="static/img/team/mikey.png" />
-							<h2>Michael</h2>
-							<h2 style="color: #BDBDBD">Front-End and <br> Design</h2>
-						</div>
-					</div>
-				</div>
-				<a href="#" id="load_team"><button class="mainbutton">Learn More</button></a>
-			</div>
-		</div>	
-    
-    	<div class="about" id="about">
-			<div class="section-head">
-                <h3 style="font-size: 50px">The Blog</h3>
-            </div>
-			<div class="container">
-					<div id="main_area">
-							<div class="row">
-								<div class="col-xs-12" id="slider">
-									<div class="row">
-										<div class="col-sm-8" id="carousel-bounding-box">
-											<div class="carousel slide" id="myCarousel">
-												<div class="carousel-inner">
-													<div class="active item" data-slide-number="0">
-													<img src="http://placehold.it/770x300&text=one"></div>
-
-													<div class="item" data-slide-number="1">
-													<img src="http://placehold.it/770x300&text=two"></div>
-
-													<div class="item" data-slide-number="2">
-													<img src="http://placehold.it/770x300&text=three"></div>
-
-													<div class="item" data-slide-number="3">
-													<img src="http://placehold.it/770x300&text=four"></div>
-
-													<div class="item" data-slide-number="4">
-													<img src="http://placehold.it/770x300&text=five"></div>
-
-													<div class="item" data-slide-number="5">
-													<img src="http://placehold.it/770x300&text=six"></div>
-												</div>
-												<a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-													<span class="glyphicon glyphicon-chevron-left"></span>                                       
-												</a>
-												<a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-													<span class="glyphicon glyphicon-chevron-right"></span>                                       
-												</a>                                
-											</div>
-										</div>
-
-										<div class="col-sm-4" id="carousel-text"></div>
-
-										<div id="slide-content" style="display: none;">
-											<div id="slide-content-0">
-												<h2>Slider One</h2>
-												<p style="text-align: left">Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-												Pellentesque molestie mauris nec tellus eleifend, at vulputate augue posuere. 
-												Donec aliquam urna vel lacus vehicula tristique. 
-												Donec non sodales odio. Ut a cursus dui. </p>
-												<p style="float: left; margin-top: 50px" class="sub-text">July 10 2015 <br></p>
-												<a style="float: right; margin-top: 15px; margin-bottom: 35px" href="#"><button class="mainbutton">Read More</button></a>
-											</div>
-
-											<div id="slide-content-1">
-												<h2>Slider Two</h2>
-												<p style="text-align: left">Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-												Pellentesque molestie mauris nec tellus eleifend, at vulputate augue posuere. 
-												Donec aliquam urna vel lacus vehicula tristique. 
-												Donec non sodales odio. Ut a cursus dui. </p>
-												<p style="float: left; margin-top: 50px" class="sub-text">July 10 2015 <br></p>
-												<a style="float: right; margin-top: 15px; margin-bottom: 35px" href="#"><button class="mainbutton">Read More</button></a>								
-											</div>
-
-											<div id="slide-content-2">
-												<h2>Slider Three</h2>
-												<p style="text-align: left">Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-												Pellentesque molestie mauris nec tellus eleifend, at vulputate augue posuere. 
-												Donec aliquam urna vel lacus vehicula tristique. 
-												Donec non sodales odio. Ut a cursus dui. </p>
-												<p style="float: left; margin-top: 50px" class="sub-text">July 10 2015 <br></p>
-												<a style="float: right; margin-top: 15px; margin-bottom: 35px" href="#"><button class="mainbutton">Read More</button></a>										
-											</div>
-
-											<div id="slide-content-3">
-												<h2>Slider Four</h2>
-												<p style="text-align: left">Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-												Pellentesque molestie mauris nec tellus eleifend, at vulputate augue posuere. 
-												Donec aliquam urna vel lacus vehicula tristique. 
-												Donec non sodales odio. Ut a cursus dui. </p>
-												<p style="float: left; margin-top: 50px" class="sub-text">July 10 2015 <br></p>
-												<a style="float: right; margin-top: 15px; margin-bottom: 35px" href="#"><button class="mainbutton">Read More</button></a>										
-											</div>
-
-											<div id="slide-content-4">
-												<h2>Slider Five</h2>
-												<p style="text-align: left">Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-												Pellentesque molestie mauris nec tellus eleifend, at vulputate augue posuere. 
-												Donec aliquam urna vel lacus vehicula tristique. 
-												Donec non sodales odio. Ut a cursus dui. </p>
-												<p style="float: left; margin-top: 50px" class="sub-text">July 10 2015 <br></p>
-												<a style="float: right; margin-top: 15px; margin-bottom: 35px" href="#"><button class="mainbutton">Read More</button></a>										
-											</div>
-
-											<div id="slide-content-5">
-												<h2>Slider Six</h2>
-												<p style="text-align: left">Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-												Pellentesque molestie mauris nec tellus eleifend, at vulputate augue posuere. 
-												Donec aliquam urna vel lacus vehicula tristique. 
-												Donec non sodales odio. Ut a cursus dui. </p>
-												<p style="float: left; margin-top: 50px" class="sub-text">July 10 2015 <br></p>
-												<a style="float: right; margin-top: 15px; margin-bottom: 35px" href="#"><button class="mainbutton">Read More</button></a>										
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-
-							<div class="row hidden-xs" id="slider-thumbs">
-									<ul class="hide-bullets">
-										<li class="col-sm-2">
-											<a class="thumbnail" id="carousel-selector-0"><img src="http://placehold.it/170x100&text=one"></a>
-										</li>
-
-										<li class="col-sm-2">
-											<a class="thumbnail" id="carousel-selector-1"><img src="http://placehold.it/170x100&text=two"></a>
-										</li>
-
-										<li class="col-sm-2">
-											<a class="thumbnail" id="carousel-selector-2"><img src="http://placehold.it/170x100&text=three"></a>
-										</li>
-
-										<li class="col-sm-2">
-											<a class="thumbnail" id="carousel-selector-3"><img src="http://placehold.it/170x100&text=four"></a>
-										</li>
-
-										<li class="col-sm-2">
-											<a class="thumbnail" id="carousel-selector-4"><img src="http://placehold.it/170x100&text=five"></a>
-										</li>
-
-										<li class="col-sm-2">
-											<a class="thumbnail" id="carousel-selector-5"><img src="http://placehold.it/170x100&text=six"></a>
-										</li>
-									</ul>                 
-							</div>
-					</div>
-			</div>
-        </div>
-    
-    	<div class="contact" id="contact">
-        	<div class="container">
-            	<div class="section-head">
-                	<h3>Join The NOVO Experience</h3>
-                </div>
-                <div class="contact-section" align="center">
-					<form class="ctr" action="#" method="#">
-						<div class="loader"></div>
-						<input type="text">
-						<div class="indicator" data-content="Type Your Email Address"></div>
-					</form>
-                </div>
-            </div>
-        </div>
-
-
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	
-		<script src="static/js/bootstrap.min.js"></script>
-		<script src="static/js/email.js"></script>
-		
-		<script type="text/javascript">
-			$(function(){
-				$('.nav a').click(function(){
-
-					$('.nav .active').removeClass('active');
-					$(this).addClass('active');
-					$('.nav .activeicon').removeClass('activeicon');
-					$(this).addClass('activeicon');
-
-				});
-			});
-		</script>
-		
-		<script type="text/javascript">
-		
-			$(document).ready( function() {
-				$("#load_home").on("click", function() {
-					$("#content").load("views/home.html");
-				});
-			});
-			$(document).ready( function() {
-				$("#load_team").on("click", function() {
-					$("#content").load("views/team.html #content");
-				});
-			});
-			$(document).ready( function() {
-				$("#load_contact").on("click", function() {
-					$("#content").load("views/contact.html #content");
-				});
-			});
-			$(document).ready( function() {
-				$("#load_blog").on("click", function() {
-					$("#content").load("views/blog.html #content");
-				});
-			});
-			
-			$(document).ready( function() {
-				$("#load_team_icon").on("click", function() {
-					$("#content").load("views/team.html #content");
-				});
-			});
-			$(document).ready( function() {
-				$("#load_contact_icon").on("click", function() {
-					$("#content").load("views/contact.html #content");
-				});
-			});
-			$(document).ready( function() {
-				$("#load_blog_icon").on("click", function() {
-					$("#content").load("views/blog.html #content");
-				});
-			});
-
-		</script>
-		
-		<script type="text/javascript">
-			$(document).ready( function() {
-					$("#home").load("views/home.html");
-				});
-		</script>
-		
-	</body>
+	<script src="/src/common/models/index.js"></script>
+	<script src="/src/common/models/post.js"></script>
+	<script src="/src/common/services/config.js"></script>
+	<script src="/src/common/services/index.js"></script>
+	<script src="/src/common/services/lodash.js"></script>
+	<script src="/src/common/services/title.js"></script>
+	<script src="/src/common/services/utils.js"></script>
+	<!--SCRIPTS END-->
+</body>
 </html>
