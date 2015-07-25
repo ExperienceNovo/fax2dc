@@ -1,4 +1,5 @@
-angular.module( 'sailng', [
+angular.module( 'novo', [
+    
     'ui.router',
     'sails.io',
     'angularMoment',
