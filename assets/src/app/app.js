@@ -1,11 +1,10 @@
 angular.module( 'novo', [
-    
+
     'ui.router',
     'sails.io',
     'angularMoment',
     'lodash',
     'ui.bootstrap',
-    'templates-app',
 
     'services',
     'models',
