@@ -10,8 +10,7 @@ angular.module( 'sailng', [
     'sailng.header',
     'sailng.home',
     'sailng.about',
-    'sailng.post',
-    'sailng.search'
+    'sailng.post'
 
 ])
 
