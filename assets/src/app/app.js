@@ -12,7 +12,6 @@ angular.module( 'novo', [
     'novo.about',
     'novo.blog',
     'novo.contact'
-
 ])
 
 .config( function myAppConfig ( $stateProvider, $urlRouterProvider, $locationProvider ) {
