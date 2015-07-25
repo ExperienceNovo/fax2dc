@@ -47,28 +47,6 @@
 }
 }
 
-@media (max-width: 1079px) {
-#lg-menu, #lg-menu img {
-    display: none !important;
-}
-
-#xs {
-    display: block !important;
-}
-    
-#xs img {
-    width: 50px;
-}
-}
-@media (min-width: 992px) and (max-width: 1079px) {
-#xs img {
-    width: 65px;
-}
-#xs {
-    margin-bottom: 100px;
-}
-}
-
 @media (min-width: 768px) and (max-width: 1080px) {
 .banner {
     padding:160px 0 60px
@@ -354,7 +332,7 @@ p.under-tagline {
 
 ul.nav li a {
     display:block;
-    padding:15px 0;
+    padding:0;
     background-color:#000;
     transition:all .7s ease-in
 }
@@ -495,7 +473,7 @@ p.under-tagline {
 
 ul.nav li a {
     display:block;
-    padding:15px 0;
+    padding:0;
     background-color:#000;
     transition:all .7s ease-in
 }
@@ -608,8 +586,4 @@ p.under-tagline {
     padding-bottom:40px
 }
 
-ul.socialmedia li {
-    margin:0 10px;
-    font-size:26px
-}
 }
