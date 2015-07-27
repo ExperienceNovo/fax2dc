@@ -14,5 +14,5 @@ angular.module( 'novo.contact', [
 })
 
 .controller( 'ContactCtrl', function AboutController( $scope, titleService ) {
-	titleService.setTitle('Contact');
+	titleService.setTitle('Contact - NOVO');
 });

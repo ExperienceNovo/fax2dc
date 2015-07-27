@@ -65,33 +65,20 @@ angular.module("contact/index.tpl.html", []).run(["$templateCache", function($te
     "    <h3>experienceNOVO@gmail.com</h3>\n" +
     "    <h3>865.696.9382</h3>\n" +
     "\n" +
+    "    <br><br>\n" +
+    "\n" +
     "    <div class=\"contact-section\">\n" +
-    "        <form class=\"ctr\" action=\"#\" method=\"#\">\n" +
+    "        <form class=\"ctr\" action=\"//projectnovo.us11.list-manage.com/subscribe/post?u=a56f7f3f876fa9db4c36328af&amp;id=ff3d3ae826\" method=\"post\">\n" +
     "            <div class=\"loader\"></div>\n" +
-    "            <input type=\"text\">\n" +
+    "            <input type=\"email\" name=\"EMAIL\" required>\n" +
     "            <div class=\"indicator\" data-content=\"Type Your Email Address\"></div>\n" +
     "        </form>\n" +
     "    </div>\n" +
-    "    <!-- Begin MailChimp Signup Form -->\n" +
-    "    <link href=\"//cdn-images.mailchimp.com/embedcode/slim-081711.css\" rel=\"stylesheet\" type=\"text/css\">\n" +
-    "    <style type=\"text/css\">\n" +
-    "        #mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; }\n" +
-    "        /* Add your own MailChimp form style overrides in your site stylesheet or in this style block.\n" +
-    "        We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */\n" +
-    "    </style>\n" +
-    "    <div id=\"mc_embed_signup\">\n" +
-    "        <form action=\"//projectnovo.us11.list-manage.com/subscribe/post?u=a56f7f3f876fa9db4c36328af&amp;id=ff3d3ae826\" method=\"post\" id=\"mc-embedded-subscribe-form\" name=\"mc-embedded-subscribe-form\" class=\"validate\" target=\"_blank\" novalidate>\n" +
-    "            <div id=\"mc_embed_signup_scroll\">\n" +
-    "                <label for=\"mce-EMAIL\">Subscribe to our mailing list</label>\n" +
-    "                <input type=\"email\" value=\"\" name=\"EMAIL\" class=\"email\" id=\"mce-EMAIL\" placeholder=\"email address\" required>\n" +
-    "                <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->\n" +
-    "                <div style=\"position: absolute; left: -5000px;\"><input type=\"text\" name=\"b_a56f7f3f876fa9db4c36328af_ff3d3ae826\" tabindex=\"-1\" value=\"\"></div>\n" +
-    "                <div class=\"clear\"><input type=\"submit\" value=\"Subscribe\" name=\"subscribe\" id=\"mc-embedded-subscribe\" class=\"button\"></div>\n" +
-    "            </div>\n" +
-    "        </form>\n" +
-    "    </div>\n" +
     "\n" +
-    "    <!--End mc_embed_signup-->\n" +
+    "    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->\n" +
+    "    <div style=\"position: absolute; left: -5000px;\"><input type=\"text\" name=\"b_a56f7f3f876fa9db4c36328af_ff3d3ae826\" tabindex=\"-1\" value=\"\"></div>\n" +
+    "    <div class=\"clear\"><input type=\"submit\" value=\"Subscribe\" name=\"subscribe\" id=\"mc-embedded-subscribe\" class=\"button\"></div>\n" +
+    "\n" +
     "</div>\n" +
     "\n" +
     "\n" +
@@ -211,13 +198,22 @@ angular.module("home/index.tpl.html", []).run(["$templateCache", function($templ
     "        <h3>Join The NOVO Experience</h3>\n" +
     "    </div>\n" +
     "    <div class=\"contact-section\">\n" +
-    "        <form class=\"ctr\" action=\"#\" method=\"#\">\n" +
+    "        <form class=\"ctr\" action=\"//projectnovo.us11.list-manage.com/subscribe/post?u=a56f7f3f876fa9db4c36328af&amp;id=ff3d3ae826\" method=\"post\">\n" +
     "            <div class=\"loader\"></div>\n" +
-    "            <input type=\"text\">\n" +
+    "            <input type=\"email\" name=\"EMAIL\" required>\n" +
     "            <div class=\"indicator\" data-content=\"Type Your Email Address\"></div>\n" +
     "        </form>\n" +
     "    </div>\n" +
+    "\n" +
+    "    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->\n" +
+    "    <div style=\"position: absolute; left: -5000px;\"><input type=\"text\" name=\"b_a56f7f3f876fa9db4c36328af_ff3d3ae826\" tabindex=\"-1\" value=\"\"></div>\n" +
+    "    <div class=\"clear\"><input type=\"submit\" value=\"Subscribe\" name=\"subscribe\" id=\"mc-embedded-subscribe\" class=\"button\"></div>\n" +
+    "\n" +
     "</div>\n" +
+    "\n" +
+    "\n" +
+    "\n" +
+    "<br><br>\n" +
     "\n" +
     "<script src=\"https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js\" type=\"text/javascript\"></script>\n" +
     "<script src=\"/js/blog.js\" type=\"text/javascript\"></script>\n" +
