@@ -14,5 +14,5 @@ angular.module( 'novo.about', [
 })
 
 .controller( 'AboutCtrl', function AboutController( $scope, titleService ) {
-	titleService.setTitle('About');
+	titleService.setTitle('About - NOVO');
 });

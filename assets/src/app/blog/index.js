@@ -21,7 +21,7 @@ angular.module( 'novo.blog', [
 })
 
 .controller( 'BlogCtrl', function BlogController( $scope, $sailsSocket, lodash, titleService, config, PostModel, posts) {
-	titleService.setTitle('Blog');
+	titleService.setTitle('Blog - NOVO');
 	$scope.newPost = {};
     $scope.posts = posts;
     $scope.currentUser = config.currentUser;

@@ -14,5 +14,5 @@ angular.module( 'novo.portfolio', [
 })
 
 .controller( 'PortfolioCtrl', function PortfolioController( $scope, titleService ) {
-	titleService.setTitle('Portfolio');
+	titleService.setTitle('Portfolio - NOVO');
 });
