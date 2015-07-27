@@ -1,18 +1,36 @@
-angular.module('templates-app', ['about/index.tpl.html', 'blog/index.tpl.html', 'contact/index.tpl.html', 'home/index.tpl.html', 'sidebar/index.tpl.html']);
+angular.module('templates-app', ['about/index.tpl.html', 'blog/index.tpl.html', 'contact/index.tpl.html', 'home/index.tpl.html', 'portfolio/index.tpl.html', 'sidebar/index.tpl.html']);
 
 angular.module("about/index.tpl.html", []).run(["$templateCache", function($templateCache) {
   $templateCache.put("about/index.tpl.html",
     "<h1>about</h1>\n" +
     "<div>\n" +
-    "\n" +
-    "	HI\n" +
-    "\n" +
-    "	\n" +
+    "	<h3>Full-service Online Marketing</h3>\n" +
+    "	<div>\n" +
+    "		<p>Social Media Management to extend your customer reach.</p>\n" +
+    "		<p>Email Outreach Marketing to manage current customer and secure new-customer leads. </p>\n" +
+    "		<p>Blog Creation to establish your presence within your community and your industry.</p>\n" +
+    "		<p>Marketing Metric Analysis to ensure effectiveness and maximize return on investment.</p>\n" +
+    "	</div>\n" +
+    "	<h3>Blue-chip Graphic Design</h3>\n" +
+    "	<div>\n" +
+    "		<p>Full-scale Branding to ensure clear communication of your message.</p>\n" +
+    "		<p>Customer Interface Design to ensure a seamless online experience.</p>\n" +
+    "		<p>Advertising and Logo Design to establish a cohesive brand message.</p>\n" +
+    "	</div>\n" +
+    "	<h3>Development</h3>\n" +
+    "	<div>\n" +
+    "		<p>Customer Experience Creation for eye-pleasing customer interaction.</p>\n" +
+    "		<p>Mobile-first Web Design to align you with the ever-increasing mobile world.</p>\n" +
+    "		<p>SEO Structuring to naturally expand your online reach and outpace your competitors.</p>\n" +
+    "		<p>Back-end Software Integration to ensure maximum security and business technology integration.</p>\n" +
+    "	</div>\n" +
     "</div>");
 }]);
 
 angular.module("blog/index.tpl.html", []).run(["$templateCache", function($templateCache) {
   $templateCache.put("blog/index.tpl.html",
+    "<br><br>\n" +
+    "\n" +
     "<h1>blog</h1>\n" +
     "<form role=\"form\" ng-submit=\"createPost(newPost)\">\n" +
     "  <div class=\"form-group\">\n" +
@@ -23,8 +41,6 @@ angular.module("blog/index.tpl.html", []).run(["$templateCache", function($templ
     "  </div>\n" +
     "  <button type=\"submit\" class=\"btn btn-primary\">Submit</button>\n" +
     "</form>\n" +
-    "\n" +
-    "<pre>form = {{newPost | json}}</pre>\n" +
     "\n" +
     "<div id=\"post-container\" class=\"col-md-6\">\n" +
     "  <ul>\n" +
@@ -45,6 +61,10 @@ angular.module("contact/index.tpl.html", []).run(["$templateCache", function($te
     "    <div class=\"section-head\">\n" +
     "        <h3>Join The NOVO Experience</h3>\n" +
     "    </div>\n" +
+    "\n" +
+    "    <h3>experienceNOVO@gmail.com</h3>\n" +
+    "    <h3>865.696.9382</h3>\n" +
+    "\n" +
     "    <div class=\"contact-section\">\n" +
     "        <form class=\"ctr\" action=\"#\" method=\"#\">\n" +
     "            <div class=\"loader\"></div>\n" +
@@ -73,6 +93,11 @@ angular.module("contact/index.tpl.html", []).run(["$templateCache", function($te
     "\n" +
     "    <!--End mc_embed_signup-->\n" +
     "</div>\n" +
+    "\n" +
+    "\n" +
+    "\n" +
+    "\n" +
+    "\n" +
     "");
 }]);
 
@@ -90,7 +115,7 @@ angular.module("home/index.tpl.html", []).run(["$templateCache", function($templ
     "<div class=\"banner\">\n" +
     "    <div class=\"banner-text\">\n" +
     "        <h2 class=\"tagline\">Welcome</h2>\n" +
-    "        <p class=\"under-tagline\">Embrace change with NOVO<br/>a full-measure design, web development, and marketing firm.</p>\n" +
+    "        <p class=\"under-tagline\">Embrace change with NOVO<br/>a full-scale online marketing, graphic design, and web development firm.</p>\n" +
     "        <a href=\"/about/\"><button class=\"mainbutton\">Learn More</button></a>\n" +
     "    </div>\n" +
     "</div>\n" +
@@ -103,31 +128,30 @@ angular.module("home/index.tpl.html", []).run(["$templateCache", function($templ
     "        <div class=\"row\">\n" +
     "            <div class=\"col-md-12\">\n" +
     "                <div class=\"col-md-4\">\n" +
+    "                    <i class=\"fa fa-users fa-5x\"></i>\n" +
+    "                    <h2>Marketing</h2>\n" +
+    "                    <p>Social Media Management</p>\n" +
+    "                    <p>Email Marketing</p>\n" +
+    "                    <p>Content Creation</p>\n" +
+    "                    <p>Marketing Metric Analysis</p>\n" +
+    "                </div>\n" +
+    "\n" +
+    "                <div class=\"col-md-4\">\n" +
     "                    <i class=\"fa fa-paint-brush fa-5x\"></i>\n" +
     "                    <h2>Design</h2>\n" +
-    "                    <p>\n" +
-    "                        Branding\n" +
-    "                        Cre8\n" +
-    "                    </p>\n" +
+    "                    <p>Company Branding</p>\n" +
+    "                    <p>Customer Interface Design</p>\n" +
+    "                    <p>Advertising</p>\n" +
+    "                    <p>Logo</p>\n" +
     "                </div>\n" +
     "\n" +
     "                <div class=\"col-md-4\">\n" +
     "                    <i class=\"fa fa-code fa-5x\"></i>\n" +
     "                    <h2>Development</h2>\n" +
-    "                    <p>\n" +
-    "                        Web Development\n" +
-    "                        Custom Software\n" +
-    "                    </p>\n" +
-    "                </div>\n" +
-    "\n" +
-    "                <div class=\"col-md-4\">\n" +
-    "                    <i class=\"fa fa-users fa-5x\"></i>\n" +
-    "                    <h2>Marketing</h2>\n" +
-    "                    <p>\n" +
-    "                        Content Creation\n" +
-    "                        Social Media Management                     \n" +
-    "                        Social Media Strategy -- metrics -- growth hacking -- NUMBERS\n" +
-    "                    </p>\n" +
+    "                    <p>Customer Experience Creation</p>\n" +
+    "                    <p>Mobile-first Web Design</p>\n" +
+    "                    <p>SEO Structuring</p>\n" +
+    "                    <p>Back-end Software Integration</p>\n" +
     "                </div>\n" +
     "            </div>\n" +
     "        </div>\n" +
@@ -143,22 +167,26 @@ angular.module("home/index.tpl.html", []).run(["$templateCache", function($templ
     "                <div class=\"col-md-3\">\n" +
     "                    <img src=\"/images/team/val.png\" />\n" +
     "                    <h2>Valentino</h2>\n" +
-    "                    <h2 style=\"color: #BDBDBD\">Development</h2>\n" +
+    "                    <a href=\"http://www.valentino.io\">site</a>\n" +
+    "                    <!--<h2 style=\"color: #BDBDBD\">Development</h2>-->\n" +
     "                </div>\n" +
     "                <div class=\"col-md-3\">\n" +
     "                    <img src=\"/images/team/garrett.png\" />\n" +
     "                    <h2>Garrett</h2>\n" +
-    "                    <h2 style=\"color: #BDBDBD\">Marketing and <br> Content</h2>\n" +
+    "                    <a href=\"http://garrettheadden.com\">site</a>\n" +
+    "                    <!--<h2 style=\"color: #BDBDBD\">Marketing and <br> Content</h2>-->\n" +
     "                </div>\n" +
     "                <div class=\"col-md-3\">\n" +
     "                    <img src=\"/images/team/trevor.png\" />\n" +
     "                    <h2>Trevor</h2>\n" +
-    "                    <h2 style=\"color: #BDBDBD\">8</h2>\n" +
+    "                    <a href=\"http://www.troverman.com\">site</a>\n" +
+    "                    <!--<h2 style=\"color: #BDBDBD\">8</h2>-->\n" +
     "                </div>\n" +
     "                <div class=\"col-md-3\">\n" +
     "                    <img src=\"/images/team/mikey.png\" />\n" +
     "                    <h2>Michael</h2>\n" +
-    "                    <h2 style=\"color: #BDBDBD\">Design</h2>\n" +
+    "                    <a href=\"http://www.evolvedus.com\">site</a>\n" +
+    "                    <!--<h2 style=\"color: #BDBDBD\">Design</h2>-->\n" +
     "                </div>\n" +
     "            </div>\n" +
     "        </div>\n" +
@@ -166,6 +194,17 @@ angular.module("home/index.tpl.html", []).run(["$templateCache", function($templ
     "    <!--<a href=\"#\" id=\"load_team\"><button class=\"mainbutton\">Learn More</button></a>-->\n" +
     "    </div>\n" +
     "</div>  \n" +
+    "\n" +
+    "\n" +
+    "<div class=\"services\" id=\"service\">\n" +
+    "    <div class=\"section-head\">\n" +
+    "        <h3>Our Portfolio</h3>\n" +
+    "    </div>\n" +
+    "    <div class=\"services-list\">\n" +
+    "        <a href=\"http://www.absoluteyachtsna.com\">absolute yachts na</a>\n" +
+    "    </div>\n" +
+    "</div>\n" +
+    "\n" +
     "\n" +
     "<div class=\"contact\" id=\"contact\">\n" +
     "    <div class=\"section-head\">\n" +
@@ -184,8 +223,15 @@ angular.module("home/index.tpl.html", []).run(["$templateCache", function($templ
     "<script src=\"/js/blog.js\" type=\"text/javascript\"></script>\n" +
     "<script src=\"/js/bootstrap.min.js\" type=\"text/javascript\"></script>\n" +
     "<script src=\"/js/email.js\" type=\"text/javascript\"></script>\n" +
-    "\n" +
     "");
+}]);
+
+angular.module("portfolio/index.tpl.html", []).run(["$templateCache", function($templateCache) {
+  $templateCache.put("portfolio/index.tpl.html",
+    "<h1>portfolio</h1>\n" +
+    "<div>\n" +
+    "	<a href=\"http://www.absoluteyachtsna.com\">absolute yachts na</a>\n" +
+    "</div>");
 }]);
 
 angular.module("sidebar/index.tpl.html", []).run(["$templateCache", function($templateCache) {
@@ -199,155 +245,49 @@ angular.module("sidebar/index.tpl.html", []).run(["$templateCache", function($te
     "        <div class=\"item-container\">\n" +
     "            <a href=\"/\">\n" +
     "                <div class=\"list-item\">\n" +
-    "                    <div class=\"nav-small-list\"><img style=\"max-width: 50%;\" src=\"/images/tri.png\"/></div>\n" +
-    "                    <div class=\"nav-large-list\">home</div>\n" +
+    "                    <div class=\"nav-small-list\">\n" +
+    "                        <img style=\"max-width: 50%;\" src=\"/images/tri.png\"/>\n" +
+    "                    </div>\n" +
+    "                    <div class=\"nav-large-list\">Home</div>\n" +
     "                </div>\n" +
     "            </a>\n" +
     "        </div>\n" +
     "       <div class=\"item-container\">\n" +
     "            <a href=\"/about/\">\n" +
     "                <div class=\"list-item\">\n" +
-    "                    <div class=\"nav-small-list\">1</div>\n" +
-    "                    <div class=\"nav-large-list\">about</div>\n" +
+    "                    <div class=\"nav-small-list\"><i class=\"fa fa-info\"></i></div>\n" +
+    "                    <div class=\"nav-large-list\">About</div>\n" +
     "                </div>\n" +
     "            </a>\n" +
     "        </div>\n" +
     "        <div class=\"item-container\">\n" +
     "            <a href=\"/contact/\">\n" +
     "                <div class=\"list-item\">\n" +
-    "                    <div class=\"nav-small-list\">2</div>\n" +
-    "                    <div class=\"nav-large-list\">contact</div>\n" +
+    "                    <div class=\"nav-small-list\"><i class=\"fa fa-comment-o\"></i></div>\n" +
+    "                    <div class=\"nav-large-list\">Contact</div>\n" +
     "                </div>\n" +
     "            </a>\n" +
     "        </div>\n" +
-    "        <!--<div class=\"item-container\">\n" +
+    "        <div class=\"item-container\">\n" +
+    "            <a href=\"/portfolio/\">\n" +
+    "                <div class=\"list-item\">\n" +
+    "                    <div class=\"nav-small-list\"><i class=\"fa fa-picture-o\"></i></div>\n" +
+    "                    <div class=\"nav-large-list\">Portfolio</div>\n" +
+    "                </div>\n" +
+    "            </a>\n" +
+    "        </div>\n" +
+    "        <div class=\"item-container\">\n" +
     "            <a href=\"/blog/\">\n" +
     "                <div class=\"list-item\">\n" +
-    "                    <div class=\"nav-small-list\">4</div>\n" +
-    "                    <div class=\"nav-large-list\">blog</div>\n" +
+    "                    <div class=\"nav-small-list\"><i class=\"fa fa-newspaper-o\"></i></div>\n" +
+    "                    <div class=\"nav-large-list\">Blog</div>\n" +
     "                </div>\n" +
     "            </a>\n" +
     "        </div>\n" +
-    "        <div class=\"flex-item-bottom\"></div>-->\n" +
+    "        <div class=\"flex-item-bottom\"></div>\n" +
     "    </div>\n" +
     "</div>\n" +
     "\n" +
-    "<!--\n" +
-    "\n" +
-    "<div class=\"index-container\">\n" +
-    "  <div class=\"wrapper\">\n" +
-    "    <div class=\"box\">\n" +
-    "      <div class=\"row row-offcanvas row-offcanvas-left\">\n" +
-    "\n" +
-    "        <div class=\"col-sm-2 col-xs-2 sidebar-offcanvas\" id=\"sidebar\">\n" +
-    "        \n" +
-    "                    <div class=\"nav hidden-xs hidden-sm\" id=\"lg-menu\">\n" +
-    "                        <img src=\"static/img/logo.png\"/>\n" +
-    "                    </div>\n" +
-    "                        \n" +
-    "                    <div class=\"nav visible-xs visible-sm\" id=\"xs\">\n" +
-    "                        <img src=\"static/img/tri.png\"/>                                 \n" +
-    "                    </div>\n" +
-    "           \n" +
-    "                        <div id=\"sidenav\">\n" +
-    "                            <div class=\"row\">\n" +
-    "                                    <ul class=\"nav hidden-xs hidden-sm\">\n" +
-    "                                        <li class=\"active activeicon\">\n" +
-    "                                            <a href=\"#\">\n" +
-    "                                                <i class=\"fa fa-home\"></i>\n" +
-    "                                                <span>Home</span>\n" +
-    "                                            </a>\n" +
-    "                                        </li>\n" +
-    "                                        <li>\n" +
-    "                                            <a href=\"#\" >\n" +
-    "                                                <i class=\"fa fa-users\"></i>\n" +
-    "                                                <span>The Team</span>\n" +
-    "                                            </a>\n" +
-    "                                        </li>\n" +
-    "                                        <li>\n" +
-    "                                            <a href=\"#\">\n" +
-    "                                                <i class=\"fa fa-comments\"></i>\n" +
-    "                                                <span>Contact</span>\n" +
-    "                                            </a>\n" +
-    "                                        </li>\n" +
-    "                                    </ul>\n" +
-    "                                    <ul class=\"nav visible-sm\" id=\"lg-2\">\n" +
-    "                                        <li class=\"active activeicon\">\n" +
-    "                                            <a href=\"#\">\n" +
-    "                                                <i class=\"fa fa-home\"></i>\n" +
-    "                                                <br>\n" +
-    "                                                <span>Home</span>\n" +
-    "                                            </a>\n" +
-    "                                        </li>\n" +
-    "                                        <li>\n" +
-    "                                            <a href=\"#\" >\n" +
-    "                                                <i class=\"fa fa-users\"></i>\n" +
-    "                                                <br>\n" +
-    "                                                <span>The Team</span>\n" +
-    "                                            </a>\n" +
-    "                                        </li>\n" +
-    "                                        <li>\n" +
-    "                                            <a href=\"#\">\n" +
-    "                                                <i class=\"fa fa-comments\"></i>\n" +
-    "                                                <br>\n" +
-    "                                                <span>Contact</span>\n" +
-    "                                            </a>\n" +
-    "                                        </li>\n" +
-    "                                    </ul>\n" +
-    "                            </div>\n" +
-    "                        </div>\n" +
-    "\n" +
-    "        <ul class=\"list-unstyled hidden-xs\" id=\"sidebar-footer\">\n" +
-    "            <a href=\"https://www.facebook.com/experienceNOVO\" target=\"_blank\" class=\"btn btn-social-icon btn-facebook\" style=\"background-color: #1C1C1C\"><i class=\"fa fa-facebook\"></i></a>\n" +
-    "            <a class=\"btn btn-social-icon btn-google\" style=\"background-color: #1C1C1C\"><i class=\"fa fa-google-plus\"></i></a>\n" +
-    "            <a class=\"btn btn-social-icon btn-linkedin\" style=\"background-color: #1C1C1C\"><i class=\"fa fa-linkedin\"></i></a>\n" +
-    "            <a href=\"https://twitter.com/experienceNOVO\" target=\"_blank\" class=\"btn btn-social-icon btn-twitter\" style=\"background-color: #1C1C1C\"><i class=\"fa fa-twitter\"></i></a>\n" +
-    "        </ul>\n" +
-    "          \n" +
-    "        <ul class=\"nav visible-xs\" id=\"xs-menu\" style=\"font-size: 25px\">\n" +
-    "            <li class=\"activeicon\"><a href=\"#\"><i class=\"fa fa-home\"></i></a></li>\n" +
-    "            <li><a href=\"#\"><i class=\"fa fa-users\"></i></a></li>\n" +
-    "            <li><a href=\"#\"><i class=\"fa fa-comments\"></i></a></li>\n" +
-    "        </ul>\n" +
-    "                    \n" +
-    "                <ul class=\"nav\" id=\"xs-menu-2\" style=\"font-size: 30px\">\n" +
-    "            <li class=\"activeicon\"><a href=\"#\"><i class=\"fa fa-home \"></i></a></li>\n" +
-    "            <li><a href=\"#\"><i class=\"fa fa-users\"></i></a></li>\n" +
-    "            <li><a href=\"#\"><i class=\"fa fa-comments\"></i></a></li>\n" +
-    "        </ul>\n" +
-    "          \n" +
-    "        <ul class=\"nav visible-sm\" id=\"social-sm\">\n" +
-    "                    <div class=\"col-sm-12\">\n" +
-    "                        <a target=\"_blank\" class=\"btn btn-social-icon btn-facebook\" style=\"background-color: #1C1C1C;\"><i class=\"fa fa-facebook\"></i></a>\n" +
-    "                        <a target=\"_blank\" class=\"btn btn-social-icon btn-google\" style=\"background-color: #1C1C1C\"><i class=\"fa fa-google-plus\"></i></a>\n" +
-    "                    </div>\n" +
-    "                    <div class=\"col-sm-12\">\n" +
-    "                        <a target=\"_blank\" class=\"btn btn-social-icon btn-linkedin\" style=\"background-color: #1C1C1C;\"><i class=\"fa fa-linkedin\"></i></a>\n" +
-    "                        <a target=\"_blank\" class=\"btn btn-social-icon btn-twitter\" style=\"background-color: #1C1C1C\"><i class=\"fa fa-twitter\"></i></a>           \n" +
-    "                    </div>\n" +
-    "        </ul>\n" +
-    "                    \n" +
-    "                <ul class=\"nav visible-xs\" id=\"social\">\n" +
-    "                    \n" +
-    "            <a target=\"_blank\" class=\"btn btn-social-icon btn-facebook\" style=\"background-color: #1C1C1C\"><i class=\"fa fa-facebook\"></i></a>\n" +
-    "            <a target=\"_blank\" class=\"btn btn-social-icon btn-google\" style=\"background-color: #1C1C1C\"><i class=\"fa fa-google-plus\"></i></a>\n" +
-    "            <a target=\"_blank\" class=\"btn btn-social-icon btn-linkedin\" style=\"background-color: #1C1C1C\"><i class=\"fa fa-linkedin\"></i></a>\n" +
-    "            <a target=\"_blank\" class=\"btn btn-social-icon btn-twitter\" style=\"background-color: #1C1C1C\"><i class=\"fa fa-twitter\"></i></a>\n" +
-    "        </ul>\n" +
-    "          \n" +
-    "        </div>\n" +
-    "        \n" +
-    "        <div class=\"column col-sm-10 col-xs-10\" id=\"main\">\n" +
-    "          <div id=\"content\">\n" +
-    "            <div id=\"home\"></div>\n" +
-    "          </div>\n" +
-    "        </div>\n" +
-    "      </div>\n" +
-    "    </div>\n" +
-    "  </div>\n" +
-    "</div>\n" +
-    "\n" +
-    "-->\n" +
     "\n" +
     "");
 }]);

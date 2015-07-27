@@ -11,13 +11,15 @@ angular.module( 'novo', [
     'novo.home',
     'novo.about',
     'novo.blog',
-    'novo.contact'
+    'novo.contact',
+    'novo.portfolio'
 ])
 
 .config( function myAppConfig ( $stateProvider, $urlRouterProvider, $locationProvider ) {
     $urlRouterProvider.when('/about/', '/about');
     $urlRouterProvider.when('/blog/', '/blog');
     $urlRouterProvider.when('/contact/', '/contact');
+    $urlRouterProvider.when('/portfolio/', '/portfolio');
 
     $urlRouterProvider.otherwise(function ($injector, $location) {
         if ($location.$$url === '/') {
