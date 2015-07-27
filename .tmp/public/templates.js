@@ -224,9 +224,56 @@ angular.module("home/index.tpl.html", []).run(["$templateCache", function($templ
 
 angular.module("portfolio/index.tpl.html", []).run(["$templateCache", function($templateCache) {
   $templateCache.put("portfolio/index.tpl.html",
-    "<h1>portfolio</h1>\n" +
-    "<div>\n" +
-    "	<a href=\"http://www.absoluteyachtsna.com\">absolute yachts na</a>\n" +
+    "<div class=\"container\">\n" +
+    "    <!--slideshow here-->\n" +
+    "</div>\n" +
+    "\n" +
+    "<div class='container' style=\"margin: 180px auto 0;\">\n" +
+    "    <div class='wrap'>\n" +
+    "        <div class='crop'>\n" +
+    "            <img src='' style=\"background-color: #1db996;\">\n" +
+    "        </div>\n" +
+    "    </div>\n" +
+    "    <div class='wrap'>\n" +
+    "        <div class='crop'>\n" +
+    "            <img src='' style=\"background-color: #1db996;\">\n" +
+    "        </div>\n" +
+    "    </div>\n" +
+    "    <div class='wrap'>\n" +
+    "        <div class='crop'>\n" +
+    "            <img src='/images/symbol300.png'>\n" +
+    "        </div>\n" +
+    "    </div>\n" +
+    "    <div class='wrap'>\n" +
+    "        <div class='crop'>\n" +
+    "            <img src='' style=\"background-color: #1db996;\">\n" +
+    "        </div>\n" +
+    "    </div>\n" +
+    "    <div class='wrap'>\n" +
+    "        <div class='crop'>\n" +
+    "            <img src='' style=\"background-color: #1db996;\">\n" +
+    "        </div>\n" +
+    "    </div>\n" +
+    "</div>\n" +
+    "\n" +
+    "<div class=\"container\">\n" +
+    "    <div id=\"absolute\" class=\"info\">\n" +
+    "        <div class=\"title\">Absolute Yachts North America</div>\n" +
+    "        <br>\n" +
+    "        <br>\n" +
+    "        <div class=\"message\">Absolute is an Italian yacht brand based in Piacenza, Italy, manufacturing yachts\n" +
+    "        ranging from 40 to 72 feet. Communicating the brand's focus on design, efficiency, performance\n" +
+    "        and serviceability are a high priority. NOVO is responsible for Absolute North America's online marketing,\n" +
+    "        including web design and development, email marketing, and social media marketing. The web site includes a\n" +
+    "        home page, about page, dealer map, model information and galleries, and contact form.</div>\n" +
+    "        <div class=\"link\"><a href=\"www.absoluteyachtsna.com\">absoluteyachtsna.com</a></div>\n" +
+    "    </div>\n" +
+    "    <div id=\"client2\" class=\"info\">\n" +
+    "        <!--next client here-->\n" +
+    "        <div class=\"title\"></div>\n" +
+    "        <div class=\"message\"></div>\n" +
+    "        <div class=\"link\"></div>\n" +
+    "    </div>\n" +
     "</div>");
 }]);
 
