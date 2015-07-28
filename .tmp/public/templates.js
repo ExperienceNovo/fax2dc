@@ -55,31 +55,85 @@ angular.module("blog/index.tpl.html", []).run(["$templateCache", function($templ
 
 angular.module("contact/index.tpl.html", []).run(["$templateCache", function($templateCache) {
   $templateCache.put("contact/index.tpl.html",
-    "<!--<h1>Contact</h1>\n" +
-    "<hr>-->\n" +
-    "<div class=\"contact\" id=\"contact\">\n" +
-    "    <div class=\"section-head\">\n" +
-    "        <h3>Join The NOVO Experience</h3>\n" +
+    "<link href=\"/styles/css/contact.css\" type=\"text/css\">\n" +
+    "<link href=\"/styles/css/portfolio.css\" type=\"text/css\">\n" +
+    "<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel='stylesheet' type='text/css'>\n" +
+    "\n" +
+    "<style type=\"text/css\">\n" +
+    "    #map-canvas {\n" +
+    "    width: 1600px;\n" +
+    "    height: 600px;\n" +
+    "    }\n" +
+    "</style>\n" +
+    "\n" +
+    "<div class=\"surface-container\">\n" +
+    "    <div class=\"container\">\n" +
+    "        <div id=\"locations\" class=\"info\">\n" +
+    "            <div class=\"title\" style=\"font-weight:400;\">four locations nationwide</div>\n" +
+    "            <br>\n" +
+    "            <br>\n" +
+    "            <div class=\"message\">Our team members are in Chapel Hill NC, Evanston (Chicago) IL, Knoxville TN, and Philadelphia PA.\n" +
+    "                Operating in four locations nationwide results in greater client diversity, which we believe is\n" +
+    "                instrumental in maintaining creative flow and ensuring innovation. Tailoring our skills and expertise\n" +
+    "                for a wider range of project types has allowed us to be on the forefront of web development.\n" +
+    "                <br>\n" +
+    "                <br>\n" +
+    "                Our services are available nationwide and are not limited to our four physical locations.\n" +
+    "            </div>\n" +
+    "        </div>\n" +
     "    </div>\n" +
-    "\n" +
-    "    <h3>experienceNOVO@gmail.com</h3>\n" +
-    "    <h3>865.696.9382</h3>\n" +
-    "\n" +
-    "    <br><br>\n" +
-    "\n" +
-    "    <div class=\"contact-section\">\n" +
-    "        <form class=\"ctr\" action=\"//projectnovo.us11.list-manage.com/subscribe/post?u=a56f7f3f876fa9db4c36328af&amp;id=ff3d3ae826\" method=\"post\">\n" +
-    "            <div class=\"loader\"></div>\n" +
-    "            <input type=\"email\" name=\"EMAIL\" required>\n" +
-    "            <div class=\"indicator\" data-content=\"Type Your Email Address\"></div>\n" +
-    "        </form>\n" +
-    "    </div>\n" +
-    "\n" +
-    "    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->\n" +
-    "    <div style=\"position: absolute; left: -5000px;\"><input type=\"text\" name=\"b_a56f7f3f876fa9db4c36328af_ff3d3ae826\" tabindex=\"-1\" value=\"\"></div>\n" +
-    "    <div class=\"clear\"><input type=\"submit\" value=\"Subscribe\" name=\"subscribe\" id=\"mc-embedded-subscribe\" class=\"button\"></div>\n" +
-    "\n" +
     "</div>\n" +
+    "<div class=\"center\">\n" +
+    "    <div id=\"map-container\" class=\"map-container\">\n" +
+    "        <div id=\"map-canvas\"></div>\n" +
+    "    </div>\n" +
+    "</div>\n" +
+    "<div class=\"surface-container\">\n" +
+    "    <div class=\"container\">\n" +
+    "        <div id=\"newsletter\" class=\"info\">\n" +
+    "            <div class=\"title\" style=\"font-weight:400;\">get in touch</div>\n" +
+    "            <br>\n" +
+    "            <br>\n" +
+    "            <div class=\"message\">We ask those who are interested in our services to contact us via\n" +
+    "                <a href=\"mailto:experiencenovo@gmail.com\">email</a> or to give us a call at one of our four locations.\n" +
+    "                We embrace open dialogue and transparency, and would\n" +
+    "                be more than happy to answer any questions you may have!\n" +
+    "                <br>\n" +
+    "                <br>\n" +
+    "                Chapel Hill (Raleigh): <a href=\"tel:+18656797229\">(865) 679-7229</a>\n" +
+    "                <br>\n" +
+    "                Evanston (Chicago): <a href=\"tel:+18653876121\">(865) 387-6121</a>\n" +
+    "                <br>\n" +
+    "                Knoxville: <a href=\"tel:+18656969382\">(865) 696-9382</a>\n" +
+    "                <br>\n" +
+    "                Philadelphia: <a href=\"tel:+13365800855\">(336) 580-0855</a>\n" +
+    "                <br>\n" +
+    "                <br>\n" +
+    "                We also send out a monthly newsletter highlighting the latest in web development, what we are up to, and\n" +
+    "                our blog series. It's a great way to stay in the loop and see the latest and greatest in web dev.\n" +
+    "                Sound interesting? Sign up for our mailing list below.\n" +
+    "            </div>\n" +
+    "        </div>\n" +
+    "    </div>\n" +
+    "    <br>\n" +
+    "    <br>\n" +
+    "    <div class=\"contact\" id=\"contact\">\n" +
+    "        <div class=\"contact-section\">\n" +
+    "            <form class=\"ctr\" action=\"//projectnovo.us11.list-manage.com/subscribe/post?u=a56f7f3f876fa9db4c36328af&amp;id=ff3d3ae826\" method=\"post\">\n" +
+    "                <div class=\"loader\"></div>\n" +
+    "                <input type=\"email\" name=\"EMAIL\" required>\n" +
+    "                <div class=\"indicator\" data-content=\"Type Your Email Address\"></div>\n" +
+    "            </form>\n" +
+    "        </div>\n" +
+    "\n" +
+    "        <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->\n" +
+    "        <div style=\"position: absolute; left: -5000px;\"><input type=\"text\" name=\"b_a56f7f3f876fa9db4c36328af_ff3d3ae826\" tabindex=\"-1\" value=\"\"></div>\n" +
+    "        <div class=\"clear\"><input type=\"submit\" value=\"Subscribe\" name=\"subscribe\" id=\"mc-embedded-subscribe\" class=\"button\"></div>\n" +
+    "\n" +
+    "    </div>\n" +
+    "</div>\n" +
+    "\n" +
+    "<script src=\"/js/maps.js\" type='text/javascript' ></script>\n" +
     "\n" +
     "\n" +
     "\n" +
@@ -98,6 +152,7 @@ angular.module("home/index.tpl.html", []).run(["$templateCache", function($templ
     "<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,800,600,300,200' rel='stylesheet' type='text/css'>\n" +
     "<link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,300,100,700' rel='stylesheet' type='text/css'>\n" +
     "<link href=\"/styles/css/font-awesome.min.css\" rel=\"stylesheet\" media=\"screen\">\n" +
+    "<link href=\"/styles/css/contact.css\" rel=\"stylesheet\" media=\"screen\">\n" +
     "\n" +
     "<div class=\"banner\">\n" +
     "    <div class=\"banner-text\">\n" +
@@ -180,40 +235,52 @@ angular.module("home/index.tpl.html", []).run(["$templateCache", function($templ
     "    </div>\n" +
     "    <!--<a href=\"#\" id=\"load_team\"><button class=\"mainbutton\">Learn More</button></a>-->\n" +
     "    </div>\n" +
-    "</div>  \n" +
-    "\n" +
-    "\n" +
-    "<div class=\"services\" id=\"service\">\n" +
-    "    <div class=\"section-head\">\n" +
-    "        <h3>Our Portfolio</h3>\n" +
-    "    </div>\n" +
-    "    <div class=\"services-list\">\n" +
-    "        <a href=\"http://www.absoluteyachtsna.com\">absolute yachts na</a>\n" +
-    "    </div>\n" +
     "</div>\n" +
     "\n" +
-    "\n" +
-    "<div class=\"contact\" id=\"contact\">\n" +
-    "    <div class=\"section-head\">\n" +
-    "        <h3>Join The NOVO Experience</h3>\n" +
+    "<div class=\"surface-container\">\n" +
+    "    <div class=\"container\">\n" +
+    "        <div id=\"newsletter\" class=\"info\">\n" +
+    "            <div class=\"title\" style=\"font-weight:400;\">get in touch</div>\n" +
+    "            <br>\n" +
+    "            <br>\n" +
+    "            <div class=\"message\">We ask those who are interested in our services to contact us via\n" +
+    "                <a href=\"mailto:experiencenovo@gmail.com\">email</a> or to give us a call at one of our four locations.\n" +
+    "                We embrace open dialogue and transparency, and would\n" +
+    "                be more than happy to answer any questions you may have!\n" +
+    "                <br>\n" +
+    "                <br>\n" +
+    "                Chapel Hill (Raleigh): <a href=\"tel:+18656797229\">(865) 679-7229</a>\n" +
+    "                <br>\n" +
+    "                Evanston (Chicago): <a href=\"tel:+18653876121\">(865) 387-6121</a>\n" +
+    "                <br>\n" +
+    "                Knoxville: <a href=\"tel:+18656969382\">(865) 696-9382</a>\n" +
+    "                <br>\n" +
+    "                Philadelphia: <a href=\"tel:+13365800855\">(336) 580-0855</a>\n" +
+    "                <br>\n" +
+    "                <br>\n" +
+    "                We also send out a monthly newsletter highlighting the latest in web development, what we are up to, and\n" +
+    "                our blog series. It's a great way to stay in the loop and see the latest and greatest in web dev.\n" +
+    "                Sound interesting? Sign up for our mailing list below.\n" +
+    "            </div>\n" +
+    "        </div>\n" +
     "    </div>\n" +
-    "    <div class=\"contact-section\">\n" +
-    "        <form class=\"ctr\" action=\"//projectnovo.us11.list-manage.com/subscribe/post?u=a56f7f3f876fa9db4c36328af&amp;id=ff3d3ae826\" method=\"post\">\n" +
-    "            <div class=\"loader\"></div>\n" +
-    "            <input type=\"email\" name=\"EMAIL\" required>\n" +
-    "            <div class=\"indicator\" data-content=\"Type Your Email Address\"></div>\n" +
-    "        </form>\n" +
+    "    <br>\n" +
+    "    <br>\n" +
+    "    <div class=\"contact\" id=\"contact\">\n" +
+    "        <div class=\"contact-section\">\n" +
+    "            <form class=\"ctr\" action=\"//projectnovo.us11.list-manage.com/subscribe/post?u=a56f7f3f876fa9db4c36328af&amp;id=ff3d3ae826\" method=\"post\">\n" +
+    "                <div class=\"loader\"></div>\n" +
+    "                <input type=\"email\" name=\"EMAIL\" required>\n" +
+    "                <div class=\"indicator\" data-content=\"Type Your Email Address\"></div>\n" +
+    "            </form>\n" +
+    "        </div>\n" +
+    "\n" +
+    "        <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->\n" +
+    "        <div style=\"position: absolute; left: -5000px;\"><input type=\"text\" name=\"b_a56f7f3f876fa9db4c36328af_ff3d3ae826\" tabindex=\"-1\" value=\"\"></div>\n" +
+    "        <div class=\"clear\"><input type=\"submit\" value=\"Subscribe\" name=\"subscribe\" id=\"mc-embedded-subscribe\" class=\"button\"></div>\n" +
+    "\n" +
     "    </div>\n" +
-    "\n" +
-    "    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->\n" +
-    "    <div style=\"position: absolute; left: -5000px;\"><input type=\"text\" name=\"b_a56f7f3f876fa9db4c36328af_ff3d3ae826\" tabindex=\"-1\" value=\"\"></div>\n" +
-    "    <div class=\"clear\"><input type=\"submit\" value=\"Subscribe\" name=\"subscribe\" id=\"mc-embedded-subscribe\" class=\"button\"></div>\n" +
-    "\n" +
     "</div>\n" +
-    "\n" +
-    "\n" +
-    "\n" +
-    "<br><br>\n" +
     "\n" +
     "<script src=\"https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js\" type=\"text/javascript\"></script>\n" +
     "<script src=\"/js/blog.js\" type=\"text/javascript\"></script>\n" +
