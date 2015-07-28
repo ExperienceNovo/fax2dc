@@ -291,11 +291,10 @@ angular.module("home/index.tpl.html", []).run(["$templateCache", function($templ
 
 angular.module("portfolio/index.tpl.html", []).run(["$templateCache", function($templateCache) {
   $templateCache.put("portfolio/index.tpl.html",
-    "<div class=\"container\">\n" +
-    "    <!--slideshow here-->\n" +
-    "</div>\n" +
+    "<link rel=\"stylesheet\" type=\"text/css\" href=\"/styles/css/ideal-image-slider.css\">\n" +
+    "<link rel=\"stylesheet\" type=\"text/css\" href=\"/styles/css/iis-default-theme.css\">\n" +
     "\n" +
-    "<div class='container' style=\"margin: 180px auto 0;\">\n" +
+    "<!--<div class='container' style=\"margin: 180px auto 0;\">\n" +
     "    <div class='wrap'>\n" +
     "        <div class='crop'>\n" +
     "            <img src='' style=\"background-color: #1db996;\">\n" +
@@ -321,27 +320,44 @@ angular.module("portfolio/index.tpl.html", []).run(["$templateCache", function($
     "            <img src='' style=\"background-color: #1db996;\">\n" +
     "        </div>\n" +
     "    </div>\n" +
+    "</div>-->\n" +
+    "\n" +
+    "<div class=\"center top-slider\">\n" +
+    "    <div id=\"slider\" class=\"slider\" style=\"z-index: 20 !important;\">\n" +
+    "        <img src=\"/images/portfolio/absolute-screenshot.png\" data-src-2x=\"\" alt=\"\" data-caption=\"#caption-1\">\n" +
+    "        <img data-src=\"/images/portfolio/absolute-screenshot.png\" data-src-2x=\"\" src=\"\" alt=\"\" data-caption=\"#caption-2\" style=\"background-color: #1db996;\">\n" +
+    "        <div class=\"iis-previous-nav\"></div>\n" +
+    "        <div class=\"iis-next-nav\"></div>\n" +
+    "    </div>\n" +
+    "    <div id=\"caption-1\" class=\"caption\">\n" +
+    "        <h3><a href=\"http://www.absoluteyachtsna.com/\">Absolute Yachts North America</a></h3>\n" +
+    "        <p style=\"margin-bottom: 0px\">Absolute is an Italian yacht brand based in Piacenza, Italy, manufacturing yachts\n" +
+    "            ranging from 40 to 72 feet. NOVO is responsible for Absolute North America's online marketing,\n" +
+    "            including web design and development, email marketing, and social media marketing.\n" +
+    "        </p>\n" +
+    "    </div>\n" +
+    "    <div id=\"caption-2\" class=\"caption\">\n" +
+    "        <h3>More coming soon!</h3>\n" +
+    "        <p style=\"margin-bottom: 0px\"></p>\n" +
+    "    </div>\n" +
     "</div>\n" +
     "\n" +
     "<div class=\"container\">\n" +
     "    <div id=\"absolute\" class=\"info\">\n" +
-    "        <div class=\"title\">Absolute Yachts North America</div>\n" +
+    "        <div class=\"title\" style=\"font-weight:400;\">quality, modernity, and transparency</div>\n" +
     "        <br>\n" +
     "        <br>\n" +
-    "        <div class=\"message\">Absolute is an Italian yacht brand based in Piacenza, Italy, manufacturing yachts\n" +
-    "        ranging from 40 to 72 feet. Communicating the brand's focus on design, efficiency, performance\n" +
-    "        and serviceability are a high priority. NOVO is responsible for Absolute North America's online marketing,\n" +
-    "        including web design and development, email marketing, and social media marketing. The web site includes a\n" +
-    "        home page, about page, dealer map, model information and galleries, and contact form.</div>\n" +
-    "        <div class=\"link\"><a href=\"www.absoluteyachtsna.com\">absoluteyachtsna.com</a></div>\n" +
+    "        <div class=\"message\">\n" +
+    "            Our clients know what it means to partner with NOVO. Our work exudes quality, employs the latest and greatest\n" +
+    "            in marketing and web development, and we are transparent in our communication to clients and the outside\n" +
+    "            world. Take a look at our clients' websites. We believe our work speaks for itself.\n" +
+    "        </div>\n" +
     "    </div>\n" +
-    "    <div id=\"client2\" class=\"info\">\n" +
-    "        <!--next client here-->\n" +
-    "        <div class=\"title\"></div>\n" +
-    "        <div class=\"message\"></div>\n" +
-    "        <div class=\"link\"></div>\n" +
-    "    </div>\n" +
-    "</div>");
+    "</div>\n" +
+    "\n" +
+    "<script src=\"/js/ideal-image-slider.js\" type='text/javascript'></script>\n" +
+    "<script src=\"/js/iis-captions.js\" type='text/javascript'></script>\n" +
+    "<script src=\"/js/slider.js\" type='text/javascript'></script>");
 }]);
 
 angular.module("sidebar/index.tpl.html", []).run(["$templateCache", function($templateCache) {
