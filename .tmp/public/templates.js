@@ -133,7 +133,7 @@ angular.module("contact/index.tpl.html", []).run(["$templateCache", function($te
     "    </div>\n" +
     "</div>\n" +
     "\n" +
-    "<script src=\"maps.js\" type='text/javascript'></script>\n" +
+    "<script src=\"/js/maps.js\" type='text/javascript'></script>\n" +
     "\n" +
     "\n" +
     "\n" +
@@ -291,9 +291,6 @@ angular.module("home/index.tpl.html", []).run(["$templateCache", function($templ
 
 angular.module("portfolio/index.tpl.html", []).run(["$templateCache", function($templateCache) {
   $templateCache.put("portfolio/index.tpl.html",
-    "<link rel=\"stylesheet\" type=\"text/css\" href=\"/styles/css/ideal-image-slider.css\">\n" +
-    "<link rel=\"stylesheet\" type=\"text/css\" href=\"/styles/css/iis-default-theme.css\">\n" +
-    "\n" +
     "<!--<div class='container' style=\"margin: 180px auto 0;\">\n" +
     "    <div class='wrap'>\n" +
     "        <div class='crop'>\n" +
@@ -322,42 +319,46 @@ angular.module("portfolio/index.tpl.html", []).run(["$templateCache", function($
     "    </div>\n" +
     "</div>-->\n" +
     "\n" +
-    "<div class=\"center top-slider\">\n" +
-    "    <div id=\"slider\" class=\"slider\" style=\"z-index: 20 !important;\">\n" +
-    "        <img src=\"/images/portfolio/absolute-screenshot.png\" data-src-2x=\"\" alt=\"\" data-caption=\"#caption-1\">\n" +
-    "        <img data-src=\"/images/portfolio/absolute-screenshot.png\" data-src-2x=\"\" src=\"\" alt=\"\" data-caption=\"#caption-2\" style=\"background-color: #1db996;\">\n" +
-    "        <div class=\"iis-previous-nav\"></div>\n" +
-    "        <div class=\"iis-next-nav\"></div>\n" +
-    "    </div>\n" +
-    "    <div id=\"caption-1\" class=\"caption\">\n" +
-    "        <h3><a href=\"http://www.absoluteyachtsna.com/\">Absolute Yachts North America</a></h3>\n" +
-    "        <p style=\"margin-bottom: 0px\">Absolute is an Italian yacht brand based in Piacenza, Italy, manufacturing yachts\n" +
-    "            ranging from 40 to 72 feet. NOVO is responsible for Absolute North America's online marketing,\n" +
-    "            including web design and development, email marketing, and social media marketing.\n" +
-    "        </p>\n" +
-    "    </div>\n" +
-    "    <div id=\"caption-2\" class=\"caption\">\n" +
-    "        <h3>More coming soon!</h3>\n" +
-    "        <p style=\"margin-bottom: 0px\"></p>\n" +
-    "    </div>\n" +
-    "</div>\n" +
-    "\n" +
     "<div class=\"container\">\n" +
-    "    <div id=\"absolute\" class=\"info\">\n" +
-    "        <div class=\"title\" style=\"font-weight:400;\">quality, modernity, and transparency</div>\n" +
+    "    <div id=\"\" class=\"info\">\n" +
+    "        <div class=\"title\" style=\"font-weight:400;\">Quality, Modernity, and Transparency</div>\n" +
     "        <br>\n" +
     "        <br>\n" +
     "        <div class=\"message\">\n" +
     "            Our clients know what it means to partner with NOVO. Our work exudes quality, employs the latest and greatest\n" +
     "            in marketing and web development, and we are transparent in our communication to clients and the outside\n" +
-    "            world. Take a look at our clients' websites. We believe our work speaks for itself.\n" +
+    "            world.\n" +
+    "            <br>\n" +
+    "            <br>\n" +
+    "            We believe our work speaks for itself.\n" +
     "        </div>\n" +
     "    </div>\n" +
     "</div>\n" +
     "\n" +
-    "<script src=\"/js/ideal-image-slider.js\" type='text/javascript'></script>\n" +
-    "<script src=\"/js/iis-captions.js\" type='text/javascript'></script>\n" +
-    "<script src=\"/js/slider.js\" type='text/javascript'></script>");
+    "<div class=\"container\">\n" +
+    "    <div id=\"absolute\" class=\"info\">\n" +
+    "        <div class=\"item hoverwrap\">\n" +
+    "            <figure class=\"figure-overlay figure-overlay-icon opacity\">\n" +
+    "                <a href=\"http://www.absoluteyachtsna.com/\">\n" +
+    "                    <img src=\"/images/portfolio/absolute-screenshot.png\" class=\"img-fill\" style=\"width: 100% !important; border: 1px solid black; margin-bottom: 15px;\">\n" +
+    "                    <div>\n" +
+    "                        <p class=\"absolute-hover\"></p>\n" +
+    "                    </div>\n" +
+    "                </a>\n" +
+    "            </figure>\n" +
+    "        </div>\n" +
+    "        <div class=\"title\" style=\"font-weight:400;\">Absolute Yachts North America</div>\n" +
+    "        <br>\n" +
+    "        <br>\n" +
+    "        <div class=\"message\">\n" +
+    "            Absolute is an Italian yacht brand based in Piacenza, Italy, manufacturing yachts\n" +
+    "            ranging from 40 to 72 feet. NOVO is responsible for Absolute North America's online marketing,\n" +
+    "            including web design and development, email marketing, and social media marketing.\n" +
+    "        </div>\n" +
+    "        <div class=\"link\"><a href=\"http://www.absoluteyachtsna.com/\">absoluteyachtsna.com</a></div>\n" +
+    "    </div>\n" +
+    "</div>\n" +
+    "");
 }]);
 
 angular.module("sidebar/index.tpl.html", []).run(["$templateCache", function($templateCache) {
