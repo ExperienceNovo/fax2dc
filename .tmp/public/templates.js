@@ -133,7 +133,7 @@ angular.module("contact/index.tpl.html", []).run(["$templateCache", function($te
     "    </div>\n" +
     "</div>\n" +
     "\n" +
-    "<script src=\"/js/maps.js\" type='text/javascript' ></script>\n" +
+    "<script src=\"maps.js\" type='text/javascript'></script>\n" +
     "\n" +
     "\n" +
     "\n" +
