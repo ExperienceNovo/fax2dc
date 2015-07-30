@@ -352,18 +352,6 @@ p.under-tagline {
     padding:0
 }
 
-ul.nav li a {
-    display:block;
-    padding:15px 0;
-    background-color:#000;
-    transition:all .7s ease-in
-}
-
-ul.nav li a:hover {
-    color:#FFF;
-    background-color:#16b1b5
-}
-
 ul#menu {
     position:static;
     display:none
@@ -491,18 +479,6 @@ p.under-tagline {
     text-align:center;
     margin:0;
     padding:0
-}
-
-ul.nav li a {
-    display:block;
-    padding:15px 0;
-    background-color:#000;
-    transition:all .7s ease-in
-}
-
-ul.nav li a:hover {
-    color:#FFF;
-    background-color:#16b1b5
 }
 
 ul#menu {

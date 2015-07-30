@@ -4,14 +4,12 @@
 
 html, body {
     height:100%;
-    background-color: #f1f1fa;
-}
-
-html,body {
-	overflow-x:hidden!important;
+    background-color: #f1f1fa;  
+    overflow-x:hidden!important;
     margin:0;
     padding:0;
 }
+
 @media screen and (max-width: 720px) {
     body {
         margin-left: 64px;

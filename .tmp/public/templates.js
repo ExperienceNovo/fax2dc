@@ -2,29 +2,156 @@ angular.module('templates-app', ['about/index.tpl.html', 'blog/index.tpl.html', 
 
 angular.module("about/index.tpl.html", []).run(["$templateCache", function($templateCache) {
   $templateCache.put("about/index.tpl.html",
-    "<h1>about</h1>\n" +
-    "<div>\n" +
-    "	<h3>Full-service Online Marketing</h3>\n" +
-    "	<div>\n" +
-    "		<p>Social Media Management to extend your customer reach.</p>\n" +
-    "		<p>Email Outreach Marketing to manage current customer and secure new-customer leads. </p>\n" +
-    "		<p>Blog Creation to establish your presence within your community and your industry.</p>\n" +
-    "		<p>Marketing Metric Analysis to ensure effectiveness and maximize return on investment.</p>\n" +
+    "<!DOCTYPE html>\n" +
+    "<html lang=\"en\">\n" +
+    "<head>\n" +
+    "\n" +
+    "	<meta charset=\"utf-8\">\n" +
+    "	<title>About | NOVO</title>\n" +
+    "	<meta name=\"viewport\" content=\"width=device-width, initial-scale=1, maximum-scale=1\">\n" +
+    "\n" +
+    "	<link href=\"/styles/css/about.css\" rel=\"stylesheet\">	\n" +
+    "    <link href=\"/styles/css/ui-bootstrap-custom-0.13.1-csp.css\" rel=\"stylesheet\">\n" +
+    "    <link href=\"favicon.ico\" rel=\"icon\" type=\"image/x-icon\" />\n" +
+    "	<link href=\"/styles/css/font-awesome.min.css\" rel=\"stylesheet\">\n" +
+    "	<link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800' rel='stylesheet' type='text/css'>\n" +
+    "\n" +
+    "</head>\n" +
+    "    \n" +
+    "<body>\n" +
+    "\n" +
+    "<div class=\"lead-container\">\n" +
+    "<div class=\"container\">\n" +
+    "\n" +
+    "	<div id=\"carousel\" class=\"carousel slide novo\" rel=\"carousel\">\n" +
+    "		<img src=\"/images/about/carousel-macbook.png\" class=\"carousel-novo\" alt=\"\" />\n" +
+    "		<div class=\"carousel-inner\">\n" +
+    "			<div class=\"item active\">\n" +
+    "				<img src=\"http://placehold.it/512x322/2AB996/FFF/?text=Novo+Placeholder\" alt=\"\" />\n" +
+    "			</div>\n" +
+    "\n" +
+    "			<div class=\"item\">\n" +
+    "				<img src=\"/images/about/a.jpg\" alt=\"\" />\n" +
+    "			</div>\n" +
+    "\n" +
+    "			<div class=\"item\">\n" +
+    "				<img src=\"/images/about/b.jpg\" alt=\"\" />\n" +
+    "			</div>\n" +
+    "\n" +
+    "		</div>\n" +
+    "		<a class=\"carousel-control left\" href=\"#carousel\" data-slide=\"prev\"></a>\n" +
+    "		<a class=\"carousel-control right\" href=\"#carousel\" data-slide=\"next\"></a>\n" +
     "	</div>\n" +
-    "	<h3>Blue-chip Graphic Design</h3>\n" +
-    "	<div>\n" +
-    "		<p>Full-scale Branding to ensure clear communication of your message.</p>\n" +
-    "		<p>Customer Interface Design to ensure a seamless online experience.</p>\n" +
-    "		<p>Advertising and Logo Design to establish a cohesive brand message.</p>\n" +
+    "\n" +
+    "</div>\n" +
+    "</div>\n" +
+    "\n" +
+    "<section class=\"col-md-12\">\n" +
+    "\n" +
+    "	<section class=\"row\" style=\"margin-left:50px;margin-right:50px\">\n" +
+    "		<article class=\"col-md-4\">\n" +
+    "			<h2><span class=\"grey\">We're</span> Creative</h2>\n" +
+    "			<p>\n" +
+    "				Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. \n" +
+    "			</p>\n" +
+    "		</article>\n" +
+    "		<article class=\"col-md-4\">\n" +
+    "			<h2><span class=\"grey\">We're</span> Effective</h2>\n" +
+    "			<p>\n" +
+    "				Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. \n" +
+    "			</p>\n" +
+    "		</article>\n" +
+    "		<article class=\"col-md-4\">\n" +
+    "			<h2><span class=\"grey\">We're</span> Reliable</h2>\n" +
+    "			<p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>\n" +
+    "		</article>\n" +
+    "	</section>\n" +
+    "\n" +
+    "<hr/>\n" +
+    "\n" +
+    "<div class=\"service-tabs\" style=\"margin-left:75px;margin-right:75px\">\n" +
+    "	<ul class=\"nav nav-tabs\" align=\"center\">\n" +
+    "		<li rel=\"service-1\" class=\"active col-md-2 col-sm-4 col-xs-5 center-block\">\n" +
+    "			<a href=\"#service-1\" data-toggle=\"tab\">\n" +
+    "                <img id=\"dev\"/>\n" +
+    "			</a>\n" +
+    "		</li>\n" +
+    "		<li rel=\"service-2\" class=\"col-md-2 col-sm-4 col-xs-5 center-block\">\n" +
+    "			<a href=\"#service-2\" data-toggle=\"tab\">\n" +
+    "                <img id=\"marketing\"/>\n" +
+    "			</a>\n" +
+    "		</li>\n" +
+    "		<li rel=\"service-3\" class=\"col-md-2  col-sm-4 col-xs-5 center-block\">\n" +
+    "			<a href=\"#service-3\" data-toggle=\"tab\">\n" +
+    "                <img id=\"brand\"/>\n" +
+    "            </a>\n" +
+    "		</li>\n" +
+    "		<li rel=\"service-4\" class=\"col-md-2 col-sm-4 col-xs-5 center-block\">\n" +
+    "			<a href=\"#service-4\" data-toggle=\"tab\">\n" +
+    "                <img id=\"support\"/>\n" +
+    "			</a>\n" +
+    "		</li>\n" +
+    "		<li rel=\"service-5\" class=\"col-md-2  col-sm-4 col-xs-5 center-block\">\n" +
+    "			<a href=\"#service-5\" data-toggle=\"tab\">\n" +
+    "                <img id=\"security\"/>\n" +
+    "			</a>\n" +
+    "		</li>\n" +
+    "	</ul>\n" +
+    "    <div id=\"preload\">\n" +
+    "       <img src=\"/images/about/dev.png\" width=\"1\" height=\"1\" />\n" +
+    "       <img src=\"/images/about/marketing.png\" width=\"1\" height=\"1\" />\n" +
+    "       <img src=\"/images/about/branding.png\" width=\"1\" height=\"1\" />\n" +
+    "       <img src=\"/images/about/support.png\" width=\"1\" height=\"1\" />\n" +
+    "       <img src=\"/images/about/security.png\" width=\"1\" height=\"1\" />\n" +
+    "    </div>\n" +
+    "	<div class=\"tab-content\">\n" +
+    "		<div id=\"service-1\" class=\"tab-pane active\">\n" +
+    "\n" +
+    "			<h3>Web Design and Development</h3>\n" +
+    "			\n" +
+    "			<p>\n" +
+    "				Professionally designed, custom websites with integrated web content management systems. \n" +
+    "				We're dedicated to providing small businesses and organizations with high-quality web design and web development services at a remarkably competitive value.\n" +
+    "			</p>\n" +
+    "			\n" +
+    "		</div>\n" +
+    "		<div id=\"service-2\" class=\"tab-pane\">\n" +
+    "			<h3>Complete Online Marketing</h3>\n" +
+    "			<p>\n" +
+    "				 Social Media Management to extend your customer reach. Email Outreach Marketing to manage current customer and secure new-customer leads. Blog Creation to establish your presence within your community and your industry. Marketing Metric Analysis to ensure effectiveness and maximize return on investment.\n" +
+    "			</p>\n" +
+    "		</div>\n" +
+    "		<div id=\"service-3\" class=\"tab-pane\">\n" +
+    "				<h3>Branding and Identity Design</h3>\n" +
+    "				<p>\n" +
+    "					Full-scale Branding to ensure clear communication of your message. Customer Interface Design to ensure a seamless online experience. Advertising and Logo Design to establish a cohesive brand message.\n" +
+    "				</p>\n" +
+    "		</div>\n" +
+    "		<div id=\"service-4\" class=\"tab-pane\">\n" +
+    "				<h3>Continual Support</h3>\n" +
+    "				<p>\n" +
+    "					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum auctor justo a dolor sollicitudin sollicitudin. Phasellus faucibus nec nibh eu molestie. In placerat ullamcorper mi. Proin vehicula erat sed felis fringilla tincidunt. Fusce in odio id justo euismod tincidunt a eu sem. Praesent pellentesque nisl a dui cursus volutpat. Ut sem erat, interdum a blandit quis, finibus vitae tortor. Etiam eget enim est.\n" +
+    "				</p>\n" +
+    "		</div>\n" +
+    "		<div id=\"service-5\" class=\"tab-pane\">\n" +
+    "				<h3>Reliable Security</h3>\n" +
+    "				<p>\n" +
+    "					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum auctor justo a dolor sollicitudin sollicitudin. Phasellus faucibus nec nibh eu molestie. In placerat ullamcorper mi. Proin vehicula erat sed felis fringilla tincidunt. Fusce in odio id justo euismod tincidunt a eu sem. Praesent pellentesque nisl a dui cursus volutpat. Ut sem erat, interdum a blandit quis, finibus vitae tortor. Etiam eget enim est.\n" +
+    "				</p>\n" +
+    "		</div>\n" +
     "	</div>\n" +
-    "	<h3>Development</h3>\n" +
-    "	<div>\n" +
-    "		<p>Customer Experience Creation for eye-pleasing customer interaction.</p>\n" +
-    "		<p>Mobile-first Web Design to align you with the ever-increasing mobile world.</p>\n" +
-    "		<p>SEO Structuring to naturally expand your online reach and outpace your competitors.</p>\n" +
-    "		<p>Back-end Software Integration to ensure maximum security and business technology integration.</p>\n" +
-    "	</div>\n" +
-    "</div>");
+    "</div>\n" +
+    "\n" +
+    "\n" +
+    "</section>\n" +
+    "\n" +
+    "\n" +
+    "	<script type=\"text/javascript\" src=\"/js/ui-bootstrap-tpls-0.13.1.min.js\"></script>\n" +
+    "    <script type=\"text/javascript\" src=\"/js/bootstrap.min.js\"></script>\n" +
+    "	<script type=\"text/javascript\" src=\"/js/about.js\"></script>\n" +
+    "	\n" +
+    "</body>\n" +
+    "</html>		");
 }]);
 
 angular.module("blog/index.tpl.html", []).run(["$templateCache", function($templateCache) {
