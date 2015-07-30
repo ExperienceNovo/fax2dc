@@ -57,57 +57,94 @@ angular.module("contact/index.tpl.html", []).run(["$templateCache", function($te
   $templateCache.put("contact/index.tpl.html",
     "<link href=\"/styles/css/contact.css\" type=\"text/css\">\n" +
     "<link href=\"/styles/css/portfolio.css\" type=\"text/css\">\n" +
-    "<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel='stylesheet' type='text/css'>\n" +
+    "<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600|Jura:400,500,300' rel='stylesheet' type='text/css'>\n" +
     "\n" +
     "<style type=\"text/css\">\n" +
     "    #map-canvas {\n" +
-    "    width: 1600px;\n" +
+    "    width: 1024px;\n" +
     "    height: 600px;\n" +
     "    }\n" +
     "</style>\n" +
     "\n" +
+    "<div class=\"title\" style=\"z-index: 20; position: fixed; top: 0; width: 100%; box-shadow: 0px 2px 5px #000000; font-size: 45px !important; background-color: #7A7C88; color: white; padding: 1.0%;\">Contact Us</div>\n" +
+    "\n" +
+    "<br>\n" +
+    "<br>\n" +
+    "<br>\n" +
+    "\n" +
     "<div class=\"surface-container\">\n" +
+    "    <br>\n" +
+    "    <br>\n" +
     "    <div class=\"container\">\n" +
     "        <div id=\"locations\" class=\"info\">\n" +
-    "            <div class=\"title\" style=\"font-weight:400;\">four locations nationwide</div>\n" +
+    "            <div class=\"title\">four locations nationwide</div>\n" +
     "            <br>\n" +
     "            <br>\n" +
-    "            <div class=\"message\">Our team members are in Chapel Hill NC, Evanston (Chicago) IL, Knoxville TN, and Philadelphia PA.\n" +
+    "            <div class=\"message\">NOVO has established a physical presence in Chapel Hill (Raleigh) NC, Evanston (Chicago) IL, Knoxville TN, and Philadelphia PA.\n" +
     "                Operating in four locations nationwide results in greater client diversity, which we believe is\n" +
     "                instrumental in maintaining creative flow and ensuring innovation. Tailoring our skills and expertise\n" +
-    "                for a wider range of project types has allowed us to be on the forefront of web development.\n" +
+    "                for a wider range of project types has allowed us to grow our skills beyond those of your typical\n" +
+    "                marketing firm.\n" +
     "                <br>\n" +
     "                <br>\n" +
-    "                Our services are available nationwide and are not limited to our four physical locations.\n" +
+    "                Our services are available nationwide!\n" +
     "            </div>\n" +
     "        </div>\n" +
     "    </div>\n" +
-    "</div>\n" +
-    "<div class=\"center\">\n" +
-    "    <div id=\"map-container\" class=\"map-container\">\n" +
-    "        <div id=\"map-canvas\"></div>\n" +
+    "    <div class=\"center\">\n" +
+    "        <div id=\"map-container\" class=\"map-container\">\n" +
+    "            <div id=\"map-canvas\"></div>\n" +
+    "        </div>\n" +
     "    </div>\n" +
-    "</div>\n" +
-    "<div class=\"surface-container\">\n" +
     "    <div class=\"container\">\n" +
     "        <div id=\"newsletter\" class=\"info\">\n" +
-    "            <div class=\"title\" style=\"font-weight:400;\">get in touch</div>\n" +
+    "            <div class=\"title\">get in touch</div>\n" +
     "            <br>\n" +
     "            <br>\n" +
     "            <div class=\"message\">We ask those who are interested in our services to contact us via\n" +
-    "                <a href=\"mailto:experiencenovo@gmail.com\">email</a> or to give us a call at one of our four locations.\n" +
+    "                <a href=\"mailto:experiencenovo@gmail.com\" style=\"color: #1db996; font-weight: 400;\">email</a> or to give us a call at one of our four locations.\n" +
     "                We embrace open dialogue and transparency, and would\n" +
     "                be more than happy to answer any questions you may have!\n" +
     "                <br>\n" +
     "                <br>\n" +
-    "                Chapel Hill (Raleigh): <a href=\"tel:+18656797229\">(865) 679-7229</a>\n" +
-    "                <br>\n" +
-    "                Evanston (Chicago): <a href=\"tel:+18653876121\">(865) 387-6121</a>\n" +
-    "                <br>\n" +
-    "                Knoxville: <a href=\"tel:+18656969382\">(865) 696-9382</a>\n" +
-    "                <br>\n" +
-    "                Philadelphia: <a href=\"tel:+13365800855\">(336) 580-0855</a>\n" +
-    "                <br>\n" +
+    "                <div class=\"center\">\n" +
+    "                    <div class=\"box2 small-medium\">\n" +
+    "                        <a href=\"tel:+18656797229\">\n" +
+    "                            <img src=\"/images/contact/chap.jpeg\" class=\"img-fill opacity\">\n" +
+    "                            <br>\n" +
+    "                            <br>\n" +
+    "                            <div class=\"title\" style=\"font-size: 22px;\">Chapel Hill, NC</div>\n" +
+    "                            <div class=\"subtitle\">(865) 679-7229</div>\n" +
+    "                        </a>\n" +
+    "                    </div>\n" +
+    "                    <div class=\"box2 small-medium\">\n" +
+    "                        <a href=\"tel:+18653876121\">\n" +
+    "                            <img src=\"/images/contact/evanston.jpg\" class=\"img-fill opacity\">\n" +
+    "                            <br>\n" +
+    "                            <br>\n" +
+    "                            <div class=\"title\" style=\"font-size: 22px;\">Evanston, IL</div>\n" +
+    "                            <div class=\"subtitle\">(865) 387-6121</div>\n" +
+    "                        </a>\n" +
+    "                    </div>\n" +
+    "                    <div class=\"box2 small-medium\">\n" +
+    "                        <a href=\"tel:+18656969382\">\n" +
+    "                            <img src=\"/images/contact/knoxville.jpg\" class=\"img-fill opacity\">\n" +
+    "                            <br>\n" +
+    "                            <br>\n" +
+    "                            <div class=\"title\" style=\"font-size: 22px;\">Knoxville, TN</div>\n" +
+    "                            <div class=\"subtitle\">(865) 696-9382</div>\n" +
+    "                        </a>\n" +
+    "                    </div>\n" +
+    "                    <div class=\"box2 small-medium\">\n" +
+    "                        <a href=\"tel:+13365800855\">\n" +
+    "                            <img src=\"/images/contact/philly.jpg\" class=\"img-fill opacity\">\n" +
+    "                            <br>\n" +
+    "                            <br>\n" +
+    "                            <div class=\"title\" style=\"font-size: 22px;\">Philadelpia, PA</div>\n" +
+    "                            <div class=\"subtitle\">(336) 580-0855</div>\n" +
+    "                        </a>\n" +
+    "                    </div>\n" +
+    "                </div>\n" +
     "                <br>\n" +
     "                We also send out a monthly newsletter highlighting the latest in web development, what we are up to, and\n" +
     "                our blog series. It's a great way to stay in the loop and see the latest and greatest in web dev.\n" +
@@ -117,6 +154,7 @@ angular.module("contact/index.tpl.html", []).run(["$templateCache", function($te
     "    </div>\n" +
     "    <br>\n" +
     "    <br>\n" +
+    "\n" +
     "    <div class=\"contact\" id=\"contact\">\n" +
     "        <div class=\"contact-section\">\n" +
     "            <form class=\"ctr\" action=\"//projectnovo.us11.list-manage.com/subscribe/post?u=a56f7f3f876fa9db4c36328af&amp;id=ff3d3ae826\" method=\"post\">\n" +
@@ -208,26 +246,41 @@ angular.module("home/index.tpl.html", []).run(["$templateCache", function($templ
     "            <div class=\"col-md-12\">\n" +
     "                <div class=\"col-md-3\">\n" +
     "                    <img src=\"/images/team/val.png\" />\n" +
-    "                    <h2>Valentino</h2>\n" +
-    "                    <a href=\"http://www.valentino.io\">site</a>\n" +
+    "                    <br>\n" +
+    "                    <br>\n" +
+    "                    <div class=\"title\">Valentino</div>\n" +
+    "                    <h2>Data Science</h2>\n" +
+    "                    <!--<h2>Web Design</h2>\n" +
+    "                    <h2>Web Development</h2>\n" +
     "                    <!--<h2 style=\"color: #BDBDBD\">Development</h2>-->\n" +
     "                </div>\n" +
     "                <div class=\"col-md-3\">\n" +
     "                    <img src=\"/images/team/garrett.png\" />\n" +
-    "                    <h2>Garrett</h2>\n" +
-    "                    <a href=\"http://garrettheadden.com\">site</a>\n" +
+    "                    <br>\n" +
+    "                    <br>\n" +
+    "                    <div class=\"title\">Garrett</div>\n" +
+    "                    <h2>Marketing</h2>\n" +
+    "                    <!--<h2>Marketing Strategy</h2>\n" +
+    "                    <h2>Client Outreach</h2>\n" +
     "                    <!--<h2 style=\"color: #BDBDBD\">Marketing and <br> Content</h2>-->\n" +
     "                </div>\n" +
     "                <div class=\"col-md-3\">\n" +
     "                    <img src=\"/images/team/trevor.png\" />\n" +
-    "                    <h2>Trevor</h2>\n" +
-    "                    <a href=\"http://www.troverman.com\">site</a>\n" +
+    "                    <br>\n" +
+    "                    <br>\n" +
+    "                    <div class=\"title\">Trevor</div>\n" +
+    "                    <h2>Web Development</h2>\n" +
+    "                    <!--<h2></h2>\n" +
+    "                    <h2>Web Development</h2>\n" +
     "                    <!--<h2 style=\"color: #BDBDBD\">8</h2>-->\n" +
     "                </div>\n" +
     "                <div class=\"col-md-3\">\n" +
     "                    <img src=\"/images/team/mikey.png\" />\n" +
-    "                    <h2>Michael</h2>\n" +
-    "                    <a href=\"http://www.evolvedus.com\">site</a>\n" +
+    "                    <br>\n" +
+    "                    <br>\n" +
+    "                    <div class=\"title\">Michael</div>\n" +
+    "                    <h2>Web Design</h2>\n" +
+    "                    <!--<h2>Web Development</h2>\n" +
     "                    <!--<h2 style=\"color: #BDBDBD\">Design</h2>-->\n" +
     "                </div>\n" +
     "            </div>\n" +
@@ -240,23 +293,53 @@ angular.module("home/index.tpl.html", []).run(["$templateCache", function($templ
     "<div class=\"surface-container\">\n" +
     "    <div class=\"container\">\n" +
     "        <div id=\"newsletter\" class=\"info\">\n" +
-    "            <div class=\"title\" style=\"font-weight:400;\">get in touch</div>\n" +
+    "            <div class=\"title\">get in touch</div>\n" +
     "            <br>\n" +
     "            <br>\n" +
     "            <div class=\"message\">We ask those who are interested in our services to contact us via\n" +
-    "                <a href=\"mailto:experiencenovo@gmail.com\">email</a> or to give us a call at one of our four locations.\n" +
+    "                <a href=\"mailto:experiencenovo@gmail.com\" style=\"color: #1db996; font-weight: 400;\">email</a> or to give us a call at one of our four locations.\n" +
     "                We embrace open dialogue and transparency, and would\n" +
     "                be more than happy to answer any questions you may have!\n" +
     "                <br>\n" +
     "                <br>\n" +
-    "                Chapel Hill (Raleigh): <a href=\"tel:+18656797229\">(865) 679-7229</a>\n" +
-    "                <br>\n" +
-    "                Evanston (Chicago): <a href=\"tel:+18653876121\">(865) 387-6121</a>\n" +
-    "                <br>\n" +
-    "                Knoxville: <a href=\"tel:+18656969382\">(865) 696-9382</a>\n" +
-    "                <br>\n" +
-    "                Philadelphia: <a href=\"tel:+13365800855\">(336) 580-0855</a>\n" +
-    "                <br>\n" +
+    "                <div class=\"center\">\n" +
+    "                    <div class=\"box2 small-medium\">\n" +
+    "                        <a href=\"tel:+18656797229\">\n" +
+    "                            <img src=\"/images/contact/chap.jpeg\" class=\"img-fill opacity\">\n" +
+    "                            <br>\n" +
+    "                            <br>\n" +
+    "                            <div class=\"title\" style=\"font-size: 22px;\">Chapel Hill, NC</div>\n" +
+    "                            <div class=\"subtitle\">(865) 679-7229</div>\n" +
+    "                        </a>\n" +
+    "                    </div>\n" +
+    "                    <div class=\"box2 small-medium\">\n" +
+    "                        <a href=\"tel:+18653876121\">\n" +
+    "                            <img src=\"/images/contact/evanston.jpg\" class=\"img-fill opacity\">\n" +
+    "                            <br>\n" +
+    "                            <br>\n" +
+    "                            <div class=\"title\" style=\"font-size: 22px;\">Evanston, IL</div>\n" +
+    "                            <div class=\"subtitle\">(865) 387-6121</div>\n" +
+    "                        </a>\n" +
+    "                    </div>\n" +
+    "                    <div class=\"box2 small-medium\">\n" +
+    "                        <a href=\"tel:+18656969382\">\n" +
+    "                            <img src=\"/images/contact/knoxville.jpg\" class=\"img-fill opacity\">\n" +
+    "                            <br>\n" +
+    "                            <br>\n" +
+    "                            <div class=\"title\" style=\"font-size: 22px;\">Knoxville, TN</div>\n" +
+    "                            <div class=\"subtitle\">(865) 696-9382</div>\n" +
+    "                        </a>\n" +
+    "                    </div>\n" +
+    "                    <div class=\"box2 small-medium\">\n" +
+    "                        <a href=\"tel:+13365800855\">\n" +
+    "                            <img src=\"/images/contact/philly.jpg\" class=\"img-fill opacity\">\n" +
+    "                            <br>\n" +
+    "                            <br>\n" +
+    "                            <div class=\"title\" style=\"font-size: 22px;\">Philadelpia, PA</div>\n" +
+    "                            <div class=\"subtitle\">(336) 580-0855</div>\n" +
+    "                        </a>\n" +
+    "                    </div>\n" +
+    "                </div>\n" +
     "                <br>\n" +
     "                We also send out a monthly newsletter highlighting the latest in web development, what we are up to, and\n" +
     "                our blog series. It's a great way to stay in the loop and see the latest and greatest in web dev.\n" +
