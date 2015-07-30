@@ -12,6 +12,16 @@ html,body {
     margin:0;
     padding:0;
 }
+@media screen and (max-width: 720px) {
+    body {
+        margin-left: 64px;
+    }
+}
+@media screen and (max-width: 640px) {
+    body {
+        margin-left: 50px;
+    }
+}
 
 .header {
 	width:100%
@@ -104,10 +114,6 @@ button.mainbutton:focus {
 	font-family:'Open Sans',sans-serif;
 	line-height:20px;
 	margin-top:15px
-}
-
-.services-list p {
-	padding-top:25px
 }
 
 .services-list i {
