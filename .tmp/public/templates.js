@@ -27,16 +27,20 @@ angular.module("about/index.tpl.html", []).run(["$templateCache", function($temp
     "		<img src=\"/images/about/carousel-macbook.png\" class=\"carousel-novo\" alt=\"\" />\n" +
     "		<div class=\"carousel-inner\">\n" +
     "			<div class=\"item active\">\n" +
-    "				<img src=\"http://placehold.it/512x322/2AB996/FFF/?text=Novo+Placeholder\" alt=\"\" />\n" +
+    "				<img src=\"/images/portfolio/absolute-screenshot.png\" alt=\"Absolute Yachts North America\" />\n" +
     "			</div>\n" +
     "\n" +
     "			<div class=\"item\">\n" +
-    "				<img src=\"/images/about/a.jpg\" alt=\"\" />\n" +
+    "				<img src=\"/images/portfolio/km-screenshot.png\" alt=\"Kelsey McMurry Photography\" />\n" +
     "			</div>\n" +
     "\n" +
     "			<div class=\"item\">\n" +
-    "				<img src=\"/images/about/b.jpg\" alt=\"\" />\n" +
+    "				<img src=\"/images/portfolio/vidhop-screenshot.png\" alt=\"Vidhop.tv\" />\n" +
     "			</div>\n" +
+    "\n" +
+    "            <div class=\"item\">\n" +
+    "                <img src=\"/images/portfolio/valentino-screenshot.png\" alt=\"Valentino.io\" />\n" +
+    "            </div>\n" +
     "\n" +
     "		</div>\n" +
     "		<a class=\"carousel-control left\" href=\"#carousel\" data-slide=\"prev\"></a>\n" +
@@ -51,25 +55,41 @@ angular.module("about/index.tpl.html", []).run(["$templateCache", function($temp
     "	<section class=\"row\" style=\"margin-left:50px;margin-right:50px\">\n" +
     "		<article class=\"col-md-4\">\n" +
     "			<h2><span class=\"grey\">We're</span> Creative</h2>\n" +
-    "			<p>\n" +
-    "				Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. \n" +
+    "			<p style=\"font-size: 16px;\">\n" +
+    "                We focus on using the most innovative solutions to today’s problems.  Providing you with nothing but the best, most up-to-date technological tools to optimize your business.\n" +
     "			</p>\n" +
     "		</article>\n" +
     "		<article class=\"col-md-4\">\n" +
     "			<h2><span class=\"grey\">We're</span> Effective</h2>\n" +
-    "			<p>\n" +
-    "				Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. \n" +
+    "			<p style=\"font-size: 16px;\">\n" +
+    "                Despite boundless creativity, effectiveness and efficiency remain the top priorities.  Elegant designs and elaborate effects must be built on a solid and effective foundation.\n" +
     "			</p>\n" +
     "		</article>\n" +
     "		<article class=\"col-md-4\">\n" +
     "			<h2><span class=\"grey\">We're</span> Reliable</h2>\n" +
-    "			<p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>\n" +
+    "            <p style=\"font-size: 16px;\">\n" +
+    "                Our number one priority is always the happiness of our clients.  We set consistent, short-term goals to allow you to be fully engaged throughout our creative process.\n" +
+    "            </p>\n" +
     "		</article>\n" +
     "	</section>\n" +
     "\n" +
     "<hr/>\n" +
     "\n" +
-    "<div class=\"service-tabs\" style=\"margin-left:75px;margin-right:75px\">\n" +
+    "<br>\n" +
+    "<br>\n" +
+    "<br>\n" +
+    "<br>\n" +
+    "<br>\n" +
+    "<br>\n" +
+    "<br>\n" +
+    "<br>\n" +
+    "<br>\n" +
+    "<br>\n" +
+    "<br>\n" +
+    "<br>\n" +
+    "<br>\n" +
+    "\n" +
+    "<!--<div class=\"service-tabs\" style=\"margin-left:75px;margin-right:75px\">\n" +
     "	<ul class=\"nav nav-tabs\" align=\"center\">\n" +
     "		<li rel=\"service-1\" class=\"active col-md-2 col-sm-4 col-xs-5 center-block\">\n" +
     "			<a href=\"#service-1\" data-toggle=\"tab\">\n" +
@@ -140,7 +160,7 @@ angular.module("about/index.tpl.html", []).run(["$templateCache", function($temp
     "				</p>\n" +
     "		</div>\n" +
     "	</div>\n" +
-    "</div>\n" +
+    "</div>-->\n" +
     "\n" +
     "\n" +
     "</section>\n" +
@@ -613,14 +633,14 @@ angular.module("sidebar/index.tpl.html", []).run(["$templateCache", function($te
     "                </div>\n" +
     "            </a>\n" +
     "        </div>\n" +
-    "        <div class=\"item-container\">\n" +
+    "       <!-- <div class=\"item-container\">\n" +
     "            <a href=\"/blog/\">\n" +
     "                <div class=\"list-item\">\n" +
     "                    <div class=\"nav-small-list\"><i class=\"fa fa-newspaper-o\"></i></div>\n" +
     "                    <div class=\"nav-large-list\">Blog</div>\n" +
     "                </div>\n" +
     "            </a>\n" +
-    "        </div>\n" +
+    "        </div> -->\n" +
     "        <div class=\"flex-item-bottom\"></div>\n" +
     "    </div>\n" +
     "</div>\n" +
