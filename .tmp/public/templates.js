@@ -391,41 +391,41 @@ angular.module("home/index.tpl.html", []).run(["$templateCache", function($templ
     "    <div id=\"team\">\n" +
     "        <div class=\"row\">\n" +
     "            <div class=\"col-md-12\">\n" +
-    "                <div class=\"col-md-3\">\n" +
+    "                <div class=\"col-md-3 team-member\">\n" +
     "                    <img src=\"/images/team/val.png\" />\n" +
     "                    <br>\n" +
     "                    <br>\n" +
-    "                    <div class=\"title\">Valentino</div>\n" +
+    "                    <div class=\"name\">Valentino</div>\n" +
     "                    <h2>Data Science</h2>\n" +
     "                    <!--<h2>Web Design</h2>\n" +
     "                    <h2>Web Development</h2>\n" +
     "                    <!--<h2 style=\"color: #BDBDBD\">Development</h2>-->\n" +
     "                </div>\n" +
-    "                <div class=\"col-md-3\">\n" +
+    "                <div class=\"col-md-3 team-member\">\n" +
     "                    <img src=\"/images/team/garrett.png\" />\n" +
     "                    <br>\n" +
     "                    <br>\n" +
-    "                    <div class=\"title\">Garrett</div>\n" +
+    "                    <div class=\"name\">Garrett</div>\n" +
     "                    <h2>Marketing</h2>\n" +
     "                    <!--<h2>Marketing Strategy</h2>\n" +
     "                    <h2>Client Outreach</h2>\n" +
     "                    <!--<h2 style=\"color: #BDBDBD\">Marketing and <br> Content</h2>-->\n" +
     "                </div>\n" +
-    "                <div class=\"col-md-3\">\n" +
+    "                <div class=\"col-md-3 team-member\">\n" +
     "                    <img src=\"/images/team/trevor.png\" />\n" +
     "                    <br>\n" +
     "                    <br>\n" +
-    "                    <div class=\"title\">Trevor</div>\n" +
+    "                    <div class=\"name\">Trevor</div>\n" +
     "                    <h2>Web Development</h2>\n" +
     "                    <!--<h2></h2>\n" +
     "                    <h2>Web Development</h2>\n" +
     "                    <!--<h2 style=\"color: #BDBDBD\">8</h2>-->\n" +
     "                </div>\n" +
-    "                <div class=\"col-md-3\">\n" +
+    "                <div class=\"col-md-3 team-member\">\n" +
     "                    <img src=\"/images/team/mikey.png\" />\n" +
     "                    <br>\n" +
     "                    <br>\n" +
-    "                    <div class=\"title\">Michael</div>\n" +
+    "                    <div class=\"name\">Michael</div>\n" +
     "                    <h2>Web Design</h2>\n" +
     "                    <!--<h2>Web Development</h2>\n" +
     "                    <!--<h2 style=\"color: #BDBDBD\">Design</h2>-->\n" +
@@ -440,14 +440,12 @@ angular.module("home/index.tpl.html", []).run(["$templateCache", function($templ
     "<div class=\"surface-container\">\n" +
     "    <div class=\"container\">\n" +
     "        <div id=\"newsletter\" class=\"info\">\n" +
-    "            <div class=\"title\">get in touch</div>\n" +
+    "            <div class=\"title\">Get In Touch</div>\n" +
     "            <br>\n" +
+    "            <div class=\"message\">Interested in working with NOVO? \n" +
     "            <br>\n" +
-    "            <div class=\"message\">We ask those who are interested in our services to contact us via\n" +
-    "                <a href=\"mailto:experiencenovo@gmail.com\" style=\"color: #1db996; font-weight: 400;\">email</a> or to give us a call at one of our four locations.\n" +
-    "                We embrace open dialogue and transparency, and would\n" +
-    "                be more than happy to answer any questions you may have!\n" +
-    "                <br>\n" +
+    "            <div class=\"message-large\">Email us at\n" +
+    "                <a href=\"mailto:info@projectnovo.co\" style=\"color: #1db996; font-weight: 400;\">info@projectnovo.co</a></div> or <div class=\"message-large\">Call us at one of our four locations!</div>\n" +
     "                <br>\n" +
     "                <div class=\"center\">\n" +
     "                    <div class=\"box2 small-medium\">\n" +
@@ -455,7 +453,7 @@ angular.module("home/index.tpl.html", []).run(["$templateCache", function($templ
     "                            <img src=\"/images/contact/chap.jpeg\" class=\"img-fill opacity\">\n" +
     "                            <br>\n" +
     "                            <br>\n" +
-    "                            <div class=\"title\" style=\"font-size: 22px;\">Chapel Hill, NC</div>\n" +
+    "                            <div class=\"city\" style=\"font-size: 22px;\">Chapel Hill, NC</div>\n" +
     "                            <div class=\"subtitle\">(865) 679-7229</div>\n" +
     "                        </a>\n" +
     "                    </div>\n" +
@@ -464,7 +462,7 @@ angular.module("home/index.tpl.html", []).run(["$templateCache", function($templ
     "                            <img src=\"/images/contact/evanston.jpg\" class=\"img-fill opacity\">\n" +
     "                            <br>\n" +
     "                            <br>\n" +
-    "                            <div class=\"title\" style=\"font-size: 22px;\">Evanston, IL</div>\n" +
+    "                            <div class=\"city\" style=\"font-size: 22px;\">Chicago, IL</div>\n" +
     "                            <div class=\"subtitle\">(865) 387-6121</div>\n" +
     "                        </a>\n" +
     "                    </div>\n" +
@@ -473,7 +471,7 @@ angular.module("home/index.tpl.html", []).run(["$templateCache", function($templ
     "                            <img src=\"/images/contact/knoxville.jpg\" class=\"img-fill opacity\">\n" +
     "                            <br>\n" +
     "                            <br>\n" +
-    "                            <div class=\"title\" style=\"font-size: 22px;\">Knoxville, TN</div>\n" +
+    "                            <div class=\"city\" style=\"font-size: 22px;\">Knoxville, TN</div>\n" +
     "                            <div class=\"subtitle\">(865) 696-9382</div>\n" +
     "                        </a>\n" +
     "                    </div>\n" +
@@ -482,15 +480,15 @@ angular.module("home/index.tpl.html", []).run(["$templateCache", function($templ
     "                            <img src=\"/images/contact/philly.jpg\" class=\"img-fill opacity\">\n" +
     "                            <br>\n" +
     "                            <br>\n" +
-    "                            <div class=\"title\" style=\"font-size: 22px;\">Philadelpia, PA</div>\n" +
+    "                            <div class=\"city\" style=\"font-size: 22px;\">Philadelpia, PA</div>\n" +
     "                            <div class=\"subtitle\">(336) 580-0855</div>\n" +
     "                        </a>\n" +
     "                    </div>\n" +
     "                </div>\n" +
     "                <br>\n" +
-    "                We also send out a monthly newsletter highlighting the latest in web development, what we are up to, and\n" +
-    "                our blog series. It's a great way to stay in the loop and see the latest and greatest in web dev.\n" +
-    "                Sound interesting? Sign up for our mailing list below.\n" +
+    "                <p>Stay in the loop and learn about what we do!</p>\n" +
+    "                <br>\n" +
+    "                <span class=\"newsletter\">Sign Up for our Monthly Newsletter!</span>\n" +
     "            </div>\n" +
     "        </div>\n" +
     "    </div>\n" +

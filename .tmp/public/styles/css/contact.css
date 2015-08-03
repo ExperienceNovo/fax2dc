@@ -36,7 +36,9 @@ height: 100%;
 .info {
     margin-left: auto;
     margin-right: auto;
-    padding: 5%;
+    padding-right: 1%;
+    padding-left: 1%;
+    padding-top: 5%;
     font-family: 'Open Sans', sans-serif;
     font-weight: 300;
     color: black;
@@ -46,16 +48,52 @@ height: 100%;
 .title {
     font-family: 'Jura', sans-serif;
     font-weight: 400;
+    font-size: 50px;
+    color: #1db996;
+    font-weight: 400;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 50px;
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+.city {
+    font-family: 'Jura', sans-serif;
+    font-weight: 400;
     font-size: 30px;
     color: #1db996;
     font-weight: 400;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
 }
 
 .message {
-    margin-top: 10px;
-    font-size: 18px;
+    margin-top: 20px;
+    font-size: large;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
 }
 
+.message p {
+    margin-top: 20px;
+    font-size: 1em;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+}
+.message-large {
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    margin-top: 0px;
+    font-size: large;
+}
+.subtitle:hover {
+    color: #222;
+}
 .link {
     margin-top: 10px;
     font-size: 18px;
@@ -68,10 +106,18 @@ height: 100%;
 
 .small-medium {
     position: relative;
-    width: 200px;
+    width: 190px;
     height: auto;
-    margin: 1.5%;
-    padding: 1.0%;
+    margin: 0;
+    padding: 0px 0px 0px 0px;
+}
+
+.small-medium:hover {
+    color: transparent !important;
+}
+
+.small-medium a img {
+    padding-top: 20px;
 }
 
 .medium {
@@ -96,7 +142,16 @@ height: 100%;
 }
 
 .img-fill {
-    width: 180px;
+    width: 150px;
     height: auto;
     overflow: hidden;
+}
+
+.newsletter
+{
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    margin-top: 10px;
+    font-size: 2em;
 }
