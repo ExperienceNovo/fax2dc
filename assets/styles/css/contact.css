@@ -47,10 +47,10 @@ height: 100%;
 
 .title {
     font-family: 'Jura', sans-serif;
-    font-weight: 400;
+    font-weight: 600;
     font-size: 50px;
     color: #1db996;
-    font-weight: 400;
+    font-weight: 600;
     margin-right: auto;
     margin-left: auto;
     margin-top: 50px;
@@ -77,20 +77,45 @@ height: 100%;
     text-align: center;
 }
 
+.interested {
+    margin-top: 20px;
+    font-size: 1.3em;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+}
+
+.contact-us {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 2em;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+}
+
+.contact-us a {
+    font-size: 1.3em;
+    font-weight: 500;
+}
+
 .message p {
     margin-top: 20px;
-    font-size: 1em;
-    margin-right: auto;
-    margin-left: auto;
-    text-align: center;
-}
-.message-large {
-    margin-right: auto;
-    margin-left: auto;
-    text-align: center;
-    margin-top: 0px;
     font-size: large;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
 }
+
+.newsletter {
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    margin-top: 10px;
+    font-size: 2em;
+    font-weight: 300;
+}
+
 .subtitle:hover {
     color: #222;
 }
@@ -145,13 +170,4 @@ height: 100%;
     width: 150px;
     height: auto;
     overflow: hidden;
-}
-
-.newsletter
-{
-    margin-right: auto;
-    margin-left: auto;
-    text-align: center;
-    margin-top: 10px;
-    font-size: 2em;
 }

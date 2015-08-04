@@ -356,29 +356,39 @@ angular.module("home/index.tpl.html", []).run(["$templateCache", function($templ
     "            <div class=\"col-md-12\">\n" +
     "                <div class=\"col-md-4\">\n" +
     "                    <i class=\"fa fa-users fa-5x\"></i>\n" +
+    "                <div class=\"service-title\">\n" +
     "                    <h2>Marketing</h2>\n" +
-    "                    <p>Social Media Management</p>\n" +
-    "                    <p>Email Marketing</p>\n" +
-    "                    <p>Content Creation</p>\n" +
-    "                    <p>Marketing Metric Analysis</p>\n" +
     "                </div>\n" +
-    "\n" +
+    "                <hr>\n" +
+    "                <div class=\"service-des\">\n" +
+    "                    <p>Marketing Content Creation</p>\n" +
+    "                    <p>Social Media Management</p>\n" +
+    "                    <p>Outreach Email Marketing</p>\n" +
+    "                </div>\n" +
+    "                </div>\n" +
     "                <div class=\"col-md-4\">\n" +
     "                    <i class=\"fa fa-paint-brush fa-5x\"></i>\n" +
+    "                <div class=\"service-title\">\n" +
     "                    <h2>Design</h2>\n" +
-    "                    <p>Company Branding</p>\n" +
-    "                    <p>Customer Interface Design</p>\n" +
-    "                    <p>Advertising</p>\n" +
-    "                    <p>Logo</p>\n" +
     "                </div>\n" +
-    "\n" +
+    "                <hr>\n" +
+    "                <div class=\"service-des\">\n" +
+    "                    <p>Graphics & Animation Creation</p>\n" +
+    "                    <p>Custom Interface Design</p>\n" +
+    "                    <p>Company Branding</p>\n" +
+    "                </div>\n" +
+    "                </div>\n" +
     "                <div class=\"col-md-4\">\n" +
     "                    <i class=\"fa fa-code fa-5x\"></i>\n" +
+    "                <div class=\"service-title\">\n" +
     "                    <h2>Development</h2>\n" +
-    "                    <p>Customer Experience Creation</p>\n" +
+    "                </div>\n" +
+    "                <hr>\n" +
+    "                <div class=\"service-des\">\n" +
     "                    <p>Mobile-first Web Design</p>\n" +
-    "                    <p>SEO Structuring</p>\n" +
+    "                    <p>Comprehensive SEO Structuring</p>\n" +
     "                    <p>Back-end Software Integration</p>\n" +
+    "                </div>\n" +
     "                </div>\n" +
     "            </div>\n" +
     "        </div>\n" +
@@ -396,7 +406,7 @@ angular.module("home/index.tpl.html", []).run(["$templateCache", function($templ
     "                    <br>\n" +
     "                    <br>\n" +
     "                    <div class=\"name\">Valentino</div>\n" +
-    "                    <h2>Data Science</h2>\n" +
+    "                    <h2>Data</h2>\n" +
     "                    <!--<h2>Web Design</h2>\n" +
     "                    <h2>Web Development</h2>\n" +
     "                    <!--<h2 style=\"color: #BDBDBD\">Development</h2>-->\n" +
@@ -416,7 +426,7 @@ angular.module("home/index.tpl.html", []).run(["$templateCache", function($templ
     "                    <br>\n" +
     "                    <br>\n" +
     "                    <div class=\"name\">Trevor</div>\n" +
-    "                    <h2>Web Development</h2>\n" +
+    "                    <h2>Development</h2>\n" +
     "                    <!--<h2></h2>\n" +
     "                    <h2>Web Development</h2>\n" +
     "                    <!--<h2 style=\"color: #BDBDBD\">8</h2>-->\n" +
@@ -426,7 +436,7 @@ angular.module("home/index.tpl.html", []).run(["$templateCache", function($templ
     "                    <br>\n" +
     "                    <br>\n" +
     "                    <div class=\"name\">Michael</div>\n" +
-    "                    <h2>Web Design</h2>\n" +
+    "                    <h2>Design</h2>\n" +
     "                    <!--<h2>Web Development</h2>\n" +
     "                    <!--<h2 style=\"color: #BDBDBD\">Design</h2>-->\n" +
     "                </div>\n" +
@@ -442,48 +452,50 @@ angular.module("home/index.tpl.html", []).run(["$templateCache", function($templ
     "        <div id=\"newsletter\" class=\"info\">\n" +
     "            <div class=\"title\">Get In Touch</div>\n" +
     "            <br>\n" +
-    "            <div class=\"message\">Interested in working with NOVO? \n" +
+    "            <div class=\"message\">\n" +
+    "                <div class=\"interested\">Interested in working with NOVO?</div>\n" +
     "            <br>\n" +
-    "            <div class=\"message-large\">Email us at\n" +
-    "                <a href=\"mailto:info@projectnovo.co\" style=\"color: #1db996; font-weight: 400;\">info@projectnovo.co</a></div> or <div class=\"message-large\">Call us at one of our four locations!</div>\n" +
+    "                <div class=\"contact-us\">Email us at\n" +
+    "                <a href=\"mailto:info@projectnovo.co\" style=\"color: #1db996;\">info@projectnovo.co</a></div> or <div class=\"contact-us\">Call us at one of our <span style=\"color: #1db996; font-weight: 500;\">four</span> locations!</div>\n" +
     "                <br>\n" +
     "                <div class=\"center\">\n" +
     "                    <div class=\"box2 small-medium\">\n" +
-    "                        <a href=\"tel:+18656797229\">\n" +
     "                            <img src=\"/images/contact/chap.jpeg\" class=\"img-fill opacity\">\n" +
     "                            <br>\n" +
-    "                            <br>\n" +
     "                            <div class=\"city\" style=\"font-size: 22px;\">Chapel Hill, NC</div>\n" +
+    "                        <a href=\"tel:+18656797229\">\n" +
     "                            <div class=\"subtitle\">(865) 679-7229</div>\n" +
     "                        </a>\n" +
     "                    </div>\n" +
+    "                    <br>\n" +
     "                    <div class=\"box2 small-medium\">\n" +
-    "                        <a href=\"tel:+18653876121\">\n" +
     "                            <img src=\"/images/contact/evanston.jpg\" class=\"img-fill opacity\">\n" +
     "                            <br>\n" +
-    "                            <br>\n" +
     "                            <div class=\"city\" style=\"font-size: 22px;\">Chicago, IL</div>\n" +
+    "                        <a href=\"tel:+18653876121\">\n" +
     "                            <div class=\"subtitle\">(865) 387-6121</div>\n" +
     "                        </a>\n" +
     "                    </div>\n" +
+    "                    <br>\n" +
     "                    <div class=\"box2 small-medium\">\n" +
-    "                        <a href=\"tel:+18656969382\">\n" +
     "                            <img src=\"/images/contact/knoxville.jpg\" class=\"img-fill opacity\">\n" +
     "                            <br>\n" +
-    "                            <br>\n" +
     "                            <div class=\"city\" style=\"font-size: 22px;\">Knoxville, TN</div>\n" +
+    "                        <a href=\"tel:+18656969382\">    \n" +
     "                            <div class=\"subtitle\">(865) 696-9382</div>\n" +
     "                        </a>\n" +
     "                    </div>\n" +
+    "                    <br>\n" +
     "                    <div class=\"box2 small-medium\">\n" +
-    "                        <a href=\"tel:+13365800855\">\n" +
-    "                            <img src=\"/images/contact/philly.jpg\" class=\"img-fill opacity\">\n" +
-    "                            <br>\n" +
+    "\n" +
+    "                        <img src=\"/images/contact/philly.jpg\" class=\"img-fill opacity\">\n" +
     "                            <br>\n" +
     "                            <div class=\"city\" style=\"font-size: 22px;\">Philadelpia, PA</div>\n" +
+    "                        <a href=\"tel:+13365800855\">\n" +
     "                            <div class=\"subtitle\">(336) 580-0855</div>\n" +
     "                        </a>\n" +
     "                    </div>\n" +
+    "                    <br>\n" +
     "                </div>\n" +
     "                <br>\n" +
     "                <p>Stay in the loop and learn about what we do!</p>\n" +
