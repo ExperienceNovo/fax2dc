@@ -323,7 +323,7 @@ angular.module("home/index.tpl.html", []).run(["$templateCache", function($templ
     "    <div class=\"banner-text\">\n" +
     "        <h2 class=\"tagline\">Welcome</h2>\n" +
     "        <p class=\"under-tagline\">Embrace change with NOVO<br/>a full-scale online marketing, graphic design, and web development firm.</p>\n" +
-    "        <a href=\"/about/\"><button class=\"mainbutton\">Learn More</button></a>\n" +
+    "        <a href=\"#service\"><button class=\"mainbutton\">Learn More</button></a>\n" +
     "    </div>\n" +
     "</div>\n" +
     "\n" +
@@ -337,42 +337,46 @@ angular.module("home/index.tpl.html", []).run(["$templateCache", function($templ
     "            <div class=\"col-md-12\">\n" +
     "                <div class=\"col-md-4\">\n" +
     "                    <i class=\"fa fa-users fa-5x\"></i>\n" +
-    "                <div class=\"service-title\">\n" +
-    "                    <h2>Marketing</h2>\n" +
-    "                </div>\n" +
+    "                    <div class=\"service-title\">\n" +
+    "                        <h2>Marketing</h2>\n" +
+    "                    </div>\n" +
     "                <hr>\n" +
-    "                <div class=\"service-des\">\n" +
-    "                    <p>Content Creation</p>\n" +
-    "                    <p>Social Media Management</p>\n" +
-    "                    <p>Outreach Email Marketing</p>\n" +
-    "                </div>\n" +
+    "                    <div class=\"service-des\">\n" +
+    "                        <p>Content Creation</p>\n" +
+    "                        <p>Social Media Management</p>\n" +
+    "                        <p>Outreach Email Marketing</p>\n" +
+    "                    </div>\n" +
     "                </div>\n" +
     "                <div class=\"col-md-4\">\n" +
     "                    <i class=\"fa fa-paint-brush fa-5x\"></i>\n" +
-    "                <div class=\"service-title\">\n" +
-    "                    <h2>Design</h2>\n" +
-    "                </div>\n" +
+    "                    <div class=\"service-title\">\n" +
+    "                        <h2>Design</h2>\n" +
+    "                    </div>\n" +
     "                <hr>\n" +
-    "                <div class=\"service-des\">\n" +
-    "                    <p>Graphics & Animation</p>\n" +
-    "                    <p>Custom Interface Design</p>\n" +
-    "                    <p>Company Branding</p>\n" +
-    "                </div>\n" +
+    "                    <div class=\"service-des\">\n" +
+    "                        <p>Graphics & Animation</p>\n" +
+    "                        <p>Custom Interface Design</p>\n" +
+    "                        <p>Company Branding</p>\n" +
+    "                    </div>\n" +
     "                </div>\n" +
     "                <div class=\"col-md-4\">\n" +
     "                    <i class=\"fa fa-code fa-5x\"></i>\n" +
-    "                <div class=\"service-title\">\n" +
-    "                    <h2>Development</h2>\n" +
-    "                </div>\n" +
+    "                    <div class=\"service-title\">\n" +
+    "                        <h2>Development</h2>\n" +
+    "                    </div>\n" +
     "                <hr>\n" +
-    "                <div class=\"service-des\">\n" +
-    "                    <p>Mobile-first Web Design</p>\n" +
-    "                    <p>SEO Structuring</p>\n" +
-    "                    <p>Back-end Software Integration</p>\n" +
-    "                </div>\n" +
+    "                    <div class=\"service-des\">\n" +
+    "                        <p>Mobile-first Web Design</p>\n" +
+    "                        <p>SEO Structuring</p>\n" +
+    "                        <p>Back-end Software Integration</p>\n" +
+    "                    </div>\n" +
     "                </div>\n" +
     "            </div>\n" +
     "        </div>\n" +
+    "        <br>\n" +
+    "        <br>\n" +
+    "        <br>\n" +
+    "        <a href=\"/about/\"><button class=\"mainbutton service-button\">More Info...</button></a>\n" +
     "    </div>\n" +
     "</div>\n" +
     "    \n" +
@@ -433,7 +437,7 @@ angular.module("home/index.tpl.html", []).run(["$templateCache", function($templ
     "    </div>\n" +
     "</div>\n" +
     "\n" +
-    "<div class=\"surface-container\">\n" +
+    "<div class=\"surface-container-home\">\n" +
     "    <div class=\"contact-container\">\n" +
     "        <div class=\"contact-title-home\">Get In Touch</div>\n" +
     "            <div id=\"newsletter\" class=\"contact-home\">\n" +
