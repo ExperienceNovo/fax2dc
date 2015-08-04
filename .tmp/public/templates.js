@@ -204,7 +204,10 @@ angular.module("contact/index.tpl.html", []).run(["$templateCache", function($te
   $templateCache.put("contact/index.tpl.html",
     "<link href=\"/styles/css/contact.css\" type=\"text/css\">\n" +
     "<link href=\"/styles/css/portfolio.css\" type=\"text/css\">\n" +
+    "<link href=\"/styles/css/responsive.css\" type=\"text/css\">\n" +
+    "<link href=\"/styles/css/home.css\" rel=\"stylesheet\" type=\"text/css\"/>\n" +
     "<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600|Jura:400,500,300' rel='stylesheet' type='text/css'>\n" +
+    "<link href='http://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet' type='text/css'>\n" +
     "\n" +
     "<style type=\"text/css\">\n" +
     "    #map-canvas {\n" +
@@ -213,20 +216,19 @@ angular.module("contact/index.tpl.html", []).run(["$templateCache", function($te
     "    }\n" +
     "</style>\n" +
     "\n" +
-    "<div class=\"title\" style=\"z-index: 20; position: static; top: 0; width: 100%; box-shadow: 0px 2px 5px #1d1d1d; margin-top: 0px !important; background-color: rgba(29,29,29,0.6); color: #2AB996; backgrouopacity: .6; padding: 1.0%;\">Get In Touch</div>\n" +
     "\n" +
-    "<br>\n" +
-    "<br>\n" +
     "\n" +
     "<div class=\"surface-container\">\n" +
-    "    <div class=\"container\">\n" +
-    "        <div id=\"newsletter\" class=\"info\">\n" +
+    "    <div class=\"contact-container\">\n" +
+    "        <div class=\"contact-title-home\">Get In Touch</div>\n" +
+    "            <div id=\"newsletter\" class=\"contact-home\">\n" +
+    "            <hr>\n" +
     "            <br>\n" +
-    "            <div class=\"message\">\n" +
-    "                <div class=\"interested\">Interested in working with NOVO?</div>\n" +
+    "            <div class=\"message-home\">\n" +
+    "                <div class=\"interested-home\">Interested in working with NOVO?</div>\n" +
     "            <br>\n" +
-    "                <div class=\"contact-us\">Email us at\n" +
-    "                <a href=\"mailto:info@projectnovo.co\" style=\"color: #1db996;\">info@projectnovo.co</a></div> or <div class=\"contact-us\">Call us at one of our <span style=\"color: #1db996; font-weight: 500;\">four</span> locations!</div>\n" +
+    "                <div class=\"contact-us-home\">Email us at\n" +
+    "                <a href=\"mailto:info@projectnovo.co\" style=\"color: #1db996;\">info@projectnovo.co</a></div> or <div class=\"contact-us-home\">Call us at one of our <span style=\"color: #1db996; font-weight: 500;\">four</span> locations!</div>\n" +
     "                <br>\n" +
     "                <div class=\"center\">\n" +
     "                    <div class=\"box2 small-medium\">\n" +
@@ -268,9 +270,12 @@ angular.module("contact/index.tpl.html", []).run(["$templateCache", function($te
     "                    <br>\n" +
     "                </div>\n" +
     "                <br>\n" +
+    "                <br>\n" +
+    "                <br>\n" +
+    "                <br>\n" +
     "                <p>Stay in the loop and learn about what we do!</p>\n" +
     "                <br>\n" +
-    "                <span class=\"newsletter\">Sign Up for our Monthly Newsletter!</span>\n" +
+    "                <span class=\"newsletter-home\">Sign Up for our Monthly Newsletter!</span>\n" +
     "            </div>\n" +
     "        </div>\n" +
     "    </div>\n" +
@@ -312,6 +317,7 @@ angular.module("home/index.tpl.html", []).run(["$templateCache", function($templ
     "<link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,300,100,700' rel='stylesheet' type='text/css'>\n" +
     "<link href=\"/styles/css/font-awesome.min.css\" rel=\"stylesheet\" media=\"screen\">\n" +
     "<link href=\"/styles/css/contact.css\" rel=\"stylesheet\" media=\"screen\">\n" +
+    "<link href='http://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet' type='text/css'>\n" +
     "\n" +
     "<div class=\"banner\">\n" +
     "    <div class=\"banner-text\">\n" +
@@ -324,6 +330,7 @@ angular.module("home/index.tpl.html", []).run(["$templateCache", function($templ
     "<div class=\"services\" id=\"service\">\n" +
     "    <div class=\"section-head\">\n" +
     "        <h3>Our Services</h3>\n" +
+    "        <hr>\n" +
     "    </div>\n" +
     "    <div class=\"services-list\">\n" +
     "        <div class=\"row\">\n" +
@@ -335,7 +342,7 @@ angular.module("home/index.tpl.html", []).run(["$templateCache", function($templ
     "                </div>\n" +
     "                <hr>\n" +
     "                <div class=\"service-des\">\n" +
-    "                    <p>Marketing Content Creation</p>\n" +
+    "                    <p>Content Creation</p>\n" +
     "                    <p>Social Media Management</p>\n" +
     "                    <p>Outreach Email Marketing</p>\n" +
     "                </div>\n" +
@@ -347,7 +354,7 @@ angular.module("home/index.tpl.html", []).run(["$templateCache", function($templ
     "                </div>\n" +
     "                <hr>\n" +
     "                <div class=\"service-des\">\n" +
-    "                    <p>Graphics & Animation Creation</p>\n" +
+    "                    <p>Graphics & Animation</p>\n" +
     "                    <p>Custom Interface Design</p>\n" +
     "                    <p>Company Branding</p>\n" +
     "                </div>\n" +
@@ -360,7 +367,7 @@ angular.module("home/index.tpl.html", []).run(["$templateCache", function($templ
     "                <hr>\n" +
     "                <div class=\"service-des\">\n" +
     "                    <p>Mobile-first Web Design</p>\n" +
-    "                    <p>Comprehensive SEO Structuring</p>\n" +
+    "                    <p>SEO Structuring</p>\n" +
     "                    <p>Back-end Software Integration</p>\n" +
     "                </div>\n" +
     "                </div>\n" +
@@ -372,6 +379,7 @@ angular.module("home/index.tpl.html", []).run(["$templateCache", function($templ
     "<div id=\"home2\">\n" +
     "    <div class=\"desc\" align=\"center\">\n" +
     "    <h3>Meet The Team</h3>\n" +
+    "    <hr>\n" +
     "    <div id=\"team\">\n" +
     "        <div class=\"row\">\n" +
     "            <div class=\"col-md-12\">\n" +
@@ -380,6 +388,7 @@ angular.module("home/index.tpl.html", []).run(["$templateCache", function($templ
     "                    <br>\n" +
     "                    <br>\n" +
     "                    <div class=\"name\">Valentino</div>\n" +
+    "                    <hr>\n" +
     "                    <h2>Data</h2>\n" +
     "                    <!--<h2>Web Design</h2>\n" +
     "                    <h2>Web Development</h2>\n" +
@@ -390,6 +399,7 @@ angular.module("home/index.tpl.html", []).run(["$templateCache", function($templ
     "                    <br>\n" +
     "                    <br>\n" +
     "                    <div class=\"name\">Garrett</div>\n" +
+    "                    <hr>\n" +
     "                    <h2>Marketing</h2>\n" +
     "                    <!--<h2>Marketing Strategy</h2>\n" +
     "                    <h2>Client Outreach</h2>\n" +
@@ -400,6 +410,7 @@ angular.module("home/index.tpl.html", []).run(["$templateCache", function($templ
     "                    <br>\n" +
     "                    <br>\n" +
     "                    <div class=\"name\">Trevor</div>\n" +
+    "                    <hr>\n" +
     "                    <h2>Development</h2>\n" +
     "                    <!--<h2></h2>\n" +
     "                    <h2>Web Development</h2>\n" +
@@ -410,6 +421,7 @@ angular.module("home/index.tpl.html", []).run(["$templateCache", function($templ
     "                    <br>\n" +
     "                    <br>\n" +
     "                    <div class=\"name\">Michael</div>\n" +
+    "                    <hr>\n" +
     "                    <h2>Design</h2>\n" +
     "                    <!--<h2>Web Development</h2>\n" +
     "                    <!--<h2 style=\"color: #BDBDBD\">Design</h2>-->\n" +
@@ -422,15 +434,16 @@ angular.module("home/index.tpl.html", []).run(["$templateCache", function($templ
     "</div>\n" +
     "\n" +
     "<div class=\"surface-container\">\n" +
-    "    <div class=\"container\">\n" +
-    "        <div id=\"newsletter\" class=\"info\">\n" +
-    "            <div class=\"title\">Get In Touch</div>\n" +
+    "    <div class=\"contact-container\">\n" +
+    "        <div class=\"contact-title-home\">Get In Touch</div>\n" +
+    "            <div id=\"newsletter\" class=\"contact-home\">\n" +
+    "            <hr>\n" +
     "            <br>\n" +
-    "            <div class=\"message\">\n" +
-    "                <div class=\"interested\">Interested in working with NOVO?</div>\n" +
+    "            <div class=\"message-home\">\n" +
+    "                <div class=\"interested-home\">Interested in working with NOVO?</div>\n" +
     "            <br>\n" +
-    "                <div class=\"contact-us\">Email us at\n" +
-    "                <a href=\"mailto:info@projectnovo.co\" style=\"color: #1db996;\">info@projectnovo.co</a></div> or <div class=\"contact-us\">Call us at one of our <span style=\"color: #1db996; font-weight: 500;\">four</span> locations!</div>\n" +
+    "                <div class=\"contact-us-home\">Email us at\n" +
+    "                <a href=\"mailto:info@projectnovo.co\" style=\"color: #1db996;\">info@projectnovo.co</a></div> or <div class=\"contact-us-home\">Call us at one of our <span style=\"color: #1db996; font-weight: 500;\">four</span> locations!</div>\n" +
     "                <br>\n" +
     "                <div class=\"center\">\n" +
     "                    <div class=\"box2 small-medium\">\n" +
@@ -472,9 +485,12 @@ angular.module("home/index.tpl.html", []).run(["$templateCache", function($templ
     "                    <br>\n" +
     "                </div>\n" +
     "                <br>\n" +
+    "                <br>\n" +
+    "                <br>\n" +
+    "                <br>\n" +
     "                <p>Stay in the loop and learn about what we do!</p>\n" +
     "                <br>\n" +
-    "                <span class=\"newsletter\">Sign Up for our Monthly Newsletter!</span>\n" +
+    "                <span class=\"newsletter-home\">Sign Up for our Monthly Newsletter!</span>\n" +
     "            </div>\n" +
     "        </div>\n" +
     "    </div>\n" +

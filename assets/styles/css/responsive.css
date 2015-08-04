@@ -1,49 +1,52 @@
 @media (min-width: 1080px) and (max-width: 1200px) {
     .banner {
-        padding:160px 0 80px
+        padding:160px 0 80px;
     }
 
     .section-head {
-        padding:80px 0 60px 25.5px
+        padding:80px 0 60px 25.5px;
     }
 
     .services-list {
-        padding-bottom:80px
+        padding-bottom:80px;
     }
 
     .services-list li {
         width:313px;
         text-align:center;
-        margin:0 25px
+        margin:0 25px;
     }
 
     .services-list i {
-        padding-top:25px
+        padding-top:25px;
     }
 
     .desc {
-        padding:80px 0
+        padding:80px 0;
     }
 
     .team {
-        margin-bottom:80px
+        margin-bottom:80px;
     }
 
     .team li {
-        width:235px
+        width:235px;
     }
 
     .team li img {
         width:235px;
-        height:100%
+        height:100%;
     }
 
     .contact-section {
-        padding-bottom:80px
+        padding-bottom:80px;
     }
 
     .contact-form {
-        width:550px
+        width:550px;
+    }
+    .opacity {
+        opacity: 1.0 !important;
     }
 }
 
@@ -71,11 +74,11 @@
 
 @media (min-width: 768px) and (max-width: 1080px) {
     .banner {
-        padding:160px 0 60px
+        padding:60px 0 60px;
     }
 
     .banner-text h2 {
-        font-size:25px
+        font-size:25px;
     }
 
     p.under-tagline {
@@ -83,50 +86,50 @@
         font-size:15px;
         line-height:30px;
         font-weight:300;
-        margin-top:25px
+        margin-top:25px;
     }
 
     .section-head {
-        padding:60px 0 60px 25.5px
+        padding:60px 0 60px 25.5px;
     }
 
     .services-list {
-        padding-bottom:60px
+        padding-bottom:60px;
     }
 
     .services-list li {
         width:229px;
         text-align:center;
-        margin:0 10px
+        margin:0 10px;
     }
 
     .services-list i {
-        padding-top:25px
+        padding-top:25px;
     }
 
     .services-list h4 {
         font-size:15px;
         padding-top:30px;
         text-transform:uppercase;
-        color:#3D4351
+        color:#3D4351;
     }
 
     .desc {
-        padding:60px 0
+        padding:60px 0;
     }
 
     .desc h3 {
-        font-size:23px
+        font-size:23px;
     }
 
     .desc p {
         color:#737373;
         width:90%;
-        font-size:16px
+        font-size:16px;
     }
 
     .team {
-        margin-bottom:60px
+        margin-bottom:60px;
     }
 
     .team li {
@@ -144,6 +147,9 @@
     .contact-form {
         width:97%;
     }
+    .opacity {
+        opacity: 1.0 !important;
+    }
 }
 
 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
@@ -153,7 +159,7 @@
 
     .banner-text {
         width:70%;
-        padding:60px 0;
+        padding:160px 0;
     }
 
     .banner-text h2 {
@@ -498,7 +504,7 @@
     	-moz-background-size:cover;
     	-webkit-background-size:cover;
     	background-size:cover;
-        padding:180px 0 40px;
+        padding:0px 0 40px;
         cursor:default;
     }
 
