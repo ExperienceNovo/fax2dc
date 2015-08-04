@@ -1,7 +1,7 @@
-angular.module('templates-app', ['about/index.tpl.html', 'blog/index.tpl.html', 'contact/index.tpl.html', 'home/index.tpl.html', 'portfolio/index.tpl.html', 'sidebar/index.tpl.html']);
+angular.module('templates-app', ['about/about.mikey/index.mikey.tpl.html', 'about/index.tpl.html', 'blog/index.tpl.html', 'contact/index.tpl.html', 'home/index.tpl.html', 'portfolio/index.tpl.html', 'portfolio/index1.tpl.html', 'sidebar/index.tpl.html']);
 
-angular.module("about/index.tpl.html", []).run(["$templateCache", function($templateCache) {
-  $templateCache.put("about/index.tpl.html",
+angular.module("about/about.mikey/index.mikey.tpl.html", []).run(["$templateCache", function($templateCache) {
+  $templateCache.put("about/about.mikey/index.mikey.tpl.html",
     "<!DOCTYPE html>\n" +
     "<html lang=\"en\">\n" +
     "<head>\n" +
@@ -174,6 +174,33 @@ angular.module("about/index.tpl.html", []).run(["$templateCache", function($temp
     "</html>		");
 }]);
 
+angular.module("about/index.tpl.html", []).run(["$templateCache", function($templateCache) {
+  $templateCache.put("about/index.tpl.html",
+    "<h1>about</h1>\n" +
+    "<div>\n" +
+    "	<h3>Design</h3>\n" +
+    "	<div>\n" +
+    "		<p>Full-scale Branding to ensure clear communication of your message.</p>\n" +
+    "		<p>Custom Interface Design to ensure a seamless customer online experience.</p>\n" +
+    "		<p>Advertising Design to establish a strong brand presence within your industry.</p>\n" +
+    "	</div>\n" +
+    "	<h3>Development</h3>\n" +
+    "	<div>\n" +
+    "		<p>Mobile-first Web Design to align you with the ever-increasing mobile world.</p>\n" +
+    "		<p>SEO Structuring to naturally expand your online reach and outpace your competitors.</p>\n" +
+    "		<p>Back-end Software Integration to ensure maximum security and business technology integration.</p>\n" +
+    "	</div>\n" +
+    "	<h3>Marketing</h3>\n" +
+    "	<div>\n" +
+    "		<p>Social Media Management to extend your customer reach.</p>\n" +
+    "		<p>Email Outreach Marketing to manage current customer and secure new-customer leads.</p>\n" +
+    "		<p>Consistent Content Creation to establish and maintain your presence within your community and your industry.</p>\n" +
+    "	</div>\n" +
+    "</div>\n" +
+    "\n" +
+    "	");
+}]);
+
 angular.module("blog/index.tpl.html", []).run(["$templateCache", function($templateCache) {
   $templateCache.put("blog/index.tpl.html",
     "<br><br>\n" +
@@ -337,18 +364,6 @@ angular.module("home/index.tpl.html", []).run(["$templateCache", function($templ
     "        <div class=\"row\">\n" +
     "            <div class=\"col-md-12\">\n" +
     "                <div class=\"col-md-4\">\n" +
-    "                    <i class=\"fa fa-users fa-5x\"></i>\n" +
-    "                    <div class=\"service-title\">\n" +
-    "                        <h2>Marketing</h2>\n" +
-    "                    </div>\n" +
-    "                <hr>\n" +
-    "                    <div class=\"service-des\">\n" +
-    "                        <p>Content Creation</p>\n" +
-    "                        <p>Social Media Management</p>\n" +
-    "                        <p>Outreach Email Marketing</p>\n" +
-    "                    </div>\n" +
-    "                </div>\n" +
-    "                <div class=\"col-md-4\">\n" +
     "                    <i class=\"fa fa-paint-brush fa-5x\"></i>\n" +
     "                    <div class=\"service-title\">\n" +
     "                        <h2>Design</h2>\n" +
@@ -370,6 +385,18 @@ angular.module("home/index.tpl.html", []).run(["$templateCache", function($templ
     "                        <p>Mobile-first Web Design</p>\n" +
     "                        <p>SEO Structuring</p>\n" +
     "                        <p>Back-end Software Integration</p>\n" +
+    "                    </div>\n" +
+    "                </div>\n" +
+    "                <div class=\"col-md-4\">\n" +
+    "                    <i class=\"fa fa-users fa-5x\"></i>\n" +
+    "                    <div class=\"service-title\">\n" +
+    "                        <h2>Marketing</h2>\n" +
+    "                    </div>\n" +
+    "                <hr>\n" +
+    "                    <div class=\"service-des\">\n" +
+    "                        <p>Social Media Management</p>\n" +
+    "                        <p>Outreach Email Marketing</p>\n" +
+    "                        <p>Content Creation</p>\n" +
     "                    </div>\n" +
     "                </div>\n" +
     "            </div>\n" +
@@ -400,15 +427,14 @@ angular.module("home/index.tpl.html", []).run(["$templateCache", function($templ
     "                    <!--<h2 style=\"color: #BDBDBD\">Development</h2>-->\n" +
     "                </div>\n" +
     "                <div class=\"col-md-3 team-member\">\n" +
-    "                    <img src=\"/images/team/garrett.png\" />\n" +
+    "                    <img src=\"/images/team/mikey.png\" />\n" +
     "                    <br>\n" +
     "                    <br>\n" +
-    "                    <div class=\"name\">Garrett</div>\n" +
+    "                    <div class=\"name\">Michael</div>\n" +
     "                    <hr>\n" +
-    "                    <h2>Marketing</h2>\n" +
-    "                    <!--<h2>Marketing Strategy</h2>\n" +
-    "                    <h2>Client Outreach</h2>\n" +
-    "                    <!--<h2 style=\"color: #BDBDBD\">Marketing and <br> Content</h2>-->\n" +
+    "                    <h2>Design</h2>\n" +
+    "                    <!--<h2>Web Development</h2>\n" +
+    "                    <!--<h2 style=\"color: #BDBDBD\">Design</h2>-->\n" +
     "                </div>\n" +
     "                <div class=\"col-md-3 team-member\">\n" +
     "                    <img src=\"/images/team/trevor.png\" />\n" +
@@ -422,14 +448,15 @@ angular.module("home/index.tpl.html", []).run(["$templateCache", function($templ
     "                    <!--<h2 style=\"color: #BDBDBD\">8</h2>-->\n" +
     "                </div>\n" +
     "                <div class=\"col-md-3 team-member\">\n" +
-    "                    <img src=\"/images/team/mikey.png\" />\n" +
+    "                    <img src=\"/images/team/garrett.png\" />\n" +
     "                    <br>\n" +
     "                    <br>\n" +
-    "                    <div class=\"name\">Michael</div>\n" +
+    "                    <div class=\"name\">Garrett</div>\n" +
     "                    <hr>\n" +
-    "                    <h2>Design</h2>\n" +
-    "                    <!--<h2>Web Development</h2>\n" +
-    "                    <!--<h2 style=\"color: #BDBDBD\">Design</h2>-->\n" +
+    "                    <h2>Marketing</h2>\n" +
+    "                    <!--<h2>Marketing Strategy</h2>\n" +
+    "                    <h2>Client Outreach</h2>\n" +
+    "                    <!--<h2 style=\"color: #BDBDBD\">Marketing and <br> Content</h2>-->\n" +
     "                </div>\n" +
     "            </div>\n" +
     "        </div>\n" +
@@ -493,29 +520,37 @@ angular.module("home/index.tpl.html", []).run(["$templateCache", function($templ
     "                <br>\n" +
     "                <br>\n" +
     "                <br>\n" +
-    "                <p>Stay in the loop and learn about what we do!</p>\n" +
-    "                <br>\n" +
-    "                <span class=\"newsletter-home\">Sign Up for our Monthly Newsletter!</span>\n" +
     "            </div>\n" +
     "        </div>\n" +
     "    </div>\n" +
     "    <br>\n" +
     "    <br>\n" +
-    "    <div class=\"contact\" id=\"contact\">\n" +
-    "        <div class=\"contact-section\">\n" +
-    "            <form class=\"ctr\" action=\"//projectnovo.us11.list-manage.com/subscribe/post?u=a56f7f3f876fa9db4c36328af&amp;id=ff3d3ae826\" method=\"post\">\n" +
-    "                <div class=\"loader\"></div>\n" +
-    "                <input type=\"email\" name=\"EMAIL\" required>\n" +
-    "                <div class=\"indicator\" data-content=\"Type Your Email Address\"></div>\n" +
-    "            </form>\n" +
-    "        </div>\n" +
     "\n" +
-    "        <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->\n" +
-    "        <div style=\"position: absolute; left: -5000px;\"><input type=\"text\" name=\"b_a56f7f3f876fa9db4c36328af_ff3d3ae826\" tabindex=\"-1\" value=\"\"></div>\n" +
-    "        <div class=\"clear\"><input type=\"submit\" value=\"Subscribe\" name=\"subscribe\" id=\"mc-embedded-subscribe\" class=\"button\"></div>\n" +
+    "    <div class=\"newsletter-section\">\n" +
+    "        <br>\n" +
+    "        <span class=\"newsletter-home\">Sign Up for our Monthly Newsletter!</span>\n" +
+    "        <br>\n" +
+    "        <br>\n" +
+    "        <br>\n" +
+    "        <br>\n" +
+    "            <div class=\"contact\" id=\"contact\">\n" +
+    "                <div class=\"contact-section\">\n" +
+    "                    <form class=\"ctr\" action=\"//projectnovo.us11.list-manage.com/subscribe/post?u=a56f7f3f876fa9db4c36328af&amp;id=ff3d3ae826\" method=\"post\">\n" +
+    "                        <div class=\"loader\"></div>\n" +
+    "                        <input type=\"email\" name=\"EMAIL\" required>\n" +
+    "                        <div class=\"indicator\" data-content=\"Type Your Email Address\"></div>\n" +
+    "                    </form>\n" +
+    "                </div>\n" +
     "\n" +
+    "                <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->\n" +
+    "                <div class=\"display-none\">\n" +
+    "                    <div style=\"position: absolute; left: -5000px;\"><input type=\"text\" name=\"b_a56f7f3f876fa9db4c36328af_ff3d3ae826\" tabindex=\"-1\" value=\"\"></div>\n" +
+    "                    <div class=\"clear\"><input type=\"submit\" value=\"Subscribe\" name=\"subscribe\" id=\"mc-embedded-subscribe\" class=\"button\"></div>\n" +
+    "                </div>\n" +
+    "\n" +
+    "            </div>\n" +
     "    </div>\n" +
-    "</div>\n" +
+    "</div> <!--end body-->\n" +
     "\n" +
     "<script src=\"https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js\" type=\"text/javascript\"></script>\n" +
     "<script src=\"/js/blog.js\" type=\"text/javascript\"></script>\n" +
@@ -526,7 +561,24 @@ angular.module("home/index.tpl.html", []).run(["$templateCache", function($templ
 
 angular.module("portfolio/index.tpl.html", []).run(["$templateCache", function($templateCache) {
   $templateCache.put("portfolio/index.tpl.html",
-    "<!--<div class='container' style=\"margin: 180px auto 0;\">\n" +
+    "<div class=\"container\">\n" +
+    "    <div id=\"\" class=\"info\">\n" +
+    "        <div class=\"title\" style=\"font-weight:400;\">Quality, Modernity, and Transparency</div>\n" +
+    "        <br>\n" +
+    "        <br>\n" +
+    "        <div class=\"message\">\n" +
+    "            Our clients know what it means to partner with NOVO. Our work exudes quality, employs the latest and greatest\n" +
+    "            in marketing and web development, and we are transparent in our communication to clients and the outside\n" +
+    "            world.\n" +
+    "            <br>\n" +
+    "            <br>\n" +
+    "            We believe our work speaks for itself.\n" +
+    "        </div>\n" +
+    "    </div>\n" +
+    "</div>\n" +
+    "\n" +
+    "<!--make dynamic with angular-->\n" +
+    "<div class='container' style=\"margin: 180px auto 0;\">\n" +
     "    <div class='wrap'>\n" +
     "        <div class='crop'>\n" +
     "            <img src='' style=\"background-color: #1db996;\">\n" +
@@ -552,48 +604,100 @@ angular.module("portfolio/index.tpl.html", []).run(["$templateCache", function($
     "            <img src='' style=\"background-color: #1db996;\">\n" +
     "        </div>\n" +
     "    </div>\n" +
-    "</div>-->\n" +
+    "</div>\n" +
+    "\n" +
     "\n" +
     "<div class=\"container\">\n" +
-    "    <div id=\"\" class=\"info\">\n" +
-    "        <div class=\"title\" style=\"font-weight:400;\">Quality, Modernity, and Transparency</div>\n" +
+    "\n" +
+    "    <div id=\"absolute\" class=\"info\">\n" +
+    "        <div class=\"title\">Absolute Yachts North America</div>\n" +
     "        <br>\n" +
     "        <br>\n" +
     "        <div class=\"message\">\n" +
-    "            Our clients know what it means to partner with NOVO. Our work exudes quality, employs the latest and greatest\n" +
-    "            in marketing and web development, and we are transparent in our communication to clients and the outside\n" +
-    "            world.\n" +
-    "            <br>\n" +
-    "            <br>\n" +
-    "            We believe our work speaks for itself.\n" +
+    "            Absolute is an Italian yacht brand based in Piacenza, Italy, manufacturing yachts\n" +
+    "            ranging from 40 to 72 feet. Communicating the Absolute's focus on design, efficiency, performance\n" +
+    "            and serviceability are a high priority. NOVO is responsible for Absolute North America's online marketing,\n" +
+    "            including web design and development, email marketing, and social media marketing.\n" +
+    "        </div>\n" +
+    "\n" +
+    "        <div style=\"height:50px;\"></div>\n" +
+    "        <div style=\"text-align:center;\" class=\"link\">\n" +
+    "            <a style=\"color:#1db996\" href=\"www.absoluteyachtsna.com\">absoluteyachtsna.com</a>\n" +
+    "        </div>\n" +
+    "        <div style=\"height:80px;\"></div>\n" +
+    "\n" +
+    "        <a href=\"http://www.absoluteyachtsna.com/\" style=\"text-align:cener;\">\n" +
+    "            <img src=\"/images/portfolio/absolute-screenshot.png\" class=\"img-fill\" style=\"width: 100%\">\n" +
+    "        </a>\n" +
+    "\n" +
+    "    </div>\n" +
+    "\n" +
+    "    <!--on click triangle show-->\n" +
+    "    <!--<div id=\"client2\" class=\"info\">\n" +
+    "        <div class=\"title\">Client 2</div>\n" +
+    "        <div class=\"message\">hey client 2</div>\n" +
+    "        <div class=\"link\"></div>\n" +
+    "    </div>-->\n" +
+    "\n" +
+    "</div>\n" +
+    "\n" +
+    "<div style=\"height:100px;\"></div>\n" +
+    "");
+}]);
+
+angular.module("portfolio/index1.tpl.html", []).run(["$templateCache", function($templateCache) {
+  $templateCache.put("portfolio/index1.tpl.html",
+    "<div class=\"container\">\n" +
+    "    <!--slideshow here-->\n" +
+    "</div>\n" +
+    "\n" +
+    "<div class='container' style=\"margin: 180px auto 0;\">\n" +
+    "    <div class='wrap'>\n" +
+    "        <div class='crop'>\n" +
+    "            <img src='' style=\"background-color: #1db996;\">\n" +
+    "        </div>\n" +
+    "    </div>\n" +
+    "    <div class='wrap'>\n" +
+    "        <div class='crop'>\n" +
+    "            <img src='' style=\"background-color: #1db996;\">\n" +
+    "        </div>\n" +
+    "    </div>\n" +
+    "    <div class='wrap'>\n" +
+    "        <div class='crop'>\n" +
+    "            <img src='/images/symbol300.png'>\n" +
+    "        </div>\n" +
+    "    </div>\n" +
+    "    <div class='wrap'>\n" +
+    "        <div class='crop'>\n" +
+    "            <img src='' style=\"background-color: #1db996;\">\n" +
+    "        </div>\n" +
+    "    </div>\n" +
+    "    <div class='wrap'>\n" +
+    "        <div class='crop'>\n" +
+    "            <img src='' style=\"background-color: #1db996;\">\n" +
     "        </div>\n" +
     "    </div>\n" +
     "</div>\n" +
     "\n" +
     "<div class=\"container\">\n" +
     "    <div id=\"absolute\" class=\"info\">\n" +
-    "        <div class=\"item hoverwrap\">\n" +
-    "            <figure class=\"figure-overlay figure-overlay-icon opacity\">\n" +
-    "                <a href=\"http://www.absoluteyachtsna.com/\">\n" +
-    "                    <img src=\"/images/portfolio/absolute-screenshot.png\" class=\"img-fill\" style=\"width: 100% !important; border: 1px solid black; margin-bottom: 15px;\">\n" +
-    "                    <div>\n" +
-    "                        <p class=\"absolute-hover\"></p>\n" +
-    "                    </div>\n" +
-    "                </a>\n" +
-    "            </figure>\n" +
-    "        </div>\n" +
-    "        <div class=\"title\" style=\"font-weight:400;\">Absolute Yachts North America</div>\n" +
+    "        <div class=\"title\">Absolute Yachts North America</div>\n" +
     "        <br>\n" +
     "        <br>\n" +
-    "        <div class=\"message\">\n" +
-    "            Absolute is an Italian yacht brand based in Piacenza, Italy, manufacturing yachts\n" +
-    "            ranging from 40 to 72 feet. NOVO is responsible for Absolute North America's online marketing,\n" +
-    "            including web design and development, email marketing, and social media marketing.\n" +
-    "        </div>\n" +
-    "        <div class=\"link\"><a href=\"http://www.absoluteyachtsna.com/\">absoluteyachtsna.com</a></div>\n" +
+    "        <div class=\"message\">Absolute is an Italian yacht brand based in Piacenza, Italy, manufacturing yachts\n" +
+    "        ranging from 40 to 72 feet. Communicating the brand's focus on design, efficiency, performance\n" +
+    "        and serviceability are a high priority. NOVO is responsible for Absolute North America's online marketing,\n" +
+    "        including web design and development, email marketing, and social media marketing. The web site includes a\n" +
+    "        home page, about page, dealer map, model information and galleries, and contact form.</div>\n" +
+    "        <div class=\"link\"><a href=\"www.absoluteyachtsna.com\">absoluteyachtsna.com</a></div>\n" +
     "    </div>\n" +
-    "</div>\n" +
-    "");
+    "    <div id=\"client2\" class=\"info\">\n" +
+    "        <!--next client here-->\n" +
+    "        <div class=\"title\"></div>\n" +
+    "        <div class=\"message\"></div>\n" +
+    "        <div class=\"link\"></div>\n" +
+    "    </div>\n" +
+    "</div>");
 }]);
 
 angular.module("sidebar/index.tpl.html", []).run(["$templateCache", function($templateCache) {
@@ -638,14 +742,14 @@ angular.module("sidebar/index.tpl.html", []).run(["$templateCache", function($te
     "                </div>\n" +
     "            </a>\n" +
     "        </div>\n" +
-    "       <!-- <div class=\"item-container\">\n" +
+    "       <div class=\"item-container\">\n" +
     "            <a href=\"/blog/\">\n" +
     "                <div class=\"list-item\">\n" +
     "                    <div class=\"nav-small-list\"><i class=\"fa fa-newspaper-o\"></i></div>\n" +
     "                    <div class=\"nav-large-list\">Blog</div>\n" +
     "                </div>\n" +
     "            </a>\n" +
-    "        </div> -->\n" +
+    "        </div>\n" +
     "        <div class=\"flex-item-bottom\"></div>\n" +
     "    </div>\n" +
     "</div>\n" +

@@ -186,7 +186,7 @@ button.service-button:focus {
 .name {
 	font-family: 'Quicksand', sans-serif;
     font-size: 30px;
-    color: #1db996;
+    color: #2ab996;
     font-weight: 800 !important;
     margin-right: auto;
     margin-left: auto;
@@ -284,7 +284,7 @@ button.service-button:focus {
 }
 
 .contact, .contact-section {
-	padding-bottom: 150px;
+	padding-bottom: 100px;
 }
 
 .surface-container-home {
@@ -305,13 +305,15 @@ button.service-button:focus {
     font-weight: 300;
     color: black;
     text-align: justify;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 .contact-title-home {
     font-family: 'Jura', sans-serif;
     font-weight: 600;
     font-size: 50px;
-    color: #1db996;
+    color: #2ab996;
     font-weight: 600;
     margin-right: auto;
     margin-left: auto;
@@ -349,7 +351,20 @@ button.service-button:focus {
     margin-left: auto;
     text-align: center;
     font-family: 'Quicksand', sans-serif;
-    padding-bottom: 30px;
+}
+
+.newsletter-section {
+	margin-top: 20px;
+    font-size: large;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    font-family: 'Quicksand', sans-serif;
+    color: #fff;
+    padding-top: 80px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: black;
 }
 
 .newsletter-home {
@@ -359,6 +374,19 @@ button.service-button:focus {
     margin-top: 10px;
     font-size: 2em;
     font-weight: 300;
+}
+
+/*.newsletter-border {
+	width: 800px;
+	height: 300px;
+	margin-right: auto;
+	margin-left: auto;
+	text-align: center;
+	border: 5px solid #2ab996;
+}*/
+
+.display-none {
+	display: none;
 }
 
 input:focus {
@@ -397,7 +425,7 @@ input {
 	padding:0 20px;
 	border:none;
 	cursor:pointer;
-	color:blue;
+	color:black;
 	position:relative;
 	z-index:10;
 	background:transparent;
@@ -432,10 +460,10 @@ input.full {
 	left:0;
 	right:0;
 	bottom:0;
-	color: black;
+	color: white;
 	-webkit-transition:inherit;
 	transition:inherit;
-	font-size:24px;
+	font-size:1.5em;
 	z-index:999;
 	text-align:center;
 	font-weight:300;
@@ -523,10 +551,10 @@ input:focus + .indicator:after {
 		left:0;
 		right:0;
 		bottom:0;
-		color:#777;
+		color:black;
 		-webkit-transition:inherit;
 		transition:inherit;
-		font-size:18px;
+		font-size:1em;
 		z-index:999;
 		text-align:center;
 		font-weight:300;
@@ -551,9 +579,10 @@ input:focus + .indicator:after {
 	.contact-section .ctr {
 	    display:block;
 		position:relative;
-		width:auto;
-		margin-left:25px;
-		margin-right:25px;
+		width:50%;
+		margin-left:auto;
+		margin-right:auto;
+		text-align: center;
 	}
 	.small-medium {
   		padding-bottom: 15% !important;
