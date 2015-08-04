@@ -21,6 +21,10 @@ html, body {
     }
 }
 
+a:hover {
+	text-decoration: underline;
+}
+
 .header {
 	width:100%;
 }
@@ -336,10 +340,6 @@ button.service-button:focus {
 .contact-us-home a {
     font-size: 1.3em;
     font-weight: 500;
-}
-
-a:hover {
-	text-decoration: underline;
 }
 
 .message-home {

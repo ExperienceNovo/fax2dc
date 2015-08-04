@@ -218,6 +218,7 @@ angular.module("contact/index.tpl.html", []).run(["$templateCache", function($te
     "\n" +
     "\n" +
     "\n" +
+    "\n" +
     "<div class=\"surface-container\">\n" +
     "    <div class=\"contact-container\">\n" +
     "        <div class=\"contact-title-home\">Get In Touch</div>\n" +

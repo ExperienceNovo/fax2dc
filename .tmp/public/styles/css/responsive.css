@@ -88,7 +88,9 @@
         font-weight:300;
         margin-top:25px;
     }
-
+    .services {
+        height: auto !important;
+    }
     .section-head {
         padding:60px 0 60px 25.5px;
     }
@@ -174,7 +176,9 @@
         font-weight:300;
         margin-top:25px;
     }
-
+    .services {
+        height: auto !important;
+    }
     .section-head {
         padding:60px 0 60px 25.5px;
     }
@@ -246,7 +250,7 @@
         padding:120px 0 60px;
         cursor:default;
     }
-
+    
     .banner-text {
         width:70%;
         margin:0 auto;
@@ -267,7 +271,9 @@
         font-weight:300;
         margin-top:25px;
     }
-
+    .services {
+        height: auto !important;
+    }
     .section-head {
         padding:60px 0 60px 25.5px;
     }
@@ -399,7 +405,9 @@
         font-weight:300;
         margin-top:25px;
     }
-
+    .services {
+        height: auto !important;
+    }
     .section-head {
         padding:40px 0;
     }
@@ -528,7 +536,9 @@
         font-weight:300;
         margin-top:25px;
     }
-
+    .services {
+        height: auto !important;
+    }
     .section-head {
         padding:40px 0;
     }
