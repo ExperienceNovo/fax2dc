@@ -176,9 +176,8 @@ angular.module("about/about.mikey/index.mikey.tpl.html", []).run(["$templateCach
 
 angular.module("about/index.tpl.html", []).run(["$templateCache", function($templateCache) {
   $templateCache.put("about/index.tpl.html",
+    "<!--we gotta load in the css in a better fashon than overwriting-->\n" +
     "<link href=\"/styles/css/about.css\" rel=\"stylesheet\">\n" +
-    "<link href='http://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet' type='text/css'>\n" +
-    "\n" +
     "\n" +
     "<div class=\"about\" id=\"about\">\n" +
     "    <div class=\"about-section-head\">\n" +
@@ -193,7 +192,7 @@ angular.module("about/index.tpl.html", []).run(["$templateCache", function($temp
     "                    <div class=\"about-title\">\n" +
     "                        <h2>Design</h2>\n" +
     "                    </div>\n" +
-    "                <hr>\n" +
+    "                    <hr>\n" +
     "                    <div class=\"about-des\">\n" +
     "                        <p>Full-scale Branding to ensure clear communication of your message.</p>\n" +
     "                        <p>Custom Interface Design to ensure a seamless customer online experience.</p>\n" +
@@ -205,7 +204,7 @@ angular.module("about/index.tpl.html", []).run(["$templateCache", function($temp
     "                    <div class=\"about-title\">\n" +
     "                        <h2>Development</h2>\n" +
     "                    </div>\n" +
-    "                <hr>\n" +
+    "                    <hr>\n" +
     "                    <div class=\"about-des\">\n" +
     "                        <p>Mobile-first Web Design to align you with the ever-increasing mobile world.</p>\n" +
     "                        <p>SEO Structuring to naturally expand your online reach and outpace your competitors.</p>\n" +
@@ -217,7 +216,7 @@ angular.module("about/index.tpl.html", []).run(["$templateCache", function($temp
     "                    <div class=\"about-title\">\n" +
     "                        <h2>Marketing</h2>\n" +
     "                    </div>\n" +
-    "                <hr>\n" +
+    "                    <hr>\n" +
     "                    <div class=\"about-des\">\n" +
     "                        <p>Social Media Management to extend your customer reach.</p>\n" +
     "                        <p>Email Outreach Marketing to manage current customer and secure new-customer leads.</p>\n" +
@@ -290,22 +289,22 @@ angular.module("blog/index.tpl.html", []).run(["$templateCache", function($templ
 
 angular.module("contact/index.tpl.html", []).run(["$templateCache", function($templateCache) {
   $templateCache.put("contact/index.tpl.html",
+    "<!--we gotta load in the css in a better fashon than overwriting-->\n" +
     "<link href=\"/styles/css/contact.css\" type=\"text/css\">\n" +
-    "<link href=\"/styles/css/portfolio.css\" type=\"text/css\">\n" +
-    "<link href=\"/styles/css/responsive.css\" type=\"text/css\">\n" +
     "<link href=\"/styles/css/home.css\" rel=\"stylesheet\" type=\"text/css\"/>\n" +
-    "<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600|Jura:400,500,300' rel='stylesheet' type='text/css'>\n" +
-    "<link href='http://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet' type='text/css'>\n" +
     "\n" +
-    "<style type=\"text/css\">\n" +
+    "<!--map isn't loading...-->\n" +
+    "<!--<style type=\"text/css\">\n" +
     "    #map-canvas {\n" +
     "        width: 1024px;\n" +
     "        height: 600px;\n" +
     "    }\n" +
     "</style>\n" +
-    "\n" +
-    "\n" +
-    "\n" +
+    "<div class=\"center\">\n" +
+    "    <div id=\"map-container\" class=\"map-container\">\n" +
+    "        <div id=\"map-canvas\"></div>\n" +
+    "    </div>\n" +
+    "</div>-->\n" +
     "\n" +
     "<div class=\"surface-container\">\n" +
     "    <div class=\"contact-container\">\n" +
@@ -315,43 +314,45 @@ angular.module("contact/index.tpl.html", []).run(["$templateCache", function($te
     "            <br>\n" +
     "            <div class=\"message-home\">\n" +
     "                <div class=\"interested-home\">Interested in working with NOVO?</div>\n" +
-    "            <br>\n" +
-    "                <div class=\"contact-us-home\">Email us at\n" +
-    "                <a href=\"mailto:info@projectnovo.co\" style=\"color: #1db996;\">info@projectnovo.co</a></div> or <div class=\"contact-us-home\">Call us at one of our <span style=\"color: #1db996; font-weight: 500;\">four</span> locations!</div>\n" +
+    "                <br>\n" +
+    "                <div class=\"contact-us-home\">\n" +
+    "                    Email us at <a href=\"mailto:info@projectnovo.co\" style=\"color: #1db996;\">info@projectnovo.co</a>\n" +
+    "                </div>\n" +
+    "                or \n" +
+    "                <div class=\"contact-us-home\">Call us at one of our <span style=\"color: #1db996; font-weight: 500;\">four</span> locations!</div>\n" +
     "                <br>\n" +
     "                <div class=\"center\">\n" +
     "                    <div class=\"box2 small-medium\">\n" +
-    "                            <img src=\"/images/contact/chap.jpeg\" class=\"img-fill opacity\">\n" +
-    "                            <br>\n" +
-    "                            <div class=\"city\" style=\"font-size: 22px;\">Chapel Hill, NC</div>\n" +
+    "                        <img src=\"/images/contact/chap.jpeg\" class=\"img-fill opacity\">\n" +
+    "                        <br>\n" +
+    "                        <div class=\"city\" style=\"font-size: 22px;\">Chapel Hill, NC</div>\n" +
     "                        <a href=\"tel:+18656797229\">\n" +
     "                            <div class=\"subtitle\">(865) 679-7229</div>\n" +
     "                        </a>\n" +
     "                    </div>\n" +
     "                    <br>\n" +
     "                    <div class=\"box2 small-medium\">\n" +
-    "                            <img src=\"/images/contact/evanston.jpg\" class=\"img-fill opacity\">\n" +
-    "                            <br>\n" +
-    "                            <div class=\"city\" style=\"font-size: 22px;\">Chicago, IL</div>\n" +
+    "                        <img src=\"/images/contact/evanston.jpg\" class=\"img-fill opacity\">\n" +
+    "                        <br>\n" +
+    "                        <div class=\"city\" style=\"font-size: 22px;\">Chicago, IL</div>\n" +
     "                        <a href=\"tel:+18653876121\">\n" +
     "                            <div class=\"subtitle\">(865) 387-6121</div>\n" +
     "                        </a>\n" +
     "                    </div>\n" +
     "                    <br>\n" +
     "                    <div class=\"box2 small-medium\">\n" +
-    "                            <img src=\"/images/contact/knoxville.jpg\" class=\"img-fill opacity\">\n" +
-    "                            <br>\n" +
-    "                            <div class=\"city\" style=\"font-size: 22px;\">Knoxville, TN</div>\n" +
+    "                        <img src=\"/images/contact/knoxville.jpg\" class=\"img-fill opacity\">\n" +
+    "                        <br>\n" +
+    "                        <div class=\"city\" style=\"font-size: 22px;\">Knoxville, TN</div>\n" +
     "                        <a href=\"tel:+18656969382\">    \n" +
     "                            <div class=\"subtitle\">(865) 696-9382</div>\n" +
     "                        </a>\n" +
     "                    </div>\n" +
     "                    <br>\n" +
     "                    <div class=\"box2 small-medium\">\n" +
-    "\n" +
     "                        <img src=\"/images/contact/philly.jpg\" class=\"img-fill opacity\">\n" +
-    "                            <br>\n" +
-    "                            <div class=\"city\" style=\"font-size: 22px;\">Philadelpia, PA</div>\n" +
+    "                        <br>\n" +
+    "                        <div class=\"city\" style=\"font-size: 22px;\">Philadelpia, PA</div>\n" +
     "                        <a href=\"tel:+13365800855\">\n" +
     "                            <div class=\"subtitle\">(336) 580-0855</div>\n" +
     "                        </a>\n" +
@@ -361,15 +362,19 @@ angular.module("contact/index.tpl.html", []).run(["$templateCache", function($te
     "                <br>\n" +
     "                <br>\n" +
     "                <br>\n" +
+    "                <!--\n" +
     "                <br>\n" +
     "                <p>Stay in the loop and learn about what we do!</p>\n" +
     "                <br>\n" +
     "                <span class=\"newsletter-home\">Sign Up for our Monthly Newsletter!</span>\n" +
+    "                -->\n" +
     "            </div>\n" +
     "        </div>\n" +
     "    </div>\n" +
     "    <br>\n" +
     "    <br>\n" +
+    "    <!--map here-->\n" +
+    "    <!--\n" +
     "    <div class=\"contact\" id=\"contact\">\n" +
     "        <div class=\"contact-section\">\n" +
     "            <form class=\"ctr\" action=\"//projectnovo.us11.list-manage.com/subscribe/post?u=a56f7f3f876fa9db4c36328af&amp;id=ff3d3ae826\" method=\"post\">\n" +
@@ -378,12 +383,10 @@ angular.module("contact/index.tpl.html", []).run(["$templateCache", function($te
     "                <div class=\"indicator\" data-content=\"Type Your Email Address\"></div>\n" +
     "            </form>\n" +
     "        </div>\n" +
-    "\n" +
-    "        <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->\n" +
     "        <div style=\"position: absolute; left: -5000px;\"><input type=\"text\" name=\"b_a56f7f3f876fa9db4c36328af_ff3d3ae826\" tabindex=\"-1\" value=\"\"></div>\n" +
     "        <div class=\"clear\"><input type=\"submit\" value=\"Subscribe\" name=\"subscribe\" id=\"mc-embedded-subscribe\" class=\"button\"></div>\n" +
-    "\n" +
     "    </div>\n" +
+    "-->\n" +
     "</div>\n" +
     "\n" +
     "<script src=\"/js/maps.js\" type='text/javascript'></script>\n" +
@@ -397,16 +400,8 @@ angular.module("contact/index.tpl.html", []).run(["$templateCache", function($te
 
 angular.module("home/index.tpl.html", []).run(["$templateCache", function($templateCache) {
   $templateCache.put("home/index.tpl.html",
-    "<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\" />\n" +
-    "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n" +
+    "<!--css has to over write other styles to work...-->\n" +
     "<link href=\"/styles/css/home.css\" rel=\"stylesheet\" type=\"text/css\"/>\n" +
-    "<link href=\"/styles/css/animate.min.css\" rel=\"stylesheet\" type=\"text/css\"/>\n" +
-    "<link href='http://fonts.googleapis.com/css?family=Lato:400,100,300,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>\n" +
-    "<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,800,600,300,200' rel='stylesheet' type='text/css'>\n" +
-    "<link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,300,100,700' rel='stylesheet' type='text/css'>\n" +
-    "<link href=\"/styles/css/font-awesome.min.css\" rel=\"stylesheet\" media=\"screen\">\n" +
-    "<link href=\"/styles/css/contact.css\" rel=\"stylesheet\" media=\"screen\">\n" +
-    "<link href='http://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet' type='text/css'>\n" +
     "\n" +
     "<div class=\"banner\">\n" +
     "    <div class=\"banner-text\">\n" +
@@ -471,58 +466,46 @@ angular.module("home/index.tpl.html", []).run(["$templateCache", function($templ
     "    \n" +
     "<div id=\"home2\">\n" +
     "    <div class=\"desc\" align=\"center\">\n" +
-    "    <h3>Meet The Team</h3>\n" +
-    "    <hr>\n" +
-    "    <div id=\"team\">\n" +
-    "        <div class=\"row\">\n" +
-    "            <div class=\"col-md-12\">\n" +
-    "                <div class=\"col-md-3 team-member\">\n" +
-    "                    <img src=\"/images/team/val.png\" />\n" +
-    "                    <br>\n" +
-    "                    <br>\n" +
-    "                    <div class=\"name\">Valentino</div>\n" +
-    "                    <hr>\n" +
-    "                    <h2>Data</h2>\n" +
-    "                    <!--<h2>Web Design</h2>\n" +
-    "                    <h2>Web Development</h2>\n" +
-    "                    <!--<h2 style=\"color: #BDBDBD\">Development</h2>-->\n" +
-    "                </div>\n" +
-    "                <div class=\"col-md-3 team-member\">\n" +
-    "                    <img src=\"/images/team/mikey.png\" />\n" +
-    "                    <br>\n" +
-    "                    <br>\n" +
-    "                    <div class=\"name\">Michael</div>\n" +
-    "                    <hr>\n" +
-    "                    <h2>Design</h2>\n" +
-    "                    <!--<h2>Web Development</h2>\n" +
-    "                    <!--<h2 style=\"color: #BDBDBD\">Design</h2>-->\n" +
-    "                </div>\n" +
-    "                <div class=\"col-md-3 team-member\">\n" +
-    "                    <img src=\"/images/team/trevor.png\" />\n" +
-    "                    <br>\n" +
-    "                    <br>\n" +
-    "                    <div class=\"name\">Trevor</div>\n" +
-    "                    <hr>\n" +
-    "                    <h2>Development</h2>\n" +
-    "                    <!--<h2></h2>\n" +
-    "                    <h2>Web Development</h2>\n" +
-    "                    <!--<h2 style=\"color: #BDBDBD\">8</h2>-->\n" +
-    "                </div>\n" +
-    "                <div class=\"col-md-3 team-member\">\n" +
-    "                    <img src=\"/images/team/garrett.png\" />\n" +
-    "                    <br>\n" +
-    "                    <br>\n" +
-    "                    <div class=\"name\">Garrett</div>\n" +
-    "                    <hr>\n" +
-    "                    <h2>Marketing</h2>\n" +
-    "                    <!--<h2>Marketing Strategy</h2>\n" +
-    "                    <h2>Client Outreach</h2>\n" +
-    "                    <!--<h2 style=\"color: #BDBDBD\">Marketing and <br> Content</h2>-->\n" +
+    "        <h3>Meet The Team</h3>\n" +
+    "        <hr>\n" +
+    "        <div id=\"team\">\n" +
+    "            <div class=\"row\">\n" +
+    "                <div class=\"col-md-12\">\n" +
+    "                    <div class=\"col-md-3 team-member\">\n" +
+    "                        <img src=\"/images/team/val.png\" />\n" +
+    "                        <br>\n" +
+    "                        <br>\n" +
+    "                        <div class=\"name\">Valentino</div>\n" +
+    "                        <hr>\n" +
+    "                        <h2>Data</h2>\n" +
+    "                    </div>\n" +
+    "                    <div class=\"col-md-3 team-member\">\n" +
+    "                        <img src=\"/images/team/mikey.png\" />\n" +
+    "                        <br>\n" +
+    "                        <br>\n" +
+    "                        <div class=\"name\">Michael</div>\n" +
+    "                        <hr>\n" +
+    "                        <h2>Design</h2>\n" +
+    "                    </div>\n" +
+    "                    <div class=\"col-md-3 team-member\">\n" +
+    "                        <img src=\"/images/team/trevor.png\" />\n" +
+    "                        <br>\n" +
+    "                        <br>\n" +
+    "                        <div class=\"name\">Trevor</div>\n" +
+    "                        <hr>\n" +
+    "                        <h2>Development</h2>\n" +
+    "                    </div>\n" +
+    "                    <div class=\"col-md-3 team-member\">\n" +
+    "                        <img src=\"/images/team/garrett.png\" />\n" +
+    "                        <br>\n" +
+    "                        <br>\n" +
+    "                        <div class=\"name\">Garrett</div>\n" +
+    "                        <hr>\n" +
+    "                        <h2>Marketing</h2>\n" +
+    "                    </div>\n" +
     "                </div>\n" +
     "            </div>\n" +
     "        </div>\n" +
-    "    </div>\n" +
-    "    <!--<a href=\"#\" id=\"load_team\"><button class=\"mainbutton\">Learn More</button></a>-->\n" +
     "    </div>\n" +
     "</div>\n" +
     "\n" +
@@ -534,43 +517,42 @@ angular.module("home/index.tpl.html", []).run(["$templateCache", function($templ
     "            <br>\n" +
     "            <div class=\"message-home\">\n" +
     "                <div class=\"interested-home\">Interested in working with NOVO?</div>\n" +
-    "            <br>\n" +
+    "                <br>\n" +
     "                <div class=\"contact-us-home\">Email us at\n" +
     "                <a href=\"mailto:info@projectnovo.co\" style=\"color: #1db996;\">info@projectnovo.co</a></div> or <div class=\"contact-us-home\">Call us at one of our <span style=\"color: #1db996; font-weight: 500;\">four</span> locations!</div>\n" +
     "                <br>\n" +
     "                <div class=\"center\">\n" +
     "                    <div class=\"box2 small-medium\">\n" +
-    "                            <img src=\"/images/contact/chap.jpeg\" class=\"img-fill opacity\">\n" +
-    "                            <br>\n" +
-    "                            <div class=\"city\" style=\"font-size: 22px;\">Chapel Hill, NC</div>\n" +
+    "                        <img src=\"/images/contact/chap.jpeg\" class=\"img-fill opacity\">\n" +
+    "                        <br>\n" +
+    "                        <div class=\"city\" style=\"font-size: 22px;\">Chapel Hill, NC</div>\n" +
     "                        <a href=\"tel:+18656797229\">\n" +
     "                            <div class=\"subtitle\">(865) 679-7229</div>\n" +
     "                        </a>\n" +
     "                    </div>\n" +
     "                    <br>\n" +
     "                    <div class=\"box2 small-medium\">\n" +
-    "                            <img src=\"/images/contact/evanston.jpg\" class=\"img-fill opacity\">\n" +
-    "                            <br>\n" +
-    "                            <div class=\"city\" style=\"font-size: 22px;\">Chicago, IL</div>\n" +
+    "                        <img src=\"/images/contact/evanston.jpg\" class=\"img-fill opacity\">\n" +
+    "                        <br>\n" +
+    "                        <div class=\"city\" style=\"font-size: 22px;\">Chicago, IL</div>\n" +
     "                        <a href=\"tel:+18653876121\">\n" +
     "                            <div class=\"subtitle\">(865) 387-6121</div>\n" +
     "                        </a>\n" +
     "                    </div>\n" +
     "                    <br>\n" +
     "                    <div class=\"box2 small-medium\">\n" +
-    "                            <img src=\"/images/contact/knoxville.jpg\" class=\"img-fill opacity\">\n" +
-    "                            <br>\n" +
-    "                            <div class=\"city\" style=\"font-size: 22px;\">Knoxville, TN</div>\n" +
+    "                        <img src=\"/images/contact/knoxville.jpg\" class=\"img-fill opacity\">\n" +
+    "                        <br>\n" +
+    "                        <div class=\"city\" style=\"font-size: 22px;\">Knoxville, TN</div>\n" +
     "                        <a href=\"tel:+18656969382\">    \n" +
     "                            <div class=\"subtitle\">(865) 696-9382</div>\n" +
     "                        </a>\n" +
     "                    </div>\n" +
     "                    <br>\n" +
     "                    <div class=\"box2 small-medium\">\n" +
-    "\n" +
     "                        <img src=\"/images/contact/philly.jpg\" class=\"img-fill opacity\">\n" +
-    "                            <br>\n" +
-    "                            <div class=\"city\" style=\"font-size: 22px;\">Philadelpia, PA</div>\n" +
+    "                        <br>\n" +
+    "                        <div class=\"city\" style=\"font-size: 22px;\">Philadelpia, PA</div>\n" +
     "                        <a href=\"tel:+13365800855\">\n" +
     "                            <div class=\"subtitle\">(336) 580-0855</div>\n" +
     "                        </a>\n" +
@@ -594,29 +576,23 @@ angular.module("home/index.tpl.html", []).run(["$templateCache", function($templ
     "        <br>\n" +
     "        <br>\n" +
     "        <br>\n" +
-    "            <div class=\"contact\" id=\"contact\">\n" +
-    "                <div class=\"contact-section\">\n" +
-    "                    <form class=\"ctr\" action=\"//projectnovo.us11.list-manage.com/subscribe/post?u=a56f7f3f876fa9db4c36328af&amp;id=ff3d3ae826\" method=\"post\">\n" +
-    "                        <div class=\"loader\"></div>\n" +
-    "                        <input type=\"email\" name=\"EMAIL\" required>\n" +
-    "                        <div class=\"indicator\" data-content=\"Type Your Email Address\"></div>\n" +
-    "                    </form>\n" +
-    "                </div>\n" +
-    "\n" +
-    "                <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->\n" +
-    "                <div class=\"display-none\">\n" +
-    "                    <div style=\"position: absolute; left: -5000px;\"><input type=\"text\" name=\"b_a56f7f3f876fa9db4c36328af_ff3d3ae826\" tabindex=\"-1\" value=\"\"></div>\n" +
-    "                    <div class=\"clear\"><input type=\"submit\" value=\"Subscribe\" name=\"subscribe\" id=\"mc-embedded-subscribe\" class=\"button\"></div>\n" +
-    "                </div>\n" +
-    "\n" +
+    "        <div class=\"contact\" id=\"contact\">\n" +
+    "            <div class=\"contact-section\">\n" +
+    "                <form class=\"ctr\" action=\"//projectnovo.us11.list-manage.com/subscribe/post?u=a56f7f3f876fa9db4c36328af&amp;id=ff3d3ae826\" method=\"post\">\n" +
+    "                    <div class=\"loader\"></div>\n" +
+    "                    <input type=\"email\" name=\"EMAIL\" required>\n" +
+    "                    <div class=\"indicator\" data-content=\"Type Your Email Address\"></div>\n" +
+    "                </form>\n" +
     "            </div>\n" +
-    "    </div>\n" +
-    "</div> \n" +
     "\n" +
-    "<script src=\"https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js\" type=\"text/javascript\"></script>\n" +
-    "<script src=\"/js/blog.js\" type=\"text/javascript\"></script>\n" +
-    "<script src=\"/js/bootstrap.min.js\" type=\"text/javascript\"></script>\n" +
-    "<script src=\"/js/email.js\" type=\"text/javascript\"></script>\n" +
+    "            <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->\n" +
+    "            <div class=\"display-none\">\n" +
+    "                <div style=\"position: absolute; left: -5000px;\"><input type=\"text\" name=\"b_a56f7f3f876fa9db4c36328af_ff3d3ae826\" tabindex=\"-1\" value=\"\"></div>\n" +
+    "                <div class=\"clear\"><input type=\"submit\" value=\"Subscribe\" name=\"subscribe\" id=\"mc-embedded-subscribe\" class=\"button\"></div>\n" +
+    "            </div>\n" +
+    "        </div>\n" +
+    "    </div>\n" +
+    "</div>\n" +
     "");
 }]);
 
@@ -763,9 +739,6 @@ angular.module("portfolio/index1.tpl.html", []).run(["$templateCache", function(
 
 angular.module("sidebar/index.tpl.html", []).run(["$templateCache", function($templateCache) {
   $templateCache.put("sidebar/index.tpl.html",
-    "<link href=\"/styles/css/sidebar.css\" type=\"text/css\">\n" +
-    "<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel='stylesheet' type='text/css'>\n" +
-    "\n" +
     "<div ng-controller=\"SidebarCtrl\">\n" +
     "    <div class=\"page-nav-zone\">\n" +
     "        <div class=\"flex-item-top\"></div>\n" +
