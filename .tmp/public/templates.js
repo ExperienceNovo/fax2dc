@@ -1,4 +1,4 @@
-angular.module('templates-app', ['about/about.mikey/index.mikey.tpl.html', 'about/index.tpl.html', 'blog/index.tpl.html', 'contact/index.tpl.html', 'home/index.tpl.html', 'portfolio/index.tpl.html', 'portfolio/index1.tpl.html', 'sidebar/index.tpl.html']);
+angular.module('templates-app', ['about/about.mikey/index.mikey.tpl.html', 'about/index.tpl.html', 'blog-post/index.tpl.html', 'blog/index.tpl.html', 'contact/index.tpl.html', 'home/index.tpl.html', 'portfolio/index.tpl.html', 'portfolio/index1.tpl.html', 'sidebar/index.tpl.html']);
 
 angular.module("about/about.mikey/index.mikey.tpl.html", []).run(["$templateCache", function($templateCache) {
   $templateCache.put("about/about.mikey/index.mikey.tpl.html",
@@ -176,35 +176,85 @@ angular.module("about/about.mikey/index.mikey.tpl.html", []).run(["$templateCach
 
 angular.module("about/index.tpl.html", []).run(["$templateCache", function($templateCache) {
   $templateCache.put("about/index.tpl.html",
-    "<h1>about</h1>\n" +
-    "<div>\n" +
-    "	<h3>Design</h3>\n" +
-    "	<div>\n" +
-    "		<p>Full-scale Branding to ensure clear communication of your message.</p>\n" +
-    "		<p>Custom Interface Design to ensure a seamless customer online experience.</p>\n" +
-    "		<p>Advertising Design to establish a strong brand presence within your industry.</p>\n" +
-    "	</div>\n" +
-    "	<h3>Development</h3>\n" +
-    "	<div>\n" +
-    "		<p>Mobile-first Web Design to align you with the ever-increasing mobile world.</p>\n" +
-    "		<p>SEO Structuring to naturally expand your online reach and outpace your competitors.</p>\n" +
-    "		<p>Back-end Software Integration to ensure maximum security and business technology integration.</p>\n" +
-    "	</div>\n" +
-    "	<h3>Marketing</h3>\n" +
-    "	<div>\n" +
-    "		<p>Social Media Management to extend your customer reach.</p>\n" +
-    "		<p>Email Outreach Marketing to manage current customer and secure new-customer leads.</p>\n" +
-    "		<p>Consistent Content Creation to establish and maintain your presence within your community and your industry.</p>\n" +
-    "	</div>\n" +
-    "</div>\n" +
+    "<link href=\"/styles/css/about.css\" rel=\"stylesheet\">\n" +
+    "<link href='http://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet' type='text/css'>\n" +
     "\n" +
+    "\n" +
+    "<div class=\"about\" id=\"about\">\n" +
+    "    <div class=\"about-section-head\">\n" +
+    "        <h3>About Us</h3>\n" +
+    "        <hr>\n" +
+    "    </div>\n" +
+    "    <div class=\"about-list\">\n" +
+    "        <div class=\"row\">\n" +
+    "            <div class=\"col-md-12\">\n" +
+    "                <div class=\"col-md-4\">\n" +
+    "                    <i class=\"fa fa-paint-brush fa-5x\"></i>\n" +
+    "                    <div class=\"about-title\">\n" +
+    "                        <h2>Design</h2>\n" +
+    "                    </div>\n" +
+    "                <hr>\n" +
+    "                    <div class=\"about-des\">\n" +
+    "                        <p>Full-scale Branding to ensure clear communication of your message.</p>\n" +
+    "                        <p>Custom Interface Design to ensure a seamless customer online experience.</p>\n" +
+    "                        <p>Advertising Design to establish a strong brand presence within your industry.</p>\n" +
+    "                    </div>\n" +
+    "                </div>\n" +
+    "                <div class=\"col-md-4\">\n" +
+    "                    <i class=\"fa fa-code fa-5x\"></i>\n" +
+    "                    <div class=\"about-title\">\n" +
+    "                        <h2>Development</h2>\n" +
+    "                    </div>\n" +
+    "                <hr>\n" +
+    "                    <div class=\"about-des\">\n" +
+    "                        <p>Mobile-first Web Design to align you with the ever-increasing mobile world.</p>\n" +
+    "                        <p>SEO Structuring to naturally expand your online reach and outpace your competitors.</p>\n" +
+    "                        <p>Back-end Software Integration to ensure maximum security and business technology integration.</p>\n" +
+    "                    </div>\n" +
+    "                </div>\n" +
+    "                <div class=\"col-md-4\">\n" +
+    "                    <i class=\"fa fa-users fa-5x\"></i>\n" +
+    "                    <div class=\"about-title\">\n" +
+    "                        <h2>Marketing</h2>\n" +
+    "                    </div>\n" +
+    "                <hr>\n" +
+    "                    <div class=\"about-des\">\n" +
+    "                        <p>Social Media Management to extend your customer reach.</p>\n" +
+    "                        <p>Email Outreach Marketing to manage current customer and secure new-customer leads.</p>\n" +
+    "                        <p>Consistent Content Creation to establish and maintain your presence within your community and your industry.</p>\n" +
+    "                    </div>\n" +
+    "                </div>\n" +
+    "            </div>\n" +
+    "        </div>\n" +
+    "        <br>\n" +
+    "        <br>\n" +
+    "        <br>\n" +
+    "    </div>\n" +
+    "</div>\n" +
     "	");
+}]);
+
+angular.module("blog-post/index.tpl.html", []).run(["$templateCache", function($templateCache) {
+  $templateCache.put("blog-post/index.tpl.html",
+    "<h1>post</h1>\n" +
+    "<h1>post</h1>\n" +
+    "<h1>post</h1>\n" +
+    "<h1>post</h1>\n" +
+    "<h1>post</h1>\n" +
+    "<h1>post</h1>\n" +
+    "<h1>post</h1>\n" +
+    "<h1>post</h1>\n" +
+    "<h1>post</h1>\n" +
+    "<h1>post</h1>\n" +
+    "<h1>post</h1>\n" +
+    "\n" +
+    "{{stateParams}}");
 }]);
 
 angular.module("blog/index.tpl.html", []).run(["$templateCache", function($templateCache) {
   $templateCache.put("blog/index.tpl.html",
-    "<br><br>\n" +
-    "\n" +
+    "<!--old content, need to cre8 functionality... that error tho-->\n" +
+    "<!--\n" +
     "<h1>blog</h1>\n" +
     "<form role=\"form\" ng-submit=\"createPost(newPost)\">\n" +
     "  <div class=\"form-group\">\n" +
@@ -223,8 +273,19 @@ angular.module("blog/index.tpl.html", []).run(["$templateCache", function($templ
     "    </li>\n" +
     "  </ul>\n" +
     "</div>\n" +
+    "-->\n" +
     "\n" +
-    "");
+    "\n" +
+    "<div id=\"post-list-container\" ng-repeat=\"post in test_posts\">\n" +
+    "  <div id=\"post-container\" ng-repeat=\"post in test_posts\">\n" +
+    "    <h1 class=\"title\"><a href=\"/blog/{{post.url_title}}\">{{post.title}}</a></h1>\n" +
+    "    <p class=\"lead\">{{post.post_content}}</p>\n" +
+    "  </div>\n" +
+    "  <br><br><hr>\n" +
+    "</div>\n" +
+    "\n" +
+    "\n" +
+    "<div style=\"height:100px;\"></div>");
 }]);
 
 angular.module("contact/index.tpl.html", []).run(["$templateCache", function($templateCache) {
@@ -238,8 +299,8 @@ angular.module("contact/index.tpl.html", []).run(["$templateCache", function($te
     "\n" +
     "<style type=\"text/css\">\n" +
     "    #map-canvas {\n" +
-    "    width: 1024px;\n" +
-    "    height: 600px;\n" +
+    "        width: 1024px;\n" +
+    "        height: 600px;\n" +
     "    }\n" +
     "</style>\n" +
     "\n" +
@@ -550,7 +611,7 @@ angular.module("home/index.tpl.html", []).run(["$templateCache", function($templ
     "\n" +
     "            </div>\n" +
     "    </div>\n" +
-    "</div> <!--end body-->\n" +
+    "</div> \n" +
     "\n" +
     "<script src=\"https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js\" type=\"text/javascript\"></script>\n" +
     "<script src=\"/js/blog.js\" type=\"text/javascript\"></script>\n" +

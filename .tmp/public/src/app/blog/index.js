@@ -26,6 +26,25 @@ angular.module( 'novo.blog', [
     $scope.posts = posts;
     $scope.currentUser = config.currentUser;
 
+   	$scope.test_posts = {
+   		"post1": {
+	        "title": "Title 1",
+	        "post_content": "this is some content",
+	        "url_title": "post.1"
+    	},
+    	"post2": {
+	        "title": "Title 2",
+	        "post_content": "this is some content",
+	        "url_title": "post.2"
+    	},
+    	"post3": {
+	        "title": "Title 3",
+	        "post_content": "this is some content",
+	        "url_title": "post.3"
+    	}
+    };
+
+
     $sailsSocket.subscribe('post', function (envelope) {
 	    switch(envelope.verb) {
 	        case 'created':
