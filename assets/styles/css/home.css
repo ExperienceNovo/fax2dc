@@ -32,10 +32,6 @@ a:hover {
 .banner {
     background: url(/images/overlay.png),url(/images/bg.png)
     no-repeat fixed;
-	-o-background-size:cover;
-	-moz-background-size:cover;
-	-webkit-background-size:cover;
-	background-size:cover;
 	background-color:#3d454a;
 	cursor:default;
     height: 100vh;
@@ -205,10 +201,6 @@ button.service-button:focus {
 
 .desc {
 	background:url(/images/overlay.png),url(/images/bg.png) no-repeat fixed;
-	-o-background-size:cover;
-	-moz-background-size:cover;
-	-webkit-background-size:cover;
-	background-size:cover;
 	padding:100px 0px 150px 0px;
 	background-color:#3d454a;
 	cursor:default;
@@ -268,10 +260,6 @@ button.service-button:focus {
 
 .about {
 	background:url(/images/overlay2.png),url(/images/keys.jpg) no-repeat fixed;
-	-o-background-size:cover;
-	-moz-background-size:cover;
-	-webkit-background-size:cover;
-	background-size:cover;
 }
 
 .blog {
