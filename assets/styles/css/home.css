@@ -117,7 +117,7 @@ button.service-button:focus {
 	width:100%;
 	background:url(/images/texture-bg.png) repeat;
 	height: 100vh;
-	min-height: 800px;
+	min-height: 900px;
 }
 
 .section-head {

@@ -296,33 +296,24 @@ angular.module("contact/index.tpl.html", []).run(["$templateCache", function($te
     "<style type=\"text/css\">\n" +
     "    #map-canvas {\n" +
     "        width: 1900px;\n" +
-    "        height: 500px;\n" +
+    "        height: 450px;\n" +
     "    }\n" +
     "</style>\n" +
     "\n" +
-    "<div class=\"surface-container\">\n" +
-    "    <div class=\"contact-title-home\" style=\"padding: 2%; color: #000;\">four locations nationwide\n" +
+    "<div class=\"title-surface-container\">\n" +
+    "    <div class=\"contact-title-home\" style=\"padding: 2%; color: #000;\">\n" +
+    "    <br>\n" +
+    "    <p>Four Locations Nationwide</p>\n" +
     "    <hr>\n" +
     "    </div>\n" +
-    "</div>\n" +
-    "\n" +
-    "<div class=\"center\">\n" +
-    "    <div id=\"map-container\" class=\"map-container\">\n" +
-    "        <div id=\"map-canvas\"></div>\n" +
-    "    </div>\n" +
-    "</div>\n" +
-    "\n" +
-    "<div class=\"surface-container\">\n" +
-    "    <br>\n" +
-    "    <br>\n" +
-    "    <br>\n" +
-    "    <div class=\"message-home\" style=\"margin-bottom: -25px;\">\n" +
-    "        <div class=\"interested-home\"><a href=\"/portfolio/\">We believe our work speaks for itself.</a>\n" +
-    "        <hr>\n" +
-    "        Let's work together and create something we are all proud of.\n" +
+    "    <div class=\"message\">\n" +
+    "        <div class=\"interested\"><a href=\"/portfolio/\">Our work speaks for itself.</a>\n" +
     "        </div>\n" +
     "    </div>\n" +
-    "    <div class=\"contact-container\">\n" +
+    "    <br>\n" +
+    "</div> \n" +
+    "<div class=\"content-surface-container\">\n" +
+    "    <div class=\"contact-page-container\">\n" +
     "        <div class=\"center\">\n" +
     "            <div class=\"box2 small-medium\">\n" +
     "                <img src=\"/images/contact/chap.jpeg\" class=\"img-fill opacity\">\n" +
@@ -359,12 +350,9 @@ angular.module("contact/index.tpl.html", []).run(["$templateCache", function($te
     "                </a>\n" +
     "            </div>\n" +
     "        </div>\n" +
-    "        <br>\n" +
-    "        <br>\n" +
-    "        <div class=\"center\">\n" +
-    "            <div id=\"newsletter\" class=\"contact-home\">\n" +
-    "            <hr>\n" +
-    "            <div class=\"message-home\">\n" +
+    "        <div id=\"newsletter\" class=\"contact-home\">\n" +
+    "            <br>\n" +
+    "            <div class=\"message\">\n" +
     "                <a href=\"mailto:info@projectnovo.co\"><button class=\"mainbutton service-button\">email us: info@projectnovo.co</button></a>\n" +
     "                <br>\n" +
     "                <br>\n" +
@@ -377,7 +365,17 @@ angular.module("contact/index.tpl.html", []).run(["$templateCache", function($te
     "                -->\n" +
     "            </div>\n" +
     "        </div>\n" +
-    "    </div>\n" +
+    "        <br>\n" +
+    "        <br>\n" +
+    "        <br>\n" +
+    "        <div class=\"map-center\">\n" +
+    "            <div id=\"map-container\" class=\"map-container\">\n" +
+    "                <div id=\"map-canvas\"></div>\n" +
+    "            </div>\n" +
+    "        </div>   \n" +
+    "        <div class=\"message\">\n" +
+    "            <div class=\"bottom-tagline\"></div>\n" +
+    "        </div>\n" +
     "</div>\n" +
     "\n" +
     "    <!--\n" +

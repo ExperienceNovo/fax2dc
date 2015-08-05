@@ -2,7 +2,7 @@ var map;
 var marker;
 
 function initialize() {
-  LatLng = new google.maps.LatLng(39.4298488, -77.0145665)
+  LatLng = new google.maps.LatLng(39.2661, -74.5422)
   var mapOptions = {
     center: LatLng,
     zoom: 6,
