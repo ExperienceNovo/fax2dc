@@ -522,7 +522,7 @@ angular.module("home/index.tpl.html", []).run(["$templateCache", function($templ
     "                <a href=\"mailto:info@projectnovo.co\" style=\"color: #1db996;\">info@projectnovo.co</a></div> or <div class=\"contact-us-home\">Call us at one of our <span style=\"color: #1db996; font-weight: 500;\">four</span> locations!</div>\n" +
     "                <br>\n" +
     "                <div class=\"center\">\n" +
-    "                    <div class=\"box2 small-medium\">\n" +
+    "                    <div class=\"box2 small-medium-home\">\n" +
     "                        <img src=\"/images/contact/chap.jpeg\" class=\"img-fill opacity\">\n" +
     "                        <br>\n" +
     "                        <div class=\"city\" style=\"font-size: 22px;\">Chapel Hill, NC</div>\n" +
@@ -531,7 +531,7 @@ angular.module("home/index.tpl.html", []).run(["$templateCache", function($templ
     "                        </a>\n" +
     "                    </div>\n" +
     "                    <br>\n" +
-    "                    <div class=\"box2 small-medium\">\n" +
+    "                    <div class=\"box2 small-medium-home\">\n" +
     "                        <img src=\"/images/contact/evanston.jpg\" class=\"img-fill opacity\">\n" +
     "                        <br>\n" +
     "                        <div class=\"city\" style=\"font-size: 22px;\">Chicago, IL</div>\n" +
@@ -540,7 +540,7 @@ angular.module("home/index.tpl.html", []).run(["$templateCache", function($templ
     "                        </a>\n" +
     "                    </div>\n" +
     "                    <br>\n" +
-    "                    <div class=\"box2 small-medium\">\n" +
+    "                    <div class=\"box2 small-medium-home\">\n" +
     "                        <img src=\"/images/contact/knoxville.jpg\" class=\"img-fill opacity\">\n" +
     "                        <br>\n" +
     "                        <div class=\"city\" style=\"font-size: 22px;\">Knoxville, TN</div>\n" +
@@ -549,7 +549,7 @@ angular.module("home/index.tpl.html", []).run(["$templateCache", function($templ
     "                        </a>\n" +
     "                    </div>\n" +
     "                    <br>\n" +
-    "                    <div class=\"box2 small-medium\">\n" +
+    "                    <div class=\"box2 small-medium-home\">\n" +
     "                        <img src=\"/images/contact/philly.jpg\" class=\"img-fill opacity\">\n" +
     "                        <br>\n" +
     "                        <div class=\"city\" style=\"font-size: 22px;\">Philadelpia, PA</div>\n" +

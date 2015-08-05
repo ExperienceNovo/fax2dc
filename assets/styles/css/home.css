@@ -39,6 +39,7 @@ a:hover {
 	background-color:#3d454a;
 	cursor:default;
     height: 100vh;
+    min-height: 800px;
     padding-top: 40px;
 }
 
@@ -120,6 +121,7 @@ button.service-button:focus {
 	width:100%;
 	background:url(/images/texture-bg.png) repeat;
 	height: 100vh;
+	min-height: 800px;
 }
 
 .section-head {
@@ -351,6 +353,16 @@ button.service-button:focus {
     margin-left: auto;
     text-align: center;
     font-family: 'Quicksand', sans-serif;
+}
+
+.small-medium-home {
+	position: relative;
+	width: 190px;
+	height: auto;
+	padding: 0px 0px 0px 0px;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
 }
 
 .newsletter-section {
