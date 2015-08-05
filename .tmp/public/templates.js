@@ -317,7 +317,7 @@ angular.module("contact/index.tpl.html", []).run(["$templateCache", function($te
     "    <br>\n" +
     "    <br>\n" +
     "    <div class=\"message-home\" style=\"margin-bottom: -25px;\">\n" +
-    "        <div class=\"interested-home\">We believe our work speaks for itself.\n" +
+    "        <div class=\"interested-home\"><a href=\"/portfolio/\">We believe our work speaks for itself.</a>\n" +
     "        <hr>\n" +
     "        Let's work together and create something we are all proud of.\n" +
     "        </div>\n" +
@@ -365,7 +365,7 @@ angular.module("contact/index.tpl.html", []).run(["$templateCache", function($te
     "            <div id=\"newsletter\" class=\"contact-home\">\n" +
     "            <hr>\n" +
     "            <div class=\"message-home\">\n" +
-    "                <button class=\"mainbutton service-button\">email us: info@projectnovo.co</button>\n" +
+    "                <a href=\"mailto:info@projectnovo.co\"><button class=\"mainbutton service-button\">email us: info@projectnovo.co</button></a>\n" +
     "                <br>\n" +
     "                <br>\n" +
     "                <br>\n" +
