@@ -196,6 +196,7 @@ button.service-button:focus {
     padding-top: 10px;
 }
 
+
 .team-member {
 	padding-bottom: 40px;
 	padding-right: 0px;
@@ -252,6 +253,8 @@ button.service-button:focus {
 
 .desc #team {
 	padding-top:60px;
+	padding-right: 50px;
+	padding-left: 50px;
 }
 
 .desc .mainbutton {
@@ -314,7 +317,7 @@ button.service-button:focus {
 .contact-title-home {
     font-family: 'Jura', sans-serif;
     font-weight: 600;
-    font-size: 40px;
+    font-size: 50px;
     color: #2ab996;
     font-weight: 600;
     margin-right: auto;
@@ -354,8 +357,8 @@ button.service-button:focus {
 	width: 100%;
 	max-width: 100%;
 	text-align: center;
-	padding-right: 120px;
-	padding-left: 120px;
+	padding-right: 10%;
+	padding-left: 10%;
 }
 
 .message-home {
