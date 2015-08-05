@@ -7,6 +7,14 @@ body {
   max-width: 95%;
 }
 
+.portfolio-message {
+  margin-top: 20px;
+  font-size: 30px;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+  font-family: 'Quicksand', sans-serif;
+}
 .wrap {
   -webkit-transform: rotate(45deg) translate3d(0, 0, 0);
   -moz-transform: rotate(45deg) translate3d(0, 0, 0);

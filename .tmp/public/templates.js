@@ -300,19 +300,21 @@ angular.module("contact/index.tpl.html", []).run(["$templateCache", function($te
     "    }\n" +
     "</style>\n" +
     "\n" +
-    "<div class=\"title-surface-container\">\n" +
-    "    <div class=\"contact-title-home\" style=\"padding: 2%; color: #000;\">\n" +
-    "    <br>\n" +
-    "    <p>Four Locations Nationwide</p>\n" +
-    "    <hr>\n" +
-    "    </div>\n" +
-    "    <div class=\"message\">\n" +
-    "        <div class=\"interested\"><a href=\"/portfolio/\">Our work speaks for itself.</a>\n" +
+    "<div class=\"surface-container\">\n" +
+    "    <div class=\"title-surface-container\">\n" +
+    "        <div class=\"contact-title-home\" style=\"padding: 2%; color: #000;\">\n" +
+    "        <br>\n" +
+    "        <p>Four Locations Nationwide</p>\n" +
+    "        <hr>\n" +
     "        </div>\n" +
+    "        <div class=\"message\">\n" +
+    "            <div class=\"interested\"><a href=\"/portfolio/\">Our work speaks for itself.</a>\n" +
+    "            </div>\n" +
+    "        </div>\n" +
+    "        <br>\n" +
     "    </div>\n" +
-    "    <br>\n" +
     "</div> \n" +
-    "<div class=\"content-surface-container\">\n" +
+    "<div class=\"surface-container\">\n" +
     "    <div class=\"contact-page-container\">\n" +
     "        <div class=\"center\">\n" +
     "            <div class=\"box2 small-medium\">\n" +
@@ -601,13 +603,11 @@ angular.module("portfolio/index.tpl.html", []).run(["$templateCache", function($
     "        <div class=\"title\" style=\"font-weight:400;\">Quality, Modernity, and Transparency</div>\n" +
     "        <br>\n" +
     "        <br>\n" +
-    "        <div class=\"message\">\n" +
-    "            Our clients know what it means to partner with NOVO. Our work exudes quality, employs the latest and greatest\n" +
-    "            in marketing and web development, and we are transparent in our communication to clients and the outside\n" +
-    "            world.\n" +
+    "        <div class=\"portfolio-message\">\n" +
+    "            <p>Our clients know what it means to be partners with NOVO. We provide quality work, employ the latest marketing and web development techniques, and  implement a workflow process that allows for complete transparency and client collaboration.</p>\n" +
     "            <br>\n" +
     "            <br>\n" +
-    "            We believe our work speaks for itself.\n" +
+    "            <p>We believe our work speaks for itself.</p>\n" +
     "        </div>\n" +
     "    </div>\n" +
     "</div>\n" +
