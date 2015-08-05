@@ -26,10 +26,10 @@ function initialize() {
  * other.
  */
 var dealers = [
-  ['Valentino Constantinou', 42.0488197, -87.6883857, 4, '<div><div style="font-size: 15px;">Evanston, IL (Chicago)</div><br>Valentino Constantinou<br>phone: (865) 387-6121<br>email: <a href="mailto:experiencenovo@gmail.com">experiencenovo@gmail.com</a><br></div>'],
-  ['Garrett Headden', 35.9584634, -83.9250825, 1, '<div><div style="font-size: 15px;">Knoxville, TN</div><br>Garrett Headden<br>phone: (865) 696-9382<br>email: <a href="mailto:experiencenovo@gmail.com">experiencenovo@gmail.com</a><br></div>'],
-  ['Trevor Overman', 35.920959, -79.0392909, 3, '<div><div style="font-size: 15px;">Chapel Hill, NC (Raleigh)</div><br>Trevor Overman<br>phone: (865) 679-7229<br>email: <a href="mailto:experiencenovo@gmail.com">experiencenovo@gmail.com</a><br></div>'],
-  ['Michael Thompson', 40.0047528, -75.1180329, 5, '<div><div style="font-size: 15px;">Philadelphia, PA</div><br>Michael Thompson<br>phone: (336) 580-0855<br>email: <a href="mailto:experiencenovo@gmail.com">experiencenovo@gmail.com</a><br></div>'],
+  ['Valentino Constantinou', 42.0488197, -87.6883857, 4, '<div><div style="font-size: 15px;">Evanston, IL (Chicago)</div><br>Valentino Constantinou<br>phone: (865) 387-6121<br>email: <a href="mailto:info@projectnovo.com">info@projectnovo.com</a><br></div>'],
+  ['Garrett Headden', 35.9584634, -83.9250825, 1, '<div><div style="font-size: 15px;">Knoxville, TN</div><br>Garrett Headden<br>phone: (865) 696-9382<br>email: <a href="mailto:info@projectnovo.com">info@projectnovo.com</a><br></div>'],
+  ['Trevor Overman', 35.920959, -79.0392909, 3, '<div><div style="font-size: 15px;">Chapel Hill, NC (Raleigh)</div><br>Trevor Overman<br>phone: (865) 679-7229<br>email: <a href="mailto:info@projectnovo.com">info@projectnovo.com</a><br></div>'],
+  ['Michael Thompson', 40.0047528, -75.1180329, 5, '<div><div style="font-size: 15px;">Philadelphia, PA</div><br>Michael Thompson<br>phone: (336) 580-0855<br>email: <a href="mailto:info@projectnovo.com">info@projectnovo.com</a><br></div>'],
 ];
 
 function setMarkers(map, locations) {
