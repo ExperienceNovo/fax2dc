@@ -22,7 +22,6 @@
     display: table;
     position: relative;
     transition: background-color ease-in-out 0.3s;
-    margin-bottom: 20%; /*controls expansion on hover*/
 }
 
 .list-item {
@@ -48,7 +47,8 @@
     left: 0;
     width: 64px;
     height: 64px;
-    padding-left: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
     z-index: 5003;
     align-items: center;
 }

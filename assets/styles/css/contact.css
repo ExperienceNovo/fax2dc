@@ -2,7 +2,8 @@
 position: relative;
 overflow: hidden;
 z-index: 15;
-border: 1px solid black;
+border-bottom: 2px solid #2ab996;
+border-top: 2px solid #2ab996;
 }
 
 .map-container iframe,
