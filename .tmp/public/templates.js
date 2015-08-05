@@ -289,10 +289,6 @@ angular.module("blog/index.tpl.html", []).run(["$templateCache", function($templ
 
 angular.module("contact/index.tpl.html", []).run(["$templateCache", function($templateCache) {
   $templateCache.put("contact/index.tpl.html",
-    "<!--we gotta load in the css in a better fashon than overwriting-->\n" +
-    "<link href=\"/styles/css/contact.css\" type=\"text/css\">\n" +
-    "<link href=\"/styles/css/home.css\" rel=\"stylesheet\" type=\"text/css\"/>\n" +
-    "\n" +
     "<style type=\"text/css\">\n" +
     "    #map-canvas {\n" +
     "        width: 1900px;\n" +
@@ -539,55 +535,76 @@ angular.module("home/index.tpl.html", []).run(["$templateCache", function($templ
     "            <div id=\"newsletter\" class=\"contact-home\">\n" +
     "            <hr>\n" +
     "            <br>\n" +
-    "            <div class=\"message-home\">\n" +
-    "                <div class=\"interested-home\">Interested in working with NOVO?</div>\n" +
-    "                <br>\n" +
-    "                <div class=\"contact-us-home\">Email us at\n" +
-    "                <a href=\"mailto:info@projectnovo.co\" style=\"color: #1db996;\">info@projectnovo.co</a></div> or <div class=\"contact-us-home\">Call us at one of our <span style=\"color: #1db996; font-weight: 500;\">four</span> locations!</div>\n" +
-    "                <br>\n" +
-    "                <div class=\"center-home\">\n" +
-    "                    <div class=\"box2 small-medium-home\">\n" +
-    "                        <img src=\"/images/contact/chap.jpeg\" class=\"img-fill opacity\">\n" +
-    "                        <br>\n" +
-    "                        <div class=\"city\" style=\"font-size: 22px;\">Chapel Hill, NC</div>\n" +
-    "                        <a href=\"tel:+18656797229\">\n" +
-    "                            <div class=\"subtitle\">(865) 679-7229</div>\n" +
-    "                        </a>\n" +
+    "            <div class=\"center\">\n" +
+    "                <div class=\"\" style=\"width: 350px;\">\n" +
+    "                    <div class=\"hovereffect\">\n" +
+    "                        <img class=\"img-responsive\" src=\"/images/contact/chap.jpeg\" alt=\"\">\n" +
+    "                        <div class=\"overlay\">\n" +
+    "                            <br>\n" +
+    "                            <br>\n" +
+    "                            <br>\n" +
+    "                            <h2 style=\"font-size: 25px;\">Chapel Hill, NC</h2>\n" +
+    "                            <p>\n" +
+    "                                <a href=\"tel:+18656797229\">(865) 679-7229</a>\n" +
+    "                            </p>\n" +
+    "                        </div>\n" +
     "                    </div>\n" +
-    "                    <br>\n" +
-    "                    <div class=\"box2 small-medium-home\">\n" +
-    "                        <img src=\"/images/contact/evanston.jpg\" class=\"img-fill opacity\">\n" +
-    "                        <br>\n" +
-    "                        <div class=\"city\" style=\"font-size: 22px;\">Chicago, IL</div>\n" +
-    "                        <a href=\"tel:+18653876121\">\n" +
-    "                            <div class=\"subtitle\">(865) 387-6121</div>\n" +
-    "                        </a>\n" +
-    "                    </div>\n" +
-    "                    <br>\n" +
-    "                    <div class=\"box2 small-medium-home\">\n" +
-    "                        <img src=\"/images/contact/knoxville.jpg\" class=\"img-fill opacity\">\n" +
-    "                        <br>\n" +
-    "                        <div class=\"city\" style=\"font-size: 22px;\">Knoxville, TN</div>\n" +
-    "                        <a href=\"tel:+18656969382\">    \n" +
-    "                            <div class=\"subtitle\">(865) 696-9382</div>\n" +
-    "                        </a>\n" +
-    "                    </div>\n" +
-    "                    <br>\n" +
-    "                    <div class=\"box2 small-medium-home\">\n" +
-    "                        <img src=\"/images/contact/philly.jpg\" class=\"img-fill opacity\">\n" +
-    "                        <br>\n" +
-    "                        <div class=\"city\" style=\"font-size: 22px;\">Philadelpia, PA</div>\n" +
-    "                        <a href=\"tel:+13365800855\">\n" +
-    "                            <div class=\"subtitle\">(336) 580-0855</div>\n" +
-    "                        </a>\n" +
-    "                    </div>\n" +
-    "                    <br>\n" +
     "                </div>\n" +
-    "                <br>\n" +
-    "                <br>\n" +
-    "                <br>\n" +
-    "                <br>\n" +
+    "                <div class=\"\" style=\"width: 350px;\">\n" +
+    "                    <div class=\"hovereffect\">\n" +
+    "                        <img class=\"img-responsive\" src=\"/images/contact/evanston.jpg\" alt=\"\">\n" +
+    "                        <div class=\"overlay\">\n" +
+    "                            <br>\n" +
+    "                            <br>\n" +
+    "                            <br>\n" +
+    "                            <h2 style=\"font-size: 25px;\">Evanston, IL</h2>\n" +
+    "                            <p>\n" +
+    "                                <a href=\"tel:+18653876121\">(865) 387-6121</a>\n" +
+    "                            </p>\n" +
+    "                        </div>\n" +
+    "                    </div>\n" +
+    "                </div>\n" +
+    "                <div class=\"\" style=\"width: 350px;\">\n" +
+    "                    <div class=\"hovereffect\">\n" +
+    "                        <img class=\"img-responsive\" src=\"/images/contact/knoxville.jpg\" alt=\"\">\n" +
+    "                        <div class=\"overlay\">\n" +
+    "                            <br>\n" +
+    "                            <br>\n" +
+    "                            <br>\n" +
+    "                            <h2 style=\"font-size: 25px;\">Knoxville, TN</h2>\n" +
+    "                            <p>\n" +
+    "                                <a href=\"tel:+18656969382\">(865) 696-9382</a>\n" +
+    "                            </p>\n" +
+    "                        </div>\n" +
+    "                    </div>\n" +
+    "                </div>\n" +
+    "                <div class=\"\" style=\"width: 350px;\">\n" +
+    "                    <div class=\"hovereffect\">\n" +
+    "                        <img class=\"img-responsive\" src=\"/images/contact/philly.jpg\" alt=\"\">\n" +
+    "                        <div class=\"overlay\">\n" +
+    "                            <br>\n" +
+    "                            <br>\n" +
+    "                            <br>\n" +
+    "                            <h2 style=\"font-size: 25px;\">Philadelphia, PA</h2>\n" +
+    "                            <p>\n" +
+    "                                <a href=\"tel:+13365800855\">(336) 580-0855</a>\n" +
+    "                            </p>\n" +
+    "                        </div>\n" +
+    "                    </div>\n" +
+    "                </div>\n" +
     "            </div>\n" +
+    "        </div>\n" +
+    "        <div class=\"message\">\n" +
+    "            <a href=\"mailto:info@projectnovo.co\"><button class=\"mainbutton service-button\">email us: info@projectnovo.co</button></a>\n" +
+    "            <br>\n" +
+    "            <br>\n" +
+    "            <br>\n" +
+    "            <!--\n" +
+    "            <br>\n" +
+    "            <p>Stay in the loop and learn about what we do!</p>\n" +
+    "            <br>\n" +
+    "            <span class=\"newsletter-home\">Sign Up for our Monthly Newsletter!</span>\n" +
+    "            -->\n" +
     "        </div>\n" +
     "    </div>\n" +
     "    <br>\n" +
@@ -622,7 +639,109 @@ angular.module("home/index.tpl.html", []).run(["$templateCache", function($templ
 
 angular.module("portfolio/index.tpl.html", []).run(["$templateCache", function($templateCache) {
   $templateCache.put("portfolio/index.tpl.html",
-    "<div class=\"container\">\n" +
+    "<link rel=\"stylesheet\" href=\"/styles/css/portfolio.css\">\n" +
+    "\n" +
+    "<div class=\"surface-container\">\n" +
+    "    <div class=\"center top-area\">\n" +
+    "        <div class=\"title-top\">Quality, Modernity, and Transparency\n" +
+    "        <hr>\n" +
+    "        </div>\n" +
+    "        <div class=\"message-portfolio\">\n" +
+    "            <div class=\"interested-portfolio\">\n" +
+    "                <br>\n" +
+    "                <p>\n" +
+    "                    Our clients know what it means to be partners with NOVO. We provide quality work, employ the latest marketing and web development techniques, and  implement a workflow process that allows for complete transparency and client collaboration.\n" +
+    "                </p>\n" +
+    "                <br>\n" +
+    "                <br>\n" +
+    "                <p style=\"font-size:22px;\">Our work speaks for itself.</p>\n" +
+    "            </div>\n" +
+    "        </div>\n" +
+    "    </div>\n" +
+    "</div>\n" +
+    "<div class=\"surface-container\">\n" +
+    "    <div class=\"center\" style=\"background:url(/images/texture-bg.png) repeat;\">\n" +
+    "        <div class=\"portfolio-tile\" style=\"\">\n" +
+    "            <div class=\"hovereffect\">\n" +
+    "                <img class=\"img-responsive\" src=\"/images/portfolio/absolute/absolute-outside.jpg\" alt=\"\">\n" +
+    "                <div class=\"overlay\">\n" +
+    "                    <h2 style=\"font-size: 25px;\">Absolute Yachts North America</h2>\n" +
+    "                    <div class=\"hover-info\">\n" +
+    "                        Absolute is an Italian yacht brand based in Piacenza, manufacturing yachts\n" +
+    "                        ranging from 40 to 72 feet. NOVO is responsible for Absolute North America's online marketing,\n" +
+    "                        including web design and development, email marketing, and social media marketing.\n" +
+    "                    </div>\n" +
+    "                    <p style=\"font-size: 40px;\">\n" +
+    "                        <a href=\"http://www.absoluteyachtsna.com/\">\n" +
+    "                            <i class=\"fa fa-globe\"></i>\n" +
+    "                        </a>\n" +
+    "                        <a href=\"https://www.facebook.com/pages/Absolute-North-America/1467350980243678\">\n" +
+    "                            <i class=\"fa fa-facebook\"></i>\n" +
+    "                        </a>\n" +
+    "                        <a href=\"https://twitter.com/AbsoluteNA\">\n" +
+    "                            <i class=\"fa fa-twitter\"></i>\n" +
+    "                        </a>\n" +
+    "                        <a href=\"https://instagram.com/absoluteyachtsna/\">\n" +
+    "                            <i class=\"fa fa-instagram\"></i>\n" +
+    "                        </a>\n" +
+    "                    </p>\n" +
+    "                </div>\n" +
+    "            </div>\n" +
+    "        </div>\n" +
+    "        <div class=\"portfolio-tile\" style=\"\">\n" +
+    "            <div class=\"hovereffect\">\n" +
+    "                <img class=\"img-responsive\" src=\"/images/portfolio/stock1.jpg\" alt=\"\">\n" +
+    "                <div class=\"overlay\">\n" +
+    "                    <h2 style=\"font-size: 25px;\">Comprehensive Online Marketing</h2>\n" +
+    "                    <p>\n" +
+    "                        <br>\n" +
+    "                        Web Design and Development\n" +
+    "                        <br>\n" +
+    "                        Graphic Design and Brand Development\n" +
+    "                        <br>\n" +
+    "                        Social Media Marketing\n" +
+    "                        <br>\n" +
+    "                        Email Marketing\n" +
+    "                    </p>\n" +
+    "                </div>\n" +
+    "            </div>\n" +
+    "        </div>\n" +
+    "        <div class=\"portfolio-tile\" style=\"\">\n" +
+    "            <div class=\"hovereffect\">\n" +
+    "                <img class=\"img-responsive\" src=\"/images/portfolio/stock2.jpg\" alt=\"\">\n" +
+    "                <div class=\"overlay\">\n" +
+    "                    <h2 style=\"font-size: 25px;\">Contact Us</h2>\n" +
+    "                    <p>\n" +
+    "                        <br>\n" +
+    "                        We would love the opportunity to work with you and your company on your next online marketing project.\n" +
+    "                        <br>\n" +
+    "                        <br>\n" +
+    "                        <a href=\"/contact/\" style=\"font-size: 40px;\">Get in touch.</a>\n" +
+    "                    </p>\n" +
+    "                </div>\n" +
+    "            </div>\n" +
+    "        </div>\n" +
+    "    </div>\n" +
+    "    <div class=\"center bottom-area\">\n" +
+    "        <div class=\"title-bottom\">How We Build It\n" +
+    "            <hr>\n" +
+    "        </div>\n" +
+    "        <div class=\"message-portfolio\">\n" +
+    "            <div class=\"interested-portfolio\">\n" +
+    "                <br>\n" +
+    "                <p>\n" +
+    "                   The latest technology, mobile-friendly, and unparalleled in custom design. Each site is custom-tailored.\n" +
+    "                </p>\n" +
+    "                <a href=\"/about/\"><button class=\"mainbutton service-button\">More Info...</button></a>\n" +
+    "                <br>\n" +
+    "                <br>\n" +
+    "                <br>\n" +
+    "            </div>\n" +
+    "        </div>\n" +
+    "    </div>\n" +
+    "</div>\n" +
+    "\n" +
+    "<!--<div class=\"container\">\n" +
     "    <div id=\"\" class=\"info\">\n" +
     "        <div class=\"title\" style=\"font-weight:400;\">Quality, Modernity, and Transparency</div>\n" +
     "        <br>\n" +
@@ -637,7 +756,7 @@ angular.module("portfolio/index.tpl.html", []).run(["$templateCache", function($
     "</div>\n" +
     "\n" +
     "<!--make dynamic with angular-->\n" +
-    "<div class='container' style=\"margin: 180px auto 0;\">\n" +
+    "<!--<div class='container' style=\"margin: 180px auto 0;\">\n" +
     "    <div class='wrap'>\n" +
     "        <div class='crop'>\n" +
     "            <img src='' style=\"background-color: #1db996;\">\n" +
@@ -698,9 +817,9 @@ angular.module("portfolio/index.tpl.html", []).run(["$templateCache", function($
     "        <div class=\"link\"></div>\n" +
     "    </div>-->\n" +
     "\n" +
-    "</div>\n" +
+    "<!--</div>\n" +
     "\n" +
-    "<div style=\"height:100px;\"></div>\n" +
+    "<!--<div style=\"height:100px;\"></div>\n" +
     "");
 }]);
 
