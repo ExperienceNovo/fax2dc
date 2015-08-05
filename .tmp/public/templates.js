@@ -521,7 +521,7 @@ angular.module("home/index.tpl.html", []).run(["$templateCache", function($templ
     "                <div class=\"contact-us-home\">Email us at\n" +
     "                <a href=\"mailto:info@projectnovo.co\" style=\"color: #1db996;\">info@projectnovo.co</a></div> or <div class=\"contact-us-home\">Call us at one of our <span style=\"color: #1db996; font-weight: 500;\">four</span> locations!</div>\n" +
     "                <br>\n" +
-    "                <div class=\"center\">\n" +
+    "                <div class=\"center-home\">\n" +
     "                    <div class=\"box2 small-medium-home\">\n" +
     "                        <img src=\"/images/contact/chap.jpeg\" class=\"img-fill opacity\">\n" +
     "                        <br>\n" +
