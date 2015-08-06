@@ -34,7 +34,7 @@
 }
 
 .about-list {
-	padding-bottom:150px;
+	padding-bottom: 100px;
 }
 
 .about-title h2 {
@@ -54,6 +54,83 @@
 	font-family: 'Quicksand', sans-serif;
 	line-height:190%;
 	color:#222;
-	margin-top:30px;
 	font-size: 1.3em;
+}
+
+.about-top-area {
+    //background-color: #a3a3a3;
+    background: url(/images/portfolio/code.png) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    color: white;
+    padding: 2%;
+    border-bottom: 2px solid #2ab996;
+}
+.about-title-top {
+    color: white;
+    font-family: 'Jura', sans-serif;
+    font-weight: 400;
+    font-size: 30px;
+    text-align: center;
+    width: 80%;
+    padding-top: 40px;
+}
+
+.about-title-bottom {
+    color: black;
+    font-family: 'Jura', sans-serif;
+    font-weight: 400;
+    font-size: 30px;
+    text-align: center;
+    width: 80%;
+    margin-top: 3%;
+}
+
+.message-about {
+    font-size: 1.1em;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    font-family: 'Quicksand', sans-serif;
+    width: 85%;
+}
+
+.interested-about {
+    font-size: 1.2em;
+    font-weight: 500;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    width: 85%;
+}
+
+.about-tile-area {
+	border-bottom: 2px solid #2ab996;
+}
+
+.about-tile {
+    width: 33.33%;
+    height: auto;
+    overflow: hidden;
+    margin: 0 !important;
+}
+
+@media screen and (max-width: 1400px) {
+    .about-tile {
+        width: 33.33%;
+    }
+}
+
+@media screen and (max-width: 920px) {
+    .about-tile {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 720px) {
+    .about-tile {
+        width: 100%;
+    }
 }

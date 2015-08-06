@@ -5,210 +5,220 @@ angular.module("about/index.tpl.html", []).run(["$templateCache", function($temp
     "<!--we gotta load in the css in a better fashon than overwriting-->\n" +
     "<link href=\"/styles/css/about.css\" rel=\"stylesheet\">\n" +
     "\n" +
-    "<div class=\"about\" id=\"about\">\n" +
-    "    <div class=\"about-section-head\">\n" +
-    "        <h3>About Us</h3>\n" +
-    "        <hr>\n" +
-    "    </div>\n" +
-    "    <!--\n" +
-    "    <div class=\"about-list\">\n" +
-    "        <div class=\"row\">\n" +
-    "            <div class=\"col-md-12\">\n" +
-    "                <div class=\"col-md-4\">\n" +
-    "                    <i class=\"fa fa-paint-brush fa-5x\"></i>\n" +
-    "                    <div class=\"about-title\">\n" +
-    "                        <h2>Design</h2>\n" +
-    "                    </div>\n" +
-    "                    <hr>\n" +
-    "                    <div class=\"about-des\">\n" +
-    "                        <p>Full-scale Branding to ensure clear communication of your message.</p>\n" +
-    "                        <p>Custom Interface Design to ensure a seamless customer online experience.</p>\n" +
-    "                        <p>Advertising Design to establish a strong brand presence within your industry.</p>\n" +
-    "                    </div>\n" +
-    "                </div>\n" +
-    "                <div class=\"col-md-4\">\n" +
-    "                    <i class=\"fa fa-code fa-5x\"></i>\n" +
-    "                    <div class=\"about-title\">\n" +
-    "                        <h2>Development</h2>\n" +
-    "                    </div>\n" +
-    "                    <hr>\n" +
-    "                    <div class=\"about-des\">\n" +
-    "                        <p>Mobile-first Web Design to align you with the ever-increasing mobile world.</p>\n" +
-    "                        <p>SEO Structuring to naturally expand your online reach and outpace your competitors.</p>\n" +
-    "                        <p>Back-end Software Integration to ensure maximum security and business technology integration.</p>\n" +
-    "                    </div>\n" +
-    "                </div>\n" +
-    "                <div class=\"col-md-4\">\n" +
-    "                    <i class=\"fa fa-users fa-5x\"></i>\n" +
-    "                    <div class=\"about-title\">\n" +
-    "                        <h2>Marketing</h2>\n" +
-    "                    </div>\n" +
-    "                    <hr>\n" +
-    "                    <div class=\"about-des\">\n" +
-    "                        <p>Social Media Management to extend your customer reach.</p>\n" +
-    "                        <p>Email Outreach Marketing to manage current customer and secure new-customer leads.</p>\n" +
-    "                        <p>Consistent Content Creation to establish and maintain your presence within your community and your industry.</p>\n" +
-    "                    </div>\n" +
-    "                </div>\n" +
-    "            </div>\n" +
-    "        </div>\n" +
-    "        <br>\n" +
-    "        <br>\n" +
-    "        <br>\n" +
-    "    </div>\n" +
-    "    -->\n" +
-    "    <br><br><br>\n" +
-    "\n" +
-    "</div>\n" +
-    "\n" +
-    "\n" +
     "<div class=\"surface-container\">\n" +
-    "    <div class=\"center top-area\">\n" +
-    "        <div class=\"title-top\">Quality, Modernity, and Transparency\n" +
-    "        <hr>\n" +
-    "        </div>\n" +
-    "        <div class=\"message-portfolio\">\n" +
-    "            <div class=\"interested-portfolio\">\n" +
-    "                <br>\n" +
-    "                <p>\n" +
-    "                    Our clients know what it means to be partners with NOVO. We provide quality work, employ the latest marketing and web development techniques, and  implement a workflow process that allows for complete transparency and client collaboration.\n" +
-    "                </p>\n" +
-    "                <br>\n" +
-    "                <br>\n" +
-    "                <p style=\"font-size:22px;\">Our work speaks for itself.</p>\n" +
-    "            </div>\n" +
-    "        </div>\n" +
-    "    </div>\n" +
-    "</div>\n" +
-    "<div class=\"surface-container\">\n" +
-    "    <div class=\"center\" style=\"background:url(/images/texture-bg.png) repeat;\">\n" +
-    "        <div class=\"portfolio-tile\" style=\"\">\n" +
-    "            <div class=\"hovereffect\">\n" +
-    "                <img class=\"img-responsive\" src=\"/images/portfolio/absolute/absolute-outside.jpg\" alt=\"\">\n" +
-    "                <div class=\"overlay\">\n" +
-    "                    <h2 style=\"font-size: 25px;\">Absolute Yachts North America</h2>\n" +
-    "                    <div class=\"hover-info\">\n" +
-    "                        Absolute is an Italian yacht brand based in Piacenza, manufacturing yachts\n" +
-    "                        ranging from 40 to 72 feet. NOVO is responsible for Absolute North America's online marketing,\n" +
-    "                        including web design and development, email marketing, and social media marketing.\n" +
-    "                    </div>\n" +
-    "                    <p style=\"font-size: 40px;\">\n" +
-    "                        <a href=\"http://www.absoluteyachtsna.com/\">\n" +
-    "                            <i class=\"fa fa-globe\"></i>\n" +
-    "                        </a>\n" +
-    "                        <a href=\"https://www.facebook.com/pages/Absolute-North-America/1467350980243678\">\n" +
-    "                            <i class=\"fa fa-facebook\"></i>\n" +
-    "                        </a>\n" +
-    "                        <a href=\"https://twitter.com/AbsoluteNA\">\n" +
-    "                            <i class=\"fa fa-twitter\"></i>\n" +
-    "                        </a>\n" +
-    "                        <a href=\"https://instagram.com/absoluteyachtsna/\">\n" +
-    "                            <i class=\"fa fa-instagram\"></i>\n" +
-    "                        </a>\n" +
-    "                    </p>\n" +
-    "                </div>\n" +
-    "            </div>\n" +
-    "        </div>\n" +
-    "        <div class=\"portfolio-tile\" style=\"\">\n" +
-    "            <div class=\"hovereffect\">\n" +
-    "                <img class=\"img-responsive\" src=\"/images/portfolio/stock1.jpg\" alt=\"\">\n" +
-    "                <div class=\"overlay\">\n" +
-    "                    <h2 style=\"font-size: 25px;\">Comprehensive Online Marketing</h2>\n" +
-    "                    <p>\n" +
-    "                        <br>\n" +
-    "                        Web Design and Development\n" +
-    "                        <br>\n" +
-    "                        Graphic Design and Brand Development\n" +
-    "                        <br>\n" +
-    "                        Social Media Marketing\n" +
-    "                        <br>\n" +
-    "                        Email Marketing\n" +
-    "                    </p>\n" +
-    "                </div>\n" +
-    "            </div>\n" +
-    "        </div>\n" +
-    "        <div class=\"portfolio-tile\" style=\"\">\n" +
-    "            <div class=\"hovereffect\">\n" +
-    "                <img class=\"img-responsive\" src=\"/images/portfolio/stock2.jpg\" alt=\"\">\n" +
-    "                <div class=\"overlay\">\n" +
-    "                    <h2 style=\"font-size: 25px;\">Contact Us</h2>\n" +
-    "                    <p>\n" +
-    "                        <br>\n" +
-    "                        We would love the opportunity to work with you and your company on your next online marketing project.\n" +
-    "                        <br>\n" +
-    "                        <br>\n" +
-    "                        <a href=\"/contact/\" style=\"font-size: 40px;\">Get in touch.</a>\n" +
-    "                    </p>\n" +
-    "                </div>\n" +
-    "            </div>\n" +
-    "        </div>\n" +
-    "    </div>\n" +
-    "    <div class=\"center bottom-area\">\n" +
-    "        <div class=\"title-bottom\">How We Build It\n" +
+    "    <div class=\"about\" id=\"about\">\n" +
+    "        <!--<div class=\"about-section-head\">\n" +
+    "            <h3>About Us</h3>\n" +
     "            <hr>\n" +
     "        </div>\n" +
-    "        <div class=\"message-portfolio\">\n" +
-    "            <div class=\"interested-portfolio\">\n" +
-    "                <br>\n" +
-    "                <p>\n" +
-    "                   The latest technology, mobile-friendly, and unparalleled in custom design. Each site is custom-tailored.\n" +
-    "                </p>\n" +
-    "                <a href=\"/about/\"><button class=\"mainbutton service-button\">More Info...</button></a>\n" +
-    "                <br>\n" +
-    "                <br>\n" +
-    "                <br>\n" +
+    "        -->\n" +
+    "        <!--\n" +
+    "        <div class=\"about-list\">\n" +
+    "            <div class=\"row\">\n" +
+    "                <div class=\"col-md-12\">\n" +
+    "                    <div class=\"col-md-4\">\n" +
+    "                        <i class=\"fa fa-paint-brush fa-5x\"></i>\n" +
+    "                        <div class=\"about-title\">\n" +
+    "                            <h2>Design</h2>\n" +
+    "                        </div>\n" +
+    "                        <hr>\n" +
+    "                        <div class=\"about-des\">\n" +
+    "                            <p>Full-scale Branding to ensure clear communication of your message.</p>\n" +
+    "                            <p>Custom Interface Design to ensure a seamless customer online experience.</p>\n" +
+    "                            <p>Advertising Design to establish a strong brand presence within your industry.</p>\n" +
+    "                        </div>\n" +
+    "                    </div>\n" +
+    "                    <div class=\"col-md-4\">\n" +
+    "                        <i class=\"fa fa-code fa-5x\"></i>\n" +
+    "                        <div class=\"about-title\">\n" +
+    "                            <h2>Development</h2>\n" +
+    "                        </div>\n" +
+    "                        <hr>\n" +
+    "                        <div class=\"about-des\">\n" +
+    "                            <p>Mobile-first Web Design to align you with the ever-increasing mobile world.</p>\n" +
+    "                            <p>SEO Structuring to naturally expand your online reach and outpace your competitors.</p>\n" +
+    "                            <p>Back-end Software Integration to ensure maximum security and business technology integration.</p>\n" +
+    "                        </div>\n" +
+    "                    </div>\n" +
+    "                    <div class=\"col-md-4\">\n" +
+    "                        <i class=\"fa fa-users fa-5x\"></i>\n" +
+    "                        <div class=\"about-title\">\n" +
+    "                            <h2>Marketing</h2>\n" +
+    "                        </div>\n" +
+    "                        <hr>\n" +
+    "                        <div class=\"about-des\">\n" +
+    "                            <p>Social Media Management to extend your customer reach.</p>\n" +
+    "                            <p>Email Outreach Marketing to manage current customer and secure new-customer leads.</p>\n" +
+    "                            <p>Consistent Content Creation to establish and maintain your presence within your community and your industry.</p>\n" +
+    "                        </div>\n" +
+    "                    </div>\n" +
+    "                </div>\n" +
+    "            </div>\n" +
+    "            <br>\n" +
+    "            <br>\n" +
+    "            <br>\n" +
+    "        </div>\n" +
+    "       \n" +
+    "        <br><br><br>\n" +
+    "\n" +
+    "    </div>\n" +
+    "    -->\n" +
+    "\n" +
+    "\n" +
+    "\n" +
+    "        <div class=\"center about-top-area\">\n" +
+    "            <div class=\"about-title-top\">Quality, Modernity, and Transparency\n" +
+    "            <hr>\n" +
+    "            </div>\n" +
+    "            <div class=\"message-about\">\n" +
+    "                <div class=\"interested-about\">\n" +
+    "                    <br>\n" +
+    "                    <p>\n" +
+    "                        Our clients know what it means to be partners with NOVO. We provide quality work, employ the latest marketing and web development techniques, and  implement a workflow process that allows for complete transparency and client collaboration.\n" +
+    "                    </p>\n" +
+    "                    <br>\n" +
+    "                    <br>\n" +
+    "                    <p style=\"font-size:22px;\">Our work speaks for itself.</p>\n" +
+    "                    <br><br>\n" +
+    "                </div>\n" +
     "            </div>\n" +
     "        </div>\n" +
-    "    </div>\n" +
-    "</div>\n" +
     "\n" +
-    "<br><br><br><br><br>\n" +
-    "\n" +
-    "<div class=\"about-list\">\n" +
-    "    <div class=\"row\">\n" +
-    "        <div class=\"col-md-12\">\n" +
-    "            <div class=\"col-md-4\">\n" +
-    "                <i class=\"fa fa-paint-brush fa-5x\"></i>\n" +
-    "                <div class=\"about-title\">\n" +
-    "                    <h2>Design</h2>\n" +
-    "                </div>\n" +
-    "                <hr>\n" +
-    "                <div class=\"about-des\">\n" +
-    "                    <p>Full-scale Branding to ensure clear communication of your message.</p>\n" +
-    "                    <p>Custom Interface Design to ensure a seamless customer online experience.</p>\n" +
-    "                    <p>Advertising Design to establish a strong brand presence within your industry.</p>\n" +
+    "        <div class=\"center about-tile-area\" style=\"background:url(/images/texture-bg.png) repeat;\">\n" +
+    "            <div class=\"about-tile\" style=\"\">\n" +
+    "                <div class=\"hovereffect\">\n" +
+    "                    <img class=\"img-responsive\" id=\"about-pic\" src=\"/images/about/designtile.jpg\" alt=\"\">\n" +
+    "                    <div class=\"overlay\">\n" +
+    "                        <h2 style=\"font-size: 25px;\">Design</h2>\n" +
+    "                        <div class=\"hover-info\">\n" +
+    "                            More info...\n" +
+    "                        </div>\n" +
+    "                        <!--\n" +
+    "                        <p style=\"font-size: 40px;\">\n" +
+    "                            <a href=\"http://www.absoluteyachtsna.com/\">\n" +
+    "                                <i class=\"fa fa-globe\"></i>\n" +
+    "                            </a>\n" +
+    "                            <a href=\"https://www.facebook.com/pages/Absolute-North-America/1467350980243678\">\n" +
+    "                                <i class=\"fa fa-facebook\"></i>\n" +
+    "                            </a>\n" +
+    "                            <a href=\"https://twitter.com/AbsoluteNA\">\n" +
+    "                                <i class=\"fa fa-twitter\"></i>\n" +
+    "                            </a>\n" +
+    "                            <a href=\"https://instagram.com/absoluteyachtsna/\">\n" +
+    "                                <i class=\"fa fa-instagram\"></i>\n" +
+    "                            </a>\n" +
+    "                        </p>\n" +
+    "                        -->\n" +
+    "                    </div>\n" +
     "                </div>\n" +
     "            </div>\n" +
-    "            <div class=\"col-md-4\">\n" +
-    "                <i class=\"fa fa-code fa-5x\"></i>\n" +
-    "                <div class=\"about-title\">\n" +
-    "                    <h2>Development</h2>\n" +
-    "                </div>\n" +
-    "                <hr>\n" +
-    "                <div class=\"about-des\">\n" +
-    "                    <p>Mobile-first Web Design to align you with the ever-increasing mobile world.</p>\n" +
-    "                    <p>SEO Structuring to naturally expand your online reach and outpace your competitors.</p>\n" +
-    "                    <p>Back-end Software Integration to ensure maximum security and business technology integration.</p>\n" +
+    "            <div class=\"about-tile\" style=\"\">\n" +
+    "                <div class=\"hovereffect\">\n" +
+    "                    <img class=\"img-responsive\" id=\"about-pic\" src=\"/images/about/devtile.jpg\" alt=\"\">\n" +
+    "                    <div class=\"overlay\">\n" +
+    "                        <h2 style=\"font-size: 25px;\">Development</h2>\n" +
+    "                        <div class=\"hover-info\">\n" +
+    "                        More info...\n" +
+    "                        </div>\n" +
+    "                    </div>\n" +
     "                </div>\n" +
     "            </div>\n" +
-    "            <div class=\"col-md-4\">\n" +
-    "                <i class=\"fa fa-users fa-5x\"></i>\n" +
-    "                <div class=\"about-title\">\n" +
-    "                    <h2>Marketing</h2>\n" +
+    "            <div class=\"about-tile\" style=\"\">\n" +
+    "                <div class=\"hovereffect\">\n" +
+    "                    <img class=\"img-responsive\" id=\"about-pic\" src=\"/images/about/marketingtile.jpg\" alt=\"\">\n" +
+    "                    <div class=\"overlay\">\n" +
+    "                        <h2 style=\"font-size: 25px;\">Marketing</h2>\n" +
+    "                        <div class=\"hover-info\">\n" +
+    "                        More info...\n" +
+    "                        </div>\n" +
+    "                        <!--\n" +
+    "                        <p>\n" +
+    "                            <br>\n" +
+    "                            We would love the opportunity to work with you and your company on your next online marketing project.\n" +
+    "                            <br>\n" +
+    "                            <br>\n" +
+    "                            <a href=\"/contact/\" style=\"font-size: 40px;\">Get in touch.</a>\n" +
+    "                        </p>\n" +
+    "                        -->\n" +
+    "                    </div>\n" +
     "                </div>\n" +
+    "            </div>\n" +
+    "        </div><!-- end center -->\n" +
+    "        <!--\n" +
+    "        <div class=\"center about-bottom-area\">\n" +
+    "            <div class=\"title-bottom\">How We Build It\n" +
     "                <hr>\n" +
-    "                <div class=\"about-des\">\n" +
-    "                    <p>Social Media Management to extend your customer reach.</p>\n" +
-    "                    <p>Email Outreach Marketing to manage current customer and secure new-customer leads.</p>\n" +
-    "                    <p>Consistent Content Creation to establish and maintain your presence within your community and your industry.</p>\n" +
+    "            </div>\n" +
+    "            <div class=\"message-portfolio\">\n" +
+    "                <div class=\"interested-portfolio\">\n" +
+    "                    <br>\n" +
+    "                    <p>\n" +
+    "                       The latest technology, mobile-friendly, and unparalleled in custom design. Each site is custom-tailored.\n" +
+    "                    </p>\n" +
+    "                    <a href=\"/about/\"><button class=\"mainbutton service-button\">More Info...</button></a>\n" +
+    "                    <br>\n" +
+    "                    <br>\n" +
+    "                    <br>\n" +
     "                </div>\n" +
     "            </div>\n" +
     "        </div>\n" +
-    "    </div>\n" +
-    "    <br>\n" +
-    "    <br>\n" +
-    "    <br>\n" +
-    "</div>\n" +
+    "        -->\n" +
+    "\n" +
+    "    <br><br><br><br><br>\n" +
+    "\n" +
+    "        <div class=\"about-list\">\n" +
+    "            <div class=\"row\">\n" +
+    "                <div class=\"col-md-12\">\n" +
+    "                    <div class=\"col-md-4\">\n" +
+    "                        <!--<i class=\"fa fa-paint-brush fa-5x\"></i>-->\n" +
+    "                        <!--<div class=\"about-title\">\n" +
+    "                            <h2>Design</h2>\n" +
+    "                        </div>\n" +
+    "                        <hr>-->\n" +
+    "                        <div class=\"about-des\" id=\"design-des\">\n" +
+    "                            <p>Full-scale Branding to ensure clear communication of your message.</p>\n" +
+    "                            <hr>\n" +
+    "                            <p>Custom Interface Design to ensure a seamless customer online experience.</p>\n" +
+    "                            <hr>\n" +
+    "                            <p>Advertising Design to establish a strong brand presence within your industry.</p>\n" +
+    "                        </div>\n" +
+    "                    </div>\n" +
+    "                    <div class=\"col-md-4\">\n" +
+    "                        <!--<i class=\"fa fa-code fa-5x\"></i>-->\n" +
+    "                        <!--<div class=\"about-title\">\n" +
+    "                            <h2>Development</h2>\n" +
+    "                        </div>\n" +
+    "                        <hr>-->\n" +
+    "                        <div class=\"about-des\" id=\"developement-des\">\n" +
+    "                            <p>Mobile-first Web Design to align you with the ever-increasing mobile world.</p>\n" +
+    "                            <hr>\n" +
+    "                            <p>SEO Structuring to naturally expand your online reach and outpace your competitors.</p>\n" +
+    "                            <hr>\n" +
+    "                            <p>Back-end Software Integration to ensure maximum security and business technology integration.</p>\n" +
+    "                        </div>\n" +
+    "                    </div>\n" +
+    "                    <div class=\"col-md-4\">\n" +
+    "                        <!--<i class=\"fa fa-users fa-5x\"></i>-->\n" +
+    "                        <!--<div class=\"about-title\">\n" +
+    "                            <h2>Marketing</h2>\n" +
+    "                        </div>\n" +
+    "                        <hr>-->\n" +
+    "                        <div class=\"about-des\" id=\"marketing-des\">\n" +
+    "                            <p>Social Media Management to extend your customer reach.</p>\n" +
+    "                            <hr>\n" +
+    "                            <p>Email Outreach Marketing to manage current customer and secure new-customer leads.</p>\n" +
+    "                            <hr>\n" +
+    "                            <p>Consistent Content Creation to establish and maintain your presence within your community and your industry.</p>\n" +
+    "                        </div>\n" +
+    "                    </div>\n" +
+    "                </div>\n" +
+    "            </div>\n" +
+    "            <br>\n" +
+    "            <br>\n" +
+    "            <br>\n" +
+    "        </div><!-- end about list -->\n" +
+    "    </div> <!-- end about -->    \n" +
+    "</div><!-- end suface container -->\n" +
     "	");
 }]);
 
@@ -652,7 +662,7 @@ angular.module("home/index.tpl.html", []).run(["$templateCache", function($templ
     "                            <br>\n" +
     "                            <br>\n" +
     "                            <br>\n" +
-    "                            <h2 style=\"font-size: 25px;\"><a href=\"/contact/\">Knoxville, TN</a>/h2>\n" +
+    "                            <h2 style=\"font-size: 25px;\"><a href=\"/contact/\">Knoxville, TN</a></h2>\n" +
     "                            <p>\n" +
     "                                <a href=\"tel:+18656969382\">(865) 696-9382</a>\n" +
     "                            </p>\n" +
