@@ -279,7 +279,7 @@ angular.module("contact/index.tpl.html", []).run(["$templateCache", function($te
     "    <div class=\"title-surface-container\">\n" +
     "        <div class=\"contact-title-home\" style=\"padding: 2%; color: #000;\">\n" +
     "            <br>\n" +
-    "            <p>Four Locations Nationwide</p>\n" +
+    "            <p>Contact Us</p>\n" +
     "            <hr>\n" +
     "        </div>\n" +
     "        <div class=\"contact-home\">\n" +
@@ -289,14 +289,18 @@ angular.module("contact/index.tpl.html", []).run(["$templateCache", function($te
     "            </div>\n" +
     "        </div>\n" +
     "        <div class=\"message\">\n" +
-    "            <div class=\"interested\"><a href=\"/portfolio/\">Our work speaks for itself.</a>\n" +
-    "            </div>\n" +
+    "            <div class=\"interested\"><a href=\"/portfolio/\">Our work speaks for itself.</a></div>\n" +
+    "            <p>Four Locations Nationwide</p>\n" +
+    "            <hr>\n" +
+    "            <!--<p>give us a call!</p>-->\n" +
+    "            <br>\n" +
     "        </div>\n" +
     "        <br>\n" +
     "    </div>\n" +
     "</div>\n" +
     "\n" +
-    "<div class=\"surface-container\">\n" +
+    "<!-- i would like if the numbers were more visiable -->\n" +
+    "<div class=\"surface-container\" style=\"background-color:rgb(0,0,0)\">\n" +
     "    <div class=\"contact-page-container\">\n" +
     "        <div class=\"center\">\n" +
     "            <div class=\"\" style=\"width: 350px;padding:10px;\">\n" +
@@ -494,11 +498,17 @@ angular.module("home/index.tpl.html", []).run(["$templateCache", function($templ
     "    <div class=\"banner-text\">\n" +
     "        <h2 class=\"tagline\">Welcome</h2>\n" +
     "        <p class=\"under-tagline\">Embrace change with NOVO<br/>a full-scale online marketing, graphic design, and web development firm.</p>\n" +
-    "        <a href=\"#service\"><button class=\"mainbutton\">Learn More</button></a>\n" +
+    "        <div class=\"triangle-container\" style=\"margin-top:20%;\">\n" +
+    "            <a href=\"#more\">\n" +
+    "                <p style=\"color:#fff\">learn more</p>\n" +
+    "                <img src=\"/images/tri.png\"/ style=\"width:100px;\">\n" +
+    "                <!--<button class=\"mainbutton\">Learn More</button>-->\n" +
+    "            </a>\n" +
+    "        </div>\n" +
     "    </div>\n" +
     "</div>\n" +
     "\n" +
-    "<div class=\"services\" id=\"service\">\n" +
+    "<div class=\"services\" id=\"more\">\n" +
     "    <div class=\"section-head\">\n" +
     "        <h3>Our Services</h3>\n" +
     "        <hr>\n" +
@@ -1128,8 +1138,6 @@ angular.module("portfolio/index.tpl.html", []).run(["$templateCache", function($
     "\n" +
     "    </div>\n" +
     "</div>\n" +
-    "\n" +
-    "<div style=\"height:100px;\"></div>\n" +
     "");
 }]);
 
