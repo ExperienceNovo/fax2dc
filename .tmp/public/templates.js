@@ -624,7 +624,7 @@ angular.module("home/index.tpl.html", []).run(["$templateCache", function($templ
     "                            <br>\n" +
     "                            <br>\n" +
     "                            <br>\n" +
-    "                            <h2 style=\"font-size: 25px;\">Chapel Hill, NC</h2>\n" +
+    "                            <h2 style=\"font-size: 25px;\"><a href=\"/contact/\">Chapel Hill, NC</a></h2>\n" +
     "                            <p>\n" +
     "                                <a href=\"tel:+18656797229\">(865) 679-7229</a>\n" +
     "                            </p>\n" +
@@ -638,7 +638,7 @@ angular.module("home/index.tpl.html", []).run(["$templateCache", function($templ
     "                            <br>\n" +
     "                            <br>\n" +
     "                            <br>\n" +
-    "                            <h2 style=\"font-size: 25px;\">Evanston, IL</h2>\n" +
+    "                            <h2 style=\"font-size: 25px;\"><a href=\"/contact/\">Evanston, IL</a></h2>\n" +
     "                            <p>\n" +
     "                                <a href=\"tel:+18653876121\">(865) 387-6121</a>\n" +
     "                            </p>\n" +
@@ -652,7 +652,7 @@ angular.module("home/index.tpl.html", []).run(["$templateCache", function($templ
     "                            <br>\n" +
     "                            <br>\n" +
     "                            <br>\n" +
-    "                            <h2 style=\"font-size: 25px;\">Knoxville, TN</h2>\n" +
+    "                            <h2 style=\"font-size: 25px;\"><a href=\"/contact/\">Knoxville, TN</a>/h2>\n" +
     "                            <p>\n" +
     "                                <a href=\"tel:+18656969382\">(865) 696-9382</a>\n" +
     "                            </p>\n" +
@@ -666,7 +666,7 @@ angular.module("home/index.tpl.html", []).run(["$templateCache", function($templ
     "                            <br>\n" +
     "                            <br>\n" +
     "                            <br>\n" +
-    "                            <h2 style=\"font-size: 25px;\">Philadelphia, PA</h2>\n" +
+    "                            <h2 style=\"font-size: 25px;\"><a href=\"/contact/\">Philadelphia, PA</a></h2>\n" +
     "                            <p>\n" +
     "                                <a href=\"tel:+13365800855\">(336) 580-0855</a>\n" +
     "                            </p>\n" +

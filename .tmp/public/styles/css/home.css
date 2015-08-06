@@ -1,5 +1,4 @@
 @import "http://fonts.googleapis.com/css?family=Jura";
-
 @import "http://fonts.googleapis.com/css?family=Cantarell";
 
 html, body {
@@ -37,6 +36,7 @@ a:hover {
     height: 100vh;
     min-height: 800px;
     padding-top: 40px;
+    background-size: 100%;
 }
 
 .banner-text {

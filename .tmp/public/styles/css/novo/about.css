@@ -1,0 +1,59 @@
+.about {
+	width:100%;
+	background:url(/images/texture-bg.png) repeat;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+
+.about-section-head {
+	padding:100px 0 30px;
+}
+
+.about-section-head h3 {
+	font-family:Jura;
+	color:#000;
+	font-size:4em;
+	font-weight:600;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+.about-section-head p {
+	color:#737373;
+	font-size:14px;
+	width:60%;
+	font-family:'Open Sans',sans-serif;
+	line-height:20px;
+	margin-top:15px;
+}
+
+.about-list i {
+	color:#2AB996;
+	padding-bottom:25px;
+}
+
+.about-list {
+	padding-bottom:150px;
+}
+
+.about-title h2 {
+	font-family: 'Quicksand', sans-serif;
+	font-size: 3em !important;
+	font-weight: 300 !important;
+	line-height: 200%;
+	color:#222;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+
+.about-des {
+	font-family: 'Quicksand', sans-serif;
+	line-height:190%;
+	color:#222;
+	margin-top:30px;
+	font-size: 1.3em;
+}
