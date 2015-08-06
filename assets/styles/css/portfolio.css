@@ -2,6 +2,14 @@ body {
   background: #f1f1fa;
 }
 
+
+.active{
+
+  display:none;
+
+}
+
+
 .container {
   font-size: 0;
   max-width: 95%;
@@ -9,7 +17,7 @@ body {
 
 .portfolio-message {
   margin-top: 20px;
-  font-size: 30px;
+  font-size: 22px;
   margin-right: auto;
   margin-left: auto;
   text-align: center;
@@ -26,6 +34,8 @@ body {
   -moz-transition: -moz-transform 300ms ease-out;
   transition: transform 300ms ease-out;
   width: 100px;
+  cursor: pointer;
+
 }
 .wrap:nth-child(even) {
   width: 40px;
