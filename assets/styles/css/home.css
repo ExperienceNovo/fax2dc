@@ -65,6 +65,12 @@ p.under-tagline {
 	font-family: 'Quicksand', sans-serif;
 }
 
+.learn-more {
+	font-family: 'Quicksand', sans-serif;
+	font-size: 1em;
+	text-transform: uppercase;
+}
+
 button.mainbutton {
 	background:none repeat scroll 0 0 transparent;
 	border:1px solid rgba(255,255,255,0.2);
@@ -285,6 +291,7 @@ button.service-button:focus {
 	margin-left: auto;
     margin-right: auto;
 	width:100%;
+	height: auto;
 	background:url(/images/texture-bg.png) repeat;
 }
 .contact-container {

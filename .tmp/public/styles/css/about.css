@@ -57,6 +57,10 @@
 	font-size: 1.3em;
 }
 
+.about-des-bold {
+	font-weight: 700;
+}
+
 .about-top-area {
     //background-color: #a3a3a3;
     background: url(/images/portfolio/code.png) no-repeat center center fixed;
@@ -72,7 +76,7 @@
     color: white;
     font-family: 'Jura', sans-serif;
     font-weight: 400;
-    font-size: 30px;
+    font-size: 2.4em;
     text-align: center;
     width: 80%;
     padding-top: 40px;
@@ -94,7 +98,6 @@
     margin-left: auto;
     text-align: center;
     font-family: 'Quicksand', sans-serif;
-    width: 85%;
 }
 
 .interested-about {
@@ -103,7 +106,17 @@
     margin-right: auto;
     margin-left: auto;
     text-align: center;
-    width: 85%;
+    padding-right: 7.5%;
+    padding-left: 7.5%;
+}
+
+.interested-about p a {
+	color: white;
+	text-transform: uppercase;
+}
+
+.interested-about p a:hover {
+	text-decoration: underline;
 }
 
 .about-tile-area {
@@ -115,6 +128,10 @@
     height: auto;
     overflow: hidden;
     margin: 0 !important;
+}
+
+.about-tile-title {
+	font-weight: 500;
 }
 
 @media screen and (max-width: 1400px) {

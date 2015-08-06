@@ -77,9 +77,10 @@ angular.module("about/index.tpl.html", []).run(["$templateCache", function($temp
     "                        Our clients know what it means to be partners with NOVO. We provide quality work, employ the latest marketing and web development techniques, and  implement a workflow process that allows for complete transparency and client collaboration.\n" +
     "                    </p>\n" +
     "                    <br>\n" +
+    "                    <hr>\n" +
     "                    <br>\n" +
-    "                    <p style=\"font-size:22px;\">Our work speaks for itself.</p>\n" +
-    "                    <br><br>\n" +
+    "                    <p style=\"font-size:22px;\"><a href=\"/portfolio/\">Our work speaks for itself.</a></p>\n" +
+    "                    <br>\n" +
     "                </div>\n" +
     "            </div>\n" +
     "        </div>\n" +
@@ -89,7 +90,7 @@ angular.module("about/index.tpl.html", []).run(["$templateCache", function($temp
     "                <div class=\"hovereffect\">\n" +
     "                    <img class=\"img-responsive\" id=\"about-pic\" src=\"/images/about/designtile.jpg\" alt=\"\">\n" +
     "                    <div class=\"overlay\">\n" +
-    "                        <h2 style=\"font-size: 25px;\">Design</h2>\n" +
+    "                        <h2 class=\"about-tile-title\" style=\"font-size: 25px;\">Design</h2>\n" +
     "                        <div class=\"hover-info\">\n" +
     "                            More info...\n" +
     "                        </div>\n" +
@@ -116,7 +117,7 @@ angular.module("about/index.tpl.html", []).run(["$templateCache", function($temp
     "                <div class=\"hovereffect\">\n" +
     "                    <img class=\"img-responsive\" id=\"about-pic\" src=\"/images/about/devtile.jpg\" alt=\"\">\n" +
     "                    <div class=\"overlay\">\n" +
-    "                        <h2 style=\"font-size: 25px;\">Development</h2>\n" +
+    "                        <h2 class=\"about-tile-title\" style=\"font-size: 25px;\">Development</h2>\n" +
     "                        <div class=\"hover-info\">\n" +
     "                        More info...\n" +
     "                        </div>\n" +
@@ -127,7 +128,7 @@ angular.module("about/index.tpl.html", []).run(["$templateCache", function($temp
     "                <div class=\"hovereffect\">\n" +
     "                    <img class=\"img-responsive\" id=\"about-pic\" src=\"/images/about/marketingtile.jpg\" alt=\"\">\n" +
     "                    <div class=\"overlay\">\n" +
-    "                        <h2 style=\"font-size: 25px;\">Marketing</h2>\n" +
+    "                        <h2 class=\"about-tile-title\" style=\"font-size: 25px;\">Marketing</h2>\n" +
     "                        <div class=\"hover-info\">\n" +
     "                        More info...\n" +
     "                        </div>\n" +
@@ -164,7 +165,7 @@ angular.module("about/index.tpl.html", []).run(["$templateCache", function($temp
     "        </div>\n" +
     "        -->\n" +
     "\n" +
-    "    <br><br><br><br><br>\n" +
+    "    <br><br>\n" +
     "\n" +
     "        <div class=\"about-list\">\n" +
     "            <div class=\"row\">\n" +
@@ -176,11 +177,11 @@ angular.module("about/index.tpl.html", []).run(["$templateCache", function($temp
     "                        </div>\n" +
     "                        <hr>-->\n" +
     "                        <div class=\"about-des\" id=\"design-des\">\n" +
-    "                            <p>Full-scale Branding to ensure clear communication of your message.</p>\n" +
+    "                            <p><span class=\"about-des-bold\">Full-scale Branding</span> to ensure clear communication of your message.</p>\n" +
     "                            <hr>\n" +
-    "                            <p>Custom Interface Design to ensure a seamless customer online experience.</p>\n" +
+    "                            <p><span class=\"about-des-bold\">Custom Interface Design</span> to ensure a seamless customer online experience.</p>\n" +
     "                            <hr>\n" +
-    "                            <p>Advertising Design to establish a strong brand presence within your industry.</p>\n" +
+    "                            <p><span class=\"about-des-bold\">Advertising Design</span> to establish a strong brand presence within your industry.</p>\n" +
     "                        </div>\n" +
     "                    </div>\n" +
     "                    <div class=\"col-md-4\">\n" +
@@ -190,11 +191,11 @@ angular.module("about/index.tpl.html", []).run(["$templateCache", function($temp
     "                        </div>\n" +
     "                        <hr>-->\n" +
     "                        <div class=\"about-des\" id=\"developement-des\">\n" +
-    "                            <p>Mobile-first Web Design to align you with the ever-increasing mobile world.</p>\n" +
+    "                            <p><span class=\"about-des-bold\">Mobile-first Web Design</span> to align you with the ever-increasing mobile world.</p>\n" +
     "                            <hr>\n" +
-    "                            <p>SEO Structuring to naturally expand your online reach and outpace your competitors.</p>\n" +
+    "                            <p><span class=\"about-des-bold\">SEO Structuring</span> to naturally expand your online reach and outpace your competitors.</p>\n" +
     "                            <hr>\n" +
-    "                            <p>Back-end Software Integration to ensure maximum security and business technology integration.</p>\n" +
+    "                            <p><span class=\"about-des-bold\">Back-end Software Integration</span> to ensure maximum security and business technology integration.</p>\n" +
     "                        </div>\n" +
     "                    </div>\n" +
     "                    <div class=\"col-md-4\">\n" +
@@ -204,11 +205,11 @@ angular.module("about/index.tpl.html", []).run(["$templateCache", function($temp
     "                        </div>\n" +
     "                        <hr>-->\n" +
     "                        <div class=\"about-des\" id=\"marketing-des\">\n" +
-    "                            <p>Social Media Management to extend your customer reach.</p>\n" +
+    "                            <p><span class=\"about-des-bold\">Social Media Management</span> to extend your customer reach.</p>\n" +
     "                            <hr>\n" +
-    "                            <p>Email Outreach Marketing to manage current customer and secure new-customer leads.</p>\n" +
+    "                            <p><span class=\"about-des-bold\">Email Outreach Marketing</span> to manage current customer and secure new-customer leads.</p>\n" +
     "                            <hr>\n" +
-    "                            <p>Consistent Content Creation to establish and maintain your presence within your community and your industry.</p>\n" +
+    "                            <p><span class=\"about-des-bold\">Consistent Content Creation</span> to establish and maintain your presence within your community and your industry.</p>\n" +
     "                        </div>\n" +
     "                    </div>\n" +
     "                </div>\n" +
@@ -508,9 +509,9 @@ angular.module("home/index.tpl.html", []).run(["$templateCache", function($templ
     "    <div class=\"banner-text\">\n" +
     "        <h2 class=\"tagline\">Welcome</h2>\n" +
     "        <p class=\"under-tagline\">Embrace change with NOVO<br/>a full-scale online marketing, graphic design, and web development firm.</p>\n" +
-    "        <div class=\"triangle-container\" style=\"margin-top:20%;\">\n" +
+    "        <div class=\"triangle-container\" style=\"margin-top:10%;\">\n" +
     "            <a href=\"#more\">\n" +
-    "                <p style=\"color:#fff\">learn more</p>\n" +
+    "                <p class=\"learn-more\" style=\"color:#fff\">Learn More</p>\n" +
     "                <img src=\"/images/tri.png\"/ style=\"width:100px;\">\n" +
     "                <!--<button class=\"mainbutton\">Learn More</button>-->\n" +
     "            </a>\n" +
