@@ -135,3 +135,22 @@
   -webkit-transform: translate3d(0,0,0);
   transform: translate3d(0,0,0);
 }
+
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 568px)
+{
+  .hovereffect a, .hovereffect p {
+    opacity: 1;
+    -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+    font-family: 'Quicksand', sans-serif;
+    font-size: 19px;
+    padding-top: 20px;
+    text-decoration: underline;
+  }  
+  .black {
+    background-color: #000 !important;
+    opacity: .7 !important;
+  }
+}

@@ -78,6 +78,8 @@
     font-family: 'Jura', sans-serif;
     font-weight: 400;
     font-size: 2.4em;
+    margin-right: auto;
+    margin-left: auto;
     text-align: center;
     width: 80%;
     padding-top: 40px;
@@ -121,14 +123,15 @@
 }
 
 .about-tile-area {
-	border-bottom: 3px solid #2ab996;
+	
 }
 
 .about-tile {
-    width: 33.33%;
+    width: auto;
     height: auto;
     overflow: hidden;
     margin: 0 !important;
+    border-bottom: 3px solid #2ab996;
 }
 
 .about-tile-title {
@@ -144,6 +147,19 @@
     top: 0;
     left: 0;
     padding: 50px 20px;
+}
+
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 568px)
+{
+    .interested-about p {
+        font-size: .8em;
+    }
+    .interested-about p a {
+        font-size: 1em;
+        text-decoration: underline;
+    }
 }
 
 @media screen and (max-width: 1400px) {

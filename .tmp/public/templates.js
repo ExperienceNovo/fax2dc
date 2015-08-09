@@ -289,7 +289,6 @@ angular.module("contact/index.tpl.html", []).run(["$templateCache", function($te
     "<div class=\"surface-container home-pad\">\n" +
     "    <div class=\"title-surface-container\">\n" +
     "        <div class=\"contact-title-home\">\n" +
-    "            <br>\n" +
     "            <p>Contact Us</p>\n" +
     "            <hr>\n" +
     "        </div>\n" +
@@ -316,7 +315,7 @@ angular.module("contact/index.tpl.html", []).run(["$templateCache", function($te
     "<div class=\"surface-container home-pad\" style=\"background-color:rgb(0,0,0)\">\n" +
     "    <div class=\"contact-page-container\">\n" +
     "        <br><br>\n" +
-    "        <div class=\"contact-title-home\" style=\"color:#000;\">\n" +
+    "        <div class=\"contact-title-location\">\n" +
     "            <p>Four Locations Nationwide</p>\n" +
     "            <hr>\n" +
     "            <!--<p>give us a call!</p>-->\n" +
@@ -330,11 +329,12 @@ angular.module("contact/index.tpl.html", []).run(["$templateCache", function($te
     "                            <br>\n" +
     "                            <br>\n" +
     "                            <br>\n" +
-    "                            <h2>Raleigh, NC</h2>\n" +
+    "                            <h2><span class=\"contact-city\">Raleigh, NC</span></h2>\n" +
     "                            <p>\n" +
-    "                                <a href=\"tel:+18656797229\">(865) 679-7229</a>\n" +
+    "                                <a href=\"tel:+18656797229\">865.679.7229</a>\n" +
     "                            </p>\n" +
     "                        </div>\n" +
+    "                        <div class=\"black\"></div>\n" +
     "                    </div>\n" +
     "                </div>\n" +
     "                <div class=\"col-md-3 office-contact\">\n" +
@@ -344,9 +344,9 @@ angular.module("contact/index.tpl.html", []).run(["$templateCache", function($te
     "                            <br>\n" +
     "                            <br>\n" +
     "                            <br>\n" +
-    "                            <h2>Chicago, IL</h2>\n" +
+    "                            <h2><span class=\"contact-city\">Chicago, IL</span></h2>\n" +
     "                            <p>\n" +
-    "                                <a href=\"tel:+18653876121\">(865) 387-6121</a>\n" +
+    "                                <a href=\"tel:+18653876121\">865.387.6121</a>\n" +
     "                            </p>\n" +
     "                        </div>\n" +
     "                    </div>\n" +
@@ -358,9 +358,9 @@ angular.module("contact/index.tpl.html", []).run(["$templateCache", function($te
     "                            <br>\n" +
     "                            <br>\n" +
     "                            <br>\n" +
-    "                            <h2>Knoxville, TN</h2>\n" +
+    "                            <h2><span class=\"contact-city\">Knoxville, TN</span></h2>\n" +
     "                            <p>\n" +
-    "                                <a href=\"tel:+18656969382\">(865) 696-9382</a>\n" +
+    "                                <a href=\"tel:+18656969382\">865.696.9382</a>\n" +
     "                            </p>\n" +
     "                        </div>\n" +
     "                    </div>\n" +
@@ -372,9 +372,9 @@ angular.module("contact/index.tpl.html", []).run(["$templateCache", function($te
     "                            <br>\n" +
     "                            <br>\n" +
     "                            <br>\n" +
-    "                            <h2>Philadelphia, PA</h2>\n" +
+    "                            <h2><span class=\"contact-city\">Philadelphia, PA</span></h2>\n" +
     "                            <p>\n" +
-    "                                <a href=\"tel:+13365800855\">(336) 580-0855</a>\n" +
+    "                                <a href=\"tel:+13365800855\">336.580.0855</a>\n" +
     "                            </p>\n" +
     "                        </div>\n" +
     "                    </div>\n" +
@@ -648,9 +648,9 @@ angular.module("home/index.tpl.html", []).run(["$templateCache", function($templ
     "                            <br>\n" +
     "                            <br>\n" +
     "                            <br>\n" +
-    "                            <h2>Raleigh, NC</h2>\n" +
+    "                            <h2><span class=\"contact-city\">Raleigh, NC</span></h2>\n" +
     "                            <p>\n" +
-    "                                <a href=\"tel:+18656797229\">(865) 679-7229</a>\n" +
+    "                                <a href=\"tel:+18656797229\">865.679.7229</a>\n" +
     "                            </p>\n" +
     "                        </div>\n" +
     "                    </div>\n" +
@@ -662,9 +662,9 @@ angular.module("home/index.tpl.html", []).run(["$templateCache", function($templ
     "                            <br>\n" +
     "                            <br>\n" +
     "                            <br>\n" +
-    "                            <h2>Chicago, IL</h2>\n" +
+    "                            <h2><span class=\"contact-city\">Chicago, IL</span></h2>\n" +
     "                            <p>\n" +
-    "                                <a href=\"tel:+18653876121\">(865) 387-6121</a>\n" +
+    "                                <a href=\"tel:+18653876121\">865.387.6121</a>\n" +
     "                            </p>\n" +
     "                        </div>\n" +
     "                    </div>\n" +
@@ -676,9 +676,9 @@ angular.module("home/index.tpl.html", []).run(["$templateCache", function($templ
     "                            <br>\n" +
     "                            <br>\n" +
     "                            <br>\n" +
-    "                            <h2>Knoxville, TN</h2>\n" +
+    "                            <h2><span class=\"contact-city\">Knoxville, TN</span></h2>\n" +
     "                            <p>\n" +
-    "                                <a href=\"tel:+18656969382\">(865) 696-9382</a>\n" +
+    "                                <a href=\"tel:+18656969382\">865.696.9382</a>\n" +
     "                            </p>\n" +
     "                        </div>\n" +
     "                    </div>\n" +
@@ -690,11 +690,10 @@ angular.module("home/index.tpl.html", []).run(["$templateCache", function($templ
     "                            <br>\n" +
     "                            <br>\n" +
     "                            <br>\n" +
-    "                            <h2>Philadelphia, PA</h2>\n" +
+    "                            <h2><span class=\"contact-city\">Philadelphia, PA</span></h2>\n" +
     "                            <p>\n" +
-    "                                <a href=\"tel:+13365800855\">(336) 580-0855</a>\n" +
-    "                            </p>\n" +
-    "                        </div>\n" +
+    "                                <a href=\"tel:+13365800855\">336.580.0855</a>\n" +
+    "                            </p>                        </div>\n" +
     "                    </div>\n" +
     "                </div>\n" +
     "            </div>\n" +
