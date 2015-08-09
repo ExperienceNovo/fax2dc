@@ -5,7 +5,7 @@ angular.module("about/index.tpl.html", []).run(["$templateCache", function($temp
     "<!--we gotta load in the css in a better fashon than overwriting-->\n" +
     "<link href=\"/styles/css/about.css\" rel=\"stylesheet\">\n" +
     "\n" +
-    "<div class=\"surface-container\">\n" +
+    "<div class=\"surface-container home-pad\">\n" +
     "    <div class=\"about\" id=\"about\">\n" +
     "        <!--<div class=\"about-section-head\">\n" +
     "            <h3>About Us</h3>\n" +
@@ -286,7 +286,7 @@ angular.module("contact/index.tpl.html", []).run(["$templateCache", function($te
     "    }\n" +
     "</style>\n" +
     "\n" +
-    "<div class=\"surface-container\">\n" +
+    "<div class=\"surface-container home-pad\">\n" +
     "    <div class=\"title-surface-container\">\n" +
     "        <div class=\"contact-title-home\" style=\"padding: 2%; color: #000;\">\n" +
     "            <br>\n" +
@@ -311,7 +311,7 @@ angular.module("contact/index.tpl.html", []).run(["$templateCache", function($te
     "</div>\n" +
     "\n" +
     "<!-- i would like if the numbers were more visiable -->\n" +
-    "<div class=\"surface-container\" style=\"background-color:rgb(0,0,0)\">\n" +
+    "<div class=\"surface-container home-pad\" style=\"background-color:rgb(0,0,0)\">\n" +
     "    <div class=\"contact-page-container\">\n" +
     "        <div class=\"center\">\n" +
     "            <div class=\"\" style=\"width: 350px;padding:10px;\">\n" +
@@ -504,7 +504,7 @@ angular.module("home/index.tpl.html", []).run(["$templateCache", function($templ
   $templateCache.put("home/index.tpl.html",
     "<!--css has to over write other styles to work...-->\n" +
     "<link href=\"/styles/css/home.css\" rel=\"stylesheet\" type=\"text/css\"/>\n" +
-    "\n" +
+    "<div class=\"home-pad\">\n" +
     "<div class=\"banner\">\n" +
     "    <div class=\"banner-text\">\n" +
     "        <h2 class=\"tagline\">Welcome</h2>\n" +
@@ -1015,7 +1015,7 @@ angular.module("portfolio/index.tpl.html", []).run(["$templateCache", function($
     "        </div>\n" +
     "    </div>\n" +
     "</div>-->\n" +
-    "\n" +
+    "<div class=\"home-pad\">\n" +
     "<div class=\"container\">\n" +
     "    <div id=\"\" class=\"info\">\n" +
     "        <div class=\"title\" style=\"font-weight:400;\">Quality, Modernity, and Transparency</div>\n" +
@@ -1149,7 +1149,7 @@ angular.module("portfolio/index.tpl.html", []).run(["$templateCache", function($
     "\n" +
     "    </div>\n" +
     "</div>\n" +
-    "");
+    "</div>");
 }]);
 
 angular.module("portfolio/index1.tpl.html", []).run(["$templateCache", function($templateCache) {
@@ -1209,7 +1209,7 @@ angular.module("portfolio/index1.tpl.html", []).run(["$templateCache", function(
 
 angular.module("portfolio/index2.tpl.html", []).run(["$templateCache", function($templateCache) {
   $templateCache.put("portfolio/index2.tpl.html",
-    "<div class=\"container\">\n" +
+    "<div class=\"container home-pad\">\n" +
     "    <div id=\"\" class=\"info\">\n" +
     "        <div class=\"title\" style=\"font-weight:400;\">Quality, Modernity, and Transparency</div>\n" +
     "        <br>\n" +
@@ -1226,7 +1226,7 @@ angular.module("portfolio/index2.tpl.html", []).run(["$templateCache", function(
     "</div>\n" +
     "\n" +
     "<!--make dynamic with angular-->\n" +
-    "<div class='container' style=\"margin: 180px auto 0;\">\n" +
+    "<div class='container home-pad' style=\"margin: 180px auto 0;\">\n" +
     "    <div class='wrap'>\n" +
     "        <div class='crop'>\n" +
     "            <img src='' style=\"background-color: #1db996;\">\n" +
@@ -1255,7 +1255,7 @@ angular.module("portfolio/index2.tpl.html", []).run(["$templateCache", function(
     "</div>\n" +
     "\n" +
     "\n" +
-    "<div class=\"container\">\n" +
+    "<div class=\"container home-pad\">\n" +
     "\n" +
     "    <div id=\"absolute\" class=\"info\">\n" +
     "        <div class=\"title\">Absolute Yachts North America</div>\n" +

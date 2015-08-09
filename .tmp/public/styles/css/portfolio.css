@@ -2,13 +2,9 @@ body {
   background: #f1f1fa;
 }
 
-
 .active{
-
   display:none;
-
 }
-
 
 .container {
   font-size: 0;

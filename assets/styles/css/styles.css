@@ -1,12 +1,8 @@
 @import "http://fonts.googleapis.com/css?family=Jura";
-
 @import "http://fonts.googleapis.com/css?family=Cantarell";
 
-html, body {
-    height:100%;
-}
-
 html,body {
+    height:100%;
 	font-family:verdana,arial,sans-serif;
 	color:#000;
 	text-align:center;
@@ -15,6 +11,15 @@ html,body {
     padding:0;
 }
 
+.home-pad {
+    margin-left: 67px;
+}
+
+@media screen and (max-width: 640px) {
+    .home-pad {
+        margin-left: 50px;
+    }
+}
 .nav {
 	font-family:Jura;
 	font-size:20px;

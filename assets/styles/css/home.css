@@ -3,21 +3,10 @@
 
 html, body {
     height:100%;
-    background-color: #f1f1fa;  
+    background-color: #000;  
     overflow-x:hidden!important;
     margin:0;
     padding:0;
-}
-
-@media screen and (max-width: 720px) {
-    body {
-        margin-left: 64px;
-    }
-}
-@media screen and (max-width: 640px) {
-    body {
-        margin-left: 50px;
-    }
 }
 
 a:hover {
@@ -29,14 +18,12 @@ a:hover {
 }
 
 .banner {
-    background: url(/images/overlay.png),url(/images/bg.png)
-    no-repeat fixed;
+    background: url(/images/overlay.png),url(/images/bg.png) no-repeat fixed;
 	background-color:#3d454a;
 	cursor:default;
     height: 100vh;
-    min-height: 800px;
-    padding-top: 40px;
-    background-size: 100%;
+    min-height: 100vh;
+    background-size: cover;
 }
 
 .banner-text {
@@ -52,7 +39,7 @@ a:hover {
 	color:#fff;
 	font-family:Jura;
 	font-size:6em;
-	font-weight:600;
+	font-weight:400;
 	line-height:1.5;
 }
 

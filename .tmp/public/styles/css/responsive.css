@@ -1,8 +1,4 @@
 @media (min-width: 1080px) and (max-width: 1200px) {
-    .banner {
-        padding:160px 0 80px;
-    }
-
     .section-head {
         padding:80px 0 60px 25.5px;
     }
@@ -73,10 +69,6 @@
 }
 
 @media (min-width: 768px) and (max-width: 1080px) {
-    .banner {
-        padding:60px 0 60px;
-    }
-
     .banner-text h2 {
         font-size:25px;
     }
@@ -155,9 +147,6 @@
 }
 
 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
-    .banner {
-        padding:160px 0 60px;
-    }
 
     .banner-text {
         width:70%;
@@ -247,7 +236,6 @@
     	-moz-background-size:cover;
     	-webkit-background-size:cover;
     	background-size:cover;
-        padding:120px 0 60px;
         cursor:default;
     }
     
@@ -381,7 +369,6 @@
     	-moz-background-size:cover;
     	-webkit-background-size:cover;
     	background-size:cover;
-        padding:180px 0 40px;
         cursor:default;
     }
 
