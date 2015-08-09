@@ -2,8 +2,8 @@
     position: relative;
     overflow: hidden;
     z-index: 15;
-    border-bottom: 2px solid #2ab996;
-    border-top: 2px solid #2ab996;
+    border-bottom: 3px solid #2ab996;
+    border-top: 3px solid #2ab996;
 }
 
 .map-center {
@@ -31,7 +31,8 @@
     width: 100%;
     margin-left: auto;
     margin-right: auto;
-    background:url(/images/texture-bg.png) repeat;
+    background:black;
+    border-bottom: 3px solid #2ab996;
 }
 
 .contact-page-container {
@@ -98,11 +99,34 @@
     font-weight: 500;
 }
 
+.contact-icons {
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+}
+
+.contact-icons a {
+    font-size: 3.5em;
+    color: #2AB996;
+    padding-left: 1%;
+    padding-right: 1%;
+}
+
+.contact-icons a:hover {
+    opacity: .8;
+}
+
 .message p {
     font-size: 1.5em;
     margin-right: auto;
     margin-left: auto;
     text-align: center;
+}
+
+.office-contact {
+    width: 20%;
+    min-width: 200px;
+    padding: 10px;
 }
 
 .newsletter {
@@ -184,7 +208,14 @@
 }
 
 /* media queries */
-
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 568px)
+{
+    .contact-icons a {
+        font-size: 2.5em;
+    }
+}
 @media screen and (max-width: 920px) {
     .map-container {
         display: none;

@@ -24,6 +24,7 @@ a:hover {
     height: 100vh;
     min-height: 100vh;
     background-size: cover;
+    border-bottom: 3px solid #2ab996;
 }
 
 .banner-text {
@@ -54,8 +55,12 @@ p.under-tagline {
 
 .learn-more {
 	font-family: 'Quicksand', sans-serif;
-	font-size: 1em;
+	font-size: 2em;
 	text-transform: uppercase;
+}
+
+.learn-more:hover {
+	text-decoration: underline;
 }
 
 button.mainbutton {
@@ -111,6 +116,7 @@ button.service-button:focus {
 	background:url(/images/texture-bg.png) repeat;
 	height: 100vh;
 	min-height: 900px;
+	border-bottom: 3px solid #2ab996;
 }
 
 .section-head {
@@ -153,7 +159,7 @@ button.service-button:focus {
 }
 
 .services-list {
-	padding-bottom:150px;
+	padding-bottom:100px;
 }
 
 .service-title h2 {
@@ -194,14 +200,22 @@ button.service-button:focus {
 
 .desc {
 	background:url(/images/overlay.png),url(/images/bg.png) no-repeat fixed;
-	padding:100px 0px 150px 0px;
+	padding:75px 0px 100px 0px;
 	background-color:#3d454a;
 	cursor:default;
 	width:100%;
 	text-align:center;
+	border-bottom: 3px solid #2ab996;
 }
 
 .desc h3 {
+	font-family:Jura;
+	font-size:50px;
+	font-weight:600;
+	color:#2AB996;
+}
+
+.desc h3 a {
 	font-family:Jura;
 	font-size:50px;
 	font-weight:600;
@@ -270,7 +284,7 @@ button.service-button:focus {
 }
 
 .contact, .contact-section {
-	padding-bottom: 100px;
+	padding-bottom: 50px;
 }
 
 .surface-container-home {
@@ -283,6 +297,7 @@ button.service-button:focus {
 }
 .contact-container {
 	padding-top: 100px;
+	padding-bottom: 50px;
 }
 
 .contact-home {
@@ -301,7 +316,6 @@ button.service-button:focus {
     font-weight: 600;
     font-size: 50px;
     color: #2ab996;
-    font-weight: 600;
     margin-right: auto;
     margin-left: auto;
     text-align: center;
@@ -352,6 +366,12 @@ button.service-button:focus {
     font-family: 'Quicksand', sans-serif;
 }
 
+.office-home {
+	width: 20%;
+	min-width: 200px;
+	padding: 10px;
+}
+
 .small-medium-home {
 	position: relative;
 	width: 190px;
@@ -363,24 +383,24 @@ button.service-button:focus {
 }
 
 .newsletter-section {
-	margin-top: 20px;
     font-size: large;
     margin-right: auto;
     margin-left: auto;
     text-align: center;
     font-family: 'Quicksand', sans-serif;
     color: #fff;
-    padding-top: 80px;
+    padding-top: 50px;
     padding-left: 20px;
     padding-right: 20px;
     background-color: black;
+	border-bottom: 3px solid #2ab996;
+	border-top: 3px solid #2ab996;
 }
 
 .newsletter-home {
     margin-right: auto;
     margin-left: auto;
     text-align: center;
-    margin-top: 10px;
     font-size: 2em;
     font-weight: 300;
 }
@@ -503,6 +523,12 @@ input:focus + .indicator:after {
 	margin-right:auto;
 }
 
+.footer {
+	width: 100%;
+	height: auto;
+	background:url(/images/texture-bg.png) repeat;
+}
+
 /*@media only screen and (max-width: 1200px) { 
 .banner-text {
     margin-top: -120px;
@@ -518,6 +544,28 @@ input:focus + .indicator:after {
 	.banner-text {
 		margin-top: 0px;
 	}
+	.section-head {
+		padding: 50px 0 15px;
+	}
+	.services-list {
+		padding-bottom: 75px;
+	}
+	.desc {
+		padding: 50px 0px 75px 0px;
+	}
+	.portfolio-link a {
+		text-decoration: underline;
+		font-size: 40px !important;
+		padding-left: 3%;
+		padding-right: 3%;
+	}
+	.contact-container {
+		padding-top: 50px;
+		padding-bottom: 50px;
+	}
+	.contact-title-home {
+		font-size: 35px;
+	}
   	.interested, .interested-home {
   		font-size: 1em !important;
   	}
@@ -528,8 +576,14 @@ input:focus + .indicator:after {
   		font-size: large !important;
   		font-weight: 400 !important;
   	}
+  	.newsletter-section {
+  		padding-bottom: 40px;
+  	}
   	.newsletter, .newsletter-home {
   		font-size: 1.5em !important;
+  	}
+  	.contact, .contact-section {
+  		padding-bottom: 50px;
   	}
   	.small-medium {
   		padding-bottom: 15% !important;
@@ -583,7 +637,7 @@ input:focus + .indicator:after {
 	.services-list i {
 		color:#2AB996;
 		padding-bottom:0px;
-		padding-top:75px;
+		padding-top:40px;
 	}
 	.contact-section .ctr {
 	    display:block;

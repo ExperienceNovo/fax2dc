@@ -89,11 +89,11 @@ angular.module("about/index.tpl.html", []).run(["$templateCache", function($temp
     "            <div class=\"about-tile\" style=\"\">\n" +
     "                <div class=\"hovereffect\">\n" +
     "                    <img class=\"img-responsive\" id=\"about-pic\" src=\"/images/about/designtile.jpg\" alt=\"\">\n" +
-    "                    <div class=\"overlay\">\n" +
+    "                    <div class=\"overlay-about\">\n" +
     "                        <h2 class=\"about-tile-title\" style=\"font-size: 25px;\">Design</h2>\n" +
-    "                        <div class=\"hover-info\">\n" +
-    "                            More info...\n" +
-    "                        </div>\n" +
+    "                        <p class=\"hover-info\"><a href=\"#\">\n" +
+    "                        More info...</a>\n" +
+    "                        </p>\n" +
     "                        <!--\n" +
     "                        <p style=\"font-size: 40px;\">\n" +
     "                            <a href=\"http://www.absoluteyachtsna.com/\">\n" +
@@ -116,22 +116,22 @@ angular.module("about/index.tpl.html", []).run(["$templateCache", function($temp
     "            <div class=\"about-tile\" style=\"\">\n" +
     "                <div class=\"hovereffect\">\n" +
     "                    <img class=\"img-responsive\" id=\"about-pic\" src=\"/images/about/devtile.jpg\" alt=\"\">\n" +
-    "                    <div class=\"overlay\">\n" +
+    "                    <div class=\"overlay-about\">\n" +
     "                        <h2 class=\"about-tile-title\" style=\"font-size: 25px;\">Development</h2>\n" +
-    "                        <div class=\"hover-info\">\n" +
-    "                        More info...\n" +
-    "                        </div>\n" +
+    "                        <p class=\"hover-info\"><a href=\"#\">\n" +
+    "                        More info...</a>\n" +
+    "                        </p>\n" +
     "                    </div>\n" +
     "                </div>\n" +
     "            </div>\n" +
     "            <div class=\"about-tile\" style=\"\">\n" +
     "                <div class=\"hovereffect\">\n" +
     "                    <img class=\"img-responsive\" id=\"about-pic\" src=\"/images/about/marketingtile.jpg\" alt=\"\">\n" +
-    "                    <div class=\"overlay\">\n" +
+    "                    <div class=\"overlay-about\">\n" +
     "                        <h2 class=\"about-tile-title\" style=\"font-size: 25px;\">Marketing</h2>\n" +
-    "                        <div class=\"hover-info\">\n" +
-    "                        More info...\n" +
-    "                        </div>\n" +
+    "                        <p class=\"hover-info\"><a href=\"#\">\n" +
+    "                        More info...</a>\n" +
+    "                        </p>\n" +
     "                        <!--\n" +
     "                        <p>\n" +
     "                            <br>\n" +
@@ -288,89 +288,99 @@ angular.module("contact/index.tpl.html", []).run(["$templateCache", function($te
     "\n" +
     "<div class=\"surface-container home-pad\">\n" +
     "    <div class=\"title-surface-container\">\n" +
-    "        <div class=\"contact-title-home\" style=\"padding: 2%; color: #000;\">\n" +
+    "        <div class=\"contact-title-home\">\n" +
     "            <br>\n" +
     "            <p>Contact Us</p>\n" +
     "            <hr>\n" +
     "        </div>\n" +
-    "        <div class=\"contact-home\">\n" +
+    "        <br>\n" +
+    "        <div class=\"contact-icons\">\n" +
+    "            <a class=\"envelope-icon\" href=\"mailto:info@projectnovo.co\"><i class=\"fa fa-envelope\"></i></a>\n" +
+    "            <a class=\"facebook-icon\" href=\"https://www.facebook.com/experienceNOVO\"><i class=\"fa fa-facebook\"></i></a>\n" +
+    "            <a class=\"twitter-icon\" href=\"https://twitter.com/experienceNOVO\"><i class=\"fa fa-twitter\"></i></a>\n" +
+    "            <a class=\"linkedin-icon\" href=\"https://www.linkedin.com/company/novo---web-design-web-development-&-online-marketing?trk=biz-companies-cym\"><i class=\"fa fa-linkedin\"></i></a>\n" +
+    "            <a class=\"blog-icon\" href=\"/blog/\"><i class=\"fa fa-rss\"></i></a>\n" +
+    "        </div>\n" +
+    "        <br><br><br>\n" +
+    "            <!--\n" +
     "            <div class=\"message\">\n" +
     "                <a href=\"mailto:info@projectnovo.co\"><button class=\"mainbutton service-button\">email us: info@projectnovo.co</button></a>\n" +
-    "                <br><br><br><br>\n" +
+    "                <br><br><br>\n" +
     "            </div>\n" +
+    "            -->\n" +
     "        </div>\n" +
-    "        <div class=\"message\">\n" +
-    "            <div class=\"interested\"><a href=\"/portfolio/\">Our work speaks for itself.</a></div>\n" +
-    "            <p>Four Locations Nationwide</p>\n" +
-    "            <hr>\n" +
-    "            <!--<p>give us a call!</p>-->\n" +
-    "            <br>\n" +
-    "        </div>\n" +
-    "        <br>\n" +
     "    </div>\n" +
     "</div>\n" +
     "\n" +
     "<!-- i would like if the numbers were more visiable -->\n" +
     "<div class=\"surface-container home-pad\" style=\"background-color:rgb(0,0,0)\">\n" +
     "    <div class=\"contact-page-container\">\n" +
-    "        <div class=\"center\">\n" +
-    "            <div class=\"\" style=\"width: 350px;padding:10px;\">\n" +
-    "                <div class=\"hovereffect\">\n" +
-    "                    <img class=\"img-responsive\" src=\"/images/contact/chap.jpeg\" alt=\"\">\n" +
-    "                    <div class=\"overlay\">\n" +
-    "                        <br>\n" +
-    "                        <br>\n" +
-    "                        <br>\n" +
-    "                        <h2 style=\"font-size: 25px;\">Chapel Hill, NC</h2>\n" +
-    "                        <p>\n" +
-    "                            <a href=\"tel:+18656797229\">(865) 679-7229</a>\n" +
-    "                        </p>\n" +
-    "                    </div>\n" +
-    "                </div>\n" +
-    "            </div>\n" +
-    "            <div class=\"\" style=\"width: 350px;padding:10px;\">\n" +
-    "                <div class=\"hovereffect\">\n" +
-    "                    <img class=\"img-responsive\" src=\"/images/contact/evanston.jpg\" alt=\"\">\n" +
-    "                    <div class=\"overlay\">\n" +
-    "                        <br>\n" +
-    "                        <br>\n" +
-    "                        <br>\n" +
-    "                        <h2 style=\"font-size: 25px;\">Evanston, IL</h2>\n" +
-    "                        <p>\n" +
-    "                            <a href=\"tel:+18653876121\">(865) 387-6121</a>\n" +
-    "                        </p>\n" +
-    "                    </div>\n" +
-    "                </div>\n" +
-    "            </div>\n" +
-    "            <div class=\"\" style=\"width: 350px;padding:10px;\">\n" +
-    "                <div class=\"hovereffect\">\n" +
-    "                    <img class=\"img-responsive\" src=\"/images/contact/knoxville.jpg\" alt=\"\">\n" +
-    "                    <div class=\"overlay\">\n" +
-    "                        <br>\n" +
-    "                        <br>\n" +
-    "                        <br>\n" +
-    "                        <h2 style=\"font-size: 25px;\">Knoxville, TN</h2>\n" +
-    "                        <p>\n" +
-    "                            <a href=\"tel:+18656969382\">(865) 696-9382</a>\n" +
-    "                        </p>\n" +
-    "                    </div>\n" +
-    "                </div>\n" +
-    "            </div>\n" +
-    "            <div class=\"\" style=\"width: 350px;padding:10px;\">\n" +
-    "                <div class=\"hovereffect\">\n" +
-    "                    <img class=\"img-responsive\" src=\"/images/contact/philly.jpg\" alt=\"\">\n" +
-    "                    <div class=\"overlay\">\n" +
-    "                        <br>\n" +
-    "                        <br>\n" +
-    "                        <br>\n" +
-    "                        <h2 style=\"font-size: 25px;\">Philadelphia, PA</h2>\n" +
-    "                        <p>\n" +
-    "                            <a href=\"tel:+13365800855\">(336) 580-0855</a>\n" +
-    "                        </p>\n" +
-    "                    </div>\n" +
-    "                </div>\n" +
-    "            </div>\n" +
+    "        <br><br>\n" +
+    "        <div class=\"contact-title-home\" style=\"color:#000;\">\n" +
+    "            <p>Four Locations Nationwide</p>\n" +
+    "            <hr>\n" +
+    "            <!--<p>give us a call!</p>-->\n" +
     "        </div>\n" +
+    "        <div class=\"row\">    \n" +
+    "            <div class=\"col-md-12 center\">\n" +
+    "                <div class=\"col-md-3 office-contact\">\n" +
+    "                    <div class=\"hovereffect\">\n" +
+    "                        <img class=\"img-responsive\" src=\"/images/contact/raleigh-nc.jpg\" alt=\"\">\n" +
+    "                        <div class=\"overlay\">\n" +
+    "                            <br>\n" +
+    "                            <br>\n" +
+    "                            <br>\n" +
+    "                            <h2>Raleigh, NC</h2>\n" +
+    "                            <p>\n" +
+    "                                <a href=\"tel:+18656797229\">(865) 679-7229</a>\n" +
+    "                            </p>\n" +
+    "                        </div>\n" +
+    "                    </div>\n" +
+    "                </div>\n" +
+    "                <div class=\"col-md-3 office-contact\">\n" +
+    "                    <div class=\"hovereffect\">\n" +
+    "                        <img class=\"img-responsive\" src=\"/images/contact/evanston.jpg\" alt=\"\">\n" +
+    "                        <div class=\"overlay\">\n" +
+    "                            <br>\n" +
+    "                            <br>\n" +
+    "                            <br>\n" +
+    "                            <h2>Chicago, IL</h2>\n" +
+    "                            <p>\n" +
+    "                                <a href=\"tel:+18653876121\">(865) 387-6121</a>\n" +
+    "                            </p>\n" +
+    "                        </div>\n" +
+    "                    </div>\n" +
+    "                </div>\n" +
+    "                <div class=\"col-md-3 office-contact\">\n" +
+    "                    <div class=\"hovereffect\">\n" +
+    "                        <img class=\"img-responsive\" src=\"/images/contact/knoxville.jpg\" alt=\"\">\n" +
+    "                        <div class=\"overlay\">\n" +
+    "                            <br>\n" +
+    "                            <br>\n" +
+    "                            <br>\n" +
+    "                            <h2>Knoxville, TN</h2>\n" +
+    "                            <p>\n" +
+    "                                <a href=\"tel:+18656969382\">(865) 696-9382</a>\n" +
+    "                            </p>\n" +
+    "                        </div>\n" +
+    "                    </div>\n" +
+    "                </div>\n" +
+    "                <div class=\"col-md-3 office-contact\">\n" +
+    "                    <div class=\"hovereffect\">\n" +
+    "                        <img class=\"img-responsive\" src=\"/images/contact/philly.jpg\" alt=\"\">\n" +
+    "                        <div class=\"overlay\">\n" +
+    "                            <br>\n" +
+    "                            <br>\n" +
+    "                            <br>\n" +
+    "                            <h2>Philadelphia, PA</h2>\n" +
+    "                            <p>\n" +
+    "                                <a href=\"tel:+13365800855\">(336) 580-0855</a>\n" +
+    "                            </p>\n" +
+    "                        </div>\n" +
+    "                    </div>\n" +
+    "                </div>\n" +
+    "            </div>\n" +
+    "        </div>    \n" +
     "        <br>\n" +
     "        <br>\n" +
     "        <br>\n" +
@@ -565,13 +575,15 @@ angular.module("home/index.tpl.html", []).run(["$templateCache", function($templ
     "                </div>\n" +
     "            </div>\n" +
     "        </div>\n" +
-    "        <br><br><br>\n" +
+    "        <br><br>\n" +
     "        <a href=\"/about/\"><button class=\"mainbutton service-button\">More Info...</button></a>\n" +
     "    </div>\n" +
     "</div>\n" +
     "    \n" +
     "<div id=\"home2\">\n" +
     "    <div class=\"desc\" align=\"center\">\n" +
+    "        <h3 class=\"portfolio-link\"><a href=\"/portfolio/\">View Our Portolio</a></h3>\n" +
+    "        <!--\n" +
     "        <h3>Meet The Team</h3>\n" +
     "        <hr>\n" +
     "        <div id=\"team\">\n" +
@@ -612,6 +624,7 @@ angular.module("home/index.tpl.html", []).run(["$templateCache", function($templ
     "                </div>\n" +
     "            </div>\n" +
     "        </div>\n" +
+    "        -->\n" +
     "    </div>\n" +
     "</div>\n" +
     "\n" +
@@ -625,59 +638,59 @@ angular.module("home/index.tpl.html", []).run(["$templateCache", function($templ
     "                <br>\n" +
     "                <div class=\"contact-us-home\">Email us at\n" +
     "                <a href=\"mailto:info@projectnovo.co\" style=\"color: #1db996;\">info@projectnovo.co</a></div> or <div class=\"contact-us-home\">Call us at one of our <span style=\"color: #1db996; font-weight: 500;\">four</span> locations!</div>\n" +
-    "                <br><br><br>\n" +
     "            </div>\n" +
-    "            <div class=\"center\">\n" +
-    "                <div class=\"\" style=\"width: 350px;padding:10px;\">\n" +
+    "        <div class=\"row\">    \n" +
+    "            <div class=\"col-md-12 center\">\n" +
+    "                <div class=\"col-md-3 office-home\">\n" +
     "                    <div class=\"hovereffect\">\n" +
-    "                        <img class=\"img-responsive\" src=\"/images/contact/chap.jpeg\" alt=\"\">\n" +
+    "                        <img class=\"img-responsive\" src=\"/images/contact/raleigh-nc.jpg\" alt=\"\">\n" +
     "                        <div class=\"overlay\">\n" +
     "                            <br>\n" +
     "                            <br>\n" +
     "                            <br>\n" +
-    "                            <h2 style=\"font-size: 25px;\"><a href=\"/contact/\">Chapel Hill, NC</a></h2>\n" +
+    "                            <h2>Raleigh, NC</h2>\n" +
     "                            <p>\n" +
     "                                <a href=\"tel:+18656797229\">(865) 679-7229</a>\n" +
     "                            </p>\n" +
     "                        </div>\n" +
     "                    </div>\n" +
     "                </div>\n" +
-    "                <div class=\"\" style=\"width: 350px;padding:10px;\">\n" +
+    "                <div class=\"col-md-3 office-home\">\n" +
     "                    <div class=\"hovereffect\">\n" +
     "                        <img class=\"img-responsive\" src=\"/images/contact/evanston.jpg\" alt=\"\">\n" +
     "                        <div class=\"overlay\">\n" +
     "                            <br>\n" +
     "                            <br>\n" +
     "                            <br>\n" +
-    "                            <h2 style=\"font-size: 25px;\"><a href=\"/contact/\">Evanston, IL</a></h2>\n" +
+    "                            <h2>Chicago, IL</h2>\n" +
     "                            <p>\n" +
     "                                <a href=\"tel:+18653876121\">(865) 387-6121</a>\n" +
     "                            </p>\n" +
     "                        </div>\n" +
     "                    </div>\n" +
     "                </div>\n" +
-    "                <div class=\"\" style=\"width: 350px;padding:10px;\">\n" +
+    "                <div class=\"col-md-3 office-home\">\n" +
     "                    <div class=\"hovereffect\">\n" +
     "                        <img class=\"img-responsive\" src=\"/images/contact/knoxville.jpg\" alt=\"\">\n" +
     "                        <div class=\"overlay\">\n" +
     "                            <br>\n" +
     "                            <br>\n" +
     "                            <br>\n" +
-    "                            <h2 style=\"font-size: 25px;\"><a href=\"/contact/\">Knoxville, TN</a></h2>\n" +
+    "                            <h2>Knoxville, TN</h2>\n" +
     "                            <p>\n" +
     "                                <a href=\"tel:+18656969382\">(865) 696-9382</a>\n" +
     "                            </p>\n" +
     "                        </div>\n" +
     "                    </div>\n" +
     "                </div>\n" +
-    "                <div class=\"\" style=\"width: 350px;padding:10px;\">\n" +
+    "                <div class=\"col-md-3 office-home\">\n" +
     "                    <div class=\"hovereffect\">\n" +
     "                        <img class=\"img-responsive\" src=\"/images/contact/philly.jpg\" alt=\"\">\n" +
     "                        <div class=\"overlay\">\n" +
     "                            <br>\n" +
     "                            <br>\n" +
     "                            <br>\n" +
-    "                            <h2 style=\"font-size: 25px;\"><a href=\"/contact/\">Philadelphia, PA</a></h2>\n" +
+    "                            <h2>Philadelphia, PA</h2>\n" +
     "                            <p>\n" +
     "                                <a href=\"tel:+13365800855\">(336) 580-0855</a>\n" +
     "                            </p>\n" +
@@ -685,10 +698,12 @@ angular.module("home/index.tpl.html", []).run(["$templateCache", function($templ
     "                    </div>\n" +
     "                </div>\n" +
     "            </div>\n" +
-    "            <br><br>\n" +
+    "        </div>    \n" +
+    "            <br>\n" +
+    "            <br>\n" +
+    "            <br>\n" +
     "        </div>\n" +
     "    </div>\n" +
-    "    <br><br>\n" +
     "\n" +
     "    <div class=\"newsletter-section\">\n" +
     "        <br>\n" +
@@ -709,6 +724,9 @@ angular.module("home/index.tpl.html", []).run(["$templateCache", function($templ
     "                <div class=\"clear\"><input type=\"submit\" value=\"Subscribe\" name=\"subscribe\" id=\"mc-embedded-subscribe\" class=\"button\"></div>\n" +
     "            </div>\n" +
     "        </div>\n" +
+    "    </div>\n" +
+    "    <div class=\"footer\">\n" +
+    "    <br><br><br>\n" +
     "    </div>\n" +
     "</div>\n" +
     "");
