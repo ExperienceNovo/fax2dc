@@ -7,7 +7,8 @@ angular.module( 'novo.sidebar', [
     var navItems = [
         {title: 'About', translationKey: 'navigation:about', url:'/about',cssClass: 'fa fa-info-circle'},
         {title: 'Blog', translationKey: 'navigation:messages', url: '/blog', cssClass: 'fa fa-comments'},
-        {title: 'Contact', translationKey: 'navigation:about', url:'/contact',cssClass: 'fa fa-info-circle'}
+        {title: 'Contact', translationKey: 'navigation:about', url:'/contact',cssClass: 'fa fa-info-circle'},
+        {title: 'Portfolio', translationKey: 'navigation:about', url:'/portfolio',cssClass: 'fa fa-picture-o'},
     ];
 
     if (!$scope.currentUser) {
