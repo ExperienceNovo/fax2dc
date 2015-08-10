@@ -7,65 +7,6 @@ angular.module("about/index.tpl.html", []).run(["$templateCache", function($temp
     "\n" +
     "<div class=\"surface-container home-pad\">\n" +
     "    <div class=\"about\" id=\"about\">\n" +
-    "        <!--<div class=\"about-section-head\">\n" +
-    "            <h3>About Us</h3>\n" +
-    "            <hr>\n" +
-    "        </div>\n" +
-    "        -->\n" +
-    "        <!--\n" +
-    "        <div class=\"about-list\">\n" +
-    "            <div class=\"row\">\n" +
-    "                <div class=\"col-md-12\">\n" +
-    "                    <div class=\"col-md-4\">\n" +
-    "                        <i class=\"fa fa-paint-brush fa-5x\"></i>\n" +
-    "                        <div class=\"about-title\">\n" +
-    "                            <h2>Design</h2>\n" +
-    "                        </div>\n" +
-    "                        <hr>\n" +
-    "                        <div class=\"about-des\">\n" +
-    "                            <p>Full-scale Branding to ensure clear communication of your message.</p>\n" +
-    "                            <p>Custom Interface Design to ensure a seamless customer online experience.</p>\n" +
-    "                            <p>Advertising Design to establish a strong brand presence within your industry.</p>\n" +
-    "                        </div>\n" +
-    "                    </div>\n" +
-    "                    <div class=\"col-md-4\">\n" +
-    "                        <i class=\"fa fa-code fa-5x\"></i>\n" +
-    "                        <div class=\"about-title\">\n" +
-    "                            <h2>Development</h2>\n" +
-    "                        </div>\n" +
-    "                        <hr>\n" +
-    "                        <div class=\"about-des\">\n" +
-    "                            <p>Mobile-first Web Design to align you with the ever-increasing mobile world.</p>\n" +
-    "                            <p>SEO Structuring to naturally expand your online reach and outpace your competitors.</p>\n" +
-    "                            <p>Back-end Software Integration to ensure maximum security and business technology integration.</p>\n" +
-    "                        </div>\n" +
-    "                    </div>\n" +
-    "                    <div class=\"col-md-4\">\n" +
-    "                        <i class=\"fa fa-users fa-5x\"></i>\n" +
-    "                        <div class=\"about-title\">\n" +
-    "                            <h2>Marketing</h2>\n" +
-    "                        </div>\n" +
-    "                        <hr>\n" +
-    "                        <div class=\"about-des\">\n" +
-    "                            <p>Social Media Management to extend your customer reach.</p>\n" +
-    "                            <p>Email Outreach Marketing to manage current customer and secure new-customer leads.</p>\n" +
-    "                            <p>Consistent Content Creation to establish and maintain your presence within your community and your industry.</p>\n" +
-    "                        </div>\n" +
-    "                    </div>\n" +
-    "                </div>\n" +
-    "            </div>\n" +
-    "            <br>\n" +
-    "            <br>\n" +
-    "            <br>\n" +
-    "        </div>\n" +
-    "       \n" +
-    "        <br><br><br>\n" +
-    "\n" +
-    "    </div>\n" +
-    "    -->\n" +
-    "\n" +
-    "\n" +
-    "\n" +
     "        <div class=\"center about-top-area\">\n" +
     "            <div class=\"about-title-top\">Quality, Modernity, and Transparency\n" +
     "            <hr>\n" +
@@ -84,32 +25,16 @@ angular.module("about/index.tpl.html", []).run(["$templateCache", function($temp
     "                </div>\n" +
     "            </div>\n" +
     "        </div>\n" +
-    "\n" +
+    "        <!--we need to space this out-->\n" +
     "        <div class=\"center about-tile-area\" style=\"background:url(/images/texture-bg.png) repeat;\">\n" +
     "            <div class=\"about-tile\" style=\"\">\n" +
     "                <div class=\"hovereffect\">\n" +
     "                    <img class=\"img-responsive\" id=\"about-pic\" src=\"/images/about/designtile.jpg\" alt=\"\">\n" +
     "                    <div class=\"overlay-about\">\n" +
     "                        <h2 class=\"about-tile-title\" style=\"font-size: 25px;\">Design</h2>\n" +
-    "                        <p class=\"hover-info\"><a href=\"#\">\n" +
-    "                        More info...</a>\n" +
+    "                        <p class=\"hover-info\">\n" +
+    "                            hell yes\n" +
     "                        </p>\n" +
-    "                        <!--\n" +
-    "                        <p style=\"font-size: 40px;\">\n" +
-    "                            <a href=\"http://www.absoluteyachtsna.com/\">\n" +
-    "                                <i class=\"fa fa-globe\"></i>\n" +
-    "                            </a>\n" +
-    "                            <a href=\"https://www.facebook.com/pages/Absolute-North-America/1467350980243678\">\n" +
-    "                                <i class=\"fa fa-facebook\"></i>\n" +
-    "                            </a>\n" +
-    "                            <a href=\"https://twitter.com/AbsoluteNA\">\n" +
-    "                                <i class=\"fa fa-twitter\"></i>\n" +
-    "                            </a>\n" +
-    "                            <a href=\"https://instagram.com/absoluteyachtsna/\">\n" +
-    "                                <i class=\"fa fa-instagram\"></i>\n" +
-    "                            </a>\n" +
-    "                        </p>\n" +
-    "                        -->\n" +
     "                    </div>\n" +
     "                </div>\n" +
     "            </div>\n" +
@@ -118,8 +43,12 @@ angular.module("about/index.tpl.html", []).run(["$templateCache", function($temp
     "                    <img class=\"img-responsive\" id=\"about-pic\" src=\"/images/about/devtile.jpg\" alt=\"\">\n" +
     "                    <div class=\"overlay-about\">\n" +
     "                        <h2 class=\"about-tile-title\" style=\"font-size: 25px;\">Development</h2>\n" +
-    "                        <p class=\"hover-info\"><a href=\"#\">\n" +
-    "                        More info...</a>\n" +
+    "                        <p class=\"hover-info\">\n" +
+    "                            software development<br>\n" +
+    "                            web applications<br>\n" +
+    "                            the best practices<br>\n" +
+    "                            angular<br>\n" +
+    "                            node.js\n" +
     "                        </p>\n" +
     "                    </div>\n" +
     "                </div>\n" +
@@ -129,43 +58,17 @@ angular.module("about/index.tpl.html", []).run(["$templateCache", function($temp
     "                    <img class=\"img-responsive\" id=\"about-pic\" src=\"/images/about/marketingtile.jpg\" alt=\"\">\n" +
     "                    <div class=\"overlay-about\">\n" +
     "                        <h2 class=\"about-tile-title\" style=\"font-size: 25px;\">Marketing</h2>\n" +
-    "                        <p class=\"hover-info\"><a href=\"#\">\n" +
-    "                        More info...</a>\n" +
+    "                        <p class=\"hover-info\">\n" +
+    "                            social media growth strategies<br>\n" +
+    "                            content creation<br>\n" +
+    "                            cre8\n" +
     "                        </p>\n" +
-    "                        <!--\n" +
-    "                        <p>\n" +
-    "                            <br>\n" +
-    "                            We would love the opportunity to work with you and your company on your next online marketing project.\n" +
-    "                            <br>\n" +
-    "                            <br>\n" +
-    "                            <a href=\"/contact/\" style=\"font-size: 40px;\">Get in touch.</a>\n" +
-    "                        </p>\n" +
-    "                        -->\n" +
-    "                    </div>\n" +
+    "                      </div>\n" +
     "                </div>\n" +
     "            </div>\n" +
     "        </div><!-- end center -->\n" +
-    "        <!--\n" +
-    "        <div class=\"center about-bottom-area\">\n" +
-    "            <div class=\"title-bottom\">How We Build It\n" +
-    "                <hr>\n" +
-    "            </div>\n" +
-    "            <div class=\"message-portfolio\">\n" +
-    "                <div class=\"interested-portfolio\">\n" +
-    "                    <br>\n" +
-    "                    <p>\n" +
-    "                       The latest technology, mobile-friendly, and unparalleled in custom design. Each site is custom-tailored.\n" +
-    "                    </p>\n" +
-    "                    <a href=\"/about/\"><button class=\"mainbutton service-button\">More Info...</button></a>\n" +
-    "                    <br>\n" +
-    "                    <br>\n" +
-    "                    <br>\n" +
-    "                </div>\n" +
-    "            </div>\n" +
-    "        </div>\n" +
-    "        -->\n" +
     "\n" +
-    "    <br><br>\n" +
+    "        <br><br>\n" +
     "\n" +
     "        <div class=\"about-list\">\n" +
     "            <div class=\"row\">\n" +
@@ -266,11 +169,12 @@ angular.module("blog/index.tpl.html", []).run(["$templateCache", function($templ
     "\n" +
     "\n" +
     "<div id=\"post-list-container\" ng-repeat=\"post in test_posts\">\n" +
-    "  <div id=\"post-container\" ng-repeat=\"post in test_posts\">\n" +
+    "  <br><br>\n" +
+    "  <div id=\"post-container\">\n" +
     "    <h1 class=\"title\"><a href=\"/blog/{{post.url_title}}\">{{post.title}}</a></h1>\n" +
     "    <p class=\"lead\">{{post.post_content}}</p>\n" +
     "  </div>\n" +
-    "  <br><br><hr>\n" +
+    "  <br><br>\n" +
     "</div>\n" +
     "\n" +
     "\n" +
@@ -314,12 +218,13 @@ angular.module("contact/index.tpl.html", []).run(["$templateCache", function($te
     "<!-- i would like if the numbers were more visiable -->\n" +
     "<div class=\"surface-container home-pad\" style=\"background-color:rgb(0,0,0)\">\n" +
     "    <div class=\"contact-page-container\">\n" +
-    "        <br><br>\n" +
+    "        <br><br><br><br><br>\n" +
     "        <div class=\"contact-title-location\">\n" +
     "            <p>Four Locations Nationwide</p>\n" +
     "            <hr>\n" +
     "            <!--<p>give us a call!</p>-->\n" +
     "        </div>\n" +
+    "        <br><br><br>\n" +
     "        <div class=\"row\">    \n" +
     "            <div class=\"col-md-12 center\">\n" +
     "                <div class=\"col-md-3 office-contact\">\n" +
@@ -389,9 +294,6 @@ angular.module("contact/index.tpl.html", []).run(["$templateCache", function($te
     "                <div id=\"map-canvas\"></div>\n" +
     "            </div>\n" +
     "        </div>   \n" +
-    "        <div class=\"message\">\n" +
-    "            <div class=\"bottom-tagline\"></div>\n" +
-    "        </div>\n" +
     "    </div>\n" +
     "</div>\n" +
     "\n" +
@@ -562,7 +464,7 @@ angular.module("home/index.tpl.html", []).run(["$templateCache", function($templ
     "            </a>\n" +
     "        </svg>\n" +
     "        <video id=\"video\" autoplay=\"autoplay\" muted=\"muted\" preload=\"auto\" loop=\"loop\">\n" +
-    "            <source src=\"http://mazwai.com/system/posts/videos/000/000/161/preview_mp4_3/leonard_soosay--missfit.mp4?1424004876\" type=\"video/webm\">\n" +
+    "            <source src=\"/videos/rocket.webm\" type=\"video/webm\">\n" +
     "        </video>\n" +
     "        <img class=\"intro-img\" id=\"image\" src=\"http://36.media.tumblr.com/318b26ada390554e3940e1907c0e6d0f/tumblr_no0pwu8TmB1uuhx17o1_1280.jpg\">\n" +
     "    </div>\n" +
@@ -620,7 +522,7 @@ angular.module("home/index.tpl.html", []).run(["$templateCache", function($templ
     "\n" +
     "    <div id=\"home2\">\n" +
     "        <div class=\"desc\" align=\"center\">\n" +
-    "            <h3 class=\"portfolio-link\"><a href=\"/portfolio/\">View Our Portolio</a></h3>\n" +
+    "            <h3 class=\"portfolio-link\"><a href=\"/portfolio/\">Our Portolio</a></h3>\n" +
     "            <!--\n" +
     "            <h3>Meet The Team</h3>\n" +
     "            <hr>\n" +
@@ -668,14 +570,14 @@ angular.module("home/index.tpl.html", []).run(["$templateCache", function($templ
     "\n" +
     "    <div class=\"contact-container\">\n" +
     "        <div class=\"contact-title-home\">Get In Touch</div>\n" +
-    "            <hr>\n" +
+    "        <hr><br>\n" +
+    "        <div class=\"message-home\">\n" +
+    "            <div class=\"interested-home\">Interested in working with NOVO?</div>\n" +
     "            <br>\n" +
-    "            <div class=\"message-home\">\n" +
-    "                <div class=\"interested-home\">Interested in working with NOVO?</div>\n" +
-    "                <br>\n" +
-    "                <div class=\"contact-us-home\">Email us at\n" +
-    "                <a href=\"mailto:info@projectnovo.co\" style=\"color: #1db996;\">info@projectnovo.co</a></div> or <div class=\"contact-us-home\">Call us at one of our <span style=\"color: #1db996; font-weight: 500;\">four</span> locations!</div>\n" +
-    "            </div>\n" +
+    "            <div class=\"contact-us-home\">Email us at\n" +
+    "            <a href=\"mailto:info@projectnovo.co\" style=\"color: #1db996;\">info@projectnovo.co</a></div> or <div class=\"contact-us-home\">Call us at one of our <span style=\"color: #1db996; font-weight: 500;\">four</span> locations!</div>\n" +
+    "        </div>\n" +
+    "        <br><br><br>\n" +
     "        <div class=\"row\">    \n" +
     "            <div class=\"col-md-12 center\">\n" +
     "                <div class=\"col-md-3 office-home\">\n" +
@@ -730,15 +632,13 @@ angular.module("home/index.tpl.html", []).run(["$templateCache", function($templ
     "                            <h2><span class=\"contact-city\">Philadelphia, PA</span></h2>\n" +
     "                            <p>\n" +
     "                                <a href=\"tel:+13365800855\">336.580.0855</a>\n" +
-    "                            </p>                        </div>\n" +
+    "                            </p>\n" +
+    "                        </div>\n" +
     "                    </div>\n" +
     "                </div>\n" +
     "            </div>\n" +
     "        </div>    \n" +
-    "            <br>\n" +
-    "            <br>\n" +
-    "            <br>\n" +
-    "        </div>\n" +
+    "        <br><br><br>\n" +
     "    </div>\n" +
     "\n" +
     "    <div class=\"newsletter-section\">\n" +
@@ -761,9 +661,9 @@ angular.module("home/index.tpl.html", []).run(["$templateCache", function($templ
     "            </div>\n" +
     "        </div>\n" +
     "    </div>\n" +
-    "    <div class=\"footer\">\n" +
+    "    <!--<div class=\"footer\">\n" +
     "    <br><br><br>\n" +
-    "    </div>\n" +
+    "    </div>-->\n" +
     "</div>\n" +
     "");
 }]);
@@ -1025,49 +925,161 @@ angular.module("intro/index.tpl.html", []).run(["$templateCache", function($temp
 angular.module("portfolio/index.tpl.html", []).run(["$templateCache", function($templateCache) {
   $templateCache.put("portfolio/index.tpl.html",
     "<link rel=\"stylesheet\" href=\"/styles/css/portfolio.css\">\n" +
-    "\n" +
-    "\n" +
     "<div class=\"home-pad\">\n" +
-    "	<div class=\"container\">\n" +
-    "	    <div id=\"\" class=\"info\">\n" +
-    "	        <div class=\"title\" style=\"font-weight:400;\">Our Clients</div>\n" +
-    "	        <br>\n" +
-    "	        <hr>\n" +
-    "	        <br>\n" +
-    "	        <div class=\"portfolio-message\">\n" +
-    "	            <p>Our clients are the only thing that matters.  Everything begins and ends with your needs.</p>\n" +
-    "	            <br>\n" +
-    "	            <br>\n" +
-    "	            <p></p>\n" +
-    "	        </div>\n" +
-    "	    </div>\n" +
-    "	</div>\n" +
+    "    <div class=\"container\">\n" +
+    "        <div id=\"\" class=\"info\">\n" +
+    "            <div class=\"title\" style=\"font-weight:400;\">Quality, Modernity, and Transparency</div>\n" +
+    "            <br>\n" +
+    "            <hr>\n" +
+    "            <br>\n" +
+    "            <div class=\"portfolio-message\">\n" +
+    "                <p>Our clients know what it means to be partners with NOVO. We provide quality work, employ the latest marketing and web development techniques, and  implement a workflow process that allows for complete transparency and client collaboration.</p>\n" +
+    "                <br>\n" +
+    "                <br>\n" +
+    "                <p>We believe our work speaks for itself.</p>\n" +
+    "            </div>\n" +
+    "        </div>\n" +
+    "    </div>\n" +
     "\n" +
-    "	<div class=\"clients\">\n" +
-    "		<div class=\"col-lg-3 col-md-4 col-sm-6 col-xs-12\">\n" +
-    "		    <div class=\"hovereffect2\">\n" +
-    "		        <img class=\"img-responsive\" src=\"/images/portfolio/absolute/symbol300.png\" alt=\"\">\n" +
-    "		            <div class=\"overlay2\">\n" +
-    "		                <h2>Absolute Yachts</h2>\n" +
-    "		                <p>\n" +
-    "		                	<a href=\"http://www.absoluteyachtsna.com/\">\n" +
-    "		                        <i class=\"fa fa-play\"></i>\n" +
-    "		                    </a>\n" +
-    "		                    <a href=\"https://www.facebook.com/pages/Absolute-North-America/1467350980243678\">\n" +
-    "		                        <i class=\"fa fa-facebook\"></i>\n" +
-    "		                    </a>\n" +
-    "		                    <a href=\"https://twitter.com/AbsoluteNA\">\n" +
-    "		                        <i class=\"fa fa-twitter\"></i>\n" +
-    "		                    </a>\n" +
-    "		                    <a href=\"https://instagram.com/absoluteyachtsna/\">\n" +
-    "		                        <i class=\"fa fa-instagram\"></i>\n" +
-    "		                    </a>\n" +
-    "		                </p>\n" +
-    "		            </div>\n" +
-    "		    </div>\n" +
-    "		</div>\n" +
-    "	</div>\n" +
-    "</div>	");
+    "\n" +
+    "\n" +
+    "    <!--make dynamic with angular-->\n" +
+    "    <div class=\"container\" style=\"margin: 120px auto 0;\">\n" +
+    "        <div class=\"wrap\" ng-click=\"select_portfolio('client1')\">\n" +
+    "            <div class=\"crop\">\n" +
+    "                <img src=\"\" style=\"background-color: #1db996;\">\n" +
+    "            </div>\n" +
+    "        </div>\n" +
+    "        <div class=\"wrap\" ng-click=\"select_portfolio('client2')\">\n" +
+    "            <div class=\"crop\">\n" +
+    "                <img src=\"\" style=\"background-color: #1db996;\">\n" +
+    "            </div>\n" +
+    "        </div>\n" +
+    "        <div class=\"wrap\" ng-click=\"select_portfolio('client3')\">\n" +
+    "            <div class=\"crop\">\n" +
+    "                <img src=\"\" style=\"background-color: #1db996;\">\n" +
+    "            </div>\n" +
+    "        </div>\n" +
+    "        <div class=\"wrap\" ng-click=\"select_portfolio('client4')\">\n" +
+    "            <div class=\"crop\">\n" +
+    "                <img src=\"\" style=\"background-color: #1db996;\">\n" +
+    "            </div>\n" +
+    "        </div>\n" +
+    "		    \n" +
+    "        <div class=\"wrap\" ng-click=\"select_portfolio('absolute')\">\n" +
+    "            <div class=\"crop\">\n" +
+    "            	<div class=\"hovereffect2\">\n" +
+    "	                <img lass=\"img-responsive\" src=\"/images/portfolio/absolute/symbol300.png\">\n" +
+    "	                <div class=\"overlay2\">\n" +
+    "				        <h2>Absolute Yachts</h2>\n" +
+    "				        <p>\n" +
+    "				        	<a href=\"http://www.absoluteyachtsna.com/\">\n" +
+    "				                <i class=\"fa fa-play\"></i>\n" +
+    "				            </a>\n" +
+    "				            <a href=\"https://www.facebook.com/pages/Absolute-North-America/1467350980243678\">\n" +
+    "				                <i class=\"fa fa-facebook\"></i>\n" +
+    "				            </a>\n" +
+    "				            <a href=\"https://twitter.com/AbsoluteNA\">\n" +
+    "				                <i class=\"fa fa-twitter\"></i>\n" +
+    "				            </a>\n" +
+    "				            <a href=\"https://instagram.com/absoluteyachtsna/\">\n" +
+    "				                <i class=\"fa fa-instagram\"></i>\n" +
+    "				            </a>\n" +
+    "				        </p>\n" +
+    "				    </div>\n" +
+    "				</div>\n" +
+    "            </div>\n" +
+    "        </div>\n" +
+    "        \n" +
+    "        <div class=\"wrap\" ng-click=\"select_portfolio('client1')\">\n" +
+    "            <div class=\"crop\">\n" +
+    "                <img src=\"\" style=\"background-color: #1db996;\">\n" +
+    "            </div>\n" +
+    "        </div>\n" +
+    "        <div class=\"wrap\" ng-click=\"select_portfolio('client2')\">\n" +
+    "            <div class=\"crop\">\n" +
+    "                <img src=\"\" style=\"background-color: #1db996;\">\n" +
+    "            </div>\n" +
+    "        </div>\n" +
+    "        <div class=\"wrap\" ng-click=\"select_portfolio('client3')\">\n" +
+    "            <div class=\"crop\">\n" +
+    "                <img src=\"\" style=\"background-color: #1db996;\">\n" +
+    "            </div>\n" +
+    "        </div>\n" +
+    "        <div class=\"wrap\" ng-click=\"select_portfolio('client4')\">\n" +
+    "            <div class=\"crop\">\n" +
+    "                <img src=\"\" style=\"background-color: #1db996;\">\n" +
+    "            </div>\n" +
+    "        </div>\n" +
+    "    </div>\n" +
+    "\n" +
+    "    <br><br><br>\n" +
+    "\n" +
+    "    <div style=\"background-color:rgb(0,0,0)\">\n" +
+    "        <div class=\"container\">\n" +
+    "            <div id=\"absolute\" class=\"info\" ng-show=\"currently_selected=='absolute'\">\n" +
+    "                <div class=\"title\">Absolute Yachts North America</div>\n" +
+    "                <br>\n" +
+    "                <br>\n" +
+    "                <div class=\"portfolio-message\" style=\"color:#fff\">\n" +
+    "                    Absolute is an Italian yacht brand based in Piacenza, Italy, manufacturing yachts\n" +
+    "                    ranging from 40 to 72 feet. Communicating the Absolute's focus on design, efficiency, performance\n" +
+    "                    and serviceability are a high priority. NOVO is responsible for Absolute North America's online marketing,\n" +
+    "                    including web design and development, email marketing, and social media marketing.\n" +
+    "                </div>\n" +
+    "\n" +
+    "                <div style=\"height:50px;\"></div>\n" +
+    "                <div style=\"text-align:center;\" class=\"link\">\n" +
+    "                    <a style=\"color:#1db996;font-size:30px;\" href=\"www.absoluteyachtsna.com\">absoluteyachtsna.com</a>\n" +
+    "                </div>\n" +
+    "                <div style=\"height:80px;\"></div>\n" +
+    "\n" +
+    "                <a href=\"http://www.absoluteyachtsna.com/\" style=\"text-align:cener;\">\n" +
+    "                    <img src=\"/images/portfolio/absolute/absolute-screenshot.png\" class=\"img-fill\" style=\"width: 100%\">\n" +
+    "                </a>\n" +
+    "\n" +
+    "            </div>\n" +
+    "\n" +
+    "            <!--on click triangle show-->\n" +
+    "            <div id=\"client1\" class=\"info\" ng-show=\"currently_selected=='client1'\">\n" +
+    "                <div class=\"title\">Client 1</div>\n" +
+    "                <div class=\"portfolio-message\" style=\"color:#fff\">hey client 1</div>\n" +
+    "                <div class=\"link\"></div>\n" +
+    "                <div style=\"height:80px;\"></div>\n" +
+    "                <a href=\"#\" style=\"text-align:cener;\">\n" +
+    "                    <img src=\"/images/portfolio/stock1.jpg\" class=\"img-fill\" style=\"width: 100%\">\n" +
+    "                </a>\n" +
+    "            </div>\n" +
+    "            <div id=\"client2\" class=\"info\" ng-show=\"currently_selected=='client2'\">\n" +
+    "                <div class=\"title\">Client 2</div>\n" +
+    "                <div class=\"portfolio-message\" style=\"color:#fff\">hey client 2</div>\n" +
+    "                <div class=\"link\"></div>\n" +
+    "                <div style=\"height:80px;\"></div>\n" +
+    "                <a href=\"#\" style=\"text-align:cener;\">\n" +
+    "                    <img src=\"/images/portfolio/stock2.jpg\" class=\"img-fill\" style=\"width: 100%\">\n" +
+    "                </a>\n" +
+    "            </div>\n" +
+    "            <div id=\"client3\" class=\"info\" ng-show=\"currently_selected=='client3'\">\n" +
+    "                <div class=\"title\">Client 3</div>\n" +
+    "                <div class=\"portfolio-message\" style=\"color:#fff\">hey client 3</div>\n" +
+    "                <div class=\"link\"></div>\n" +
+    "                <div style=\"height:80px;\"></div>\n" +
+    "                <a href=\"#\" style=\"text-align:cener;\">\n" +
+    "                    <img src=\"/images/portfolio/absolute/absolute-outside.jpg\" class=\"img-fill\" style=\"width: 100%\">\n" +
+    "                </a>\n" +
+    "            </div>\n" +
+    "            <div id=\"client4\" class=\"info\" ng-show=\"currently_selected=='client4'\">\n" +
+    "                <div class=\"title\">Client 4</div>\n" +
+    "                <div class=\"portfolio-message\" style=\"color:#fff\">hey client 4</div>\n" +
+    "                <div class=\"link\"></div>\n" +
+    "                <div style=\"height:80px;\"></div>\n" +
+    "                <a href=\"#\" style=\"text-align:cener;\">\n" +
+    "                    <img src=\"/images/portfolio/vidhop-screenshot.png\" class=\"img-fill\" style=\"width: 100%\">\n" +
+    "                </a>\n" +
+    "            </div>\n" +
+    "        </div>\n" +
+    "    </div>\n" +
+    "</div>");
 }]);
 
 angular.module("portfolio/index1.tpl.html", []).run(["$templateCache", function($templateCache) {

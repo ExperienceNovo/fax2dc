@@ -27,21 +27,36 @@ angular.module( 'novo.blog', [
     $scope.currentUser = config.currentUser;
 
    	$scope.test_posts = {
-   		"post1": {
-	        "title": "Title 1",
-	        "post_content": "this is some content",
-	        "url_title": "post.1"
+   		"NOVO": {
+	        "title": "The NOVO experience",
+	        "post_content": "",
+	        "url_title": "the-novo-experience"
     	},
-    	"post2": {
-	        "title": "Title 2",
-	        "post_content": "this is some content",
-	        "url_title": "post.2"
+    	"transparent-collaboration": {
+	        "title": "Transparent Collaboration",
+	        "post_content": "",
+	        "url_title": "transparent-collaboration"
     	},
-    	"post3": {
-	        "title": "Title 3",
-	        "post_content": "this is some content",
-	        "url_title": "post.3"
-    	}
+    	"how-we-design": {
+	        "title": "How We Design",
+	        "post_content": "",
+	        "url_title": "how-we-design"
+    	},
+    	"cool-css-effects": {
+	        "title": "Cool CSS effects",
+	        "post_content": "",
+	        "url_title": "cool-css-effects"
+    	},
+    	"our-web-stack": {
+	        "title": "Our Web Stack",
+	        "post_content": "",
+	        "url_title": "our-web-stack"
+    	},
+    	"social-media-growth-strategies": {
+	        "title": "Social Media Growth Strategies",
+	        "post_content": "",
+	        "url_title": "social-media-growth-strategies"
+    	},
     };
 
 

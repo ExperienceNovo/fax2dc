@@ -56,11 +56,11 @@ svg text {
     text-anchor: middle;
 }
 svg mask rect {
-    fill: rgba(255, 255, 255, 0.75);
+    fill: rgba(155, 155, 155, 0.8);
 }
 svg > rect {
-    //fill: #2ab996; /* novo green */
-    fill: white;
+    fill: #2ab996; /* novo green */
+    //fill: white;
     -webkit-mask: url(#mask);
     mask: url(#mask);
 }

@@ -22,11 +22,12 @@
 
 
 <div id="post-list-container" ng-repeat="post in test_posts">
-  <div id="post-container" ng-repeat="post in test_posts">
+  <br><br>
+  <div id="post-container">
     <h1 class="title"><a href="/blog/{{post.url_title}}">{{post.title}}</a></h1>
     <p class="lead">{{post.post_content}}</p>
   </div>
-  <br><br><hr>
+  <br><br>
 </div>
 
 
