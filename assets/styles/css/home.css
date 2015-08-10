@@ -117,6 +117,9 @@ button.service-button:focus {
 	height: 100vh;
 	min-height: 900px;
 	border-bottom: 3px solid #2ab996;
+	border-top: 3px solid #2ab996;
+	position: relative;
+	z-index: 2;
 }
 
 .section-head {
@@ -199,6 +202,8 @@ button.service-button:focus {
 }
 
 .desc {
+	position: relative;
+	z-index: 3;
 	background:url(/images/overlay.png),url(/images/bg.png) no-repeat fixed;
 	padding:75px 0px 100px 0px;
 	background-color:#3d454a;
@@ -288,7 +293,8 @@ button.service-button:focus {
 }
 
 .surface-container-home {
-	z-index: 20;
+	position: relative;
+	z-index: 4;
 	margin-left: auto;
     margin-right: auto;
 	width:100%;
@@ -298,6 +304,7 @@ button.service-button:focus {
 .contact-container {
 	padding-top: 100px;
 	padding-bottom: 50px;
+	background: url(/images/texture-bg.png) repeat;
 }
 
 .contact-home {
@@ -383,6 +390,8 @@ button.service-button:focus {
 }
 
 .newsletter-section {
+    position: relative;
+    z-index: 5;
     font-size: large;
     margin-right: auto;
     margin-left: auto;
@@ -524,6 +533,8 @@ input:focus + .indicator:after {
 }
 
 .footer {
+    position: relative;
+    z-index: 6;
 	width: 100%;
 	height: auto;
 	background:url(/images/texture-bg.png) repeat;
@@ -557,7 +568,7 @@ input:focus + .indicator:after {
 		text-decoration: underline;
 		font-size: 40px !important;
 		padding-left: 3%;
-		padding-right: 3%;
+		padding-right: 3%;background: url(/images/texture-bg.png) repeat;
 	}
 	.contact-container {
 		padding-top: 50px;

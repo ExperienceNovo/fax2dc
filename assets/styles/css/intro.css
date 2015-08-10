@@ -6,6 +6,16 @@ html {
 body {
     height: 100%;
 }
+.intro {
+    position: relative;
+    z-index: 1;
+    top: 0;
+}
+.intro-container {
+    cursor: default;
+    height: 100vh;
+    min-height: 100vh;
+}
 .large-text {
     font-family: 'Jura', sans-serif;
     font-weight: 400;
@@ -59,26 +69,35 @@ video {
   top: 0%;
   left: 0%;
   min-width: 100%;
-  min-height: 100%;
+  min-height: 28%;
   width: auto;
   height: auto;
-  z-index: -1;
+  z-index: -5;
   overflow: hidden;
 }
-img {
+.intro-img {
   visibility: hidden;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  min-width: 100%;
+  min-height: 28%;
+  width: auto;
+  height: auto !important;
+  z-index: -4;
+  overflow: hidden;
 }
 
 /* media queries */
 
 @media only screen and (max-width: 1200px) {
-  html {
-    font-size:0.8em;
+  svg {
+    font-size:0.8em !important;
   }
 }
 @media only screen and (max-width: 1024px) {
-  html {
-    font-size:0.7em;
+  svg {
+    font-size:0.7em !important;
   }
   .tri-before {
     visibility: hidden;
@@ -89,22 +108,22 @@ img {
   video {
     display: none;
   }
-  img {
+  .intro-img {
     visibility: visible;
     height: 100%;
   }
 }
 @media only screen and (max-width: 840px) {
-  html {
-    font-size:0.65em;
+  svg {
+    font-size:0.65em !important;
   }
   .mantra {
     display: none;
   }
 }
 @media only screen and (max-width: 788px) {
-  html {
-    font-size:0.6em;
+  svg {
+    font-size:0.6em !important;
   }
   .desktop {
     visibility: hidden;
@@ -114,12 +133,12 @@ img {
   }
 }
 @media only screen and (max-width: 630px) {
-  html {
-    font-size:0.5em;
+  svg {
+    font-size:0.5em !important;
   }
 }
 @media only screen and (max-width: 520px) {
-  html {
-    font-size:0.4em;
+  svg {
+    font-size:0.4em !important;
   }
 }

@@ -514,121 +514,158 @@ angular.module("home/index.tpl.html", []).run(["$templateCache", function($templ
   $templateCache.put("home/index.tpl.html",
     "<!--css has to over write other styles to work...-->\n" +
     "<link href=\"/styles/css/home.css\" rel=\"stylesheet\" type=\"text/css\"/>\n" +
-    "<div class=\"home-pad\">\n" +
-    "<div class=\"banner\">\n" +
-    "    <div class=\"banner-text\">\n" +
-    "        <h2 class=\"tagline\">Welcome</h2>\n" +
-    "        <p class=\"under-tagline\">Embrace change with NOVO<br/>a full-scale online marketing, graphic design, and web development firm.</p>\n" +
-    "        <div class=\"triangle-container\" style=\"margin-top:10%;\">\n" +
+    "<div class=\"surface-container-home\">\n" +
+    "    <div class=\"home-pad\">\n" +
+    "    <div class=\"intro-container\">\n" +
+    "        <svg class=\"intro\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 1920 1080\" width=\"1920px\" height=\"1080px\" preserveAspectRatio=\"xMidYMid slice\">\n" +
+    "            <defs>\n" +
+    "                <mask id=\"mask\" x=\"0\" y=\"0\" width=\"100%\" height=\"100%\" style=\"z-index: 0;\">\n" +
+    "                    <rect x=\"0\" y=\"0\" width=\"100%\" height=\"100%\"/>\n" +
+    "                    <text x=\"960\" y=\"27%\" class=\"large-text\">welcome</text>\n" +
+    "                    <text x=\"960\" y=\"46%\" class=\"medium-text desktop\">embrace change with NOVO</text>\n" +
+    "                    <text x=\"960\" y=\"44%\" class=\"medium-text mobile\">embrace change</text>\n" +
+    "                    <text x=\"960\" y=\"49%\" class=\"medium-text mobile\">with NOVO</text>\n" +
+    "                    <text x=\"960\" y=\"51%\" class=\"small-text mantra\">a full-scale online marketing, design, and web development firm</text>\n" +
+    "                    <text x=\"960\" y=\"67.5%\" class=\"small-text learn-more\">learn more</text>\n" +
+    "                    <!--<image x=\"960\" y=\"70%\" width=\"80\" height=\"80\" xlink:href=\"http://valentino.io/img/tri.svg\" />-->\n" +
+    "                    <a href=\"#more\">\n" +
+    "                        <svg class=\"tri-before bounce\" version=\"1.1\" id=\"Layer_1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"835px\" y=\"68%\" width=\"250px\" height=\"250px\" viewBox=\"0 0 723 626\" enable-background=\"new 0 0 723 626\" xml:space=\"preserve\">\n" +
+    "                            <g>\n" +
+    "                              <path fill=\"#232322\" d=\"M0,0h723v1.58c-3.72,4.37-5.58,9.96-8.89,14.62C596.69,219.439,479.44,422.79,361.96,626h-0.6\n" +
+    "                                C243.45,421.77,125.54,217.55,7.63,13.32C5.09,9.061,2.85,4.62,0,0.55V0z\"/>\n" +
+    "                              <path fill=\"#FFFFFF\" d=\"M86.57,48.002c183.289,0.01,366.569-0.02,549.859,0.02c-40.779,70.681-81.6,141.33-122.39,212.01\n" +
+    "                                c-7.36,12.841-14.91,25.58-22.11,38.521l-0.229-0.01c-86.79-0.09-173.59-0.06-260.38-0.011h-0.211\n" +
+    "                                c-20.239-35.569-40.899-70.899-61.289-106.379C142.061,144.111,114.359,96.031,86.57,48.002z\"/>\n" +
+    "                              <path fill=\"#21B795\" d=\"M231.311,298.599c86.79-0.049,173.59-0.079,260.38,0.011c-19.42,34.3-39.36,68.31-59,102.479\n" +
+    "                                c-23.71,41.091-47.44,82.16-71.15,123.25c-20.92-36.039-41.68-72.17-62.55-108.229C276.48,376.909,253.65,337.89,231.311,298.599z\"\n" +
+    "                                />\n" +
+    "                            </g>\n" +
+    "                        </svg>\n" +
+    "                    </a>\n" +
+    "                </mask>\n" +
+    "            </defs>\n" +
+    "            <rect x=\"0\" y=\"0\" width=\"100%\" height=\"100%\"/>\n" +
     "            <a href=\"#more\">\n" +
-    "                <p class=\"learn-more\" style=\"color:#fff\">Learn More</p>\n" +
-    "                <img src=\"/images/tri.png\"/ style=\"width:100px;\">\n" +
-    "                <!--<button class=\"mainbutton\">Learn More</button>-->\n" +
+    "                <svg class=\"tri-after\" version=\"1.1\" id=\"Layer_1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"835px\" y=\"68%\"\n" +
+    "             width=\"250px\" height=\"250px\" viewBox=\"0 0 723 626\" enable-background=\"new 0 0 723 626\" xml:space=\"preserve\">\n" +
+    "                    <g>\n" +
+    "                      <path fill=\"#232322\" d=\"M0,0h723v1.58c-3.72,4.37-5.58,9.96-8.89,14.62C596.69,219.439,479.44,422.79,361.96,626h-0.6\n" +
+    "                                              C243.45,421.77,125.54,217.55,7.63,13.32C5.09,9.061,2.85,4.62,0,0.55V0z\"/>\n" +
+    "                      <path fill=\"#FFFFFF\" d=\"M86.57,48.002c183.289,0.01,366.569-0.02,549.859,0.02c-40.779,70.681-81.6,141.33-122.39,212.01\n" +
+    "                                              c-7.36,12.841-14.91,25.58-22.11,38.521l-0.229-0.01c-86.79-0.09-173.59-0.06-260.38-0.011h-0.211\n" +
+    "                                              c-20.239-35.569-40.899-70.899-61.289-106.379C142.061,144.111,114.359,96.031,86.57,48.002z\"/>\n" +
+    "                      <path fill=\"#21B795\" d=\"M231.311,298.599c86.79-0.049,173.59-0.079,260.38,0.011c-19.42,34.3-39.36,68.31-59,102.479\n" +
+    "                                              c-23.71,41.091-47.44,82.16-71.15,123.25c-20.92-36.039-41.68-72.17-62.55-108.229C276.48,376.909,253.65,337.89,231.311,298.599z\"\n" +
+    "                            />\n" +
+    "                    </g>\n" +
+    "                </svg>\n" +
     "            </a>\n" +
-    "        </div>\n" +
+    "        </svg>\n" +
+    "        <video id=\"video\" autoplay=\"autoplay\" muted=\"muted\" preload=\"auto\" loop=\"loop\">\n" +
+    "            <source src=\"http://mazwai.com/system/posts/videos/000/000/161/preview_mp4_3/leonard_soosay--missfit.mp4?1424004876\" type=\"video/webm\">\n" +
+    "        </video>\n" +
+    "        <img class=\"intro-img\" id=\"image\" src=\"http://36.media.tumblr.com/318b26ada390554e3940e1907c0e6d0f/tumblr_no0pwu8TmB1uuhx17o1_1280.jpg\">\n" +
     "    </div>\n" +
-    "</div>\n" +
     "\n" +
-    "<div class=\"services\" id=\"more\">\n" +
-    "    <div class=\"section-head\">\n" +
-    "        <h3>Our Services</h3>\n" +
-    "        <hr>\n" +
-    "    </div>\n" +
-    "    <div class=\"services-list\">\n" +
-    "        <div class=\"row\">\n" +
-    "            <div class=\"col-md-12\">\n" +
-    "                <div class=\"col-md-4\">\n" +
-    "                    <i class=\"fa fa-paint-brush fa-5x\"></i>\n" +
-    "                    <div class=\"service-title\">\n" +
-    "                        <h2>Design</h2>\n" +
-    "                    </div>\n" +
-    "                    <hr>\n" +
-    "                    <div class=\"service-des\">\n" +
-    "                        <p>Graphics & Animation</p>\n" +
-    "                        <p>Custom Interface Design</p>\n" +
-    "                        <p>Company Branding</p>\n" +
-    "                    </div>\n" +
-    "                </div>\n" +
-    "                <div class=\"col-md-4\">\n" +
-    "                    <i class=\"fa fa-code fa-5x\"></i>\n" +
-    "                    <div class=\"service-title\">\n" +
-    "                        <h2>Development</h2>\n" +
-    "                    </div>\n" +
-    "                    <hr>\n" +
-    "                    <div class=\"service-des\">\n" +
-    "                        <p>Mobile-first Web Design</p>\n" +
-    "                        <p>SEO Structuring</p>\n" +
-    "                        <p>Back-end Software Integration</p>\n" +
-    "                    </div>\n" +
-    "                </div>\n" +
-    "                <div class=\"col-md-4\">\n" +
-    "                    <i class=\"fa fa-users fa-5x\"></i>\n" +
-    "                    <div class=\"service-title\">\n" +
-    "                        <h2>Marketing</h2>\n" +
-    "                    </div>\n" +
-    "                    <hr>\n" +
-    "                    <div class=\"service-des\">\n" +
-    "                        <p>Social Media Management</p>\n" +
-    "                        <p>Outreach Email Marketing</p>\n" +
-    "                        <p>Content Creation</p>\n" +
-    "                    </div>\n" +
-    "                </div>\n" +
-    "            </div>\n" +
+    "    <div class=\"services\" id=\"more\">\n" +
+    "        <div class=\"section-head\">\n" +
+    "            <h3>Our Services</h3>\n" +
+    "            <hr>\n" +
     "        </div>\n" +
-    "        <br><br>\n" +
-    "        <a href=\"/about/\"><button class=\"mainbutton service-button\">More Info...</button></a>\n" +
-    "    </div>\n" +
-    "</div>\n" +
-    "    \n" +
-    "<div id=\"home2\">\n" +
-    "    <div class=\"desc\" align=\"center\">\n" +
-    "        <h3 class=\"portfolio-link\"><a href=\"/portfolio/\">View Our Portolio</a></h3>\n" +
-    "        <!--\n" +
-    "        <h3>Meet The Team</h3>\n" +
-    "        <hr>\n" +
-    "        <div id=\"team\">\n" +
+    "        <div class=\"services-list\">\n" +
     "            <div class=\"row\">\n" +
     "                <div class=\"col-md-12\">\n" +
-    "                    <div class=\"col-md-3 team-member\">\n" +
-    "                        <img src=\"/images/team/val.png\" />\n" +
-    "                        <br>\n" +
-    "                        <br>\n" +
-    "                        <div class=\"name\">Valentino</div>\n" +
+    "                    <div class=\"col-md-4\">\n" +
+    "                        <i class=\"fa fa-paint-brush fa-5x\"></i>\n" +
+    "                        <div class=\"service-title\">\n" +
+    "                            <h2>Design</h2>\n" +
+    "                        </div>\n" +
     "                        <hr>\n" +
-    "                        <h2>Data</h2>\n" +
+    "                        <div class=\"service-des\">\n" +
+    "                            <p>Graphics & Animation</p>\n" +
+    "                            <p>Custom Interface Design</p>\n" +
+    "                            <p>Company Branding</p>\n" +
+    "                        </div>\n" +
     "                    </div>\n" +
-    "                    <div class=\"col-md-3 team-member\">\n" +
-    "                        <img src=\"/images/team/mikey.png\" />\n" +
-    "                        <br>\n" +
-    "                        <br>\n" +
-    "                        <div class=\"name\">Michael</div>\n" +
+    "                    <div class=\"col-md-4\">\n" +
+    "                        <i class=\"fa fa-code fa-5x\"></i>\n" +
+    "                        <div class=\"service-title\">\n" +
+    "                            <h2>Development</h2>\n" +
+    "                        </div>\n" +
     "                        <hr>\n" +
-    "                        <h2>Design</h2>\n" +
+    "                        <div class=\"service-des\">\n" +
+    "                            <p>Mobile-first Web Design</p>\n" +
+    "                            <p>SEO Structuring</p>\n" +
+    "                            <p>Back-end Software Integration</p>\n" +
+    "                        </div>\n" +
     "                    </div>\n" +
-    "                    <div class=\"col-md-3 team-member\">\n" +
-    "                        <img src=\"/images/team/trevor.png\" />\n" +
-    "                        <br>\n" +
-    "                        <br>\n" +
-    "                        <div class=\"name\">Trevor</div>\n" +
+    "                    <div class=\"col-md-4\">\n" +
+    "                        <i class=\"fa fa-users fa-5x\"></i>\n" +
+    "                        <div class=\"service-title\">\n" +
+    "                            <h2>Marketing</h2>\n" +
+    "                        </div>\n" +
     "                        <hr>\n" +
-    "                        <h2>Development</h2>\n" +
-    "                    </div>\n" +
-    "                    <div class=\"col-md-3 team-member\">\n" +
-    "                        <img src=\"/images/team/garrett.png\" />\n" +
-    "                        <br>\n" +
-    "                        <br>\n" +
-    "                        <div class=\"name\">Garrett</div>\n" +
-    "                        <hr>\n" +
-    "                        <h2>Marketing</h2>\n" +
+    "                        <div class=\"service-des\">\n" +
+    "                            <p>Social Media Management</p>\n" +
+    "                            <p>Outreach Email Marketing</p>\n" +
+    "                            <p>Content Creation</p>\n" +
+    "                        </div>\n" +
     "                    </div>\n" +
     "                </div>\n" +
     "            </div>\n" +
+    "            <br><br>\n" +
+    "            <a href=\"/about/\"><button class=\"mainbutton service-button\">More Info...</button></a>\n" +
     "        </div>\n" +
-    "        -->\n" +
     "    </div>\n" +
-    "</div>\n" +
     "\n" +
-    "<div class=\"surface-container-home\">\n" +
+    "    <div id=\"home2\">\n" +
+    "        <div class=\"desc\" align=\"center\">\n" +
+    "            <h3 class=\"portfolio-link\"><a href=\"/portfolio/\">View Our Portolio</a></h3>\n" +
+    "            <!--\n" +
+    "            <h3>Meet The Team</h3>\n" +
+    "            <hr>\n" +
+    "            <div id=\"team\">\n" +
+    "                <div class=\"row\">\n" +
+    "                    <div class=\"col-md-12\">\n" +
+    "                        <div class=\"col-md-3 team-member\">\n" +
+    "                            <img src=\"/images/team/val.png\" />\n" +
+    "                            <br>\n" +
+    "                            <br>\n" +
+    "                            <div class=\"name\">Valentino</div>\n" +
+    "                            <hr>\n" +
+    "                            <h2>Data</h2>\n" +
+    "                        </div>\n" +
+    "                        <div class=\"col-md-3 team-member\">\n" +
+    "                            <img src=\"/images/team/mikey.png\" />\n" +
+    "                            <br>\n" +
+    "                            <br>\n" +
+    "                            <div class=\"name\">Michael</div>\n" +
+    "                            <hr>\n" +
+    "                            <h2>Design</h2>\n" +
+    "                        </div>\n" +
+    "                        <div class=\"col-md-3 team-member\">\n" +
+    "                            <img src=\"/images/team/trevor.png\" />\n" +
+    "                            <br>\n" +
+    "                            <br>\n" +
+    "                            <div class=\"name\">Trevor</div>\n" +
+    "                            <hr>\n" +
+    "                            <h2>Development</h2>\n" +
+    "                        </div>\n" +
+    "                        <div class=\"col-md-3 team-member\">\n" +
+    "                            <img src=\"/images/team/garrett.png\" />\n" +
+    "                            <br>\n" +
+    "                            <br>\n" +
+    "                            <div class=\"name\">Garrett</div>\n" +
+    "                            <hr>\n" +
+    "                            <h2>Marketing</h2>\n" +
+    "                        </div>\n" +
+    "                    </div>\n" +
+    "                </div>\n" +
+    "            </div>\n" +
+    "            -->\n" +
+    "        </div>\n" +
+    "    </div>\n" +
+    "\n" +
     "    <div class=\"contact-container\">\n" +
     "        <div class=\"contact-title-home\">Get In Touch</div>\n" +
     "            <hr>\n" +
@@ -933,51 +970,56 @@ angular.module("intro/index.tpl.html", []).run(["$templateCache", function($temp
   $templateCache.put("intro/index.tpl.html",
     "<link href='http://fonts.googleapis.com/css?family=Jura:400,300,500|Quicksand:400,300' rel='stylesheet' type='text/css'>\n" +
     "\n" +
-    "<svg  xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 1920 1080\" width=\"1920px\" height=\"1080px\" preserveAspectRatio=\"xMidYMid slice\">\n" +
-    "    <defs>\n" +
-    "        <mask id=\"mask\" x=\"0\" y=\"0\" width=\"100%\" height=\"100%\" >\n" +
-    "            <rect x=\"0\" y=\"0\" width=\"100%\" height=\"100%\"/>\n" +
-    "            <text x=\"960\" y=\"27%\" class=\"large-text\">welcome</text>\n" +
-    "            <text x=\"960\" y=\"46%\" class=\"medium-text desktop\">embrace change with NOVO</text>\n" +
-    "            <text x=\"960\" y=\"44%\" class=\"medium-text mobile\">embrace change</text>\n" +
-    "            <text x=\"960\" y=\"49%\" class=\"medium-text mobile\">with NOVO</text>\n" +
-    "            <text x=\"960\" y=\"51%\" class=\"small-text mantra\">a full-scale online marketing, design, and web development firm</text>\n" +
-    "            <text x=\"960\" y=\"67.5%\" class=\"small-text learn-more\">learn more</text>\n" +
-    "            <!--<image x=\"960\" y=\"70%\" width=\"80\" height=\"80\" xlink:href=\"http://valentino.io/img/tri.svg\" />-->\n" +
-    "            <svg class=\"tri-before bounce\" version=\"1.1\" id=\"Layer_1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"835px\" y=\"68%\"\n" +
-    "	 width=\"250px\" height=\"250px\" viewBox=\"0 0 723 626\" enable-background=\"new 0 0 723 626\" xml:space=\"preserve\">\n" +
-    "        <g>\n" +
-    "          <path fill=\"#232322\" d=\"M0,0h723v1.58c-3.72,4.37-5.58,9.96-8.89,14.62C596.69,219.439,479.44,422.79,361.96,626h-0.6\n" +
-    "            C243.45,421.77,125.54,217.55,7.63,13.32C5.09,9.061,2.85,4.62,0,0.55V0z\"/>\n" +
-    "          <path fill=\"#FFFFFF\" d=\"M86.57,48.002c183.289,0.01,366.569-0.02,549.859,0.02c-40.779,70.681-81.6,141.33-122.39,212.01\n" +
-    "            c-7.36,12.841-14.91,25.58-22.11,38.521l-0.229-0.01c-86.79-0.09-173.59-0.06-260.38-0.011h-0.211\n" +
-    "            c-20.239-35.569-40.899-70.899-61.289-106.379C142.061,144.111,114.359,96.031,86.57,48.002z\"/>\n" +
-    "          <path fill=\"#21B795\" d=\"M231.311,298.599c86.79-0.049,173.59-0.079,260.38,0.011c-19.42,34.3-39.36,68.31-59,102.479\n" +
-    "            c-23.71,41.091-47.44,82.16-71.15,123.25c-20.92-36.039-41.68-72.17-62.55-108.229C276.48,376.909,253.65,337.89,231.311,298.599z\"\n" +
-    "            />\n" +
-    "        </g>\n" +
-    "      </svg>\n" +
-    "        </mask>\n" +
-    "    </defs>\n" +
-    "    <rect x=\"0\" y=\"0\" width=\"100%\" height=\"100%\"/>\n" +
-    "    <svg class=\"tri-after\" version=\"1.1\" id=\"Layer_1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"835px\" y=\"68%\"\n" +
-    "	 width=\"250px\" height=\"250px\" viewBox=\"0 0 723 626\" enable-background=\"new 0 0 723 626\" xml:space=\"preserve\">\n" +
-    "    <g>\n" +
-    "      <path fill=\"#232322\" d=\"M0,0h723v1.58c-3.72,4.37-5.58,9.96-8.89,14.62C596.69,219.439,479.44,422.79,361.96,626h-0.6\n" +
-    "                              C243.45,421.77,125.54,217.55,7.63,13.32C5.09,9.061,2.85,4.62,0,0.55V0z\"/>\n" +
-    "      <path fill=\"#FFFFFF\" d=\"M86.57,48.002c183.289,0.01,366.569-0.02,549.859,0.02c-40.779,70.681-81.6,141.33-122.39,212.01\n" +
-    "                              c-7.36,12.841-14.91,25.58-22.11,38.521l-0.229-0.01c-86.79-0.09-173.59-0.06-260.38-0.011h-0.211\n" +
-    "                              c-20.239-35.569-40.899-70.899-61.289-106.379C142.061,144.111,114.359,96.031,86.57,48.002z\"/>\n" +
-    "      <path fill=\"#21B795\" d=\"M231.311,298.599c86.79-0.049,173.59-0.079,260.38,0.011c-19.42,34.3-39.36,68.31-59,102.479\n" +
-    "                              c-23.71,41.091-47.44,82.16-71.15,123.25c-20.92-36.039-41.68-72.17-62.55-108.229C276.48,376.909,253.65,337.89,231.311,298.599z\"\n" +
-    "            />\n" +
-    "    </g>\n" +
-    "  </svg>\n" +
-    "</svg>\n" +
-    "<video id=\"video\" autoplay=\"autoplay\" muted=\"muted\" preload=\"auto\" loop=\"loop\">\n" +
-    "    <source src=\"http://mazwai.com/system/posts/videos/000/000/161/preview_mp4_3/leonard_soosay--missfit.mp4?1424004876\" type=\"video/webm\">\n" +
-    "</video>\n" +
-    "<img id=\"image\" src=\"http://36.media.tumblr.com/318b26ada390554e3940e1907c0e6d0f/tumblr_no0pwu8TmB1uuhx17o1_1280.jpg\">");
+    "<div class=\"intro-container\">\n" +
+    "    <svg class=\"intro\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 1920 1080\" width=\"1920px\" height=\"1080px\" preserveAspectRatio=\"xMidYMid slice\">\n" +
+    "        <defs>\n" +
+    "            <mask id=\"mask\" x=\"0\" y=\"0\" width=\"100%\" height=\"100%\" style=\"z-index: 0;\">\n" +
+    "                <rect x=\"0\" y=\"0\" width=\"100%\" height=\"100%\"/>\n" +
+    "                <text x=\"960\" y=\"27%\" class=\"large-text\">welcome</text>\n" +
+    "                <text x=\"960\" y=\"46%\" class=\"medium-text desktop\">embrace change with NOVO</text>\n" +
+    "                <text x=\"960\" y=\"44%\" class=\"medium-text mobile\">embrace change</text>\n" +
+    "                <text x=\"960\" y=\"49%\" class=\"medium-text mobile\">with NOVO</text>\n" +
+    "                <text x=\"960\" y=\"51%\" class=\"small-text mantra\">a full-scale online marketing, design, and web development firm</text>\n" +
+    "                <text x=\"960\" y=\"67.5%\" class=\"small-text learn-more\">learn more</text>\n" +
+    "                <!--<image x=\"960\" y=\"70%\" width=\"80\" height=\"80\" xlink:href=\"http://valentino.io/img/tri.svg\" />-->\n" +
+    "                <a href=\"#more\">\n" +
+    "                    <svg class=\"tri-before bounce\" version=\"1.1\" id=\"Layer_1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"835px\" y=\"68%\" width=\"250px\" height=\"250px\" viewBox=\"0 0 723 626\" enable-background=\"new 0 0 723 626\" xml:space=\"preserve\">\n" +
+    "                            <g>\n" +
+    "                              <path fill=\"#232322\" d=\"M0,0h723v1.58c-3.72,4.37-5.58,9.96-8.89,14.62C596.69,219.439,479.44,422.79,361.96,626h-0.6\n" +
+    "                                C243.45,421.77,125.54,217.55,7.63,13.32C5.09,9.061,2.85,4.62,0,0.55V0z\"/>\n" +
+    "                              <path fill=\"#FFFFFF\" d=\"M86.57,48.002c183.289,0.01,366.569-0.02,549.859,0.02c-40.779,70.681-81.6,141.33-122.39,212.01\n" +
+    "                                c-7.36,12.841-14.91,25.58-22.11,38.521l-0.229-0.01c-86.79-0.09-173.59-0.06-260.38-0.011h-0.211\n" +
+    "                                c-20.239-35.569-40.899-70.899-61.289-106.379C142.061,144.111,114.359,96.031,86.57,48.002z\"/>\n" +
+    "                              <path fill=\"#21B795\" d=\"M231.311,298.599c86.79-0.049,173.59-0.079,260.38,0.011c-19.42,34.3-39.36,68.31-59,102.479\n" +
+    "                                c-23.71,41.091-47.44,82.16-71.15,123.25c-20.92-36.039-41.68-72.17-62.55-108.229C276.48,376.909,253.65,337.89,231.311,298.599z\"\n" +
+    "                                />\n" +
+    "                            </g>\n" +
+    "                        </svg>\n" +
+    "                </a>\n" +
+    "            </mask>\n" +
+    "        </defs>\n" +
+    "        <rect x=\"0\" y=\"0\" width=\"100%\" height=\"100%\"/>\n" +
+    "        <a href=\"#more\">\n" +
+    "            <svg class=\"tri-after\" version=\"1.1\" id=\"Layer_1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"835px\" y=\"68%\"\n" +
+    "             width=\"250px\" height=\"250px\" viewBox=\"0 0 723 626\" enable-background=\"new 0 0 723 626\" xml:space=\"preserve\">\n" +
+    "                    <g>\n" +
+    "                      <path fill=\"#232322\" d=\"M0,0h723v1.58c-3.72,4.37-5.58,9.96-8.89,14.62C596.69,219.439,479.44,422.79,361.96,626h-0.6\n" +
+    "                                              C243.45,421.77,125.54,217.55,7.63,13.32C5.09,9.061,2.85,4.62,0,0.55V0z\"/>\n" +
+    "                      <path fill=\"#FFFFFF\" d=\"M86.57,48.002c183.289,0.01,366.569-0.02,549.859,0.02c-40.779,70.681-81.6,141.33-122.39,212.01\n" +
+    "                                              c-7.36,12.841-14.91,25.58-22.11,38.521l-0.229-0.01c-86.79-0.09-173.59-0.06-260.38-0.011h-0.211\n" +
+    "                                              c-20.239-35.569-40.899-70.899-61.289-106.379C142.061,144.111,114.359,96.031,86.57,48.002z\"/>\n" +
+    "                      <path fill=\"#21B795\" d=\"M231.311,298.599c86.79-0.049,173.59-0.079,260.38,0.011c-19.42,34.3-39.36,68.31-59,102.479\n" +
+    "                                              c-23.71,41.091-47.44,82.16-71.15,123.25c-20.92-36.039-41.68-72.17-62.55-108.229C276.48,376.909,253.65,337.89,231.311,298.599z\"\n" +
+    "                            />\n" +
+    "                    </g>\n" +
+    "                </svg>\n" +
+    "        </a>\n" +
+    "    </svg>\n" +
+    "    <video id=\"video\" autoplay=\"autoplay\" muted=\"muted\" preload=\"auto\" loop=\"loop\">\n" +
+    "        <source src=\"http://mazwai.com/system/posts/videos/000/000/161/preview_mp4_3/leonard_soosay--missfit.mp4?1424004876\" type=\"video/webm\">\n" +
+    "    </video>\n" +
+    "    <img class=\"intro-img\" id=\"image\" src=\"http://36.media.tumblr.com/318b26ada390554e3940e1907c0e6d0f/tumblr_no0pwu8TmB1uuhx17o1_1280.jpg\">\n" +
+    "</div>\"image\" src=\"http://36.media.tumblr.com/318b26ada390554e3940e1907c0e6d0f/tumblr_no0pwu8TmB1uuhx17o1_1280.jpg\">");
 }]);
 
 angular.module("portfolio/index.tpl.html", []).run(["$templateCache", function($templateCache) {
