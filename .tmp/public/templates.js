@@ -470,6 +470,7 @@ angular.module("home/index.tpl.html", []).run(["$templateCache", function($templ
     "    </div>\n" +
     "\n" +
     "    <div class=\"services\" id=\"more\">\n" +
+    "        <br><br><br>\n" +
     "        <div class=\"section-head\">\n" +
     "            <h3>Our Services</h3>\n" +
     "            <hr>\n" +
