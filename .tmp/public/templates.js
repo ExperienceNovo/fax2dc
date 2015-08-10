@@ -1488,18 +1488,18 @@ angular.module("sidebar/index.tpl.html", []).run(["$templateCache", function($te
     "            </a>\n" +
     "        </div>\n" +
     "        <div class=\"item-container\">\n" +
-    "            <a href=\"/contact/\">\n" +
-    "                <div class=\"list-item\">\n" +
-    "                    <div class=\"nav-small-list\"><i class=\"fa fa-comment-o\"></i></div>\n" +
-    "                    <div class=\"nav-large-list\">Contact</div>\n" +
-    "                </div>\n" +
-    "            </a>\n" +
-    "        </div>\n" +
-    "        <div class=\"item-container\">\n" +
     "            <a href=\"/portfolio/\">\n" +
     "                <div class=\"list-item\">\n" +
     "                    <div class=\"nav-small-list\"><i class=\"fa fa-picture-o\"></i></div>\n" +
     "                    <div class=\"nav-large-list\">Portfolio</div>\n" +
+    "                </div>\n" +
+    "            </a>\n" +
+    "        </div>\n" +
+    "        <div class=\"item-container\">\n" +
+    "            <a href=\"/contact/\">\n" +
+    "                <div class=\"list-item\">\n" +
+    "                    <div class=\"nav-small-list\"><i class=\"fa fa-comment-o\"></i></div>\n" +
+    "                    <div class=\"nav-large-list\">Contact</div>\n" +
     "                </div>\n" +
     "            </a>\n" +
     "        </div>\n" +
