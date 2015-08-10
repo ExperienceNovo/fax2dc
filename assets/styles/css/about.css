@@ -163,9 +163,7 @@
 }
 
 @media screen and (max-width: 1400px) {
-    .about-tile {
-        width: 33.33%;
-    }
+    
 }
 
 @media screen and (max-width: 920px) {
