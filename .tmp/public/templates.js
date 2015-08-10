@@ -1,4 +1,4 @@
-angular.module('templates-app', ['about/index.tpl.html', 'blog-post/index.tpl.html', 'blog/index.tpl.html', 'contact/index.tpl.html', 'contact/index1.tpl.html', 'home/index.tpl.html', 'home/index1.tpl.html', 'portfolio/index.tpl.html', 'portfolio/index1.tpl.html', 'portfolio/index2.tpl.html', 'sidebar/index.tpl.html']);
+angular.module('templates-app', ['about/index.tpl.html', 'blog-post/index.tpl.html', 'blog/index.tpl.html', 'contact/index.tpl.html', 'contact/index1.tpl.html', 'home/index.tpl.html', 'home/index1.tpl.html', 'portfolio/index.tpl.html', 'portfolio/index1.tpl.html', 'portfolio/index2.tpl.html', 'portfolio/indextriangles.tpl.html', 'sidebar/index.tpl.html']);
 
 angular.module("about/index.tpl.html", []).run(["$templateCache", function($templateCache) {
   $templateCache.put("about/index.tpl.html",
@@ -933,6 +933,195 @@ angular.module("portfolio/index.tpl.html", []).run(["$templateCache", function($
   $templateCache.put("portfolio/index.tpl.html",
     "<link rel=\"stylesheet\" href=\"/styles/css/portfolio.css\">\n" +
     "\n" +
+    "\n" +
+    "<div class=\"home-pad\">\n" +
+    "	<div class=\"container\">\n" +
+    "	    <div id=\"\" class=\"info\">\n" +
+    "	        <div class=\"title\" style=\"font-weight:400;\">Our Clients</div>\n" +
+    "	        <br>\n" +
+    "	        <hr>\n" +
+    "	        <br>\n" +
+    "	        <div class=\"portfolio-message\">\n" +
+    "	            <p>Our clients are the only thing that matters.  Everything begins and ends with your needs.</p>\n" +
+    "	            <br>\n" +
+    "	            <br>\n" +
+    "	            <p></p>\n" +
+    "	        </div>\n" +
+    "	    </div>\n" +
+    "	</div>\n" +
+    "\n" +
+    "	<div class=\"clients\">\n" +
+    "		<div class=\"col-lg-3 col-md-4 col-sm-6 col-xs-12\">\n" +
+    "		    <div class=\"hovereffect2\">\n" +
+    "		        <img class=\"img-responsive\" src=\"/images/portfolio/absolute/symbol300.png\" alt=\"\">\n" +
+    "		            <div class=\"overlay2\">\n" +
+    "		                <h2>Absolute Yachts</h2>\n" +
+    "		                <p>\n" +
+    "		                	<a href=\"http://www.absoluteyachtsna.com/\">\n" +
+    "		                        <i class=\"fa fa-play\"></i>\n" +
+    "		                    </a>\n" +
+    "		                    <a href=\"https://www.facebook.com/pages/Absolute-North-America/1467350980243678\">\n" +
+    "		                        <i class=\"fa fa-facebook\"></i>\n" +
+    "		                    </a>\n" +
+    "		                    <a href=\"https://twitter.com/AbsoluteNA\">\n" +
+    "		                        <i class=\"fa fa-twitter\"></i>\n" +
+    "		                    </a>\n" +
+    "		                    <a href=\"https://instagram.com/absoluteyachtsna/\">\n" +
+    "		                        <i class=\"fa fa-instagram\"></i>\n" +
+    "		                    </a>\n" +
+    "		                </p>\n" +
+    "		            </div>\n" +
+    "		    </div>\n" +
+    "		</div>\n" +
+    "	</div>\n" +
+    "</div>	");
+}]);
+
+angular.module("portfolio/index1.tpl.html", []).run(["$templateCache", function($templateCache) {
+  $templateCache.put("portfolio/index1.tpl.html",
+    "<div class=\"container\">\n" +
+    "    <!--slideshow here-->\n" +
+    "</div>\n" +
+    "\n" +
+    "<div class='container' style=\"margin: 180px auto 0;\">\n" +
+    "    <div class='wrap'>\n" +
+    "        <div class='crop'>\n" +
+    "            <img src='' style=\"background-color: #1db996;\">\n" +
+    "        </div>\n" +
+    "    </div>\n" +
+    "    <div class='wrap'>\n" +
+    "        <div class='crop'>\n" +
+    "            <img src='' style=\"background-color: #1db996;\">\n" +
+    "        </div>\n" +
+    "    </div>\n" +
+    "    <div class='wrap'>\n" +
+    "        <div class='crop'>\n" +
+    "            <img src='/images/symbol300.png'>\n" +
+    "        </div>\n" +
+    "    </div>\n" +
+    "    <div class='wrap'>\n" +
+    "        <div class='crop'>\n" +
+    "            <img src='' style=\"background-color: #1db996;\">\n" +
+    "        </div>\n" +
+    "    </div>\n" +
+    "    <div class='wrap'>\n" +
+    "        <div class='crop'>\n" +
+    "            <img src='' style=\"background-color: #1db996;\">\n" +
+    "        </div>\n" +
+    "    </div>\n" +
+    "</div>\n" +
+    "\n" +
+    "<div class=\"container\">\n" +
+    "    <div id=\"absolute\" class=\"info\">\n" +
+    "        <div class=\"title\">Absolute Yachts North America</div>\n" +
+    "        <br>\n" +
+    "        <br>\n" +
+    "        <div class=\"message\">Absolute is an Italian yacht brand based in Piacenza, Italy, manufacturing yachts\n" +
+    "        ranging from 40 to 72 feet. Communicating the brand's focus on design, efficiency, performance\n" +
+    "        and serviceability are a high priority. NOVO is responsible for Absolute North America's online marketing,\n" +
+    "        including web design and development, email marketing, and social media marketing. The web site includes a\n" +
+    "        home page, about page, dealer map, model information and galleries, and contact form.</div>\n" +
+    "        <div class=\"link\"><a href=\"www.absoluteyachtsna.com\">absoluteyachtsna.com</a></div>\n" +
+    "    </div>\n" +
+    "    <div id=\"client2\" class=\"info\">\n" +
+    "        <!--next client here-->\n" +
+    "        <div class=\"title\"></div>\n" +
+    "        <div class=\"message\"></div>\n" +
+    "        <div class=\"link\"></div>\n" +
+    "    </div>\n" +
+    "</div>");
+}]);
+
+angular.module("portfolio/index2.tpl.html", []).run(["$templateCache", function($templateCache) {
+  $templateCache.put("portfolio/index2.tpl.html",
+    "<div class=\"container home-pad\">\n" +
+    "    <div id=\"\" class=\"info\">\n" +
+    "        <div class=\"title\" style=\"font-weight:400;\">Quality, Modernity, and Transparency</div>\n" +
+    "        <br>\n" +
+    "        <br>\n" +
+    "        <div class=\"message\">\n" +
+    "            Our clients know what it means to partner with NOVO. Our work exudes quality, employs the latest and greatest\n" +
+    "            in marketing and web development, and we are transparent in our communication to clients and the outside\n" +
+    "            world.\n" +
+    "            <br>\n" +
+    "            <br>\n" +
+    "            We believe our work speaks for itself.\n" +
+    "        </div>\n" +
+    "    </div>\n" +
+    "</div>\n" +
+    "\n" +
+    "<!--make dynamic with angular-->\n" +
+    "<div class='container home-pad' style=\"margin: 180px auto 0;\">\n" +
+    "    <div class='wrap'>\n" +
+    "        <div class='crop'>\n" +
+    "            <img src='' style=\"background-color: #1db996;\">\n" +
+    "        </div>\n" +
+    "    </div>\n" +
+    "    <div class='wrap'>\n" +
+    "        <div class='crop'>\n" +
+    "            <img src='' style=\"background-color: #1db996;\">\n" +
+    "        </div>\n" +
+    "    </div>\n" +
+    "    <div class='wrap'>\n" +
+    "        <div class='crop'>\n" +
+    "            <img src='/images/symbol300.png'>\n" +
+    "        </div>\n" +
+    "    </div>\n" +
+    "    <div class='wrap'>\n" +
+    "        <div class='crop'>\n" +
+    "            <img src='' style=\"background-color: #1db996;\">\n" +
+    "        </div>\n" +
+    "    </div>\n" +
+    "    <div class='wrap'>\n" +
+    "        <div class='crop'>\n" +
+    "            <img src='' style=\"background-color: #1db996;\">\n" +
+    "        </div>\n" +
+    "    </div>\n" +
+    "</div>\n" +
+    "\n" +
+    "\n" +
+    "<div class=\"container home-pad\">\n" +
+    "\n" +
+    "    <div id=\"absolute\" class=\"info\">\n" +
+    "        <div class=\"title\">Absolute Yachts North America</div>\n" +
+    "        <br>\n" +
+    "        <br>\n" +
+    "        <div class=\"message\">\n" +
+    "            Absolute is an Italian yacht brand based in Piacenza, Italy, manufacturing yachts\n" +
+    "            ranging from 40 to 72 feet. Communicating the Absolute's focus on design, efficiency, performance\n" +
+    "            and serviceability are a high priority. NOVO is responsible for Absolute North America's online marketing,\n" +
+    "            including web design and development, email marketing, and social media marketing.\n" +
+    "        </div>\n" +
+    "\n" +
+    "        <div style=\"height:50px;\"></div>\n" +
+    "        <div style=\"text-align:center;\" class=\"link\">\n" +
+    "            <a style=\"color:#1db996\" href=\"www.absoluteyachtsna.com\">absoluteyachtsna.com</a>\n" +
+    "        </div>\n" +
+    "        <div style=\"height:80px;\"></div>\n" +
+    "\n" +
+    "        <a href=\"http://www.absoluteyachtsna.com/\" style=\"text-align:cener;\">\n" +
+    "            <img src=\"/images/portfolio/absolute-screenshot.png\" class=\"img-fill\" style=\"width: 100%\">\n" +
+    "        </a>\n" +
+    "\n" +
+    "    </div>\n" +
+    "\n" +
+    "    <!--on click triangle show-->\n" +
+    "    <!--<div id=\"client2\" class=\"info\">\n" +
+    "        <div class=\"title\">Client 2</div>\n" +
+    "        <div class=\"message\">hey client 2</div>\n" +
+    "        <div class=\"link\"></div>\n" +
+    "    </div>-->\n" +
+    "\n" +
+    "</div>\n" +
+    "\n" +
+    "<div style=\"height:100px;\"></div>\n" +
+    "");
+}]);
+
+angular.module("portfolio/indextriangles.tpl.html", []).run(["$templateCache", function($templateCache) {
+  $templateCache.put("portfolio/indextriangles.tpl.html",
+    "<link rel=\"stylesheet\" href=\"/styles/css/portfolio.css\">\n" +
+    "\n" +
     "<!--<div class=\"surface-container\">\n" +
     "    <div class=\"center top-area\">\n" +
     "        <div class=\"title-top\">Quality, Modernity, and Transparency\n" +
@@ -1167,147 +1356,6 @@ angular.module("portfolio/index.tpl.html", []).run(["$templateCache", function($
     "    </div>\n" +
     "</div>\n" +
     "</div>");
-}]);
-
-angular.module("portfolio/index1.tpl.html", []).run(["$templateCache", function($templateCache) {
-  $templateCache.put("portfolio/index1.tpl.html",
-    "<div class=\"container\">\n" +
-    "    <!--slideshow here-->\n" +
-    "</div>\n" +
-    "\n" +
-    "<div class='container' style=\"margin: 180px auto 0;\">\n" +
-    "    <div class='wrap'>\n" +
-    "        <div class='crop'>\n" +
-    "            <img src='' style=\"background-color: #1db996;\">\n" +
-    "        </div>\n" +
-    "    </div>\n" +
-    "    <div class='wrap'>\n" +
-    "        <div class='crop'>\n" +
-    "            <img src='' style=\"background-color: #1db996;\">\n" +
-    "        </div>\n" +
-    "    </div>\n" +
-    "    <div class='wrap'>\n" +
-    "        <div class='crop'>\n" +
-    "            <img src='/images/symbol300.png'>\n" +
-    "        </div>\n" +
-    "    </div>\n" +
-    "    <div class='wrap'>\n" +
-    "        <div class='crop'>\n" +
-    "            <img src='' style=\"background-color: #1db996;\">\n" +
-    "        </div>\n" +
-    "    </div>\n" +
-    "    <div class='wrap'>\n" +
-    "        <div class='crop'>\n" +
-    "            <img src='' style=\"background-color: #1db996;\">\n" +
-    "        </div>\n" +
-    "    </div>\n" +
-    "</div>\n" +
-    "\n" +
-    "<div class=\"container\">\n" +
-    "    <div id=\"absolute\" class=\"info\">\n" +
-    "        <div class=\"title\">Absolute Yachts North America</div>\n" +
-    "        <br>\n" +
-    "        <br>\n" +
-    "        <div class=\"message\">Absolute is an Italian yacht brand based in Piacenza, Italy, manufacturing yachts\n" +
-    "        ranging from 40 to 72 feet. Communicating the brand's focus on design, efficiency, performance\n" +
-    "        and serviceability are a high priority. NOVO is responsible for Absolute North America's online marketing,\n" +
-    "        including web design and development, email marketing, and social media marketing. The web site includes a\n" +
-    "        home page, about page, dealer map, model information and galleries, and contact form.</div>\n" +
-    "        <div class=\"link\"><a href=\"www.absoluteyachtsna.com\">absoluteyachtsna.com</a></div>\n" +
-    "    </div>\n" +
-    "    <div id=\"client2\" class=\"info\">\n" +
-    "        <!--next client here-->\n" +
-    "        <div class=\"title\"></div>\n" +
-    "        <div class=\"message\"></div>\n" +
-    "        <div class=\"link\"></div>\n" +
-    "    </div>\n" +
-    "</div>");
-}]);
-
-angular.module("portfolio/index2.tpl.html", []).run(["$templateCache", function($templateCache) {
-  $templateCache.put("portfolio/index2.tpl.html",
-    "<div class=\"container home-pad\">\n" +
-    "    <div id=\"\" class=\"info\">\n" +
-    "        <div class=\"title\" style=\"font-weight:400;\">Quality, Modernity, and Transparency</div>\n" +
-    "        <br>\n" +
-    "        <br>\n" +
-    "        <div class=\"message\">\n" +
-    "            Our clients know what it means to partner with NOVO. Our work exudes quality, employs the latest and greatest\n" +
-    "            in marketing and web development, and we are transparent in our communication to clients and the outside\n" +
-    "            world.\n" +
-    "            <br>\n" +
-    "            <br>\n" +
-    "            We believe our work speaks for itself.\n" +
-    "        </div>\n" +
-    "    </div>\n" +
-    "</div>\n" +
-    "\n" +
-    "<!--make dynamic with angular-->\n" +
-    "<div class='container home-pad' style=\"margin: 180px auto 0;\">\n" +
-    "    <div class='wrap'>\n" +
-    "        <div class='crop'>\n" +
-    "            <img src='' style=\"background-color: #1db996;\">\n" +
-    "        </div>\n" +
-    "    </div>\n" +
-    "    <div class='wrap'>\n" +
-    "        <div class='crop'>\n" +
-    "            <img src='' style=\"background-color: #1db996;\">\n" +
-    "        </div>\n" +
-    "    </div>\n" +
-    "    <div class='wrap'>\n" +
-    "        <div class='crop'>\n" +
-    "            <img src='/images/symbol300.png'>\n" +
-    "        </div>\n" +
-    "    </div>\n" +
-    "    <div class='wrap'>\n" +
-    "        <div class='crop'>\n" +
-    "            <img src='' style=\"background-color: #1db996;\">\n" +
-    "        </div>\n" +
-    "    </div>\n" +
-    "    <div class='wrap'>\n" +
-    "        <div class='crop'>\n" +
-    "            <img src='' style=\"background-color: #1db996;\">\n" +
-    "        </div>\n" +
-    "    </div>\n" +
-    "</div>\n" +
-    "\n" +
-    "\n" +
-    "<div class=\"container home-pad\">\n" +
-    "\n" +
-    "    <div id=\"absolute\" class=\"info\">\n" +
-    "        <div class=\"title\">Absolute Yachts North America</div>\n" +
-    "        <br>\n" +
-    "        <br>\n" +
-    "        <div class=\"message\">\n" +
-    "            Absolute is an Italian yacht brand based in Piacenza, Italy, manufacturing yachts\n" +
-    "            ranging from 40 to 72 feet. Communicating the Absolute's focus on design, efficiency, performance\n" +
-    "            and serviceability are a high priority. NOVO is responsible for Absolute North America's online marketing,\n" +
-    "            including web design and development, email marketing, and social media marketing.\n" +
-    "        </div>\n" +
-    "\n" +
-    "        <div style=\"height:50px;\"></div>\n" +
-    "        <div style=\"text-align:center;\" class=\"link\">\n" +
-    "            <a style=\"color:#1db996\" href=\"www.absoluteyachtsna.com\">absoluteyachtsna.com</a>\n" +
-    "        </div>\n" +
-    "        <div style=\"height:80px;\"></div>\n" +
-    "\n" +
-    "        <a href=\"http://www.absoluteyachtsna.com/\" style=\"text-align:cener;\">\n" +
-    "            <img src=\"/images/portfolio/absolute-screenshot.png\" class=\"img-fill\" style=\"width: 100%\">\n" +
-    "        </a>\n" +
-    "\n" +
-    "    </div>\n" +
-    "\n" +
-    "    <!--on click triangle show-->\n" +
-    "    <!--<div id=\"client2\" class=\"info\">\n" +
-    "        <div class=\"title\">Client 2</div>\n" +
-    "        <div class=\"message\">hey client 2</div>\n" +
-    "        <div class=\"link\"></div>\n" +
-    "    </div>-->\n" +
-    "\n" +
-    "</div>\n" +
-    "\n" +
-    "<div style=\"height:100px;\"></div>\n" +
-    "");
 }]);
 
 angular.module("sidebar/index.tpl.html", []).run(["$templateCache", function($templateCache) {
