@@ -2,21 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="945a5b82-2f8a-4a46-81ae-51de93913e2d" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.tmp/public/src/app/intro/intro.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/src/app/intro/intro.html" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.tmp/public/styles/css/home.css" afterPath="$PROJECT_DIR$/.tmp/public/styles/css/home.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/styles/css/home.css" afterPath="$PROJECT_DIR$/assets/styles/css/home.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.tmp/public/src/app/intro/index.js" afterPath="$PROJECT_DIR$/.tmp/public/src/app/intro/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/src/app/intro/index.js" afterPath="$PROJECT_DIR$/assets/src/app/intro/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.tmp/public/src/app/home/index.tpl.html" afterPath="$PROJECT_DIR$/.tmp/public/src/app/home/index.tpl.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.tmp/public/src/app/intro/index.tpl.html" afterPath="$PROJECT_DIR$/.tmp/public/src/app/intro/index.tpl.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/src/app/home/index.tpl.html" afterPath="$PROJECT_DIR$/assets/src/app/home/index.tpl.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/src/app/intro/index.tpl.html" afterPath="$PROJECT_DIR$/assets/src/app/intro/index.tpl.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.tmp/public/styles/css/intro.css" afterPath="$PROJECT_DIR$/.tmp/public/styles/css/intro.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/styles/css/intro.css" afterPath="$PROJECT_DIR$/assets/styles/css/intro.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.tmp/public/styles/css/styles.css" afterPath="$PROJECT_DIR$/.tmp/public/styles/css/styles.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/styles/css/styles.css" afterPath="$PROJECT_DIR$/assets/styles/css/styles.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.tmp/public/templates.js" afterPath="$PROJECT_DIR$/.tmp/public/templates.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Site.iws" />
@@ -41,28 +26,16 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.tpl.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.tpl.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/assets/src/app/home/index.tpl.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-2.5" vertical-offset="0" max-vertical-offset="3885">
-              <caret line="4" column="4" selection-start-line="4" selection-start-column="4" selection-end-line="53" selection-end-column="10" />
+            <state vertical-scroll-proportion="0.33670035" vertical-offset="45" max-vertical-offset="3885">
+              <caret line="23" column="65" selection-start-line="23" selection-start-column="65" selection-end-line="23" selection-end-column="65" />
               <folding>
                 <element signature="n#style#0;n#mask#0;n#defs#0;n#svg#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#a#0;n#div#1;n#div#1;n#div#3;n#div#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#span#0;n#div#2;n#div#1;n#div#3;n#div#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.tpl.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/assets/src/app/intro/index.tpl.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.26936027" vertical-offset="0" max-vertical-offset="891">
-              <caret line="16" column="31" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="31" />
-              <folding>
-                <element signature="n#style#0;n#mask#0;n#defs#0;n#svg#0;n#div#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -1201,25 +1174,25 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/assets/src/app/intro/index.tpl.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5050505" vertical-offset="0" max-vertical-offset="891">
+          <caret line="30" column="37" selection-start-line="30" selection-start-column="37" selection-end-line="30" selection-end-column="37" />
+          <folding>
+            <element signature="n#style#0;n#mask#0;n#defs#0;n#svg#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/assets/src/app/home/index.tpl.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.5" vertical-offset="0" max-vertical-offset="3885">
-          <caret line="4" column="4" selection-start-line="4" selection-start-column="4" selection-end-line="53" selection-end-column="10" />
+        <state vertical-scroll-proportion="0.33670035" vertical-offset="45" max-vertical-offset="3885">
+          <caret line="23" column="65" selection-start-line="23" selection-start-column="65" selection-end-line="23" selection-end-column="65" />
           <folding>
             <element signature="n#style#0;n#mask#0;n#defs#0;n#svg#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#a#0;n#div#1;n#div#1;n#div#3;n#div#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#0;n#div#2;n#div#1;n#div#3;n#div#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/src/app/intro/index.tpl.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.26936027" vertical-offset="0" max-vertical-offset="891">
-          <caret line="16" column="31" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="31" />
-          <folding>
-            <element signature="n#style#0;n#mask#0;n#defs#0;n#svg#0;n#div#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
