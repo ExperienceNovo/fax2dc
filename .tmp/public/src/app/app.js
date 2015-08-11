@@ -12,7 +12,9 @@ angular.module( 'novo', [
     'novo.about',
     'novo.blog',
     'novo.contact',
-    'novo.portfolio'
+    'novo.portfolio',
+    'novo.intro'
+    //'uiGmapgoogle-maps'
     //'novo.blog-post'
 
 ])

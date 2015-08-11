@@ -15,4 +15,5 @@ angular.module( 'novo.contact', [
 
 .controller( 'ContactCtrl', function AboutController( $scope, titleService ) {
 	titleService.setTitle('Contact - NOVO');
+	$scope.map = { center: { latitude: 45, longitude: -73 }, zoom: 8 };
 });

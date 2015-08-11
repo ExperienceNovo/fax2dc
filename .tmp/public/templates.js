@@ -385,11 +385,12 @@ angular.module("contact/index.tpl.html", []).run(["$templateCache", function($te
     "        <br>\n" +
     "        <br>\n" +
     "        <br>\n" +
-    "        <div class=\"map-center\">\n" +
+    "        <ui-gmap-google-map center='map.center' zoom='map.zoom' style=\"height: 400px;\"></ui-gmap-google-map>\n" +
+    "       <!-- <div class=\"map-center\">\n" +
     "            <div id=\"map-container\" class=\"map-container\">\n" +
     "                <div id=\"map-canvas\"></div>\n" +
     "            </div>\n" +
-    "        </div>\n" +
+    "        </div> -->\n" +
     "        <div class=\"message\">\n" +
     "            <div class=\"bottom-tagline\"></div>\n" +
     "        </div>\n" +
@@ -399,7 +400,8 @@ angular.module("contact/index.tpl.html", []).run(["$templateCache", function($te
     "    </div>\n" +
     "</div>\n" +
     "\n" +
-    "<script src=\"/js/maps.js\" type='text/javascript'></script>\n" +
+    "<script src='//maps.googleapis.com/maps/api/js?sensor=false'></script>\n" +
+    "<script src=\"/bower_components/angular-google-maps/dist/angular-google-maps.js\"></script>\n" +
     "");
 }]);
 
