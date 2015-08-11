@@ -4,6 +4,7 @@ angular.module( 'novo', [
     'angularMoment',
     'lodash',
     'ui.bootstrap',
+    'uiGmapgoogle-maps',
     'templates-app',
     'services',
     'models',
@@ -14,7 +15,6 @@ angular.module( 'novo', [
     'novo.contact',
     'novo.portfolio',
     'novo.intro'
-    //'uiGmapgoogle-maps'
     //'novo.blog-post'
 
 ])

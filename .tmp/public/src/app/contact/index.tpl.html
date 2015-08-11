@@ -1,8 +1,5 @@
 <style type="text/css">
-    #map-canvas {
-    width: 1900px;
-    height: 450px;
-    }
+    .angular-google-map-container { height: 400px; }
 </style>
 
 <div class="surface-container home-pad">
@@ -48,7 +45,7 @@
                             <br>
                             <br>
                             <br>
-                            <h2><span class="contact-city">Raleigh, NC</span></h2>
+                            <h2 ng-click="onClick()"><span class="contact-city">Raleigh, NC</span></h2>
                             <p>
                                 <a href="tel:+18656797229">865.679.7229</a>
                             </p>
@@ -63,7 +60,7 @@
                             <br>
                             <br>
                             <br>
-                            <h2><span class="contact-city">Chicago, IL</span></h2>
+                            <h2 ng-click="onClick()"><span class="contact-city">Chicago, IL</span></h2>
                             <p>
                                 <a href="tel:+18653876121">865.387.6121</a>
                             </p>
@@ -77,7 +74,7 @@
                             <br>
                             <br>
                             <br>
-                            <h2><span class="contact-city">Knoxville, TN</span></h2>
+                            <h2 ng-click="onClick()"><span class="contact-city">Knoxville, TN</span></h2>
                             <p>
                                 <a href="tel:+18656969382">865.696.9382</a>
                             </p>
@@ -91,7 +88,7 @@
                             <br>
                             <br>
                             <br>
-                            <h2><span class="contact-city">Philadelphia, PA</span></h2>
+                            <h2 ng-click="onClick()"><span class="contact-city">Philadelphia, PA</span></h2>
                             <p>
                                 <a href="tel:+13365800855">336.580.0855</a>
                             </p>
@@ -103,12 +100,62 @@
         <br>
         <br>
         <br>
-        <ui-gmap-google-map center='map.center' zoom='map.zoom' style="height: 400px;"></ui-gmap-google-map>
-       <!-- <div class="map-center">
-            <div id="map-container" class="map-container">
-                <div id="map-canvas"></div>
-            </div>
-        </div> -->
+
+
+
+        <ui-gmap-google-map center="map.center" zoom="map.zoom" options="options">
+
+            <ui-gmap-marker coords="marker1.coords" options="marker1.options" idkey="marker1.id">
+                <ui-gmap-window options="windowOptions" closeClick="closeClick()">
+                    <div>
+                        <div style="font-size: 15px;">Evanston, IL (Chicago)</div>
+                        <br>Valentino Constantinou
+                        <br>phone: (865) 387-6121
+                        <br>email: <a href="mailto:info@projectnovo.com">info@projectnovo.com</a>
+                        <br>
+                    </div>
+                </ui-gmap-window>
+            </ui-gmap-marker>
+
+            <ui-gmap-marker coords="marker2.coords" options="marker2.options" idkey="marker2.id">
+                <ui-gmap-window options="windowOptions" closeClick="closeClick()">
+                    <div>
+                        <div style="font-size: 15px;">Knoxville, TN</div>
+                        <br>Garrett Headden
+                        <br>phone: (865) 696-9382
+                        <br>email: <a href="mailto:info@projectnovo.com">info@projectnovo.com</a>
+                        <br>
+                    </div>
+                </ui-gmap-window>
+            </ui-gmap-marker>
+
+            <ui-gmap-marker coords="marker3.coords" options="marker3.options" idkey="marker3.id">
+                <ui-gmap-window options="windowOptions" closeClick="closeClick()">
+                    <div>
+                        <div style="font-size: 15px;">Chapel Hill, NC (Raleigh)</div>
+                        <br>Trevor Overman
+                        <br>phone: (865) 679-7229
+                        <br>email: <a href="mailto:info@projectnovo.com">info@projectnovo.com</a>
+                        <br>
+                    </div>
+                </ui-gmap-window>
+            </ui-gmap-marker>
+
+            <ui-gmap-marker coords="marker4.coords" options="marker4.options"idkey="marker4.id">
+                <ui-gmap-window options="windowOptions" closeClick="closeClick()">
+                    <div>
+                        <div style="font-size: 15px;">Philadelphia, PA</div>
+                        <br>Michael Thompson
+                        <br>phone: (336) 580-0855
+                        <br>email: <a href="mailto:info@projectnovo.com">info@projectnovo.com</a>
+                        <br>
+                    </div>
+                </ui-gmap-window>
+            </ui-gmap-marker>
+
+        </ui-gmap-google-map>
+
+
         <div class="message">
             <div class="bottom-tagline"></div>
         </div>
@@ -118,5 +165,4 @@
     </div>
 </div>
 
-<script src='//maps.googleapis.com/maps/api/js?sensor=false'></script>
-<script src="/bower_components/angular-google-maps/dist/angular-google-maps.js"></script>
+

@@ -1,4 +1,4 @@
-angular.module('templates-app', ['about/index.tpl.html', 'blog-post/index.tpl.html', 'blog/index.tpl.html', 'contact/index.tpl.html', 'contact/index1.tpl.html', 'home/index.tpl.html', 'home/index1.tpl.html', 'intro/index.tpl.html', 'portfolio/index.tpl.html', 'portfolio/index1.tpl.html', 'portfolio/index2.tpl.html', 'portfolio/indextriangles.tpl.html', 'sidebar/index.tpl.html']);
+angular.module('templates-app', ['about/index.tpl.html', 'blog-post/index.tpl.html', 'blog/index.tpl.html', 'contact/index.tpl.html', 'contact/index1.tpl.html', 'contact/index11.tpl.html', 'home/index.tpl.html', 'home/index1.tpl.html', 'intro/index.tpl.html', 'portfolio/index.tpl.html', 'portfolio/index1.tpl.html', 'portfolio/index2.tpl.html', 'portfolio/indextriangles.tpl.html', 'sidebar/index.tpl.html']);
 
 angular.module("about/index.tpl.html", []).run(["$templateCache", function($templateCache) {
   $templateCache.put("about/index.tpl.html",
@@ -281,10 +281,7 @@ angular.module("blog/index.tpl.html", []).run(["$templateCache", function($templ
 angular.module("contact/index.tpl.html", []).run(["$templateCache", function($templateCache) {
   $templateCache.put("contact/index.tpl.html",
     "<style type=\"text/css\">\n" +
-    "    #map-canvas {\n" +
-    "    width: 1900px;\n" +
-    "    height: 450px;\n" +
-    "    }\n" +
+    "    .angular-google-map-container { height: 400px; }\n" +
     "</style>\n" +
     "\n" +
     "<div class=\"surface-container home-pad\">\n" +
@@ -330,7 +327,7 @@ angular.module("contact/index.tpl.html", []).run(["$templateCache", function($te
     "                            <br>\n" +
     "                            <br>\n" +
     "                            <br>\n" +
-    "                            <h2><span class=\"contact-city\">Raleigh, NC</span></h2>\n" +
+    "                            <h2 ng-click=\"onClick()\"><span class=\"contact-city\">Raleigh, NC</span></h2>\n" +
     "                            <p>\n" +
     "                                <a href=\"tel:+18656797229\">865.679.7229</a>\n" +
     "                            </p>\n" +
@@ -345,7 +342,7 @@ angular.module("contact/index.tpl.html", []).run(["$templateCache", function($te
     "                            <br>\n" +
     "                            <br>\n" +
     "                            <br>\n" +
-    "                            <h2><span class=\"contact-city\">Chicago, IL</span></h2>\n" +
+    "                            <h2 ng-click=\"onClick()\"><span class=\"contact-city\">Chicago, IL</span></h2>\n" +
     "                            <p>\n" +
     "                                <a href=\"tel:+18653876121\">865.387.6121</a>\n" +
     "                            </p>\n" +
@@ -359,7 +356,7 @@ angular.module("contact/index.tpl.html", []).run(["$templateCache", function($te
     "                            <br>\n" +
     "                            <br>\n" +
     "                            <br>\n" +
-    "                            <h2><span class=\"contact-city\">Knoxville, TN</span></h2>\n" +
+    "                            <h2 ng-click=\"onClick()\"><span class=\"contact-city\">Knoxville, TN</span></h2>\n" +
     "                            <p>\n" +
     "                                <a href=\"tel:+18656969382\">865.696.9382</a>\n" +
     "                            </p>\n" +
@@ -373,7 +370,7 @@ angular.module("contact/index.tpl.html", []).run(["$templateCache", function($te
     "                            <br>\n" +
     "                            <br>\n" +
     "                            <br>\n" +
-    "                            <h2><span class=\"contact-city\">Philadelphia, PA</span></h2>\n" +
+    "                            <h2 ng-click=\"onClick()\"><span class=\"contact-city\">Philadelphia, PA</span></h2>\n" +
     "                            <p>\n" +
     "                                <a href=\"tel:+13365800855\">336.580.0855</a>\n" +
     "                            </p>\n" +
@@ -385,12 +382,62 @@ angular.module("contact/index.tpl.html", []).run(["$templateCache", function($te
     "        <br>\n" +
     "        <br>\n" +
     "        <br>\n" +
-    "        <ui-gmap-google-map center='map.center' zoom='map.zoom' style=\"height: 400px;\"></ui-gmap-google-map>\n" +
-    "       <!-- <div class=\"map-center\">\n" +
-    "            <div id=\"map-container\" class=\"map-container\">\n" +
-    "                <div id=\"map-canvas\"></div>\n" +
-    "            </div>\n" +
-    "        </div> -->\n" +
+    "\n" +
+    "\n" +
+    "\n" +
+    "        <ui-gmap-google-map center=\"map.center\" zoom=\"map.zoom\" options=\"options\">\n" +
+    "\n" +
+    "            <ui-gmap-marker coords=\"marker1.coords\" options=\"marker1.options\" idkey=\"marker1.id\">\n" +
+    "                <ui-gmap-window options=\"windowOptions\" closeClick=\"closeClick()\">\n" +
+    "                    <div>\n" +
+    "                        <div style=\"font-size: 15px;\">Evanston, IL (Chicago)</div>\n" +
+    "                        <br>Valentino Constantinou\n" +
+    "                        <br>phone: (865) 387-6121\n" +
+    "                        <br>email: <a href=\"mailto:info@projectnovo.com\">info@projectnovo.com</a>\n" +
+    "                        <br>\n" +
+    "                    </div>\n" +
+    "                </ui-gmap-window>\n" +
+    "            </ui-gmap-marker>\n" +
+    "\n" +
+    "            <ui-gmap-marker coords=\"marker2.coords\" options=\"marker2.options\" idkey=\"marker2.id\">\n" +
+    "                <ui-gmap-window options=\"windowOptions\" closeClick=\"closeClick()\">\n" +
+    "                    <div>\n" +
+    "                        <div style=\"font-size: 15px;\">Knoxville, TN</div>\n" +
+    "                        <br>Garrett Headden\n" +
+    "                        <br>phone: (865) 696-9382\n" +
+    "                        <br>email: <a href=\"mailto:info@projectnovo.com\">info@projectnovo.com</a>\n" +
+    "                        <br>\n" +
+    "                    </div>\n" +
+    "                </ui-gmap-window>\n" +
+    "            </ui-gmap-marker>\n" +
+    "\n" +
+    "            <ui-gmap-marker coords=\"marker3.coords\" options=\"marker3.options\" idkey=\"marker3.id\">\n" +
+    "                <ui-gmap-window options=\"windowOptions\" closeClick=\"closeClick()\">\n" +
+    "                    <div>\n" +
+    "                        <div style=\"font-size: 15px;\">Chapel Hill, NC (Raleigh)</div>\n" +
+    "                        <br>Trevor Overman\n" +
+    "                        <br>phone: (865) 679-7229\n" +
+    "                        <br>email: <a href=\"mailto:info@projectnovo.com\">info@projectnovo.com</a>\n" +
+    "                        <br>\n" +
+    "                    </div>\n" +
+    "                </ui-gmap-window>\n" +
+    "            </ui-gmap-marker>\n" +
+    "\n" +
+    "            <ui-gmap-marker coords=\"marker4.coords\" options=\"marker4.options\"idkey=\"marker4.id\">\n" +
+    "                <ui-gmap-window options=\"windowOptions\" closeClick=\"closeClick()\">\n" +
+    "                    <div>\n" +
+    "                        <div style=\"font-size: 15px;\">Philadelphia, PA</div>\n" +
+    "                        <br>Michael Thompson\n" +
+    "                        <br>phone: (336) 580-0855\n" +
+    "                        <br>email: <a href=\"mailto:info@projectnovo.com\">info@projectnovo.com</a>\n" +
+    "                        <br>\n" +
+    "                    </div>\n" +
+    "                </ui-gmap-window>\n" +
+    "            </ui-gmap-marker>\n" +
+    "\n" +
+    "        </ui-gmap-google-map>\n" +
+    "\n" +
+    "\n" +
     "        <div class=\"message\">\n" +
     "            <div class=\"bottom-tagline\"></div>\n" +
     "        </div>\n" +
@@ -400,8 +447,7 @@ angular.module("contact/index.tpl.html", []).run(["$templateCache", function($te
     "    </div>\n" +
     "</div>\n" +
     "\n" +
-    "<script src='//maps.googleapis.com/maps/api/js?sensor=false'></script>\n" +
-    "<script src=\"/bower_components/angular-google-maps/dist/angular-google-maps.js\"></script>\n" +
+    "\n" +
     "");
 }]);
 
@@ -513,6 +559,125 @@ angular.module("contact/index1.tpl.html", []).run(["$templateCache", function($t
     "\n" +
     "\n" +
     "\n" +
+    "");
+}]);
+
+angular.module("contact/index11.tpl.html", []).run(["$templateCache", function($templateCache) {
+  $templateCache.put("contact/index11.tpl.html",
+    "<style type=\"text/css\">\n" +
+    "    #map-canvas {\n" +
+    "        width: 1900px;\n" +
+    "        height: 450px;\n" +
+    "    }\n" +
+    "</style>\n" +
+    "\n" +
+    "<div class=\"surface-container home-pad\">\n" +
+    "    <div class=\"title-surface-container\">\n" +
+    "        <div class=\"contact-title-home\">\n" +
+    "            <p>Contact Us</p>\n" +
+    "            <hr>\n" +
+    "        </div>\n" +
+    "        <br>\n" +
+    "        <div class=\"contact-icons\">\n" +
+    "            <a class=\"envelope-icon\" href=\"mailto:info@projectnovo.co\"><i class=\"fa fa-envelope\"></i></a>\n" +
+    "            <a class=\"facebook-icon\" href=\"https://www.facebook.com/experienceNOVO\"><i class=\"fa fa-facebook\"></i></a>\n" +
+    "            <a class=\"twitter-icon\" href=\"https://twitter.com/experienceNOVO\"><i class=\"fa fa-twitter\"></i></a>\n" +
+    "            <a class=\"linkedin-icon\" href=\"https://www.linkedin.com/company/novo---web-design-web-development-&-online-marketing?trk=biz-companies-cym\"><i class=\"fa fa-linkedin\"></i></a>\n" +
+    "        </div>\n" +
+    "        <br><br><br>\n" +
+    "            <!--\n" +
+    "            <div class=\"message\">\n" +
+    "                <a href=\"mailto:info@projectnovo.co\"><button class=\"mainbutton service-button\">email us: info@projectnovo.co</button></a>\n" +
+    "                <br><br><br>\n" +
+    "            </div>\n" +
+    "            -->\n" +
+    "        </div>\n" +
+    "    </div>\n" +
+    "</div>\n" +
+    "\n" +
+    "<!-- i would like if the numbers were more visiable -->\n" +
+    "<div class=\"surface-container home-pad\" style=\"background-color:rgb(0,0,0)\">\n" +
+    "    <div class=\"contact-page-container\">\n" +
+    "        <br><br><br><br><br>\n" +
+    "        <div class=\"contact-title-location\">\n" +
+    "            <p>Four Locations Nationwide</p>\n" +
+    "            <hr>\n" +
+    "            <!--<p>give us a call!</p>-->\n" +
+    "        </div>\n" +
+    "        <br><br><br>\n" +
+    "        <div class=\"row\">    \n" +
+    "            <div class=\"col-md-12 center\">\n" +
+    "                <div class=\"col-md-3 office-contact\">\n" +
+    "                    <div class=\"hovereffect\">\n" +
+    "                        <img class=\"img-responsive\" src=\"/images/contact/raleigh-nc.jpg\" alt=\"\">\n" +
+    "                        <div class=\"overlay\">\n" +
+    "                            <br>\n" +
+    "                            <br>\n" +
+    "                            <br>\n" +
+    "                            <h2><span class=\"contact-city\">Raleigh, NC</span></h2>\n" +
+    "                            <p>\n" +
+    "                                <a href=\"tel:+18656797229\">865.679.7229</a>\n" +
+    "                            </p>\n" +
+    "                        </div>\n" +
+    "                        <div class=\"black\"></div>\n" +
+    "                    </div>\n" +
+    "                </div>\n" +
+    "                <div class=\"col-md-3 office-contact\">\n" +
+    "                    <div class=\"hovereffect\">\n" +
+    "                        <img class=\"img-responsive\" src=\"/images/contact/evanston.jpg\" alt=\"\">\n" +
+    "                        <div class=\"overlay\">\n" +
+    "                            <br>\n" +
+    "                            <br>\n" +
+    "                            <br>\n" +
+    "                            <h2><span class=\"contact-city\">Chicago, IL</span></h2>\n" +
+    "                            <p>\n" +
+    "                                <a href=\"tel:+18653876121\">865.387.6121</a>\n" +
+    "                            </p>\n" +
+    "                        </div>\n" +
+    "                    </div>\n" +
+    "                </div>\n" +
+    "                <div class=\"col-md-3 office-contact\">\n" +
+    "                    <div class=\"hovereffect\">\n" +
+    "                        <img class=\"img-responsive\" src=\"/images/contact/knoxville.jpg\" alt=\"\">\n" +
+    "                        <div class=\"overlay\">\n" +
+    "                            <br>\n" +
+    "                            <br>\n" +
+    "                            <br>\n" +
+    "                            <h2><span class=\"contact-city\">Knoxville, TN</span></h2>\n" +
+    "                            <p>\n" +
+    "                                <a href=\"tel:+18656969382\">865.696.9382</a>\n" +
+    "                            </p>\n" +
+    "                        </div>\n" +
+    "                    </div>\n" +
+    "                </div>\n" +
+    "                <div class=\"col-md-3 office-contact\">\n" +
+    "                    <div class=\"hovereffect\">\n" +
+    "                        <img class=\"img-responsive\" src=\"/images/contact/philly.jpg\" alt=\"\">\n" +
+    "                        <div class=\"overlay\">\n" +
+    "                            <br>\n" +
+    "                            <br>\n" +
+    "                            <br>\n" +
+    "                            <h2><span class=\"contact-city\">Philadelphia, PA</span></h2>\n" +
+    "                            <p>\n" +
+    "                                <a href=\"tel:+13365800855\">336.580.0855</a>\n" +
+    "                            </p>\n" +
+    "                        </div>\n" +
+    "                    </div>\n" +
+    "                </div>\n" +
+    "            </div>\n" +
+    "        </div>    \n" +
+    "        <br>\n" +
+    "        <br>\n" +
+    "        <br>\n" +
+    "        <div class=\"map-center\">\n" +
+    "            <div id=\"map-container\" class=\"map-container\">\n" +
+    "                <div id=\"map-canvas\"></div>\n" +
+    "            </div>\n" +
+    "        </div>   \n" +
+    "    </div>\n" +
+    "</div>\n" +
+    "\n" +
+    "<script src=\"/js/maps.js\" type='text/javascript'></script>\n" +
     "");
 }]);
 
