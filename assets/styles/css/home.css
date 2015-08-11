@@ -307,7 +307,7 @@ button.service-button:focus {
 }
 
 .contact, .contact-section {
-	padding-bottom: 50px;
+	padding-bottom: 30px;
 }
 
 .surface-container-home {
@@ -323,7 +323,7 @@ button.service-button:focus {
 	padding-top: 100px;
 	padding-bottom: 50px;
 	background: url(/images/texture-bg.png) repeat;
-	border-bottom: 3px solid #2ab996;
+	//border-bottom: 3px solid #2ab996;
     border-top: 3px solid #2ab996;
 }
 
@@ -349,7 +349,6 @@ button.service-button:focus {
 }
 
 .interested-home {
-    margin-top: 20px;
     font-size: 1.3em;
     font-weight: 500;
     margin-right: auto;
@@ -359,7 +358,7 @@ button.service-button:focus {
 
 .contact-us-home {
     margin-top: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 45px;
     font-size: 2em;
     font-weight: 300;
     margin-right: auto;
@@ -385,7 +384,6 @@ button.service-button:focus {
 }
 
 .message-home {
-    margin-top: 20px;
     font-size: large;
     margin-right: auto;
     margin-left: auto;
@@ -418,12 +416,13 @@ button.service-button:focus {
     text-align: center;
     font-family: 'Quicksand', sans-serif;
     color: #fff;
-    padding-top: 50px;
+    padding-top: 40px;
     padding-left: 20px;
     padding-right: 20px;
-    background-color: black;
-	border-bottom: 3px solid #2ab996;
-	border-top: 3px solid #2ab996;
+    //background-color: gray;
+    background: url(/images/gray-bg.jpg) repeat;
+    position: relative;
+	//border-bottom: 3px solid #2ab996;
 }
 
 .newsletter-home {

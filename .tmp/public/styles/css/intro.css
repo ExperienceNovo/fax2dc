@@ -41,6 +41,12 @@ body {
     font-size: 15em;
     letter-spacing:-0.09em;
 }
+.large-medium-text {
+    font-family: 'Jura', sans-serif;
+    font-weight: 400;
+    font-size: 12em;
+    letter-spacing:-0.09em;
+}
 .medium-text {
     font-family: 'Quicksand', sans-serif;
     font-weight: 400;
@@ -77,11 +83,17 @@ svg text {
 svg mask rect {
     fill: rgba(255, 255, 255, 0.75);
 }
-svg > rect {
+svg > .intro-rect {
     //fill: #2ab996; /* novo green */
     fill: white;
-    -webkit-mask: url(#mask);
-    mask: url(#mask);
+    -webkit-mask: url(#intro-mask);
+    mask: url(#intro-mask);
+}
+svg > .portfolio-rect {
+    //fill: #2ab996; /* novo green */
+    fill: white;
+    -webkit-mask: url(#portfolio-mask);
+    mask: url(#portfolio-mask);
 }
 video {
   position: absolute;
