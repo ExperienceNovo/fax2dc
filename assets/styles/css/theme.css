@@ -1,3 +1,11 @@
+a {
+    text-decoration: none !important;
+}
+
+a:hover {
+    color: #2ab996 !important;
+}
+
 .center {
     display: flex;
     flex-direction: row;
@@ -153,4 +161,15 @@
     background-color: #000 !important;
     opacity: .7 !important;
   }
+}
+
+.footer {
+    position: relative;
+    z-index: 50;
+	width: 100%;
+	height: auto;
+	padding: 1%;
+	background: url('/images/texture-bg.png') repeat;
+	color: gray;
+	font-size: 0.8em;
 }

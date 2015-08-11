@@ -2,14 +2,70 @@ angular.module('templates-app', ['about/index.tpl.html', 'blog-post/index.tpl.ht
 
 angular.module("about/index.tpl.html", []).run(["$templateCache", function($templateCache) {
   $templateCache.put("about/index.tpl.html",
-    "<!--we gotta load in the css in a better fashon than overwriting-->\n" +
-    "<link href=\"/styles/css/about.css\" rel=\"stylesheet\">\n" +
-    "\n" +
     "<div class=\"surface-container home-pad\">\n" +
     "    <div class=\"about\" id=\"about\">\n" +
+    "        <!--<div class=\"about-section-head\">\n" +
+    "            <h3>About Us</h3>\n" +
+    "            <hr>\n" +
+    "        </div>\n" +
+    "        -->\n" +
+    "        <!--\n" +
+    "        <div class=\"about-list\">\n" +
+    "            <div class=\"row\">\n" +
+    "                <div class=\"col-md-12\">\n" +
+    "                    <div class=\"col-md-4\">\n" +
+    "                        <i class=\"fa fa-paint-brush fa-5x\"></i>\n" +
+    "                        <div class=\"about-title\">\n" +
+    "                            <h2>Design</h2>\n" +
+    "                        </div>\n" +
+    "                        <hr>\n" +
+    "                        <div class=\"about-des\">\n" +
+    "                            <p>Full-scale Branding to ensure clear communication of your message.</p>\n" +
+    "                            <p>Custom Interface Design to ensure a seamless customer online experience.</p>\n" +
+    "                            <p>Advertising Design to establish a strong brand presence within your industry.</p>\n" +
+    "                        </div>\n" +
+    "                    </div>\n" +
+    "                    <div class=\"col-md-4\">\n" +
+    "                        <i class=\"fa fa-code fa-5x\"></i>\n" +
+    "                        <div class=\"about-title\">\n" +
+    "                            <h2>Development</h2>\n" +
+    "                        </div>\n" +
+    "                        <hr>\n" +
+    "                        <div class=\"about-des\">\n" +
+    "                            <p>Mobile-first Web Design to align you with the ever-increasing mobile world.</p>\n" +
+    "                            <p>SEO Structuring to naturally expand your online reach and outpace your competitors.</p>\n" +
+    "                            <p>Back-end Software Integration to ensure maximum security and business technology integration.</p>\n" +
+    "                        </div>\n" +
+    "                    </div>\n" +
+    "                    <div class=\"col-md-4\">\n" +
+    "                        <i class=\"fa fa-users fa-5x\"></i>\n" +
+    "                        <div class=\"about-title\">\n" +
+    "                            <h2>Marketing</h2>\n" +
+    "                        </div>\n" +
+    "                        <hr>\n" +
+    "                        <div class=\"about-des\">\n" +
+    "                            <p>Social Media Management to extend your customer reach.</p>\n" +
+    "                            <p>Email Outreach Marketing to manage current customer and secure new-customer leads.</p>\n" +
+    "                            <p>Consistent Content Creation to establish and maintain your presence within your community and your industry.</p>\n" +
+    "                        </div>\n" +
+    "                    </div>\n" +
+    "                </div>\n" +
+    "            </div>\n" +
+    "            <br>\n" +
+    "            <br>\n" +
+    "            <br>\n" +
+    "        </div>\n" +
+    "       \n" +
+    "        <br><br><br>\n" +
+    "\n" +
+    "    </div>\n" +
+    "    -->\n" +
+    "\n" +
+    "\n" +
+    "\n" +
     "        <div class=\"center about-top-area\">\n" +
     "            <div class=\"about-title-top\">Quality, Modernity, and Transparency\n" +
-    "            <hr>\n" +
+    "                <hr>\n" +
     "            </div>\n" +
     "            <div class=\"message-about\">\n" +
     "                <div class=\"interested-about\">\n" +
@@ -20,53 +76,91 @@ angular.module("about/index.tpl.html", []).run(["$templateCache", function($temp
     "                    <br>\n" +
     "                    <hr>\n" +
     "                    <br>\n" +
-    "                    <p style=\"font-size:22px;\"><a href=\"/portfolio/\">Our work speaks for itself.</a></p>\n" +
+    "                    <p style=\"font-size:22px;\"><a href=\"/portfolio/\">Our work speaks for itself</a></p>\n" +
     "                    <br>\n" +
     "                </div>\n" +
     "            </div>\n" +
     "        </div>\n" +
-    "        <!--we need to space this out-->\n" +
+    "\n" +
     "        <div class=\"center about-tile-area\" style=\"background:url(/images/texture-bg.png) repeat;\">\n" +
     "            <div class=\"about-tile\" style=\"\">\n" +
     "                <div class=\"hovereffect\">\n" +
     "                    <img class=\"img-responsive\" id=\"about-pic\" src=\"/images/about/designtile.jpg\" alt=\"\">\n" +
     "                    <div class=\"overlay-about\">\n" +
     "                        <h2 class=\"about-tile-title\" style=\"font-size: 25px;\">Design</h2>\n" +
-    "                        <p class=\"hover-info\">\n" +
-    "                            hell yes\n" +
+    "                        <p class=\"hover-info\"><a href=\"#\">\n" +
+    "                            More info...</a>\n" +
     "                        </p>\n" +
+    "                        <!--\n" +
+    "                        <p style=\"font-size: 40px;\">\n" +
+    "                            <a href=\"http://www.absoluteyachtsna.com/\">\n" +
+    "                                <i class=\"fa fa-globe\"></i>\n" +
+    "                            </a>\n" +
+    "                            <a href=\"https://www.facebook.com/pages/Absolute-North-America/1467350980243678\">\n" +
+    "                                <i class=\"fa fa-facebook\"></i>\n" +
+    "                            </a>\n" +
+    "                            <a href=\"https://twitter.com/AbsoluteNA\">\n" +
+    "                                <i class=\"fa fa-twitter\"></i>\n" +
+    "                            </a>\n" +
+    "                            <a href=\"https://instagram.com/absoluteyachtsna/\">\n" +
+    "                                <i class=\"fa fa-instagram\"></i>\n" +
+    "                            </a>\n" +
+    "                        </p>\n" +
+    "                        -->\n" +
     "                    </div>\n" +
     "                </div>\n" +
     "            </div>\n" +
     "            <div class=\"about-tile\" style=\"\">\n" +
     "                <div class=\"hovereffect\">\n" +
-    "                    <img class=\"img-responsive\" id=\"about-pic\" src=\"/images/about/devtile.jpg\" alt=\"\">\n" +
+    "                    <img class=\"img-responsive\" id=\"\" src=\"/images/about/devtile.jpg\" alt=\"\">\n" +
     "                    <div class=\"overlay-about\">\n" +
     "                        <h2 class=\"about-tile-title\" style=\"font-size: 25px;\">Development</h2>\n" +
-    "                        <p class=\"hover-info\">\n" +
-    "                            software development<br>\n" +
-    "                            web applications<br>\n" +
-    "                            the best practices<br>\n" +
-    "                            angular<br>\n" +
-    "                            node.js\n" +
+    "                        <p class=\"hover-info\"><a href=\"#\">\n" +
+    "                            More info...</a>\n" +
     "                        </p>\n" +
     "                    </div>\n" +
     "                </div>\n" +
     "            </div>\n" +
     "            <div class=\"about-tile\" style=\"\">\n" +
     "                <div class=\"hovereffect\">\n" +
-    "                    <img class=\"img-responsive\" id=\"about-pic\" src=\"/images/about/marketingtile.jpg\" alt=\"\">\n" +
+    "                    <img class=\"img-responsive\" id=\"\" src=\"/images/about/marketingtile.jpg\" alt=\"\">\n" +
     "                    <div class=\"overlay-about\">\n" +
     "                        <h2 class=\"about-tile-title\" style=\"font-size: 25px;\">Marketing</h2>\n" +
-    "                        <p class=\"hover-info\">\n" +
-    "                            social media growth strategies<br>\n" +
-    "                            content creation<br>\n" +
-    "                            cre8\n" +
+    "                        <p class=\"hover-info\"><a href=\"#\">\n" +
+    "                            More info...</a>\n" +
     "                        </p>\n" +
-    "                      </div>\n" +
+    "                        <!--\n" +
+    "                        <p>\n" +
+    "                            <br>\n" +
+    "                            We would love the opportunity to work with you and your company on your next online marketing project.\n" +
+    "                            <br>\n" +
+    "                            <br>\n" +
+    "                            <a href=\"/contact/\" style=\"font-size: 40px;\">Get in touch.</a>\n" +
+    "                        </p>\n" +
+    "                        -->\n" +
+    "                    </div>\n" +
     "                </div>\n" +
     "            </div>\n" +
     "        </div><!-- end center -->\n" +
+    "        <!--\n" +
+    "        <div class=\"center about-bottom-area\">\n" +
+    "            <div class=\"title-bottom\">How We Build It\n" +
+    "                <hr>\n" +
+    "            </div>\n" +
+    "            <div class=\"message-portfolio\">\n" +
+    "                <div class=\"interested-portfolio\">\n" +
+    "                    <br>\n" +
+    "                    <p>\n" +
+    "                       The latest technology, mobile-friendly, and unparalleled in custom design. Each site is custom-tailored.\n" +
+    "                    </p>\n" +
+    "                    <a href=\"/about/\"><button class=\"mainbutton service-button\">More Info...</button></a>\n" +
+    "                    <br>\n" +
+    "                    <br>\n" +
+    "                    <br>\n" +
+    "                </div>\n" +
+    "            </div>\n" +
+    "        </div>\n" +
+    "        -->\n" +
     "\n" +
     "        <br><br>\n" +
     "\n" +
@@ -121,7 +215,10 @@ angular.module("about/index.tpl.html", []).run(["$templateCache", function($temp
     "            <br>\n" +
     "            <br>\n" +
     "        </div><!-- end about list -->\n" +
-    "    </div> <!-- end about -->    \n" +
+    "    </div> <!-- end about -->\n" +
+    "    <div class=\"footer\">\n" +
+    "        <div class=\"footer-text\">© 2015 NOVO, LLC.</div>\n" +
+    "    </div>\n" +
     "</div><!-- end suface container -->\n" +
     "	");
 }]);
@@ -185,8 +282,8 @@ angular.module("contact/index.tpl.html", []).run(["$templateCache", function($te
   $templateCache.put("contact/index.tpl.html",
     "<style type=\"text/css\">\n" +
     "    #map-canvas {\n" +
-    "        width: 1900px;\n" +
-    "        height: 450px;\n" +
+    "    width: 1900px;\n" +
+    "    height: 450px;\n" +
     "    }\n" +
     "</style>\n" +
     "\n" +
@@ -205,27 +302,26 @@ angular.module("contact/index.tpl.html", []).run(["$templateCache", function($te
     "            <a class=\"blog-icon\" href=\"/blog/\"><i class=\"fa fa-rss\"></i></a>\n" +
     "        </div>\n" +
     "        <br><br><br>\n" +
-    "            <!--\n" +
-    "            <div class=\"message\">\n" +
-    "                <a href=\"mailto:info@projectnovo.co\"><button class=\"mainbutton service-button\">email us: info@projectnovo.co</button></a>\n" +
-    "                <br><br><br>\n" +
-    "            </div>\n" +
-    "            -->\n" +
+    "        <!--\n" +
+    "        <div class=\"message\">\n" +
+    "            <a href=\"mailto:info@projectnovo.co\"><button class=\"mainbutton service-button\">email us: info@projectnovo.co</button></a>\n" +
+    "            <br><br><br>\n" +
     "        </div>\n" +
+    "        -->\n" +
     "    </div>\n" +
+    "</div>\n" +
     "</div>\n" +
     "\n" +
     "<!-- i would like if the numbers were more visiable -->\n" +
     "<div class=\"surface-container home-pad\" style=\"background-color:rgb(0,0,0)\">\n" +
     "    <div class=\"contact-page-container\">\n" +
-    "        <br><br><br><br><br>\n" +
+    "        <br><br>\n" +
     "        <div class=\"contact-title-location\">\n" +
     "            <p>Four Locations Nationwide</p>\n" +
     "            <hr>\n" +
     "            <!--<p>give us a call!</p>-->\n" +
     "        </div>\n" +
-    "        <br><br><br>\n" +
-    "        <div class=\"row\">    \n" +
+    "        <div class=\"row\">\n" +
     "            <div class=\"col-md-12 center\">\n" +
     "                <div class=\"col-md-3 office-contact\">\n" +
     "                    <div class=\"hovereffect\">\n" +
@@ -285,7 +381,7 @@ angular.module("contact/index.tpl.html", []).run(["$templateCache", function($te
     "                    </div>\n" +
     "                </div>\n" +
     "            </div>\n" +
-    "        </div>    \n" +
+    "        </div>\n" +
     "        <br>\n" +
     "        <br>\n" +
     "        <br>\n" +
@@ -293,7 +389,13 @@ angular.module("contact/index.tpl.html", []).run(["$templateCache", function($te
     "            <div id=\"map-container\" class=\"map-container\">\n" +
     "                <div id=\"map-canvas\"></div>\n" +
     "            </div>\n" +
-    "        </div>   \n" +
+    "        </div>\n" +
+    "        <div class=\"message\">\n" +
+    "            <div class=\"bottom-tagline\"></div>\n" +
+    "        </div>\n" +
+    "    </div>\n" +
+    "    <div class=\"footer\">\n" +
+    "        <div class=\"footer-text\">© 2015 NOVO, LLC.</div>\n" +
     "    </div>\n" +
     "</div>\n" +
     "\n" +
@@ -414,259 +516,273 @@ angular.module("contact/index1.tpl.html", []).run(["$templateCache", function($t
 
 angular.module("home/index.tpl.html", []).run(["$templateCache", function($templateCache) {
   $templateCache.put("home/index.tpl.html",
-    "<!--css has to over write other styles to work...-->\n" +
-    "<link href=\"/styles/css/home.css\" rel=\"stylesheet\" type=\"text/css\"/>\n" +
     "<div class=\"surface-container-home\">\n" +
     "    <div class=\"home-pad\">\n" +
-    "    <div class=\"intro-container\">\n" +
-    "        <svg class=\"intro\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 1920 1080\" width=\"1920px\" height=\"1080px\" preserveAspectRatio=\"xMidYMid slice\">\n" +
-    "            <defs>\n" +
-    "                <mask id=\"mask\" x=\"0\" y=\"0\" width=\"100%\" height=\"100%\" style=\"z-index: 0;\">\n" +
-    "                    <rect x=\"0\" y=\"0\" width=\"100%\" height=\"100%\"/>\n" +
-    "                    <text x=\"960\" y=\"27%\" class=\"large-text\">welcome</text>\n" +
-    "                    <text x=\"960\" y=\"46%\" class=\"medium-text desktop\">embrace change with NOVO</text>\n" +
-    "                    <text x=\"960\" y=\"44%\" class=\"medium-text mobile\">embrace change</text>\n" +
-    "                    <text x=\"960\" y=\"49%\" class=\"medium-text mobile\">with NOVO</text>\n" +
-    "                    <text x=\"960\" y=\"51%\" class=\"small-text mantra\">a full-scale online marketing, design, and web development firm</text>\n" +
-    "                    <text x=\"960\" y=\"67.5%\" class=\"small-text learn-more\">learn more</text>\n" +
-    "                    <!--<image x=\"960\" y=\"70%\" width=\"80\" height=\"80\" xlink:href=\"http://valentino.io/img/tri.svg\" />-->\n" +
-    "                    <a href=\"#more\">\n" +
-    "                        <svg class=\"tri-before bounce\" version=\"1.1\" id=\"Layer_1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"835px\" y=\"68%\" width=\"250px\" height=\"250px\" viewBox=\"0 0 723 626\" enable-background=\"new 0 0 723 626\" xml:space=\"preserve\">\n" +
-    "                            <g>\n" +
-    "                              <path fill=\"#232322\" d=\"M0,0h723v1.58c-3.72,4.37-5.58,9.96-8.89,14.62C596.69,219.439,479.44,422.79,361.96,626h-0.6\n" +
-    "                                C243.45,421.77,125.54,217.55,7.63,13.32C5.09,9.061,2.85,4.62,0,0.55V0z\"/>\n" +
-    "                              <path fill=\"#FFFFFF\" d=\"M86.57,48.002c183.289,0.01,366.569-0.02,549.859,0.02c-40.779,70.681-81.6,141.33-122.39,212.01\n" +
-    "                                c-7.36,12.841-14.91,25.58-22.11,38.521l-0.229-0.01c-86.79-0.09-173.59-0.06-260.38-0.011h-0.211\n" +
-    "                                c-20.239-35.569-40.899-70.899-61.289-106.379C142.061,144.111,114.359,96.031,86.57,48.002z\"/>\n" +
-    "                              <path fill=\"#21B795\" d=\"M231.311,298.599c86.79-0.049,173.59-0.079,260.38,0.011c-19.42,34.3-39.36,68.31-59,102.479\n" +
-    "                                c-23.71,41.091-47.44,82.16-71.15,123.25c-20.92-36.039-41.68-72.17-62.55-108.229C276.48,376.909,253.65,337.89,231.311,298.599z\"\n" +
-    "                                />\n" +
-    "                            </g>\n" +
-    "                        </svg>\n" +
-    "                    </a>\n" +
-    "                </mask>\n" +
-    "            </defs>\n" +
-    "            <rect x=\"0\" y=\"0\" width=\"100%\" height=\"100%\"/>\n" +
-    "            <a href=\"#more\">\n" +
-    "                <svg class=\"tri-after\" version=\"1.1\" id=\"Layer_1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"835px\" y=\"68%\"\n" +
-    "             width=\"250px\" height=\"250px\" viewBox=\"0 0 723 626\" enable-background=\"new 0 0 723 626\" xml:space=\"preserve\">\n" +
-    "                    <g>\n" +
-    "                      <path fill=\"#232322\" d=\"M0,0h723v1.58c-3.72,4.37-5.58,9.96-8.89,14.62C596.69,219.439,479.44,422.79,361.96,626h-0.6\n" +
-    "                                              C243.45,421.77,125.54,217.55,7.63,13.32C5.09,9.061,2.85,4.62,0,0.55V0z\"/>\n" +
-    "                      <path fill=\"#FFFFFF\" d=\"M86.57,48.002c183.289,0.01,366.569-0.02,549.859,0.02c-40.779,70.681-81.6,141.33-122.39,212.01\n" +
-    "                                              c-7.36,12.841-14.91,25.58-22.11,38.521l-0.229-0.01c-86.79-0.09-173.59-0.06-260.38-0.011h-0.211\n" +
-    "                                              c-20.239-35.569-40.899-70.899-61.289-106.379C142.061,144.111,114.359,96.031,86.57,48.002z\"/>\n" +
-    "                      <path fill=\"#21B795\" d=\"M231.311,298.599c86.79-0.049,173.59-0.079,260.38,0.011c-19.42,34.3-39.36,68.31-59,102.479\n" +
-    "                                              c-23.71,41.091-47.44,82.16-71.15,123.25c-20.92-36.039-41.68-72.17-62.55-108.229C276.48,376.909,253.65,337.89,231.311,298.599z\"\n" +
-    "                            />\n" +
-    "                    </g>\n" +
-    "                </svg>\n" +
-    "            </a>\n" +
-    "        </svg>\n" +
-    "        <video id=\"video\" autoplay=\"autoplay\" muted=\"muted\" preload=\"auto\" loop=\"loop\">\n" +
-    "            <source src=\"/videos/rocket.webm\" type=\"video/webm\">\n" +
-    "        </video>\n" +
-    "        <img class=\"intro-img\" id=\"image\" src=\"http://36.media.tumblr.com/318b26ada390554e3940e1907c0e6d0f/tumblr_no0pwu8TmB1uuhx17o1_1280.jpg\">\n" +
-    "    </div>\n" +
-    "\n" +
-    "    <div class=\"services\" id=\"more\">\n" +
-    "        <br><br><br>\n" +
-    "        <div class=\"section-head\">\n" +
-    "            <h3>Our Services</h3>\n" +
-    "            <hr>\n" +
+    "        <div class=\"intro-container\">\n" +
+    "            <svg class=\"intro\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 1920 1080\" width=\"1920px\" height=\"1080px\" preserveAspectRatio=\"xMidYMid slice\">\n" +
+    "                <defs>\n" +
+    "                    <mask class=\"intro-mask\" id=\"mask\" x=\"0\" y=\"0\" width=\"100%\" height=\"100%\">\n" +
+    "                        <rect x=\"0\" y=\"0\" width=\"1920px\" height=\"1080px\"></rect>\n" +
+    "                        <text x=\"960\" y=\"27%\" class=\"large-text\">welcome</text>\n" +
+    "                        <text x=\"960\" y=\"46%\" class=\"medium-text desktop\">embrace change with NOVO</text>\n" +
+    "                        <text x=\"960\" y=\"44%\" class=\"medium-text mobile\">embrace change</text>\n" +
+    "                        <text x=\"960\" y=\"49%\" class=\"medium-text mobile\">with NOVO</text>\n" +
+    "                        <text x=\"960\" y=\"51%\" class=\"small-text mantra\">a full-scale online marketing, design, and web development firm</text>\n" +
+    "                        <text x=\"960\" y=\"67.5%\" class=\"small-text learn-more\">learn more</text>\n" +
+    "                        <a href=\"#more\">\n" +
+    "                            <svg class=\"tri-before bounce\" version=\"1.1\" id=\"Layer_1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"835px\" y=\"68%\" width=\"250px\" height=\"250px\" viewBox=\"0 0 723 626\" enable-background=\"new 0 0 723 626\" xml:space=\"preserve\">\n" +
+    "                                <g>\n" +
+    "                                  <path fill=\"#232322\" d=\"M0,0h723v1.58c-3.72,4.37-5.58,9.96-8.89,14.62C596.69,219.439,479.44,422.79,361.96,626h-0.6\n" +
+    "                                    C243.45,421.77,125.54,217.55,7.63,13.32C5.09,9.061,2.85,4.62,0,0.55V0z\"></path>\n" +
+    "                                  <path fill=\"#FFFFFF\" d=\"M86.57,48.002c183.289,0.01,366.569-0.02,549.859,0.02c-40.779,70.681-81.6,141.33-122.39,212.01\n" +
+    "                                    c-7.36,12.841-14.91,25.58-22.11,38.521l-0.229-0.01c-86.79-0.09-173.59-0.06-260.38-0.011h-0.211\n" +
+    "                                    c-20.239-35.569-40.899-70.899-61.289-106.379C142.061,144.111,114.359,96.031,86.57,48.002z\"></path>\n" +
+    "                                  <path fill=\"#21B795\" d=\"M231.311,298.599c86.79-0.049,173.59-0.079,260.38,0.011c-19.42,34.3-39.36,68.31-59,102.479\n" +
+    "                                    c-23.71,41.091-47.44,82.16-71.15,123.25c-20.92-36.039-41.68-72.17-62.55-108.229C276.48,376.909,253.65,337.89,231.311,298.599z\"></path>\n" +
+    "                                </g>\n" +
+    "                            </svg>\n" +
+    "                        </a>\n" +
+    "                    </mask>\n" +
+    "                </defs>\n" +
+    "                <rect x=\"0\" y=\"0\" width=\"1920px\" height=\"1080px\"></rect>\n" +
+    "                <a href=\"#more\">\n" +
+    "                    <svg class=\"tri-after\" version=\"1.1\" id=\"Layer_1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"835px\" y=\"68%\"\n" +
+    "                 width=\"250px\" height=\"250px\" viewBox=\"0 0 723 626\" enable-background=\"new 0 0 723 626\" xml:space=\"preserve\">\n" +
+    "                        <g>\n" +
+    "                          <path fill=\"#232322\" d=\"M0,0h723v1.58c-3.72,4.37-5.58,9.96-8.89,14.62C596.69,219.439,479.44,422.79,361.96,626h-0.6\n" +
+    "                            C243.45,421.77,125.54,217.55,7.63,13.32C5.09,9.061,2.85,4.62,0,0.55V0z\"></path>\n" +
+    "                          <path fill=\"#FFFFFF\" d=\"M86.57,48.002c183.289,0.01,366.569-0.02,549.859,0.02c-40.779,70.681-81.6,141.33-122.39,212.01\n" +
+    "                            c-7.36,12.841-14.91,25.58-22.11,38.521l-0.229-0.01c-86.79-0.09-173.59-0.06-260.38-0.011h-0.211\n" +
+    "                            c-20.239-35.569-40.899-70.899-61.289-106.379C142.061,144.111,114.359,96.031,86.57,48.002z\"></path>\n" +
+    "                          <path fill=\"#21B795\" d=\"M231.311,298.599c86.79-0.049,173.59-0.079,260.38,0.011c-19.42,34.3-39.36,68.31-59,102.479\n" +
+    "                            c-23.71,41.091-47.44,82.16-71.15,123.25c-20.92-36.039-41.68-72.17-62.55-108.229C276.48,376.909,253.65,337.89,231.311,298.599z\"></path>\n" +
+    "                        </g>\n" +
+    "                    </svg>\n" +
+    "                </a>\n" +
+    "            </svg>\n" +
+    "            <video id=\"video\" autoplay=\"autoplay\" muted=\"muted\" preload=\"auto\" loop=\"loop\">\n" +
+    "                <source src=\"http://mazwai.com/system/posts/videos/000/000/161/preview_mp4_3/leonard_soosay--missfit.mp4?1424004876\" type=\"video/webm\">\n" +
+    "                <object data=\"flvplayer.swf\" type=\"application/x-shockwave-flash\">\n" +
+    "                    <param value=\"flvplayer.swf\" name=\"movie\"/>\n" +
+    "                </object>\n" +
+    "            </video>\n" +
+    "            <img class=\"intro-img\" id=\"image\" src=\"http://36.media.tumblr.com/318b26ada390554e3940e1907c0e6d0f/tumblr_no0pwu8TmB1uuhx17o1_1280.jpg\">\n" +
     "        </div>\n" +
-    "        <div class=\"services-list\">\n" +
-    "            <div class=\"row\">\n" +
-    "                <div class=\"col-md-12\">\n" +
-    "                    <div class=\"col-md-4\">\n" +
-    "                        <i class=\"fa fa-paint-brush fa-5x\"></i>\n" +
-    "                        <div class=\"service-title\">\n" +
-    "                            <h2>Design</h2>\n" +
-    "                        </div>\n" +
-    "                        <hr>\n" +
-    "                        <div class=\"service-des\">\n" +
-    "                            <p>Graphics & Animation</p>\n" +
-    "                            <p>Custom Interface Design</p>\n" +
-    "                            <p>Company Branding</p>\n" +
-    "                        </div>\n" +
-    "                    </div>\n" +
-    "                    <div class=\"col-md-4\">\n" +
-    "                        <i class=\"fa fa-code fa-5x\"></i>\n" +
-    "                        <div class=\"service-title\">\n" +
-    "                            <h2>Development</h2>\n" +
-    "                        </div>\n" +
-    "                        <hr>\n" +
-    "                        <div class=\"service-des\">\n" +
-    "                            <p>Mobile-first Web Design</p>\n" +
-    "                            <p>SEO Structuring</p>\n" +
-    "                            <p>Back-end Software Integration</p>\n" +
-    "                        </div>\n" +
-    "                    </div>\n" +
-    "                    <div class=\"col-md-4\">\n" +
-    "                        <i class=\"fa fa-users fa-5x\"></i>\n" +
-    "                        <div class=\"service-title\">\n" +
-    "                            <h2>Marketing</h2>\n" +
-    "                        </div>\n" +
-    "                        <hr>\n" +
-    "                        <div class=\"service-des\">\n" +
-    "                            <p>Social Media Management</p>\n" +
-    "                            <p>Outreach Email Marketing</p>\n" +
-    "                            <p>Content Creation</p>\n" +
-    "                        </div>\n" +
-    "                    </div>\n" +
-    "                </div>\n" +
+    "\n" +
+    "        <div class=\"services\" id=\"more\">\n" +
+    "            <div class=\"section-head\">\n" +
+    "                <h3>Our Services</h3>\n" +
+    "                <hr>\n" +
     "            </div>\n" +
-    "            <br><br>\n" +
-    "            <a href=\"/about/\"><button class=\"mainbutton service-button\">More Info...</button></a>\n" +
-    "        </div>\n" +
-    "    </div>\n" +
-    "\n" +
-    "    <div id=\"home2\">\n" +
-    "        <div class=\"desc\" align=\"center\">\n" +
-    "            <h3 class=\"portfolio-link\"><a href=\"/portfolio/\">Our Portolio</a></h3>\n" +
-    "            <!--\n" +
-    "            <h3>Meet The Team</h3>\n" +
-    "            <hr>\n" +
-    "            <div id=\"team\">\n" +
+    "            <div class=\"services-list\">\n" +
     "                <div class=\"row\">\n" +
     "                    <div class=\"col-md-12\">\n" +
-    "                        <div class=\"col-md-3 team-member\">\n" +
-    "                            <img src=\"/images/team/val.png\" />\n" +
-    "                            <br>\n" +
-    "                            <br>\n" +
-    "                            <div class=\"name\">Valentino</div>\n" +
+    "                        <div class=\"col-md-4\">\n" +
+    "                            <i class=\"fa fa-paint-brush fa-5x\"></i>\n" +
+    "                            <div class=\"service-title\">\n" +
+    "                                <h2>Design</h2>\n" +
+    "                            </div>\n" +
     "                            <hr>\n" +
-    "                            <h2>Data</h2>\n" +
+    "                            <div class=\"service-des\">\n" +
+    "                                <p>Graphics & Animation</p>\n" +
+    "                                <p>Custom Interface Design</p>\n" +
+    "                                <p>Company Branding</p>\n" +
+    "                            </div>\n" +
     "                        </div>\n" +
-    "                        <div class=\"col-md-3 team-member\">\n" +
-    "                            <img src=\"/images/team/mikey.png\" />\n" +
-    "                            <br>\n" +
-    "                            <br>\n" +
-    "                            <div class=\"name\">Michael</div>\n" +
+    "                        <div class=\"col-md-4\">\n" +
+    "                            <i class=\"fa fa-code fa-5x\"></i>\n" +
+    "                            <div class=\"service-title\">\n" +
+    "                                <h2>Development</h2>\n" +
+    "                            </div>\n" +
     "                            <hr>\n" +
-    "                            <h2>Design</h2>\n" +
+    "                            <div class=\"service-des\">\n" +
+    "                                <p>Mobile-first Web Design</p>\n" +
+    "                                <p>SEO Structuring</p>\n" +
+    "                                <p>Back-end Software Integration</p>\n" +
+    "                            </div>\n" +
     "                        </div>\n" +
-    "                        <div class=\"col-md-3 team-member\">\n" +
-    "                            <img src=\"/images/team/trevor.png\" />\n" +
-    "                            <br>\n" +
-    "                            <br>\n" +
-    "                            <div class=\"name\">Trevor</div>\n" +
+    "                        <div class=\"col-md-4\">\n" +
+    "                            <i class=\"fa fa-users fa-5x\"></i>\n" +
+    "                            <div class=\"service-title\">\n" +
+    "                                <h2>Marketing</h2>\n" +
+    "                            </div>\n" +
     "                            <hr>\n" +
-    "                            <h2>Development</h2>\n" +
-    "                        </div>\n" +
-    "                        <div class=\"col-md-3 team-member\">\n" +
-    "                            <img src=\"/images/team/garrett.png\" />\n" +
-    "                            <br>\n" +
-    "                            <br>\n" +
-    "                            <div class=\"name\">Garrett</div>\n" +
-    "                            <hr>\n" +
-    "                            <h2>Marketing</h2>\n" +
+    "                            <div class=\"service-des\">\n" +
+    "                                <p>Social Media Management</p>\n" +
+    "                                <p>Outreach Email Marketing</p>\n" +
+    "                                <p>Content Creation</p>\n" +
+    "                            </div>\n" +
     "                        </div>\n" +
     "                    </div>\n" +
     "                </div>\n" +
+    "                <br><br>\n" +
+    "                <a href=\"/about/\"><button class=\"mainbutton service-button\">More Info...</button></a>\n" +
     "            </div>\n" +
-    "            -->\n" +
     "        </div>\n" +
-    "    </div>\n" +
     "\n" +
-    "    <div class=\"contact-container\">\n" +
-    "        <div class=\"contact-title-home\">Get In Touch</div>\n" +
-    "        <hr><br>\n" +
-    "        <div class=\"message-home\">\n" +
-    "            <div class=\"interested-home\">Interested in working with NOVO?</div>\n" +
+    "        <div class=\"portfolio-home-container\">\n" +
+    "            <a href=\"/portfolio/\">\n" +
+    "                <svg class=\"portfolio-home\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 1920 400\" width=\"1920px\" height=\"400px\" preserveAspectRatio=\"xMidYMid slice\">\n" +
+    "                    <defs>\n" +
+    "                        <mask class=\"portfolio-mask\" id=\"mask\" x=\"0\" y=\"0\" width=\"1920px\" height=\"400px\">\n" +
+    "                            <rect x=\"0\" y=\"0\" width=\"1920px\" height=\"400px\"></rect>\n" +
+    "                            <text x=\"960\" y=\"65%\" class=\"large-text\">our portfolio</text>\n" +
+    "                        </mask>\n" +
+    "                    </defs>\n" +
+    "                    <rect x=\"0\" y=\"0\" width=\"1920px\" height=\"400px\"></rect>\n" +
+    "                </svg>\n" +
+    "            </a>\n" +
+    "        </div>\n" +
+    "\n" +
+    "        <div class=\"contact-container\">\n" +
+    "            <div class=\"contact-title-home\">Get In Touch\n" +
+    "                <hr>\n" +
+    "                <br>\n" +
+    "                <div class=\"message-home\">\n" +
+    "                    <div class=\"interested-home\">Interested in working with NOVO?</div>\n" +
+    "                    <br>\n" +
+    "                    <div class=\"contact-us-home\">Email us at\n" +
+    "                        <a href=\"mailto:info@projectnovo.co\" style=\"color: #1db996;\">info@projectnovo.co</a></div> or <div class=\"contact-us-home\">Call us at one of our <span style=\"color: #1db996; font-weight: 500;\">four</span> locations!</div>\n" +
+    "                </div>\n" +
+    "                <div class=\"row\">\n" +
+    "                    <div class=\"col-md-12 center\">\n" +
+    "                        <div class=\"col-md-3 office-home\">\n" +
+    "                            <div class=\"hovereffect\">\n" +
+    "                                <img class=\"img-responsive\" src=\"/images/contact/raleigh-nc.jpg\" alt=\"\">\n" +
+    "                                <div class=\"overlay\">\n" +
+    "                                    <br>\n" +
+    "                                    <br>\n" +
+    "                                    <br>\n" +
+    "                                    <h2><span class=\"contact-city\">Raleigh, NC</span></h2>\n" +
+    "                                    <p>\n" +
+    "                                        <a href=\"tel:+18656797229\">865.679.7229</a>\n" +
+    "                                    </p>\n" +
+    "                                </div>\n" +
+    "                            </div>\n" +
+    "                        </div>\n" +
+    "                        <div class=\"col-md-3 office-home\">\n" +
+    "                            <div class=\"hovereffect\">\n" +
+    "                                <img class=\"img-responsive\" src=\"/images/contact/evanston.jpg\" alt=\"\">\n" +
+    "                                <div class=\"overlay\">\n" +
+    "                                    <br>\n" +
+    "                                    <br>\n" +
+    "                                    <br>\n" +
+    "                                    <h2><span class=\"contact-city\">Chicago, IL</span></h2>\n" +
+    "                                    <p>\n" +
+    "                                        <a href=\"tel:+18653876121\">865.387.6121</a>\n" +
+    "                                    </p>\n" +
+    "                                </div>\n" +
+    "                            </div>\n" +
+    "                        </div>\n" +
+    "                        <div class=\"col-md-3 office-home\">\n" +
+    "                            <div class=\"hovereffect\">\n" +
+    "                                <img class=\"img-responsive\" src=\"/images/contact/knoxville.jpg\" alt=\"\">\n" +
+    "                                <div class=\"overlay\">\n" +
+    "                                    <br>\n" +
+    "                                    <br>\n" +
+    "                                    <br>\n" +
+    "                                    <h2><span class=\"contact-city\">Knoxville, TN</span></h2>\n" +
+    "                                    <p>\n" +
+    "                                        <a href=\"tel:+18656969382\">865.696.9382</a>\n" +
+    "                                    </p>\n" +
+    "                                </div>\n" +
+    "                            </div>\n" +
+    "                        </div>\n" +
+    "                        <div class=\"col-md-3 office-home\">\n" +
+    "                            <div class=\"hovereffect\">\n" +
+    "                                <img class=\"img-responsive\" src=\"/images/contact/philly.jpg\" alt=\"\">\n" +
+    "                                <div class=\"overlay\">\n" +
+    "                                    <br>\n" +
+    "                                    <br>\n" +
+    "                                    <br>\n" +
+    "                                    <h2><span class=\"contact-city\">Philadelphia, PA</span></h2>\n" +
+    "                                    <p>\n" +
+    "                                        <a href=\"tel:+13365800855\">336.580.0855</a>\n" +
+    "                                    </p>                        </div>\n" +
+    "                            </div>\n" +
+    "                        </div>\n" +
+    "                    </div>\n" +
+    "                </div>\n" +
+    "                <br>\n" +
+    "                <br>\n" +
+    "                <br>\n" +
+    "            </div>\n" +
+    "        </div>\n" +
+    "\n" +
+    "        <div class=\"newsletter-section\">\n" +
     "            <br>\n" +
-    "            <div class=\"contact-us-home\">Email us at\n" +
-    "            <a href=\"mailto:info@projectnovo.co\" style=\"color: #1db996;\">info@projectnovo.co</a></div> or <div class=\"contact-us-home\">Call us at one of our <span style=\"color: #1db996; font-weight: 500;\">four</span> locations!</div>\n" +
-    "        </div>\n" +
-    "        <br><br><br>\n" +
-    "        <div class=\"row\">    \n" +
-    "            <div class=\"col-md-12 center\">\n" +
-    "                <div class=\"col-md-3 office-home\">\n" +
-    "                    <div class=\"hovereffect\">\n" +
-    "                        <img class=\"img-responsive\" src=\"/images/contact/raleigh-nc.jpg\" alt=\"\">\n" +
-    "                        <div class=\"overlay\">\n" +
-    "                            <br>\n" +
-    "                            <br>\n" +
-    "                            <br>\n" +
-    "                            <h2><span class=\"contact-city\">Raleigh, NC</span></h2>\n" +
-    "                            <p>\n" +
-    "                                <a href=\"tel:+18656797229\">865.679.7229</a>\n" +
-    "                            </p>\n" +
-    "                        </div>\n" +
-    "                    </div>\n" +
+    "            <span class=\"newsletter-home\">Sign Up for our Monthly Newsletter!</span>\n" +
+    "            <br><br><br><br>\n" +
+    "            <div class=\"contact\" id=\"contact\">\n" +
+    "                <div class=\"contact-section\">\n" +
+    "                    <form class=\"ctr\" action=\"//projectnovo.us11.list-manage.com/subscribe/post?u=a56f7f3f876fa9db4c36328af&amp;id=ff3d3ae826\" method=\"post\">\n" +
+    "                        <div class=\"loader\"></div>\n" +
+    "                        <input type=\"email\" name=\"EMAIL\" required>\n" +
+    "                        <div class=\"indicator\" data-content=\"Type Your Email Address\"></div>\n" +
+    "                    </form>\n" +
     "                </div>\n" +
-    "                <div class=\"col-md-3 office-home\">\n" +
-    "                    <div class=\"hovereffect\">\n" +
-    "                        <img class=\"img-responsive\" src=\"/images/contact/evanston.jpg\" alt=\"\">\n" +
-    "                        <div class=\"overlay\">\n" +
-    "                            <br>\n" +
-    "                            <br>\n" +
-    "                            <br>\n" +
-    "                            <h2><span class=\"contact-city\">Chicago, IL</span></h2>\n" +
-    "                            <p>\n" +
-    "                                <a href=\"tel:+18653876121\">865.387.6121</a>\n" +
-    "                            </p>\n" +
-    "                        </div>\n" +
-    "                    </div>\n" +
-    "                </div>\n" +
-    "                <div class=\"col-md-3 office-home\">\n" +
-    "                    <div class=\"hovereffect\">\n" +
-    "                        <img class=\"img-responsive\" src=\"/images/contact/knoxville.jpg\" alt=\"\">\n" +
-    "                        <div class=\"overlay\">\n" +
-    "                            <br>\n" +
-    "                            <br>\n" +
-    "                            <br>\n" +
-    "                            <h2><span class=\"contact-city\">Knoxville, TN</span></h2>\n" +
-    "                            <p>\n" +
-    "                                <a href=\"tel:+18656969382\">865.696.9382</a>\n" +
-    "                            </p>\n" +
-    "                        </div>\n" +
-    "                    </div>\n" +
-    "                </div>\n" +
-    "                <div class=\"col-md-3 office-home\">\n" +
-    "                    <div class=\"hovereffect\">\n" +
-    "                        <img class=\"img-responsive\" src=\"/images/contact/philly.jpg\" alt=\"\">\n" +
-    "                        <div class=\"overlay\">\n" +
-    "                            <br>\n" +
-    "                            <br>\n" +
-    "                            <br>\n" +
-    "                            <h2><span class=\"contact-city\">Philadelphia, PA</span></h2>\n" +
-    "                            <p>\n" +
-    "                                <a href=\"tel:+13365800855\">336.580.0855</a>\n" +
-    "                            </p>\n" +
-    "                        </div>\n" +
-    "                    </div>\n" +
-    "                </div>\n" +
-    "            </div>\n" +
-    "        </div>    \n" +
-    "        <br><br><br>\n" +
-    "    </div>\n" +
     "\n" +
-    "    <div class=\"newsletter-section\">\n" +
-    "        <br>\n" +
-    "        <span class=\"newsletter-home\">Sign Up for our Monthly Newsletter!</span>\n" +
-    "        <br><br><br><br>\n" +
-    "        <div class=\"contact\" id=\"contact\">\n" +
-    "            <div class=\"contact-section\">\n" +
-    "                <form class=\"ctr\" action=\"//projectnovo.us11.list-manage.com/subscribe/post?u=a56f7f3f876fa9db4c36328af&amp;id=ff3d3ae826\" method=\"post\">\n" +
-    "                    <div class=\"loader\"></div>\n" +
-    "                    <input type=\"email\" name=\"EMAIL\" required>\n" +
-    "                    <div class=\"indicator\" data-content=\"Type Your Email Address\"></div>\n" +
-    "                </form>\n" +
-    "            </div>\n" +
-    "\n" +
-    "            <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->\n" +
-    "            <div class=\"display-none\">\n" +
-    "                <div style=\"position: absolute; left: -5000px;\"><input type=\"text\" name=\"b_a56f7f3f876fa9db4c36328af_ff3d3ae826\" tabindex=\"-1\" value=\"\"></div>\n" +
-    "                <div class=\"clear\"><input type=\"submit\" value=\"Subscribe\" name=\"subscribe\" id=\"mc-embedded-subscribe\" class=\"button\"></div>\n" +
+    "                <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->\n" +
+    "                <div class=\"display-none\">\n" +
+    "                    <div style=\"position: absolute; left: -5000px;\"><input type=\"text\" name=\"b_a56f7f3f876fa9db4c36328af_ff3d3ae826\" tabindex=\"-1\" value=\"\"></div>\n" +
+    "                    <div class=\"clear\"><input type=\"submit\" value=\"Subscribe\" name=\"subscribe\" id=\"mc-embedded-subscribe\" class=\"button\"></div>\n" +
+    "                </div>\n" +
     "            </div>\n" +
     "        </div>\n" +
+    "        <div class=\"footer\">\n" +
+    "            <div class=\"footer-text\">© 2015 NOVO, LLC.</div>\n" +
+    "        </div>\n" +
     "    </div>\n" +
-    "    <!--<div class=\"footer\">\n" +
-    "    <br><br><br>\n" +
-    "    </div>-->\n" +
     "</div>\n" +
-    "");
+    "\n" +
+    "\n" +
+    "<!--<div id=\"home2\">\n" +
+    "            <div class=\"desc\" align=\"center\">\n" +
+    "                <h3 class=\"portfolio-link\"><a href=\"/portfolio/\">View Our Portolio</a></h3>\n" +
+    "                <!--\n" +
+    "                <h3>Meet The Team</h3>\n" +
+    "                <hr>\n" +
+    "                <div id=\"team\">\n" +
+    "                    <div class=\"row\">\n" +
+    "                        <div class=\"col-md-12\">\n" +
+    "                            <div class=\"col-md-3 team-member\">\n" +
+    "                                <img src=\"/images/team/val.png\" />\n" +
+    "                                <br>\n" +
+    "                                <br>\n" +
+    "                                <div class=\"name\">Valentino</div>\n" +
+    "                                <hr>\n" +
+    "                                <h2>Data</h2>\n" +
+    "                            </div>\n" +
+    "                            <div class=\"col-md-3 team-member\">\n" +
+    "                                <img src=\"/images/team/mikey.png\" />\n" +
+    "                                <br>\n" +
+    "                                <br>\n" +
+    "                                <div class=\"name\">Michael</div>\n" +
+    "                                <hr>\n" +
+    "                                <h2>Design</h2>\n" +
+    "                            </div>\n" +
+    "                            <div class=\"col-md-3 team-member\">\n" +
+    "                                <img src=\"/images/team/trevor.png\" />\n" +
+    "                                <br>\n" +
+    "                                <br>\n" +
+    "                                <div class=\"name\">Trevor</div>\n" +
+    "                                <hr>\n" +
+    "                                <h2>Development</h2>\n" +
+    "                            </div>\n" +
+    "                            <div class=\"col-md-3 team-member\">\n" +
+    "                                <img src=\"/images/team/garrett.png\" />\n" +
+    "                                <br>\n" +
+    "                                <br>\n" +
+    "                                <div class=\"name\">Garrett</div>\n" +
+    "                                <hr>\n" +
+    "                                <h2>Marketing</h2>\n" +
+    "                            </div>\n" +
+    "                        </div>\n" +
+    "                    </div>\n" +
+    "                </div>\n" +
+    "                -->\n" +
+    "<!-- </div>\n" +
+    "</div> -->");
 }]);
 
 angular.module("home/index1.tpl.html", []).run(["$templateCache", function($templateCache) {

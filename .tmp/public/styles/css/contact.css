@@ -2,6 +2,7 @@
     position: relative;
     overflow: hidden;
     z-index: 15;
+    border-bottom: 3px solid #2ab996;
     border-top: 3px solid #2ab996;
 }
 
@@ -32,6 +33,7 @@
     margin-right: auto;
     background:black;
     padding-top: 50px;
+    border-bottom: 3px solid #2ab996;
 }
 
 .contact-page-container {
@@ -106,7 +108,7 @@
 
 .contact-icons a {
     font-size: 3.5em;
-    color: #fff;
+    color: #2AB996;
     padding-left: 1%;
     padding-right: 1%;
 }

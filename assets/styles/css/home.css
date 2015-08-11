@@ -24,6 +24,7 @@ a:hover {
     height: 100vh;
     min-height: 100vh;
     background-size: cover;
+    border-bottom: 3px solid #2ab996;
 }
 
 .banner-text {
@@ -115,6 +116,8 @@ button.service-button:focus {
 	background:url(/images/texture-bg.png) repeat;
 	height: 100vh;
 	min-height: 900px;
+	border-bottom: 3px solid #2ab996;
+	border-top: 3px solid #2ab996;
 	position: relative;
 	z-index: 2;
 }
@@ -191,6 +194,25 @@ button.service-button:focus {
     padding-top: 10px;
 }
 
+.portfolio-home-container {
+    cursor: default;
+    height: 30vh;
+    min-height: 30vh;
+}
+
+.portfolio-home {
+    background: url('/images/portfolio/art.jpg') no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    position: relative;
+}
+
+.portfolio-mask {
+    z-index: -8;
+    font-size: .85em !important;
+}
 
 .team-member {
 	padding-bottom: 40px;
@@ -201,11 +223,12 @@ button.service-button:focus {
 .desc {
 	position: relative;
 	z-index: 3;
+	background:url(/images/overlay.png),url(/images/bg.png) no-repeat fixed;
 	padding:75px 0px 100px 0px;
-	background-color:#3d454a;
 	cursor:default;
 	width:100%;
 	text-align:center;
+	border-bottom: 3px solid #2ab996;
 }
 
 .desc h3 {
@@ -266,7 +289,7 @@ button.service-button:focus {
 }
 
 .about {
-	background:url(/images/overlay2.png),url(/images/keys.jpg) no-repeat fixed;
+	//background:url(/images/overlay2.png),url(/images/keys.jpg) no-repeat fixed;
 }
 
 .blog {
@@ -300,6 +323,8 @@ button.service-button:focus {
 	padding-top: 100px;
 	padding-bottom: 50px;
 	background: url(/images/texture-bg.png) repeat;
+	border-bottom: 3px solid #2ab996;
+    border-top: 3px solid #2ab996;
 }
 
 .contact-home {
@@ -397,6 +422,8 @@ button.service-button:focus {
     padding-left: 20px;
     padding-right: 20px;
     background-color: black;
+	border-bottom: 3px solid #2ab996;
+	border-top: 3px solid #2ab996;
 }
 
 .newsletter-home {
@@ -406,6 +433,15 @@ button.service-button:focus {
     font-size: 2em;
     font-weight: 300;
 }
+
+/*.newsletter-border {
+	width: 800px;
+	height: 300px;
+	margin-right: auto;
+	margin-left: auto;
+	text-align: center;
+	border: 5px solid #2ab996;
+}*/
 
 .display-none {
 	display: none;
@@ -516,14 +552,11 @@ input:focus + .indicator:after {
 	margin-right:auto;
 }
 
-.footer {
-    position: relative;
-    z-index: 6;
-	width: 100%;
-	height: auto;
-	background:url(/images/texture-bg.png) repeat;
+/*@media only screen and (max-width: 1200px) { 
+.banner-text {
+    margin-top: -120px;
 }
-
+}*/
 @media only screen 
   and (min-device-width: 320px) 
   and (max-device-width: 568px)
