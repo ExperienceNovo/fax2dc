@@ -4,65 +4,6 @@ angular.module("about/index.tpl.html", []).run(["$templateCache", function($temp
   $templateCache.put("about/index.tpl.html",
     "<div class=\"surface-container home-pad\">\n" +
     "    <div class=\"about\" id=\"about\">\n" +
-    "        <!--<div class=\"about-section-head\">\n" +
-    "            <h3>About Us</h3>\n" +
-    "            <hr>\n" +
-    "        </div>\n" +
-    "        -->\n" +
-    "        <!--\n" +
-    "        <div class=\"about-list\">\n" +
-    "            <div class=\"row\">\n" +
-    "                <div class=\"col-md-12\">\n" +
-    "                    <div class=\"col-md-4\">\n" +
-    "                        <i class=\"fa fa-paint-brush fa-5x\"></i>\n" +
-    "                        <div class=\"about-title\">\n" +
-    "                            <h2>Design</h2>\n" +
-    "                        </div>\n" +
-    "                        <hr>\n" +
-    "                        <div class=\"about-des\">\n" +
-    "                            <p>Full-scale Branding to ensure clear communication of your message.</p>\n" +
-    "                            <p>Custom Interface Design to ensure a seamless customer online experience.</p>\n" +
-    "                            <p>Advertising Design to establish a strong brand presence within your industry.</p>\n" +
-    "                        </div>\n" +
-    "                    </div>\n" +
-    "                    <div class=\"col-md-4\">\n" +
-    "                        <i class=\"fa fa-code fa-5x\"></i>\n" +
-    "                        <div class=\"about-title\">\n" +
-    "                            <h2>Development</h2>\n" +
-    "                        </div>\n" +
-    "                        <hr>\n" +
-    "                        <div class=\"about-des\">\n" +
-    "                            <p>Mobile-first Web Design to align you with the ever-increasing mobile world.</p>\n" +
-    "                            <p>SEO Structuring to naturally expand your online reach and outpace your competitors.</p>\n" +
-    "                            <p>Back-end Software Integration to ensure maximum security and business technology integration.</p>\n" +
-    "                        </div>\n" +
-    "                    </div>\n" +
-    "                    <div class=\"col-md-4\">\n" +
-    "                        <i class=\"fa fa-users fa-5x\"></i>\n" +
-    "                        <div class=\"about-title\">\n" +
-    "                            <h2>Marketing</h2>\n" +
-    "                        </div>\n" +
-    "                        <hr>\n" +
-    "                        <div class=\"about-des\">\n" +
-    "                            <p>Social Media Management to extend your customer reach.</p>\n" +
-    "                            <p>Email Outreach Marketing to manage current customer and secure new-customer leads.</p>\n" +
-    "                            <p>Consistent Content Creation to establish and maintain your presence within your community and your industry.</p>\n" +
-    "                        </div>\n" +
-    "                    </div>\n" +
-    "                </div>\n" +
-    "            </div>\n" +
-    "            <br>\n" +
-    "            <br>\n" +
-    "            <br>\n" +
-    "        </div>\n" +
-    "       \n" +
-    "        <br><br><br>\n" +
-    "\n" +
-    "    </div>\n" +
-    "    -->\n" +
-    "\n" +
-    "\n" +
-    "\n" +
     "        <div class=\"center about-top-area\">\n" +
     "            <div class=\"about-title-top\">Quality, Modernity, and Transparency\n" +
     "                <hr>\n" +
@@ -82,62 +23,97 @@ angular.module("about/index.tpl.html", []).run(["$templateCache", function($temp
     "            </div>\n" +
     "        </div>\n" +
     "\n" +
-    "        <div class=\"center about-tile-area\" style=\"background:url(/images/texture-bg.png) repeat;\">\n" +
-    "            <div class=\"about-tile\" style=\"\">\n" +
-    "                <div class=\"hovereffect\">\n" +
-    "                    <img class=\"img-responsive\" id=\"about-pic\" src=\"/images/about/designtile.jpg\" alt=\"\">\n" +
-    "                    <div class=\"overlay-about\">\n" +
-    "                        <h2 class=\"about-tile-title\" style=\"font-size: 25px;\">Design</h2>\n" +
-    "                        <p class=\"hover-info\"><a href=\"#\">\n" +
-    "                            More info...</a>\n" +
-    "                        </p>\n" +
-    "                        <!--\n" +
-    "                        <p style=\"font-size: 40px;\">\n" +
-    "                            <a href=\"http://www.absoluteyachtsna.com/\">\n" +
-    "                                <i class=\"fa fa-globe\"></i>\n" +
-    "                            </a>\n" +
-    "                            <a href=\"https://www.facebook.com/pages/Absolute-North-America/1467350980243678\">\n" +
-    "                                <i class=\"fa fa-facebook\"></i>\n" +
-    "                            </a>\n" +
-    "                            <a href=\"https://twitter.com/AbsoluteNA\">\n" +
-    "                                <i class=\"fa fa-twitter\"></i>\n" +
-    "                            </a>\n" +
-    "                            <a href=\"https://instagram.com/absoluteyachtsna/\">\n" +
-    "                                <i class=\"fa fa-instagram\"></i>\n" +
-    "                            </a>\n" +
-    "                        </p>\n" +
-    "                        -->\n" +
+    "        <div class=\"about-tile-area\" style=\"background:url(/images/texture-bg.png) repeat;\">\n" +
+    "            <div class=\"about-row\">\n" +
+    "                <div class=\"about-des right\" id=\"design-des\">\n" +
+    "                    <div class=\"about-des-span\">\n" +
+    "                        <p class=\"about-des-bold\">Graphics & Animation</p>\n" +
+    "                        <p>Our in-house design team is second-to-none.</p>\n" +
+    "                    </div>\n" +
+    "                    <hr>\n" +
+    "                    <div class=\"about-des-span\">\n" +
+    "                        <p class=\"about-des-bold\">Company Branding</p>\n" +
+    "                        <p>Work together with us and grow your brand.</p>\n" +
+    "                    </div>\n" +
+    "                    <hr>\n" +
+    "                    <div class=\"about-des-span\">\n" +
+    "                        <p class=\"about-des-bold\">UI/UX Design</p>\n" +
+    "                        <p>Your customers' online experience should be pain-free.</p>\n" +
+    "                    </div>\n" +
+    "                </div>\n" +
+    "                <div class=\"about-tile left\" style=\"\">\n" +
+    "                    <div class=\"hovereffect\">\n" +
+    "                        <img class=\"img-responsive\" id=\"design-div\" src=\"/images/about/designtile.jpg\" alt=\"\">\n" +
+    "                        <div class=\"overlay-about\">\n" +
+    "                            <h2 class=\"about-tile-title\" style=\"font-size: 35px;\">Design</h2>\n" +
+    "                            <p class=\"hover-info\" style=\"margin-top: 5%;\">Graphics & Animation</p>\n" +
+    "                            <p class=\"hover-info\">Company Branding</p>\n" +
+    "                            <p class=\"hover-info\">UI/UX Design</p>\n" +
+    "                        </div>\n" +
     "                    </div>\n" +
     "                </div>\n" +
     "            </div>\n" +
-    "            <div class=\"about-tile\" style=\"\">\n" +
-    "                <div class=\"hovereffect\">\n" +
-    "                    <img class=\"img-responsive\" id=\"\" src=\"/images/about/devtile.jpg\" alt=\"\">\n" +
-    "                    <div class=\"overlay-about\">\n" +
-    "                        <h2 class=\"about-tile-title\" style=\"font-size: 25px;\">Development</h2>\n" +
-    "                        <p class=\"hover-info\"><a href=\"#\">\n" +
-    "                            More info...</a>\n" +
-    "                        </p>\n" +
+    "        </div>\n" +
+    "\n" +
+    "        <div class=\"about-tile-area\" style=\"background:url(/images/texture-bg.png) repeat;\">\n" +
+    "            <div class=\"about-row\">\n" +
+    "                <div class=\"about-tile right\" style=\"\">\n" +
+    "                    <div class=\"hovereffect\">\n" +
+    "                        <img class=\"img-responsive\" id=\"dev-div\" src=\"/images/about/devtile.jpg\" alt=\"\">\n" +
+    "                        <div class=\"overlay-about\">\n" +
+    "                            <h2 class=\"about-tile-title\" style=\"font-size: 35px;\">Development</h2>\n" +
+    "                            <p class=\"hover-info\" style=\"margin-top: 5%;\">Mobile-First Web Design</p>\n" +
+    "                            <p class=\"hover-info\">SEO Structuring</p>\n" +
+    "                            <p class=\"hover-info\">Back-End Software Integration</p>\n" +
+    "                        </div>\n" +
+    "                    </div>\n" +
+    "                </div>\n" +
+    "                <div class=\"about-des left\" id=\"developement-des\">\n" +
+    "                    <div class=\"about-des-span\">\n" +
+    "                        <p class=\"about-des-bold\">Mobile-First Design</p>\n" +
+    "                        <p>Be ready for the mobile world; it's here.</p>\n" +
+    "                    </div>\n" +
+    "                    <hr>\n" +
+    "                    <div class=\"about-des-span\">\n" +
+    "                        <p class=\"about-des-bold\">SEO</p>\n" +
+    "                        <p>Expand your online reach and outpace competitors.</p>\n" +
+    "                    </div>\n" +
+    "                    <hr>\n" +
+    "                    <div class=\"about-des-span\">\n" +
+    "                        <p class=\"about-des-bold\">Back-End Integration</p>\n" +
+    "                        <p>Ensure security and full technological integration.</p>\n" +
     "                    </div>\n" +
     "                </div>\n" +
     "            </div>\n" +
-    "            <div class=\"about-tile\" style=\"\">\n" +
-    "                <div class=\"hovereffect\">\n" +
-    "                    <img class=\"img-responsive\" id=\"\" src=\"/images/about/marketingtile.jpg\" alt=\"\">\n" +
-    "                    <div class=\"overlay-about\">\n" +
-    "                        <h2 class=\"about-tile-title\" style=\"font-size: 25px;\">Marketing</h2>\n" +
-    "                        <p class=\"hover-info\"><a href=\"#\">\n" +
-    "                            More info...</a>\n" +
-    "                        </p>\n" +
-    "                        <!--\n" +
-    "                        <p>\n" +
-    "                            <br>\n" +
-    "                            We would love the opportunity to work with you and your company on your next online marketing project.\n" +
-    "                            <br>\n" +
-    "                            <br>\n" +
-    "                            <a href=\"/contact/\" style=\"font-size: 40px;\">Get in touch.</a>\n" +
-    "                        </p>\n" +
-    "                        -->\n" +
+    "        </div>\n" +
+    "\n" +
+    "        <div class=\"about-tile-area\" style=\"background:url(/images/texture-bg.png) repeat;\">\n" +
+    "            <div class=\"about-row\">\n" +
+    "                <div class=\"about-des right\" id=\"marketing-des\">\n" +
+    "                    <div class=\"about-des-span\">\n" +
+    "                        <p class=\"about-des-bold\">Social Media Management</p>\n" +
+    "                        <p>Extend your customer outreach.</p>\n" +
+    "                    </div>\n" +
+    "                    <hr>\n" +
+    "                    <div class=\"about-des-span\">\n" +
+    "                        <p class=\"about-des-bold\">Email Marketing</p>\n" +
+    "                        <p>Manage current customers and secure new leads.</p>\n" +
+    "                    </div>\n" +
+    "                    <hr>\n" +
+    "                    <div class=\"about-des-span\">\n" +
+    "                        <p class=\"about-des-bold\">Content Creation</p>\n" +
+    "                        <p>Establish and maintain your online presence with new content.</p>\n" +
+    "                    </div>\n" +
+    "                </div>\n" +
+    "                <div class=\"about-tile left\" style=\"\">\n" +
+    "                    <div class=\"hovereffect\">\n" +
+    "                        <img class=\"img-responsive\" id=\"marketing-div\" src=\"/images/about/marketingtile.jpg\" alt=\"\">\n" +
+    "                        <div class=\"overlay-about\">\n" +
+    "                            <h2 class=\"about-tile-title\" style=\"font-size: 35px;\">Marketing</h2>\n" +
+    "                            <p class=\"hover-info\" style=\"margin-top: 5%;\">Social Media Management</p>\n" +
+    "                            <p class=\"hover-info\">Email Marketing</p>\n" +
+    "                            <p class=\"hover-info\">Content Creation</p>\n" +
+    "                        </div>\n" +
     "                    </div>\n" +
     "                </div>\n" +
     "            </div>\n" +
@@ -162,65 +138,68 @@ angular.module("about/index.tpl.html", []).run(["$templateCache", function($temp
     "        </div>\n" +
     "        -->\n" +
     "\n" +
-    "        <br><br>\n" +
-    "\n" +
-    "        <div class=\"about-list\">\n" +
-    "            <div class=\"row\">\n" +
-    "                <div class=\"col-md-12\">\n" +
-    "                    <div class=\"col-md-4\">\n" +
-    "                        <!--<i class=\"fa fa-paint-brush fa-5x\"></i>-->\n" +
-    "                        <!--<div class=\"about-title\">\n" +
-    "                            <h2>Design</h2>\n" +
-    "                        </div>\n" +
-    "                        <hr>-->\n" +
-    "                        <div class=\"about-des\" id=\"design-des\">\n" +
-    "                            <p><span class=\"about-des-bold\">Full-scale Branding</span> to ensure clear communication of your message.</p>\n" +
-    "                            <hr>\n" +
-    "                            <p><span class=\"about-des-bold\">Custom Interface Design</span> to ensure a seamless customer online experience.</p>\n" +
-    "                            <hr>\n" +
-    "                            <p><span class=\"about-des-bold\">Advertising Design</span> to establish a strong brand presence within your industry.</p>\n" +
-    "                        </div>\n" +
-    "                    </div>\n" +
-    "                    <div class=\"col-md-4\">\n" +
-    "                        <!--<i class=\"fa fa-code fa-5x\"></i>-->\n" +
-    "                        <!--<div class=\"about-title\">\n" +
-    "                            <h2>Development</h2>\n" +
-    "                        </div>\n" +
-    "                        <hr>-->\n" +
-    "                        <div class=\"about-des\" id=\"developement-des\">\n" +
-    "                            <p><span class=\"about-des-bold\">Mobile-first Web Design</span> to align you with the ever-increasing mobile world.</p>\n" +
-    "                            <hr>\n" +
-    "                            <p><span class=\"about-des-bold\">SEO Structuring</span> to naturally expand your online reach and outpace your competitors.</p>\n" +
-    "                            <hr>\n" +
-    "                            <p><span class=\"about-des-bold\">Back-end Software Integration</span> to ensure maximum security and business technology integration.</p>\n" +
-    "                        </div>\n" +
-    "                    </div>\n" +
-    "                    <div class=\"col-md-4\">\n" +
-    "                        <!--<i class=\"fa fa-users fa-5x\"></i>-->\n" +
-    "                        <!--<div class=\"about-title\">\n" +
-    "                            <h2>Marketing</h2>\n" +
-    "                        </div>\n" +
-    "                        <hr>-->\n" +
-    "                        <div class=\"about-des\" id=\"marketing-des\">\n" +
-    "                            <p><span class=\"about-des-bold\">Social Media Management</span> to extend your customer reach.</p>\n" +
-    "                            <hr>\n" +
-    "                            <p><span class=\"about-des-bold\">Email Outreach Marketing</span> to manage current customer and secure new-customer leads.</p>\n" +
-    "                            <hr>\n" +
-    "                            <p><span class=\"about-des-bold\">Consistent Content Creation</span> to establish and maintain your presence within your community and your industry.</p>\n" +
-    "                        </div>\n" +
-    "                    </div>\n" +
-    "                </div>\n" +
-    "            </div>\n" +
-    "            <br>\n" +
-    "            <br>\n" +
-    "            <br>\n" +
-    "        </div><!-- end about list -->\n" +
     "    </div> <!-- end about -->\n" +
     "    <div class=\"footer\">\n" +
     "        <div class=\"footer-text\">© 2015 NOVO, LLC.</div>\n" +
     "    </div>\n" +
     "</div><!-- end suface container -->\n" +
-    "	");
+    "\n" +
+    "<!--<div class=\"about-section-head\">\n" +
+    "    <h3>About Us</h3>\n" +
+    "    <hr>\n" +
+    "</div>\n" +
+    "-->\n" +
+    "<!--\n" +
+    "<div class=\"about-list\">\n" +
+    "    <div class=\"row\">\n" +
+    "        <div class=\"col-md-12\">\n" +
+    "            <div class=\"col-md-4\">\n" +
+    "                <i class=\"fa fa-paint-brush fa-5x\"></i>\n" +
+    "                <div class=\"about-title\">\n" +
+    "                    <h2>Design</h2>\n" +
+    "                </div>\n" +
+    "                <hr>\n" +
+    "                <div class=\"about-des\">\n" +
+    "                    <p>Full-scale Branding to ensure clear communication of your message.</p>\n" +
+    "                    <p>Custom Interface Design to ensure a seamless customer online experience.</p>\n" +
+    "                    <p>Advertising Design to establish a strong brand presence within your industry.</p>\n" +
+    "                </div>\n" +
+    "            </div>\n" +
+    "            <div class=\"col-md-4\">\n" +
+    "                <i class=\"fa fa-code fa-5x\"></i>\n" +
+    "                <div class=\"about-title\">\n" +
+    "                    <h2>Development</h2>\n" +
+    "                </div>\n" +
+    "                <hr>\n" +
+    "                <div class=\"about-des\">\n" +
+    "                    <p>Mobile-first Web Design to align you with the ever-increasing mobile world.</p>\n" +
+    "                    <p>SEO Structuring to naturally expand your online reach and outpace your competitors.</p>\n" +
+    "                    <p>Back-end Software Integration to ensure maximum security and business technology integration.</p>\n" +
+    "                </div>\n" +
+    "            </div>\n" +
+    "            <div class=\"col-md-4\">\n" +
+    "                <i class=\"fa fa-users fa-5x\"></i>\n" +
+    "                <div class=\"about-title\">\n" +
+    "                    <h2>Marketing</h2>\n" +
+    "                </div>\n" +
+    "                <hr>\n" +
+    "                <div class=\"about-des\">\n" +
+    "                    <p>Social Media Management to extend your customer reach.</p>\n" +
+    "                    <p>Email Outreach Marketing to manage current customer and secure new-customer leads.</p>\n" +
+    "                    <p>Consistent Content Creation to establish and maintain your presence within your community and your industry.</p>\n" +
+    "                </div>\n" +
+    "            </div>\n" +
+    "        </div>\n" +
+    "    </div>\n" +
+    "    <br>\n" +
+    "    <br>\n" +
+    "    <br>\n" +
+    "</div>\n" +
+    "\n" +
+    "<br><br><br>\n" +
+    "\n" +
+    "</div>\n" +
+    "-->");
 }]);
 
 angular.module("blog-post/index.tpl.html", []).run(["$templateCache", function($templateCache) {
@@ -688,8 +667,8 @@ angular.module("home/index.tpl.html", []).run(["$templateCache", function($templ
     "        <div class=\"intro-container\">\n" +
     "            <svg class=\"intro\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 1920 1080\" width=\"1920px\" height=\"1080px\" preserveAspectRatio=\"xMidYMid slice\">\n" +
     "                <defs>\n" +
-    "                    <mask class=\"intro-mask\" id=\"mask\" x=\"0\" y=\"0\" width=\"100%\" height=\"100%\">\n" +
-    "                        <rect x=\"0\" y=\"0\" width=\"1920px\" height=\"1080px\"></rect>\n" +
+    "                    <mask class=\"intro-mask\" id=\"intro-mask\" x=\"0\" y=\"0\" width=\"100%\" height=\"100%\">\n" +
+    "                        <rect class=\"intro-rect\" x=\"0\" y=\"0\" width=\"1920px\" height=\"1080px\"></rect>\n" +
     "                        <text x=\"960\" y=\"27%\" class=\"large-text\">welcome</text>\n" +
     "                        <text x=\"960\" y=\"46%\" class=\"medium-text desktop\">embrace change with NOVO</text>\n" +
     "                        <text x=\"960\" y=\"44%\" class=\"medium-text mobile\">embrace change</text>\n" +
@@ -711,7 +690,7 @@ angular.module("home/index.tpl.html", []).run(["$templateCache", function($templ
     "                        </a>\n" +
     "                    </mask>\n" +
     "                </defs>\n" +
-    "                <rect x=\"0\" y=\"0\" width=\"1920px\" height=\"1080px\"></rect>\n" +
+    "                <rect class=\"intro-rect\" x=\"0\" y=\"0\" width=\"1920px\" height=\"1080px\"></rect>\n" +
     "                <a href=\"#more\">\n" +
     "                    <svg class=\"tri-after\" version=\"1.1\" id=\"Layer_1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"883px\" y=\"68%\" width=\"150px\" height=\"150px\" viewBox=\"0 0 723 626\" enable-background=\"new 0 0 723 626\" xml:space=\"preserve\">\n" +
     "                        <g>\n" +
@@ -790,12 +769,12 @@ angular.module("home/index.tpl.html", []).run(["$templateCache", function($templ
     "            <a href=\"/portfolio/\">\n" +
     "                <svg class=\"portfolio-home\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 1920 400\" width=\"1920px\" height=\"400px\" preserveAspectRatio=\"xMidYMid slice\">\n" +
     "                    <defs>\n" +
-    "                        <mask class=\"portfolio-mask\" id=\"mask\" x=\"0\" y=\"0\" width=\"1920px\" height=\"400px\">\n" +
-    "                            <rect x=\"0\" y=\"0\" width=\"1920px\" height=\"400px\"></rect>\n" +
-    "                            <text x=\"960\" y=\"65%\" class=\"large-text\">our portfolio</text>\n" +
+    "                        <mask class=\"portfolio-mask\" id=\"portfolio-mask\" x=\"0\" y=\"0\" width=\"1920px\" height=\"400px\">\n" +
+    "                            <rect class=\"portfolio-rect\" x=\"0\" y=\"0\" width=\"1920px\" height=\"400px\"></rect>\n" +
+    "                            <text x=\"960\" y=\"63%\" class=\"large-medium-text\">our portfolio</text>\n" +
     "                        </mask>\n" +
     "                    </defs>\n" +
-    "                    <rect x=\"0\" y=\"0\" width=\"1920px\" height=\"400px\"></rect>\n" +
+    "                    <rect class=\"portfolio-rect\" x=\"0\" y=\"0\" width=\"1920px\" height=\"400px\"></rect>\n" +
     "                </svg>\n" +
     "            </a>\n" +
     "        </div>\n" +
@@ -807,11 +786,11 @@ angular.module("home/index.tpl.html", []).run(["$templateCache", function($templ
     "                <div class=\"message-home\">\n" +
     "                    <div class=\"interested-home\">Interested in working with NOVO?</div>\n" +
     "                    <br>\n" +
-    "                    <div class=\"contact-us-home\">Email us at\n" +
-    "                        <a href=\"mailto:info@projectnovo.co\" style=\"color: #1db996;\">info@projectnovo.co</a></div> or <div class=\"contact-us-home\">Call us at one of our <span style=\"color: #1db996; font-weight: 500;\">four</span> locations!</div>\n" +
+    "                    <div class=\"contact-us-home\">email us at\n" +
+    "                        <a href=\"mailto:info@projectnovo.co\" style=\"color: #1db996;\">info@projectnovo.co</a></div> or <div class=\"contact-us-home\">call us at one of our <span style=\"color: #1db996; font-weight: 500;\">four</span> locations!</div>\n" +
     "                </div>\n" +
     "                <div class=\"row\">\n" +
-    "                    <div class=\"col-md-12 center\">\n" +
+    "                    <div class=\"col-md-12 center\" style=\"margin-bottom: -100px;\">\n" +
     "                        <div class=\"col-md-3 office-home\">\n" +
     "                            <div class=\"hovereffect\">\n" +
     "                                <img class=\"img-responsive\" src=\"/images/contact/raleigh-nc.jpg\" alt=\"\">\n" +
@@ -877,7 +856,7 @@ angular.module("home/index.tpl.html", []).run(["$templateCache", function($templ
     "\n" +
     "        <div class=\"newsletter-section\">\n" +
     "            <br>\n" +
-    "            <span class=\"newsletter-home\">Sign Up for our Monthly Newsletter!</span>\n" +
+    "            <span class=\"newsletter-home\">sign up for our monthly newsletter!</span>\n" +
     "            <br><br><br><br>\n" +
     "            <div class=\"contact\" id=\"contact\">\n" +
     "                <div class=\"contact-section\">\n" +

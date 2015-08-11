@@ -55,10 +55,21 @@
 	line-height:190%;
 	color:#222;
 	font-size: 1.3em;
+    width: 50%;
+    display: table-cell;
+    vertical-align: middle;
+    margin-top: 5%;
 }
 
 .about-des-bold {
-	font-weight: 700;
+	font-weight: 500 !important;
+	font-size: 25px;
+}
+
+.about-des-span {
+    max-width: 75%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .about-top-area {
@@ -70,7 +81,6 @@
     background-size: cover;
     color: white;
     padding: 2%;
-    border-bottom: 3px solid #2ab996;
     height: auto;
 }
 .about-title-top {
@@ -123,16 +133,29 @@
 }
 
 .about-tile-area {
-	
+
+}
+
+.about-row {
+    position: relative;
+    height: auto;
+    min-height: auto;
+    display: table;
 }
 
 .about-tile {
-    width: auto;
-    max-width: 33.33%;
+    position: relative;
+    width: 50%;
     height: auto;
     overflow: hidden;
-    margin: 0 !important;
-    border-bottom: 3px solid #2ab996;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
 }
 
 .about-tile-title {
@@ -147,7 +170,7 @@
     overflow: hidden;
     top: 0;
     left: 0;
-    padding: 50px 20px;
+    padding: 5%;
 }
 
 @media only screen 
@@ -163,15 +186,21 @@
     }
 }
 
-@media screen and (max-width: 1400px) {
-    .about-tile {
-        width: 33.33%;
+@media screen and (max-width: 1200px) {
+    .about-des-span {
+        font-size: 0.9em;
+    }
+    .about-des {
+        margin-top: 3%;
     }
 }
 
-@media screen and (max-width: 920px) {
+@media screen and (max-width: 1040px) {
     .about-tile {
-        width: 50%;
+        width: 100%;
+    }
+    .about-des {
+        display: none;
     }
 }
 
