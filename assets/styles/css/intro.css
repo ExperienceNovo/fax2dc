@@ -38,23 +38,23 @@ body {
 .large-text {
     font-family: 'Jura', sans-serif;
     font-weight: 400;
-    font-size: 18em;
+    font-size: 15em;
     letter-spacing:-0.09em;
 }
 .medium-text {
     font-family: 'Quicksand', sans-serif;
     font-weight: 400;
-    font-size: 5em;
+    font-size: 4em;
     letter-spacing: .05em;
 }
 .small-text {
     font-family: 'Quicksand', sans-serif;
     font-weight: 400;
-    font-size: 3em;
+    font-size: 2.5em;
     letter-spacing:-0.09em;
 }
 .learn-more {
-  font-size: 45px !important;
+  font-size: 25px !important;
 }
 .tri-after {
   opacity: 0;

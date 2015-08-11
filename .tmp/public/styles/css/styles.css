@@ -12,8 +12,8 @@ html,body {
 }
 
 .home-pad {
-    margin-left: 67px;
-    width: 100%;
+    //margin-left: 67px;
+    //width: 100%;
 }
 
 @media screen and (max-width: 640px) {
