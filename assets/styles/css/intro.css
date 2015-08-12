@@ -95,6 +95,18 @@ svg > .portfolio-rect {
     -webkit-mask: url(#portfolio-mask);
     mask: url(#portfolio-mask);
 }
+.portfolio-rect:hover {
+    fill: #2ab996;
+}
+svg > .newsletter-rect {
+    //fill: #2ab996; /* novo green */
+    fill: white;
+    -webkit-mask: url(#newsletter-mask);
+    mask: url(#newsletter-mask);
+}
+/*.newsletter-rect:hover {
+    fill: #2ab996;
+}*/
 video {
   position: absolute;
   top: 0%;

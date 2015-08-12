@@ -55,7 +55,7 @@ a:hover {
   position: relative;
   text-align: center;
   cursor: default;
-  background: #42b078;
+  background: #2ab996;
 }
 
 .hovereffect .overlay {
@@ -172,4 +172,5 @@ a:hover {
 	background: url('/images/texture-bg.png') repeat;
 	color: gray;
 	font-size: 0.8em;
+	opacity: 0.8;
 }

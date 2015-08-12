@@ -116,7 +116,6 @@ button.service-button:focus {
 	background:url(/images/texture-bg.png) repeat;
 	height: 100vh;
 	min-height: 900px;
-	border-bottom: 3px solid #2ab996;
 	border-top: 3px solid #2ab996;
 	position: relative;
 	z-index: 2;
@@ -201,7 +200,7 @@ button.service-button:focus {
 }
 
 .portfolio-home {
-    background: url('/images/portfolio/art.jpg') no-repeat center center;
+    background: url('/images/portfolio/artbw.jpg') no-repeat center center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -211,6 +210,31 @@ button.service-button:focus {
 
 .portfolio-mask {
     z-index: -8;
+    font-size: .85em !important;
+}
+
+.newsletter-home-container {
+    cursor: default;
+    height: 30vh;
+    min-height: 30vh;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.newsletter-home {
+    background: url('/images/stock5-bw.jpg') no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    position: relative;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.newsletter-mask {
+    z-index: -9;
     font-size: .85em !important;
 }
 
@@ -308,6 +332,12 @@ button.service-button:focus {
 
 .contact, .contact-section {
 	padding-bottom: 30px;
+	position: relative;
+	z-index: 50;
+	margin-top: -110px;
+	margin-left: auto !important;
+	margin-right: auto !important;
+	text-align: center;
 }
 
 .surface-container-home {
@@ -322,9 +352,8 @@ button.service-button:focus {
 .contact-container {
 	padding-top: 100px;
 	padding-bottom: 50px;
-	background: url(/images/texture-bg.png) repeat;
+	//background: url(/images/texture-bg.png) repeat;
 	//border-bottom: 3px solid #2ab996;
-    border-top: 3px solid #2ab996;
 }
 
 .contact-home {
@@ -411,26 +440,14 @@ button.service-button:focus {
     position: relative;
     z-index: 5;
     font-size: large;
-    margin-right: auto;
-    margin-left: auto;
+    margin-right: auto !important;
+    margin-left: auto !important;
     text-align: center;
     font-family: 'Quicksand', sans-serif;
     color: #fff;
     padding-top: 40px;
     padding-left: 20px;
     padding-right: 20px;
-    //background-color: gray;
-    background: url(/images/gray-bg.jpg) repeat;
-    position: relative;
-	//border-bottom: 3px solid #2ab996;
-}
-
-.newsletter-home {
-    margin-right: auto;
-    margin-left: auto;
-    text-align: center;
-    font-size: 2em;
-    font-weight: 300;
 }
 
 /*.newsletter-border {

@@ -771,7 +771,7 @@ angular.module("home/index.tpl.html", []).run(["$templateCache", function($templ
     "                    <defs>\n" +
     "                        <mask class=\"portfolio-mask\" id=\"portfolio-mask\" x=\"0\" y=\"0\" width=\"1920px\" height=\"400px\">\n" +
     "                            <rect class=\"portfolio-rect\" x=\"0\" y=\"0\" width=\"1920px\" height=\"400px\"></rect>\n" +
-    "                            <text x=\"960\" y=\"63%\" class=\"large-medium-text\">our portfolio</text>\n" +
+    "                            <text x=\"960\" y=\"60%\" class=\"large-medium-text\">our portfolio</text>\n" +
     "                        </mask>\n" +
     "                    </defs>\n" +
     "                    <rect class=\"portfolio-rect\" x=\"0\" y=\"0\" width=\"1920px\" height=\"400px\"></rect>\n" +
@@ -793,7 +793,7 @@ angular.module("home/index.tpl.html", []).run(["$templateCache", function($templ
     "                    <div class=\"col-md-12 center\" style=\"margin-bottom: -100px;\">\n" +
     "                        <div class=\"col-md-3 office-home\">\n" +
     "                            <div class=\"hovereffect\">\n" +
-    "                                <img class=\"img-responsive\" src=\"/images/contact/raleigh-nc.jpg\" alt=\"\">\n" +
+    "                                <img class=\"img-responsive\" src=\"/images/contact/raleigh-nc-bw.jpg\" alt=\"\">\n" +
     "                                <div class=\"overlay\">\n" +
     "                                    <br>\n" +
     "                                    <br>\n" +
@@ -807,7 +807,7 @@ angular.module("home/index.tpl.html", []).run(["$templateCache", function($templ
     "                        </div>\n" +
     "                        <div class=\"col-md-3 office-home\">\n" +
     "                            <div class=\"hovereffect\">\n" +
-    "                                <img class=\"img-responsive\" src=\"/images/contact/evanston.jpg\" alt=\"\">\n" +
+    "                                <img class=\"img-responsive\" src=\"/images/contact/evanston-bw.jpg\" alt=\"\">\n" +
     "                                <div class=\"overlay\">\n" +
     "                                    <br>\n" +
     "                                    <br>\n" +
@@ -821,7 +821,7 @@ angular.module("home/index.tpl.html", []).run(["$templateCache", function($templ
     "                        </div>\n" +
     "                        <div class=\"col-md-3 office-home\">\n" +
     "                            <div class=\"hovereffect\">\n" +
-    "                                <img class=\"img-responsive\" src=\"/images/contact/knoxville.jpg\" alt=\"\">\n" +
+    "                                <img class=\"img-responsive\" src=\"/images/contact/knoxville-bw.jpg\" alt=\"\">\n" +
     "                                <div class=\"overlay\">\n" +
     "                                    <br>\n" +
     "                                    <br>\n" +
@@ -835,7 +835,7 @@ angular.module("home/index.tpl.html", []).run(["$templateCache", function($templ
     "                        </div>\n" +
     "                        <div class=\"col-md-3 office-home\">\n" +
     "                            <div class=\"hovereffect\">\n" +
-    "                                <img class=\"img-responsive\" src=\"/images/contact/philly.jpg\" alt=\"\">\n" +
+    "                                <img class=\"img-responsive\" src=\"/images/contact/philly-bw.jpg\" alt=\"\">\n" +
     "                                <div class=\"overlay\">\n" +
     "                                    <br>\n" +
     "                                    <br>\n" +
@@ -843,7 +843,8 @@ angular.module("home/index.tpl.html", []).run(["$templateCache", function($templ
     "                                    <h2><span class=\"contact-city\">Philadelphia, PA</span></h2>\n" +
     "                                    <p>\n" +
     "                                        <a href=\"tel:+13365800855\">336.580.0855</a>\n" +
-    "                                    </p>                        </div>\n" +
+    "                                    </p>\n" +
+    "                                </div>\n" +
     "                            </div>\n" +
     "                        </div>\n" +
     "                    </div>\n" +
@@ -854,10 +855,17 @@ angular.module("home/index.tpl.html", []).run(["$templateCache", function($templ
     "            </div>\n" +
     "        </div>\n" +
     "\n" +
-    "        <div class=\"newsletter-section\">\n" +
-    "            <br>\n" +
-    "            <span class=\"newsletter-home\">sign up for our monthly newsletter!</span>\n" +
-    "            <br><br><br><br>\n" +
+    "        <div class=\"newsletter-home-container\">\n" +
+    "            <svg class=\"newsletter-home\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 1920 400\" width=\"1920px\" height=\"500px\" preserveAspectRatio=\"xMidYMid slice\">\n" +
+    "                <defs>\n" +
+    "                    <mask class=\"newsletter-mask\" id=\"newsletter-mask\" x=\"0\" y=\"0\" width=\"1920px\" height=\"500px\">\n" +
+    "                        <rect class=\"newsletter-rect\" x=\"0\" y=\"0\" width=\"1920px\" height=\"500px\"></rect>\n" +
+    "                        <text x=\"960\" y=\"40%\" class=\"medium-text\">sign up for our newsletter</text>\n" +
+    "                        <!-- I feel like we could say something a little better here. Let's do some research into this -->\n" +
+    "                    </mask>\n" +
+    "                 </defs>\n" +
+    "                 <rect class=\"newsletter-rect\" x=\"0\" y=\"0\" width=\"1920px\" height=\"500px\"></rect>\n" +
+    "            </svg>\n" +
     "            <div class=\"contact\" id=\"contact\">\n" +
     "                <div class=\"contact-section\">\n" +
     "                    <form class=\"ctr\" action=\"//projectnovo.us11.list-manage.com/subscribe/post?u=a56f7f3f876fa9db4c36328af&amp;id=ff3d3ae826\" method=\"post\">\n" +
@@ -874,6 +882,27 @@ angular.module("home/index.tpl.html", []).run(["$templateCache", function($templ
     "                </div>\n" +
     "            </div>\n" +
     "        </div>\n" +
+    "\n" +
+    "                    <!-- <div class=\"newsletter-section\">\n" +
+    "                         <br>\n" +
+    "                         <span class=\"newsletter-home\">sign up for our monthly newsletter!</span>\n" +
+    "                         <br><br><br><br>\n" +
+    "                         <div class=\"contact\" id=\"contact\">\n" +
+    "                             <div class=\"contact-section\">\n" +
+    "                                 <form class=\"ctr\" action=\"//projectnovo.us11.list-manage.com/subscribe/post?u=a56f7f3f876fa9db4c36328af&amp;id=ff3d3ae826\" method=\"post\">\n" +
+    "                                     <div class=\"loader\"></div>\n" +
+    "                                     <input type=\"email\" name=\"EMAIL\" required>\n" +
+    "                                     <div class=\"indicator\" data-content=\"Type Your Email Address\"></div>\n" +
+    "                                 </form>\n" +
+    "                             </div>\n" +
+    "\n" +
+    "                             <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->\n" +
+    "               <!-- <div class=\"display-none\">\n" +
+    "                    <div style=\"position: absolute; left: -5000px;\"><input type=\"text\" name=\"b_a56f7f3f876fa9db4c36328af_ff3d3ae826\" tabindex=\"-1\" value=\"\"></div>\n" +
+    "                    <div class=\"clear\"><input type=\"submit\" value=\"Subscribe\" name=\"subscribe\" id=\"mc-embedded-subscribe\" class=\"button\"></div>\n" +
+    "                </div>\n" +
+    "            </div>\n" +
+    "        </div>-->\n" +
     "        <div class=\"footer\">\n" +
     "            <div class=\"footer-text\">© 2015 NOVO, LLC.</div>\n" +
     "        </div>\n" +
