@@ -45,13 +45,14 @@ angular.module("about/index.tpl.html", []).run(["$templateCache", function($temp
     "                    <div class=\"hovereffect\">\n" +
     "                        <img class=\"img-responsive\" id=\"design-div\" src=\"/images/about/designtile.jpg\" alt=\"\">\n" +
     "                        <div class=\"overlay-about\">\n" +
-    "                            <h2 class=\"about-tile-title\" style=\"font-size: 35px;\">Design</h2>\n" +
-    "                            <p class=\"hover-info\" style=\"margin-top: 5%;\">Graphics & Animation</p>\n" +
+    "                            <h2 class=\"about-tile-title\" style=\"font-size: 30px;\">Design</h2>\n" +
+    "                            <p class=\"hover-info\" style=\"margin-top: 3%;\">Graphics & Animation</p>\n" +
     "                            <p class=\"hover-info\">Company Branding</p>\n" +
     "                            <p class=\"hover-info\">UI/UX Design</p>\n" +
     "                        </div>\n" +
     "                    </div>\n" +
     "                </div>\n" +
+    "                <a name=\"design-anchor\"></a>\n" +
     "            </div>\n" +
     "        </div>\n" +
     "\n" +
@@ -61,14 +62,14 @@ angular.module("about/index.tpl.html", []).run(["$templateCache", function($temp
     "                    <div class=\"hovereffect\">\n" +
     "                        <img class=\"img-responsive\" id=\"dev-div\" src=\"/images/about/devtile.jpg\" alt=\"\">\n" +
     "                        <div class=\"overlay-about\">\n" +
-    "                            <h2 class=\"about-tile-title\" style=\"font-size: 35px;\">Development</h2>\n" +
-    "                            <p class=\"hover-info\" style=\"margin-top: 5%;\">Mobile-First Web Design</p>\n" +
+    "                            <h2 class=\"about-tile-title\" style=\"font-size: 30px;\">Development</h2>\n" +
+    "                            <p class=\"hover-info\" style=\"margin-top: 3%;\">Mobile-First Web Design</p>\n" +
     "                            <p class=\"hover-info\">SEO Structuring</p>\n" +
     "                            <p class=\"hover-info\">Back-End Software Integration</p>\n" +
     "                        </div>\n" +
     "                    </div>\n" +
     "                </div>\n" +
-    "                <div class=\"about-des left\" id=\"developement-des\">\n" +
+    "                <div class=\"about-des left\" id=\"development-des\">\n" +
     "                    <div class=\"about-des-span\">\n" +
     "                        <p class=\"about-des-bold\">Mobile-First Design</p>\n" +
     "                        <p>Be ready for the mobile world; it's here.</p>\n" +
@@ -84,6 +85,7 @@ angular.module("about/index.tpl.html", []).run(["$templateCache", function($temp
     "                        <p>Ensure security and full technological integration.</p>\n" +
     "                    </div>\n" +
     "                </div>\n" +
+    "                <a name=\"dev-anchor\"></a>\n" +
     "            </div>\n" +
     "        </div>\n" +
     "\n" +
@@ -109,13 +111,14 @@ angular.module("about/index.tpl.html", []).run(["$templateCache", function($temp
     "                    <div class=\"hovereffect\">\n" +
     "                        <img class=\"img-responsive\" id=\"marketing-div\" src=\"/images/about/marketingtile.jpg\" alt=\"\">\n" +
     "                        <div class=\"overlay-about\">\n" +
-    "                            <h2 class=\"about-tile-title\" style=\"font-size: 35px;\">Marketing</h2>\n" +
-    "                            <p class=\"hover-info\" style=\"margin-top: 5%;\">Social Media Management</p>\n" +
+    "                            <h2 class=\"about-tile-title\" style=\"font-size: 30px;\">Marketing</h2>\n" +
+    "                            <p class=\"hover-info\" style=\"margin-top: 3%;\">Social Media Management</p>\n" +
     "                            <p class=\"hover-info\">Email Marketing</p>\n" +
     "                            <p class=\"hover-info\">Content Creation</p>\n" +
     "                        </div>\n" +
     "                    </div>\n" +
     "                </div>\n" +
+    "                <a name=\"marketing-anchor\"></a>\n" +
     "            </div>\n" +
     "        </div><!-- end center -->\n" +
     "        <!--\n" +
@@ -676,7 +679,7 @@ angular.module("home/index.tpl.html", []).run(["$templateCache", function($templ
     "                        <text x=\"960\" y=\"51%\" class=\"small-text mantra\">a full-scale online marketing, design, and web development firm</text>\n" +
     "                        <text x=\"960\" y=\"67.5%\" class=\"small-text learn-more\">learn more</text>\n" +
     "                        <a href=\"#more\">\n" +
-    "                            <svg class=\"tri-before bounce\" version=\"1.1\" id=\"Layer_1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"883px\" y=\"68%\" width=\"150px\" height=\"150px\" viewBox=\"0 0 723 626\" enable-background=\"new 0 0 723 626\" xml:space=\"preserve\">\n" +
+    "                            <svg class=\"tri-before\" version=\"1.1\" id=\"Layer_1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"883px\" y=\"68%\" width=\"150px\" height=\"150px\" viewBox=\"0 0 723 626\" enable-background=\"new 0 0 723 626\" xml:space=\"preserve\">\n" +
     "                                <g>\n" +
     "                                  <path fill=\"#232322\" d=\"M0,0h723v1.58c-3.72,4.37-5.58,9.96-8.89,14.62C596.69,219.439,479.44,422.79,361.96,626h-0.6\n" +
     "                                    C243.45,421.77,125.54,217.55,7.63,13.32C5.09,9.061,2.85,4.62,0,0.55V0z\"></path>\n" +
@@ -716,10 +719,69 @@ angular.module("home/index.tpl.html", []).run(["$templateCache", function($templ
     "\n" +
     "        <div class=\"services\" id=\"more\">\n" +
     "            <div class=\"section-head\">\n" +
-    "                <h3>Our Services</h3>\n" +
+    "                <h3>our services</h3>\n" +
+    "                <!-- maybe \"what we do\"? idk -->\n" +
     "                <hr>\n" +
     "            </div>\n" +
+    "\n" +
     "            <div class=\"services-list\">\n" +
+    "                <div class=\"row\">\n" +
+    "                    <div class=\"col-md-12\">\n" +
+    "                        <div class=\"col-md-4 flex\">\n" +
+    "                            <div class=\"tri-wrap\">\n" +
+    "                                <svg version=\"1.1\" id=\"Layer_1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\" width=\"144px\" height=\"144px\" viewBox=\"0 0 144 144\" enable-background=\"new 0 0 144 144\" xml:space=\"preserve\">\n" +
+    "                                    <polygon fill=\"none\" stroke=\"#14B795\" stroke-width=\"5\" stroke-miterlimit=\"10\" points=\"6.946,15.479 137.053,15.479 72,128.151 \"></polygon>\n" +
+    "                                </svg>\n" +
+    "                                <div class=\"service-title\">\n" +
+    "                                    <a href=\"/about#design-div/\">\n" +
+    "                                        <h2 class=\"service-title-bar\">design</h2>\n" +
+    "                                    </a>\n" +
+    "                                </div>\n" +
+    "                                <div class=\"service-des\">\n" +
+    "                                    <p>graphics & animation</p>\n" +
+    "                                    <p>company branding</p>\n" +
+    "                                    <p>UI/UX design</p>\n" +
+    "                                </div>\n" +
+    "                            </div>\n" +
+    "                        </div>\n" +
+    "                        <div class=\"col-md-4\">\n" +
+    "                            <div class=\"tri-wrap\">\n" +
+    "                                <svg version=\"1.1\" id=\"Layer_1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\" width=\"144px\" height=\"144px\" viewBox=\"0 0 144 144\" enable-background=\"new 0 0 144 144\" xml:space=\"preserve\">\n" +
+    "                                    <polygon fill=\"none\" stroke=\"#14B795\" stroke-width=\"5\" stroke-miterlimit=\"10\" points=\"137.053,128.152 6.946,128.152,71.999,15.479 \"></polygon>\n" +
+    "                                </svg>\n" +
+    "                                <div class=\"service-title\">\n" +
+    "                                    <a href=\"/about#dev-div/\">\n" +
+    "                                        <h2 class=\"service-title-bar\">development</h2>\n" +
+    "                                    </a>\n" +
+    "                                </div>\n" +
+    "                                <div class=\"service-des\">\n" +
+    "                                    <p>mobile-first design</p>\n" +
+    "                                    <p>SEO</p>\n" +
+    "                                    <p>back-end integration</p>\n" +
+    "                                </div>\n" +
+    "                            </div>\n" +
+    "                        </div>\n" +
+    "                        <div class=\"col-md-4\">\n" +
+    "                            <div class=\"tri-wrap\">\n" +
+    "                                <svg version=\"1.1\" id=\"Layer_1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\" width=\"144px\" height=\"144px\" viewBox=\"0 0 144 144\" enable-background=\"new 0 0 144 144\" xml:space=\"preserve\">\n" +
+    "                                    <polygon fill=\"none\" stroke=\"#14B795\" stroke-width=\"5\" stroke-miterlimit=\"10\" points=\"6.946,15.479 137.053,15.479 72,128.151 \"></polygon>\n" +
+    "                                </svg>\n" +
+    "                                <div class=\"service-title\">\n" +
+    "                                    <a href=\"/about#marketing-div/\">\n" +
+    "                                        <h2 class=\"service-title-bar\">marketing</h2>\n" +
+    "                                    </a>\n" +
+    "                                </div>\n" +
+    "                                <div class=\"service-des\">\n" +
+    "                                    <p>social media management</p>\n" +
+    "                                    <p>email marketing</p>\n" +
+    "                                    <p>content creation</p>\n" +
+    "                                </div>\n" +
+    "                            </div>\n" +
+    "                        </div>\n" +
+    "                    </div>\n" +
+    "                    <a href=\"/about/\"><button class=\"mainbutton service-button\" style=\"margin-top: 7.5%;\">More Info...</button></a>\n" +
+    "                </div>\n" +
+    "                <!--<div class=\"services-list\">\n" +
     "                <div class=\"row\">\n" +
     "                    <div class=\"col-md-12\">\n" +
     "                        <div class=\"col-md-4\">\n" +
@@ -759,9 +821,7 @@ angular.module("home/index.tpl.html", []).run(["$templateCache", function($templ
     "                            </div>\n" +
     "                        </div>\n" +
     "                    </div>\n" +
-    "                </div>\n" +
-    "                <br><br>\n" +
-    "                <a href=\"/about/\"><button class=\"mainbutton service-button\">More Info...</button></a>\n" +
+    "                </div>-->\n" +
     "            </div>\n" +
     "        </div>\n" +
     "\n" +
@@ -793,7 +853,7 @@ angular.module("home/index.tpl.html", []).run(["$templateCache", function($templ
     "                    <div class=\"col-md-12 center\" style=\"margin-bottom: -100px;\">\n" +
     "                        <div class=\"col-md-3 office-home\">\n" +
     "                            <div class=\"hovereffect\">\n" +
-    "                                <img class=\"img-responsive\" src=\"/images/contact/raleigh-nc-bw.jpg\" alt=\"\">\n" +
+    "                                <img class=\"img-responsive\" src=\"/images/contact/raleigh-nc.jpg\" alt=\"\">\n" +
     "                                <div class=\"overlay\">\n" +
     "                                    <br>\n" +
     "                                    <br>\n" +
@@ -807,7 +867,7 @@ angular.module("home/index.tpl.html", []).run(["$templateCache", function($templ
     "                        </div>\n" +
     "                        <div class=\"col-md-3 office-home\">\n" +
     "                            <div class=\"hovereffect\">\n" +
-    "                                <img class=\"img-responsive\" src=\"/images/contact/evanston-bw.jpg\" alt=\"\">\n" +
+    "                                <img class=\"img-responsive\" src=\"/images/contact/evanston.jpg\" alt=\"\">\n" +
     "                                <div class=\"overlay\">\n" +
     "                                    <br>\n" +
     "                                    <br>\n" +
@@ -821,7 +881,7 @@ angular.module("home/index.tpl.html", []).run(["$templateCache", function($templ
     "                        </div>\n" +
     "                        <div class=\"col-md-3 office-home\">\n" +
     "                            <div class=\"hovereffect\">\n" +
-    "                                <img class=\"img-responsive\" src=\"/images/contact/knoxville-bw.jpg\" alt=\"\">\n" +
+    "                                <img class=\"img-responsive\" src=\"/images/contact/knoxville.jpg\" alt=\"\">\n" +
     "                                <div class=\"overlay\">\n" +
     "                                    <br>\n" +
     "                                    <br>\n" +
@@ -835,7 +895,7 @@ angular.module("home/index.tpl.html", []).run(["$templateCache", function($templ
     "                        </div>\n" +
     "                        <div class=\"col-md-3 office-home\">\n" +
     "                            <div class=\"hovereffect\">\n" +
-    "                                <img class=\"img-responsive\" src=\"/images/contact/philly-bw.jpg\" alt=\"\">\n" +
+    "                                <img class=\"img-responsive\" src=\"/images/contact/philly.jpg\" alt=\"\">\n" +
     "                                <div class=\"overlay\">\n" +
     "                                    <br>\n" +
     "                                    <br>\n" +
@@ -860,7 +920,7 @@ angular.module("home/index.tpl.html", []).run(["$templateCache", function($templ
     "                <defs>\n" +
     "                    <mask class=\"newsletter-mask\" id=\"newsletter-mask\" x=\"0\" y=\"0\" width=\"1920px\" height=\"500px\">\n" +
     "                        <rect class=\"newsletter-rect\" x=\"0\" y=\"0\" width=\"1920px\" height=\"500px\"></rect>\n" +
-    "                        <text x=\"960\" y=\"40%\" class=\"medium-text\">sign up for our newsletter</text>\n" +
+    "                        <text x=\"960\" y=\"30%\" class=\"medium-text\">sign up for our newsletter</text>\n" +
     "                        <!-- I feel like we could say something a little better here. Let's do some research into this -->\n" +
     "                    </mask>\n" +
     "                 </defs>\n" +

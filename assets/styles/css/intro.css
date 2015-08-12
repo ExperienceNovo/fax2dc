@@ -64,7 +64,7 @@ body {
 }
 .tri-after {
   opacity: 0;
-  transition: opacity .4s;
+  transition: opacity .2s;
 }
 .tri-after:hover {
   opacity: 1.0;
@@ -97,6 +97,7 @@ svg > .portfolio-rect {
 }
 .portfolio-rect:hover {
     fill: #2ab996;
+    transition: fill .2s;
 }
 svg > .newsletter-rect {
     //fill: #2ab996; /* novo green */
@@ -106,6 +107,7 @@ svg > .newsletter-rect {
 }
 /*.newsletter-rect:hover {
     fill: #2ab996;
+    transition: fill .2s;
 }*/
 video {
   position: absolute;

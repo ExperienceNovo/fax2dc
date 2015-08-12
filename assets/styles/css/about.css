@@ -208,4 +208,7 @@
     .about-tile {
         width: 100%;
     }
+    .home-pad {
+        margin-left: 67px;
+    }
 }

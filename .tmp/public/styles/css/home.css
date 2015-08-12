@@ -121,6 +121,13 @@ button.service-button:focus {
 	z-index: 2;
 }
 
+.tri-wrap {
+    position: relative;
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .section-head {
 	padding:100px 0 30px;
 }
@@ -145,7 +152,6 @@ button.service-button:focus {
 
 .services-list i {
 	color:#2AB996;
-	padding-bottom:25px;
 }
 
 .icon1 {
@@ -161,25 +167,43 @@ button.service-button:focus {
 }
 
 .services-list {
-	padding-bottom:100px;
 }
 
 .service-title h2 {
+    position: relative;
+    z-index: 80;
 	font-family: 'Quicksand', sans-serif;
-	font-size: 3em !important;
+	font-size: 2.2em !important;
 	font-weight: 300 !important;
 	line-height: 200%;
-	color:#222;
-	margin-top: 10px;
+	color:white;
+	margin-top: -200px;
 	margin-bottom: 10px;
+}
+
+.service-title-bar {
+    color: white !important;
+    background: rgba(0,0,0,0.7);
+    border: 1px solid white;
+    transition: background 0.3s;
+}
+
+.service-title-bar:hover {
+    color: white;
+    background: rgba(42,185,150, 1.0);
 }
 
 .service-des {
 	font-family: 'Quicksand', sans-serif;
 	line-height:190%;
 	color:#222;
+	background: rgba(255,255,255,0.8);
+	border: 1px solid black;
+	z-index: 85;
+	position: relative;
 	margin-top:30px;
 	font-size: 1.3em;
+	padding: 2%;
 }
 
 .name {
@@ -200,7 +224,7 @@ button.service-button:focus {
 }
 
 .portfolio-home {
-    background: url('/images/portfolio/artbw.jpg') no-repeat center center;
+    background: url('/images/portfolio/art.jpg') no-repeat center center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -222,7 +246,7 @@ button.service-button:focus {
 }
 
 .newsletter-home {
-    background: url('/images/stock5-bw.jpg') no-repeat center center;
+    background: url('/images/stock5.jpg') no-repeat center center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -534,7 +558,7 @@ input.full {
 	left:0;
 	right:0;
 	bottom:0;
-	color: white;
+	color: black;
 	-webkit-transition:inherit;
 	transition:inherit;
 	font-size:1.5em;
