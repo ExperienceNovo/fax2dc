@@ -2,19 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="945a5b82-2f8a-4a46-81ae-51de93913e2d" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.tmp/public/styles/css/about.css" afterPath="$PROJECT_DIR$/.tmp/public/styles/css/about.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/styles/css/about.css" afterPath="$PROJECT_DIR$/assets/styles/css/about.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.tmp/public/styles/css/home.css" afterPath="$PROJECT_DIR$/.tmp/public/styles/css/home.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/styles/css/home.css" afterPath="$PROJECT_DIR$/assets/styles/css/home.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.tmp/public/src/app/about/index.tpl.html" afterPath="$PROJECT_DIR$/.tmp/public/src/app/about/index.tpl.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.tmp/public/src/app/home/index.tpl.html" afterPath="$PROJECT_DIR$/.tmp/public/src/app/home/index.tpl.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/src/app/about/index.tpl.html" afterPath="$PROJECT_DIR$/assets/src/app/about/index.tpl.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/src/app/contact/index.tpl.html" afterPath="$PROJECT_DIR$/assets/src/app/contact/index.tpl.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/src/app/home/index.tpl.html" afterPath="$PROJECT_DIR$/assets/src/app/home/index.tpl.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.tmp/public/styles/css/intro.css" afterPath="$PROJECT_DIR$/.tmp/public/styles/css/intro.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/styles/css/intro.css" afterPath="$PROJECT_DIR$/assets/styles/css/intro.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.tmp/public/templates.js" afterPath="$PROJECT_DIR$/.tmp/public/templates.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.tmp/public/styles/css/theme.css" afterPath="$PROJECT_DIR$/.tmp/public/styles/css/theme.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/styles/css/theme.css" afterPath="$PROJECT_DIR$/assets/styles/css/theme.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Site.iws" />
@@ -49,12 +42,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="home.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="home.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/styles/css/home.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.3163152" vertical-offset="2340" max-vertical-offset="11055">
-              <caret line="175" column="18" selection-start-line="175" selection-start-column="18" selection-end-line="175" selection-end-column="18" />
+            <state vertical-scroll-proportion="-6.111111" vertical-offset="1575" max-vertical-offset="11055">
+              <caret line="116" column="14" selection-start-line="116" selection-start-column="14" selection-end-line="116" selection-end-column="14" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.tpl.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/assets/src/app/contact/index.tpl.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.11784512" vertical-offset="0" max-vertical-offset="2610">
+              <caret line="7" column="48" selection-start-line="7" selection-start-column="48" selection-end-line="7" selection-end-column="48" />
+              <folding>
+                <element signature="n#style#0;n#p#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -72,8 +77,8 @@
       <file leaf-file-name="index.tpl.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/src/app/home/index.tpl.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.25" vertical-offset="830" max-vertical-offset="5355">
-              <caret line="94" column="34" selection-start-line="94" selection-start-column="34" selection-end-line="94" selection-end-column="34" />
+            <state vertical-scroll-proportion="-5.0" vertical-offset="845" max-vertical-offset="5355">
+              <caret line="83" column="38" selection-start-line="83" selection-start-column="38" selection-end-line="83" selection-end-column="38" />
               <folding>
                 <element signature="n#style#0;n#button#0;n#a#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#a#0;n#div#1;n#div#0;n#div#0;n#div#3;n#div#0;n#div#0;n#!!top" expanded="true" />
@@ -146,7 +151,6 @@
         <option value="$PROJECT_DIR$/assets/bower.json" />
         <option value="$PROJECT_DIR$/views/layout.ejs" />
         <option value="$PROJECT_DIR$/assets/src/app/contact/index.js" />
-        <option value="$PROJECT_DIR$/assets/src/app/contact/index.tpl.html" />
         <option value="$PROJECT_DIR$/assets/src/app/intro/index.js" />
         <option value="$PROJECT_DIR$/assets/src/app/app.js" />
         <option value="$PROJECT_DIR$/assets/src/app/sidebar/index.tpl.html" />
@@ -159,6 +163,7 @@
         <option value="$PROJECT_DIR$/assets/src/app/about/index.tpl.html" />
         <option value="$PROJECT_DIR$/assets/src/app/home/index.tpl.html" />
         <option value="$PROJECT_DIR$/assets/styles/css/home.css" />
+        <option value="$PROJECT_DIR$/assets/src/app/contact/index.tpl.html" />
       </list>
     </option>
   </component>
@@ -1078,16 +1083,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/src/app/contact/index.tpl.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.57912457" vertical-offset="1014" max-vertical-offset="1920">
-          <caret line="102" column="12" selection-start-line="102" selection-start-column="12" selection-end-line="102" selection-end-column="12" />
-          <folding>
-            <element signature="n#options#0;n#ui-gmap-google-map#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assets/src/app/sidebar/index.tpl.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.625" vertical-offset="0" max-vertical-offset="825">
@@ -1188,10 +1183,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/assets/styles/css/home.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.111111" vertical-offset="1575" max-vertical-offset="11055">
+          <caret line="116" column="14" selection-start-line="116" selection-start-column="14" selection-end-line="116" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/assets/src/app/home/index.tpl.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.25" vertical-offset="830" max-vertical-offset="5355">
-          <caret line="94" column="34" selection-start-line="94" selection-start-column="34" selection-end-line="94" selection-end-column="34" />
+        <state vertical-scroll-proportion="-5.0" vertical-offset="845" max-vertical-offset="5355">
+          <caret line="83" column="38" selection-start-line="83" selection-start-column="38" selection-end-line="83" selection-end-column="38" />
           <folding>
             <element signature="n#style#0;n#button#0;n#a#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#a#0;n#div#1;n#div#0;n#div#0;n#div#3;n#div#0;n#div#0;n#!!top" expanded="true" />
@@ -1202,11 +1205,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/styles/css/home.css">
+    <entry file="file://$PROJECT_DIR$/assets/src/app/contact/index.tpl.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3163152" vertical-offset="2340" max-vertical-offset="11055">
-          <caret line="175" column="18" selection-start-line="175" selection-start-column="18" selection-end-line="175" selection-end-column="18" />
-          <folding />
+        <state vertical-scroll-proportion="0.11784512" vertical-offset="0" max-vertical-offset="2610">
+          <caret line="7" column="48" selection-start-line="7" selection-start-column="48" selection-end-line="7" selection-end-column="48" />
+          <folding>
+            <element signature="n#style#0;n#p#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
