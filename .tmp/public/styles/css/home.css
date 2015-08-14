@@ -114,8 +114,8 @@ button.service-button:focus {
 .services {
 	width:100%;
 	background:url(/images/texture-bg.png) repeat;
-	height: 100vh;
-	min-height: 900px;
+	height: 85vh;
+	min-height: 400px;
 	border-top: 3px solid #2ab996;
 	position: relative;
 	z-index: 2;
@@ -129,7 +129,7 @@ button.service-button:focus {
 }
 
 .section-head {
-	padding:100px 0 30px;
+	padding:70px 0 20px;
 }
 
 .section-head h3 {
@@ -177,7 +177,7 @@ button.service-button:focus {
 	font-weight: 300 !important;
 	line-height: 200%;
 	color:white;
-	margin-top: -200px;
+	margin-top: -250px;
 	margin-bottom: 10px;
 }
 

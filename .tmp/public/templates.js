@@ -269,7 +269,7 @@ angular.module("contact/index.tpl.html", []).run(["$templateCache", function($te
     "<div class=\"surface-container home-pad\">\n" +
     "    <div class=\"title-surface-container\">\n" +
     "        <div class=\"contact-title-home\">\n" +
-    "            <p>Contact Us</p>\n" +
+    "            <p style=\"color: #1db996 !important;\">Contact Us</p>\n" +
     "            <hr>\n" +
     "        </div>\n" +
     "        <br>\n" +
@@ -709,7 +709,7 @@ angular.module("home/index.tpl.html", []).run(["$templateCache", function($templ
     "                </a>\n" +
     "            </svg>\n" +
     "            <video id=\"video\" autoplay=\"autoplay\" muted=\"muted\" preload=\"auto\" loop=\"loop\">\n" +
-    "                <source src=\"http://mazwai.com/system/posts/videos/000/000/161/preview_mp4_3/leonard_soosay--missfit.mp4?1424004876\" type=\"video/webm\">\n" +
+    "                <source src=\"https://youtu.be/xMnQSNVvI_g\" type=\"video/mp4\">\n" +
     "                <object data=\"flvplayer.swf\" type=\"application/x-shockwave-flash\">\n" +
     "                    <param value=\"flvplayer.swf\" name=\"movie\"/>\n" +
     "                </object>\n" +
@@ -744,7 +744,7 @@ angular.module("home/index.tpl.html", []).run(["$templateCache", function($templ
     "                                </div>\n" +
     "                            </div>\n" +
     "                        </div>\n" +
-    "                        <div class=\"col-md-4\">\n" +
+    "                        <div class=\"col-md-4 flex\">\n" +
     "                            <div class=\"tri-wrap\">\n" +
     "                                <svg version=\"1.1\" id=\"Layer_1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\" width=\"144px\" height=\"144px\" viewBox=\"0 0 144 144\" enable-background=\"new 0 0 144 144\" xml:space=\"preserve\">\n" +
     "                                    <polygon fill=\"none\" stroke=\"#14B795\" stroke-width=\"5\" stroke-miterlimit=\"10\" points=\"137.053,128.152 6.946,128.152,71.999,15.479 \"></polygon>\n" +
@@ -761,7 +761,7 @@ angular.module("home/index.tpl.html", []).run(["$templateCache", function($templ
     "                                </div>\n" +
     "                            </div>\n" +
     "                        </div>\n" +
-    "                        <div class=\"col-md-4\">\n" +
+    "                        <div class=\"col-md-4 flex\">\n" +
     "                            <div class=\"tri-wrap\">\n" +
     "                                <svg version=\"1.1\" id=\"Layer_1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\" width=\"144px\" height=\"144px\" viewBox=\"0 0 144 144\" enable-background=\"new 0 0 144 144\" xml:space=\"preserve\">\n" +
     "                                    <polygon fill=\"none\" stroke=\"#14B795\" stroke-width=\"5\" stroke-miterlimit=\"10\" points=\"6.946,15.479 137.053,15.479 72,128.151 \"></polygon>\n" +
