@@ -115,7 +115,7 @@ button.service-button:focus {
 	width:100%;
 	background:url(/images/texture-bg.png) repeat;
 	height: 85vh;
-	min-height: 400px;
+	min-height: 750px;
 	border-top: 3px solid #2ab996;
 	position: relative;
 	z-index: 2;
@@ -220,7 +220,7 @@ button.service-button:focus {
 .portfolio-home-container {
     cursor: default;
     height: 30vh;
-    min-height: 30vh;
+    min-height: 250px;
 }
 
 .portfolio-home {
