@@ -678,7 +678,7 @@ angular.module("home/index.tpl.html", []).run(["$templateCache", function($templ
     "                        <text x=\"960\" y=\"49%\" class=\"medium-text mobile\">with NOVO</text>\n" +
     "                        <text x=\"960\" y=\"51%\" class=\"small-text mantra\">a full-scale online marketing, design, and web development firm</text>\n" +
     "                        <text x=\"960\" y=\"67.5%\" class=\"small-text learn-more\">learn more</text>\n" +
-    "                        <a href=\"#more\">\n" +
+    "                        <a href=\"#about\">\n" +
     "                            <svg class=\"tri-before\" version=\"1.1\" id=\"Layer_1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"883px\" y=\"68%\" width=\"150px\" height=\"150px\" viewBox=\"0 0 723 626\" enable-background=\"new 0 0 723 626\" xml:space=\"preserve\">\n" +
     "                                <g>\n" +
     "                                  <path fill=\"#232322\" d=\"M0,0h723v1.58c-3.72,4.37-5.58,9.96-8.89,14.62C596.69,219.439,479.44,422.79,361.96,626h-0.6\n" +
@@ -709,14 +709,14 @@ angular.module("home/index.tpl.html", []).run(["$templateCache", function($templ
     "                </a>\n" +
     "            </svg>\n" +
     "\n" +
-    "            \n" +
+    "\n" +
     "            <video id=\"video\" autoplay=\"autoplay\" muted=\"muted\" preload=\"auto\" loop=\"loop\">\n" +
     "                <source src=\"https://media.8ch.net/webm/src/1422686418973.webm\" type=\"video/webm\">\n" +
     "            </video>\n" +
     "            <img class=\"intro-img\" id=\"image\" src=\"http://36.media.tumblr.com/318b26ada390554e3940e1907c0e6d0f/tumblr_no0pwu8TmB1uuhx17o1_1280.jpg\">\n" +
     "        </div>\n" +
     "\n" +
-    "        <div class=\"services\" id=\"more\">\n" +
+    "        <div class=\"services\" id=\"about\">\n" +
     "            <div class=\"section-head\">\n" +
     "                <h3>our services</h3>\n" +
     "                <!-- maybe \"what we do\"? idk -->\n" +
