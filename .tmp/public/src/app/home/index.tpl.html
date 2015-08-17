@@ -1,283 +1,233 @@
 <div class="surface-container-home">
-    <div class="home-pad">
-        <div class="intro-container">
-            <svg class="intro" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920px" height="1080px" preserveAspectRatio="xMidYMid slice">
-                <defs>
-                    <mask class="intro-mask" id="intro-mask" x="0" y="0" width="100%" height="100%">
-                        <rect class="intro-rect" x="0" y="0" width="1920px" height="1080px"></rect>
-                        <text x="960" y="27%" class="large-text">welcome</text>
-                        <text x="960" y="46%" class="medium-text desktop">embrace change with NOVO</text>
-                        <text x="960" y="44%" class="medium-text mobile">embrace change</text>
-                        <text x="960" y="49%" class="medium-text mobile">with NOVO</text>
-                        <text x="960" y="51%" class="small-text mantra">a full-scale online marketing, design, and web development firm</text>
-                        <text x="960" y="67.5%" class="small-text learn-more">learn more</text>
-                        <a href="#about" du-smooth-scroll>
-                            <svg class="tri-before" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="883px" y="68%" width="150px" height="150px" viewBox="0 0 723 626" enable-background="new 0 0 723 626" xml:space="preserve">
-                                <g>
-                                  <path fill="#232322" d="M0,0h723v1.58c-3.72,4.37-5.58,9.96-8.89,14.62C596.69,219.439,479.44,422.79,361.96,626h-0.6
-                                    C243.45,421.77,125.54,217.55,7.63,13.32C5.09,9.061,2.85,4.62,0,0.55V0z"></path>
-                                  <path fill="#FFFFFF" d="M86.57,48.002c183.289,0.01,366.569-0.02,549.859,0.02c-40.779,70.681-81.6,141.33-122.39,212.01
-                                    c-7.36,12.841-14.91,25.58-22.11,38.521l-0.229-0.01c-86.79-0.09-173.59-0.06-260.38-0.011h-0.211
-                                    c-20.239-35.569-40.899-70.899-61.289-106.379C142.061,144.111,114.359,96.031,86.57,48.002z"></path>
-                                  <path fill="#21B795" d="M231.311,298.599c86.79-0.049,173.59-0.079,260.38,0.011c-19.42,34.3-39.36,68.31-59,102.479
-                                    c-23.71,41.091-47.44,82.16-71.15,123.25c-20.92-36.039-41.68-72.17-62.55-108.229C276.48,376.909,253.65,337.89,231.311,298.599z"></path>
-                                </g>
+    <div ng-include="'intro/home/index.tpl.html'"></div>
+    <div class="services" id="about">
+        <div class="section-head">
+            <h3>our services</h3>
+            <!-- maybe "what we do"? idk -->
+            <hr>
+        </div>
+
+        <div class="services-list">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="col-md-4 flex">
+                        <div class="tri-wrap">
+                            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="144px" height="144px" viewBox="0 0 144 144" enable-background="new 0 0 144 144" xml:space="preserve">
+                                <polygon fill="none" stroke="#14B795" stroke-width="5" stroke-miterlimit="10" points="6.946,15.479 137.053,15.479 72,128.151 "></polygon>
                             </svg>
-                        </a>
+                            <div class="service-title">
+                                <a href="/about#design-div/">
+                                    <h2 class="service-title-bar">design</h2>
+                                </a>
+                            </div>
+                            <div class="service-des">
+                                <p>graphics & animation</p>
+                                <p>company branding</p>
+                                <p>UI/UX design</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 flex">
+                        <div class="tri-wrap">
+                            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="144px" height="144px" viewBox="0 0 144 144" enable-background="new 0 0 144 144" xml:space="preserve">
+                                <polygon fill="none" stroke="#14B795" stroke-width="5" stroke-miterlimit="10" points="137.053,128.152 6.946,128.152,71.999,15.479 "></polygon>
+                            </svg>
+                            <div class="service-title">
+                                <a href="/about#dev-div/">
+                                    <h2 class="service-title-bar">development</h2>
+                                </a>
+                            </div>
+                            <div class="service-des">
+                                <p>mobile-first design</p>
+                                <p>SEO</p>
+                                <p>back-end integration</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 flex">
+                        <div class="tri-wrap">
+                            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="144px" height="144px" viewBox="0 0 144 144" enable-background="new 0 0 144 144" xml:space="preserve">
+                                <polygon fill="none" stroke="#14B795" stroke-width="5" stroke-miterlimit="10" points="6.946,15.479 137.053,15.479 72,128.151 "></polygon>
+                            </svg>
+                            <div class="service-title">
+                                <a href="/about#marketing-div/">
+                                    <h2 class="service-title-bar">marketing</h2>
+                                </a>
+                            </div>
+                            <div class="service-des">
+                                <p>social media management</p>
+                                <p>email marketing</p>
+                                <p>content creation</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a href="/about/"><button class="mainbutton service-button" style="margin-top: 7.5%;">More Info...</button></a>
+            </div>
+            <!--<div class="services-list">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="col-md-4">
+                        <i class="fa fa-paint-brush fa-5x"></i>
+                        <div class="service-title">
+                            <h2>Design</h2>
+                        </div>
+                        <hr>
+                        <div class="service-des">
+                            <p>Graphics & Animation</p>
+                            <p>Custom Interface Design</p>
+                            <p>Company Branding</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <i class="fa fa-code fa-5x"></i>
+                        <div class="service-title">
+                            <h2>Development</h2>
+                        </div>
+                        <hr>
+                        <div class="service-des">
+                            <p>Mobile-first Web Design</p>
+                            <p>SEO Structuring</p>
+                            <p>Back-end Software Integration</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <i class="fa fa-users fa-5x"></i>
+                        <div class="service-title">
+                            <h2>Marketing</h2>
+                        </div>
+                        <hr>
+                        <div class="service-des">
+                            <p>Social Media Management</p>
+                            <p>Outreach Email Marketing</p>
+                            <p>Content Creation</p>
+                        </div>
+                    </div>
+                </div>
+            </div>-->
+        </div>
+    </div>
+
+    <div class="portfolio-home-container">
+        <a href="/portfolio/">
+            <svg class="portfolio-home" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 400" width="1920px" height="400px" preserveAspectRatio="xMidYMid slice">
+                <defs>
+                    <mask class="portfolio-mask" id="portfolio-mask" x="0" y="0" width="1920px" height="400px">
+                        <rect class="portfolio-rect" x="0" y="0" width="1920px" height="400px"></rect>
+                        <text x="960" y="60%" class="large-medium-text">our portfolio</text>
                     </mask>
                 </defs>
-                <rect class="intro-rect" x="0" y="0" width="1920px" height="1080px"></rect>
-                <a href="#about" class="hvr-bob" du-smooth-scroll>
-                    <svg class="tri-after" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="883px" y="68%" width="150px" height="150px" viewBox="0 0 723 626" enable-background="new 0 0 723 626" xml:space="preserve">
-                        <g>
-                          <path fill="#232322" d="M0,0h723v1.58c-3.72,4.37-5.58,9.96-8.89,14.62C596.69,219.439,479.44,422.79,361.96,626h-0.6
-                            C243.45,421.77,125.54,217.55,7.63,13.32C5.09,9.061,2.85,4.62,0,0.55V0z"></path>
-                          <path fill="#FFFFFF" d="M86.57,48.002c183.289,0.01,366.569-0.02,549.859,0.02c-40.779,70.681-81.6,141.33-122.39,212.01
-                            c-7.36,12.841-14.91,25.58-22.11,38.521l-0.229-0.01c-86.79-0.09-173.59-0.06-260.38-0.011h-0.211
-                            c-20.239-35.569-40.899-70.899-61.289-106.379C142.061,144.111,114.359,96.031,86.57,48.002z"></path>
-                          <path fill="#21B795" d="M231.311,298.599c86.79-0.049,173.59-0.079,260.38,0.011c-19.42,34.3-39.36,68.31-59,102.479
-                            c-23.71,41.091-47.44,82.16-71.15,123.25c-20.92-36.039-41.68-72.17-62.55-108.229C276.48,376.909,253.65,337.89,231.311,298.599z"></path>
-                        </g>
-                    </svg>
-                </a>
+                <rect class="portfolio-rect" x="0" y="0" width="1920px" height="400px"></rect>
             </svg>
+        </a>
+    </div>
 
-
-            <video id="video" autoplay="autoplay" muted="muted" preload="auto" loop="loop">
-                <source src="/videos/drawing.mp4" type="video/webm">
-            </video>
-            <img class="intro-img" id="image" src="http://36.media.tumblr.com/318b26ada390554e3940e1907c0e6d0f/tumblr_no0pwu8TmB1uuhx17o1_1280.jpg">
-        </div>
-
-        <div class="services" id="about">
-            <div class="section-head">
-                <h3>our services</h3>
-                <!-- maybe "what we do"? idk -->
-                <hr>
-            </div>
-
-            <div class="services-list">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="col-md-4 flex">
-                            <div class="tri-wrap">
-                                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="144px" height="144px" viewBox="0 0 144 144" enable-background="new 0 0 144 144" xml:space="preserve">
-                                    <polygon fill="none" stroke="#14B795" stroke-width="5" stroke-miterlimit="10" points="6.946,15.479 137.053,15.479 72,128.151 "></polygon>
-                                </svg>
-                                <div class="service-title">
-                                    <a href="/about#design-div/">
-                                        <h2 class="service-title-bar">design</h2>
-                                    </a>
-                                </div>
-                                <div class="service-des">
-                                    <p>graphics & animation</p>
-                                    <p>company branding</p>
-                                    <p>UI/UX design</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4 flex">
-                            <div class="tri-wrap">
-                                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="144px" height="144px" viewBox="0 0 144 144" enable-background="new 0 0 144 144" xml:space="preserve">
-                                    <polygon fill="none" stroke="#14B795" stroke-width="5" stroke-miterlimit="10" points="137.053,128.152 6.946,128.152,71.999,15.479 "></polygon>
-                                </svg>
-                                <div class="service-title">
-                                    <a href="/about#dev-div/">
-                                        <h2 class="service-title-bar">development</h2>
-                                    </a>
-                                </div>
-                                <div class="service-des">
-                                    <p>mobile-first design</p>
-                                    <p>SEO</p>
-                                    <p>back-end integration</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4 flex">
-                            <div class="tri-wrap">
-                                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="144px" height="144px" viewBox="0 0 144 144" enable-background="new 0 0 144 144" xml:space="preserve">
-                                    <polygon fill="none" stroke="#14B795" stroke-width="5" stroke-miterlimit="10" points="6.946,15.479 137.053,15.479 72,128.151 "></polygon>
-                                </svg>
-                                <div class="service-title">
-                                    <a href="/about#marketing-div/">
-                                        <h2 class="service-title-bar">marketing</h2>
-                                    </a>
-                                </div>
-                                <div class="service-des">
-                                    <p>social media management</p>
-                                    <p>email marketing</p>
-                                    <p>content creation</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <a href="/about/"><button class="mainbutton service-button" style="margin-top: 7.5%;">More Info...</button></a>
-                </div>
-                <!--<div class="services-list">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="col-md-4">
-                            <i class="fa fa-paint-brush fa-5x"></i>
-                            <div class="service-title">
-                                <h2>Design</h2>
-                            </div>
-                            <hr>
-                            <div class="service-des">
-                                <p>Graphics & Animation</p>
-                                <p>Custom Interface Design</p>
-                                <p>Company Branding</p>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <i class="fa fa-code fa-5x"></i>
-                            <div class="service-title">
-                                <h2>Development</h2>
-                            </div>
-                            <hr>
-                            <div class="service-des">
-                                <p>Mobile-first Web Design</p>
-                                <p>SEO Structuring</p>
-                                <p>Back-end Software Integration</p>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <i class="fa fa-users fa-5x"></i>
-                            <div class="service-title">
-                                <h2>Marketing</h2>
-                            </div>
-                            <hr>
-                            <div class="service-des">
-                                <p>Social Media Management</p>
-                                <p>Outreach Email Marketing</p>
-                                <p>Content Creation</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>-->
-            </div>
-        </div>
-
-        <div class="portfolio-home-container">
-            <a href="/portfolio/">
-                <svg class="portfolio-home" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 400" width="1920px" height="400px" preserveAspectRatio="xMidYMid slice">
-                    <defs>
-                        <mask class="portfolio-mask" id="portfolio-mask" x="0" y="0" width="1920px" height="400px">
-                            <rect class="portfolio-rect" x="0" y="0" width="1920px" height="400px"></rect>
-                            <text x="960" y="60%" class="large-medium-text">our portfolio</text>
-                        </mask>
-                    </defs>
-                    <rect class="portfolio-rect" x="0" y="0" width="1920px" height="400px"></rect>
-                </svg>
-            </a>
-        </div>
-
-        <div class="contact-container">
-            <div class="contact-title-home">Get In Touch
-                <hr>
+    <div class="contact-container">
+        <div class="contact-title-home">Get In Touch
+            <hr>
+            <br>
+            <div class="message-home">
+                <div class="interested-home">Interested in working with NOVO?</div>
                 <br>
-                <div class="message-home">
-                    <div class="interested-home">Interested in working with NOVO?</div>
-                    <br>
-                    <div class="contact-us-home">email us at
-                        <a href="mailto:info@projectnovo.co" style="color: #1db996;">info@projectnovo.co</a></div> or <div class="contact-us-home">call us at one of our <span style="color: #1db996; font-weight: 500;">four</span> locations!</div>
-                </div>
-                <div class="row">
-                    <div class="col-md-12 center" style="margin-bottom: -100px;">
-                        <div class="col-md-3 office-home">
-                            <div class="hovereffect">
-                                <img class="img-responsive" src="/images/contact/raleigh-nc.jpg" alt="">
-                                <div class="overlay">
-                                    <br>
-                                    <br>
-                                    <br>
-                                    <h2><span class="contact-city">Raleigh, NC</span></h2>
-                                    <p>
-                                        <a href="tel:+18656797229">865.679.7229</a>
-                                    </p>
-                                </div>
+                <div class="contact-us-home">email us at
+                    <a href="mailto:info@projectnovo.co" style="color: #1db996;">info@projectnovo.co</a></div> or <div class="contact-us-home">call us at one of our <span style="color: #1db996; font-weight: 500;">four</span> locations!</div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 center" style="margin-bottom: -100px;">
+                    <div class="col-md-3 office-home">
+                        <div class="hovereffect">
+                            <img class="img-responsive" src="/images/contact/raleigh-nc.jpg" alt="">
+                            <div class="overlay">
+                                <br>
+                                <br>
+                                <br>
+                                <h2><span class="contact-city">Raleigh, NC</span></h2>
+                                <p>
+                                    <a href="tel:+18656797229">865.679.7229</a>
+                                </p>
                             </div>
                         </div>
-                        <div class="col-md-3 office-home">
-                            <div class="hovereffect">
-                                <img class="img-responsive" src="/images/contact/evanston.jpg" alt="">
-                                <div class="overlay">
-                                    <br>
-                                    <br>
-                                    <br>
-                                    <h2><span class="contact-city">Chicago, IL</span></h2>
-                                    <p>
-                                        <a href="tel:+18653876121">865.387.6121</a>
-                                    </p>
-                                </div>
+                    </div>
+                    <div class="col-md-3 office-home">
+                        <div class="hovereffect">
+                            <img class="img-responsive" src="/images/contact/evanston.jpg" alt="">
+                            <div class="overlay">
+                                <br>
+                                <br>
+                                <br>
+                                <h2><span class="contact-city">Chicago, IL</span></h2>
+                                <p>
+                                    <a href="tel:+18653876121">865.387.6121</a>
+                                </p>
                             </div>
                         </div>
-                        <div class="col-md-3 office-home">
-                            <div class="hovereffect">
-                                <img class="img-responsive" src="/images/contact/knoxville.jpg" alt="">
-                                <div class="overlay">
-                                    <br>
-                                    <br>
-                                    <br>
-                                    <h2><span class="contact-city">Knoxville, TN</span></h2>
-                                    <p>
-                                        <a href="tel:+18656969382">865.696.9382</a>
-                                    </p>
-                                </div>
+                    </div>
+                    <div class="col-md-3 office-home">
+                        <div class="hovereffect">
+                            <img class="img-responsive" src="/images/contact/knoxville.jpg" alt="">
+                            <div class="overlay">
+                                <br>
+                                <br>
+                                <br>
+                                <h2><span class="contact-city">Knoxville, TN</span></h2>
+                                <p>
+                                    <a href="tel:+18656969382">865.696.9382</a>
+                                </p>
                             </div>
                         </div>
-                        <div class="col-md-3 office-home">
-                            <div class="hovereffect">
-                                <img class="img-responsive" src="/images/contact/philly.jpg" alt="">
-                                <div class="overlay">
-                                    <br>
-                                    <br>
-                                    <br>
-                                    <h2><span class="contact-city">Philadelphia, PA</span></h2>
-                                    <p>
-                                        <a href="tel:+13365800855">336.580.0855</a>
-                                    </p>
-                                </div>
+                    </div>
+                    <div class="col-md-3 office-home">
+                        <div class="hovereffect">
+                            <img class="img-responsive" src="/images/contact/philly.jpg" alt="">
+                            <div class="overlay">
+                                <br>
+                                <br>
+                                <br>
+                                <h2><span class="contact-city">Philadelphia, PA</span></h2>
+                                <p>
+                                    <a href="tel:+13365800855">336.580.0855</a>
+                                </p>
                             </div>
                         </div>
                     </div>
                 </div>
-                <br>
-                <br>
-                <br>
+            </div>
+            <br>
+            <br>
+            <br>
+        </div>
+    </div>
+
+    <div class="newsletter-home-container">
+        <svg class="newsletter-home" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 400" width="1920px" height="500px" preserveAspectRatio="xMidYMid slice">
+            <defs>
+                <mask class="newsletter-mask" id="newsletter-mask" x="0" y="0" width="1920px" height="500px">
+                    <rect class="newsletter-rect" x="0" y="0" width="1920px" height="500px"></rect>
+                    <text x="960" y="30%" class="medium-text">sign up for our newsletter</text>
+                    <!-- I feel like we could say something a little better here. Let's do some research into this -->
+                </mask>
+             </defs>
+             <rect class="newsletter-rect" x="0" y="0" width="1920px" height="500px"></rect>
+        </svg>
+        <div class="contact" id="contact">
+            <div class="contact-section">
+                <form class="ctr" action="//projectnovo.us11.list-manage.com/subscribe/post?u=a56f7f3f876fa9db4c36328af&amp;id=ff3d3ae826" method="post">
+                    <div class="loader"></div>
+                    <input type="email" name="EMAIL" required>
+                    <div class="indicator" data-content="Type Your Email Address"></div>
+                </form>
+            </div>
+
+            <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+            <div class="display-none">
+                <div style="position: absolute; left: -5000px;"><input type="text" name="b_a56f7f3f876fa9db4c36328af_ff3d3ae826" tabindex="-1" value=""></div>
+                <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
             </div>
         </div>
+    </div>
 
-        <div class="newsletter-home-container">
-            <svg class="newsletter-home" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 400" width="1920px" height="500px" preserveAspectRatio="xMidYMid slice">
-                <defs>
-                    <mask class="newsletter-mask" id="newsletter-mask" x="0" y="0" width="1920px" height="500px">
-                        <rect class="newsletter-rect" x="0" y="0" width="1920px" height="500px"></rect>
-                        <text x="960" y="30%" class="medium-text">sign up for our newsletter</text>
-                        <!-- I feel like we could say something a little better here. Let's do some research into this -->
-                    </mask>
-                 </defs>
-                 <rect class="newsletter-rect" x="0" y="0" width="1920px" height="500px"></rect>
-            </svg>
-            <div class="contact" id="contact">
-                <div class="contact-section">
-                    <form class="ctr" action="//projectnovo.us11.list-manage.com/subscribe/post?u=a56f7f3f876fa9db4c36328af&amp;id=ff3d3ae826" method="post">
-                        <div class="loader"></div>
-                        <input type="email" name="EMAIL" required>
-                        <div class="indicator" data-content="Type Your Email Address"></div>
-                    </form>
-                </div>
-
-                <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-                <div class="display-none">
-                    <div style="position: absolute; left: -5000px;"><input type="text" name="b_a56f7f3f876fa9db4c36328af_ff3d3ae826" tabindex="-1" value=""></div>
-                    <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
-                </div>
-            </div>
-        </div>
-
-        <div class="footer">
-            <div class="footer-text">© 2015 NOVO, LLC.</div>
-        </div>
+    <div class="footer">
+        <div class="footer-text">© 2015 NOVO, LLC.</div>
     </div>
 </div>
 

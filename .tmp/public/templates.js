@@ -436,285 +436,235 @@ angular.module("contact/index.tpl.html", []).run(["$templateCache", function($te
 angular.module("home/index.tpl.html", []).run(["$templateCache", function($templateCache) {
   $templateCache.put("home/index.tpl.html",
     "<div class=\"surface-container-home\">\n" +
-    "    <div class=\"home-pad\">\n" +
-    "        <div class=\"intro-container\">\n" +
-    "            <svg class=\"intro\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 1920 1080\" width=\"1920px\" height=\"1080px\" preserveAspectRatio=\"xMidYMid slice\">\n" +
-    "                <defs>\n" +
-    "                    <mask class=\"intro-mask\" id=\"intro-mask\" x=\"0\" y=\"0\" width=\"100%\" height=\"100%\">\n" +
-    "                        <rect class=\"intro-rect\" x=\"0\" y=\"0\" width=\"1920px\" height=\"1080px\"></rect>\n" +
-    "                        <text x=\"960\" y=\"27%\" class=\"large-text\">welcome</text>\n" +
-    "                        <text x=\"960\" y=\"46%\" class=\"medium-text desktop\">embrace change with NOVO</text>\n" +
-    "                        <text x=\"960\" y=\"44%\" class=\"medium-text mobile\">embrace change</text>\n" +
-    "                        <text x=\"960\" y=\"49%\" class=\"medium-text mobile\">with NOVO</text>\n" +
-    "                        <text x=\"960\" y=\"51%\" class=\"small-text mantra\">a full-scale online marketing, design, and web development firm</text>\n" +
-    "                        <text x=\"960\" y=\"67.5%\" class=\"small-text learn-more\">learn more</text>\n" +
-    "                        <a href=\"#about\" du-smooth-scroll>\n" +
-    "                            <svg class=\"tri-before\" version=\"1.1\" id=\"Layer_1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"883px\" y=\"68%\" width=\"150px\" height=\"150px\" viewBox=\"0 0 723 626\" enable-background=\"new 0 0 723 626\" xml:space=\"preserve\">\n" +
-    "                                <g>\n" +
-    "                                  <path fill=\"#232322\" d=\"M0,0h723v1.58c-3.72,4.37-5.58,9.96-8.89,14.62C596.69,219.439,479.44,422.79,361.96,626h-0.6\n" +
-    "                                    C243.45,421.77,125.54,217.55,7.63,13.32C5.09,9.061,2.85,4.62,0,0.55V0z\"></path>\n" +
-    "                                  <path fill=\"#FFFFFF\" d=\"M86.57,48.002c183.289,0.01,366.569-0.02,549.859,0.02c-40.779,70.681-81.6,141.33-122.39,212.01\n" +
-    "                                    c-7.36,12.841-14.91,25.58-22.11,38.521l-0.229-0.01c-86.79-0.09-173.59-0.06-260.38-0.011h-0.211\n" +
-    "                                    c-20.239-35.569-40.899-70.899-61.289-106.379C142.061,144.111,114.359,96.031,86.57,48.002z\"></path>\n" +
-    "                                  <path fill=\"#21B795\" d=\"M231.311,298.599c86.79-0.049,173.59-0.079,260.38,0.011c-19.42,34.3-39.36,68.31-59,102.479\n" +
-    "                                    c-23.71,41.091-47.44,82.16-71.15,123.25c-20.92-36.039-41.68-72.17-62.55-108.229C276.48,376.909,253.65,337.89,231.311,298.599z\"></path>\n" +
-    "                                </g>\n" +
+    "    <div ng-include=\"'intro/home/index.tpl.html'\"></div>\n" +
+    "    <div class=\"services\" id=\"about\">\n" +
+    "        <div class=\"section-head\">\n" +
+    "            <h3>our services</h3>\n" +
+    "            <!-- maybe \"what we do\"? idk -->\n" +
+    "            <hr>\n" +
+    "        </div>\n" +
+    "\n" +
+    "        <div class=\"services-list\">\n" +
+    "            <div class=\"row\">\n" +
+    "                <div class=\"col-md-12\">\n" +
+    "                    <div class=\"col-md-4 flex\">\n" +
+    "                        <div class=\"tri-wrap\">\n" +
+    "                            <svg version=\"1.1\" id=\"Layer_1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\" width=\"144px\" height=\"144px\" viewBox=\"0 0 144 144\" enable-background=\"new 0 0 144 144\" xml:space=\"preserve\">\n" +
+    "                                <polygon fill=\"none\" stroke=\"#14B795\" stroke-width=\"5\" stroke-miterlimit=\"10\" points=\"6.946,15.479 137.053,15.479 72,128.151 \"></polygon>\n" +
     "                            </svg>\n" +
-    "                        </a>\n" +
+    "                            <div class=\"service-title\">\n" +
+    "                                <a href=\"/about#design-div/\">\n" +
+    "                                    <h2 class=\"service-title-bar\">design</h2>\n" +
+    "                                </a>\n" +
+    "                            </div>\n" +
+    "                            <div class=\"service-des\">\n" +
+    "                                <p>graphics & animation</p>\n" +
+    "                                <p>company branding</p>\n" +
+    "                                <p>UI/UX design</p>\n" +
+    "                            </div>\n" +
+    "                        </div>\n" +
+    "                    </div>\n" +
+    "                    <div class=\"col-md-4 flex\">\n" +
+    "                        <div class=\"tri-wrap\">\n" +
+    "                            <svg version=\"1.1\" id=\"Layer_1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\" width=\"144px\" height=\"144px\" viewBox=\"0 0 144 144\" enable-background=\"new 0 0 144 144\" xml:space=\"preserve\">\n" +
+    "                                <polygon fill=\"none\" stroke=\"#14B795\" stroke-width=\"5\" stroke-miterlimit=\"10\" points=\"137.053,128.152 6.946,128.152,71.999,15.479 \"></polygon>\n" +
+    "                            </svg>\n" +
+    "                            <div class=\"service-title\">\n" +
+    "                                <a href=\"/about#dev-div/\">\n" +
+    "                                    <h2 class=\"service-title-bar\">development</h2>\n" +
+    "                                </a>\n" +
+    "                            </div>\n" +
+    "                            <div class=\"service-des\">\n" +
+    "                                <p>mobile-first design</p>\n" +
+    "                                <p>SEO</p>\n" +
+    "                                <p>back-end integration</p>\n" +
+    "                            </div>\n" +
+    "                        </div>\n" +
+    "                    </div>\n" +
+    "                    <div class=\"col-md-4 flex\">\n" +
+    "                        <div class=\"tri-wrap\">\n" +
+    "                            <svg version=\"1.1\" id=\"Layer_1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\" width=\"144px\" height=\"144px\" viewBox=\"0 0 144 144\" enable-background=\"new 0 0 144 144\" xml:space=\"preserve\">\n" +
+    "                                <polygon fill=\"none\" stroke=\"#14B795\" stroke-width=\"5\" stroke-miterlimit=\"10\" points=\"6.946,15.479 137.053,15.479 72,128.151 \"></polygon>\n" +
+    "                            </svg>\n" +
+    "                            <div class=\"service-title\">\n" +
+    "                                <a href=\"/about#marketing-div/\">\n" +
+    "                                    <h2 class=\"service-title-bar\">marketing</h2>\n" +
+    "                                </a>\n" +
+    "                            </div>\n" +
+    "                            <div class=\"service-des\">\n" +
+    "                                <p>social media management</p>\n" +
+    "                                <p>email marketing</p>\n" +
+    "                                <p>content creation</p>\n" +
+    "                            </div>\n" +
+    "                        </div>\n" +
+    "                    </div>\n" +
+    "                </div>\n" +
+    "                <a href=\"/about/\"><button class=\"mainbutton service-button\" style=\"margin-top: 7.5%;\">More Info...</button></a>\n" +
+    "            </div>\n" +
+    "            <!--<div class=\"services-list\">\n" +
+    "            <div class=\"row\">\n" +
+    "                <div class=\"col-md-12\">\n" +
+    "                    <div class=\"col-md-4\">\n" +
+    "                        <i class=\"fa fa-paint-brush fa-5x\"></i>\n" +
+    "                        <div class=\"service-title\">\n" +
+    "                            <h2>Design</h2>\n" +
+    "                        </div>\n" +
+    "                        <hr>\n" +
+    "                        <div class=\"service-des\">\n" +
+    "                            <p>Graphics & Animation</p>\n" +
+    "                            <p>Custom Interface Design</p>\n" +
+    "                            <p>Company Branding</p>\n" +
+    "                        </div>\n" +
+    "                    </div>\n" +
+    "                    <div class=\"col-md-4\">\n" +
+    "                        <i class=\"fa fa-code fa-5x\"></i>\n" +
+    "                        <div class=\"service-title\">\n" +
+    "                            <h2>Development</h2>\n" +
+    "                        </div>\n" +
+    "                        <hr>\n" +
+    "                        <div class=\"service-des\">\n" +
+    "                            <p>Mobile-first Web Design</p>\n" +
+    "                            <p>SEO Structuring</p>\n" +
+    "                            <p>Back-end Software Integration</p>\n" +
+    "                        </div>\n" +
+    "                    </div>\n" +
+    "                    <div class=\"col-md-4\">\n" +
+    "                        <i class=\"fa fa-users fa-5x\"></i>\n" +
+    "                        <div class=\"service-title\">\n" +
+    "                            <h2>Marketing</h2>\n" +
+    "                        </div>\n" +
+    "                        <hr>\n" +
+    "                        <div class=\"service-des\">\n" +
+    "                            <p>Social Media Management</p>\n" +
+    "                            <p>Outreach Email Marketing</p>\n" +
+    "                            <p>Content Creation</p>\n" +
+    "                        </div>\n" +
+    "                    </div>\n" +
+    "                </div>\n" +
+    "            </div>-->\n" +
+    "        </div>\n" +
+    "    </div>\n" +
+    "\n" +
+    "    <div class=\"portfolio-home-container\">\n" +
+    "        <a href=\"/portfolio/\">\n" +
+    "            <svg class=\"portfolio-home\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 1920 400\" width=\"1920px\" height=\"400px\" preserveAspectRatio=\"xMidYMid slice\">\n" +
+    "                <defs>\n" +
+    "                    <mask class=\"portfolio-mask\" id=\"portfolio-mask\" x=\"0\" y=\"0\" width=\"1920px\" height=\"400px\">\n" +
+    "                        <rect class=\"portfolio-rect\" x=\"0\" y=\"0\" width=\"1920px\" height=\"400px\"></rect>\n" +
+    "                        <text x=\"960\" y=\"60%\" class=\"large-medium-text\">our portfolio</text>\n" +
     "                    </mask>\n" +
     "                </defs>\n" +
-    "                <rect class=\"intro-rect\" x=\"0\" y=\"0\" width=\"1920px\" height=\"1080px\"></rect>\n" +
-    "                <a href=\"#about\" class=\"hvr-bob\" du-smooth-scroll>\n" +
-    "                    <svg class=\"tri-after\" version=\"1.1\" id=\"Layer_1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"883px\" y=\"68%\" width=\"150px\" height=\"150px\" viewBox=\"0 0 723 626\" enable-background=\"new 0 0 723 626\" xml:space=\"preserve\">\n" +
-    "                        <g>\n" +
-    "                          <path fill=\"#232322\" d=\"M0,0h723v1.58c-3.72,4.37-5.58,9.96-8.89,14.62C596.69,219.439,479.44,422.79,361.96,626h-0.6\n" +
-    "                            C243.45,421.77,125.54,217.55,7.63,13.32C5.09,9.061,2.85,4.62,0,0.55V0z\"></path>\n" +
-    "                          <path fill=\"#FFFFFF\" d=\"M86.57,48.002c183.289,0.01,366.569-0.02,549.859,0.02c-40.779,70.681-81.6,141.33-122.39,212.01\n" +
-    "                            c-7.36,12.841-14.91,25.58-22.11,38.521l-0.229-0.01c-86.79-0.09-173.59-0.06-260.38-0.011h-0.211\n" +
-    "                            c-20.239-35.569-40.899-70.899-61.289-106.379C142.061,144.111,114.359,96.031,86.57,48.002z\"></path>\n" +
-    "                          <path fill=\"#21B795\" d=\"M231.311,298.599c86.79-0.049,173.59-0.079,260.38,0.011c-19.42,34.3-39.36,68.31-59,102.479\n" +
-    "                            c-23.71,41.091-47.44,82.16-71.15,123.25c-20.92-36.039-41.68-72.17-62.55-108.229C276.48,376.909,253.65,337.89,231.311,298.599z\"></path>\n" +
-    "                        </g>\n" +
-    "                    </svg>\n" +
-    "                </a>\n" +
+    "                <rect class=\"portfolio-rect\" x=\"0\" y=\"0\" width=\"1920px\" height=\"400px\"></rect>\n" +
     "            </svg>\n" +
+    "        </a>\n" +
+    "    </div>\n" +
     "\n" +
-    "\n" +
-    "            <video id=\"video\" autoplay=\"autoplay\" muted=\"muted\" preload=\"auto\" loop=\"loop\">\n" +
-    "                <source src=\"/videos/drawing.mp4\" type=\"video/webm\">\n" +
-    "            </video>\n" +
-    "            <img class=\"intro-img\" id=\"image\" src=\"http://36.media.tumblr.com/318b26ada390554e3940e1907c0e6d0f/tumblr_no0pwu8TmB1uuhx17o1_1280.jpg\">\n" +
-    "        </div>\n" +
-    "\n" +
-    "        <div class=\"services\" id=\"about\">\n" +
-    "            <div class=\"section-head\">\n" +
-    "                <h3>our services</h3>\n" +
-    "                <!-- maybe \"what we do\"? idk -->\n" +
-    "                <hr>\n" +
-    "            </div>\n" +
-    "\n" +
-    "            <div class=\"services-list\">\n" +
-    "                <div class=\"row\">\n" +
-    "                    <div class=\"col-md-12\">\n" +
-    "                        <div class=\"col-md-4 flex\">\n" +
-    "                            <div class=\"tri-wrap\">\n" +
-    "                                <svg version=\"1.1\" id=\"Layer_1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\" width=\"144px\" height=\"144px\" viewBox=\"0 0 144 144\" enable-background=\"new 0 0 144 144\" xml:space=\"preserve\">\n" +
-    "                                    <polygon fill=\"none\" stroke=\"#14B795\" stroke-width=\"5\" stroke-miterlimit=\"10\" points=\"6.946,15.479 137.053,15.479 72,128.151 \"></polygon>\n" +
-    "                                </svg>\n" +
-    "                                <div class=\"service-title\">\n" +
-    "                                    <a href=\"/about#design-div/\">\n" +
-    "                                        <h2 class=\"service-title-bar\">design</h2>\n" +
-    "                                    </a>\n" +
-    "                                </div>\n" +
-    "                                <div class=\"service-des\">\n" +
-    "                                    <p>graphics & animation</p>\n" +
-    "                                    <p>company branding</p>\n" +
-    "                                    <p>UI/UX design</p>\n" +
-    "                                </div>\n" +
-    "                            </div>\n" +
-    "                        </div>\n" +
-    "                        <div class=\"col-md-4 flex\">\n" +
-    "                            <div class=\"tri-wrap\">\n" +
-    "                                <svg version=\"1.1\" id=\"Layer_1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\" width=\"144px\" height=\"144px\" viewBox=\"0 0 144 144\" enable-background=\"new 0 0 144 144\" xml:space=\"preserve\">\n" +
-    "                                    <polygon fill=\"none\" stroke=\"#14B795\" stroke-width=\"5\" stroke-miterlimit=\"10\" points=\"137.053,128.152 6.946,128.152,71.999,15.479 \"></polygon>\n" +
-    "                                </svg>\n" +
-    "                                <div class=\"service-title\">\n" +
-    "                                    <a href=\"/about#dev-div/\">\n" +
-    "                                        <h2 class=\"service-title-bar\">development</h2>\n" +
-    "                                    </a>\n" +
-    "                                </div>\n" +
-    "                                <div class=\"service-des\">\n" +
-    "                                    <p>mobile-first design</p>\n" +
-    "                                    <p>SEO</p>\n" +
-    "                                    <p>back-end integration</p>\n" +
-    "                                </div>\n" +
-    "                            </div>\n" +
-    "                        </div>\n" +
-    "                        <div class=\"col-md-4 flex\">\n" +
-    "                            <div class=\"tri-wrap\">\n" +
-    "                                <svg version=\"1.1\" id=\"Layer_1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\" width=\"144px\" height=\"144px\" viewBox=\"0 0 144 144\" enable-background=\"new 0 0 144 144\" xml:space=\"preserve\">\n" +
-    "                                    <polygon fill=\"none\" stroke=\"#14B795\" stroke-width=\"5\" stroke-miterlimit=\"10\" points=\"6.946,15.479 137.053,15.479 72,128.151 \"></polygon>\n" +
-    "                                </svg>\n" +
-    "                                <div class=\"service-title\">\n" +
-    "                                    <a href=\"/about#marketing-div/\">\n" +
-    "                                        <h2 class=\"service-title-bar\">marketing</h2>\n" +
-    "                                    </a>\n" +
-    "                                </div>\n" +
-    "                                <div class=\"service-des\">\n" +
-    "                                    <p>social media management</p>\n" +
-    "                                    <p>email marketing</p>\n" +
-    "                                    <p>content creation</p>\n" +
-    "                                </div>\n" +
-    "                            </div>\n" +
-    "                        </div>\n" +
-    "                    </div>\n" +
-    "                    <a href=\"/about/\"><button class=\"mainbutton service-button\" style=\"margin-top: 7.5%;\">More Info...</button></a>\n" +
-    "                </div>\n" +
-    "                <!--<div class=\"services-list\">\n" +
-    "                <div class=\"row\">\n" +
-    "                    <div class=\"col-md-12\">\n" +
-    "                        <div class=\"col-md-4\">\n" +
-    "                            <i class=\"fa fa-paint-brush fa-5x\"></i>\n" +
-    "                            <div class=\"service-title\">\n" +
-    "                                <h2>Design</h2>\n" +
-    "                            </div>\n" +
-    "                            <hr>\n" +
-    "                            <div class=\"service-des\">\n" +
-    "                                <p>Graphics & Animation</p>\n" +
-    "                                <p>Custom Interface Design</p>\n" +
-    "                                <p>Company Branding</p>\n" +
-    "                            </div>\n" +
-    "                        </div>\n" +
-    "                        <div class=\"col-md-4\">\n" +
-    "                            <i class=\"fa fa-code fa-5x\"></i>\n" +
-    "                            <div class=\"service-title\">\n" +
-    "                                <h2>Development</h2>\n" +
-    "                            </div>\n" +
-    "                            <hr>\n" +
-    "                            <div class=\"service-des\">\n" +
-    "                                <p>Mobile-first Web Design</p>\n" +
-    "                                <p>SEO Structuring</p>\n" +
-    "                                <p>Back-end Software Integration</p>\n" +
-    "                            </div>\n" +
-    "                        </div>\n" +
-    "                        <div class=\"col-md-4\">\n" +
-    "                            <i class=\"fa fa-users fa-5x\"></i>\n" +
-    "                            <div class=\"service-title\">\n" +
-    "                                <h2>Marketing</h2>\n" +
-    "                            </div>\n" +
-    "                            <hr>\n" +
-    "                            <div class=\"service-des\">\n" +
-    "                                <p>Social Media Management</p>\n" +
-    "                                <p>Outreach Email Marketing</p>\n" +
-    "                                <p>Content Creation</p>\n" +
-    "                            </div>\n" +
-    "                        </div>\n" +
-    "                    </div>\n" +
-    "                </div>-->\n" +
-    "            </div>\n" +
-    "        </div>\n" +
-    "\n" +
-    "        <div class=\"portfolio-home-container\">\n" +
-    "            <a href=\"/portfolio/\">\n" +
-    "                <svg class=\"portfolio-home\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 1920 400\" width=\"1920px\" height=\"400px\" preserveAspectRatio=\"xMidYMid slice\">\n" +
-    "                    <defs>\n" +
-    "                        <mask class=\"portfolio-mask\" id=\"portfolio-mask\" x=\"0\" y=\"0\" width=\"1920px\" height=\"400px\">\n" +
-    "                            <rect class=\"portfolio-rect\" x=\"0\" y=\"0\" width=\"1920px\" height=\"400px\"></rect>\n" +
-    "                            <text x=\"960\" y=\"60%\" class=\"large-medium-text\">our portfolio</text>\n" +
-    "                        </mask>\n" +
-    "                    </defs>\n" +
-    "                    <rect class=\"portfolio-rect\" x=\"0\" y=\"0\" width=\"1920px\" height=\"400px\"></rect>\n" +
-    "                </svg>\n" +
-    "            </a>\n" +
-    "        </div>\n" +
-    "\n" +
-    "        <div class=\"contact-container\">\n" +
-    "            <div class=\"contact-title-home\">Get In Touch\n" +
-    "                <hr>\n" +
+    "    <div class=\"contact-container\">\n" +
+    "        <div class=\"contact-title-home\">Get In Touch\n" +
+    "            <hr>\n" +
+    "            <br>\n" +
+    "            <div class=\"message-home\">\n" +
+    "                <div class=\"interested-home\">Interested in working with NOVO?</div>\n" +
     "                <br>\n" +
-    "                <div class=\"message-home\">\n" +
-    "                    <div class=\"interested-home\">Interested in working with NOVO?</div>\n" +
-    "                    <br>\n" +
-    "                    <div class=\"contact-us-home\">email us at\n" +
-    "                        <a href=\"mailto:info@projectnovo.co\" style=\"color: #1db996;\">info@projectnovo.co</a></div> or <div class=\"contact-us-home\">call us at one of our <span style=\"color: #1db996; font-weight: 500;\">four</span> locations!</div>\n" +
-    "                </div>\n" +
-    "                <div class=\"row\">\n" +
-    "                    <div class=\"col-md-12 center\" style=\"margin-bottom: -100px;\">\n" +
-    "                        <div class=\"col-md-3 office-home\">\n" +
-    "                            <div class=\"hovereffect\">\n" +
-    "                                <img class=\"img-responsive\" src=\"/images/contact/raleigh-nc.jpg\" alt=\"\">\n" +
-    "                                <div class=\"overlay\">\n" +
-    "                                    <br>\n" +
-    "                                    <br>\n" +
-    "                                    <br>\n" +
-    "                                    <h2><span class=\"contact-city\">Raleigh, NC</span></h2>\n" +
-    "                                    <p>\n" +
-    "                                        <a href=\"tel:+18656797229\">865.679.7229</a>\n" +
-    "                                    </p>\n" +
-    "                                </div>\n" +
+    "                <div class=\"contact-us-home\">email us at\n" +
+    "                    <a href=\"mailto:info@projectnovo.co\" style=\"color: #1db996;\">info@projectnovo.co</a></div> or <div class=\"contact-us-home\">call us at one of our <span style=\"color: #1db996; font-weight: 500;\">four</span> locations!</div>\n" +
+    "            </div>\n" +
+    "            <div class=\"row\">\n" +
+    "                <div class=\"col-md-12 center\" style=\"margin-bottom: -100px;\">\n" +
+    "                    <div class=\"col-md-3 office-home\">\n" +
+    "                        <div class=\"hovereffect\">\n" +
+    "                            <img class=\"img-responsive\" src=\"/images/contact/raleigh-nc.jpg\" alt=\"\">\n" +
+    "                            <div class=\"overlay\">\n" +
+    "                                <br>\n" +
+    "                                <br>\n" +
+    "                                <br>\n" +
+    "                                <h2><span class=\"contact-city\">Raleigh, NC</span></h2>\n" +
+    "                                <p>\n" +
+    "                                    <a href=\"tel:+18656797229\">865.679.7229</a>\n" +
+    "                                </p>\n" +
     "                            </div>\n" +
     "                        </div>\n" +
-    "                        <div class=\"col-md-3 office-home\">\n" +
-    "                            <div class=\"hovereffect\">\n" +
-    "                                <img class=\"img-responsive\" src=\"/images/contact/evanston.jpg\" alt=\"\">\n" +
-    "                                <div class=\"overlay\">\n" +
-    "                                    <br>\n" +
-    "                                    <br>\n" +
-    "                                    <br>\n" +
-    "                                    <h2><span class=\"contact-city\">Chicago, IL</span></h2>\n" +
-    "                                    <p>\n" +
-    "                                        <a href=\"tel:+18653876121\">865.387.6121</a>\n" +
-    "                                    </p>\n" +
-    "                                </div>\n" +
+    "                    </div>\n" +
+    "                    <div class=\"col-md-3 office-home\">\n" +
+    "                        <div class=\"hovereffect\">\n" +
+    "                            <img class=\"img-responsive\" src=\"/images/contact/evanston.jpg\" alt=\"\">\n" +
+    "                            <div class=\"overlay\">\n" +
+    "                                <br>\n" +
+    "                                <br>\n" +
+    "                                <br>\n" +
+    "                                <h2><span class=\"contact-city\">Chicago, IL</span></h2>\n" +
+    "                                <p>\n" +
+    "                                    <a href=\"tel:+18653876121\">865.387.6121</a>\n" +
+    "                                </p>\n" +
     "                            </div>\n" +
     "                        </div>\n" +
-    "                        <div class=\"col-md-3 office-home\">\n" +
-    "                            <div class=\"hovereffect\">\n" +
-    "                                <img class=\"img-responsive\" src=\"/images/contact/knoxville.jpg\" alt=\"\">\n" +
-    "                                <div class=\"overlay\">\n" +
-    "                                    <br>\n" +
-    "                                    <br>\n" +
-    "                                    <br>\n" +
-    "                                    <h2><span class=\"contact-city\">Knoxville, TN</span></h2>\n" +
-    "                                    <p>\n" +
-    "                                        <a href=\"tel:+18656969382\">865.696.9382</a>\n" +
-    "                                    </p>\n" +
-    "                                </div>\n" +
+    "                    </div>\n" +
+    "                    <div class=\"col-md-3 office-home\">\n" +
+    "                        <div class=\"hovereffect\">\n" +
+    "                            <img class=\"img-responsive\" src=\"/images/contact/knoxville.jpg\" alt=\"\">\n" +
+    "                            <div class=\"overlay\">\n" +
+    "                                <br>\n" +
+    "                                <br>\n" +
+    "                                <br>\n" +
+    "                                <h2><span class=\"contact-city\">Knoxville, TN</span></h2>\n" +
+    "                                <p>\n" +
+    "                                    <a href=\"tel:+18656969382\">865.696.9382</a>\n" +
+    "                                </p>\n" +
     "                            </div>\n" +
     "                        </div>\n" +
-    "                        <div class=\"col-md-3 office-home\">\n" +
-    "                            <div class=\"hovereffect\">\n" +
-    "                                <img class=\"img-responsive\" src=\"/images/contact/philly.jpg\" alt=\"\">\n" +
-    "                                <div class=\"overlay\">\n" +
-    "                                    <br>\n" +
-    "                                    <br>\n" +
-    "                                    <br>\n" +
-    "                                    <h2><span class=\"contact-city\">Philadelphia, PA</span></h2>\n" +
-    "                                    <p>\n" +
-    "                                        <a href=\"tel:+13365800855\">336.580.0855</a>\n" +
-    "                                    </p>\n" +
-    "                                </div>\n" +
+    "                    </div>\n" +
+    "                    <div class=\"col-md-3 office-home\">\n" +
+    "                        <div class=\"hovereffect\">\n" +
+    "                            <img class=\"img-responsive\" src=\"/images/contact/philly.jpg\" alt=\"\">\n" +
+    "                            <div class=\"overlay\">\n" +
+    "                                <br>\n" +
+    "                                <br>\n" +
+    "                                <br>\n" +
+    "                                <h2><span class=\"contact-city\">Philadelphia, PA</span></h2>\n" +
+    "                                <p>\n" +
+    "                                    <a href=\"tel:+13365800855\">336.580.0855</a>\n" +
+    "                                </p>\n" +
     "                            </div>\n" +
     "                        </div>\n" +
     "                    </div>\n" +
     "                </div>\n" +
-    "                <br>\n" +
-    "                <br>\n" +
-    "                <br>\n" +
+    "            </div>\n" +
+    "            <br>\n" +
+    "            <br>\n" +
+    "            <br>\n" +
+    "        </div>\n" +
+    "    </div>\n" +
+    "\n" +
+    "    <div class=\"newsletter-home-container\">\n" +
+    "        <svg class=\"newsletter-home\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 1920 400\" width=\"1920px\" height=\"500px\" preserveAspectRatio=\"xMidYMid slice\">\n" +
+    "            <defs>\n" +
+    "                <mask class=\"newsletter-mask\" id=\"newsletter-mask\" x=\"0\" y=\"0\" width=\"1920px\" height=\"500px\">\n" +
+    "                    <rect class=\"newsletter-rect\" x=\"0\" y=\"0\" width=\"1920px\" height=\"500px\"></rect>\n" +
+    "                    <text x=\"960\" y=\"30%\" class=\"medium-text\">sign up for our newsletter</text>\n" +
+    "                    <!-- I feel like we could say something a little better here. Let's do some research into this -->\n" +
+    "                </mask>\n" +
+    "             </defs>\n" +
+    "             <rect class=\"newsletter-rect\" x=\"0\" y=\"0\" width=\"1920px\" height=\"500px\"></rect>\n" +
+    "        </svg>\n" +
+    "        <div class=\"contact\" id=\"contact\">\n" +
+    "            <div class=\"contact-section\">\n" +
+    "                <form class=\"ctr\" action=\"//projectnovo.us11.list-manage.com/subscribe/post?u=a56f7f3f876fa9db4c36328af&amp;id=ff3d3ae826\" method=\"post\">\n" +
+    "                    <div class=\"loader\"></div>\n" +
+    "                    <input type=\"email\" name=\"EMAIL\" required>\n" +
+    "                    <div class=\"indicator\" data-content=\"Type Your Email Address\"></div>\n" +
+    "                </form>\n" +
+    "            </div>\n" +
+    "\n" +
+    "            <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->\n" +
+    "            <div class=\"display-none\">\n" +
+    "                <div style=\"position: absolute; left: -5000px;\"><input type=\"text\" name=\"b_a56f7f3f876fa9db4c36328af_ff3d3ae826\" tabindex=\"-1\" value=\"\"></div>\n" +
+    "                <div class=\"clear\"><input type=\"submit\" value=\"Subscribe\" name=\"subscribe\" id=\"mc-embedded-subscribe\" class=\"button\"></div>\n" +
     "            </div>\n" +
     "        </div>\n" +
+    "    </div>\n" +
     "\n" +
-    "        <div class=\"newsletter-home-container\">\n" +
-    "            <svg class=\"newsletter-home\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 1920 400\" width=\"1920px\" height=\"500px\" preserveAspectRatio=\"xMidYMid slice\">\n" +
-    "                <defs>\n" +
-    "                    <mask class=\"newsletter-mask\" id=\"newsletter-mask\" x=\"0\" y=\"0\" width=\"1920px\" height=\"500px\">\n" +
-    "                        <rect class=\"newsletter-rect\" x=\"0\" y=\"0\" width=\"1920px\" height=\"500px\"></rect>\n" +
-    "                        <text x=\"960\" y=\"30%\" class=\"medium-text\">sign up for our newsletter</text>\n" +
-    "                        <!-- I feel like we could say something a little better here. Let's do some research into this -->\n" +
-    "                    </mask>\n" +
-    "                 </defs>\n" +
-    "                 <rect class=\"newsletter-rect\" x=\"0\" y=\"0\" width=\"1920px\" height=\"500px\"></rect>\n" +
-    "            </svg>\n" +
-    "            <div class=\"contact\" id=\"contact\">\n" +
-    "                <div class=\"contact-section\">\n" +
-    "                    <form class=\"ctr\" action=\"//projectnovo.us11.list-manage.com/subscribe/post?u=a56f7f3f876fa9db4c36328af&amp;id=ff3d3ae826\" method=\"post\">\n" +
-    "                        <div class=\"loader\"></div>\n" +
-    "                        <input type=\"email\" name=\"EMAIL\" required>\n" +
-    "                        <div class=\"indicator\" data-content=\"Type Your Email Address\"></div>\n" +
-    "                    </form>\n" +
-    "                </div>\n" +
-    "\n" +
-    "                <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->\n" +
-    "                <div class=\"display-none\">\n" +
-    "                    <div style=\"position: absolute; left: -5000px;\"><input type=\"text\" name=\"b_a56f7f3f876fa9db4c36328af_ff3d3ae826\" tabindex=\"-1\" value=\"\"></div>\n" +
-    "                    <div class=\"clear\"><input type=\"submit\" value=\"Subscribe\" name=\"subscribe\" id=\"mc-embedded-subscribe\" class=\"button\"></div>\n" +
-    "                </div>\n" +
-    "            </div>\n" +
-    "        </div>\n" +
-    "\n" +
-    "        <div class=\"footer\">\n" +
-    "            <div class=\"footer-text\">© 2015 NOVO, LLC.</div>\n" +
-    "        </div>\n" +
+    "    <div class=\"footer\">\n" +
+    "        <div class=\"footer-text\">© 2015 NOVO, LLC.</div>\n" +
     "    </div>\n" +
     "</div>\n" +
     "\n" +
@@ -724,21 +674,19 @@ angular.module("home/index.tpl.html", []).run(["$templateCache", function($templ
 
 angular.module("intro/index.tpl.html", []).run(["$templateCache", function($templateCache) {
   $templateCache.put("intro/index.tpl.html",
-    "<link href='http://fonts.googleapis.com/css?family=Jura:400,300,500|Quicksand:400,300' rel='stylesheet' type='text/css'>\n" +
-    "\n" +
     "<div class=\"intro-container\">\n" +
     "    <svg class=\"intro\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 1920 1080\" width=\"1920px\" height=\"1080px\" preserveAspectRatio=\"xMidYMid slice\">\n" +
     "        <defs>\n" +
-    "            <mask class=\"intro-mask\" id=\"mask\" x=\"0\" y=\"0\" width=\"100%\" height=\"100%\">\n" +
-    "                <rect x=\"0\" y=\"0\" width=\"1920px\" height=\"1080px\"></rect>\n" +
+    "            <mask class=\"intro-mask\" id=\"intro-mask\" x=\"0\" y=\"0\" width=\"100%\" height=\"100%\">\n" +
+    "                <rect class=\"intro-rect\" x=\"0\" y=\"0\" width=\"1920px\" height=\"1080px\"></rect>\n" +
     "                <text x=\"960\" y=\"27%\" class=\"large-text\">welcome</text>\n" +
     "                <text x=\"960\" y=\"46%\" class=\"medium-text desktop\">embrace change with NOVO</text>\n" +
     "                <text x=\"960\" y=\"44%\" class=\"medium-text mobile\">embrace change</text>\n" +
     "                <text x=\"960\" y=\"49%\" class=\"medium-text mobile\">with NOVO</text>\n" +
     "                <text x=\"960\" y=\"51%\" class=\"small-text mantra\">a full-scale online marketing, design, and web development firm</text>\n" +
     "                <text x=\"960\" y=\"67.5%\" class=\"small-text learn-more\">learn more</text>\n" +
-    "                <a href=\"#more\">\n" +
-    "                    <svg class=\"tri-before bounce\" version=\"1.1\" id=\"Layer_1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"883px\" y=\"68%\" width=\"150px\" height=\"150px\" viewBox=\"0 0 723 626\" enable-background=\"new 0 0 723 626\" xml:space=\"preserve\">\n" +
+    "                <a href=\"#about\" du-smooth-scroll>\n" +
+    "                    <svg class=\"tri-before\" version=\"1.1\" id=\"Layer_1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"883px\" y=\"68%\" width=\"150px\" height=\"150px\" viewBox=\"0 0 723 626\" enable-background=\"new 0 0 723 626\" xml:space=\"preserve\">\n" +
     "                        <g>\n" +
     "                          <path fill=\"#232322\" d=\"M0,0h723v1.58c-3.72,4.37-5.58,9.96-8.89,14.62C596.69,219.439,479.44,422.79,361.96,626h-0.6\n" +
     "                            C243.45,421.77,125.54,217.55,7.63,13.32C5.09,9.061,2.85,4.62,0,0.55V0z\"></path>\n" +
@@ -752,8 +700,8 @@ angular.module("intro/index.tpl.html", []).run(["$templateCache", function($temp
     "                </a>\n" +
     "            </mask>\n" +
     "        </defs>\n" +
-    "        <rect x=\"0\" y=\"0\" width=\"1920px\" height=\"1080px\"></rect>\n" +
-    "        <a href=\"#more\">\n" +
+    "        <rect class=\"intro-rect\" x=\"0\" y=\"0\" width=\"1920px\" height=\"1080px\"></rect>\n" +
+    "        <a href=\"#about\" class=\"hvr-bob\" du-smooth-scroll>\n" +
     "            <svg class=\"tri-after\" version=\"1.1\" id=\"Layer_1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"883px\" y=\"68%\" width=\"150px\" height=\"150px\" viewBox=\"0 0 723 626\" enable-background=\"new 0 0 723 626\" xml:space=\"preserve\">\n" +
     "                <g>\n" +
     "                  <path fill=\"#232322\" d=\"M0,0h723v1.58c-3.72,4.37-5.58,9.96-8.89,14.62C596.69,219.439,479.44,422.79,361.96,626h-0.6\n" +
@@ -767,11 +715,10 @@ angular.module("intro/index.tpl.html", []).run(["$templateCache", function($temp
     "            </svg>\n" +
     "        </a>\n" +
     "    </svg>\n" +
+    "\n" +
+    "\n" +
     "    <video id=\"video\" autoplay=\"autoplay\" muted=\"muted\" preload=\"auto\" loop=\"loop\">\n" +
-    "        <source src=\"http://mazwai.com/system/posts/videos/000/000/161/preview_mp4_3/leonard_soosay--missfit.mp4?1424004876\" type=\"video/webm\">\n" +
-    "        <object data=\"flvplayer.swf\" type=\"application/x-shockwave-flash\">\n" +
-    "            <param value=\"flvplayer.swf\" name=\"movie\"/>\n" +
-    "        </object>\n" +
+    "        <source src=\"/videos/drawing.webm\" type=\"video/webm\">\n" +
     "    </video>\n" +
     "    <img class=\"intro-img\" id=\"image\" src=\"http://36.media.tumblr.com/318b26ada390554e3940e1907c0e6d0f/tumblr_no0pwu8TmB1uuhx17o1_1280.jpg\">\n" +
     "</div>");
