@@ -2,6 +2,7 @@ angular.module( 'novo', [
     'ui.router',
     'sails.io',
     'angularMoment',
+    'duScroll',
     'lodash',
     'ui.bootstrap',
     'uiGmapgoogle-maps',
@@ -14,7 +15,7 @@ angular.module( 'novo', [
     'novo.blog',
     'novo.contact',
     'novo.portfolio',
-    'novo.intro'
+    'novo.intro',
     //'novo.blog-post'
 
 ])

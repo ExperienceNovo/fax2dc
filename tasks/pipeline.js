@@ -31,6 +31,8 @@ var jsFilesToInject = [
   'bower_components/moment/moment.js',
   'bower_components/angular-moment/angular-moment.js',
   'bower_components/angular-google-maps/dist/angular-google-maps.js',
+  'bower_components/angular-scroll/angular-scroll.js',
+
 
 
   //
