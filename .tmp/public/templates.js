@@ -481,7 +481,7 @@ angular.module("home/index.tpl.html", []).run(["$templateCache", function($templ
     "\n" +
     "\n" +
     "            <video id=\"video\" autoplay=\"autoplay\" muted=\"muted\" preload=\"auto\" loop=\"loop\">\n" +
-    "                <source src=\"https://media.8ch.net/webm/src/1422686418973.webm\" type=\"video/webm\">\n" +
+    "                <source src=\"/videos/drawing.mp4\" type=\"video/webm\">\n" +
     "            </video>\n" +
     "            <img class=\"intro-img\" id=\"image\" src=\"http://36.media.tumblr.com/318b26ada390554e3940e1907c0e6d0f/tumblr_no0pwu8TmB1uuhx17o1_1280.jpg\">\n" +
     "        </div>\n" +
