@@ -708,11 +708,10 @@ angular.module("home/index.tpl.html", []).run(["$templateCache", function($templ
     "                    </svg>\n" +
     "                </a>\n" +
     "            </svg>\n" +
+    "\n" +
+    "            \n" +
     "            <video id=\"video\" autoplay=\"autoplay\" muted=\"muted\" preload=\"auto\" loop=\"loop\">\n" +
-    "                <source src=\"https://youtu.be/xMnQSNVvI_g\" type=\"video/mp4\">\n" +
-    "                <object data=\"flvplayer.swf\" type=\"application/x-shockwave-flash\">\n" +
-    "                    <param value=\"flvplayer.swf\" name=\"movie\"/>\n" +
-    "                </object>\n" +
+    "                <source src=\"https://media.8ch.net/webm/src/1422686418973.webm\" type=\"video/webm\">\n" +
     "            </video>\n" +
     "            <img class=\"intro-img\" id=\"image\" src=\"http://36.media.tumblr.com/318b26ada390554e3940e1907c0e6d0f/tumblr_no0pwu8TmB1uuhx17o1_1280.jpg\">\n" +
     "        </div>\n" +
@@ -943,26 +942,6 @@ angular.module("home/index.tpl.html", []).run(["$templateCache", function($templ
     "            </div>\n" +
     "        </div>\n" +
     "\n" +
-    "                    <!-- <div class=\"newsletter-section\">\n" +
-    "                         <br>\n" +
-    "                         <span class=\"newsletter-home\">sign up for our monthly newsletter!</span>\n" +
-    "                         <br><br><br><br>\n" +
-    "                         <div class=\"contact\" id=\"contact\">\n" +
-    "                             <div class=\"contact-section\">\n" +
-    "                                 <form class=\"ctr\" action=\"//projectnovo.us11.list-manage.com/subscribe/post?u=a56f7f3f876fa9db4c36328af&amp;id=ff3d3ae826\" method=\"post\">\n" +
-    "                                     <div class=\"loader\"></div>\n" +
-    "                                     <input type=\"email\" name=\"EMAIL\" required>\n" +
-    "                                     <div class=\"indicator\" data-content=\"Type Your Email Address\"></div>\n" +
-    "                                 </form>\n" +
-    "                             </div>\n" +
-    "\n" +
-    "                             <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->\n" +
-    "               <!-- <div class=\"display-none\">\n" +
-    "                    <div style=\"position: absolute; left: -5000px;\"><input type=\"text\" name=\"b_a56f7f3f876fa9db4c36328af_ff3d3ae826\" tabindex=\"-1\" value=\"\"></div>\n" +
-    "                    <div class=\"clear\"><input type=\"submit\" value=\"Subscribe\" name=\"subscribe\" id=\"mc-embedded-subscribe\" class=\"button\"></div>\n" +
-    "                </div>\n" +
-    "            </div>\n" +
-    "        </div>-->\n" +
     "        <div class=\"footer\">\n" +
     "            <div class=\"footer-text\">© 2015 NOVO, LLC.</div>\n" +
     "        </div>\n" +
@@ -970,53 +949,7 @@ angular.module("home/index.tpl.html", []).run(["$templateCache", function($templ
     "</div>\n" +
     "\n" +
     "\n" +
-    "<!--<div id=\"home2\">\n" +
-    "            <div class=\"desc\" align=\"center\">\n" +
-    "                <h3 class=\"portfolio-link\"><a href=\"/portfolio/\">View Our Portolio</a></h3>\n" +
-    "                <!--\n" +
-    "                <h3>Meet The Team</h3>\n" +
-    "                <hr>\n" +
-    "                <div id=\"team\">\n" +
-    "                    <div class=\"row\">\n" +
-    "                        <div class=\"col-md-12\">\n" +
-    "                            <div class=\"col-md-3 team-member\">\n" +
-    "                                <img src=\"/images/team/val.png\" />\n" +
-    "                                <br>\n" +
-    "                                <br>\n" +
-    "                                <div class=\"name\">Valentino</div>\n" +
-    "                                <hr>\n" +
-    "                                <h2>Data</h2>\n" +
-    "                            </div>\n" +
-    "                            <div class=\"col-md-3 team-member\">\n" +
-    "                                <img src=\"/images/team/mikey.png\" />\n" +
-    "                                <br>\n" +
-    "                                <br>\n" +
-    "                                <div class=\"name\">Michael</div>\n" +
-    "                                <hr>\n" +
-    "                                <h2>Design</h2>\n" +
-    "                            </div>\n" +
-    "                            <div class=\"col-md-3 team-member\">\n" +
-    "                                <img src=\"/images/team/trevor.png\" />\n" +
-    "                                <br>\n" +
-    "                                <br>\n" +
-    "                                <div class=\"name\">Trevor</div>\n" +
-    "                                <hr>\n" +
-    "                                <h2>Development</h2>\n" +
-    "                            </div>\n" +
-    "                            <div class=\"col-md-3 team-member\">\n" +
-    "                                <img src=\"/images/team/garrett.png\" />\n" +
-    "                                <br>\n" +
-    "                                <br>\n" +
-    "                                <div class=\"name\">Garrett</div>\n" +
-    "                                <hr>\n" +
-    "                                <h2>Marketing</h2>\n" +
-    "                            </div>\n" +
-    "                        </div>\n" +
-    "                    </div>\n" +
-    "                </div>\n" +
-    "                -->\n" +
-    "<!-- </div>\n" +
-    "</div> -->");
+    "");
 }]);
 
 angular.module("home/index1.tpl.html", []).run(["$templateCache", function($templateCache) {
