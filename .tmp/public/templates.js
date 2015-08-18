@@ -121,7 +121,6 @@ angular.module("about/index.tpl.html", []).run(["$templateCache", function($temp
     "                <a name=\"marketing-anchor\"></a>\n" +
     "            </div>\n" +
     "        </div><!-- end center -->\n" +
-    "        <!--\n" +
     "        <div class=\"center about-bottom-area\">\n" +
     "            <div class=\"title-bottom\">How We Build It\n" +
     "                <hr>\n" +
@@ -139,8 +138,7 @@ angular.module("about/index.tpl.html", []).run(["$templateCache", function($temp
     "                </div>\n" +
     "            </div>\n" +
     "        </div>\n" +
-    "        -->\n" +
-    "\n" +
+    "        \n" +
     "    </div> <!-- end about -->\n" +
     "    <div class=\"footer\">\n" +
     "        <div class=\"footer-text\">© 2015 NOVO, LLC.</div>\n" +
@@ -436,7 +434,7 @@ angular.module("contact/index.tpl.html", []).run(["$templateCache", function($te
 angular.module("home/index.tpl.html", []).run(["$templateCache", function($templateCache) {
   $templateCache.put("home/index.tpl.html",
     "<div class=\"surface-container-home\">\n" +
-    "    <div ng-include=\"'intro/home/index.tpl.html'\"></div>\n" +
+    "    <div ng-include=\"'intro/index.tpl.html'\"></div>\n" +
     "    <div class=\"services\" id=\"about\">\n" +
     "        <div class=\"section-head\">\n" +
     "            <h3>our services</h3>\n" +
