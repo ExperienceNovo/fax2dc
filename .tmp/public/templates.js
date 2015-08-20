@@ -205,44 +205,54 @@ angular.module("about/index.tpl.html", []).run(["$templateCache", function($temp
 
 angular.module("blog-post/index.tpl.html", []).run(["$templateCache", function($templateCache) {
   $templateCache.put("blog-post/index.tpl.html",
-    "<h1>post</h1>\n" +
-    "<h1>post</h1>\n" +
-    "<h1>post</h1>\n" +
-    "<h1>post</h1>\n" +
-    "<h1>post</h1>\n" +
-    "<h1>post</h1>\n" +
-    "<h1>post</h1>\n" +
-    "<h1>post</h1>\n" +
-    "<h1>post</h1>\n" +
-    "<h1>post</h1>\n" +
-    "<h1>post</h1>\n" +
+    "<div ng-controller=\"BlogPostCtrl\">\n" +
     "\n" +
-    "{{stateParams}}");
+    "	<div style=\"height:100px;\"></div>\n" +
+    "	<div id=\"post-title-container\">\n" +
+    "		<h1>{{post_title}}</h1>\n" +
+    "	</div>\n" +
+    "\n" +
+    "	<hr>\n" +
+    "\n" +
+    "	<div id=\"post-content-container\">\n" +
+    "		<p>{{post_content}}</p>\n" +
+    "	</div>\n" +
+    "\n" +
+    "	<!--<div ng-repeat=\"post in posts\">\n" +
+    "		{{post}}<br><br>\n" +
+    "	</div>--> \n" +
+    "\n" +
+    "</div>");
 }]);
 
 angular.module("blog/index.tpl.html", []).run(["$templateCache", function($templateCache) {
   $templateCache.put("blog/index.tpl.html",
     "<!--old content, need to cre8 functionality... that error tho-->\n" +
-    "<!--\n" +
-    "<h1>blog</h1>\n" +
-    "<form role=\"form\" ng-submit=\"createPost(newPost)\">\n" +
-    "  <div class=\"form-group\">\n" +
-    "  <label for=\"PostTitle\">PostTitle</label>\n" +
-    "  <label for=\"PostContent\">PostContent</label>\n" +
-    "    <input type=\"text\" ng-model=\"newPost.title\" class=\"form-control\" id=\"postTitle\">\n" +
-    "    <input type=\"text\" ng-model=\"newPost.post_content\" class=\"form-control\" id=\"postContent\">\n" +
-    "  </div>\n" +
-    "  <button type=\"submit\" class=\"btn btn-primary\">Submit</button>\n" +
-    "</form>\n" +
     "\n" +
-    "<div id=\"post-container\" class=\"col-md-6\">\n" +
-    "  <ul>\n" +
-    "    <li ng-repeat=\"post in posts\">\n" +
-    "      {{post.title}}\n" +
-    "    </li>\n" +
-    "  </ul>\n" +
+    "<!--if logged in-->\n" +
+    "<div ng-show=\"currentUser\">\n" +
+    "\n" +
+    "  <form role=\"form\" ng-submit=\"createPost(newPost)\">\n" +
+    "    <div class=\"form-group\">\n" +
+    "    <label for=\"PostTitle\">PostTitle</label>\n" +
+    "    <label for=\"PostContent\">PostContent</label>\n" +
+    "      <input type=\"text\" ng-model=\"newPost.title\" class=\"form-control\" id=\"postTitle\">\n" +
+    "      <input type=\"text\" ng-model=\"newPost.post_content\" class=\"form-control\" id=\"postContent\">\n" +
+    "    </div>\n" +
+    "    <button type=\"submit\" class=\"btn btn-primary\">Submit</button>\n" +
+    "  </form>\n" +
+    "\n" +
+    "  <div id=\"post-container\" class=\"col-md-6\">\n" +
+    "    <ul>\n" +
+    "      <li ng-repeat=\"post in posts\">\n" +
+    "        {{post.title}}\n" +
+    "      </li>\n" +
+    "    </ul>\n" +
+    "  </div>\n" +
+    "\n" +
     "</div>\n" +
-    "-->\n" +
+    "<!--/if logged in-->\n" +
+    "\n" +
     "\n" +
     "\n" +
     "<div id=\"post-list-container\" ng-repeat=\"post in test_posts\">\n" +

@@ -16,13 +16,13 @@ angular.module( 'novo', [
     'novo.contact',
     'novo.portfolio',
     'novo.intro',
-    //'novo.blog-post'
+    'novo.blog-post'
 
 ])
 
 .config( function myAppConfig ( $stateProvider, $urlRouterProvider, $locationProvider ) {
+
     $urlRouterProvider.when('/about/', '/about');
-    $urlRouterProvider.when('/blog/', '/blog');
     $urlRouterProvider.when('/contact/', '/contact');
     $urlRouterProvider.when('/portfolio/', '/portfolio');
 

@@ -1,9 +1,12 @@
 angular.module( 'novo.blog-post', [
 ])
 
-.config(function config( $stateProvider ) {
+.config(function config( $stateProvider, $urlRouterProvider ) {
+	$urlRouterProvider.when('/blog/', '/blog');
+	$urlRouterProvider.when('/blog/:path/', '/blog/:path');
+
 	$stateProvider.state( 'blog-post', {
-		url: '/blog/:id',
+		url: '/blog/:path',
 		views: {
 			"main": {
 				controller: 'BlogPostCtrl',
@@ -13,18 +16,25 @@ angular.module( 'novo.blog-post', [
 	});
 })
 
-.controller( 'BlogPostCtrl', function BlogPostController( $scope, titleService, $stateParams) {
+.controller( 'BlogPostCtrl', function BlogPostController( $scope, titleService, $stateParams, $http) {
+	titleService.setTitle('Blog - NOVO'); 
 
-	console.log($stateParams);
+	$scope.post_title = 'post title';
+	$scope.post_content = 'post content';
 
-	if ($stateParams == "") {
-		return new BlogController();
-	}
-	else {
-		return new BlogPostController();
-	}
-	
-	titleService.setTitle('Blog - NOVO');   
+	var url = $stateParams;
+
+
+	$http.get('/api/post').
+	    success(function(data, status, headers, config) {
+	      $scope.posts = data;
+	    }).
+	    error(function(data, status, headers, config) {
+      // log error
+    });
+
+
+
 
 });
 
