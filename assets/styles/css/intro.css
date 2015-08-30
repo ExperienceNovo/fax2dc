@@ -180,6 +180,7 @@ svg > .portfolio-rect {
     mask: url(#portfolio-mask);
     /* for Firefox */
 }
+
 .portfolio-rect:hover {
     fill: #2ab996;
     transition: fill .2s;
