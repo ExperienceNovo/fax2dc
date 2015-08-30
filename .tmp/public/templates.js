@@ -549,7 +549,7 @@ angular.module("home/index.tpl.html", []).run(["$templateCache", function($templ
     "                <defs>\n" +
     "                    <mask class=\"portfolio-mask\" id=\"portfolio-mask\" x=\"0\" y=\"0\" width=\"1920px\" height=\"400px\">\n" +
     "                        <rect class=\"portfolio-rect\" x=\"0\" y=\"0\" width=\"1920px\" height=\"400px\"></rect>\n" +
-    "                        <text x=\"960\" y=\"60%\" class=\"large-medium-text\">our portfolio</text>\n" +
+    "                        <text x=\"960\" y=\"60%\" class=\"large-medium-text\" id=\"portfolio-text\">our portfolio</text>\n" +
     "                    </mask>\n" +
     "                </defs>\n" +
     "                <rect class=\"portfolio-rect\" x=\"0\" y=\"0\" width=\"1920px\" height=\"400px\"></rect>\n" +
