@@ -643,7 +643,7 @@ angular.module("home/index.tpl.html", []).run(["$templateCache", function($templ
     "        </svg>\n" +
     "        <div class=\"contact\" id=\"contact\">\n" +
     "            <div class=\"contact-section\">\n" +
-    "                <form class=\"ctr\" action=\"//projectnovo.us11.list-manage.com/subscribe/post?u=a56f7f3f876fa9db4c36328af&amp;id=ff3d3ae826\" method=\"post\">\n" +
+    "                <form class=\"ctr newsletter-input\" action=\"//projectnovo.us11.list-manage.com/subscribe/post?u=a56f7f3f876fa9db4c36328af&amp;id=ff3d3ae826\" method=\"post\">\n" +
     "                    <div class=\"loader\"></div>\n" +
     "                    <input type=\"email\" name=\"EMAIL\" required>\n" +
     "                    <div class=\"indicator\" data-content=\"Type Your Email Address\"></div>\n" +

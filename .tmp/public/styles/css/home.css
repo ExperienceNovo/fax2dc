@@ -564,7 +564,7 @@ input.full {
 	font-weight:300;
 }
 
-input:focus {
+.newsletter-input input:focus {
 	color:#fff;
 }
 
