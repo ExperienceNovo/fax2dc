@@ -1,36 +1,25 @@
-<!--old content, need to cre8 functionality... that error tho-->
-
 <!--if logged in-->
+<div style="height:100px;"></div>
 <div ng-show="currentUser">
 
-  <form role="form" ng-submit="createPost(newPost)">
-    <div class="form-group">
-    <label for="PostTitle">PostTitle</label>
-    <label for="PostContent">PostContent</label>
-      <input type="text" ng-model="newPost.title" class="form-control" id="postTitle">
-      <input type="text" ng-model="newPost.post_content" class="form-control" id="postContent">
-    </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
-  </form>
-
-  <div id="post-container" class="col-md-6">
-    <ul>
-      <li ng-repeat="post in posts">
-        {{post.title}}
-      </li>
-    </ul>
+  <div>
+    <form class="blog-input" role="form" ng-submit="createPost(newPost)">
+      <div class="form-group">
+        <input type="text" placeholder= "post title" ng-model="newPost.title" class="form-control" id="postTitle">
+        <input type="text" placeholder= "post url" ng-model="newPost.url_title" class="form-control" id="postTitle">
+        <textarea placeholder= "post content"ng-model="newPost.post_content" class="form-control" id="postContent"></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
   </div>
 
 </div>
 <!--/if logged in-->
-
-
-
-<div id="post-list-container" ng-repeat="post in test_posts">
+<div class="post-list-container">
   <br><br>
-  <div id="post-container">
+  <div class="post-container" ng-repeat="post in posts | orderBy:'-createdAt'">
     <h1 class="title"><a href="/blog/{{post.url_title}}">{{post.title}}</a></h1>
-    <p class="lead">{{post.post_content}}</p>
+    <div ng-bind-html="renderHtml(post.post_content)"></div>
   </div>
   <br><br>
 </div>

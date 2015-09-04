@@ -1,4 +1,4 @@
-angular.module('templates-app', ['about/index.tpl.html', 'blog-post/index.tpl.html', 'blog/index.tpl.html', 'contact/index.tpl.html', 'home/index.tpl.html', 'intro/index.tpl.html', 'portfolio/index.tpl.html', 'sidebar/index.tpl.html']);
+angular.module('templates-app', ['about/index.tpl.html', 'blog-post/index.tpl.html', 'blog/index.tpl.html', 'contact/index.tpl.html', 'home/index.tpl.html', 'intro/index.tpl.html', 'portfolio/index.tpl.html', 'sidebar/index.tpl.html', 'templates/index.tpl.html']);
 
 angular.module("about/index.tpl.html", []).run(["$templateCache", function($templateCache) {
   $templateCache.put("about/index.tpl.html",
@@ -206,60 +206,47 @@ angular.module("about/index.tpl.html", []).run(["$templateCache", function($temp
 angular.module("blog-post/index.tpl.html", []).run(["$templateCache", function($templateCache) {
   $templateCache.put("blog-post/index.tpl.html",
     "<div ng-controller=\"BlogPostCtrl\">\n" +
+    "	<div class=\"blog-post-container\">\n" +
+    "		<div style=\"height:100px;\"></div>\n" +
+    "		<div class=\"post-title-container\">\n" +
+    "			<h1>{{post.title}}</h1>\n" +
+    "		</div>\n" +
     "\n" +
-    "	<div style=\"height:100px;\"></div>\n" +
-    "	<div id=\"post-title-container\">\n" +
-    "		<h1>{{post_title}}</h1>\n" +
+    "		<hr>\n" +
+    "\n" +
+    "		<div class=\"post-content-container\">\n" +
+    "			<div ng-bind-html=\"renderHtml(post.post_content)\"></div>\n" +
+    "		</div>\n" +
+    "\n" +
+    "		<br><br>\n" +
     "	</div>\n" +
-    "\n" +
-    "	<hr>\n" +
-    "\n" +
-    "	<div id=\"post-content-container\">\n" +
-    "		<p>{{post_content}}</p>\n" +
-    "	</div>\n" +
-    "\n" +
-    "	<!--<div ng-repeat=\"post in posts\">\n" +
-    "		{{post}}<br><br>\n" +
-    "	</div>--> \n" +
-    "\n" +
     "</div>");
 }]);
 
 angular.module("blog/index.tpl.html", []).run(["$templateCache", function($templateCache) {
   $templateCache.put("blog/index.tpl.html",
-    "<!--old content, need to cre8 functionality... that error tho-->\n" +
-    "\n" +
     "<!--if logged in-->\n" +
+    "<div style=\"height:100px;\"></div>\n" +
     "<div ng-show=\"currentUser\">\n" +
     "\n" +
-    "  <form role=\"form\" ng-submit=\"createPost(newPost)\">\n" +
-    "    <div class=\"form-group\">\n" +
-    "    <label for=\"PostTitle\">PostTitle</label>\n" +
-    "    <label for=\"PostContent\">PostContent</label>\n" +
-    "      <input type=\"text\" ng-model=\"newPost.title\" class=\"form-control\" id=\"postTitle\">\n" +
-    "      <input type=\"text\" ng-model=\"newPost.post_content\" class=\"form-control\" id=\"postContent\">\n" +
-    "    </div>\n" +
-    "    <button type=\"submit\" class=\"btn btn-primary\">Submit</button>\n" +
-    "  </form>\n" +
-    "\n" +
-    "  <div id=\"post-container\" class=\"col-md-6\">\n" +
-    "    <ul>\n" +
-    "      <li ng-repeat=\"post in posts\">\n" +
-    "        {{post.title}}\n" +
-    "      </li>\n" +
-    "    </ul>\n" +
+    "  <div>\n" +
+    "    <form class=\"blog-input\" role=\"form\" ng-submit=\"createPost(newPost)\">\n" +
+    "      <div class=\"form-group\">\n" +
+    "        <input type=\"text\" placeholder= \"post title\" ng-model=\"newPost.title\" class=\"form-control\" id=\"postTitle\">\n" +
+    "        <input type=\"text\" placeholder= \"post url\" ng-model=\"newPost.url_title\" class=\"form-control\" id=\"postTitle\">\n" +
+    "        <textarea placeholder= \"post content\"ng-model=\"newPost.post_content\" class=\"form-control\" id=\"postContent\"></textarea>\n" +
+    "      </div>\n" +
+    "      <button type=\"submit\" class=\"btn btn-primary\">Submit</button>\n" +
+    "    </form>\n" +
     "  </div>\n" +
     "\n" +
     "</div>\n" +
     "<!--/if logged in-->\n" +
-    "\n" +
-    "\n" +
-    "\n" +
-    "<div id=\"post-list-container\" ng-repeat=\"post in test_posts\">\n" +
+    "<div class=\"post-list-container\">\n" +
     "  <br><br>\n" +
-    "  <div id=\"post-container\">\n" +
+    "  <div class=\"post-container\" ng-repeat=\"post in posts | orderBy:'-createdAt'\">\n" +
     "    <h1 class=\"title\"><a href=\"/blog/{{post.url_title}}\">{{post.title}}</a></h1>\n" +
-    "    <p class=\"lead\">{{post.post_content}}</p>\n" +
+    "    <div ng-bind-html=\"renderHtml(post.post_content)\"></div>\n" +
     "  </div>\n" +
     "  <br><br>\n" +
     "</div>\n" +
@@ -924,5 +911,177 @@ angular.module("sidebar/index.tpl.html", []).run(["$templateCache", function($te
     "    </div>\n" +
     "</div>\n" +
     "\n" +
+    "");
+}]);
+
+angular.module("templates/index.tpl.html", []).run(["$templateCache", function($templateCache) {
+  $templateCache.put("templates/index.tpl.html",
+    "<!DOCTYPE html>\n" +
+    "<html lang=\"en\" class=\"no-js\">\n" +
+    "    \n" +
+    "    <head>\n" +
+    "        <meta charset=\"UTF-8\" />\n" +
+    "        <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge,chrome=1\"> \n" +
+    "        <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"> \n" +
+    "        <link rel=\"stylesheet\" type=\"text/css\" href=\"src/app/templates/css/web-samples.css\" />\n" +
+    "        <link rel=\"stylesheet\" type=\"text/css\" href=\"src/app/templates/css/web-overlay.css\" />\n" +
+    "        <link rel=\"stylesheet\" type=\"text/css\" href=\"src/app/templates/css/transition-animations.css\" />\n" +
+    "        <link rel=\"stylesheet\" type=\"text/css\" href=\"src/app/templates/css/bootstrap.min.css\" />      \n" +
+    "        <link rel=\"stylesheet\" type=\"text/css\" href=\"src/app/templates/css/font-awesome.min.css\" />\n" +
+    "        <script src=\"js/modernizr.custom.js\"></script>\n" +
+    "    </head>\n" +
+    "    \n" +
+    "    <body>\n" +
+    "    <div class=\"web-menu\">\n" +
+    "        <div class=\"pt-wrapper\">\n" +
+    "\n" +
+    "            <!--Overlay Menu-->\n" +
+    "\n" +
+    "            <div class=\"overlay overlay-contentscale\">\n" +
+    "                <button type=\"button\" class=\"overlay-close\">Close</button>\n" +
+    "                \n" +
+    "                    <div class=\"welcome-button\">\n" +
+    "                        <div class=\"bt-sl-solid-l down out\"></div>\n" +
+    "                        <div class=\"bt-sl-solid-r down out\"></div>\n" +
+    "                        <div class=\"bt-slider-0 bt-slide-l out\"></div>\n" +
+    "                        <div class=\"bt-slider-1 bt-slide-l out\"></div>\n" +
+    "                        <div class=\"bt-slider-2 bt-slide-l out\"></div>\n" +
+    "                        <div class=\"bt-slider-3 bt-slide-l out\"></div>\n" +
+    "                        <div class=\"bt-slider-4 bt-slide-l out\"></div>\n" +
+    "                        <a class=\"out lin-t main-pg pt-trigger overlay-close\" data-animation=\"27\" data-goto=\"1\">\n" +
+    "                            Main Page\n" +
+    "                        </a>\n" +
+    "                    </div>\n" +
+    "                \n" +
+    "                <nav>\n" +
+    "                    <div class=\"container\">\n" +
+    "                        <div class=\"row\">    \n" +
+    "                            <div class=\"web-menu-home col-md-3 col-sm-6 col-xs-12\">\n" +
+    "                                <a class=\"pt-trigger menu-icon icon-click1\" data-animation=\"27\" data-goto=\"2\">\n" +
+    "                                    <img src=\"http://placehold.it/250x250\"/>\n" +
+    "                                    <div class=\"menu-title\">Sample 1</div>\n" +
+    "                                </a>\n" +
+    "                            </div>\n" +
+    "                            <div class=\"web-menu-home col-md-3 col-sm-6 col-xs-12\">\n" +
+    "                                <a class=\"pt-trigger menu-icon icon-click2\" data-animation=\"27\" data-goto=\"3\">\n" +
+    "                                    <img src=\"http://placehold.it/250x250\"/>\n" +
+    "                                    <div class=\"menu-title\">Sample 2</div>\n" +
+    "                                </a>\n" +
+    "                            </div>\n" +
+    "                            <div class=\"web-menu-home col-md-3 col-sm-6 col-xs-12\">\n" +
+    "                                <a class=\"pt-trigger menu-icon icon-click3\" data-animation=\"27\" data-goto=\"4\">\n" +
+    "                                    <img src=\"http://placehold.it/250x250\"/>\n" +
+    "                                    <div class=\"menu-title\">Sample 3</div>\n" +
+    "                                </a>\n" +
+    "                            </div>\n" +
+    "                            <div class=\"web-menu-home col-md-3 col-sm-6 col-xs-12\">\n" +
+    "                                <a class=\"pt-trigger menu-icon icon-click4\" data-animation=\"27\" data-goto=\"5\">\n" +
+    "                                    <img src=\"http://placehold.it/250x250\"/>\n" +
+    "                                    <div class=\"menu-title\">Sample 4</div>\n" +
+    "                                </a>\n" +
+    "                            </div>\n" +
+    "                        </div>\n" +
+    "                    </div>\n" +
+    "                </nav>\n" +
+    "            </div>\n" +
+    "\n" +
+    "            <!--Page Menu-->\n" +
+    "\n" +
+    "            <div class=\"pt-page pt-page-1\">\n" +
+    "                <div class=\"pt-trigger-container\">\n" +
+    "                    <div class=\"title\">Sample Websites</div>\n" +
+    "                    <div class=\"container\">\n" +
+    "                        <div class=\"row\">\n" +
+    "                            <div class=\"web-menu-home col-md-3\">\n" +
+    "                                <a class=\"pt-trigger menu-icon\" data-animation=\"27\" data-goto=\"2\">\n" +
+    "                                    <div class=\"menu-title\">Sample 1</div>\n" +
+    "                                    <img src=\"http://placehold.it/250x250\"/>\n" +
+    "                                </a>\n" +
+    "                            </div>\n" +
+    "                            <div class=\"web-menu-home col-md-3\">\n" +
+    "                                <a class=\"pt-trigger menu-icon\" data-animation=\"27\" data-goto=\"3\">\n" +
+    "                                    <div class=\"menu-title\">Sample 2</div>\n" +
+    "                                    <img src=\"http://placehold.it/250x250\"/>\n" +
+    "                                </a>\n" +
+    "                            </div>\n" +
+    "                            <div class=\"web-menu-home col-md-3\">\n" +
+    "                                <a class=\"pt-trigger menu-icon\" data-animation=\"27\" data-goto=\"4\">\n" +
+    "                                    <div class=\"menu-title\">Sample 3</div>\n" +
+    "                                    <img src=\"http://placehold.it/250x250\"/>\n" +
+    "                                </a>\n" +
+    "                            </div>\n" +
+    "                            <div class=\"web-menu-home col-md-3\">\n" +
+    "                                <a class=\"pt-trigger menu-icon\" data-animation=\"27\" data-goto=\"5\">\n" +
+    "                                    <div class=\"menu-title\">Sample 4</div>\n" +
+    "                                    <img src=\"http://placehold.it/250x250\"/>\n" +
+    "                                </a>\n" +
+    "                            </div>\n" +
+    "                        </div>\n" +
+    "                    </div>\n" +
+    "                </div>\n" +
+    "            </div>\n" +
+    "\n" +
+    "            <!--Inner Pages-->\n" +
+    "\n" +
+    "            <div class=\"pt-page pt-page-2\">\n" +
+    "                <div class=\"pt-trigger-container\">\n" +
+    "                    <div class=\"overlay-nav\">\n" +
+    "                        <a class=\"main-pg\" id=\"trigger-overlay1\">Choose Sample</a>\n" +
+    "                    </div>\n" +
+    "                    <iframe src=\"templates/sample1/index.html\"></iframe>\n" +
+    "                </div>\n" +
+    "            </div>\n" +
+    "\n" +
+    "            <div class=\"pt-page pt-page-3\">\n" +
+    "                <div class=\"pt-trigger-container\">\n" +
+    "                    <div class=\"overlay-nav\">\n" +
+    "                        <a class=\"main-pg\" id=\"trigger-overlay2\">Choose Sample</a>\n" +
+    "                    </div>\n" +
+    "                    <iframe src=\"templates/sample2/index.html\"></iframe>\n" +
+    "                </div>\n" +
+    "            </div> \n" +
+    "\n" +
+    "            <div class=\"pt-page pt-page-4\">\n" +
+    "                <div class=\"pt-trigger-container\">\n" +
+    "                    <div class=\"overlay-nav\">\n" +
+    "                        <a class=\"main-pg\" id=\"trigger-overlay3\">Choose Sample</a>\n" +
+    "                    </div>\n" +
+    "                    <iframe src=\"templates/sample3/index.html\"></iframe>\n" +
+    "                </div>\n" +
+    "            </div>   \n" +
+    "\n" +
+    "            <div class=\"pt-page pt-page-5\">\n" +
+    "                <div class=\"pt-trigger-container\">\n" +
+    "                    <div class=\"overlay-nav\">\n" +
+    "                        <a class=\"main-pg\" id=\"trigger-overlay4\">Choose Sample</a>\n" +
+    "                    </div>\n" +
+    "                    <iframe src=\"templates/sample4/index.html\"></iframe>\n" +
+    "                </div>\n" +
+    "            </div>\n" +
+    "\n" +
+    "\n" +
+    "        </div>\n" +
+    "\n" +
+    "        <div class=\"pt-message\">\n" +
+    "            <p>Your browser does not support CSS animations.</p>\n" +
+    "        </div>\n" +
+    "\n" +
+    "    </div>\n" +
+    "        \n" +
+    "        <script src=\"https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js\" type=\"text/javascript\"></script>\n" +
+    "        <!--[if lt IE 9]>\n" +
+    "        <script src=\"//html5shim.googlecode.com/svn/trunk/html5.js\"></script>\n" +
+    "        <![endif]-->\n" +
+    "        <!--[if lt IE 9]>\n" +
+    "        <script src=\"//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js\"></script>\n" +
+    "        <![endif]-->\n" +
+    "        <script src=\"src/app/templates/js/transition.js\"></script>\n" +
+    "        <script src=\"src/app/templates/js/classie.js\"></script>       \n" +
+    "        <script src=\"src/app/templates/js/inner-html.js\"></script>\n" +
+    "        <script src=\"src/app/templates/js/web-overlay.js\"></script>       \n" +
+    "        <script src=\"src/app/templates/js/main-page-btn.js\"></script>\n" +
+    "        \n" +
+    "    </body>\n" +
+    "</html>\n" +
     "");
 }]);

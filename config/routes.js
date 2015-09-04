@@ -43,6 +43,7 @@ module.exports.routes = {
 
   'get /contact': 'HomeController.index',
   'get /portfolio': 'HomeController.index',
+  'get /templates': 'HomeController.index',
 
 
   'get /login': 'AuthController.login',
@@ -64,6 +65,7 @@ module.exports.routes = {
    */
   'get /api/post': 'PostController.getAll',
   'get /api/post/:id': 'PostController.getOne',
+  'get /api/post/url/:path': 'PostController.getByUrlTitle',
   'post /api/post': 'PostController.create',
   'delete /api/post/:id': 'PostController.destroy',
 

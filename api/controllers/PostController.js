@@ -13,7 +13,6 @@ module.exports = {
 		.spread(function(models) {
 			Post.watch(req);
 			Post.subscribe(req, models);
-
 			res.json(models);
 		})
 		.fail(function(err) {
@@ -32,10 +31,24 @@ module.exports = {
 		});
 	},
 
+	getByUrlTitle: function(req, res) {
+		Post.find()
+		.where({url_title: req.param('path')})
+		.spread(function(model) {
+			Post.subscribe(req, model);
+			res.json(model);
+		})
+		.fail(function(err) {
+			res.send(404);
+		});
+	},
+
 	create: function (req, res) {
 		var userId = req.param('user');
 		var model = {
 			title: req.param('title'),
+			url_title: req.param('url_title'),
+			post_content: req.param('post_content'),
 			user: userId
 		};
 

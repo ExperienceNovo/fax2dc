@@ -16,7 +16,9 @@ angular.module( 'novo', [
     'novo.contact',
     'novo.portfolio',
     'novo.intro',
-    'novo.blog-post'
+    'novo.blog-post',
+    'novo.templates'
+
 
 ])
 

@@ -17,9 +17,6 @@ module.exports = {
             type: 'string',
             required: true
         },
-        other: {
-            type: 'string'
-        },
         url_title: {
             type: 'string',
             required: true,
@@ -31,8 +28,18 @@ module.exports = {
         }
     },
 
+    afterCreate: function (post, next) {
+        // set message.user = to appropriate user model
+        User.getOne(post.user)
+        .spread(function(user) {
+            post.user = user;
+            next(null, post);
+        });
+    },
+
     getAll: function() {
         return Post.find()
+        .sort({createdAt: 'asc'})
         .then(function (models) {
             return [models];
         });
@@ -44,13 +51,5 @@ module.exports = {
             return [model];
         });
     }
-
-    //getByUrlTitle: function(a_url_title) {
-        //return Post.find({url_title: a_url_title}).exec(function (err, found){})
-        //.then(function (model) {
-            //return [model];
-        //}
-        //);
-    //}
 };
 

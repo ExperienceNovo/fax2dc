@@ -16,25 +16,26 @@ angular.module( 'novo.blog-post', [
 	});
 })
 
-.controller( 'BlogPostCtrl', function BlogPostController( $scope, titleService, $stateParams, $http) {
+.controller( 'BlogPostCtrl', function BlogPostController( $scope, $sce, titleService, $stateParams, $http, $location) {
 	titleService.setTitle('Blog - NOVO'); 
 
-	$scope.post_title = 'post title';
-	$scope.post_content = 'post content';
+	var url = '/api/post/url/' + $stateParams.path;
 
-	var url = $stateParams;
-
-
-	$http.get('/api/post').
+	$http.get(url).
 	    success(function(data, status, headers, config) {
-	      $scope.posts = data;
+	      $scope.post = data;
+
+	      if (data == ''){
+	      	$location.url('blog');
+	      };
+
 	    }).
 	    error(function(data, status, headers, config) {
-      // log error
     });
 
-
-
+	$scope.renderHtml = function (htmlCode) {
+	    return $sce.trustAsHtml(htmlCode);
+	};
 
 });
 

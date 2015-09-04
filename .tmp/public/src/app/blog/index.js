@@ -20,45 +20,16 @@ angular.module( 'novo.blog', [
 	});
 })
 
-.controller( 'BlogCtrl', function BlogController( $scope, $sailsSocket, lodash, titleService, config, PostModel, posts) {
+.controller( 'BlogCtrl', function BlogController( $scope, $sailsSocket, $sce, lodash, titleService, config, PostModel, posts) {
 	titleService.setTitle('Blog - NOVO');
 	$scope.newPost = {};
     $scope.posts = posts;
     $scope.currentUser = config.currentUser;
 
-   	$scope.test_posts = {
-   		"NOVO": {
-	        "title": "The NOVO experience",
-	        "post_content": "",
-	        "url_title": "the-novo-experience"
-    	},
-    	"transparent-collaboration": {
-	        "title": "Transparent Collaboration",
-	        "post_content": "",
-	        "url_title": "transparent-collaboration"
-    	},
-    	"how-we-design": {
-	        "title": "How We Design",
-	        "post_content": "",
-	        "url_title": "how-we-design"
-    	},
-    	"cool-css-effects": {
-	        "title": "Cool CSS effects",
-	        "post_content": "",
-	        "url_title": "cool-css-effects"
-    	},
-    	"our-web-stack": {
-	        "title": "Our Web Stack",
-	        "post_content": "",
-	        "url_title": "our-web-stack"
-    	},
-    	"social-media-growth-strategies": {
-	        "title": "Social Media Growth Strategies",
-	        "post_content": "",
-	        "url_title": "social-media-growth-strategies"
-    	},
-    };
 
+	$scope.renderHtml = function (htmlCode) {
+	    return $sce.trustAsHtml(htmlCode);
+	};
 
     $sailsSocket.subscribe('post', function (envelope) {
 	    switch(envelope.verb) {
@@ -81,11 +52,10 @@ angular.module( 'novo.blog', [
     };
 
 	$scope.createPost = function(newPost) {
-        //newPost.user = config.currentUser.id;
+        newPost.user = config.currentUser.id;
         PostModel.create(newPost).then(function(model) {
             $scope.newPost = {};
         });
-        console.log(newPost);
     };
 
 });
