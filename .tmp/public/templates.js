@@ -544,9 +544,9 @@ angular.module("home/index.tpl.html", []).run(["$templateCache", function($templ
     "        <a href=\"/portfolio/\">\n" +
     "            <svg class=\"portfolio-home\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 1920 400\" width=\"1920px\" height=\"400px\" preserveAspectRatio=\"xMidYMid slice\">\n" +
     "                <defs>\n" +
-    "                    <mask class=\"portfolio-mask\" id=\"portfolio-mask\" x=\"0\" y=\"0\" width=\"1920px\" height=\"400px\">\n" +
+    "                    <mask class=\"portfolio-mask\" id=\"portfolio-mask\" x=\"0\" y=\"0\" width=\"1920px\" height=\"400px\" maskUnits=\"userSpaceOnUse\">\n" +
     "                        <rect class=\"portfolio-rect\" x=\"0\" y=\"0\" width=\"1920px\" height=\"400px\"></rect>\n" +
-    "                        <text x=\"960\" y=\"60%\" class=\"large-medium-text\">our portfolio</text>\n" +
+    "                        <text x=\"960\" y=\"60%\" class=\"large-medium-text\" id=\"portfolio-text\">our portfolio</text>\n" +
     "                    </mask>\n" +
     "                </defs>\n" +
     "                <rect class=\"portfolio-rect\" x=\"0\" y=\"0\" width=\"1920px\" height=\"400px\"></rect>\n" +
@@ -633,7 +633,7 @@ angular.module("home/index.tpl.html", []).run(["$templateCache", function($templ
     "    <div class=\"newsletter-home-container\">\n" +
     "        <svg class=\"newsletter-home\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 1920 400\" width=\"1920px\" height=\"500px\" preserveAspectRatio=\"xMidYMid slice\">\n" +
     "            <defs>\n" +
-    "                <mask class=\"newsletter-mask\" id=\"newsletter-mask\" x=\"0\" y=\"0\" width=\"1920px\" height=\"500px\">\n" +
+    "                <mask class=\"newsletter-mask\" id=\"newsletter-mask\" x=\"0\" y=\"0\" width=\"1920px\" height=\"500px\" maskUnits=\"userSpaceOnUse\">\n" +
     "                    <rect class=\"newsletter-rect\" x=\"0\" y=\"0\" width=\"1920px\" height=\"500px\"></rect>\n" +
     "                    <text x=\"960\" y=\"30%\" class=\"medium-text\">sign up for our newsletter</text>\n" +
     "                    <!-- I feel like we could say something a little better here. Let's do some research into this -->\n" +
@@ -672,7 +672,7 @@ angular.module("intro/index.tpl.html", []).run(["$templateCache", function($temp
     "<div class=\"intro-container\">\n" +
     "    <svg class=\"intro\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 1920 1080\" width=\"1920px\" height=\"1080px\" preserveAspectRatio=\"xMidYMid slice\">\n" +
     "        <defs>\n" +
-    "            <mask class=\"intro-mask\" id=\"intro-mask\" x=\"0\" y=\"0\" width=\"100%\" height=\"100%\">\n" +
+    "            <mask class=\"intro-mask\" id=\"intro-mask\" x=\"0\" y=\"0\" width=\"100%\" height=\"100%\" maskUnits=\"userSpaceOnUse\">\n" +
     "                <rect class=\"intro-rect\" x=\"0\" y=\"0\" width=\"1920px\" height=\"1080px\"></rect>\n" +
     "                <text x=\"960\" y=\"27%\" class=\"large-text\">welcome</text>\n" +
     "                <text x=\"960\" y=\"46%\" class=\"medium-text desktop\">embrace change with NOVO</text>\n" +

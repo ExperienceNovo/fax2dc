@@ -159,20 +159,28 @@ svg text {
     text-anchor: middle;
 }
 svg mask rect {
-    fill: rgba(255, 255, 255, 0.75);
+    fill: rgba(255, 255, 255, 1.0);
+    opacity: 0.75;
 }
 svg > .intro-rect {
     //fill: #2ab996; /* novo green */
     fill: white;
+    opacity: 0.75;
     -webkit-mask: url(#intro-mask);
+    /* for webkit browsers */
     mask: url(#intro-mask);
+    /* for Firefox */
 }
 svg > .portfolio-rect {
     //fill: #2ab996; /* novo green */
     fill: white;
+    opacity: 0.75;
     -webkit-mask: url(#portfolio-mask);
+    /* for webkit browsers */
     mask: url(#portfolio-mask);
+    /* for Firefox */
 }
+
 .portfolio-rect:hover {
     fill: #2ab996;
     transition: fill .2s;
@@ -180,8 +188,11 @@ svg > .portfolio-rect {
 svg > .newsletter-rect {
     //fill: #2ab996; /* novo green */
     fill: white;
+    opacity: 0.75;
     -webkit-mask: url(#newsletter-mask);
+    /* for webkit browsers */
     mask: url(#newsletter-mask);
+    /* for Firefox */
 }
 /*.newsletter-rect:hover {
     fill: #2ab996;
