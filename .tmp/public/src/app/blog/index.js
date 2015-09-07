@@ -20,16 +20,11 @@ angular.module( 'novo.blog', [
 	});
 })
 
-.controller( 'BlogCtrl', function BlogController( $scope, $sailsSocket, $sce, lodash, titleService, config, PostModel, posts) {
+.controller( 'BlogCtrl', function BlogController( $scope, $sailsSocket, lodash, titleService, config, PostModel, posts) {
 	titleService.setTitle('Blog - NOVO');
 	$scope.newPost = {};
     $scope.posts = posts;
     $scope.currentUser = config.currentUser;
-
-
-	$scope.renderHtml = function (htmlCode) {
-	    return $sce.trustAsHtml(htmlCode);
-	};
 
     $sailsSocket.subscribe('post', function (envelope) {
 	    switch(envelope.verb) {

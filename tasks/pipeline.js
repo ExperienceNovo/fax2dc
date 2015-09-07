@@ -22,6 +22,8 @@ var cssFilesToInject = [
 // Client-side javascript files to inject in order
 // (uses Grunt-style wildcard/glob/splat expressions)
 var jsFilesToInject = [
+
+
   'bower_components/angular/angular.js',
   'bower_components/angular-bootstrap/ui-bootstrap-tpls.js',
   'bower_components/angular-ui-router/release/angular-ui-router.js',
@@ -40,7 +42,8 @@ var jsFilesToInject = [
   //
 
   // All of the rest of your app scripts
-  'src/**/*.js'
+  'src/**/*.js',
+
 ];
 
 module.exports.jsFilesToInjectNoPathChange = jsFilesToInject;

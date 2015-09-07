@@ -246,7 +246,6 @@ angular.module("blog/index.tpl.html", []).run(["$templateCache", function($templ
     "  <br><br>\n" +
     "  <div class=\"post-container\" ng-repeat=\"post in posts | orderBy:'-createdAt'\">\n" +
     "    <h1 class=\"title\"><a href=\"/blog/{{post.url_title}}\">{{post.title}}</a></h1>\n" +
-    "    <div ng-bind-html=\"renderHtml(post.post_content)\"></div>\n" +
     "  </div>\n" +
     "  <br><br>\n" +
     "</div>\n" +

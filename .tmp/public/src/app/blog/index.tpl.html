@@ -19,7 +19,6 @@
   <br><br>
   <div class="post-container" ng-repeat="post in posts | orderBy:'-createdAt'">
     <h1 class="title"><a href="/blog/{{post.url_title}}">{{post.title}}</a></h1>
-    <div ng-bind-html="renderHtml(post.post_content)"></div>
   </div>
   <br><br>
 </div>
