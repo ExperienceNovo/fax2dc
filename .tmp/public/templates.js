@@ -1,28 +1,10 @@
-angular.module('templates-app', ['about/index.tpl.html', 'blog-post/index.tpl.html', 'blog/index.tpl.html', 'contact/index.tpl.html', 'home/index.tpl.html', 'intro/index.tpl.html', 'portfolio/index.tpl.html', 'sidebar/index.tpl.html', 'templates/index.tpl.html']);
+angular.module('templates-app', ['about/index.tpl.html', 'blog-post/index.tpl.html', 'blog/index.tpl.html', 'contact/index.tpl.html', 'home/index.tpl.html', 'intro/index.tpl.html', 'intro/index2.tpl.html', 'portfolio/index.tpl.html', 'sidebar/index.tpl.html', 'templates/index.tpl.html']);
 
 angular.module("about/index.tpl.html", []).run(["$templateCache", function($templateCache) {
   $templateCache.put("about/index.tpl.html",
     "<div class=\"surface-container home-pad\">\n" +
+    "    <div ng-include=\"'intro/index2.tpl.html'\"></div>\n" +
     "    <div class=\"about\" id=\"about\">\n" +
-    "        <div class=\"center about-top-area\">\n" +
-    "            <div class=\"about-title-top\">Quality, Modernity, and Transparency\n" +
-    "                <hr>\n" +
-    "            </div>\n" +
-    "            <div class=\"message-about\">\n" +
-    "                <div class=\"interested-about\">\n" +
-    "                    <br>\n" +
-    "                    <p>\n" +
-    "                        Our clients know what it means to be partners with NOVO. We provide quality work, employ the latest marketing and web development techniques, and  implement a workflow process that allows for complete transparency and client collaboration.\n" +
-    "                    </p>\n" +
-    "                    <br>\n" +
-    "                    <hr>\n" +
-    "                    <br>\n" +
-    "                    <p style=\"font-size:22px;\"><a href=\"/portfolio/\">Our work speaks for itself</a></p>\n" +
-    "                    <br>\n" +
-    "                </div>\n" +
-    "            </div>\n" +
-    "        </div>\n" +
-    "\n" +
     "        <div class=\"about-tile-area\" style=\"background:url(/images/texture-bg.png) repeat;\">\n" +
     "            <div class=\"about-row\">\n" +
     "                <div class=\"about-des right\" id=\"design-des\">\n" +
@@ -432,13 +414,29 @@ angular.module("home/index.tpl.html", []).run(["$templateCache", function($templ
     "<div class=\"surface-container-home\">\n" +
     "    <div ng-include=\"'intro/index.tpl.html'\"></div>\n" +
     "    <div class=\"services\" id=\"about\">\n" +
-    "        <div class=\"section-head\">\n" +
-    "            <h3>our services</h3>\n" +
-    "            <!-- maybe \"what we do\"? idk -->\n" +
-    "            <hr>\n" +
-    "        </div>\n" +
+    "        <figure class=\"icon-cards\">\n" +
+    "          <div class=\"icon-cards__content\">\n" +
+    "            <div class=\"icon-cards__item\">\n" +
+    "                <a href=\"/about#design-div/\">\n" +
+    "                  <h2 class=\"service-title-bar\">design</h2>\n" +
+    "                </a>\n" +
+    "                <div class=\"desc-item\">graphics & animation</div>\n" +
+    "                <div class=\"desc-item\">company branding</div>\n" +
+    "                <div class=\"desc-item\">UI/UX design</div>\n" +
+    "            </div>\n" +
+    "            <div class=\"icon-cards__item\">\n" +
+    "              \n" +
     "\n" +
-    "        <div class=\"services-list\">\n" +
+    "\n" +
+    "            </div>\n" +
+    "            <div class=\"icon-cards__item\">\n" +
+    "              \n" +
+    "\n" +
+    "\n" +
+    "            </div>\n" +
+    "          </div>\n" +
+    "        </figure>\n" +
+    "      <!--  <div class=\"services-list\">\n" +
     "            <div class=\"row\">\n" +
     "                <div class=\"col-md-12\">\n" +
     "                    <div class=\"col-md-4 flex\">\n" +
@@ -446,15 +444,15 @@ angular.module("home/index.tpl.html", []).run(["$templateCache", function($templ
     "                            <svg version=\"1.1\" id=\"Layer_1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\" width=\"144px\" height=\"144px\" viewBox=\"0 0 144 144\" enable-background=\"new 0 0 144 144\" xml:space=\"preserve\">\n" +
     "                                <polygon fill=\"none\" stroke=\"#14B795\" stroke-width=\"5\" stroke-miterlimit=\"10\" points=\"6.946,15.479 137.053,15.479 72,128.151 \"></polygon>\n" +
     "                            </svg>\n" +
-    "                            <div class=\"service-title\">\n" +
+    "                            <div class=\"service-title desc1\">\n" +
     "                                <a href=\"/about#design-div/\">\n" +
     "                                    <h2 class=\"service-title-bar\">design</h2>\n" +
     "                                </a>\n" +
     "                            </div>\n" +
     "                            <div class=\"service-des\">\n" +
-    "                                <p>graphics & animation</p>\n" +
-    "                                <p>company branding</p>\n" +
-    "                                <p>UI/UX design</p>\n" +
+    "                                <div class=\"desc-item\">graphics & animation</div>\n" +
+    "                                <div class=\"desc-item\">company branding</div>\n" +
+    "                                <div class=\"desc-item\">UI/UX design</div>\n" +
     "                            </div>\n" +
     "                        </div>\n" +
     "                    </div>\n" +
@@ -469,9 +467,9 @@ angular.module("home/index.tpl.html", []).run(["$templateCache", function($templ
     "                                </a>\n" +
     "                            </div>\n" +
     "                            <div class=\"service-des\">\n" +
-    "                                <p>mobile-first design</p>\n" +
-    "                                <p>SEO</p>\n" +
-    "                                <p>back-end integration</p>\n" +
+    "                                <div class=\"desc-item\">mobile-ready <br> design</div>\n" +
+    "                                <div class=\"desc-item\">SEO</div>\n" +
+    "                                <div class=\"desc-item\">back-end <br> integration</div>\n" +
     "                            </div>\n" +
     "                        </div>\n" +
     "                    </div>\n" +
@@ -480,61 +478,20 @@ angular.module("home/index.tpl.html", []).run(["$templateCache", function($templ
     "                            <svg version=\"1.1\" id=\"Layer_1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\" width=\"144px\" height=\"144px\" viewBox=\"0 0 144 144\" enable-background=\"new 0 0 144 144\" xml:space=\"preserve\">\n" +
     "                                <polygon fill=\"none\" stroke=\"#14B795\" stroke-width=\"5\" stroke-miterlimit=\"10\" points=\"6.946,15.479 137.053,15.479 72,128.151 \"></polygon>\n" +
     "                            </svg>\n" +
-    "                            <div class=\"service-title\">\n" +
+    "                            <div class=\"service-title desc3\">\n" +
     "                                <a href=\"/about#marketing-div/\">\n" +
     "                                    <h2 class=\"service-title-bar\">marketing</h2>\n" +
     "                                </a>\n" +
     "                            </div>\n" +
     "                            <div class=\"service-des\">\n" +
-    "                                <p>social media management</p>\n" +
-    "                                <p>email marketing</p>\n" +
-    "                                <p>content creation</p>\n" +
+    "                                <div class=\"desc-item\">social media <br> management</div>\n" +
+    "                                <div class=\"desc-item\">email marketing</div>\n" +
+    "                                <div class=\"desc-item\">content creation</div>\n" +
     "                            </div>\n" +
     "                        </div>\n" +
     "                    </div>\n" +
     "                </div>\n" +
-    "                <a href=\"/about/\"><button class=\"mainbutton service-button\" style=\"margin-top: 7.5%;\">More Info...</button></a>\n" +
-    "            </div>\n" +
-    "            <!--<div class=\"services-list\">\n" +
-    "            <div class=\"row\">\n" +
-    "                <div class=\"col-md-12\">\n" +
-    "                    <div class=\"col-md-4\">\n" +
-    "                        <i class=\"fa fa-paint-brush fa-5x\"></i>\n" +
-    "                        <div class=\"service-title\">\n" +
-    "                            <h2>Design</h2>\n" +
-    "                        </div>\n" +
-    "                        <hr>\n" +
-    "                        <div class=\"service-des\">\n" +
-    "                            <p>Graphics & Animation</p>\n" +
-    "                            <p>Custom Interface Design</p>\n" +
-    "                            <p>Company Branding</p>\n" +
-    "                        </div>\n" +
-    "                    </div>\n" +
-    "                    <div class=\"col-md-4\">\n" +
-    "                        <i class=\"fa fa-code fa-5x\"></i>\n" +
-    "                        <div class=\"service-title\">\n" +
-    "                            <h2>Development</h2>\n" +
-    "                        </div>\n" +
-    "                        <hr>\n" +
-    "                        <div class=\"service-des\">\n" +
-    "                            <p>Mobile-first Web Design</p>\n" +
-    "                            <p>SEO Structuring</p>\n" +
-    "                            <p>Back-end Software Integration</p>\n" +
-    "                        </div>\n" +
-    "                    </div>\n" +
-    "                    <div class=\"col-md-4\">\n" +
-    "                        <i class=\"fa fa-users fa-5x\"></i>\n" +
-    "                        <div class=\"service-title\">\n" +
-    "                            <h2>Marketing</h2>\n" +
-    "                        </div>\n" +
-    "                        <hr>\n" +
-    "                        <div class=\"service-des\">\n" +
-    "                            <p>Social Media Management</p>\n" +
-    "                            <p>Outreach Email Marketing</p>\n" +
-    "                            <p>Content Creation</p>\n" +
-    "                        </div>\n" +
-    "                    </div>\n" +
-    "                </div>\n" +
+    "                <a href=\"/about\"><button class=\"mainbutton service-button\" style=\"margin-top: 7.5%;\">More Info...</button></a>\n" +
     "            </div>-->\n" +
     "        </div>\n" +
     "    </div>\n" +
@@ -545,7 +502,7 @@ angular.module("home/index.tpl.html", []).run(["$templateCache", function($templ
     "                <defs>\n" +
     "                    <mask class=\"portfolio-mask\" id=\"portfolio-mask\" x=\"0\" y=\"0\" width=\"1920px\" height=\"400px\" maskUnits=\"userSpaceOnUse\">\n" +
     "                        <rect class=\"portfolio-rect\" x=\"0\" y=\"0\" width=\"1920px\" height=\"400px\"></rect>\n" +
-    "                        <text x=\"960\" y=\"60%\" class=\"large-medium-text\" id=\"portfolio-text\">our portfolio</text>\n" +
+    "                        <text x=\"960\" y=\"60%\" class=\"large-medium-text\" id=\"portfolio-text\">portfolio</text>\n" +
     "                    </mask>\n" +
     "                </defs>\n" +
     "                <rect class=\"portfolio-rect\" x=\"0\" y=\"0\" width=\"1920px\" height=\"400px\"></rect>\n" +
@@ -673,13 +630,15 @@ angular.module("intro/index.tpl.html", []).run(["$templateCache", function($temp
     "        <defs>\n" +
     "            <mask class=\"intro-mask\" id=\"intro-mask\" x=\"0\" y=\"0\" width=\"100%\" height=\"100%\" maskUnits=\"userSpaceOnUse\">\n" +
     "                <rect class=\"intro-rect\" x=\"0\" y=\"0\" width=\"1920px\" height=\"1080px\"></rect>\n" +
-    "                <text x=\"960\" y=\"27%\" class=\"large-text\">welcome</text>\n" +
-    "                <text x=\"960\" y=\"46%\" class=\"medium-text desktop\">embrace change with NOVO</text>\n" +
-    "                <text x=\"960\" y=\"44%\" class=\"medium-text mobile\">embrace change</text>\n" +
-    "                <text x=\"960\" y=\"49%\" class=\"medium-text mobile\">with NOVO</text>\n" +
-    "                <text x=\"960\" y=\"51%\" class=\"small-text mantra\">a full-scale online marketing, design, and web development firm</text>\n" +
-    "                <text x=\"960\" y=\"67.5%\" class=\"small-text learn-more\">learn more</text>\n" +
-    "                <a href=\"#about\" du-smooth-scroll>\n" +
+    "                    <svg width=\"1361\" height=\"461\" version=\"1.1\" id=\"Layer_1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"325\" y=\"17%\" enable-background=\"new 0 0 723 626\" xml:space=\"preserve\">\n" +
+    "                     <g>\n" +
+    "                      <g id=\"svg_1\" fill=\"#000000\" transform=\"translate(0,461) scale(0.10000000149011612,-0.10000000149011612) \">\n" +
+    "                       <path id=\"svg_2\" d=\"m4315,3849c-390,-27 -601,-107 -745,-281c-136,-162 -180,-345 -196,-800l-7,-208l-158,0l-159,0l-2,643l-3,642l-156,3c-123,2 -159,0 -168,-11c-8,-10 -12,-309 -13,-1112l-3,-1098l-350,415c-192,229 -608,722 -922,1096c-315,374 -580,687 -589,696c-14,14 -53,16 -327,14l-312,-3l0,-1315l0,-1315l154,-3c104,-2 158,1 167,9c12,10 14,197 14,1180l0,1169l39,0l38,0l1004,-1180l1004,-1180l210,2l210,3l3,588l2,587l164,0l163,0l6,-172c13,-368 58,-541 181,-704c117,-156 303,-240 618,-280c176,-22 971,-32 1226,-15c198,13 369,40 463,72c277,94 430,284 483,599c17,105 36,327 36,433l0,67l456,-2l456,-3l297,-585l297,-585l210,-2l209,-3l300,590l300,590l461,0l461,0l6,-172c19,-517 122,-741 406,-883c184,-92 378,-116 985,-122c617,-7 909,14 1097,78c277,94 430,284 483,599c17,105 36,327 36,433l0,67l380,0l380,0l0,85l0,85l-378,0l-378,0l-12,238c-13,251 -33,434 -57,518c-30,103 -94,214 -169,289c-83,84 -147,122 -273,165c-206,69 -444,90 -1008,90c-748,0 -983,-37 -1191,-185c-121,-87 -215,-228 -255,-384c-28,-109 -47,-286 -55,-523l-7,-208l-414,0l-415,0l65,123c35,67 174,338 307,602c134,264 250,488 258,498c12,14 13,22 4,42l-12,25l-1511,-2c-1373,-3 -1513,-4 -1522,-19c-8,-12 5,-46 56,-145c456,-897 567,-1117 567,-1120c0,-2 -184,-4 -408,-4l-408,0l-12,238c-13,251 -33,434 -57,518c-8,28 -33,89 -56,134c-49,98 -152,208 -239,258c-129,72 -344,122 -615,142c-160,11 -934,11 -1100,-1zm4766,-391c-69,-133 -371,-718 -760,-1472c-114,-220 -211,-401 -217,-403c-6,-2 -64,101 -129,229c-65,128 -180,352 -255,498c-213,412 -650,1268 -650,1274c0,3 468,6 1040,6l1040,0l-69,-132zm-3621,41c256,-18 383,-57 454,-141c42,-49 92,-165 112,-258c14,-70 34,-337 34,-467l0,-73l-1182,0l-1181,0l7,178c23,602 120,727 587,761c169,12 1001,12 1169,0zm6460,0c256,-18 383,-57 454,-141c42,-49 92,-165 112,-258c14,-70 34,-337 34,-467l0,-73l-1182,0l-1181,0l7,178c23,602 120,727 587,761c169,12 1001,12 1169,0zm-5873,-1266c-12,-289 -50,-426 -147,-524c-103,-105 -202,-125 -674,-140c-400,-12 -976,1 -1116,26c-156,29 -260,96 -315,205c-48,95 -85,314 -85,506l0,84l1172,0l1171,0l-6,-157zm6460,0c-12,-289 -50,-426 -147,-524c-103,-105 -202,-125 -674,-140c-400,-12 -976,1 -1116,26c-156,29 -260,96 -315,205c-48,95 -85,314 -85,506l0,84l1172,0l1171,0l-6,-157z\"/>\n" +
+    "                      </g>\n" +
+    "                     </g>\n" +
+    "                    </svg>                \n" +
+    "                <text x=\"960\" y=\"60%\" class=\"medium-text mantra\">full-stack online marketing, design, and web development</text>\n" +
+    "                <a href=\"/home#about/\" du-smooth-scroll>\n" +
     "                    <svg class=\"tri-before\" version=\"1.1\" id=\"Layer_1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"883px\" y=\"68%\" width=\"150px\" height=\"150px\" viewBox=\"0 0 723 626\" enable-background=\"new 0 0 723 626\" xml:space=\"preserve\">\n" +
     "                        <g>\n" +
     "                          <path fill=\"#232322\" d=\"M0,0h723v1.58c-3.72,4.37-5.58,9.96-8.89,14.62C596.69,219.439,479.44,422.79,361.96,626h-0.6\n" +
@@ -695,7 +654,7 @@ angular.module("intro/index.tpl.html", []).run(["$templateCache", function($temp
     "            </mask>\n" +
     "        </defs>\n" +
     "        <rect class=\"intro-rect\" x=\"0\" y=\"0\" width=\"1920px\" height=\"1080px\"></rect>\n" +
-    "        <a href=\"#about\" class=\"hvr-bob\" du-smooth-scroll>\n" +
+    "        <a href=\"/home#about/\" class=\"hvr-bob\" du-smooth-scroll >\n" +
     "            <svg class=\"tri-after\" version=\"1.1\" id=\"Layer_1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"883px\" y=\"68%\" width=\"150px\" height=\"150px\" viewBox=\"0 0 723 626\" enable-background=\"new 0 0 723 626\" xml:space=\"preserve\">\n" +
     "                <g>\n" +
     "                  <path fill=\"#232322\" d=\"M0,0h723v1.58c-3.72,4.37-5.58,9.96-8.89,14.62C596.69,219.439,479.44,422.79,361.96,626h-0.6\n" +
@@ -709,8 +668,21 @@ angular.module("intro/index.tpl.html", []).run(["$templateCache", function($temp
     "            </svg>\n" +
     "        </a>\n" +
     "    </svg>\n" +
-    "\n" +
-    "\n" +
+    "    \n" +
+    "    <video id=\"video\" autoplay=\"autoplay\" muted=\"muted\" preload=\"auto\" loop=\"loop\">\n" +
+    "        <source src=\"/videos/drawing.webm\" type=\"video/webm\">\n" +
+    "    </video>\n" +
+    "    <div class=\"intro-img\" id=\"image\"></div>\n" +
+    "</div>");
+}]);
+
+angular.module("intro/index2.tpl.html", []).run(["$templateCache", function($templateCache) {
+  $templateCache.put("intro/index2.tpl.html",
+    "<div class=\"intro-container\">\n" +
+    "    <svg class=\"intro\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 1920 1080\" \n" +
+    "         width=\"1920px\" height=\"1080px\" preserveAspectRatio=\"xMidYMid slice\">\n" +
+    "        <rect class=\"intro-rect\" x=\"0\" y=\"0\" width=\"1920px\" height=\"1080px\"></rect>\n" +
+    "    </svg>\n" +
     "    <video id=\"video\" autoplay=\"autoplay\" muted=\"muted\" preload=\"auto\" loop=\"loop\">\n" +
     "        <source src=\"/videos/drawing.webm\" type=\"video/webm\">\n" +
     "    </video>\n" +
@@ -862,22 +834,23 @@ angular.module("portfolio/index.tpl.html", []).run(["$templateCache", function($
 angular.module("sidebar/index.tpl.html", []).run(["$templateCache", function($templateCache) {
   $templateCache.put("sidebar/index.tpl.html",
     "<div ng-controller=\"SidebarCtrl\">\n" +
+    "    <div class=\"side-bars\">\n" +
+    "        <div class=\"icon-bar\"></div>\n" +
+    "        <div class=\"icon-bar\"></div>\n" +
+    "        <div class=\"icon-bar\"></div>\n" +
+    "    </div>   \n" +
     "    <div class=\"page-nav-zone\">\n" +
-    "        <div class=\"flex-item-top\"></div>\n" +
+    "        <div class=\"flex-item-top\"></div>     \n" +
     "        <div class=\"item-container\">\n" +
     "            <a href=\"/\">\n" +
     "                <div class=\"list-item\">\n" +
-    "                    <div class=\"nav-small-list\">\n" +
-    "                        <img style=\"max-width: 50%;\" src=\"/images/tri.png\"/>\n" +
-    "                    </div>\n" +
     "                    <div class=\"nav-large-list\">Home</div>\n" +
     "                </div>\n" +
     "            </a>\n" +
     "        </div>\n" +
     "        <div class=\"item-container\">\n" +
     "            <a href=\"/about/\">\n" +
-    "                <div class=\"list-item\">\n" +
-    "                    <div class=\"nav-small-list\"><i class=\"fa fa-info\"></i></div>\n" +
+    "                <div class=\"list-item\">                 \n" +
     "                    <div class=\"nav-large-list\">About</div>\n" +
     "                </div>\n" +
     "            </a>\n" +
@@ -885,7 +858,6 @@ angular.module("sidebar/index.tpl.html", []).run(["$templateCache", function($te
     "        <div class=\"item-container\">\n" +
     "            <a href=\"/portfolio/\">\n" +
     "                <div class=\"list-item\">\n" +
-    "                    <div class=\"nav-small-list\"><i class=\"fa fa-picture-o\"></i></div>\n" +
     "                    <div class=\"nav-large-list\">Portfolio</div>\n" +
     "                </div>\n" +
     "            </a>\n" +
@@ -893,19 +865,18 @@ angular.module("sidebar/index.tpl.html", []).run(["$templateCache", function($te
     "        <div class=\"item-container\">\n" +
     "            <a href=\"/contact/\">\n" +
     "                <div class=\"list-item\">\n" +
-    "                    <div class=\"nav-small-list\"><i class=\"fa fa-comment-o\"></i></div>\n" +
     "                    <div class=\"nav-large-list\">Contact</div>\n" +
     "                </div>\n" +
     "            </a>\n" +
     "        </div>\n" +
+    "        <!--\n" +
     "        <div class=\"item-container\">\n" +
     "            <a href=\"/blog/\">\n" +
     "                <div class=\"list-item\">\n" +
-    "                    <div class=\"nav-small-list\"><i class=\"fa fa-newspaper-o\"></i></div>\n" +
     "                    <div class=\"nav-large-list\">Blog</div>\n" +
     "                </div>\n" +
     "            </a>\n" +
-    "        </div>\n" +
+    "        </div> -->\n" +
     "        <div class=\"flex-item-bottom\"></div>\n" +
     "    </div>\n" +
     "</div>\n" +

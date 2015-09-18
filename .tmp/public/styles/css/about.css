@@ -6,6 +6,17 @@
 	text-align: center;
 }
 
+#about-overlay {
+	background-image:url(/images/overlay3.png);
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	z-index:-4;
+	overflow:hidden
+}
+
 .about-section-head {
 	padding:100px 0 30px;
 }
@@ -207,8 +218,5 @@
 @media screen and (max-width: 720px) {
     .about-tile {
         width: 100%;
-    }
-    .home-pad {
-        margin-left: 67px;
     }
 }

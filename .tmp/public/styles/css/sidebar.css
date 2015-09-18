@@ -7,10 +7,10 @@
     align-content: center;
     text-align: center;
     top:0;
-    opacity: 0.7;
+    opacity: 1;
     width:67px;
     height:100%;
-    background-color: black;
+    background-color: transparent;
     transition: width ease-in-out 0.3s;
     z-index: 5000;
     overflow: hidden;
@@ -51,6 +51,26 @@
     padding-right: 5px;
     z-index: 5003;
     align-items: center;
+}
+
+.side-bars {
+    position: absolute;
+    margin-left: 35px;
+    margin-top: 35px;
+    width: auto;
+    height: auto;
+    z-index: 4999;
+    align-items: center;
+}
+
+.icon-bar {
+    background: #fff;
+    width: 35px;
+    height: 5px;
+    margin-bottom: 5px;
+    -moz-box-shadow: 1px 2px 3px rgba(0,0,0,.5);
+    -webkit-box-shadow: 1px 2px 3px rgba(0,0,0,.5);
+    box-shadow: 1px 2px 3px rgba(0,0,0,.5);
 }
 
 .nav-large-list {
@@ -101,7 +121,7 @@
     .page-nav-zone:hover {
         width: 284px;
         opacity: 1.0;
-        background-color: #1db996;
+        background: rgba(20, 183, 149, 0.75);
     }
     .list-item:hover {
         font-size: 40px;
@@ -111,7 +131,7 @@
 @media screen and (max-width: 720px) {
     .page-nav-zone {
         opacity: 1.0;
-        background-color: #1db996;
+        background: rgba(20, 183, 149, 0.75);
         left: 0;
         box-shadow: 2px 0px 5px #000000;
     }
@@ -120,7 +140,7 @@
     }
 }
 
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 720px) {
     .page-nav-zone {
         width: 50px;
     }

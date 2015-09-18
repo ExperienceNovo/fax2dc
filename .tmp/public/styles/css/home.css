@@ -1,6 +1,5 @@
 html, body {
     height:100%;
-    background-color: #000;  
     overflow-x:hidden!important;
     margin:0;
     padding:0;
@@ -73,6 +72,7 @@ button.mainbutton {
 	border-radius:3px;
 	margin-top:25px;
 	cursor:pointer;
+    
 }
 
 button.mainbutton:hover {
@@ -90,13 +90,16 @@ button.service-button {
 	padding:10px 25px;
 	color:black;
 	text-transform:uppercase;
-	font-size:16px;
+	font-size:17px;
 	font-family: 'Quicksand', sans-serif;
-	font-weight:300;
+	font-weight:500;
 	transition:all .3s ease 0;
 	border-radius:3px;
 	margin-top:25px;
 	cursor:pointer;
+    -webkit-box-shadow: inset 1px 1px 1px 1px rgba(0,0,0,0.36);
+    -moz-box-shadow: inset 1px 1px 1px 1px rgba(0,0,0,0.36);
+    box-shadow: inset 1px 1px 1px 1px rgba(0,0,0,0.36);
 }
 
 button.service-button:hover {
@@ -108,11 +111,108 @@ button.service-button:focus {
 	outline:0;
 }
 
+.icon-cards {
+	position:absolute;
+	z-index:-2;
+	top:50%;
+	left:50%;
+	width:100%;
+	height:85vh;
+	-webkit-perspective:800px;
+	perspective:800px;
+	-webkit-transform:translate(-50%,-50%);
+	-ms-transform:translate(-50%,-50%);
+	transform:translate(-50%,-50%)
+}
+
+.icon-cards__content {
+	position:absolute;
+	width:100%;
+	height:85vh;
+	-webkit-transform-style:preserve-3d;
+	transform-style:preserve-3d;
+	-webkit-transform:translateZ(-650px) rotateY(0);
+	transform:translateZ(-650px) rotateY(0);
+	-webkit-animation:carousel 35s infinite cubic-bezier(1,0.015,0.295,1.225) forwards;
+	animation:carousel 35s infinite cubic-bezier(1,0.015,0.295,1.225) forwards
+}
+
+.icon-cards__item {
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:85vh;
+	border-radius:6px
+}
+
+.icon-cards__item:nth-child(1) {
+	background:rgba(255,255,255,0.75);
+	-webkit-transform:rotateY(0) translateZ(650px);
+	transform:rotateY(0) translateZ(650px)
+}
+
+.icon-cards__item:nth-child(2) {
+	background:rgba(255,255,255,0.75);
+	-webkit-transform:rotateY(120deg) translateZ(650px);
+	transform:rotateY(120deg) translateZ(650px)
+}
+
+.icon-cards__item:nth-child(3) {
+	background:rgba(255,255,255,0.75);
+	-webkit-transform:rotateY(240deg) translateZ(650px);
+	transform:rotateY(240deg) translateZ(650px)
+}
+
+@-webkit-keyframes carousel {
+0%,17.5% {
+	-webkit-transform:translateZ(-650px) rotateY(0);
+	transform:translateZ(-650px) rotateY(0)
+}
+
+27.5%,45% {
+	-webkit-transform:translateZ(-650px) rotateY(-120deg);
+	transform:translateZ(-650px) rotateY(-120deg)
+}
+
+55%,72.5% {
+	-webkit-transform:translateZ(-650px) rotateY(-240deg);
+	transform:translateZ(-650px) rotateY(-240deg)
+}
+
+82.5%,100% {
+	-webkit-transform:translateZ(-650px) rotateY(-360deg);
+	transform:translateZ(-650px) rotateY(-360deg)
+}
+}
+
+@keyframes carousel {
+0%,17.5% {
+	-webkit-transform:translateZ(-650px) rotateY(0);
+	transform:translateZ(-650px) rotateY(0)
+}
+
+27.5%,45% {
+	-webkit-transform:translateZ(-650px) rotateY(-120deg);
+	transform:translateZ(-650px) rotateY(-120deg)
+}
+
+55%,72.5% {
+	-webkit-transform:translateZ(-650px) rotateY(-240deg);
+	transform:translateZ(-650px) rotateY(-240deg)
+}
+
+82.5%,100% {
+	-webkit-transform:translateZ(-650px) rotateY(-360deg);
+	transform:translateZ(-650px) rotateY(-360deg)
+}
+}
+
 .services {
 	width:100%;
-	background:url(/images/texture-bg.png) repeat;
+	background:url(/images/stock3.jpg);
+	background-size:cover;
 	height: 85vh;
-	min-height: 750px;
 	border-top: 3px solid #2ab996;
 	position: relative;
 	z-index: 2;
@@ -130,7 +230,7 @@ button.service-button:focus {
 }
 
 .section-head h3 {
-	font-family:Jura;
+	font-family:'Jura',sans-serif;
 	color:#000;
 	font-size:4em;
 	font-weight:600;
@@ -163,11 +263,9 @@ button.service-button:focus {
 	background-position:-201px 0;
 }
 
-.services-list {
-}
-
 .service-title h2 {
     position: relative;
+    text-transform: capitalize;
     z-index: 80;
 	font-family: 'Quicksand', sans-serif;
 	font-size: 2.2em !important;
@@ -180,9 +278,16 @@ button.service-button:focus {
 
 .service-title-bar {
     color: white !important;
-    background: rgba(0,0,0,0.7);
+    background: rgba(0,0,0,0.65);
     border: 1px solid white;
     transition: background 0.3s;
+    padding: 15px;
+    z-index: 80;
+	font-family: 'Quicksand', sans-serif;
+	font-size: 5em !important;
+	letter-spacing: 2px;
+	font-weight: 300 !important;
+    text-transform: uppercase;
 }
 
 .service-title-bar:hover {
@@ -192,15 +297,18 @@ button.service-button:focus {
 
 .service-des {
 	font-family: 'Quicksand', sans-serif;
-	line-height:190%;
 	color:#222;
 	background: rgba(255,255,255,0.8);
 	border: 1px solid black;
 	z-index: 85;
+    height: 100px;
 	position: relative;
 	margin-top:30px;
-	font-size: 1.3em;
+	font-size: 1.75em;
+    font-weight: bold;
 	padding: 2%;
+    text-transform: capitalize;
+    text-align: center;
 }
 
 .name {
@@ -217,6 +325,7 @@ button.service-button:focus {
 .portfolio-home-container {
     cursor: default;
     height: 30vh;
+    border-top: 3px solid #2ab996;
     min-height: 250px;
 }
 
@@ -274,6 +383,10 @@ button.service-button:focus {
 	width:100%;
 	text-align:center;
 	border-bottom: 3px solid #2ab996;
+}
+
+.desc-item {
+	font-size: 3em;
 }
 
 .desc h3 {
@@ -370,11 +483,12 @@ button.service-button:focus {
 	height: auto;
 	background:url(/images/texture-bg.png) repeat;
 }
+
 .contact-container {
 	padding-top: 100px;
 	padding-bottom: 50px;
-	//background: url(/images/texture-bg.png) repeat;
-	//border-bottom: 3px solid #2ab996;
+	background: url(/images/texture-bg.png) repeat;
+	border-bottom: 3px solid #2ab996;
 }
 
 .contact-home {

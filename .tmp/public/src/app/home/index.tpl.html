@@ -1,13 +1,29 @@
 <div class="surface-container-home">
     <div ng-include="'intro/index.tpl.html'"></div>
     <div class="services" id="about">
-        <div class="section-head">
-            <h3>our services</h3>
-            <!-- maybe "what we do"? idk -->
-            <hr>
-        </div>
+        <figure class="icon-cards">
+          <div class="icon-cards__content">
+            <div class="icon-cards__item">
+                <a href="/about#design-div/">
+                  <h2 class="service-title-bar">design</h2>
+                </a>
+                <div class="desc-item">graphics & animation</div>
+                <div class="desc-item">company branding</div>
+                <div class="desc-item">UI/UX design</div>
+            </div>
+            <div class="icon-cards__item">
+              
 
-        <div class="services-list">
+
+            </div>
+            <div class="icon-cards__item">
+              
+
+
+            </div>
+          </div>
+        </figure>
+      <!--  <div class="services-list">
             <div class="row">
                 <div class="col-md-12">
                     <div class="col-md-4 flex">
@@ -15,15 +31,15 @@
                             <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="144px" height="144px" viewBox="0 0 144 144" enable-background="new 0 0 144 144" xml:space="preserve">
                                 <polygon fill="none" stroke="#14B795" stroke-width="5" stroke-miterlimit="10" points="6.946,15.479 137.053,15.479 72,128.151 "></polygon>
                             </svg>
-                            <div class="service-title">
+                            <div class="service-title desc1">
                                 <a href="/about#design-div/">
                                     <h2 class="service-title-bar">design</h2>
                                 </a>
                             </div>
                             <div class="service-des">
-                                <p>graphics & animation</p>
-                                <p>company branding</p>
-                                <p>UI/UX design</p>
+                                <div class="desc-item">graphics & animation</div>
+                                <div class="desc-item">company branding</div>
+                                <div class="desc-item">UI/UX design</div>
                             </div>
                         </div>
                     </div>
@@ -38,9 +54,9 @@
                                 </a>
                             </div>
                             <div class="service-des">
-                                <p>mobile-first design</p>
-                                <p>SEO</p>
-                                <p>back-end integration</p>
+                                <div class="desc-item">mobile-ready <br> design</div>
+                                <div class="desc-item">SEO</div>
+                                <div class="desc-item">back-end <br> integration</div>
                             </div>
                         </div>
                     </div>
@@ -49,61 +65,20 @@
                             <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="144px" height="144px" viewBox="0 0 144 144" enable-background="new 0 0 144 144" xml:space="preserve">
                                 <polygon fill="none" stroke="#14B795" stroke-width="5" stroke-miterlimit="10" points="6.946,15.479 137.053,15.479 72,128.151 "></polygon>
                             </svg>
-                            <div class="service-title">
+                            <div class="service-title desc3">
                                 <a href="/about#marketing-div/">
                                     <h2 class="service-title-bar">marketing</h2>
                                 </a>
                             </div>
                             <div class="service-des">
-                                <p>social media management</p>
-                                <p>email marketing</p>
-                                <p>content creation</p>
+                                <div class="desc-item">social media <br> management</div>
+                                <div class="desc-item">email marketing</div>
+                                <div class="desc-item">content creation</div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <a href="/about/"><button class="mainbutton service-button" style="margin-top: 7.5%;">More Info...</button></a>
-            </div>
-            <!--<div class="services-list">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="col-md-4">
-                        <i class="fa fa-paint-brush fa-5x"></i>
-                        <div class="service-title">
-                            <h2>Design</h2>
-                        </div>
-                        <hr>
-                        <div class="service-des">
-                            <p>Graphics & Animation</p>
-                            <p>Custom Interface Design</p>
-                            <p>Company Branding</p>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <i class="fa fa-code fa-5x"></i>
-                        <div class="service-title">
-                            <h2>Development</h2>
-                        </div>
-                        <hr>
-                        <div class="service-des">
-                            <p>Mobile-first Web Design</p>
-                            <p>SEO Structuring</p>
-                            <p>Back-end Software Integration</p>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <i class="fa fa-users fa-5x"></i>
-                        <div class="service-title">
-                            <h2>Marketing</h2>
-                        </div>
-                        <hr>
-                        <div class="service-des">
-                            <p>Social Media Management</p>
-                            <p>Outreach Email Marketing</p>
-                            <p>Content Creation</p>
-                        </div>
-                    </div>
-                </div>
+                <a href="/about"><button class="mainbutton service-button" style="margin-top: 7.5%;">More Info...</button></a>
             </div>-->
         </div>
     </div>
@@ -114,7 +89,7 @@
                 <defs>
                     <mask class="portfolio-mask" id="portfolio-mask" x="0" y="0" width="1920px" height="400px" maskUnits="userSpaceOnUse">
                         <rect class="portfolio-rect" x="0" y="0" width="1920px" height="400px"></rect>
-                        <text x="960" y="60%" class="large-medium-text" id="portfolio-text">our portfolio</text>
+                        <text x="960" y="60%" class="large-medium-text" id="portfolio-text">portfolio</text>
                     </mask>
                 </defs>
                 <rect class="portfolio-rect" x="0" y="0" width="1920px" height="400px"></rect>
