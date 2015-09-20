@@ -53,6 +53,13 @@
     align-items: center;
 }
 
+@media screen and (max-width: 720px) {
+.side-bars {
+    display:none;
+}
+}
+
+
 .side-bars {
     position: absolute;
     margin-left: 35px;

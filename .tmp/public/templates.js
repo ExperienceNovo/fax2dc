@@ -412,31 +412,23 @@ angular.module("contact/index.tpl.html", []).run(["$templateCache", function($te
 angular.module("home/index.tpl.html", []).run(["$templateCache", function($templateCache) {
   $templateCache.put("home/index.tpl.html",
     "<div class=\"surface-container-home\">\n" +
-    "    <div ng-include=\"'intro/index.tpl.html'\"></div>\n" +
-    "    <div class=\"services\" id=\"about\">\n" +
-    "        <figure class=\"icon-cards\">\n" +
+    "  <div ng-include=\"'intro/index.tpl.html'\"></div>\n" +
+    "   <div class=\"services\" id=\"about\">\n" +
+    "       <!--  <figure class=\"icon-cards\">\n" +
     "          <div class=\"icon-cards__content\">\n" +
     "            <div class=\"icon-cards__item\">\n" +
-    "                <a href=\"/about#design-div/\">\n" +
-    "                  <h2 class=\"service-title-bar\">design</h2>\n" +
-    "                </a>\n" +
-    "                <div class=\"desc-item\">graphics & animation</div>\n" +
-    "                <div class=\"desc-item\">company branding</div>\n" +
-    "                <div class=\"desc-item\">UI/UX design</div>\n" +
-    "            </div>\n" +
-    "            <div class=\"icon-cards__item\">\n" +
-    "              \n" +
-    "\n" +
+    "            <h3 style=\"margin-top:5%\" class=\"medium-text\">design</h3>\n" +
     "\n" +
     "            </div>\n" +
     "            <div class=\"icon-cards__item\">\n" +
-    "              \n" +
-    "\n" +
-    "\n" +
+    "              <h3 style=\"margin-top:5%\" class=\"medium-text\">development</h3>\n" +
+    "            </div>\n" +
+    "            <div class=\"icon-cards__item\">\n" +
+    "              <h3 style=\"margin-top:5%\" class=\"medium-text\">marketing</h3>\n" +
     "            </div>\n" +
     "          </div>\n" +
     "        </figure>\n" +
-    "      <!--  <div class=\"services-list\">\n" +
+    "        <div class=\"services-list\">\n" +
     "            <div class=\"row\">\n" +
     "                <div class=\"col-md-12\">\n" +
     "                    <div class=\"col-md-4 flex\">\n" +
@@ -492,8 +484,8 @@ angular.module("home/index.tpl.html", []).run(["$templateCache", function($templ
     "                    </div>\n" +
     "                </div>\n" +
     "                <a href=\"/about\"><button class=\"mainbutton service-button\" style=\"margin-top: 7.5%;\">More Info...</button></a>\n" +
-    "            </div>-->\n" +
-    "        </div>\n" +
+    "            </div>\n" +
+    "        </div>-->\n" +
     "    </div>\n" +
     "\n" +
     "    <div class=\"portfolio-home-container\">\n" +
@@ -617,63 +609,77 @@ angular.module("home/index.tpl.html", []).run(["$templateCache", function($templ
     "    <div class=\"footer\">\n" +
     "        <div class=\"footer-text\">© 2015 NOVO, LLC.</div>\n" +
     "    </div>\n" +
-    "</div>\n" +
-    "\n" +
-    "\n" +
-    "");
+    "</div>");
 }]);
 
 angular.module("intro/index.tpl.html", []).run(["$templateCache", function($templateCache) {
   $templateCache.put("intro/index.tpl.html",
-    "<div class=\"intro-container\">\n" +
-    "    <svg class=\"intro\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 1920 1080\" width=\"1920px\" height=\"1080px\" preserveAspectRatio=\"xMidYMid slice\">\n" +
-    "        <defs>\n" +
-    "            <mask class=\"intro-mask\" id=\"intro-mask\" x=\"0\" y=\"0\" width=\"100%\" height=\"100%\" maskUnits=\"userSpaceOnUse\">\n" +
-    "                <rect class=\"intro-rect\" x=\"0\" y=\"0\" width=\"1920px\" height=\"1080px\"></rect>\n" +
-    "                    <svg width=\"1361\" height=\"461\" version=\"1.1\" id=\"Layer_1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"325\" y=\"17%\" enable-background=\"new 0 0 723 626\" xml:space=\"preserve\">\n" +
-    "                     <g>\n" +
-    "                      <g id=\"svg_1\" fill=\"#000000\" transform=\"translate(0,461) scale(0.10000000149011612,-0.10000000149011612) \">\n" +
-    "                       <path id=\"svg_2\" d=\"m4315,3849c-390,-27 -601,-107 -745,-281c-136,-162 -180,-345 -196,-800l-7,-208l-158,0l-159,0l-2,643l-3,642l-156,3c-123,2 -159,0 -168,-11c-8,-10 -12,-309 -13,-1112l-3,-1098l-350,415c-192,229 -608,722 -922,1096c-315,374 -580,687 -589,696c-14,14 -53,16 -327,14l-312,-3l0,-1315l0,-1315l154,-3c104,-2 158,1 167,9c12,10 14,197 14,1180l0,1169l39,0l38,0l1004,-1180l1004,-1180l210,2l210,3l3,588l2,587l164,0l163,0l6,-172c13,-368 58,-541 181,-704c117,-156 303,-240 618,-280c176,-22 971,-32 1226,-15c198,13 369,40 463,72c277,94 430,284 483,599c17,105 36,327 36,433l0,67l456,-2l456,-3l297,-585l297,-585l210,-2l209,-3l300,590l300,590l461,0l461,0l6,-172c19,-517 122,-741 406,-883c184,-92 378,-116 985,-122c617,-7 909,14 1097,78c277,94 430,284 483,599c17,105 36,327 36,433l0,67l380,0l380,0l0,85l0,85l-378,0l-378,0l-12,238c-13,251 -33,434 -57,518c-30,103 -94,214 -169,289c-83,84 -147,122 -273,165c-206,69 -444,90 -1008,90c-748,0 -983,-37 -1191,-185c-121,-87 -215,-228 -255,-384c-28,-109 -47,-286 -55,-523l-7,-208l-414,0l-415,0l65,123c35,67 174,338 307,602c134,264 250,488 258,498c12,14 13,22 4,42l-12,25l-1511,-2c-1373,-3 -1513,-4 -1522,-19c-8,-12 5,-46 56,-145c456,-897 567,-1117 567,-1120c0,-2 -184,-4 -408,-4l-408,0l-12,238c-13,251 -33,434 -57,518c-8,28 -33,89 -56,134c-49,98 -152,208 -239,258c-129,72 -344,122 -615,142c-160,11 -934,11 -1100,-1zm4766,-391c-69,-133 -371,-718 -760,-1472c-114,-220 -211,-401 -217,-403c-6,-2 -64,101 -129,229c-65,128 -180,352 -255,498c-213,412 -650,1268 -650,1274c0,3 468,6 1040,6l1040,0l-69,-132zm-3621,41c256,-18 383,-57 454,-141c42,-49 92,-165 112,-258c14,-70 34,-337 34,-467l0,-73l-1182,0l-1181,0l7,178c23,602 120,727 587,761c169,12 1001,12 1169,0zm6460,0c256,-18 383,-57 454,-141c42,-49 92,-165 112,-258c14,-70 34,-337 34,-467l0,-73l-1182,0l-1181,0l7,178c23,602 120,727 587,761c169,12 1001,12 1169,0zm-5873,-1266c-12,-289 -50,-426 -147,-524c-103,-105 -202,-125 -674,-140c-400,-12 -976,1 -1116,26c-156,29 -260,96 -315,205c-48,95 -85,314 -85,506l0,84l1172,0l1171,0l-6,-157zm6460,0c-12,-289 -50,-426 -147,-524c-103,-105 -202,-125 -674,-140c-400,-12 -976,1 -1116,26c-156,29 -260,96 -315,205c-48,95 -85,314 -85,506l0,84l1172,0l1171,0l-6,-157z\"/>\n" +
-    "                      </g>\n" +
-    "                     </g>\n" +
-    "                    </svg>                \n" +
-    "                <text x=\"960\" y=\"60%\" class=\"medium-text mantra\">full-stack online marketing, design, and web development</text>\n" +
-    "                <a href=\"/home#about/\" du-smooth-scroll>\n" +
-    "                    <svg class=\"tri-before\" version=\"1.1\" id=\"Layer_1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"883px\" y=\"68%\" width=\"150px\" height=\"150px\" viewBox=\"0 0 723 626\" enable-background=\"new 0 0 723 626\" xml:space=\"preserve\">\n" +
-    "                        <g>\n" +
-    "                          <path fill=\"#232322\" d=\"M0,0h723v1.58c-3.72,4.37-5.58,9.96-8.89,14.62C596.69,219.439,479.44,422.79,361.96,626h-0.6\n" +
-    "                            C243.45,421.77,125.54,217.55,7.63,13.32C5.09,9.061,2.85,4.62,0,0.55V0z\"></path>\n" +
-    "                          <path fill=\"#FFFFFF\" d=\"M86.57,48.002c183.289,0.01,366.569-0.02,549.859,0.02c-40.779,70.681-81.6,141.33-122.39,212.01\n" +
-    "                            c-7.36,12.841-14.91,25.58-22.11,38.521l-0.229-0.01c-86.79-0.09-173.59-0.06-260.38-0.011h-0.211\n" +
-    "                            c-20.239-35.569-40.899-70.899-61.289-106.379C142.061,144.111,114.359,96.031,86.57,48.002z\"></path>\n" +
-    "                          <path fill=\"#21B795\" d=\"M231.311,298.599c86.79-0.049,173.59-0.079,260.38,0.011c-19.42,34.3-39.36,68.31-59,102.479\n" +
-    "                            c-23.71,41.091-47.44,82.16-71.15,123.25c-20.92-36.039-41.68-72.17-62.55-108.229C276.48,376.909,253.65,337.89,231.311,298.599z\"></path>\n" +
-    "                        </g>\n" +
-    "                    </svg>\n" +
-    "                </a>\n" +
-    "            </mask>\n" +
-    "        </defs>\n" +
-    "        <rect class=\"intro-rect\" x=\"0\" y=\"0\" width=\"1920px\" height=\"1080px\"></rect>\n" +
-    "        <a href=\"/home#about/\" class=\"hvr-bob\" du-smooth-scroll >\n" +
-    "            <svg class=\"tri-after\" version=\"1.1\" id=\"Layer_1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"883px\" y=\"68%\" width=\"150px\" height=\"150px\" viewBox=\"0 0 723 626\" enable-background=\"new 0 0 723 626\" xml:space=\"preserve\">\n" +
-    "                <g>\n" +
-    "                  <path fill=\"#232322\" d=\"M0,0h723v1.58c-3.72,4.37-5.58,9.96-8.89,14.62C596.69,219.439,479.44,422.79,361.96,626h-0.6\n" +
-    "                    C243.45,421.77,125.54,217.55,7.63,13.32C5.09,9.061,2.85,4.62,0,0.55V0z\"></path>\n" +
-    "                  <path fill=\"#FFFFFF\" d=\"M86.57,48.002c183.289,0.01,366.569-0.02,549.859,0.02c-40.779,70.681-81.6,141.33-122.39,212.01\n" +
-    "                    c-7.36,12.841-14.91,25.58-22.11,38.521l-0.229-0.01c-86.79-0.09-173.59-0.06-260.38-0.011h-0.211\n" +
-    "                    c-20.239-35.569-40.899-70.899-61.289-106.379C142.061,144.111,114.359,96.031,86.57,48.002z\"></path>\n" +
-    "                  <path fill=\"#21B795\" d=\"M231.311,298.599c86.79-0.049,173.59-0.079,260.38,0.011c-19.42,34.3-39.36,68.31-59,102.479\n" +
-    "                    c-23.71,41.091-47.44,82.16-71.15,123.25c-20.92-36.039-41.68-72.17-62.55-108.229C276.48,376.909,253.65,337.89,231.311,298.599z\"></path>\n" +
-    "                </g>\n" +
-    "            </svg>\n" +
-    "        </a>\n" +
+    "<div class=\"intro\">\n" +
+    "  <div class=\"intro-container\">\n" +
+    "\n" +
+    "    <svg class=\"svg-defs\" viewBox=\"0 0 1920 1080\" xmlns=\"http://www.w3.org/2000/svg\">\n" +
+    "      <!-- Symbol with text -->\n" +
+    "      <symbol id=\"s-text\">\n" +
+    "        <text text-anchor=\"middle\"\n" +
+    "              x=\"970\"  \n" +
+    "              y=\"650\"\n" +
+    "              dy=\".35em\"\n" +
+    "              class=\"medium-text\"\n" +
+    "              >\n" +
+    "          full-stack design, development, and marketing\n" +
+    "        </text>    \n" +
+    "      </symbol>\n" +
+    "      <!-- Mask with text -->\n" +
+    "      <mask id=\"m-text\"\n" +
+    "            maskunits=\"userSpaceOnUse\"\n" +
+    "            maskcontentunits=\"userSpaceOnUse\">\n" +
+    "\n" +
+    "        <rect\n" +
+    "              width=\"100%\"\n" +
+    "              height=\"100%\"\n" +
+    "              class=\"mask__shape\">\n" +
+    "        </rect>\n" +
+    "        <use xlink:href=\"#s-text\"\n" +
+    "             class=\"mask__text\"\n" +
+    "             ></use>\n" +
+    "        <use xlink:href=\"#novo\" />\n" +
+    "      </mask>\n" +
     "    </svg>\n" +
-    "    \n" +
-    "    <video id=\"video\" autoplay=\"autoplay\" muted=\"muted\" preload=\"auto\" loop=\"loop\">\n" +
-    "        <source src=\"/videos/drawing.webm\" type=\"video/webm\">\n" +
-    "    </video>\n" +
-    "    <div class=\"intro-img\" id=\"image\"></div>\n" +
-    "</div>");
+    "\n" +
+    "    <svg style=\"display: none;\" xmlns=\"http://www.w3.org/2000/svg\">\n" +
+    "      <symbol id=\"novo\">\n" +
+    "        <path transform=\"translate(375,625) scale(0.09,-0.09)\" d=\"m4315 3849c-390 -27 -601 -107 -745 -281c-136 -162 -180 -345 -196 -800l-7 -208l-158 0l-159 0l-2 643l-3 642l-156 3c-123 2 -159 0 -168 -11c-8 -10 -12 -309 -13 -1112l-3 -1098l-350 415c-192 229 -608 722 -922 1096c-315 374 -580 687 -589 696c-14 14 -53 16 -327 14l-312 -3l0 -1315l0 -1315l154 -3c104 -2 158 1 167 9c12 10 14 197 14 1180l0 1169l39 0l38 0l1004 -1180l1004 -1180l210 2l210 3l3 588l2 587l164 0l163 0l6 -172c13 -368 58 -541 181 -704c117 -156 303 -240 618 -280c176 -22 971 -32 1226 -15c198 13 369 40 463 72c277 94 430 284 483 599c17 105 36 327 36 433l0 67l456 -2l456 -3l297 -585l297 -585l210 -2l209 -3l300 590l300 590l461 0l461 0l6 -172c19 -517 122 -741 406 -883c184 -92 378 -116 985 -122c617 -7 909 14 1097 78c277 94 430 284 483 599c17 105 36 327 36 433l0 67l380 0l380 0l0 85l0 85l-378 0l-378 0l-12 238c-13 251 -33 434 -57 518c-30 103 -94 214 -169 289c-83 84 -147 122 -273 165c-206 69 -444 90 -1008 90c-748 0 -983 -37 -1191 -185c-121 -87 -215 -228 -255 -384c-28 -109 -47 -286 -55 -523l-7 -208l-414 0l-415 0l65 123c35 67 174 338 307 602c134 264 250 488 258 498c12 14 13 22 4 42l-12 25l-1511 -2c-1373 -3 -1513 -4 -1522 -19c-8 -12 5 -46 56 -145c456 -897 567 -1117 567 -1120c0 -2 -184 -4 -408 -4l-408 0l-12 238c-13 251 -33 434 -57 518c-8 28 -33 89 -56 134c-49 98 -152 208 -239 258c-129 72 -344 122 -615 142c-160 11 -934 11 -1100 -1zm4766 -391c-69 -133 -371 -718 -760 -1472c-114 -220 -211 -401 -217 -403c-6 -2 -64 101 -129 229c-65 128 -180 352 -255 498c-213 412 -650 1268 -650 1274c0 3 468 6 1040 6l1040 0l-69 -132zm-3621 41c256 -18 383 -57 454 -141c42 -49 92 -165 112 -258c14 -70 34 -337 34 -467l0 -73l-1182 0l-1181 0l7 178c23 602 120 727 587 761c169 12 1001 12 1169 0zm6460 0c256 -18 383 -57 454 -141c42 -49 92 -165 112 -258c14 -70 34 -337 34 -467l0 -73l-1182 0l-1181 0l7 178c23 602 120 727 587 761c169 12 1001 12 1169 0zm-5873 -1266c-12 -289 -50 -426 -147 -524c-103 -105 -202 -125 -674 -140c-400 -12 -976 1 -1116 26c-156 29 -260 96 -315 205c-48 95 -85 314 -85 506l0 84l1172 0l1171 0l-6 -157zm6460 0c-12 -289 -50 -426 -147 -524c-103 -105 -202 -125 -674 -140c-400 -12 -976 1 -1116 26c-156 29 -260 96 -315 205c-48 95 -85 314 -85 506l0 84l1172 0l1171 0l-6 -157z\"/>\n" +
+    "      </symbol>\n" +
+    "    </svg>\n" +
+    "\n" +
+    "      <div class=\"svg-container\">\n" +
+    "        <div class=\"box-with-text\">\n" +
+    "          <!-- Container for video -->\n" +
+    "          <div class=\"text-fill\">\n" +
+    "            <video \n" +
+    "                   class=\"video\" src=\"//secure-c.vimeocdn.com/p/video/yosemite_hd_ii_hd.webm#t=93,300\" preload=\"auto\" autoplay=\"autoplay\" loop=\"loop\" muted=\"muted\"></video>\n" +
+    "          </div>\n" +
+    "\n" +
+    "          <!-- Visible SVG -->\n" +
+    "          <svg class=\"svg-inverted-mask\" viewBox=\"0 0 1920 1080\" viewPort=\"0 0 1920 1080\" xmlns=\"http://www.w3.org/2000/svg\">\n" +
+    "            <rect\n" +
+    "                  width=\"100%\"\n" +
+    "                  height=\"100%\"\n" +
+    "                  mask=\"url(#m-text)\"\n" +
+    "                  class=\"shape--fill\"/>\n" +
+    "            <use xlink:href=\"#s-text\"\n" +
+    "                 class=\"text--transparent\"\n" +
+    "                 ></use>\n" +
+    "          </svg> \n" +
+    "        </div>\n" +
+    "      </div>\n" +
+    "\n" +
+    "  <div class=\"intro-img mobile\"></div>\n" +
+    "\n" +
+    "  </div>\n" +
+    "</div>\n" +
+    "\n" +
+    "");
 }]);
 
 angular.module("intro/index2.tpl.html", []).run(["$templateCache", function($templateCache) {

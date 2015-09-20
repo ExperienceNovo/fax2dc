@@ -1,13 +1,137 @@
 @import url(https://fonts.googleapis.com/css?family=Squada+One|Days+One|Ubuntu:400,500,700);
 
-html {
-	height:100%;
-	overflow:hidden;
-	font-weight:100
+html, body {
+  	height: 100%; margin:0; padding:0; 
 }
 
-body {
-	height:100%
+.intro {
+    position: relative;
+    top: 0;
+}
+
+.intro-container {
+    cursor: default;
+	min-height:100vh;
+	min-width:100vw;
+	height:100%;
+	width:100%;
+    z-index: 1;
+}
+
+.intro-img {
+   visibility: hidden;
+   position: absolute;
+   top: 0%;
+   left: 0%;
+   min-width: 100%;
+   min-height: 100%;
+   z-index: -4;
+   overflow: hidden;
+   background: url(/images/pen.jpg);
+   -webkit-background-size: cover;
+   -moz-background-size: cover;
+   -o-background-size: cover;
+   background-size: cover;
+}
+
+/* intro shit */
+.mask__shape {
+	fill:#fff
+}
+
+.shape--fill {
+	fill:rgba(0,0,0,0.65);
+	min-width:100%;
+	min-height:100%
+}
+
+.text--transparent {
+	fill:transparent;
+	display: inline-block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	margin: 0 auto;
+}
+
+.box-with-text {
+	display: inline-block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	margin: 0 auto;
+}
+
+.text-fill {
+	z-index:-5;
+	margin:auto;
+	overflow:hidden
+}
+
+.video {
+	position:absolute;
+	top:0;
+	left:0;
+	bottom:0;
+	min-width: 100%;
+	min-height: 100%;
+	z-index:-5
+}
+
+.svg-defs {
+	width:0;
+	height: 0
+}
+
+.svg-inverted-mask {
+    min-width: 100%;
+    min-height: 100%;
+    margin: auto;
+    overflow: auto;
+	z-index:2
+}
+/* end intro shit */
+
+.large-text {
+    font-family: 'Ubuntu', sans-serif;
+	font-weight:700;
+	font-size:16.5em;
+	letter-spacing:.05em
+}
+
+.large-medium-text {
+	font-family:'Jura',sans-serif;
+	font-weight:400;
+	font-size:14em;
+	letter-spacing:-.02em
+}
+
+.medium-text {
+	font-family:'Jura',sans-serif;
+	font-weight:400;
+	font-size:5em;
+	letter-spacing:-.04em
+}
+
+.small-text {
+	font-family:'Jura',sans-serif;
+	font-weight:600;
+	font-size:3em;
+	letter-spacing:2px;
+}
+
+.learn-more {
+	font-size:25px!important;
+	font-weight:700;
+	letter-spacing:-.05em
+}
+
+.mobile {
+	visibility:hidden
 }
 
 /* Bob */
@@ -88,191 +212,8 @@ body {
 	animation-direction:normal,alternate
 }
 
-.intro {
-	position:relative;
-	top:0
-}
-
-.intro-container {
-	cursor:default;
-	height:100vh;
-	min-height:100vh;
-	z-index:1
-}
-
-.intro-mask {
-	z-index:2
-}
-
-.intro-img {
-	visibility:hidden;
-	position:absolute;
-	top:0;
-	left:0;
-	min-width:100%;
-	min-height:28%;
-	width:auto;
-	height:auto!important;
-	z-index:-4;
-	overflow:hidden;
-    background: url(/images/overlay3.png), url(/images/keys.jpg);
-	-webkit-background-size:cover;
-	-moz-background-size:cover;
-	-o-background-size:cover;
-	background-size:cover
-}
-
-.large-text {
-    font-family: 'Ubuntu', sans-serif;
-	font-weight:700;
-	font-size:16.5em;
-	letter-spacing:.05em
-}
-
-/*
-font-family: 'Squada One', cursive;
-*/
-
-.large-medium-text {
-	font-family:'Jura',sans-serif;
-	font-weight:400;
-	font-size:14em;
-	letter-spacing:-.02em
-}
-
-.medium-text {
-	font-family:'Jura',sans-serif;
-	font-weight:400;
-	font-size:4.5em;
-	letter-spacing:-.04em
-}
-
-.small-text {
-	font-family:'Jura',sans-serif;
-	font-weight:600;
-	font-size:3em;
-	letter-spacing:2px;
-}
-
-.learn-more {
-	font-size:25px!important;
-	font-weight:700;
-	letter-spacing:-.05em
-}
-
-.tri-after {
-	opacity:0;
-	transition:opacity .2s
-}
-
-.tri-after:hover {
-	opacity:1
-}
-
-.mobile {
-	visibility:hidden
-}
-
-svg {
-	width:100%;
-	height:100%;
-	//position:absolute
-}
-
-svg text {
-	text-anchor:middle
-}
-
-svg mask rect {
-	fill:rgba(255,255,255,1.0);
-	opacity:0.75
-}
-
-svg > .intro-rect {
-	//fill:#2ab996;
-/* novo green */
-	fill:#fff;
-	opacity:.75;
-	-webkit-mask:url(#intro-mask);
-/* for webkit browsers */
-	mask:url(#intro-mask)
-/* for Firefox */
-}
-
-svg > .portfolio-rect {
-	//fill:#2ab996;
-/* novo green */
-	fill:#fff;
-	opacity:.75;
-	-webkit-mask:url(#portfolio-mask);
-/* for webkit browsers */
-	mask:url(#portfolio-mask)
-/* for Firefox */
-}
-
-.portfolio-rect:hover {
-	fill:#2ab996;
-	transition:fill .2s
-}
-
-svg > .newsletter-rect {
-	//fill:#2ab996;
-/* novo green */
-	fill:#fff;
-	opacity:.75;
-	-webkit-mask:url(#newsletter-mask);
-/* for webkit browsers */
-	mask:url(#newsletter-mask)
-/* for Firefox */
-}
-
-/*.newsletter-rect:hover {
-    fill: #2ab996;
-    transition: fill .2s;
-}*/
-#video {
-	position:absolute;
-	top:0;
-	left:0;
-	min-width:100%;
-	min-height:28%;
-	width:auto;
-	height:auto;
-	z-index:-5;
-	overflow:hidden
-}
-
-#vid-overlay {
-	background-image:url(/images/overlay3.png);
-	position:absolute;
-	top:0;
-	left:0;
-	width:100%;
-	height:100%;
-	z-index:-4;
-	overflow:hidden
-}
-
 /* media queries */
-@media only screen and (max-width: 1200px) {
-svg {
-	font-size:.8em!important
-}
-}
-
 @media only screen and (max-width: 1024px) {
-svg {
-	font-size:.7em!important
-}
-
-.tri-before {
-	visibility:hidden
-}
-
-.tri-after {
-	opacity:1
-}
-
 video {
 	display:none
 }
@@ -282,39 +223,12 @@ video {
 	height:100%
 }
 }
-
-@media only screen and (max-width: 840px) {
-svg {
-	font-size:.65em!important
-}
-
-.mantra {
-	display:none
-}
-}
-
 @media only screen and (max-width: 788px) {
-svg {
-	font-size:.6em!important
-}
-
 .desktop {
 	visibility:hidden
 }
 
 .mobile {
 	visibility:visible
-}
-}
-
-@media only screen and (max-width: 630px) {
-svg {
-	font-size:.5em!important
-}
-}
-
-@media only screen and (max-width: 520px) {
-svg {
-	font-size:.4em!important
 }
 }
