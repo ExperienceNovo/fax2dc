@@ -2,13 +2,30 @@
 
 @import "http://fonts.googleapis.com/css?family=Cantarell";
 
+* {
+	list-style: none;
+}
+
 html,body {
 	height:100%;
-	font-family:verdana,arial,sans-serif;
+	overflow-x:hidden!important;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-rendering: optimizelegibility;
 	color:#000;
 	text-align:center;
 	margin:0;
 	padding:0;
+	cursor:default;
+}
+
+.surface-container-home {
+	position: relative;
+	z-index: 4;
+	margin-left: auto;
+    margin-right: auto;
+	width:100%;
+	height: auto;
 }
 
 @media screen and (max-width: 720px) {
@@ -23,7 +40,7 @@ a {
 }
 
 a:hover {
-	color:#2ab996!important;
+	color:#14B795;
 	text-decoration:none
 }
 
@@ -36,7 +53,7 @@ hr {
 	margin-bottom:20px;
 	border:0;
 	width:20%;
-	border-top:1px solid #2AB996
+	border-top:1px solid #14B795
 }
 
 .flex {
@@ -60,7 +77,7 @@ hr {
 	font-family:'Jura',sans-serif;
 	font-weight:600;
 	font-size:50px;
-	color:#2ab996;
+	color:#14B795;
 	font-weight:600;
 	margin-right:auto;
 	margin-left:auto;
@@ -95,7 +112,7 @@ hr {
 	position:relative;
 	text-align:center;
 	cursor:default;
-	background:#2ab996
+	background:#14B795
 }
 
 .hovereffect .overlay {
@@ -203,18 +220,17 @@ hr {
 
 .footer {
 	position:relative;
+	text-align: center;
+	font-family:'Quicksand',sans-serif;
 	z-index:50;
 	width:100%;
-	height:auto;
-	padding:1%;
-	background:url(/images/texture-bg.png) repeat;
-	color:gray;
-	font-size:.8em;
-	opacity:.8
-}
-
-.home-pad {
-	width:100%
+	font-weight: 400;
+    height: auto;
+    padding: 1%;
+    background: white;
+    color: black;
+    font-size: 1.1em;
+    letter-spacing: .08em;
 }
 
 .nav {
@@ -223,11 +239,11 @@ hr {
 }
 
 .active span {
-	color:#2AB996
+	color:#14B795
 }
 
 .activeicon i {
-	color:#2AB996
+	color:#14B795
 }
 
 .wrapper,.row {

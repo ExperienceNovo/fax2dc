@@ -6,11 +6,6 @@ body {
   display:none;
 }
 
-.container {
-  font-size: 0;
-  max-width: 95%;
-}
-
 .portfolio-message {
   margin-top: 20px;
   font-size: 22px;

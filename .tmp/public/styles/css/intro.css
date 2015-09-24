@@ -1,69 +1,123 @@
 @import url(https://fonts.googleapis.com/css?family=Squada+One|Days+One|Ubuntu:400,500,700);
-
-html, body {
-  	height: 100%; margin:0; padding:0; 
-}
-
 .intro {
-    position: relative;
-    top: 0;
+	position:relative;
+	top:0
 }
 
 .intro-container {
-    cursor: default;
+	cursor:default;
 	min-height:100vh;
 	min-width:100vw;
 	height:100%;
 	width:100%;
-    z-index: 1;
+	z-index:1
 }
 
-.intro-img {
-   visibility: hidden;
-   position: absolute;
-   top: 0%;
-   left: 0%;
-   min-width: 100%;
-   min-height: 100%;
-   z-index: -4;
-   overflow: hidden;
-   background: url(/images/pen.jpg);
-   -webkit-background-size: cover;
-   -moz-background-size: cover;
-   -o-background-size: cover;
-   background-size: cover;
+.intro-mobile {
+	visibility:hidden;
+	position:absolute;
+	top:0;
+	left:0;
+	min-width:100%;
+	min-height:100%;
+	z-index:-4;
+	overflow:hidden;
+	background-repeat:no-repeat;
+	background:url(/images/mobile.png);
+	-webkit-background-size:cover;
+	-moz-background-size:cover;
+	-o-background-size:cover;
+	background-size:cover
 }
 
-/* intro shit */
-.mask__shape {
-	fill:#fff
+.port-mobile {
+	visibility:hidden;
+	position:absolute;
+	top:-200%;
+	left:0;
+	width:100%;
+	z-index:-4;
+	overflow:hidden
 }
 
-.shape--fill {
-	fill:rgba(0,0,0,0.65);
+/* new intro shit */
+svg {
+	max-width:100%;
+	max-height:100%;
 	min-width:100%;
 	min-height:100%
 }
 
-.text--transparent {
+.continue-wrap {
+	position:absolute;
+	top:75%;
+	width:100%;
+	margin:0 auto
+}
+
+.svg-wrapper {
+	height:60px;
+	margin:0 auto;
+	width:320px;
+	cursor: pointer;
+}
+
+.text {
+	color:#fff;
+	font-family:'Jura',sans-serif;
+	font-size:22px;
+	letter-spacing:8px;
+	line-height:32px;
+	position:relative;
+	top:-48px
+}
+
+.shape {
 	fill:transparent;
-	display: inline-block;
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	margin: 0 auto;
+	stroke-dasharray:180 540;
+	stroke-dashoffset:-454;
+	stroke-width:6px;
+	stroke:#fff
+}
+
+@keyframes draw {
+0% {
+	stroke-dasharray:180 540;
+	stroke-dashoffset:-454;
+	stroke-width:6px;
+	stroke:#14B795
+}
+
+100% {
+	stroke-dasharray:760;
+	stroke-dashoffset:0;
+	stroke-width:2px;
+	stroke:#14B795
+}
+}
+
+.svg-wrapper:hover .shape {
+	-webkit-animation:.5s draw linear forwards;
+	animation:.5s draw linear forwards
+}
+
+.svg-wrapper:hover .text {
+	color: #fff;
 }
 
 .box-with-text {
-	display: inline-block;
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	margin: 0 auto;
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	margin:0 auto
+}
+
+.svg-inverted-mask {
+	margin:0 auto;
+	overflow:auto;
+	z-index:2
 }
 
 .text-fill {
@@ -77,62 +131,31 @@ html, body {
 	top:0;
 	left:0;
 	bottom:0;
-	min-width: 100%;
-	min-height: 100%;
+	min-width:100%;
+	min-height:100%;
+	overflow:hidden;
 	z-index:-5
+}
+
+.mask__shape {
+	fill:#fff
+}
+
+.shape--fill {
+	fill:rgba(0,0,0,0.8)
+}
+
+.text--transparent {
+	fill:transparent
 }
 
 .svg-defs {
 	width:0;
-	height: 0
+	height:0
 }
 
-.svg-inverted-mask {
-    min-width: 100%;
-    min-height: 100%;
-    margin: auto;
-    overflow: auto;
-	z-index:2
-}
 /* end intro shit */
 
-.large-text {
-    font-family: 'Ubuntu', sans-serif;
-	font-weight:700;
-	font-size:16.5em;
-	letter-spacing:.05em
-}
-
-.large-medium-text {
-	font-family:'Jura',sans-serif;
-	font-weight:400;
-	font-size:14em;
-	letter-spacing:-.02em
-}
-
-.medium-text {
-	font-family:'Jura',sans-serif;
-	font-weight:400;
-	font-size:5em;
-	letter-spacing:-.04em
-}
-
-.small-text {
-	font-family:'Jura',sans-serif;
-	font-weight:600;
-	font-size:3em;
-	letter-spacing:2px;
-}
-
-.learn-more {
-	font-size:25px!important;
-	font-weight:700;
-	letter-spacing:-.05em
-}
-
-.mobile {
-	visibility:hidden
-}
 
 /* Bob */
 @-webkit-keyframes hvr-bob {
@@ -212,17 +235,38 @@ html, body {
 	animation-direction:normal,alternate
 }
 
+.mobile-small {
+	visibility:hidden
+}
+.mobile-smallest {
+	visibility:hidden
+}
 /* media queries */
 @media only screen and (max-width: 1024px) {
 video {
 	display:none
 }
 
-.intro-img {
+.intro-mobile {
+	visibility:visible;
+	height:100%
+}
+
+.port-mobile {
+	visibility:visible
+}
+
+.port-box a #fill-hover {
+	fill:rgba(255,255,255,0.1);
+	transition:fill .2s
+}
+
+.contact-mobile {
 	visibility:visible;
 	height:100%
 }
 }
+
 @media only screen and (max-width: 788px) {
 .desktop {
 	visibility:hidden
@@ -230,5 +274,28 @@ video {
 
 .mobile {
 	visibility:visible
+}
+}
+
+@media only screen and (max-width: 675px) {
+.mobile {
+	visibility:hidden
+}
+
+.mobile-small {
+	visibility:visible
+}
+}
+
+@media only screen and (max-width: 500px) {
+.mobile-small {
+	visibility:hidden
+}
+
+.mobile-smallest {
+	visibility:visible;
+}
+.shape--fill {
+    fill: rgba(0,0,0,0.9);
 }
 }

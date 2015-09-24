@@ -1,5 +1,4 @@
-angular.module( 'novo.home', [
-])
+angular.module( 'novo.home', [])
 
 .config(function config( $stateProvider ) {
 	$stateProvider.state( 'home', {
@@ -13,8 +12,11 @@ angular.module( 'novo.home', [
 	});
 })
 
-.controller( 'HomeCtrl', function HomeController( $scope, titleService, config ) {
+.controller( 'HomeCtrl', function HomeController( $scope, titleService, config, $location, $anchorScroll ) {
 	titleService.setTitle('NOVO');
 	$scope.currentUser = config.currentUser;
-
+  	$scope.scrollTo = function(id) {
+      $location.hash(id);
+      $anchorScroll();
+   }
 });

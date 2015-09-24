@@ -1,20 +1,12 @@
 .about {
 	width:100%;
-	background:url(/images/texture-bg.png) repeat;
 	margin-left: auto;
 	margin-right: auto;
 	text-align: center;
 }
 
-#about-overlay {
-	background-image:url(/images/overlay3.png);
-	position:absolute;
-	top:0;
-	left:0;
-	width:100%;
-	height:100%;
-	z-index:-4;
-	overflow:hidden
+#about-table {
+    min-height: 250px;
 }
 
 .about-section-head {
@@ -22,7 +14,7 @@
 }
 
 .about-section-head h3 {
-	font-family:Jura;
+	font-family:'Jura', sans-serif;
 	color:#000;
 	font-size:4em;
 	font-weight:600;
@@ -67,7 +59,7 @@
 	color:#222;
 	font-size: 1.3em;
     width: 50%;
-    display: table-cell;
+
     vertical-align: middle;
     margin-top: 5%;
 }
@@ -143,17 +135,6 @@
 	text-decoration: underline;
 }
 
-.about-tile-area {
-
-}
-
-.about-row {
-    position: relative;
-    height: auto;
-    min-height: auto;
-    display: table;
-}
-
 .about-tile {
     position: relative;
     width: 50%;
@@ -182,19 +163,6 @@
     top: 0;
     left: 0;
     padding: 5%;
-}
-
-@media only screen 
-  and (min-device-width: 320px) 
-  and (max-device-width: 568px)
-{
-    .interested-about p {
-        font-size: .8em;
-    }
-    .interested-about p a {
-        font-size: 1em;
-        text-decoration: underline;
-    }
 }
 
 @media screen and (max-width: 1200px) {

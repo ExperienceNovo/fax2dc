@@ -2,7 +2,6 @@ angular.module( 'novo', [
     'ui.router',
     'sails.io',
     'angularMoment',
-    'duScroll',
     'lodash',
     'ui.bootstrap',
     'uiGmapgoogle-maps',

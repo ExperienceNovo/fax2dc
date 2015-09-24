@@ -17,6 +17,7 @@
 }
 
 .item-container {
+    margin-top: 50px;
     width: 100%;
     height: 10%;
     display: table;
@@ -42,8 +43,27 @@
     align-self: flex-end;
 }
 
+.nav-large-list {
+    position: absolute;
+    right: 0;
+    padding-bottom:100px;
+    height: 64px;
+    width: 220px;
+    z-index: 5002;
+    transition: width ease-in-out 0.2s;
+}
+
+.nav-logo {
+    transition: none;
+}
+
+#logo-container {
+    top: -85px;
+}
+
 .nav-small-list {
     position: absolute;
+    display:none;
     left: 0;
     width: 64px;
     height: 64px;
@@ -52,14 +72,38 @@
     z-index: 5003;
     align-items: center;
 }
+.page-nav-zone:hover .nav-large-list #sidebar-logo {
+    margin-left: 0px;
+}
+#sidebar-logo {
+    margin-top:0px;
+    margin-left: -500px;
+}
 
 @media screen and (max-width: 720px) {
 .side-bars {
     display:none;
 }
+.nav-small-list, .nav-small-list img {
+    position: absolute;
+    display:block;
+    left: 0;
+    width: auto;
+    height: 30px;
+    padding-left: 10px;
+    z-index: 5003;
+    align-items: center;
 }
-
-
+.page-nav-zone {
+    width: 50px;
+}
+.page-nav-zone {
+    opacity: 1.0;
+    background: rgb(0, 0, 0);
+    left: 0;
+    box-shadow: 1px 0px 5px #14B795;
+}
+}
 .side-bars {
     position: absolute;
     margin-left: 35px;
@@ -78,15 +122,6 @@
     -moz-box-shadow: 1px 2px 3px rgba(0,0,0,.5);
     -webkit-box-shadow: 1px 2px 3px rgba(0,0,0,.5);
     box-shadow: 1px 2px 3px rgba(0,0,0,.5);
-}
-
-.nav-large-list {
-    position: absolute;
-    right: 0;
-    height: 64px;
-    width: 220px;
-    z-index: 5002;
-    transition: width ease-in-out 0.2s;
 }
 
 .page-nav-zone:hover .nav-large-list {
@@ -118,11 +153,6 @@
 }
 
 /* media queries */
-
-@media screen and (max-width: 920px) {
-
-}
-
 /* The only way to get your rule to apply only when the media query isn't satisfied is to isolate it in a negated version of the query */
 @media not screen and (max-width: 720px) {
     .page-nav-zone:hover {
@@ -136,22 +166,7 @@
 }
 
 @media screen and (max-width: 720px) {
-    .page-nav-zone {
-        opacity: 1.0;
-        background: rgba(20, 183, 149, 0.75);
-        left: 0;
-        box-shadow: 2px 0px 5px #000000;
-    }
-    .nav-small-list {
-        padding-left: 0;
-    }
-}
-
-@media screen and (max-width: 720px) {
-    .page-nav-zone {
-        width: 50px;
-    }
-    .nav-small-list {
-        width: 50px;
+    #logo-container {
+        display:none;
     }
 }

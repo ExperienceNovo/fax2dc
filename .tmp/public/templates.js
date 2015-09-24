@@ -1,11 +1,60 @@
-angular.module('templates-app', ['about/index.tpl.html', 'blog-post/index.tpl.html', 'blog/index.tpl.html', 'contact/index.tpl.html', 'home/index.tpl.html', 'intro/index.tpl.html', 'intro/index2.tpl.html', 'portfolio/index.tpl.html', 'sidebar/index.tpl.html', 'templates/index.tpl.html']);
+angular.module('templates-app', ['about/about.tpl.html', 'about/index.tpl.html', 'blog-post/index.tpl.html', 'blog/index.tpl.html', 'contact/index.tpl.html', 'home/contact.tpl.html', 'home/index.tpl.html', 'home/portfolio.tpl.html', 'intro/index.tpl.html', 'portfolio/index.tpl.html', 'sidebar/index.tpl.html', 'templates/index.tpl.html']);
+
+angular.module("about/about.tpl.html", []).run(["$templateCache", function($templateCache) {
+  $templateCache.put("about/about.tpl.html",
+    "<div class=\"about-container\">\n" +
+    "  <div class=\"tab-container\">\n" +
+    "    <section class=\"tab-area tabs-checked\">\n" +
+    "      <input class=\"tab-input\"checked=\"\" type=\"radio\" name=\"tab\" id=\"tab-A\">\n" +
+    "      <input class=\"tab-input\" type=\"radio\" name=\"tab\" id=\"tab-B\">\n" +
+    "      <input class=\"tab-input\" type=\"radio\" name=\"tab\" id=\"tab-C\">\n" +
+    "      <section class=\"tab-nav\">\n" +
+    "        <label class=\"tab-link col-lg-4 col-md-4 col-sm-12 col-xs-12 tab-pad\" for=\"tab-A\">Design</label>\n" +
+    "        <label class=\"tab-link col-lg-4 col-md-4 col-sm-12 col-xs-12 tab-pad\" for=\"tab-B\">Development</label>\n" +
+    "        <label class=\"tab-link col-lg-4 col-md-4 col-sm-12 col-xs-12 tab-pad mobile-pad\" for=\"tab-C\">Marketing</label>\n" +
+    "      </section>\n" +
+    "      <article class=\"tab col-md-12\">\n" +
+    "        <div class=\"tab-inner\">\n" +
+    "          <div class=\"col-md-6\">\n" +
+    "\n" +
+    "          </div>\n" +
+    "          <div class=\"col-md-6\">\n" +
+    "\n" +
+    "          </div>\n" +
+    "        </div>\n" +
+    "      </article>\n" +
+    "      <article class=\"tab col-md-12\">\n" +
+    "        <div class=\"tab-inner\">\n" +
+    "          <div class=\"col-md-6\">\n" +
+    "\n" +
+    "          </div>\n" +
+    "        </div>\n" +
+    "      </article>\n" +
+    "      <article class=\"tab col-md-12\">\n" +
+    "        <div class=\"tab-inner\">\n" +
+    "          <div class=\"col-md-6\">\n" +
+    "\n" +
+    "          </div>\n" +
+    "        </div>\n" +
+    "      </article>\n" +
+    "    </section>\n" +
+    "  </div>\n" +
+    "</div>\n" +
+    "\n" +
+    "\n" +
+    "\n" +
+    "\n" +
+    "\n" +
+    "\n" +
+    "\n" +
+    "");
+}]);
 
 angular.module("about/index.tpl.html", []).run(["$templateCache", function($templateCache) {
   $templateCache.put("about/index.tpl.html",
-    "<div class=\"surface-container home-pad\">\n" +
-    "    <div ng-include=\"'intro/index2.tpl.html'\"></div>\n" +
+    "<div class=\"surface-container-home\">\n" +
     "    <div class=\"about\" id=\"about\">\n" +
-    "        <div class=\"about-tile-area\" style=\"background:url(/images/texture-bg.png) repeat;\">\n" +
+    "        <div class=\"about-tile-area\">\n" +
     "            <div class=\"about-row\">\n" +
     "                <div class=\"about-des right\" id=\"design-des\">\n" +
     "                    <div class=\"about-des-span\">\n" +
@@ -103,86 +152,8 @@ angular.module("about/index.tpl.html", []).run(["$templateCache", function($temp
     "                <a name=\"marketing-anchor\"></a>\n" +
     "            </div>\n" +
     "        </div><!-- end center -->\n" +
-    "        <div class=\"center about-bottom-area\">\n" +
-    "            <div class=\"title-bottom\">How We Build It\n" +
-    "                <hr>\n" +
-    "            </div>\n" +
-    "            <div class=\"message-portfolio\">\n" +
-    "                <div class=\"interested-portfolio\">\n" +
-    "                    <br>\n" +
-    "                    <p>\n" +
-    "                       The latest technology, mobile-friendly, and unparalleled in custom design. Each site is custom-tailored.\n" +
-    "                    </p>\n" +
-    "                    <a href=\"/about/\"><button class=\"mainbutton service-button\">More Info...</button></a>\n" +
-    "                    <br>\n" +
-    "                    <br>\n" +
-    "                    <br>\n" +
-    "                </div>\n" +
-    "            </div>\n" +
-    "        </div>\n" +
-    "        \n" +
     "    </div> <!-- end about -->\n" +
-    "    <div class=\"footer\">\n" +
-    "        <div class=\"footer-text\">© 2015 NOVO, LLC.</div>\n" +
-    "    </div>\n" +
-    "</div><!-- end suface container -->\n" +
-    "\n" +
-    "<!--<div class=\"about-section-head\">\n" +
-    "    <h3>About Us</h3>\n" +
-    "    <hr>\n" +
-    "</div>\n" +
-    "-->\n" +
-    "<!--\n" +
-    "<div class=\"about-list\">\n" +
-    "    <div class=\"row\">\n" +
-    "        <div class=\"col-md-12\">\n" +
-    "            <div class=\"col-md-4\">\n" +
-    "                <i class=\"fa fa-paint-brush fa-5x\"></i>\n" +
-    "                <div class=\"about-title\">\n" +
-    "                    <h2>Design</h2>\n" +
-    "                </div>\n" +
-    "                <hr>\n" +
-    "                <div class=\"about-des\">\n" +
-    "                    <p>Full-scale Branding to ensure clear communication of your message.</p>\n" +
-    "                    <p>Custom Interface Design to ensure a seamless customer online experience.</p>\n" +
-    "                    <p>Advertising Design to establish a strong brand presence within your industry.</p>\n" +
-    "                </div>\n" +
-    "            </div>\n" +
-    "            <div class=\"col-md-4\">\n" +
-    "                <i class=\"fa fa-code fa-5x\"></i>\n" +
-    "                <div class=\"about-title\">\n" +
-    "                    <h2>Development</h2>\n" +
-    "                </div>\n" +
-    "                <hr>\n" +
-    "                <div class=\"about-des\">\n" +
-    "                    <p>Mobile-first Web Design to align you with the ever-increasing mobile world.</p>\n" +
-    "                    <p>SEO Structuring to naturally expand your online reach and outpace your competitors.</p>\n" +
-    "                    <p>Back-end Software Integration to ensure maximum security and business technology integration.</p>\n" +
-    "                </div>\n" +
-    "            </div>\n" +
-    "            <div class=\"col-md-4\">\n" +
-    "                <i class=\"fa fa-users fa-5x\"></i>\n" +
-    "                <div class=\"about-title\">\n" +
-    "                    <h2>Marketing</h2>\n" +
-    "                </div>\n" +
-    "                <hr>\n" +
-    "                <div class=\"about-des\">\n" +
-    "                    <p>Social Media Management to extend your customer reach.</p>\n" +
-    "                    <p>Email Outreach Marketing to manage current customer and secure new-customer leads.</p>\n" +
-    "                    <p>Consistent Content Creation to establish and maintain your presence within your community and your industry.</p>\n" +
-    "                </div>\n" +
-    "            </div>\n" +
-    "        </div>\n" +
-    "    </div>\n" +
-    "    <br>\n" +
-    "    <br>\n" +
-    "    <br>\n" +
-    "</div>\n" +
-    "\n" +
-    "<br><br><br>\n" +
-    "\n" +
-    "</div>\n" +
-    "-->");
+    "</div><!-- end suface container -->");
 }]);
 
 angular.module("blog-post/index.tpl.html", []).run(["$templateCache", function($templateCache) {
@@ -241,375 +212,364 @@ angular.module("contact/index.tpl.html", []).run(["$templateCache", function($te
     "<style type=\"text/css\">\n" +
     "    .angular-google-map-container { height: 400px; }\n" +
     "</style>\n" +
-    "\n" +
-    "<div class=\"surface-container home-pad\">\n" +
-    "    <div class=\"title-surface-container\">\n" +
-    "        <div class=\"contact-title-home\">\n" +
-    "            <p style=\"color: #1db996 !important;\">Contact Us</p>\n" +
-    "            <hr>\n" +
-    "        </div>\n" +
-    "        <br>\n" +
-    "        <div class=\"contact-icons\">\n" +
-    "            <a class=\"envelope-icon\" href=\"mailto:info@projectnovo.co\"><i class=\"fa fa-envelope\"></i></a>\n" +
-    "            <a class=\"facebook-icon\" href=\"https://www.facebook.com/experienceNOVO\"><i class=\"fa fa-facebook\"></i></a>\n" +
-    "            <a class=\"twitter-icon\" href=\"https://twitter.com/experienceNOVO\"><i class=\"fa fa-twitter\"></i></a>\n" +
-    "            <a class=\"linkedin-icon\" href=\"https://www.linkedin.com/company/novo---web-design-web-development-&-online-marketing?trk=biz-companies-cym\"><i class=\"fa fa-linkedin\"></i></a>\n" +
-    "            <a class=\"blog-icon\" href=\"/blog/\"><i class=\"fa fa-rss\"></i></a>\n" +
-    "        </div>\n" +
-    "        <br><br><br>\n" +
-    "        <!--\n" +
-    "        <div class=\"message\">\n" +
-    "            <a href=\"mailto:info@projectnovo.co\"><button class=\"mainbutton service-button\">email us: info@projectnovo.co</button></a>\n" +
-    "            <br><br><br>\n" +
-    "        </div>\n" +
-    "        -->\n" +
+    "<div class=\"title-surface-container\">\n" +
+    "    <div class=\"stay-connected\">\n" +
+    "        Stay Connected\n" +
     "    </div>\n" +
     "</div>\n" +
-    "</div>\n" +
-    "\n" +
-    "<!-- i would like if the numbers were more visiable -->\n" +
-    "<div class=\"surface-container home-pad\" style=\"background-color:rgb(0,0,0)\">\n" +
-    "    <div class=\"contact-page-container\">\n" +
-    "        <br><br>\n" +
-    "        <div class=\"contact-title-location\">\n" +
-    "            <p>Four Locations Nationwide</p>\n" +
-    "            <hr>\n" +
-    "            <!--<p>give us a call!</p>-->\n" +
+    "<div class=\"contact-page-container\">\n" +
+    "    <div id=\"icon-wrapper\">\n" +
+    "        <div class=\"bt_wrap\">\n" +
+    "            <div class=\"icon-box\">\n" +
+    "                <a class=\"social-icon\"><i class=\"fa fa-facebook\"></i></a>\n" +
+    "                <a class=\"social-icon2\" href=\"https://www.facebook.com/experienceNOVO\"><i class=\"fa fa-facebook\"></i></a>\n" +
+    "            </div>\n" +
     "        </div>\n" +
-    "        <div class=\"row\">\n" +
-    "            <div class=\"col-md-12 center\">\n" +
-    "                <div class=\"col-md-3 office-contact\">\n" +
-    "                    <div class=\"hovereffect\">\n" +
-    "                        <img class=\"img-responsive\" src=\"/images/contact/raleigh-nc.jpg\" alt=\"\">\n" +
-    "                        <div class=\"overlay\">\n" +
-    "                            <br>\n" +
-    "                            <br>\n" +
-    "                            <br>\n" +
-    "                            <h2 ng-click=\"onClick()\"><span class=\"contact-city\">Raleigh, NC</span></h2>\n" +
-    "                            <p>\n" +
-    "                                <a href=\"tel:+18656797229\">865.679.7229</a>\n" +
-    "                            </p>\n" +
+    "        <div class=\"bt_wrap\">\n" +
+    "            <div class=\"icon-box\">\n" +
+    "                <a class=\"social-icon\"><i class=\"fa fa-twitter\"></i></a>\n" +
+    "                <a class=\"social-icon2\" href=\"https://twitter.com/experienceNOVO\"><i class=\"fa fa-twitter\"></i></a>\n" +
+    "            </div>\n" +
+    "        </div>\n" +
+    "        <div class=\"bt_wrap\">\n" +
+    "            <div class=\"icon-box\">\n" +
+    "                <a class=\"social-icon\"><i class=\"fa fa-linkedin\"></i></a>\n" +
+    "                <a class=\"social-icon2\" href=\"https://www.linkedin.com/company/novo---web-design-web-development-&-online-marketing?trk=biz-companies-cym\"><i class=\"fa fa-linkedin\"></i></a>\n" +
+    "            </div>\n" +
+    "        </div>\n" +
+    "    </div>\n" +
+    "    <br><br>\n" +
+    "    <div class=\"contact-title-location\">\n" +
+    "        <p>Four Locations Nationwide</p>\n" +
+    "        <hr>\n" +
+    "    </div>\n" +
+    "    <div class=\"row\">\n" +
+    "        <div class=\"col-md-12 center\">\n" +
+    "            <div class=\"col-md-3\">\n" +
+    "                <div class=\"card-wrapper\">\n" +
+    "                    <div class=\"flipper\">\n" +
+    "                        <div class=\"card-front trev\">\n" +
+    "                            <div class=\"card-logo\">\n" +
+    "                                <h2>NC</h2>\n" +
+    "                            </div>\n" +
+    "                            <div class=\"oval\"></div>\n" +
     "                        </div>\n" +
-    "                        <div class=\"black\"></div>\n" +
+    "                        <a href=\"tel:+18656797229\">\n" +
+    "                            <div class=\"card-back\">\n" +
+    "                                <h1 class=\"card-name\">Trevor Overman</h1>\n" +
+    "                                <h3 class=\"card-about\">Chapel Hill, NC</h3><br>\n" +
+    "                                <h3 class=\"card-about ca-bold\">Back-End Development</h3>\n" +
+    "                                <h3 class=\"contact-info\">(865) 679-7229</h3>\n" +
+    "                            </div>\n" +
+    "                        </a>\n" +
     "                    </div>\n" +
     "                </div>\n" +
-    "                <div class=\"col-md-3 office-contact\">\n" +
-    "                    <div class=\"hovereffect\">\n" +
-    "                        <img class=\"img-responsive\" src=\"/images/contact/evanston.jpg\" alt=\"\">\n" +
-    "                        <div class=\"overlay\">\n" +
-    "                            <br>\n" +
-    "                            <br>\n" +
-    "                            <br>\n" +
-    "                            <h2 ng-click=\"onClick()\"><span class=\"contact-city\">Chicago, IL</span></h2>\n" +
-    "                            <p>\n" +
-    "                                <a href=\"tel:+18653876121\">865.387.6121</a>\n" +
-    "                            </p>\n" +
+    "            </div>\n" +
+    "            <div class=\"col-md-3\">\n" +
+    "                <div class=\"card-wrapper\">\n" +
+    "                    <div class=\"flipper\">\n" +
+    "                        <div class=\"card-front val\">\n" +
+    "                            <div class=\"card-logo\">\n" +
+    "                                <h2>IL</h2>\n" +
+    "                            </div>\n" +
+    "                            <div class=\"oval\"></div>\n" +
     "                        </div>\n" +
+    "                        <a href=\"tel:+18653876121\">\n" +
+    "                            <div class=\"card-back\">\n" +
+    "                                <h1 class=\"card-name\">Valentino Constantinou</h1>\n" +
+    "                                <h3 class=\"card-about\">Chicago, Il</h3><br>\n" +
+    "                                <h3 class=\"card-about ca-bold\">Data Science & Front-End</h3>\n" +
+    "                                <h3 class=\"contact-info\">(865) 387-6121</h3>\n" +
+    "                            </div>\n" +
+    "                        </a>\n" +
     "                    </div>\n" +
     "                </div>\n" +
-    "                <div class=\"col-md-3 office-contact\">\n" +
-    "                    <div class=\"hovereffect\">\n" +
-    "                        <img class=\"img-responsive\" src=\"/images/contact/knoxville.jpg\" alt=\"\">\n" +
-    "                        <div class=\"overlay\">\n" +
-    "                            <br>\n" +
-    "                            <br>\n" +
-    "                            <br>\n" +
-    "                            <h2 ng-click=\"onClick()\"><span class=\"contact-city\">Knoxville, TN</span></h2>\n" +
-    "                            <p>\n" +
-    "                                <a href=\"tel:+18656969382\">865.696.9382</a>\n" +
-    "                            </p>\n" +
+    "            </div>\n" +
+    "            <div class=\"col-md-3\">\n" +
+    "                <div class=\"card-wrapper\">\n" +
+    "                    <div class=\"flipper\">\n" +
+    "                        <div class=\"card-front gh\">\n" +
+    "                            <div class=\"card-logo\">\n" +
+    "                                <h2>TN</h2>\n" +
+    "                            </div>\n" +
+    "                            <div class=\"oval\"></div>\n" +
     "                        </div>\n" +
+    "                        <a href=\"tel:+18656969382\">\n" +
+    "                            <div class=\"card-back\">\n" +
+    "                                <h1 class=\"card-name\">Garrett Headden</h1>\n" +
+    "                                <h3 class=\"card-about\">Knoxville, TN</h3><br>\n" +
+    "                                <h3 class=\"card-about ca-bold\">Marketing & Content</h3>\n" +
+    "                                <h3 class=\"contact-info\">(865) 696-9382</h3>\n" +
+    "                            </div>\n" +
+    "                        </a>\n" +
     "                    </div>\n" +
     "                </div>\n" +
-    "                <div class=\"col-md-3 office-contact\">\n" +
-    "                    <div class=\"hovereffect\">\n" +
-    "                        <img class=\"img-responsive\" src=\"/images/contact/philly.jpg\" alt=\"\">\n" +
-    "                        <div class=\"overlay\">\n" +
-    "                            <br>\n" +
-    "                            <br>\n" +
-    "                            <br>\n" +
-    "                            <h2 ng-click=\"onClick()\"><span class=\"contact-city\">Philadelphia, PA</span></h2>\n" +
-    "                            <p>\n" +
-    "                                <a href=\"tel:+13365800855\">336.580.0855</a>\n" +
-    "                            </p>\n" +
+    "            </div>\n" +
+    "            <div class=\"col-md-3\">\n" +
+    "                <div class=\"card-wrapper\">\n" +
+    "                    <div class=\"flipper\">\n" +
+    "                        <div class=\"card-front mt\">\n" +
+    "                            <div class=\"card-logo\">\n" +
+    "                                <h2>PA</h2>\n" +
+    "                            </div>\n" +
+    "                            <div class=\"oval\"></div>\n" +
     "                        </div>\n" +
+    "                        <a href=\"tel:+13365800855\">\n" +
+    "                            <div class=\"card-back\">\n" +
+    "                                <h1 class=\"card-name\">Michael Thompson</h1>\n" +
+    "                                <h3 class=\"card-about\">Philadelphia, PA</h3><br>\n" +
+    "                                <h3 class=\"card-about ca-bold\">Front-End & Web Design</h3>\n" +
+    "                                <h3 class=\"contact-info\">(336) 580-0855</h3>\n" +
+    "                            </div>\n" +
+    "                        </a>\n" +
     "                    </div>\n" +
     "                </div>\n" +
     "            </div>\n" +
     "        </div>\n" +
-    "        <br>\n" +
-    "        <br>\n" +
-    "        <br>\n" +
-    "\n" +
-    "\n" +
-    "\n" +
-    "        <ui-gmap-google-map center=\"map.center\" zoom=\"map.zoom\" options=\"options\">\n" +
-    "\n" +
-    "            <ui-gmap-marker coords=\"marker1.coords\" options=\"marker1.options\" idkey=\"marker1.id\">\n" +
-    "                <ui-gmap-window options=\"windowOptions\" closeClick=\"closeClick()\">\n" +
-    "                    <div>\n" +
-    "                        <div style=\"font-size: 15px;\">Evanston, IL (Chicago)</div>\n" +
-    "                        <br>Valentino Constantinou\n" +
-    "                        <br>phone: (865) 387-6121\n" +
-    "                        <br>email: <a href=\"mailto:info@projectnovo.com\">info@projectnovo.com</a>\n" +
-    "                        <br>\n" +
-    "                    </div>\n" +
-    "                </ui-gmap-window>\n" +
-    "            </ui-gmap-marker>\n" +
-    "\n" +
-    "            <ui-gmap-marker coords=\"marker2.coords\" options=\"marker2.options\" idkey=\"marker2.id\">\n" +
-    "                <ui-gmap-window options=\"windowOptions\" closeClick=\"closeClick()\">\n" +
-    "                    <div>\n" +
-    "                        <div style=\"font-size: 15px;\">Knoxville, TN</div>\n" +
-    "                        <br>Garrett Headden\n" +
-    "                        <br>phone: (865) 696-9382\n" +
-    "                        <br>email: <a href=\"mailto:info@projectnovo.com\">info@projectnovo.com</a>\n" +
-    "                        <br>\n" +
-    "                    </div>\n" +
-    "                </ui-gmap-window>\n" +
-    "            </ui-gmap-marker>\n" +
-    "\n" +
-    "            <ui-gmap-marker coords=\"marker3.coords\" options=\"marker3.options\" idkey=\"marker3.id\">\n" +
-    "                <ui-gmap-window options=\"windowOptions\" closeClick=\"closeClick()\">\n" +
-    "                    <div>\n" +
-    "                        <div style=\"font-size: 15px;\">Chapel Hill, NC (Raleigh)</div>\n" +
-    "                        <br>Trevor Overman\n" +
-    "                        <br>phone: (865) 679-7229\n" +
-    "                        <br>email: <a href=\"mailto:info@projectnovo.com\">info@projectnovo.com</a>\n" +
-    "                        <br>\n" +
-    "                    </div>\n" +
-    "                </ui-gmap-window>\n" +
-    "            </ui-gmap-marker>\n" +
-    "\n" +
-    "            <ui-gmap-marker coords=\"marker4.coords\" options=\"marker4.options\"idkey=\"marker4.id\">\n" +
-    "                <ui-gmap-window options=\"windowOptions\" closeClick=\"closeClick()\">\n" +
-    "                    <div>\n" +
-    "                        <div style=\"font-size: 15px;\">Philadelphia, PA</div>\n" +
-    "                        <br>Michael Thompson\n" +
-    "                        <br>phone: (336) 580-0855\n" +
-    "                        <br>email: <a href=\"mailto:info@projectnovo.com\">info@projectnovo.com</a>\n" +
-    "                        <br>\n" +
-    "                    </div>\n" +
-    "                </ui-gmap-window>\n" +
-    "            </ui-gmap-marker>\n" +
-    "\n" +
-    "        </ui-gmap-google-map>\n" +
-    "\n" +
-    "\n" +
-    "        <div class=\"message\">\n" +
-    "            <div class=\"bottom-tagline\"></div>\n" +
+    "        <div class=\"col-md-6 bottom-contact\">\n" +
+    "            <div class=\"contact-title-location\">\n" +
+    "                <p>Work With Us</p>\n" +
+    "                <hr>\n" +
+    "            </div>\n" +
+    "            <div class=\"margin\">\n" +
+    "            <!--did someone already set up form submission code? -->\n" +
+    "            <form action=\"mailto:info@projectnovo.com\">\n" +
+    "                <div class=\"inputGroup\">\n" +
+    "                    <input required=\"\" type=\"text\"> \n" +
+    "                    <span class=\"inputBar\"></span> \n" +
+    "                    <label>Name</label>\n" +
+    "                </div>\n" +
+    "                <div class=\"inputGroup\">\n" +
+    "                    <input required=\"\" type=\"text\"> \n" +
+    "                    <span class=\"inputBar\"></span> \n" +
+    "                    <label>Email</label>\n" +
+    "                </div>\n" +
+    "                <div class=\"inputGroup\">\n" +
+    "                    <textarea required=\"\"></textarea> \n" +
+    "                    <span class=\"inputBar\"></span> \n" +
+    "                    <label>Message</label>\n" +
+    "                </div>\n" +
+    "                <button>Send</button>\n" +
+    "            </form>\n" +
+    "            </div>\n" +
+    "        </div>\n" +
+    "        <div class=\"col-md-6 bottom-contact\">\n" +
+    "            <div class=\"gmap-container\">\n" +
+    "                <ui-gmap-google-map center=\"map.center\" zoom=\"map.zoom\" options=\"options\">\n" +
+    "                    <ui-gmap-marker coords=\"marker1.coords\" options=\"marker1.options\" idkey=\"marker1.id\">\n" +
+    "                        <ui-gmap-window options=\"windowOptions\" closeClick=\"closeClick()\">\n" +
+    "                            <div>\n" +
+    "                                <div style=\"font-size: 15px;\">Evanston, IL (Chicago)</div>\n" +
+    "                                <br>Valentino Constantinou\n" +
+    "                                <br>phone: (865) 387-6121\n" +
+    "                                <br>email: <a href=\"mailto:info@projectnovo.com\">info@projectnovo.com</a>\n" +
+    "                                <br>\n" +
+    "                            </div>\n" +
+    "                        </ui-gmap-window>\n" +
+    "                    </ui-gmap-marker>\n" +
+    "                    <ui-gmap-marker coords=\"marker2.coords\" options=\"marker2.options\" idkey=\"marker2.id\">\n" +
+    "                        <ui-gmap-window options=\"windowOptions\" closeClick=\"closeClick()\">\n" +
+    "                            <div>\n" +
+    "                                <div style=\"font-size: 15px;\">Knoxville, TN</div>\n" +
+    "                                <br>Garrett Headden\n" +
+    "                                <br>phone: (865) 696-9382\n" +
+    "                                <br>email: <a href=\"mailto:info@projectnovo.com\">info@projectnovo.com</a>\n" +
+    "                                <br>\n" +
+    "                            </div>\n" +
+    "                        </ui-gmap-window>\n" +
+    "                    </ui-gmap-marker>\n" +
+    "                    <ui-gmap-marker coords=\"marker3.coords\" options=\"marker3.options\" idkey=\"marker3.id\">\n" +
+    "                        <ui-gmap-window options=\"windowOptions\" closeClick=\"closeClick()\">\n" +
+    "                            <div>\n" +
+    "                                <div style=\"font-size: 15px;\">Chapel Hill, NC (Raleigh)</div>\n" +
+    "                                <br>Trevor Overman\n" +
+    "                                <br>phone: (865) 679-7229\n" +
+    "                                <br>email: <a href=\"mailto:info@projectnovo.com\">info@projectnovo.com</a>\n" +
+    "                                <br>\n" +
+    "                            </div>\n" +
+    "                        </ui-gmap-window>\n" +
+    "                    </ui-gmap-marker>\n" +
+    "                    <ui-gmap-marker coords=\"marker4.coords\" options=\"marker4.options\"idkey=\"marker4.id\">\n" +
+    "                        <ui-gmap-window options=\"windowOptions\" closeClick=\"closeClick()\">\n" +
+    "                            <div>\n" +
+    "                                <div style=\"font-size: 15px;\">Philadelphia, PA</div>\n" +
+    "                                <br>Michael Thompson\n" +
+    "                                <br>phone: (336) 580-0855\n" +
+    "                                <br>email: <a href=\"mailto:info@projectnovo.com\">info@projectnovo.com</a>\n" +
+    "                                <br>\n" +
+    "                            </div>\n" +
+    "                        </ui-gmap-window>\n" +
+    "                    </ui-gmap-marker>\n" +
+    "                </ui-gmap-google-map>\n" +
+    "            </div>\n" +
     "        </div>\n" +
     "    </div>\n" +
     "    <div class=\"footer\">\n" +
     "        <div class=\"footer-text\">© 2015 NOVO, LLC.</div>\n" +
     "    </div>\n" +
     "</div>\n" +
+    "\n" +
+    "\n" +
+    "\n" +
+    "\n" +
+    "\n" +
+    "\n" +
+    "\n" +
+    "\n" +
+    "\n" +
+    "\n" +
+    "\n" +
+    "\n" +
+    "\n" +
+    "\n" +
+    "\n" +
+    "\n" +
+    "\n" +
+    "\n" +
+    "\n" +
+    "\n" +
+    "\n" +
+    "\n" +
+    "\n" +
+    "        <!--\n" +
+    "-->\n" +
     "\n" +
     "\n" +
     "");
 }]);
 
+angular.module("home/contact.tpl.html", []).run(["$templateCache", function($templateCache) {
+  $templateCache.put("home/contact.tpl.html",
+    "<div class=\"contact\">\n" +
+    "    <div class=\"contact-container\">\n" +
+    "      <svg class=\"svg-defs\" viewBox=\"0 0 1920 1080\" viewcontact=\"0 0 1920 1080\" preserveAspectRatio=\"xMidYMid slice\" xmlns=\"http://www.w3.org/2000/svg\">\n" +
+    "        <symbol id=\"contact-text\">\n" +
+    "          <text text-anchor=\"middle\"\n" +
+    "                x=\"960\"  \n" +
+    "                y=\"530\"\n" +
+    "                dy=\".35em\"\n" +
+    "                class=\"large-medium-text\"\n" +
+    "                >\n" +
+    "            let's talk\n" +
+    "          </text>    \n" +
+    "        </symbol>\n" +
+    "        <mask id=\"contact-mask\"\n" +
+    "              maskunits=\"userSpaceOnUse\"\n" +
+    "              maskcontentunits=\"userSpaceOnUse\">\n" +
+    "          <rect\n" +
+    "                width=\"100%\"\n" +
+    "                height=\"100%\"\n" +
+    "                class=\"mask__shape\">\n" +
+    "          </rect>\n" +
+    "          <use xlink:href=\"#contact-text\"\n" +
+    "               class=\"mask__text\"\n" +
+    "               ></use>\n" +
+    "        </mask>\n" +
+    "      </svg>\n" +
+    "      <div class=\"contact-box\">\n" +
+    "        <a href=\"/contact/\">\n" +
+    "          <div class=\"text-fill\">\n" +
+    "            <img id=\"contact-img-desktop\" src=\"/images/s1.jpg\"/>\n" +
+    "            <img id=\"contact-img-mobile\" src=\"/images/key-m.jpg\"/>\n" +
+    "          </div>\n" +
+    "          <svg class=\"svg-inverted-mask\" viewBox=\"0 0 1920 1080\" viewcontact=\"0 0 1920 1080\" \n" +
+    "               preserveAspectRatio=\"xMidYMid slice\" xmlns=\"http://www.w3.org/2000/svg\">\n" +
+    "            <rect\n" +
+    "              id=\"contact-rect\"\n" +
+    "              width=\"100%\"\n" +
+    "              height=\"100%\"\n" +
+    "              mask=\"url(#contact-mask)\"\n" +
+    "              class=\"contact--fill\"/>\n" +
+    "            <use \n" +
+    "                id=\"fill-hover\"\n" +
+    "                xlink:href=\"#contact-text\"\n" +
+    "                class=\"text--transparent\">\n" +
+    "            </use>\n" +
+    "          </svg> \n" +
+    "        </a>\n" +
+    "      </div>\n" +
+    "    </div>\n" +
+    "  </div>");
+}]);
+
 angular.module("home/index.tpl.html", []).run(["$templateCache", function($templateCache) {
   $templateCache.put("home/index.tpl.html",
     "<div class=\"surface-container-home\">\n" +
-    "  <div ng-include=\"'intro/index.tpl.html'\"></div>\n" +
-    "   <div class=\"services\" id=\"about\">\n" +
-    "       <!--  <figure class=\"icon-cards\">\n" +
-    "          <div class=\"icon-cards__content\">\n" +
-    "            <div class=\"icon-cards__item\">\n" +
-    "            <h3 style=\"margin-top:5%\" class=\"medium-text\">design</h3>\n" +
+    "  	<div ng-include=\"'intro/index.tpl.html'\"></div>\n" +
     "\n" +
-    "            </div>\n" +
-    "            <div class=\"icon-cards__item\">\n" +
-    "              <h3 style=\"margin-top:5%\" class=\"medium-text\">development</h3>\n" +
-    "            </div>\n" +
-    "            <div class=\"icon-cards__item\">\n" +
-    "              <h3 style=\"margin-top:5%\" class=\"medium-text\">marketing</h3>\n" +
-    "            </div>\n" +
-    "          </div>\n" +
-    "        </figure>\n" +
-    "        <div class=\"services-list\">\n" +
-    "            <div class=\"row\">\n" +
-    "                <div class=\"col-md-12\">\n" +
-    "                    <div class=\"col-md-4 flex\">\n" +
-    "                        <div class=\"tri-wrap\">\n" +
-    "                            <svg version=\"1.1\" id=\"Layer_1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\" width=\"144px\" height=\"144px\" viewBox=\"0 0 144 144\" enable-background=\"new 0 0 144 144\" xml:space=\"preserve\">\n" +
-    "                                <polygon fill=\"none\" stroke=\"#14B795\" stroke-width=\"5\" stroke-miterlimit=\"10\" points=\"6.946,15.479 137.053,15.479 72,128.151 \"></polygon>\n" +
-    "                            </svg>\n" +
-    "                            <div class=\"service-title desc1\">\n" +
-    "                                <a href=\"/about#design-div/\">\n" +
-    "                                    <h2 class=\"service-title-bar\">design</h2>\n" +
-    "                                </a>\n" +
-    "                            </div>\n" +
-    "                            <div class=\"service-des\">\n" +
-    "                                <div class=\"desc-item\">graphics & animation</div>\n" +
-    "                                <div class=\"desc-item\">company branding</div>\n" +
-    "                                <div class=\"desc-item\">UI/UX design</div>\n" +
-    "                            </div>\n" +
-    "                        </div>\n" +
-    "                    </div>\n" +
-    "                    <div class=\"col-md-4 flex\">\n" +
-    "                        <div class=\"tri-wrap\">\n" +
-    "                            <svg version=\"1.1\" id=\"Layer_1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\" width=\"144px\" height=\"144px\" viewBox=\"0 0 144 144\" enable-background=\"new 0 0 144 144\" xml:space=\"preserve\">\n" +
-    "                                <polygon fill=\"none\" stroke=\"#14B795\" stroke-width=\"5\" stroke-miterlimit=\"10\" points=\"137.053,128.152 6.946,128.152,71.999,15.479 \"></polygon>\n" +
-    "                            </svg>\n" +
-    "                            <div class=\"service-title\">\n" +
-    "                                <a href=\"/about#dev-div/\">\n" +
-    "                                    <h2 class=\"service-title-bar\">development</h2>\n" +
-    "                                </a>\n" +
-    "                            </div>\n" +
-    "                            <div class=\"service-des\">\n" +
-    "                                <div class=\"desc-item\">mobile-ready <br> design</div>\n" +
-    "                                <div class=\"desc-item\">SEO</div>\n" +
-    "                                <div class=\"desc-item\">back-end <br> integration</div>\n" +
-    "                            </div>\n" +
-    "                        </div>\n" +
-    "                    </div>\n" +
-    "                    <div class=\"col-md-4 flex\">\n" +
-    "                        <div class=\"tri-wrap\">\n" +
-    "                            <svg version=\"1.1\" id=\"Layer_1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\" width=\"144px\" height=\"144px\" viewBox=\"0 0 144 144\" enable-background=\"new 0 0 144 144\" xml:space=\"preserve\">\n" +
-    "                                <polygon fill=\"none\" stroke=\"#14B795\" stroke-width=\"5\" stroke-miterlimit=\"10\" points=\"6.946,15.479 137.053,15.479 72,128.151 \"></polygon>\n" +
-    "                            </svg>\n" +
-    "                            <div class=\"service-title desc3\">\n" +
-    "                                <a href=\"/about#marketing-div/\">\n" +
-    "                                    <h2 class=\"service-title-bar\">marketing</h2>\n" +
-    "                                </a>\n" +
-    "                            </div>\n" +
-    "                            <div class=\"service-des\">\n" +
-    "                                <div class=\"desc-item\">social media <br> management</div>\n" +
-    "                                <div class=\"desc-item\">email marketing</div>\n" +
-    "                                <div class=\"desc-item\">content creation</div>\n" +
-    "                            </div>\n" +
-    "                        </div>\n" +
-    "                    </div>\n" +
-    "                </div>\n" +
-    "                <a href=\"/about\"><button class=\"mainbutton service-button\" style=\"margin-top: 7.5%;\">More Info...</button></a>\n" +
-    "            </div>\n" +
-    "        </div>-->\n" +
-    "    </div>\n" +
+    "    <div ng-include=\"'about/about.tpl.html'\"></div>\n" +
     "\n" +
-    "    <div class=\"portfolio-home-container\">\n" +
-    "        <a href=\"/portfolio/\">\n" +
-    "            <svg class=\"portfolio-home\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 1920 400\" width=\"1920px\" height=\"400px\" preserveAspectRatio=\"xMidYMid slice\">\n" +
-    "                <defs>\n" +
-    "                    <mask class=\"portfolio-mask\" id=\"portfolio-mask\" x=\"0\" y=\"0\" width=\"1920px\" height=\"400px\" maskUnits=\"userSpaceOnUse\">\n" +
-    "                        <rect class=\"portfolio-rect\" x=\"0\" y=\"0\" width=\"1920px\" height=\"400px\"></rect>\n" +
-    "                        <text x=\"960\" y=\"60%\" class=\"large-medium-text\" id=\"portfolio-text\">portfolio</text>\n" +
-    "                    </mask>\n" +
-    "                </defs>\n" +
-    "                <rect class=\"portfolio-rect\" x=\"0\" y=\"0\" width=\"1920px\" height=\"400px\"></rect>\n" +
-    "            </svg>\n" +
-    "        </a>\n" +
-    "    </div>\n" +
+    "    <div ng-include=\"'home/portfolio.tpl.html'\"></div>\n" +
     "\n" +
-    "    <div class=\"contact-container\">\n" +
-    "        <div class=\"contact-title-home\">Get In Touch\n" +
-    "            <hr>\n" +
-    "            <br>\n" +
-    "            <div class=\"message-home\">\n" +
-    "                <div class=\"interested-home\">Interested in working with NOVO?</div>\n" +
-    "                <br>\n" +
-    "                <div class=\"contact-us-home\">email us at\n" +
-    "                    <a href=\"mailto:info@projectnovo.co\" style=\"color: #1db996;\">info@projectnovo.co</a></div> or <div class=\"contact-us-home\">call us at one of our <span style=\"color: #1db996; font-weight: 500;\">four</span> locations!</div>\n" +
-    "            </div>\n" +
-    "            <div class=\"row\">\n" +
-    "                <div class=\"col-md-12 center\" style=\"margin-bottom: -100px;\">\n" +
-    "                    <div class=\"col-md-3 office-home\">\n" +
-    "                        <div class=\"hovereffect\">\n" +
-    "                            <img class=\"img-responsive\" src=\"/images/contact/raleigh-nc.jpg\" alt=\"\">\n" +
-    "                            <div class=\"overlay\">\n" +
-    "                                <br>\n" +
-    "                                <br>\n" +
-    "                                <br>\n" +
-    "                                <h2><span class=\"contact-city\">Raleigh, NC</span></h2>\n" +
-    "                                <p>\n" +
-    "                                    <a href=\"tel:+18656797229\">865.679.7229</a>\n" +
-    "                                </p>\n" +
-    "                            </div>\n" +
-    "                        </div>\n" +
-    "                    </div>\n" +
-    "                    <div class=\"col-md-3 office-home\">\n" +
-    "                        <div class=\"hovereffect\">\n" +
-    "                            <img class=\"img-responsive\" src=\"/images/contact/evanston.jpg\" alt=\"\">\n" +
-    "                            <div class=\"overlay\">\n" +
-    "                                <br>\n" +
-    "                                <br>\n" +
-    "                                <br>\n" +
-    "                                <h2><span class=\"contact-city\">Chicago, IL</span></h2>\n" +
-    "                                <p>\n" +
-    "                                    <a href=\"tel:+18653876121\">865.387.6121</a>\n" +
-    "                                </p>\n" +
-    "                            </div>\n" +
-    "                        </div>\n" +
-    "                    </div>\n" +
-    "                    <div class=\"col-md-3 office-home\">\n" +
-    "                        <div class=\"hovereffect\">\n" +
-    "                            <img class=\"img-responsive\" src=\"/images/contact/knoxville.jpg\" alt=\"\">\n" +
-    "                            <div class=\"overlay\">\n" +
-    "                                <br>\n" +
-    "                                <br>\n" +
-    "                                <br>\n" +
-    "                                <h2><span class=\"contact-city\">Knoxville, TN</span></h2>\n" +
-    "                                <p>\n" +
-    "                                    <a href=\"tel:+18656969382\">865.696.9382</a>\n" +
-    "                                </p>\n" +
-    "                            </div>\n" +
-    "                        </div>\n" +
-    "                    </div>\n" +
-    "                    <div class=\"col-md-3 office-home\">\n" +
-    "                        <div class=\"hovereffect\">\n" +
-    "                            <img class=\"img-responsive\" src=\"/images/contact/philly.jpg\" alt=\"\">\n" +
-    "                            <div class=\"overlay\">\n" +
-    "                                <br>\n" +
-    "                                <br>\n" +
-    "                                <br>\n" +
-    "                                <h2><span class=\"contact-city\">Philadelphia, PA</span></h2>\n" +
-    "                                <p>\n" +
-    "                                    <a href=\"tel:+13365800855\">336.580.0855</a>\n" +
-    "                                </p>\n" +
-    "                            </div>\n" +
-    "                        </div>\n" +
-    "                    </div>\n" +
-    "                </div>\n" +
-    "            </div>\n" +
-    "            <br>\n" +
-    "            <br>\n" +
-    "            <br>\n" +
-    "        </div>\n" +
-    "    </div>\n" +
-    "\n" +
-    "    <div class=\"newsletter-home-container\">\n" +
-    "        <svg class=\"newsletter-home\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 1920 400\" width=\"1920px\" height=\"500px\" preserveAspectRatio=\"xMidYMid slice\">\n" +
-    "            <defs>\n" +
-    "                <mask class=\"newsletter-mask\" id=\"newsletter-mask\" x=\"0\" y=\"0\" width=\"1920px\" height=\"500px\" maskUnits=\"userSpaceOnUse\">\n" +
-    "                    <rect class=\"newsletter-rect\" x=\"0\" y=\"0\" width=\"1920px\" height=\"500px\"></rect>\n" +
-    "                    <text x=\"960\" y=\"30%\" class=\"medium-text\">sign up for our newsletter</text>\n" +
-    "                    <!-- I feel like we could say something a little better here. Let's do some research into this -->\n" +
-    "                </mask>\n" +
-    "             </defs>\n" +
-    "             <rect class=\"newsletter-rect\" x=\"0\" y=\"0\" width=\"1920px\" height=\"500px\"></rect>\n" +
-    "        </svg>\n" +
-    "        <div class=\"contact\" id=\"contact\">\n" +
-    "            <div class=\"contact-section\">\n" +
-    "                <form class=\"ctr newsletter-input\" action=\"//projectnovo.us11.list-manage.com/subscribe/post?u=a56f7f3f876fa9db4c36328af&amp;id=ff3d3ae826\" method=\"post\">\n" +
-    "                    <div class=\"loader\"></div>\n" +
-    "                    <input type=\"email\" name=\"EMAIL\" required>\n" +
-    "                    <div class=\"indicator\" data-content=\"Type Your Email Address\"></div>\n" +
-    "                </form>\n" +
-    "            </div>\n" +
-    "\n" +
-    "            <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->\n" +
-    "            <div class=\"display-none\">\n" +
-    "                <div style=\"position: absolute; left: -5000px;\"><input type=\"text\" name=\"b_a56f7f3f876fa9db4c36328af_ff3d3ae826\" tabindex=\"-1\" value=\"\"></div>\n" +
-    "                <div class=\"clear\"><input type=\"submit\" value=\"Subscribe\" name=\"subscribe\" id=\"mc-embedded-subscribe\" class=\"button\"></div>\n" +
-    "            </div>\n" +
-    "        </div>\n" +
-    "    </div>\n" +
+    "    <div ng-include=\"'home/contact.tpl.html'\"></div>\n" +
     "\n" +
     "    <div class=\"footer\">\n" +
     "        <div class=\"footer-text\">© 2015 NOVO, LLC.</div>\n" +
     "    </div>\n" +
-    "</div>");
+    "</div>\n" +
+    "\n" +
+    "");
+}]);
+
+angular.module("home/portfolio.tpl.html", []).run(["$templateCache", function($templateCache) {
+  $templateCache.put("home/portfolio.tpl.html",
+    "<div class=\"port\">\n" +
+    "    <div class=\"port-container\">\n" +
+    "      <svg class=\"svg-defs\" viewBox=\"0 0 1920 1080\" viewPort=\"0 0 1920 1080\" preserveAspectRatio=\"xMidYMid slice\" xmlns=\"http://www.w3.org/2000/svg\">\n" +
+    "        <symbol id=\"port-text\">\n" +
+    "          <text text-anchor=\"middle\"\n" +
+    "                x=\"960\"  \n" +
+    "                y=\"530\"\n" +
+    "                dy=\".35em\"\n" +
+    "                class=\"large-medium-text\"\n" +
+    "                >\n" +
+    "            portfolio\n" +
+    "          </text>    \n" +
+    "        </symbol>\n" +
+    "        <mask id=\"mask-text\"\n" +
+    "              maskunits=\"userSpaceOnUse\"\n" +
+    "              maskcontentunits=\"userSpaceOnUse\">\n" +
+    "          <rect\n" +
+    "                width=\"100%\"\n" +
+    "                height=\"100%\"\n" +
+    "                class=\"mask__shape\">\n" +
+    "          </rect>\n" +
+    "          <use xlink:href=\"#port-text\"\n" +
+    "               class=\"mask__text\"\n" +
+    "               ></use>\n" +
+    "        </mask>\n" +
+    "      </svg>\n" +
+    "      <div class=\"port-box\">\n" +
+    "        <a href=\"/portfolio/\">\n" +
+    "          <div class=\"text-fill\">\n" +
+    "            <video \n" +
+    "                class=\"video\" \n" +
+    "                src=\"/videos/drawing.webm\" \n" +
+    "                preload=\"auto\" \n" +
+    "                autoplay=\"autoplay\" \n" +
+    "                loop=\"loop\" \n" +
+    "                muted=\"muted\">\n" +
+    "            </video>\n" +
+    "            <img class=\"port-mobile\" src=\"/images/m2.jpg\"></img>\n" +
+    "          </div>\n" +
+    "          <svg class=\"svg-inverted-mask\" viewBox=\"0 0 1920 1080\" viewPort=\"0 0 1920 1080\" \n" +
+    "               preserveAspectRatio=\"xMidYMid slice\" xmlns=\"http://www.w3.org/2000/svg\" >\n" +
+    "            <rect\n" +
+    "              id=\"port-rect\"\n" +
+    "              width=\"100%\"\n" +
+    "              height=\"100%\"\n" +
+    "              mask=\"url(#mask-text)\"\n" +
+    "              class=\"port--fill\"/>\n" +
+    "            <use \n" +
+    "                id=\"fill-hover\"\n" +
+    "                xlink:href=\"#port-text\"\n" +
+    "                class=\"text--transparent\">\n" +
+    "            </use>\n" +
+    "          </svg> \n" +
+    "        </a>\n" +
+    "      </div>\n" +
+    "    </div>\n" +
+    "  </div>");
 }]);
 
 angular.module("intro/index.tpl.html", []).run(["$templateCache", function($templateCache) {
@@ -617,87 +577,286 @@ angular.module("intro/index.tpl.html", []).run(["$templateCache", function($temp
     "<div class=\"intro\">\n" +
     "  <div class=\"intro-container\">\n" +
     "\n" +
-    "    <svg class=\"svg-defs\" viewBox=\"0 0 1920 1080\" xmlns=\"http://www.w3.org/2000/svg\">\n" +
-    "      <!-- Symbol with text -->\n" +
-    "      <symbol id=\"s-text\">\n" +
-    "        <text text-anchor=\"middle\"\n" +
-    "              x=\"970\"  \n" +
-    "              y=\"650\"\n" +
-    "              dy=\".35em\"\n" +
-    "              class=\"medium-text\"\n" +
-    "              >\n" +
-    "          full-stack design, development, and marketing\n" +
-    "        </text>    \n" +
-    "      </symbol>\n" +
-    "      <!-- Mask with text -->\n" +
-    "      <mask id=\"m-text\"\n" +
-    "            maskunits=\"userSpaceOnUse\"\n" +
-    "            maskcontentunits=\"userSpaceOnUse\">\n" +
-    "\n" +
-    "        <rect\n" +
-    "              width=\"100%\"\n" +
-    "              height=\"100%\"\n" +
-    "              class=\"mask__shape\">\n" +
-    "        </rect>\n" +
-    "        <use xlink:href=\"#s-text\"\n" +
-    "             class=\"mask__text\"\n" +
-    "             ></use>\n" +
-    "        <use xlink:href=\"#novo\" />\n" +
-    "      </mask>\n" +
-    "    </svg>\n" +
-    "\n" +
-    "    <svg style=\"display: none;\" xmlns=\"http://www.w3.org/2000/svg\">\n" +
-    "      <symbol id=\"novo\">\n" +
-    "        <path transform=\"translate(375,625) scale(0.09,-0.09)\" d=\"m4315 3849c-390 -27 -601 -107 -745 -281c-136 -162 -180 -345 -196 -800l-7 -208l-158 0l-159 0l-2 643l-3 642l-156 3c-123 2 -159 0 -168 -11c-8 -10 -12 -309 -13 -1112l-3 -1098l-350 415c-192 229 -608 722 -922 1096c-315 374 -580 687 -589 696c-14 14 -53 16 -327 14l-312 -3l0 -1315l0 -1315l154 -3c104 -2 158 1 167 9c12 10 14 197 14 1180l0 1169l39 0l38 0l1004 -1180l1004 -1180l210 2l210 3l3 588l2 587l164 0l163 0l6 -172c13 -368 58 -541 181 -704c117 -156 303 -240 618 -280c176 -22 971 -32 1226 -15c198 13 369 40 463 72c277 94 430 284 483 599c17 105 36 327 36 433l0 67l456 -2l456 -3l297 -585l297 -585l210 -2l209 -3l300 590l300 590l461 0l461 0l6 -172c19 -517 122 -741 406 -883c184 -92 378 -116 985 -122c617 -7 909 14 1097 78c277 94 430 284 483 599c17 105 36 327 36 433l0 67l380 0l380 0l0 85l0 85l-378 0l-378 0l-12 238c-13 251 -33 434 -57 518c-30 103 -94 214 -169 289c-83 84 -147 122 -273 165c-206 69 -444 90 -1008 90c-748 0 -983 -37 -1191 -185c-121 -87 -215 -228 -255 -384c-28 -109 -47 -286 -55 -523l-7 -208l-414 0l-415 0l65 123c35 67 174 338 307 602c134 264 250 488 258 498c12 14 13 22 4 42l-12 25l-1511 -2c-1373 -3 -1513 -4 -1522 -19c-8 -12 5 -46 56 -145c456 -897 567 -1117 567 -1120c0 -2 -184 -4 -408 -4l-408 0l-12 238c-13 251 -33 434 -57 518c-8 28 -33 89 -56 134c-49 98 -152 208 -239 258c-129 72 -344 122 -615 142c-160 11 -934 11 -1100 -1zm4766 -391c-69 -133 -371 -718 -760 -1472c-114 -220 -211 -401 -217 -403c-6 -2 -64 101 -129 229c-65 128 -180 352 -255 498c-213 412 -650 1268 -650 1274c0 3 468 6 1040 6l1040 0l-69 -132zm-3621 41c256 -18 383 -57 454 -141c42 -49 92 -165 112 -258c14 -70 34 -337 34 -467l0 -73l-1182 0l-1181 0l7 178c23 602 120 727 587 761c169 12 1001 12 1169 0zm6460 0c256 -18 383 -57 454 -141c42 -49 92 -165 112 -258c14 -70 34 -337 34 -467l0 -73l-1182 0l-1181 0l7 178c23 602 120 727 587 761c169 12 1001 12 1169 0zm-5873 -1266c-12 -289 -50 -426 -147 -524c-103 -105 -202 -125 -674 -140c-400 -12 -976 1 -1116 26c-156 29 -260 96 -315 205c-48 95 -85 314 -85 506l0 84l1172 0l1171 0l-6 -157zm6460 0c-12 -289 -50 -426 -147 -524c-103 -105 -202 -125 -674 -140c-400 -12 -976 1 -1116 26c-156 29 -260 96 -315 205c-48 95 -85 314 -85 506l0 84l1172 0l1171 0l-6 -157z\"/>\n" +
-    "      </symbol>\n" +
-    "    </svg>\n" +
-    "\n" +
-    "      <div class=\"svg-container\">\n" +
-    "        <div class=\"box-with-text\">\n" +
-    "          <!-- Container for video -->\n" +
-    "          <div class=\"text-fill\">\n" +
-    "            <video \n" +
-    "                   class=\"video\" src=\"//secure-c.vimeocdn.com/p/video/yosemite_hd_ii_hd.webm#t=93,300\" preload=\"auto\" autoplay=\"autoplay\" loop=\"loop\" muted=\"muted\"></video>\n" +
-    "          </div>\n" +
-    "\n" +
-    "          <!-- Visible SVG -->\n" +
-    "          <svg class=\"svg-inverted-mask\" viewBox=\"0 0 1920 1080\" viewPort=\"0 0 1920 1080\" xmlns=\"http://www.w3.org/2000/svg\">\n" +
+    "      <div class=\"desktop\">\n" +
+    "        <!-- this svg is invisible yo -->\n" +
+    "        <svg class=\"svg-defs\" viewBox=\"0 0 1920 1080\" viewPort=\"0 0 1920 1080\" preserveAspectRatio=\"xMidYMid slice\" xmlns=\"http://www.w3.org/2000/svg\">\n" +
+    "          <symbol id=\"intro-desktop-text\">\n" +
+    "            <text text-anchor=\"middle\"\n" +
+    "                  x=\"960\"  \n" +
+    "                  y=\"560\"\n" +
+    "                  dy=\".35em\"\n" +
+    "                  class=\"medium-text\"\n" +
+    "                  >\n" +
+    "              full-stack design, development, and marketing\n" +
+    "            </text>    \n" +
+    "          </symbol>\n" +
+    "          <mask id=\"intro-desktop-mask\"\n" +
+    "                maskunits=\"userSpaceOnUse\"\n" +
+    "                maskcontentunits=\"userSpaceOnUse\">\n" +
     "            <rect\n" +
     "                  width=\"100%\"\n" +
     "                  height=\"100%\"\n" +
-    "                  mask=\"url(#m-text)\"\n" +
-    "                  class=\"shape--fill\"/>\n" +
-    "            <use xlink:href=\"#s-text\"\n" +
-    "                 class=\"text--transparent\"\n" +
+    "                  class=\"mask__shape\">\n" +
+    "            </rect>\n" +
+    "            <use xlink:href=\"#intro-desktop-text\"\n" +
+    "                 class=\"mask__text\"\n" +
     "                 ></use>\n" +
+    "            <use xlink:href=\"#intro-desktop-novo\" />\n" +
+    "          </mask>\n" +
+    "        </svg>\n" +
+    "        <!--                  |\n" +
+    "            so is this one    v    -->\n" +
+    "        <svg style=\"display: none;\" viewBox=\"0 0 1920 1080\" viewPort=\"0 0 1920 1080\" xmlns=\"http://www.w3.org/2000/svg\">\n" +
+    "          <symbol id=\"intro-desktop-novo\">\n" +
+    "            <path transform=\"translate(375,560) scale(0.09,-0.09)\" d=\"m4315 3849c-390 -27 -601 -107 -745 -281c-136 -162 -180 -345 -196 -800l-7 -208l-158 0l-159 0l-2 643l-3 642l-156 3c-123 2 -159 0 -168 -11c-8 -10 -12 -309 -13 -1112l-3 -1098l-350 415c-192 229 -608 722 -922 1096c-315 374 -580 687 -589 696c-14 14 -53 16 -327 14l-312 -3l0 -1315l0 -1315l154 -3c104 -2 158 1 167 9c12 10 14 197 14 1180l0 1169l39 0l38 0l1004 -1180l1004 -1180l210 2l210 3l3 588l2 587l164 0l163 0l6 -172c13 -368 58 -541 181 -704c117 -156 303 -240 618 -280c176 -22 971 -32 1226 -15c198 13 369 40 463 72c277 94 430 284 483 599c17 105 36 327 36 433l0 67l456 -2l456 -3l297 -585l297 -585l210 -2l209 -3l300 590l300 590l461 0l461 0l6 -172c19 -517 122 -741 406 -883c184 -92 378 -116 985 -122c617 -7 909 14 1097 78c277 94 430 284 483 599c17 105 36 327 36 433l0 67l380 0l380 0l0 85l0 85l-378 0l-378 0l-12 238c-13 251 -33 434 -57 518c-30 103 -94 214 -169 289c-83 84 -147 122 -273 165c-206 69 -444 90 -1008 90c-748 0 -983 -37 -1191 -185c-121 -87 -215 -228 -255 -384c-28 -109 -47 -286 -55 -523l-7 -208l-414 0l-415 0l65 123c35 67 174 338 307 602c134 264 250 488 258 498c12 14 13 22 4 42l-12 25l-1511 -2c-1373 -3 -1513 -4 -1522 -19c-8 -12 5 -46 56 -145c456 -897 567 -1117 567 -1120c0 -2 -184 -4 -408 -4l-408 0l-12 238c-13 251 -33 434 -57 518c-8 28 -33 89 -56 134c-49 98 -152 208 -239 258c-129 72 -344 122 -615 142c-160 11 -934 11 -1100 -1zm4766 -391c-69 -133 -371 -718 -760 -1472c-114 -220 -211 -401 -217 -403c-6 -2 -64 101 -129 229c-65 128 -180 352 -255 498c-213 412 -650 1268 -650 1274c0 3 468 6 1040 6l1040 0l-69 -132zm-3621 41c256 -18 383 -57 454 -141c42 -49 92 -165 112 -258c14 -70 34 -337 34 -467l0 -73l-1182 0l-1181 0l7 178c23 602 120 727 587 761c169 12 1001 12 1169 0zm6460 0c256 -18 383 -57 454 -141c42 -49 92 -165 112 -258c14 -70 34 -337 34 -467l0 -73l-1182 0l-1181 0l7 178c23 602 120 727 587 761c169 12 1001 12 1169 0zm-5873 -1266c-12 -289 -50 -426 -147 -524c-103 -105 -202 -125 -674 -140c-400 -12 -976 1 -1116 26c-156 29 -260 96 -315 205c-48 95 -85 314 -85 506l0 84l1172 0l1171 0l-6 -157zm6460 0c-12 -289 -50 -426 -147 -524c-103 -105 -202 -125 -674 -140c-400 -12 -976 1 -1116 26c-156 29 -260 96 -315 205c-48 95 -85 314 -85 506l0 84l1172 0l1171 0l-6 -157z\"/>\n" +
+    "          </symbol>\n" +
+    "        </svg>\n" +
+    "\n" +
+    "        <!-- this is a box... with some text n vids n stuff-->\n" +
+    "        <div class=\"box-with-text\">\n" +
+    "          <div class=\"text-fill\">\n" +
+    "            <video \n" +
+    "                class=\"video\" \n" +
+    "                src=\"//secure-c.vimeocdn.com/p/video/yosemite_hd_ii_hd.webm#t=97,300\" \n" +
+    "                preload=\"auto\" \n" +
+    "                autoplay=\"autoplay\" \n" +
+    "                loop=\"loop\" \n" +
+    "                muted=\"muted\">\n" +
+    "            </video>\n" +
+    "          </div>\n" +
+    "          <!-- this is the sweet, visible novo one -->\n" +
+    "          <svg class=\"svg-inverted-mask\" viewBox=\"0 0 1920 1080\" viewPort=\"0 0 1920 1080\" \n" +
+    "               preserveAspectRatio=\"xMidYMid slice\" xmlns=\"http://www.w3.org/2000/svg\">\n" +
+    "            <rect\n" +
+    "              width=\"100%\"\n" +
+    "              height=\"100%\"\n" +
+    "              mask=\"url(#intro-desktop-mask)\"\n" +
+    "              class=\"shape--fill\"/>\n" +
+    "            <use xlink:href=\"#intro-desktop-text\"\n" +
+    "                class=\"text--transparent\">\n" +
+    "            </use>\n" +
+    "          </svg> \n" +
+    "        </div>\n" +
+    "        <div class=\"continue-wrap\">\n" +
+    "          <div class=\"svg-wrapper\">\n" +
+    "            <svg height=\"60\" width=\"320\" xmlns=\"http://www.w3.org/2000/svg\">\n" +
+    "              <rect class=\"shape\" height=\"60\" width=\"320\" />\n" +
+    "            </svg>\n" +
+    "            <div class=\"text\">Continue</div>\n" +
+    "          </div>\n" +
+    "        </div>\n" +
+    "    </div>\n" +
+    "\n" +
+    "    <!-- mobile classes yo - mobile, small, smallest -->\n" +
+    "      <div class=\"mobile\">\n" +
+    "        <svg class=\"svg-defs\" viewBox=\"0 0 1920 1080\" viewPort=\"0 0 1920 1080\" preserveAspectRatio=\"xMidYMid slice\" xmlns=\"http://www.w3.org/2000/svg\">\n" +
+    "          <symbol id=\"intro-mobile-txt\">\n" +
+    "            <text text-anchor=\"middle\"\n" +
+    "                  x=\"960\"  \n" +
+    "                  y=\"560\"\n" +
+    "                  dy=\".35em\"\n" +
+    "                  class=\"small-text\"\n" +
+    "                  >\n" +
+    "              full-stack design,\n" +
+    "            </text> \n" +
+    "            <text text-anchor=\"middle\"\n" +
+    "                  x=\"960\"  \n" +
+    "                  y=\"575\"\n" +
+    "                  dy=\"1.5em\"\n" +
+    "                  class=\"small-text\"\n" +
+    "                  >\n" +
+    "              development, and marketing\n" +
+    "            </text>   \n" +
+    "          </symbol>\n" +
+    "          <mask id=\"intro-mobile-mask\"\n" +
+    "                maskunits=\"userSpaceOnUse\"\n" +
+    "                maskcontentunits=\"userSpaceOnUse\">\n" +
+    "            <rect\n" +
+    "                  width=\"100%\"\n" +
+    "                  height=\"100%\"\n" +
+    "                  class=\"mask__shape\">\n" +
+    "            </rect>\n" +
+    "            <use xlink:href=\"#intro-mobile-txt\"\n" +
+    "                 class=\"mask__text\"\n" +
+    "                 ></use>\n" +
+    "            <use xlink:href=\"#intro-mobile-novo\" />\n" +
+    "          </mask>\n" +
+    "        </svg>\n" +
+    "\n" +
+    "        <svg style=\"display: none;\" viewBox=\"0 0 1920 1080\" viewPort=\"0 0 1920 1080\" xmlns=\"http://www.w3.org/2000/svg\">\n" +
+    "          <symbol id=\"intro-mobile-novo\">\n" +
+    "            <path transform=\"translate(515,530) scale(0.07,-0.07)\" d=\"m4315 3849c-390 -27 -601 -107 -745 -281c-136 -162 -180 -345 -196 -800l-7 -208l-158 0l-159 0l-2 643l-3 642l-156 3c-123 2 -159 0 -168 -11c-8 -10 -12 -309 -13 -1112l-3 -1098l-350 415c-192 229 -608 722 -922 1096c-315 374 -580 687 -589 696c-14 14 -53 16 -327 14l-312 -3l0 -1315l0 -1315l154 -3c104 -2 158 1 167 9c12 10 14 197 14 1180l0 1169l39 0l38 0l1004 -1180l1004 -1180l210 2l210 3l3 588l2 587l164 0l163 0l6 -172c13 -368 58 -541 181 -704c117 -156 303 -240 618 -280c176 -22 971 -32 1226 -15c198 13 369 40 463 72c277 94 430 284 483 599c17 105 36 327 36 433l0 67l456 -2l456 -3l297 -585l297 -585l210 -2l209 -3l300 590l300 590l461 0l461 0l6 -172c19 -517 122 -741 406 -883c184 -92 378 -116 985 -122c617 -7 909 14 1097 78c277 94 430 284 483 599c17 105 36 327 36 433l0 67l380 0l380 0l0 85l0 85l-378 0l-378 0l-12 238c-13 251 -33 434 -57 518c-30 103 -94 214 -169 289c-83 84 -147 122 -273 165c-206 69 -444 90 -1008 90c-748 0 -983 -37 -1191 -185c-121 -87 -215 -228 -255 -384c-28 -109 -47 -286 -55 -523l-7 -208l-414 0l-415 0l65 123c35 67 174 338 307 602c134 264 250 488 258 498c12 14 13 22 4 42l-12 25l-1511 -2c-1373 -3 -1513 -4 -1522 -19c-8 -12 5 -46 56 -145c456 -897 567 -1117 567 -1120c0 -2 -184 -4 -408 -4l-408 0l-12 238c-13 251 -33 434 -57 518c-8 28 -33 89 -56 134c-49 98 -152 208 -239 258c-129 72 -344 122 -615 142c-160 11 -934 11 -1100 -1zm4766 -391c-69 -133 -371 -718 -760 -1472c-114 -220 -211 -401 -217 -403c-6 -2 -64 101 -129 229c-65 128 -180 352 -255 498c-213 412 -650 1268 -650 1274c0 3 468 6 1040 6l1040 0l-69 -132zm-3621 41c256 -18 383 -57 454 -141c42 -49 92 -165 112 -258c14 -70 34 -337 34 -467l0 -73l-1182 0l-1181 0l7 178c23 602 120 727 587 761c169 12 1001 12 1169 0zm6460 0c256 -18 383 -57 454 -141c42 -49 92 -165 112 -258c14 -70 34 -337 34 -467l0 -73l-1182 0l-1181 0l7 178c23 602 120 727 587 761c169 12 1001 12 1169 0zm-5873 -1266c-12 -289 -50 -426 -147 -524c-103 -105 -202 -125 -674 -140c-400 -12 -976 1 -1116 26c-156 29 -260 96 -315 205c-48 95 -85 314 -85 506l0 84l1172 0l1171 0l-6 -157zm6460 0c-12 -289 -50 -426 -147 -524c-103 -105 -202 -125 -674 -140c-400 -12 -976 1 -1116 26c-156 29 -260 96 -315 205c-48 95 -85 314 -85 506l0 84l1172 0l1171 0l-6 -157z\"/>\n" +
+    "          </symbol>\n" +
+    "        </svg>\n" +
+    "\n" +
+    "        <div class=\"box-with-text\">\n" +
+    "          <div class=\"text-fill\">\n" +
+    "            <video \n" +
+    "                class=\"video\" \n" +
+    "                src=\"//secure-c.vimeocdn.com/p/video/yosemite_hd_ii_hd.webm#t=97,300\" \n" +
+    "                preload=\"auto\" \n" +
+    "                autoplay=\"autoplay\" \n" +
+    "                loop=\"loop\" \n" +
+    "                muted=\"muted\">\n" +
+    "            </video>\n" +
+    "          </div>\n" +
+    "\n" +
+    "          <svg class=\"svg-inverted-mask\" viewBox=\"0 0 1920 1080\" viewPort=\"0 0 1920 1080\" \n" +
+    "               preserveAspectRatio=\"xMidYMid slice\" xmlns=\"http://www.w3.org/2000/svg\">\n" +
+    "            <rect\n" +
+    "              width=\"100%\"\n" +
+    "              height=\"100%\"\n" +
+    "              mask=\"url(#intro-mobile-mask)\"\n" +
+    "              class=\"shape--fill\"/>\n" +
+    "            <use xlink:href=\"#intro-mobile-txt\"\n" +
+    "                class=\"text--transparent\">\n" +
+    "            </use>\n" +
     "          </svg> \n" +
     "        </div>\n" +
     "      </div>\n" +
     "\n" +
-    "  <div class=\"intro-img mobile\"></div>\n" +
+    "      <div class=\"mobile-small\">\n" +
+    "        <svg class=\"svg-defs\" viewBox=\"0 0 1920 1080\" viewPort=\"0 0 1920 1080\" preserveAspectRatio=\"xMidYMid slice\" xmlns=\"http://www.w3.org/2000/svg\">\n" +
+    "          <symbol id=\"intro-small-txt\">\n" +
+    "            <text text-anchor=\"middle\"\n" +
+    "                  x=\"950\"  \n" +
+    "                  y=\"400\"\n" +
+    "                  dy=\".35em\"\n" +
+    "                  class=\"small-text\"\n" +
+    "                  >\n" +
+    "              full-stack design,\n" +
+    "            </text> \n" +
+    "            <text text-anchor=\"middle\"\n" +
+    "                  x=\"950\"  \n" +
+    "                  y=\"420\"\n" +
+    "                  dy=\"1.5em\"\n" +
+    "                  class=\"small-text\"\n" +
+    "                  >\n" +
+    "              development, and marketing\n" +
+    "            </text>   \n" +
+    "          </symbol>\n" +
+    "          <mask id=\"intro-small-mask\"\n" +
+    "                maskunits=\"userSpaceOnUse\"\n" +
+    "                maskcontentunits=\"userSpaceOnUse\">\n" +
+    "            <rect\n" +
+    "                  width=\"100%\"\n" +
+    "                  height=\"100%\"\n" +
+    "                  class=\"mask__shape\">\n" +
+    "            </rect>\n" +
+    "            <use xlink:href=\"#intro-small-txt\"\n" +
+    "                 class=\"mask__text\"\n" +
+    "                 ></use>\n" +
+    "            <use xlink:href=\"#intro-small-novo\" />\n" +
+    "          </mask>\n" +
+    "        </svg>\n" +
     "\n" +
+    "        <svg style=\"display: none;\" viewBox=\"0 0 1920 1080\" viewPort=\"0 0 1920 1080\" xmlns=\"http://www.w3.org/2000/svg\">\n" +
+    "          <symbol id=\"intro-small-novo\">\n" +
+    "            <path transform=\"translate(620,340) scale(0.05,-0.05)\" d=\"m4315 3849c-390 -27 -601 -107 -745 -281c-136 -162 -180 -345 -196 -800l-7 -208l-158 0l-159 0l-2 643l-3 642l-156 3c-123 2 -159 0 -168 -11c-8 -10 -12 -309 -13 -1112l-3 -1098l-350 415c-192 229 -608 722 -922 1096c-315 374 -580 687 -589 696c-14 14 -53 16 -327 14l-312 -3l0 -1315l0 -1315l154 -3c104 -2 158 1 167 9c12 10 14 197 14 1180l0 1169l39 0l38 0l1004 -1180l1004 -1180l210 2l210 3l3 588l2 587l164 0l163 0l6 -172c13 -368 58 -541 181 -704c117 -156 303 -240 618 -280c176 -22 971 -32 1226 -15c198 13 369 40 463 72c277 94 430 284 483 599c17 105 36 327 36 433l0 67l456 -2l456 -3l297 -585l297 -585l210 -2l209 -3l300 590l300 590l461 0l461 0l6 -172c19 -517 122 -741 406 -883c184 -92 378 -116 985 -122c617 -7 909 14 1097 78c277 94 430 284 483 599c17 105 36 327 36 433l0 67l380 0l380 0l0 85l0 85l-378 0l-378 0l-12 238c-13 251 -33 434 -57 518c-30 103 -94 214 -169 289c-83 84 -147 122 -273 165c-206 69 -444 90 -1008 90c-748 0 -983 -37 -1191 -185c-121 -87 -215 -228 -255 -384c-28 -109 -47 -286 -55 -523l-7 -208l-414 0l-415 0l65 123c35 67 174 338 307 602c134 264 250 488 258 498c12 14 13 22 4 42l-12 25l-1511 -2c-1373 -3 -1513 -4 -1522 -19c-8 -12 5 -46 56 -145c456 -897 567 -1117 567 -1120c0 -2 -184 -4 -408 -4l-408 0l-12 238c-13 251 -33 434 -57 518c-8 28 -33 89 -56 134c-49 98 -152 208 -239 258c-129 72 -344 122 -615 142c-160 11 -934 11 -1100 -1zm4766 -391c-69 -133 -371 -718 -760 -1472c-114 -220 -211 -401 -217 -403c-6 -2 -64 101 -129 229c-65 128 -180 352 -255 498c-213 412 -650 1268 -650 1274c0 3 468 6 1040 6l1040 0l-69 -132zm-3621 41c256 -18 383 -57 454 -141c42 -49 92 -165 112 -258c14 -70 34 -337 34 -467l0 -73l-1182 0l-1181 0l7 178c23 602 120 727 587 761c169 12 1001 12 1169 0zm6460 0c256 -18 383 -57 454 -141c42 -49 92 -165 112 -258c14 -70 34 -337 34 -467l0 -73l-1182 0l-1181 0l7 178c23 602 120 727 587 761c169 12 1001 12 1169 0zm-5873 -1266c-12 -289 -50 -426 -147 -524c-103 -105 -202 -125 -674 -140c-400 -12 -976 1 -1116 26c-156 29 -260 96 -315 205c-48 95 -85 314 -85 506l0 84l1172 0l1171 0l-6 -157zm6460 0c-12 -289 -50 -426 -147 -524c-103 -105 -202 -125 -674 -140c-400 -12 -976 1 -1116 26c-156 29 -260 96 -315 205c-48 95 -85 314 -85 506l0 84l1172 0l1171 0l-6 -157z\"/>\n" +
+    "          </symbol>\n" +
+    "        </svg>\n" +
+    "\n" +
+    "        <div class=\"box-with-text\">\n" +
+    "          <div class=\"text-fill\">\n" +
+    "            <video \n" +
+    "                class=\"video\" \n" +
+    "                src=\"//secure-c.vimeocdn.com/p/video/yosemite_hd_ii_hd.webm#t=97,300\" \n" +
+    "                preload=\"auto\" \n" +
+    "                autoplay=\"autoplay\" \n" +
+    "                loop=\"loop\" \n" +
+    "                muted=\"muted\">\n" +
+    "            </video>\n" +
+    "          </div>\n" +
+    "\n" +
+    "          <svg class=\"svg-inverted-mask\" viewBox=\"0 0 1920 1080\" viewPort=\"0 0 1920 1080\" \n" +
+    "               preserveAspectRatio=\"xMidYMid slice\" xmlns=\"http://www.w3.org/2000/svg\">\n" +
+    "            <rect\n" +
+    "              width=\"100%\"\n" +
+    "              height=\"100%\"\n" +
+    "              mask=\"url(#intro-small-mask)\"\n" +
+    "              class=\"shape--fill\"/>\n" +
+    "            <use xlink:href=\"#intro-small-txt\"\n" +
+    "                class=\"text--transparent\">\n" +
+    "            </use>\n" +
+    "          </svg> \n" +
+    "        </div>\n" +
+    "      </div>\n" +
+    "\n" +
+    "      <div class=\"mobile-smallest\">\n" +
+    "        <svg class=\"svg-defs\" viewBox=\"0 0 1920 1080\" viewPort=\"0 0 1920 1080\" preserveAspectRatio=\"xMidYMid slice\" xmlns=\"http://www.w3.org/2000/svg\">\n" +
+    "          <symbol id=\"intro-smallest-txt\">\n" +
+    "            <text text-anchor=\"middle\"\n" +
+    "                  x=\"960\"  \n" +
+    "                  y=\"500\"\n" +
+    "                  dy=\".35em\"\n" +
+    "                  class=\"smaller-text\"\n" +
+    "                  >\n" +
+    "              full-stack design,\n" +
+    "            </text> \n" +
+    "            <text text-anchor=\"middle\"\n" +
+    "                  x=\"960\"  \n" +
+    "                  y=\"520\"\n" +
+    "                  dy=\"1.5em\"\n" +
+    "                  class=\"smaller-text\"\n" +
+    "                  >\n" +
+    "              development, and marketing\n" +
+    "            </text>   \n" +
+    "          </symbol>\n" +
+    "          <mask id=\"intro-smallest-mask\"\n" +
+    "                maskunits=\"userSpaceOnUse\"\n" +
+    "                maskcontentunits=\"userSpaceOnUse\">\n" +
+    "            <rect\n" +
+    "                  width=\"100%\"\n" +
+    "                  height=\"100%\"\n" +
+    "                  class=\"mask__shape\">\n" +
+    "            </rect>\n" +
+    "            <use xlink:href=\"#intro-smallest-txt\"\n" +
+    "                 class=\"mask__text\"\n" +
+    "                 ></use>\n" +
+    "            <use xlink:href=\"#intro-smallest-novo\" />\n" +
+    "          </mask>\n" +
+    "        </svg>\n" +
+    "\n" +
+    "        <svg style=\"display: none;\" viewBox=\"0 0 1920 1080\" viewPort=\"0 0 1920 1080\" xmlns=\"http://www.w3.org/2000/svg\">\n" +
+    "          <symbol id=\"intro-smallest-novo\">\n" +
+    "            <path transform=\"translate(730,340) scale(0.035,-0.035)\" d=\"m4315 3849c-390 -27 -601 -107 -745 -281c-136 -162 -180 -345 -196 -800l-7 -208l-158 0l-159 0l-2 643l-3 642l-156 3c-123 2 -159 0 -168 -11c-8 -10 -12 -309 -13 -1112l-3 -1098l-350 415c-192 229 -608 722 -922 1096c-315 374 -580 687 -589 696c-14 14 -53 16 -327 14l-312 -3l0 -1315l0 -1315l154 -3c104 -2 158 1 167 9c12 10 14 197 14 1180l0 1169l39 0l38 0l1004 -1180l1004 -1180l210 2l210 3l3 588l2 587l164 0l163 0l6 -172c13 -368 58 -541 181 -704c117 -156 303 -240 618 -280c176 -22 971 -32 1226 -15c198 13 369 40 463 72c277 94 430 284 483 599c17 105 36 327 36 433l0 67l456 -2l456 -3l297 -585l297 -585l210 -2l209 -3l300 590l300 590l461 0l461 0l6 -172c19 -517 122 -741 406 -883c184 -92 378 -116 985 -122c617 -7 909 14 1097 78c277 94 430 284 483 599c17 105 36 327 36 433l0 67l380 0l380 0l0 85l0 85l-378 0l-378 0l-12 238c-13 251 -33 434 -57 518c-30 103 -94 214 -169 289c-83 84 -147 122 -273 165c-206 69 -444 90 -1008 90c-748 0 -983 -37 -1191 -185c-121 -87 -215 -228 -255 -384c-28 -109 -47 -286 -55 -523l-7 -208l-414 0l-415 0l65 123c35 67 174 338 307 602c134 264 250 488 258 498c12 14 13 22 4 42l-12 25l-1511 -2c-1373 -3 -1513 -4 -1522 -19c-8 -12 5 -46 56 -145c456 -897 567 -1117 567 -1120c0 -2 -184 -4 -408 -4l-408 0l-12 238c-13 251 -33 434 -57 518c-8 28 -33 89 -56 134c-49 98 -152 208 -239 258c-129 72 -344 122 -615 142c-160 11 -934 11 -1100 -1zm4766 -391c-69 -133 -371 -718 -760 -1472c-114 -220 -211 -401 -217 -403c-6 -2 -64 101 -129 229c-65 128 -180 352 -255 498c-213 412 -650 1268 -650 1274c0 3 468 6 1040 6l1040 0l-69 -132zm-3621 41c256 -18 383 -57 454 -141c42 -49 92 -165 112 -258c14 -70 34 -337 34 -467l0 -73l-1182 0l-1181 0l7 178c23 602 120 727 587 761c169 12 1001 12 1169 0zm6460 0c256 -18 383 -57 454 -141c42 -49 92 -165 112 -258c14 -70 34 -337 34 -467l0 -73l-1182 0l-1181 0l7 178c23 602 120 727 587 761c169 12 1001 12 1169 0zm-5873 -1266c-12 -289 -50 -426 -147 -524c-103 -105 -202 -125 -674 -140c-400 -12 -976 1 -1116 26c-156 29 -260 96 -315 205c-48 95 -85 314 -85 506l0 84l1172 0l1171 0l-6 -157zm6460 0c-12 -289 -50 -426 -147 -524c-103 -105 -202 -125 -674 -140c-400 -12 -976 1 -1116 26c-156 29 -260 96 -315 205c-48 95 -85 314 -85 506l0 84l1172 0l1171 0l-6 -157z\"/>\n" +
+    "          </symbol>\n" +
+    "        </svg>\n" +
+    "\n" +
+    "        <div class=\"box-with-text\">\n" +
+    "          <div class=\"text-fill\">\n" +
+    "            <video \n" +
+    "                class=\"video\" \n" +
+    "                src=\"//secure-c.vimeocdn.com/p/video/yosemite_hd_ii_hd.webm#t=97,300\" \n" +
+    "                preload=\"auto\" \n" +
+    "                autoplay=\"autoplay\" \n" +
+    "                loop=\"loop\" \n" +
+    "                muted=\"muted\">\n" +
+    "            </video>\n" +
+    "          </div>\n" +
+    "\n" +
+    "          <svg class=\"svg-inverted-mask\" viewBox=\"0 0 1920 1080\" viewPort=\"0 0 1920 1080\" \n" +
+    "               preserveAspectRatio=\"xMidYMid slice\" xmlns=\"http://www.w3.org/2000/svg\">\n" +
+    "            <rect\n" +
+    "              width=\"100%\"\n" +
+    "              height=\"100%\"\n" +
+    "              mask=\"url(#intro-smallest-mask)\"\n" +
+    "              class=\"shape--fill\"/>\n" +
+    "            <use id=\"smallest-fill\" xlink:href=\"#intro-smallest-txt\"\n" +
+    "                class=\"text--transparent\">\n" +
+    "            </use>\n" +
+    "          </svg> \n" +
+    "        </div>\n" +
+    "      </div>\n" +
+    "    <!-- nifty mobile art of yosemite, to keep the theme goin nomesayin -->\n" +
+    "    <div class=\"intro-mobile\"></div>\n" +
     "  </div>\n" +
-    "</div>\n" +
-    "\n" +
-    "");
-}]);
-
-angular.module("intro/index2.tpl.html", []).run(["$templateCache", function($templateCache) {
-  $templateCache.put("intro/index2.tpl.html",
-    "<div class=\"intro-container\">\n" +
-    "    <svg class=\"intro\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 1920 1080\" \n" +
-    "         width=\"1920px\" height=\"1080px\" preserveAspectRatio=\"xMidYMid slice\">\n" +
-    "        <rect class=\"intro-rect\" x=\"0\" y=\"0\" width=\"1920px\" height=\"1080px\"></rect>\n" +
-    "    </svg>\n" +
-    "    <video id=\"video\" autoplay=\"autoplay\" muted=\"muted\" preload=\"auto\" loop=\"loop\">\n" +
-    "        <source src=\"/videos/drawing.webm\" type=\"video/webm\">\n" +
-    "    </video>\n" +
-    "    <img class=\"intro-img\" id=\"image\" src=\"http://36.media.tumblr.com/318b26ada390554e3940e1907c0e6d0f/tumblr_no0pwu8TmB1uuhx17o1_1280.jpg\">\n" +
     "</div>");
 }]);
 
 angular.module("portfolio/index.tpl.html", []).run(["$templateCache", function($templateCache) {
   $templateCache.put("portfolio/index.tpl.html",
+    "<!--\n" +
     "<link rel=\"stylesheet\" href=\"/styles/css/portfolio.css\">\n" +
     "<div class=\"home-pad\">\n" +
     "    <div class=\"container\">\n" +
@@ -716,8 +875,6 @@ angular.module("portfolio/index.tpl.html", []).run(["$templateCache", function($
     "    </div>\n" +
     "\n" +
     "\n" +
-    "\n" +
-    "    <!--make dynamic with angular-->\n" +
     "    <div class=\"container\" style=\"margin: 120px auto 0;\">\n" +
     "        <div class=\"wrap\" ng-click=\"select_portfolio('client1')\">\n" +
     "            <div class=\"crop\">\n" +
@@ -795,7 +952,6 @@ angular.module("portfolio/index.tpl.html", []).run(["$templateCache", function($
     "\n" +
     "            </div>\n" +
     "\n" +
-    "            <!--on click triangle show-->\n" +
     "            <div id=\"client1\" class=\"info\" ng-show=\"currently_selected=='client1'\">\n" +
     "                <div class=\"title\">Client 1</div>\n" +
     "                <div class=\"portfolio-message\" style=\"color:#fff\">hey client 1</div>\n" +
@@ -834,7 +990,8 @@ angular.module("portfolio/index.tpl.html", []).run(["$templateCache", function($
     "            </div>\n" +
     "        </div>\n" +
     "    </div>\n" +
-    "</div>");
+    "</div>\n" +
+    "-->");
 }]);
 
 angular.module("sidebar/index.tpl.html", []).run(["$templateCache", function($templateCache) {
@@ -846,23 +1003,27 @@ angular.module("sidebar/index.tpl.html", []).run(["$templateCache", function($te
     "        <div class=\"icon-bar\"></div>\n" +
     "    </div>   \n" +
     "    <div class=\"page-nav-zone\">\n" +
-    "        <div class=\"flex-item-top\"></div>     \n" +
+    "        <div class=\"flex-item-top\"></div>\n" +
+    "        <div class=\"item-container\" id=\"logo-container\">\n" +
+    "            <div class=\"list-item\">\n" +
+    "                <div class=\"nav-large-list nav-logo\"><img id=\"sidebar-logo\" src=\"/images/logo-white.png\" style=\"max-width:75%\"/></div>\n" +
+    "            </div>\n" +
+    "        </div>\n" +
     "        <div class=\"item-container\">\n" +
     "            <a href=\"/\">\n" +
+    "                <div class=\"list-item\">\n" +
+    "                    <div class=\"nav-small-list\"><img src=\"/images/home.png\"/></div>\n" +
+    "                </div>\n" +
     "                <div class=\"list-item\">\n" +
     "                    <div class=\"nav-large-list\">Home</div>\n" +
     "                </div>\n" +
     "            </a>\n" +
     "        </div>\n" +
     "        <div class=\"item-container\">\n" +
-    "            <a href=\"/about/\">\n" +
-    "                <div class=\"list-item\">                 \n" +
-    "                    <div class=\"nav-large-list\">About</div>\n" +
-    "                </div>\n" +
-    "            </a>\n" +
-    "        </div>\n" +
-    "        <div class=\"item-container\">\n" +
     "            <a href=\"/portfolio/\">\n" +
+    "                <div class=\"list-item\">\n" +
+    "                    <div class=\"nav-small-list\"><img src=\"/images/portfolio.png\"/></div>\n" +
+    "                </div>\n" +
     "                <div class=\"list-item\">\n" +
     "                    <div class=\"nav-large-list\">Portfolio</div>\n" +
     "                </div>\n" +
@@ -870,6 +1031,9 @@ angular.module("sidebar/index.tpl.html", []).run(["$templateCache", function($te
     "        </div>\n" +
     "        <div class=\"item-container\">\n" +
     "            <a href=\"/contact/\">\n" +
+    "                <div class=\"list-item\">\n" +
+    "                    <div class=\"nav-small-list\"><img src=\"/images/contact.png\"/></div>\n" +
+    "                </div>\n" +
     "                <div class=\"list-item\">\n" +
     "                    <div class=\"nav-large-list\">Contact</div>\n" +
     "                </div>\n" +
@@ -892,172 +1056,5 @@ angular.module("sidebar/index.tpl.html", []).run(["$templateCache", function($te
 
 angular.module("templates/index.tpl.html", []).run(["$templateCache", function($templateCache) {
   $templateCache.put("templates/index.tpl.html",
-    "<!DOCTYPE html>\n" +
-    "<html lang=\"en\" class=\"no-js\">\n" +
-    "    \n" +
-    "    <head>\n" +
-    "        <meta charset=\"UTF-8\" />\n" +
-    "        <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge,chrome=1\"> \n" +
-    "        <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"> \n" +
-    "        <link rel=\"stylesheet\" type=\"text/css\" href=\"src/app/templates/css/web-samples.css\" />\n" +
-    "        <link rel=\"stylesheet\" type=\"text/css\" href=\"src/app/templates/css/web-overlay.css\" />\n" +
-    "        <link rel=\"stylesheet\" type=\"text/css\" href=\"src/app/templates/css/transition-animations.css\" />\n" +
-    "        <link rel=\"stylesheet\" type=\"text/css\" href=\"src/app/templates/css/bootstrap.min.css\" />      \n" +
-    "        <link rel=\"stylesheet\" type=\"text/css\" href=\"src/app/templates/css/font-awesome.min.css\" />\n" +
-    "        <script src=\"js/modernizr.custom.js\"></script>\n" +
-    "    </head>\n" +
-    "    \n" +
-    "    <body>\n" +
-    "    <div class=\"web-menu\">\n" +
-    "        <div class=\"pt-wrapper\">\n" +
-    "\n" +
-    "            <!--Overlay Menu-->\n" +
-    "\n" +
-    "            <div class=\"overlay overlay-contentscale\">\n" +
-    "                <button type=\"button\" class=\"overlay-close\">Close</button>\n" +
-    "                \n" +
-    "                    <div class=\"welcome-button\">\n" +
-    "                        <div class=\"bt-sl-solid-l down out\"></div>\n" +
-    "                        <div class=\"bt-sl-solid-r down out\"></div>\n" +
-    "                        <div class=\"bt-slider-0 bt-slide-l out\"></div>\n" +
-    "                        <div class=\"bt-slider-1 bt-slide-l out\"></div>\n" +
-    "                        <div class=\"bt-slider-2 bt-slide-l out\"></div>\n" +
-    "                        <div class=\"bt-slider-3 bt-slide-l out\"></div>\n" +
-    "                        <div class=\"bt-slider-4 bt-slide-l out\"></div>\n" +
-    "                        <a class=\"out lin-t main-pg pt-trigger overlay-close\" data-animation=\"27\" data-goto=\"1\">\n" +
-    "                            Main Page\n" +
-    "                        </a>\n" +
-    "                    </div>\n" +
-    "                \n" +
-    "                <nav>\n" +
-    "                    <div class=\"container\">\n" +
-    "                        <div class=\"row\">    \n" +
-    "                            <div class=\"web-menu-home col-md-3 col-sm-6 col-xs-12\">\n" +
-    "                                <a class=\"pt-trigger menu-icon icon-click1\" data-animation=\"27\" data-goto=\"2\">\n" +
-    "                                    <img src=\"http://placehold.it/250x250\"/>\n" +
-    "                                    <div class=\"menu-title\">Sample 1</div>\n" +
-    "                                </a>\n" +
-    "                            </div>\n" +
-    "                            <div class=\"web-menu-home col-md-3 col-sm-6 col-xs-12\">\n" +
-    "                                <a class=\"pt-trigger menu-icon icon-click2\" data-animation=\"27\" data-goto=\"3\">\n" +
-    "                                    <img src=\"http://placehold.it/250x250\"/>\n" +
-    "                                    <div class=\"menu-title\">Sample 2</div>\n" +
-    "                                </a>\n" +
-    "                            </div>\n" +
-    "                            <div class=\"web-menu-home col-md-3 col-sm-6 col-xs-12\">\n" +
-    "                                <a class=\"pt-trigger menu-icon icon-click3\" data-animation=\"27\" data-goto=\"4\">\n" +
-    "                                    <img src=\"http://placehold.it/250x250\"/>\n" +
-    "                                    <div class=\"menu-title\">Sample 3</div>\n" +
-    "                                </a>\n" +
-    "                            </div>\n" +
-    "                            <div class=\"web-menu-home col-md-3 col-sm-6 col-xs-12\">\n" +
-    "                                <a class=\"pt-trigger menu-icon icon-click4\" data-animation=\"27\" data-goto=\"5\">\n" +
-    "                                    <img src=\"http://placehold.it/250x250\"/>\n" +
-    "                                    <div class=\"menu-title\">Sample 4</div>\n" +
-    "                                </a>\n" +
-    "                            </div>\n" +
-    "                        </div>\n" +
-    "                    </div>\n" +
-    "                </nav>\n" +
-    "            </div>\n" +
-    "\n" +
-    "            <!--Page Menu-->\n" +
-    "\n" +
-    "            <div class=\"pt-page pt-page-1\">\n" +
-    "                <div class=\"pt-trigger-container\">\n" +
-    "                    <div class=\"title\">Sample Websites</div>\n" +
-    "                    <div class=\"container\">\n" +
-    "                        <div class=\"row\">\n" +
-    "                            <div class=\"web-menu-home col-md-3\">\n" +
-    "                                <a class=\"pt-trigger menu-icon\" data-animation=\"27\" data-goto=\"2\">\n" +
-    "                                    <div class=\"menu-title\">Sample 1</div>\n" +
-    "                                    <img src=\"http://placehold.it/250x250\"/>\n" +
-    "                                </a>\n" +
-    "                            </div>\n" +
-    "                            <div class=\"web-menu-home col-md-3\">\n" +
-    "                                <a class=\"pt-trigger menu-icon\" data-animation=\"27\" data-goto=\"3\">\n" +
-    "                                    <div class=\"menu-title\">Sample 2</div>\n" +
-    "                                    <img src=\"http://placehold.it/250x250\"/>\n" +
-    "                                </a>\n" +
-    "                            </div>\n" +
-    "                            <div class=\"web-menu-home col-md-3\">\n" +
-    "                                <a class=\"pt-trigger menu-icon\" data-animation=\"27\" data-goto=\"4\">\n" +
-    "                                    <div class=\"menu-title\">Sample 3</div>\n" +
-    "                                    <img src=\"http://placehold.it/250x250\"/>\n" +
-    "                                </a>\n" +
-    "                            </div>\n" +
-    "                            <div class=\"web-menu-home col-md-3\">\n" +
-    "                                <a class=\"pt-trigger menu-icon\" data-animation=\"27\" data-goto=\"5\">\n" +
-    "                                    <div class=\"menu-title\">Sample 4</div>\n" +
-    "                                    <img src=\"http://placehold.it/250x250\"/>\n" +
-    "                                </a>\n" +
-    "                            </div>\n" +
-    "                        </div>\n" +
-    "                    </div>\n" +
-    "                </div>\n" +
-    "            </div>\n" +
-    "\n" +
-    "            <!--Inner Pages-->\n" +
-    "\n" +
-    "            <div class=\"pt-page pt-page-2\">\n" +
-    "                <div class=\"pt-trigger-container\">\n" +
-    "                    <div class=\"overlay-nav\">\n" +
-    "                        <a class=\"main-pg\" id=\"trigger-overlay1\">Choose Sample</a>\n" +
-    "                    </div>\n" +
-    "                    <iframe src=\"templates/sample1/index.html\"></iframe>\n" +
-    "                </div>\n" +
-    "            </div>\n" +
-    "\n" +
-    "            <div class=\"pt-page pt-page-3\">\n" +
-    "                <div class=\"pt-trigger-container\">\n" +
-    "                    <div class=\"overlay-nav\">\n" +
-    "                        <a class=\"main-pg\" id=\"trigger-overlay2\">Choose Sample</a>\n" +
-    "                    </div>\n" +
-    "                    <iframe src=\"templates/sample2/index.html\"></iframe>\n" +
-    "                </div>\n" +
-    "            </div> \n" +
-    "\n" +
-    "            <div class=\"pt-page pt-page-4\">\n" +
-    "                <div class=\"pt-trigger-container\">\n" +
-    "                    <div class=\"overlay-nav\">\n" +
-    "                        <a class=\"main-pg\" id=\"trigger-overlay3\">Choose Sample</a>\n" +
-    "                    </div>\n" +
-    "                    <iframe src=\"templates/sample3/index.html\"></iframe>\n" +
-    "                </div>\n" +
-    "            </div>   \n" +
-    "\n" +
-    "            <div class=\"pt-page pt-page-5\">\n" +
-    "                <div class=\"pt-trigger-container\">\n" +
-    "                    <div class=\"overlay-nav\">\n" +
-    "                        <a class=\"main-pg\" id=\"trigger-overlay4\">Choose Sample</a>\n" +
-    "                    </div>\n" +
-    "                    <iframe src=\"templates/sample4/index.html\"></iframe>\n" +
-    "                </div>\n" +
-    "            </div>\n" +
-    "\n" +
-    "\n" +
-    "        </div>\n" +
-    "\n" +
-    "        <div class=\"pt-message\">\n" +
-    "            <p>Your browser does not support CSS animations.</p>\n" +
-    "        </div>\n" +
-    "\n" +
-    "    </div>\n" +
-    "        \n" +
-    "        <script src=\"https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js\" type=\"text/javascript\"></script>\n" +
-    "        <!--[if lt IE 9]>\n" +
-    "        <script src=\"//html5shim.googlecode.com/svn/trunk/html5.js\"></script>\n" +
-    "        <![endif]-->\n" +
-    "        <!--[if lt IE 9]>\n" +
-    "        <script src=\"//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js\"></script>\n" +
-    "        <![endif]-->\n" +
-    "        <script src=\"src/app/templates/js/transition.js\"></script>\n" +
-    "        <script src=\"src/app/templates/js/classie.js\"></script>       \n" +
-    "        <script src=\"src/app/templates/js/inner-html.js\"></script>\n" +
-    "        <script src=\"src/app/templates/js/web-overlay.js\"></script>       \n" +
-    "        <script src=\"src/app/templates/js/main-page-btn.js\"></script>\n" +
-    "        \n" +
-    "    </body>\n" +
-    "</html>\n" +
     "");
 }]);

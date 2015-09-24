@@ -1,65 +1,278 @@
 <div class="intro">
   <div class="intro-container">
 
-    <svg class="svg-defs" viewBox="0 0 1920 1080" xmlns="http://www.w3.org/2000/svg">
-      <!-- Symbol with text -->
-      <symbol id="s-text">
-        <text text-anchor="middle"
-              x="970"  
-              y="650"
-              dy=".35em"
-              class="medium-text"
-              >
-          full-stack design, development, and marketing
-        </text>    
-      </symbol>
-      <!-- Mask with text -->
-      <mask id="m-text"
-            maskunits="userSpaceOnUse"
-            maskcontentunits="userSpaceOnUse">
-
-        <rect
-              width="100%"
-              height="100%"
-              class="mask__shape">
-        </rect>
-        <use xlink:href="#s-text"
-             class="mask__text"
-             ></use>
-        <use xlink:href="#novo" />
-      </mask>
-    </svg>
-
-    <svg style="display: none;" xmlns="http://www.w3.org/2000/svg">
-      <symbol id="novo">
-        <path transform="translate(375,625) scale(0.09,-0.09)" d="m4315 3849c-390 -27 -601 -107 -745 -281c-136 -162 -180 -345 -196 -800l-7 -208l-158 0l-159 0l-2 643l-3 642l-156 3c-123 2 -159 0 -168 -11c-8 -10 -12 -309 -13 -1112l-3 -1098l-350 415c-192 229 -608 722 -922 1096c-315 374 -580 687 -589 696c-14 14 -53 16 -327 14l-312 -3l0 -1315l0 -1315l154 -3c104 -2 158 1 167 9c12 10 14 197 14 1180l0 1169l39 0l38 0l1004 -1180l1004 -1180l210 2l210 3l3 588l2 587l164 0l163 0l6 -172c13 -368 58 -541 181 -704c117 -156 303 -240 618 -280c176 -22 971 -32 1226 -15c198 13 369 40 463 72c277 94 430 284 483 599c17 105 36 327 36 433l0 67l456 -2l456 -3l297 -585l297 -585l210 -2l209 -3l300 590l300 590l461 0l461 0l6 -172c19 -517 122 -741 406 -883c184 -92 378 -116 985 -122c617 -7 909 14 1097 78c277 94 430 284 483 599c17 105 36 327 36 433l0 67l380 0l380 0l0 85l0 85l-378 0l-378 0l-12 238c-13 251 -33 434 -57 518c-30 103 -94 214 -169 289c-83 84 -147 122 -273 165c-206 69 -444 90 -1008 90c-748 0 -983 -37 -1191 -185c-121 -87 -215 -228 -255 -384c-28 -109 -47 -286 -55 -523l-7 -208l-414 0l-415 0l65 123c35 67 174 338 307 602c134 264 250 488 258 498c12 14 13 22 4 42l-12 25l-1511 -2c-1373 -3 -1513 -4 -1522 -19c-8 -12 5 -46 56 -145c456 -897 567 -1117 567 -1120c0 -2 -184 -4 -408 -4l-408 0l-12 238c-13 251 -33 434 -57 518c-8 28 -33 89 -56 134c-49 98 -152 208 -239 258c-129 72 -344 122 -615 142c-160 11 -934 11 -1100 -1zm4766 -391c-69 -133 -371 -718 -760 -1472c-114 -220 -211 -401 -217 -403c-6 -2 -64 101 -129 229c-65 128 -180 352 -255 498c-213 412 -650 1268 -650 1274c0 3 468 6 1040 6l1040 0l-69 -132zm-3621 41c256 -18 383 -57 454 -141c42 -49 92 -165 112 -258c14 -70 34 -337 34 -467l0 -73l-1182 0l-1181 0l7 178c23 602 120 727 587 761c169 12 1001 12 1169 0zm6460 0c256 -18 383 -57 454 -141c42 -49 92 -165 112 -258c14 -70 34 -337 34 -467l0 -73l-1182 0l-1181 0l7 178c23 602 120 727 587 761c169 12 1001 12 1169 0zm-5873 -1266c-12 -289 -50 -426 -147 -524c-103 -105 -202 -125 -674 -140c-400 -12 -976 1 -1116 26c-156 29 -260 96 -315 205c-48 95 -85 314 -85 506l0 84l1172 0l1171 0l-6 -157zm6460 0c-12 -289 -50 -426 -147 -524c-103 -105 -202 -125 -674 -140c-400 -12 -976 1 -1116 26c-156 29 -260 96 -315 205c-48 95 -85 314 -85 506l0 84l1172 0l1171 0l-6 -157z"/>
-      </symbol>
-    </svg>
-
-      <div class="svg-container">
-        <div class="box-with-text">
-          <!-- Container for video -->
-          <div class="text-fill">
-            <video 
-                   class="video" src="//secure-c.vimeocdn.com/p/video/yosemite_hd_ii_hd.webm#t=93,300" preload="auto" autoplay="autoplay" loop="loop" muted="muted"></video>
-          </div>
-
-          <!-- Visible SVG -->
-          <svg class="svg-inverted-mask" viewBox="0 0 1920 1080" viewPort="0 0 1920 1080" xmlns="http://www.w3.org/2000/svg">
+      <div class="desktop">
+        <!-- this svg is invisible yo -->
+        <svg class="svg-defs" viewBox="0 0 1920 1080" viewPort="0 0 1920 1080" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+          <symbol id="intro-desktop-text">
+            <text text-anchor="middle"
+                  x="960"  
+                  y="560"
+                  dy=".35em"
+                  class="medium-text"
+                  >
+              full-stack design, development, and marketing
+            </text>    
+          </symbol>
+          <mask id="intro-desktop-mask"
+                maskunits="userSpaceOnUse"
+                maskcontentunits="userSpaceOnUse">
             <rect
                   width="100%"
                   height="100%"
-                  mask="url(#m-text)"
-                  class="shape--fill"/>
-            <use xlink:href="#s-text"
-                 class="text--transparent"
+                  class="mask__shape">
+            </rect>
+            <use xlink:href="#intro-desktop-text"
+                 class="mask__text"
                  ></use>
+            <use xlink:href="#intro-desktop-novo" />
+          </mask>
+        </svg>
+        <!--                  |
+            so is this one    v    -->
+        <svg style="display: none;" viewBox="0 0 1920 1080" viewPort="0 0 1920 1080" xmlns="http://www.w3.org/2000/svg">
+          <symbol id="intro-desktop-novo">
+            <path transform="translate(375,560) scale(0.09,-0.09)" d="m4315 3849c-390 -27 -601 -107 -745 -281c-136 -162 -180 -345 -196 -800l-7 -208l-158 0l-159 0l-2 643l-3 642l-156 3c-123 2 -159 0 -168 -11c-8 -10 -12 -309 -13 -1112l-3 -1098l-350 415c-192 229 -608 722 -922 1096c-315 374 -580 687 -589 696c-14 14 -53 16 -327 14l-312 -3l0 -1315l0 -1315l154 -3c104 -2 158 1 167 9c12 10 14 197 14 1180l0 1169l39 0l38 0l1004 -1180l1004 -1180l210 2l210 3l3 588l2 587l164 0l163 0l6 -172c13 -368 58 -541 181 -704c117 -156 303 -240 618 -280c176 -22 971 -32 1226 -15c198 13 369 40 463 72c277 94 430 284 483 599c17 105 36 327 36 433l0 67l456 -2l456 -3l297 -585l297 -585l210 -2l209 -3l300 590l300 590l461 0l461 0l6 -172c19 -517 122 -741 406 -883c184 -92 378 -116 985 -122c617 -7 909 14 1097 78c277 94 430 284 483 599c17 105 36 327 36 433l0 67l380 0l380 0l0 85l0 85l-378 0l-378 0l-12 238c-13 251 -33 434 -57 518c-30 103 -94 214 -169 289c-83 84 -147 122 -273 165c-206 69 -444 90 -1008 90c-748 0 -983 -37 -1191 -185c-121 -87 -215 -228 -255 -384c-28 -109 -47 -286 -55 -523l-7 -208l-414 0l-415 0l65 123c35 67 174 338 307 602c134 264 250 488 258 498c12 14 13 22 4 42l-12 25l-1511 -2c-1373 -3 -1513 -4 -1522 -19c-8 -12 5 -46 56 -145c456 -897 567 -1117 567 -1120c0 -2 -184 -4 -408 -4l-408 0l-12 238c-13 251 -33 434 -57 518c-8 28 -33 89 -56 134c-49 98 -152 208 -239 258c-129 72 -344 122 -615 142c-160 11 -934 11 -1100 -1zm4766 -391c-69 -133 -371 -718 -760 -1472c-114 -220 -211 -401 -217 -403c-6 -2 -64 101 -129 229c-65 128 -180 352 -255 498c-213 412 -650 1268 -650 1274c0 3 468 6 1040 6l1040 0l-69 -132zm-3621 41c256 -18 383 -57 454 -141c42 -49 92 -165 112 -258c14 -70 34 -337 34 -467l0 -73l-1182 0l-1181 0l7 178c23 602 120 727 587 761c169 12 1001 12 1169 0zm6460 0c256 -18 383 -57 454 -141c42 -49 92 -165 112 -258c14 -70 34 -337 34 -467l0 -73l-1182 0l-1181 0l7 178c23 602 120 727 587 761c169 12 1001 12 1169 0zm-5873 -1266c-12 -289 -50 -426 -147 -524c-103 -105 -202 -125 -674 -140c-400 -12 -976 1 -1116 26c-156 29 -260 96 -315 205c-48 95 -85 314 -85 506l0 84l1172 0l1171 0l-6 -157zm6460 0c-12 -289 -50 -426 -147 -524c-103 -105 -202 -125 -674 -140c-400 -12 -976 1 -1116 26c-156 29 -260 96 -315 205c-48 95 -85 314 -85 506l0 84l1172 0l1171 0l-6 -157z"/>
+          </symbol>
+        </svg>
+
+        <!-- this is a box... with some text n vids n stuff-->
+        <div class="box-with-text">
+          <div class="text-fill">
+            <video 
+                class="video" 
+                src="//secure-c.vimeocdn.com/p/video/yosemite_hd_ii_hd.webm#t=97,300" 
+                preload="auto" 
+                autoplay="autoplay" 
+                loop="loop" 
+                muted="muted">
+            </video>
+          </div>
+          <!-- this is the sweet, visible novo one -->
+          <svg class="svg-inverted-mask" viewBox="0 0 1920 1080" viewPort="0 0 1920 1080" 
+               preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+            <rect
+              width="100%"
+              height="100%"
+              mask="url(#intro-desktop-mask)"
+              class="shape--fill"/>
+            <use xlink:href="#intro-desktop-text"
+                class="text--transparent">
+            </use>
+          </svg> 
+        </div>
+        <div class="continue-wrap">
+          <div class="svg-wrapper">
+            <svg height="60" width="320" xmlns="http://www.w3.org/2000/svg">
+              <rect class="shape" height="60" width="320" />
+            </svg>
+            <div class="text">Continue</div>
+          </div>
+        </div>
+    </div>
+
+    <!-- mobile classes yo - mobile, small, smallest -->
+      <div class="mobile">
+        <svg class="svg-defs" viewBox="0 0 1920 1080" viewPort="0 0 1920 1080" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+          <symbol id="intro-mobile-txt">
+            <text text-anchor="middle"
+                  x="960"  
+                  y="560"
+                  dy=".35em"
+                  class="small-text"
+                  >
+              full-stack design,
+            </text> 
+            <text text-anchor="middle"
+                  x="960"  
+                  y="575"
+                  dy="1.5em"
+                  class="small-text"
+                  >
+              development, and marketing
+            </text>   
+          </symbol>
+          <mask id="intro-mobile-mask"
+                maskunits="userSpaceOnUse"
+                maskcontentunits="userSpaceOnUse">
+            <rect
+                  width="100%"
+                  height="100%"
+                  class="mask__shape">
+            </rect>
+            <use xlink:href="#intro-mobile-txt"
+                 class="mask__text"
+                 ></use>
+            <use xlink:href="#intro-mobile-novo" />
+          </mask>
+        </svg>
+
+        <svg style="display: none;" viewBox="0 0 1920 1080" viewPort="0 0 1920 1080" xmlns="http://www.w3.org/2000/svg">
+          <symbol id="intro-mobile-novo">
+            <path transform="translate(515,530) scale(0.07,-0.07)" d="m4315 3849c-390 -27 -601 -107 -745 -281c-136 -162 -180 -345 -196 -800l-7 -208l-158 0l-159 0l-2 643l-3 642l-156 3c-123 2 -159 0 -168 -11c-8 -10 -12 -309 -13 -1112l-3 -1098l-350 415c-192 229 -608 722 -922 1096c-315 374 -580 687 -589 696c-14 14 -53 16 -327 14l-312 -3l0 -1315l0 -1315l154 -3c104 -2 158 1 167 9c12 10 14 197 14 1180l0 1169l39 0l38 0l1004 -1180l1004 -1180l210 2l210 3l3 588l2 587l164 0l163 0l6 -172c13 -368 58 -541 181 -704c117 -156 303 -240 618 -280c176 -22 971 -32 1226 -15c198 13 369 40 463 72c277 94 430 284 483 599c17 105 36 327 36 433l0 67l456 -2l456 -3l297 -585l297 -585l210 -2l209 -3l300 590l300 590l461 0l461 0l6 -172c19 -517 122 -741 406 -883c184 -92 378 -116 985 -122c617 -7 909 14 1097 78c277 94 430 284 483 599c17 105 36 327 36 433l0 67l380 0l380 0l0 85l0 85l-378 0l-378 0l-12 238c-13 251 -33 434 -57 518c-30 103 -94 214 -169 289c-83 84 -147 122 -273 165c-206 69 -444 90 -1008 90c-748 0 -983 -37 -1191 -185c-121 -87 -215 -228 -255 -384c-28 -109 -47 -286 -55 -523l-7 -208l-414 0l-415 0l65 123c35 67 174 338 307 602c134 264 250 488 258 498c12 14 13 22 4 42l-12 25l-1511 -2c-1373 -3 -1513 -4 -1522 -19c-8 -12 5 -46 56 -145c456 -897 567 -1117 567 -1120c0 -2 -184 -4 -408 -4l-408 0l-12 238c-13 251 -33 434 -57 518c-8 28 -33 89 -56 134c-49 98 -152 208 -239 258c-129 72 -344 122 -615 142c-160 11 -934 11 -1100 -1zm4766 -391c-69 -133 -371 -718 -760 -1472c-114 -220 -211 -401 -217 -403c-6 -2 -64 101 -129 229c-65 128 -180 352 -255 498c-213 412 -650 1268 -650 1274c0 3 468 6 1040 6l1040 0l-69 -132zm-3621 41c256 -18 383 -57 454 -141c42 -49 92 -165 112 -258c14 -70 34 -337 34 -467l0 -73l-1182 0l-1181 0l7 178c23 602 120 727 587 761c169 12 1001 12 1169 0zm6460 0c256 -18 383 -57 454 -141c42 -49 92 -165 112 -258c14 -70 34 -337 34 -467l0 -73l-1182 0l-1181 0l7 178c23 602 120 727 587 761c169 12 1001 12 1169 0zm-5873 -1266c-12 -289 -50 -426 -147 -524c-103 -105 -202 -125 -674 -140c-400 -12 -976 1 -1116 26c-156 29 -260 96 -315 205c-48 95 -85 314 -85 506l0 84l1172 0l1171 0l-6 -157zm6460 0c-12 -289 -50 -426 -147 -524c-103 -105 -202 -125 -674 -140c-400 -12 -976 1 -1116 26c-156 29 -260 96 -315 205c-48 95 -85 314 -85 506l0 84l1172 0l1171 0l-6 -157z"/>
+          </symbol>
+        </svg>
+
+        <div class="box-with-text">
+          <div class="text-fill">
+            <video 
+                class="video" 
+                src="//secure-c.vimeocdn.com/p/video/yosemite_hd_ii_hd.webm#t=97,300" 
+                preload="auto" 
+                autoplay="autoplay" 
+                loop="loop" 
+                muted="muted">
+            </video>
+          </div>
+
+          <svg class="svg-inverted-mask" viewBox="0 0 1920 1080" viewPort="0 0 1920 1080" 
+               preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+            <rect
+              width="100%"
+              height="100%"
+              mask="url(#intro-mobile-mask)"
+              class="shape--fill"/>
+            <use xlink:href="#intro-mobile-txt"
+                class="text--transparent">
+            </use>
           </svg> 
         </div>
       </div>
 
-  <div class="intro-img mobile"></div>
+      <div class="mobile-small">
+        <svg class="svg-defs" viewBox="0 0 1920 1080" viewPort="0 0 1920 1080" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+          <symbol id="intro-small-txt">
+            <text text-anchor="middle"
+                  x="950"  
+                  y="400"
+                  dy=".35em"
+                  class="small-text"
+                  >
+              full-stack design,
+            </text> 
+            <text text-anchor="middle"
+                  x="950"  
+                  y="420"
+                  dy="1.5em"
+                  class="small-text"
+                  >
+              development, and marketing
+            </text>   
+          </symbol>
+          <mask id="intro-small-mask"
+                maskunits="userSpaceOnUse"
+                maskcontentunits="userSpaceOnUse">
+            <rect
+                  width="100%"
+                  height="100%"
+                  class="mask__shape">
+            </rect>
+            <use xlink:href="#intro-small-txt"
+                 class="mask__text"
+                 ></use>
+            <use xlink:href="#intro-small-novo" />
+          </mask>
+        </svg>
 
+        <svg style="display: none;" viewBox="0 0 1920 1080" viewPort="0 0 1920 1080" xmlns="http://www.w3.org/2000/svg">
+          <symbol id="intro-small-novo">
+            <path transform="translate(620,340) scale(0.05,-0.05)" d="m4315 3849c-390 -27 -601 -107 -745 -281c-136 -162 -180 -345 -196 -800l-7 -208l-158 0l-159 0l-2 643l-3 642l-156 3c-123 2 -159 0 -168 -11c-8 -10 -12 -309 -13 -1112l-3 -1098l-350 415c-192 229 -608 722 -922 1096c-315 374 -580 687 -589 696c-14 14 -53 16 -327 14l-312 -3l0 -1315l0 -1315l154 -3c104 -2 158 1 167 9c12 10 14 197 14 1180l0 1169l39 0l38 0l1004 -1180l1004 -1180l210 2l210 3l3 588l2 587l164 0l163 0l6 -172c13 -368 58 -541 181 -704c117 -156 303 -240 618 -280c176 -22 971 -32 1226 -15c198 13 369 40 463 72c277 94 430 284 483 599c17 105 36 327 36 433l0 67l456 -2l456 -3l297 -585l297 -585l210 -2l209 -3l300 590l300 590l461 0l461 0l6 -172c19 -517 122 -741 406 -883c184 -92 378 -116 985 -122c617 -7 909 14 1097 78c277 94 430 284 483 599c17 105 36 327 36 433l0 67l380 0l380 0l0 85l0 85l-378 0l-378 0l-12 238c-13 251 -33 434 -57 518c-30 103 -94 214 -169 289c-83 84 -147 122 -273 165c-206 69 -444 90 -1008 90c-748 0 -983 -37 -1191 -185c-121 -87 -215 -228 -255 -384c-28 -109 -47 -286 -55 -523l-7 -208l-414 0l-415 0l65 123c35 67 174 338 307 602c134 264 250 488 258 498c12 14 13 22 4 42l-12 25l-1511 -2c-1373 -3 -1513 -4 -1522 -19c-8 -12 5 -46 56 -145c456 -897 567 -1117 567 -1120c0 -2 -184 -4 -408 -4l-408 0l-12 238c-13 251 -33 434 -57 518c-8 28 -33 89 -56 134c-49 98 -152 208 -239 258c-129 72 -344 122 -615 142c-160 11 -934 11 -1100 -1zm4766 -391c-69 -133 -371 -718 -760 -1472c-114 -220 -211 -401 -217 -403c-6 -2 -64 101 -129 229c-65 128 -180 352 -255 498c-213 412 -650 1268 -650 1274c0 3 468 6 1040 6l1040 0l-69 -132zm-3621 41c256 -18 383 -57 454 -141c42 -49 92 -165 112 -258c14 -70 34 -337 34 -467l0 -73l-1182 0l-1181 0l7 178c23 602 120 727 587 761c169 12 1001 12 1169 0zm6460 0c256 -18 383 -57 454 -141c42 -49 92 -165 112 -258c14 -70 34 -337 34 -467l0 -73l-1182 0l-1181 0l7 178c23 602 120 727 587 761c169 12 1001 12 1169 0zm-5873 -1266c-12 -289 -50 -426 -147 -524c-103 -105 -202 -125 -674 -140c-400 -12 -976 1 -1116 26c-156 29 -260 96 -315 205c-48 95 -85 314 -85 506l0 84l1172 0l1171 0l-6 -157zm6460 0c-12 -289 -50 -426 -147 -524c-103 -105 -202 -125 -674 -140c-400 -12 -976 1 -1116 26c-156 29 -260 96 -315 205c-48 95 -85 314 -85 506l0 84l1172 0l1171 0l-6 -157z"/>
+          </symbol>
+        </svg>
+
+        <div class="box-with-text">
+          <div class="text-fill">
+            <video 
+                class="video" 
+                src="//secure-c.vimeocdn.com/p/video/yosemite_hd_ii_hd.webm#t=97,300" 
+                preload="auto" 
+                autoplay="autoplay" 
+                loop="loop" 
+                muted="muted">
+            </video>
+          </div>
+
+          <svg class="svg-inverted-mask" viewBox="0 0 1920 1080" viewPort="0 0 1920 1080" 
+               preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+            <rect
+              width="100%"
+              height="100%"
+              mask="url(#intro-small-mask)"
+              class="shape--fill"/>
+            <use xlink:href="#intro-small-txt"
+                class="text--transparent">
+            </use>
+          </svg> 
+        </div>
+      </div>
+
+      <div class="mobile-smallest">
+        <svg class="svg-defs" viewBox="0 0 1920 1080" viewPort="0 0 1920 1080" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+          <symbol id="intro-smallest-txt">
+            <text text-anchor="middle"
+                  x="960"  
+                  y="500"
+                  dy=".35em"
+                  class="smaller-text"
+                  >
+              full-stack design,
+            </text> 
+            <text text-anchor="middle"
+                  x="960"  
+                  y="520"
+                  dy="1.5em"
+                  class="smaller-text"
+                  >
+              development, and marketing
+            </text>   
+          </symbol>
+          <mask id="intro-smallest-mask"
+                maskunits="userSpaceOnUse"
+                maskcontentunits="userSpaceOnUse">
+            <rect
+                  width="100%"
+                  height="100%"
+                  class="mask__shape">
+            </rect>
+            <use xlink:href="#intro-smallest-txt"
+                 class="mask__text"
+                 ></use>
+            <use xlink:href="#intro-smallest-novo" />
+          </mask>
+        </svg>
+
+        <svg style="display: none;" viewBox="0 0 1920 1080" viewPort="0 0 1920 1080" xmlns="http://www.w3.org/2000/svg">
+          <symbol id="intro-smallest-novo">
+            <path transform="translate(730,340) scale(0.035,-0.035)" d="m4315 3849c-390 -27 -601 -107 -745 -281c-136 -162 -180 -345 -196 -800l-7 -208l-158 0l-159 0l-2 643l-3 642l-156 3c-123 2 -159 0 -168 -11c-8 -10 -12 -309 -13 -1112l-3 -1098l-350 415c-192 229 -608 722 -922 1096c-315 374 -580 687 -589 696c-14 14 -53 16 -327 14l-312 -3l0 -1315l0 -1315l154 -3c104 -2 158 1 167 9c12 10 14 197 14 1180l0 1169l39 0l38 0l1004 -1180l1004 -1180l210 2l210 3l3 588l2 587l164 0l163 0l6 -172c13 -368 58 -541 181 -704c117 -156 303 -240 618 -280c176 -22 971 -32 1226 -15c198 13 369 40 463 72c277 94 430 284 483 599c17 105 36 327 36 433l0 67l456 -2l456 -3l297 -585l297 -585l210 -2l209 -3l300 590l300 590l461 0l461 0l6 -172c19 -517 122 -741 406 -883c184 -92 378 -116 985 -122c617 -7 909 14 1097 78c277 94 430 284 483 599c17 105 36 327 36 433l0 67l380 0l380 0l0 85l0 85l-378 0l-378 0l-12 238c-13 251 -33 434 -57 518c-30 103 -94 214 -169 289c-83 84 -147 122 -273 165c-206 69 -444 90 -1008 90c-748 0 -983 -37 -1191 -185c-121 -87 -215 -228 -255 -384c-28 -109 -47 -286 -55 -523l-7 -208l-414 0l-415 0l65 123c35 67 174 338 307 602c134 264 250 488 258 498c12 14 13 22 4 42l-12 25l-1511 -2c-1373 -3 -1513 -4 -1522 -19c-8 -12 5 -46 56 -145c456 -897 567 -1117 567 -1120c0 -2 -184 -4 -408 -4l-408 0l-12 238c-13 251 -33 434 -57 518c-8 28 -33 89 -56 134c-49 98 -152 208 -239 258c-129 72 -344 122 -615 142c-160 11 -934 11 -1100 -1zm4766 -391c-69 -133 -371 -718 -760 -1472c-114 -220 -211 -401 -217 -403c-6 -2 -64 101 -129 229c-65 128 -180 352 -255 498c-213 412 -650 1268 -650 1274c0 3 468 6 1040 6l1040 0l-69 -132zm-3621 41c256 -18 383 -57 454 -141c42 -49 92 -165 112 -258c14 -70 34 -337 34 -467l0 -73l-1182 0l-1181 0l7 178c23 602 120 727 587 761c169 12 1001 12 1169 0zm6460 0c256 -18 383 -57 454 -141c42 -49 92 -165 112 -258c14 -70 34 -337 34 -467l0 -73l-1182 0l-1181 0l7 178c23 602 120 727 587 761c169 12 1001 12 1169 0zm-5873 -1266c-12 -289 -50 -426 -147 -524c-103 -105 -202 -125 -674 -140c-400 -12 -976 1 -1116 26c-156 29 -260 96 -315 205c-48 95 -85 314 -85 506l0 84l1172 0l1171 0l-6 -157zm6460 0c-12 -289 -50 -426 -147 -524c-103 -105 -202 -125 -674 -140c-400 -12 -976 1 -1116 26c-156 29 -260 96 -315 205c-48 95 -85 314 -85 506l0 84l1172 0l1171 0l-6 -157z"/>
+          </symbol>
+        </svg>
+
+        <div class="box-with-text">
+          <div class="text-fill">
+            <video 
+                class="video" 
+                src="//secure-c.vimeocdn.com/p/video/yosemite_hd_ii_hd.webm#t=97,300" 
+                preload="auto" 
+                autoplay="autoplay" 
+                loop="loop" 
+                muted="muted">
+            </video>
+          </div>
+
+          <svg class="svg-inverted-mask" viewBox="0 0 1920 1080" viewPort="0 0 1920 1080" 
+               preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+            <rect
+              width="100%"
+              height="100%"
+              mask="url(#intro-smallest-mask)"
+              class="shape--fill"/>
+            <use id="smallest-fill" xlink:href="#intro-smallest-txt"
+                class="text--transparent">
+            </use>
+          </svg> 
+        </div>
+      </div>
+    <!-- nifty mobile art of yosemite, to keep the theme goin nomesayin -->
+    <div class="intro-mobile"></div>
   </div>
 </div>
-
