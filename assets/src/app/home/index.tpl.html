@@ -1,14 +1,37 @@
-<div class="surface-container-home">
-  	<div ng-include="'intro/index.tpl.html'"></div>
+<div class="surface-container-home" ng-controller="HomeCtrl">
+	
+    <div ng-include="'intro/index.tpl.html'"></div>
 
-    <div ng-include="'about/about.tpl.html'"></div>
+	<div id="about-top" class="about-container">
+		<p style="color#000" class="stay-connected">c0m1ng s0on</p>
+		<br>
+		<strong>checklist:</strong>
+		<br><br><br>
+		<div style="font-size: 1em; font-weight: 100">
+			<p>-redo continue button js (want it smoother). currently inactive</p>
+			<br>
+			<p>-perhaps a bit more exterior styling on portfolio page</p>
+			<br>
+			<p>-style mobile menu pop-up a bit more</p>
+			<br>
+			<p>-add flips to the contact squares (didnt like the hover. gonna do a quick click one. 5 mins work)</p>
+			<br>
+			<p>-make portfolio "zoom" animation a bit smoother</p>
+			<br>
+			<p>-about section (done, just rewriting and making smooooth)</p>
+			<br>
+			<p>-was trying to figure out with trev the window location refresh on route change. aka if you're half way scrolled down a page and go to another, itll be halfway down that one as well</p>
+			<br>
+			<p>-what are thoughts on white desktop sidebar? in tandem with contact page,
+			might be a little white/black/green theme overload</p>
+			<br>
+		</div>
+	</div>
 
     <div ng-include="'home/portfolio.tpl.html'"></div>
 
     <div ng-include="'home/contact.tpl.html'"></div>
 
-    <div class="footer">
-        <div class="footer-text">© 2015 NOVO, LLC.</div>
-    </div>
+    <div id="fff" class="footer">© 2015 NOVO, LLC.</div>
 </div>
 

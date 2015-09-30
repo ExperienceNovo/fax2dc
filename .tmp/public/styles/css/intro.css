@@ -30,16 +30,6 @@
 	background-size:cover
 }
 
-.port-mobile {
-	visibility:hidden;
-	position:absolute;
-	top:-200%;
-	left:0;
-	width:100%;
-	z-index:-4;
-	overflow:hidden
-}
-
 /* new intro shit */
 svg {
 	max-width:100%;

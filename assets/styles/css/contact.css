@@ -1,31 +1,118 @@
-.title-surface-container {
-    z-index:20;
-    width:100%;
-    height: 100%;
-    margin-left:auto;
-    margin-right:auto;
-    background:url(/images/overlay.png),url(/images/stock5.jpg);
-    background-size:cover;
-    background-repeat:no-repeat;
-    padding-top:50px;
-    border-bottom:3px solid #14B795
-}
+@import url(http://weloveiconfonts.com/api/?family=entypo);
+@import url(https://fonts.googleapis.com/css?family=Monda:400,700|Play:400,700);
 
 .contact-page-container {
     z-index:20;
-    background:#000;
+    background:#fff;
     min-height: 100%;
+    color: #000;
     width:100%;
     position: relative;
     margin-left:auto;
-    margin-right:auto
+    margin-right:auto;
+    border-top: 5px solid #14B795;
+}
+
+.contact-title {
+    position: relative;
+    font-family: 'Monda', sans-serif;
+    color:#1c1c1c;
+    margin-top:2.5%;
+    letter-spacing: 5px;
+    text-align: center;
+    font-size: 2em;
+    font-weight: 400;
+    margin-left:auto;
+    margin-right: auto;
+}
+
+.stay-connected {
+    position: relative;
+    font-family: 'Monda', sans-serif;
+    color:#000;
+    letter-spacing: 10px;
+    text-align: center;
+    font-size: 4em;
+    font-weight: 100;
+    margin-bottom: 5%;
+    margin-left:auto;
+    margin-right: auto;
 }
 
 .contact-email {
-    font-family: 'Jura', sans-serif;
+    font-family: 'Monda',sans-serif;
     font-size: 3em;
     color: #14B795;
-    font-weight: 300;
+    font-weight: 300
+}
+
+.contact-top {
+    box-shadow: inset 0 0 100px #000;
+    position: relative;
+    top: 0;
+    overflow: hidden
+}
+
+.contact-top-box {
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto
+}
+
+.contact-top-container {
+    cursor: default;
+    height: 40vh;
+    min-height: 250px;
+    z-index: 1;
+}
+
+.text-fill img {
+    position: absolute;
+    top: -20%;
+    left: 0;
+    width: 100%;
+    z-index: -4;
+    overflow: hidden
+}
+
+.contact-top--fill {
+    fill: rgba(0,0,0,0.75)
+}
+
+.contact-top-box #fill-hover {
+    fill: rgba(255,255,255,0.65);
+}
+
+#contact-top-img-desktop {
+    display: block
+}
+
+#contact-top-img-mobile {
+    display: none
+}
+
+a[href^="http://maps.google.com/maps"]{display:none !important}
+a[href^="https://maps.google.com/maps"]{display:none !important}
+
+.gmnoprint a, .gmnoprint span, .gm-style-cc {
+    display:none;
+}
+.gmnoprint div {
+    background:none !important;
+}
+
+@media only screen and (max-width: 620px) {
+#contact-top-img-desktop {
+   display:none;
+}
+
+#contact-top-img-mobile {
+   display:block;
+}
 }
 
 a.contact-email:hover {
@@ -34,20 +121,6 @@ a.contact-email:hover {
 
 .gmap-container {
     padding:15px;
-}
-
-.stay-connected {
-    position: relative;
-    font-family: 'Jura', sans-serif;
-    color:#fff;
-    letter-spacing: 5px;
-    text-align: center;
-    font-size: 3.25em;
-    font-weight: 500;
-    margin-bottom: 5%;
-    margin-top: 5%;
-    margin-left:auto;
-    margin-right: auto;
 }
 
 .bottom-contact {
@@ -64,6 +137,36 @@ a.contact-email:hover {
     margin: 0 15%;
     padding-top: 5%;
     padding-bottom: 5%;
+}
+
+.social-wrapper {
+    margin-top: -7%;
+    margin-left:-35px;
+    text-align: center;
+}
+
+.social {
+    display: inline-block;
+    width: 75px;
+    height: 75px;
+    padding-left:50px;
+    padding-right: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer
+}
+
+.social a {
+    line-height: 50px;
+    font-family: Entypo;
+    font-size: 35px;
+    text-align: center;
+    color: #14B795;
+}
+.social a:hover {
+    color: #fff;
 }
 
 :focus {
@@ -83,8 +186,8 @@ a.contact-email:hover {
     transition:all .3s ease;
     font-size:16px;
     font-family:Trebuchet MS;
-    color:#fff;
-    font-weight:500;
+    color:#14B795;
+    font-weight:600;
     font-family: 'Jura',sans-serif;
     text-transform:uppercase
 }
@@ -93,7 +196,7 @@ a.contact-email:hover {
     display:block;
     width:100%;
     border:none;
-    border-bottom:1px solid #757575;
+    border-bottom:1px solid #1c1c1c;
     left:25px;
     padding:5px;
     font-family:Trebuchet MS;
@@ -136,9 +239,9 @@ a.contact-email:hover {
     position:absolute;
     bottom:0;
     width:0;
-    background:#fff;
+    background:#14B795;
     height:2px;
-    transition:all .2s ease
+    transition:all .7s ease
 }
 
 .inputGroup .inputBar:after {
@@ -150,23 +253,23 @@ a.contact-email:hover {
 }
 
 button {
-    background-color:#fff;
+    background-color:#f1f1f1;
     border:none;
     width:100px;
     padding: 10px;
-    color:#3c3c3c;
+    color:#1C1C1C;
+    letter-spacing: 2px;
     text-transform:uppercase;
-    font-family:'Jura',sans-serif;
+    font-family:'Monda',sans-serif;
     font-size:15px;
     border-radius:5px;
-    box-shadow:0 6px #a1a1a1;
+    box-shadow:0 6px #BDBDBD;
     position:relative;
     cursor:pointer
 }
 
 button:hover {
-    box-shadow:0 4px #a1a1a1;
-    top:2px
+    box-shadow:0 4px #BDBDBD;
 }
 
 button:active {
@@ -174,283 +277,129 @@ button:active {
     box-shadow:0 0
 }
 
-#icon-wrapper {
-    width:100%;
-    height:100px;
-    padding-top:25px;
-    margin:0 auto;
-    text-align:center;
-}
-
-.bt_wrap {
-    display:inline-block;
-    width:auto;
-    height:auto;
-    width:100px;
-    height:100px;
-    cursor:pointer;
-    perspective:200px;
-    transition:background .2s ease-out
-}
-
-.icon-box {
-    position:absolute;
-    perspective-origin:50px 50px;
-    transform-origin:50px 50px;
-    transition:transform .2s ease-out;
-    transform-style:preserve-3d
-}
-
-.social-icon,.social-icon2 {
-    position:absolute;
-    left:20px;
-    margin-top:20px;
-    background:#000;
-    color:#14B795;
-    width:60px;
-    height:60px;
-    font-size:3em;
-    line-height:60px;
-    transition:background .2s ease-out;
-    transform:translate3d(0px,0px,30px) rotateY(0deg)
-}
-
-.social-icon2 {
-    background:#000;
-    transform:translate3d(29px,0px,0px) rotateY(90deg);
-    transition:background .2s ease-out
-}
-
-.bt_wrap:hover {
-    background:#14B795
-}
-
-.bt_wrap:hover .social-icon {
-    background:#000;
-}
-
-.bt_wrap:hover .social-icon2 {
-    background:#000;
-    color: #fff!important;
-}
-
-.bt_wrap:hover .icon-box {
-    transform:rotateY(-90deg)
-}
-
-.contact-title-location p {
-    font-family:'Jura',sans-serif;
-    font-weight:500;
-    font-size:35px;
-    color:#fff;
-    margin-right:auto;
-    margin-left:auto;
-    text-align:center
-}
-
-.card-logo {
-    position:relative;
-    top:5%;
-    height:100px;
-    width:100px;
-    margin:0 auto;
-    border-radius:50%;
-    text-align:center;
-    animation:bounce 2s infinite;
-    -webkit-animation:bounce 2s infinite
-}
-
-.card-logo h2 {
-    margin-left: 3px;
-    line-height:100px;
-    font-size:3.75em;
-    font-family: 'Jura', sans-serif;
-    font-weight:700;
-    color:#fff;
-    border-radius:50%;
-    overflow:hidden
-}
-
-.card-front,.card-back {
-    box-shadow:inset 0 0 20px #14B795;
-    position:absolute;
-    top:0;
-    left:0;
-    padding:20px;
-    backface-visibility:hidden;
-    text-align:center;
-    box-sizing:border-box
-}
-
-.card-front.trev {
-    z-index:2;
-    background:url(/images/overlay.png) repeat, url(/images/contact/raleigh-nc.jpg);
-    background-size: cover;
-}
-.card-front.val {
-    z-index:2;
-    background:url(/images/overlay.png) repeat, url(/images/contact/evanston.jpg);
-    background-size: cover;
-}
-.card-front.gh {
-    z-index:2;
-    background:url(/images/overlay.png) repeat, url(/images/contact/knoxville.jpg);
-    background-size: cover;
-}
-.card-front.mt {
-    z-index:2;
-    background:url(/images/overlay.png) repeat, url(/images/contact/philly.jpg);
-    background-size: cover;
-}
-
-.card-back {
-    transform:rotateY(180deg);
-    background:#14B795;
-    color:#fff
-}
-
-.card-name {
-    font-family: 'Jura',sans-serif;
-    font-weight: 600;
-    font-size: 1.5em;
-    letter-spacing: 2px;
-    color:#fff;
-}
-
-.card-about {
-    padding-top:5px;
-    margin:0 auto;
-    font-family: 'Jura',sans-serif;
-    font-weight: 200;
-    font-size: 1em;
-    letter-spacing: 2px;
-    width:200px;
-    color: #000;
-}
-
-.ca-bold {
-    padding-top:10px;
-    font-weight: 600;
-}
-
-.contact-info {
-    line-height: 70px;
-    bottom: 0;
-    position: absolute;
-    margin:0 auto;
-    font-family: 'Jura',sans-serif;
-    font-weight: 900;
-    font-size: 1em;
-    letter-spacing: 5px;
-    width:200px;
-    color:#fff;
-}
-
-.card-wrapper,.card-front,.card-back {
-    width:250px;
-    height:250px;
-}
-
 .card-wrapper {
-    margin:1em auto;
-    perspective:1000px;
+    position: relative;
+    margin-top: 2.5%;
+    margin-bottom: 15%;
 }
 
-.card-wrapper:hover .flipper,.flip-container.hover .flipper {
-    transform:rotateY(180deg)
+figure.cards * {
+    -webkit-transition: all .35s ease-in-out;
+    transition: all .35s ease-in-out
 }
 
-.flipper {
-    position:relative;
-    transition:.8s;
-    transform-style:preserve-3d
+figure.cards {
+    font-family: 'Quicksand',sans-serif;
+    position: relative;
+    margin: 0 auto;
+    width: 310px;
+    height: 310px;
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 0 0 5px rgba(0,0,0,0.5)
 }
 
-.oval {
-    position:relative;
-    top:20%;
-    margin:auto;
-    width:55px;
-    height:25px;
-    background:#000;
-    -moz-border-radius:60px / 25px;
-    -webkit-border-radius:60px / 25px;
-    border-radius:55px / 25px;
-    animation:shadow 2s infinite;
-    -webkit-animation:shadow 2s infinite
+figure.cards:hover figcaption h2 {
+    color: #14B795;
+    font-weight: 900;
 }
 
-@-webkit-keyframes bounce {
-0% {
-    margin-top:15px;
-    margin-bottom:10px
+figure.cards:hover span {
+    color: #fff;
 }
 
-50% {
-    margin-top:22px;
-    margin-bottom:3px
+figure.cards:hover figcaption:before,
+figure.cards:hover figcaption:after {
+    background-color: #fff;
 }
 
-100% {
-    margin-top:15px;
-    margin-bottom:10px
-}
-}
-
-@keyframes bounce {
-0% {
-    margin-top:15px;
-    margin-bottom:10px
+figure.cards.card-trev {
+    background: url(/images/overlay.png), url(/images/contact/nc-bw.jpg);
+    background-size: cover;
 }
 
-50% {
-    margin-top:22px;
-    margin-bottom:3px
+figure.cards.card-val {
+    background: url(/images/overlay.png), url(/images/contact/chi-bw.jpg);
+    background-size: cover;
 }
 
-100% {
-    margin-top:15px;
-    margin-bottom:10px
-}
-}
-
-@-webkit-keyframes shadow {
-0% {
-    padding:1px;
-    opacity:.45
+figure.cards.card-mt {
+    background: url(/images/overlay.png), url(/images/contact/pa-bw.jpg);
+    background-size: cover;
 }
 
-50% {
-    padding:3px;
-    opacity:.65
+figure.cards figcaption {
+    position: absolute;
+    top: 50%;
+    left: 30px;
+    right: 30px;
+    -webkit-transform: rotate(0deg) translateY(-50%) scale(1);
+    transform: rotate(0deg) translateY(-50%) scale(1);
+    -webkit-transform-origin: center 0;
+    transform-origin: center 0
 }
 
-100% {
-    padding:1px;
-    opacity:.45
-}
-}
-
-@keyframes shadow {
-0% {
-    padding:1px;
-    opacity:.45
-}
-
-50% {
-    padding:3px;
-    opacity:.65
+figure.cards figcaption h2 {
+    top: 50%;
+    letter-spacing: -1px;
+    color: #fff;
+    font-size: 25px;
+    text-transform: uppercase;
+    padding: 10px 0;
+    margin: 0;
+    font-weight: 400
 }
 
-100% {
-    padding:1px;
-    opacity:.45
+figure.cards figcaption h2 span {
+    font-weight: 900
 }
+
+figure.cards figcaption:before,figure.cards figcaption:after {
+    background-color: #14B795;
+    width: 100%;
+    height: 2px;
+    position: absolute;
+    content: "";
+    display: block;
+    -webkit-transition: all .7s ease-in-out;
+    transition: all .7s ease-in-out
+}
+
+figure.cards figcaption:before {
+    left: 0;
+    top: 0
+}
+
+figure.cards figcaption:after {
+    bottom: 0;
+    right: 0
+}
+
+figure.cards a {
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    position: absolute
+}
+
+figure.cards:hover figcaption,figure.cards.hover figcaption {
+    -webkit-transform: rotate(-45deg) translateY(-50%) scale(0.9);
+    transform: rotate(-45deg) translateY(-50%) scale(0.9)
+}
+
+figure.cards:hover figcaption:before,
+figure.cards.hover figcaption:before,
+figure.cards:hover figcaption:after,
+figure.cards.hover figcaption:after {
+    width: 200%
 }
 
 /* media queries */
-@media only screen and (min-device-width: 320px) and (max-device-width: 568px) {
-
+@media only screen and (max-width: 568px) {
+.stay-connected {
+    font-size: 2.75em;
+}
 }
 
 @media screen and (max-width: 920px) {

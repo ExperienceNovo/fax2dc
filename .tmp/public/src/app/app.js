@@ -15,10 +15,7 @@ angular.module( 'novo', [
     'novo.contact',
     'novo.portfolio',
     'novo.intro',
-    'novo.blog-post',
-    'novo.templates'
-
-
+    'novo.blog-post'
 ])
 
 .config( function myAppConfig ( $stateProvider, $urlRouterProvider, $locationProvider ) {
@@ -45,6 +42,7 @@ angular.module( 'novo', [
     moment.locale('en');
 })
 
-.controller( 'AppCtrl', function AppCtrl ( $scope, config ) {
-    config.currentUser = window.currentUser;
+.controller( 'AppCtrl', function AppCtrl ( $scope, config, $rootScope ) {
+    config.currentUser = window.currentUser; 
 });
+
