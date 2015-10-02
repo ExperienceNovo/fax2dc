@@ -44,5 +44,9 @@ angular.module( 'novo', [
 
 .controller( 'AppCtrl', function AppCtrl ( $scope, config, $rootScope ) {
     config.currentUser = window.currentUser; 
+    $scope.scrollTo = function(div) {
+    $location.hash('about-top');
+    $anchorScroll();
+    }
 });
 

@@ -287,28 +287,61 @@ angular.module("contact/index.tpl.html", []).run(["$templateCache", function($te
     "    <div class=\"row contact-page-lower\">\n" +
     "        <div class=\"card-wrapper\">\n" +
     "            <div class=\"col-md-4\">\n" +
-    "                <figure class=\"cards card-trev\">\n" +
-    "                        <figcaption>\n" +
-    "                            <h2>Raleigh  <span>NC</span></h2>\n" +
-    "                        </figcaption>\n" +
-    "                        <a href=\"#\"></a>\n" +
-    "                </figure>\n" +
+    "                <label class=\"card effect__check\" for=\"one\">\n" +
+    "                <input type=\"checkbox\" id=\"one\" name=\"one\" />\n" +
+    "                <span class=\"child\">\n" +
+    "                    <span class=\"card__front block\">\n" +
+    "                        <figure class=\"cards card-trev\">\n" +
+    "                            <figcaption>\n" +
+    "                                <h2>Raleigh  <span>NC</span></h2>\n" +
+    "                            </figcaption>\n" +
+    "                        </figure>\n" +
+    "                    </span>\n" +
+    "                    <span class=\"card__back block\">\n" +
+    "                        <span class=\"card__name smallest-text\">Trevor</span>\n" +
+    "                        <span class=\"card__prof smallest-text\">Back-End</span>\n" +
+    "                        <span class=\"card__phone smallest-text\">(865) 387-6121</span>\n" +
+    "                    </span>\n" +
+    "                </span>\n" +
+    "                </label>\n" +
     "            </div>\n" +
     "            <div class=\"col-md-4\">\n" +
-    "                <figure class=\"cards card-val\">\n" +
-    "                        <figcaption>\n" +
-    "                            <h2>Chicago  <span>IL</span></h2>\n" +
-    "                        </figcaption>\n" +
-    "                        <a href=\"#\"></a>\n" +
-    "                </figure>\n" +
+    "                <label class=\"card effect__check\" for=\"two\">\n" +
+    "                <input type=\"checkbox\" id=\"two\" name=\"two\" />\n" +
+    "                <span class=\"child\">\n" +
+    "                    <span class=\"card__front block\">\n" +
+    "                        <figure class=\"cards card-val\">\n" +
+    "                            <figcaption>\n" +
+    "                                <h2>Chicago  <span>IL</span></h2>\n" +
+    "                            </figcaption>\n" +
+    "                        </figure>\n" +
+    "                    </span>\n" +
+    "                    <span class=\"card__back block\">\n" +
+    "                        <span class=\"card__name smallest-text\">Valentino</span>\n" +
+    "                        <span class=\"card__prof smallest-text\">Data Science &<br> Front-End</span>\n" +
+    "                        <span class=\"card__phone smallest-text\">(865) 387-6121</span>\n" +
+    "                    </span>\n" +
+    "                </span>\n" +
+    "                </label>\n" +
     "            </div>\n" +
     "            <div class=\"col-md-4\">\n" +
-    "                <figure class=\"cards card-mt\">\n" +
-    "                        <figcaption>\n" +
-    "                            <h2>Philadelphia  <span>PA</span></h2>\n" +
-    "                        </figcaption>\n" +
-    "                        <a href=\"#\"></a>\n" +
-    "                </figure>\n" +
+    "                <label class=\"card effect__check\" for=\"three\">\n" +
+    "                <input type=\"checkbox\" id=\"three\" name=\"three\" />\n" +
+    "                <span class=\"child\">\n" +
+    "                    <span class=\"card__front block\">\n" +
+    "                        <figure class=\"cards card-mt\">\n" +
+    "                            <figcaption>\n" +
+    "                                <h2>Philadelphia  <span>PA</span></h2>\n" +
+    "                            </figcaption>\n" +
+    "                        </figure>\n" +
+    "                    </span>\n" +
+    "                    <span class=\"card__back block\">\n" +
+    "                        <span class=\"card__name smallest-text\">Michael</span>\n" +
+    "                        <span class=\"card__prof smallest-text\">Graphic Design &<br> Front-End</span>\n" +
+    "                        <span class=\"card__phone smallest-text\">(336) 580-0855</span>\n" +
+    "                    </span>\n" +
+    "                </span>\n" +
+    "                </label>\n" +
     "            </div>\n" +
     "        </div>\n" +
     "        <div class=\"col-md-6 bottom-contact\">\n" +
@@ -478,37 +511,22 @@ angular.module("home/index.tpl.html", []).run(["$templateCache", function($templ
     "	\n" +
     "    <div ng-include=\"'intro/index.tpl.html'\"></div>\n" +
     "\n" +
-    "	<div id=\"about-top\" class=\"about-container\">\n" +
-    "		<p style=\"color#000\" class=\"stay-connected\">c0m1ng s0on</p>\n" +
-    "		<br>\n" +
-    "		<strong>checklist:</strong>\n" +
-    "		<br><br><br>\n" +
-    "		<div style=\"font-size: 1em; font-weight: 100\">\n" +
-    "			<p>-redo continue button js (want it smoother). currently inactive</p>\n" +
-    "			<br>\n" +
-    "			<p>-perhaps a bit more exterior styling on portfolio page</p>\n" +
-    "			<br>\n" +
-    "			<p>-style mobile menu pop-up a bit more</p>\n" +
-    "			<br>\n" +
-    "			<p>-add flips to the contact squares (didnt like the hover. gonna do a quick click one. 5 mins work)</p>\n" +
-    "			<br>\n" +
-    "			<p>-make portfolio \"zoom\" animation a bit smoother</p>\n" +
-    "			<br>\n" +
-    "			<p>-about section (done, just rewriting and making smooooth)</p>\n" +
-    "			<br>\n" +
-    "			<p>-was trying to figure out with trev the window location refresh on route change. aka if you're half way scrolled down a page and go to another, itll be halfway down that one as well</p>\n" +
-    "			<br>\n" +
-    "			<p>-what are thoughts on white desktop sidebar? in tandem with contact page,\n" +
-    "			might be a little white/black/green theme overload</p>\n" +
-    "			<br>\n" +
-    "		</div>\n" +
-    "	</div>\n" +
-    "\n" +
+    "	<iframe class=\"content-iframe\" src=\"about-home/index.html\" \n" +
+    "		allowfullscreen \n" +
+    "		align=\"middle\" \n" +
+    "		frameborder=\"0\" \n" +
+    "		scrolling=\"auto\" \n" +
+    "		vspace=\"0\" \n" +
+    "		hspace=\"0\" \n" +
+    "		marginwidth=\"0\" \n" +
+    "		marginheight=\"0\" \n" +
+    "		></iframe>\n" +
+    "		\n" +
     "    <div ng-include=\"'home/portfolio.tpl.html'\"></div>\n" +
     "\n" +
     "    <div ng-include=\"'home/contact.tpl.html'\"></div>\n" +
     "\n" +
-    "    <div id=\"fff\" class=\"footer\">© 2015 NOVO, LLC.</div>\n" +
+    "    <div class=\"footer\">© 2015 NOVO, LLC.</div>\n" +
     "</div>\n" +
     "\n" +
     "");
@@ -572,280 +590,76 @@ angular.module("intro/index.tpl.html", []).run(["$templateCache", function($temp
   $templateCache.put("intro/index.tpl.html",
     "<div class=\"intro\">\n" +
     "    <div class=\"intro-container\">\n" +
-    "        <div class=\"desktop\">\n" +
-    "          <!-- this svg is invisible yo -->\n" +
-    "          <svg class=\"svg-defs\" viewBox=\"0 0 1920 1080\" viewPort=\"0 0 1920 1080\" preserveAspectRatio=\"xMidYMid slice\" xmlns=\"http://www.w3.org/2000/svg\">\n" +
-    "            <symbol id=\"intro-desktop-text\">\n" +
-    "              <text text-anchor=\"middle\"\n" +
-    "                    x=\"960\"  \n" +
-    "                    y=\"560\"\n" +
-    "                    dy=\".35em\"\n" +
-    "                    class=\"medium-text\"\n" +
-    "                    >\n" +
-    "                full-stack design, development, and marketing\n" +
-    "              </text>    \n" +
-    "            </symbol>\n" +
-    "            <mask id=\"intro-desktop-mask\"\n" +
-    "                  maskunits=\"userSpaceOnUse\"\n" +
-    "                  maskcontentunits=\"userSpaceOnUse\">\n" +
-    "              <rect\n" +
-    "                    width=\"100%\"\n" +
-    "                    height=\"100%\"\n" +
-    "                    class=\"mask__shape\">\n" +
-    "              </rect>\n" +
-    "              <use xlink:href=\"#intro-desktop-text\"\n" +
-    "                   class=\"mask__text\"\n" +
-    "                   ></use>\n" +
-    "              <use xlink:href=\"#intro-desktop-novo\" />\n" +
-    "            </mask>\n" +
-    "          </svg>\n" +
-    "          <!--                  |\n" +
-    "              so is this one    v    -->\n" +
-    "          <svg style=\"display: none;\" viewBox=\"0 0 1920 1080\" viewPort=\"0 0 1920 1080\" xmlns=\"http://www.w3.org/2000/svg\">\n" +
-    "            <symbol id=\"intro-desktop-novo\">\n" +
-    "              <path transform=\"translate(510,560) scale(0.07,-0.07)\" d=\"m4315 3849c-390 -27 -601 -107 -745 -281c-136 -162 -180 -345 -196 -800l-7 -208l-158 0l-159 0l-2 643l-3 642l-156 3c-123 2 -159 0 -168 -11c-8 -10 -12 -309 -13 -1112l-3 -1098l-350 415c-192 229 -608 722 -922 1096c-315 374 -580 687 -589 696c-14 14 -53 16 -327 14l-312 -3l0 -1315l0 -1315l154 -3c104 -2 158 1 167 9c12 10 14 197 14 1180l0 1169l39 0l38 0l1004 -1180l1004 -1180l210 2l210 3l3 588l2 587l164 0l163 0l6 -172c13 -368 58 -541 181 -704c117 -156 303 -240 618 -280c176 -22 971 -32 1226 -15c198 13 369 40 463 72c277 94 430 284 483 599c17 105 36 327 36 433l0 67l456 -2l456 -3l297 -585l297 -585l210 -2l209 -3l300 590l300 590l461 0l461 0l6 -172c19 -517 122 -741 406 -883c184 -92 378 -116 985 -122c617 -7 909 14 1097 78c277 94 430 284 483 599c17 105 36 327 36 433l0 67l380 0l380 0l0 85l0 85l-378 0l-378 0l-12 238c-13 251 -33 434 -57 518c-30 103 -94 214 -169 289c-83 84 -147 122 -273 165c-206 69 -444 90 -1008 90c-748 0 -983 -37 -1191 -185c-121 -87 -215 -228 -255 -384c-28 -109 -47 -286 -55 -523l-7 -208l-414 0l-415 0l65 123c35 67 174 338 307 602c134 264 250 488 258 498c12 14 13 22 4 42l-12 25l-1511 -2c-1373 -3 -1513 -4 -1522 -19c-8 -12 5 -46 56 -145c456 -897 567 -1117 567 -1120c0 -2 -184 -4 -408 -4l-408 0l-12 238c-13 251 -33 434 -57 518c-8 28 -33 89 -56 134c-49 98 -152 208 -239 258c-129 72 -344 122 -615 142c-160 11 -934 11 -1100 -1zm4766 -391c-69 -133 -371 -718 -760 -1472c-114 -220 -211 -401 -217 -403c-6 -2 -64 101 -129 229c-65 128 -180 352 -255 498c-213 412 -650 1268 -650 1274c0 3 468 6 1040 6l1040 0l-69 -132zm-3621 41c256 -18 383 -57 454 -141c42 -49 92 -165 112 -258c14 -70 34 -337 34 -467l0 -73l-1182 0l-1181 0l7 178c23 602 120 727 587 761c169 12 1001 12 1169 0zm6460 0c256 -18 383 -57 454 -141c42 -49 92 -165 112 -258c14 -70 34 -337 34 -467l0 -73l-1182 0l-1181 0l7 178c23 602 120 727 587 761c169 12 1001 12 1169 0zm-5873 -1266c-12 -289 -50 -426 -147 -524c-103 -105 -202 -125 -674 -140c-400 -12 -976 1 -1116 26c-156 29 -260 96 -315 205c-48 95 -85 314 -85 506l0 84l1172 0l1171 0l-6 -157zm6460 0c-12 -289 -50 -426 -147 -524c-103 -105 -202 -125 -674 -140c-400 -12 -976 1 -1116 26c-156 29 -260 96 -315 205c-48 95 -85 314 -85 506l0 84l1172 0l1171 0l-6 -157z\"/>\n" +
-    "            </symbol>\n" +
-    "          </svg>\n" +
-    "\n" +
-    "          <!-- this is a box... with some text n vids n stuff-->\n" +
-    "          <div class=\"box-with-text\">\n" +
-    "            <div class=\"text-fill\">\n" +
-    "              <video \n" +
-    "                  class=\"video\" \n" +
-    "                  src=\"//secure-c.vimeocdn.com/p/video/yosemite_hd_ii_hd.webm#t=97,300\" \n" +
-    "                  preload=\"auto\" \n" +
-    "                  autoplay=\"autoplay\" \n" +
-    "                  loop=\"loop\" \n" +
-    "                  muted=\"muted\">\n" +
-    "              </video>\n" +
-    "            </div>\n" +
-    "            <!-- this is the sweet, visible novo one -->\n" +
-    "            <svg class=\"svg-inverted-mask\" viewBox=\"0 0 1920 1080\" viewPort=\"0 0 1920 1080\" \n" +
-    "                 preserveAspectRatio=\"xMidYMid slice\" xmlns=\"http://www.w3.org/2000/svg\">\n" +
-    "              <rect\n" +
+    "      <!-- this svg is invisible yo -->\n" +
+    "      <svg class=\"svg-defs\" viewBox=\"0 0 1920 1080\" viewPort=\"0 0 1920 1080\" preserveAspectRatio=\"xMidYMid slice\" xmlns=\"http://www.w3.org/2000/svg\">\n" +
+    "        <symbol id=\"intro-desktop-text\">\n" +
+    "          <text text-anchor=\"middle\"\n" +
+    "                x=\"960\"  \n" +
+    "                y=\"560\"\n" +
+    "                dy=\".35em\"\n" +
+    "                class=\"medium-text\"\n" +
+    "                >\n" +
+    "            full-stack design, development, and marketing\n" +
+    "          </text>    \n" +
+    "        </symbol>\n" +
+    "        <mask id=\"intro-desktop-mask\"\n" +
+    "              maskunits=\"userSpaceOnUse\"\n" +
+    "              maskcontentunits=\"userSpaceOnUse\">\n" +
+    "          <rect\n" +
     "                width=\"100%\"\n" +
     "                height=\"100%\"\n" +
-    "                mask=\"url(#intro-desktop-mask)\"\n" +
-    "                class=\"shape--fill\"/>\n" +
-    "              <use xlink:href=\"#intro-desktop-text\"\n" +
-    "                  class=\"text--transparent\">\n" +
-    "              </use>\n" +
-    "            </svg> \n" +
-    "          </div>\n" +
-    "          <div class=\"continue-wrap\">\n" +
-    "            <div class=\"svg-wrapper\">\n" +
-    "              <svg height=\"60\" width=\"320\" xmlns=\"http://www.w3.org/2000/svg\">\n" +
-    "                <rect class=\"shape\" height=\"60\" width=\"320\" />\n" +
-    "              </svg>\n" +
-    "              <a><div class=\"text\">Continue</div></a>\n" +
-    "            </div>\n" +
-    "          </div>\n" +
+    "                class=\"mask__shape\">\n" +
+    "          </rect>\n" +
+    "          <use xlink:href=\"#intro-desktop-text\"\n" +
+    "               class=\"mask__text\"\n" +
+    "               ></use>\n" +
+    "          <use xlink:href=\"#intro-desktop-novo\" />\n" +
+    "        </mask>\n" +
+    "      </svg>\n" +
+    "      <!--                  |\n" +
+    "          so is this one    v    -->\n" +
+    "      <svg style=\"display: none;\" viewBox=\"0 0 1920 1080\" viewPort=\"0 0 1920 1080\" xmlns=\"http://www.w3.org/2000/svg\">\n" +
+    "        <symbol id=\"intro-desktop-novo\">\n" +
+    "          <path transform=\"translate(510,560) scale(0.07,-0.07)\" d=\"m4315 3849c-390 -27 -601 -107 -745 -281c-136 -162 -180 -345 -196 -800l-7 -208l-158 0l-159 0l-2 643l-3 642l-156 3c-123 2 -159 0 -168 -11c-8 -10 -12 -309 -13 -1112l-3 -1098l-350 415c-192 229 -608 722 -922 1096c-315 374 -580 687 -589 696c-14 14 -53 16 -327 14l-312 -3l0 -1315l0 -1315l154 -3c104 -2 158 1 167 9c12 10 14 197 14 1180l0 1169l39 0l38 0l1004 -1180l1004 -1180l210 2l210 3l3 588l2 587l164 0l163 0l6 -172c13 -368 58 -541 181 -704c117 -156 303 -240 618 -280c176 -22 971 -32 1226 -15c198 13 369 40 463 72c277 94 430 284 483 599c17 105 36 327 36 433l0 67l456 -2l456 -3l297 -585l297 -585l210 -2l209 -3l300 590l300 590l461 0l461 0l6 -172c19 -517 122 -741 406 -883c184 -92 378 -116 985 -122c617 -7 909 14 1097 78c277 94 430 284 483 599c17 105 36 327 36 433l0 67l380 0l380 0l0 85l0 85l-378 0l-378 0l-12 238c-13 251 -33 434 -57 518c-30 103 -94 214 -169 289c-83 84 -147 122 -273 165c-206 69 -444 90 -1008 90c-748 0 -983 -37 -1191 -185c-121 -87 -215 -228 -255 -384c-28 -109 -47 -286 -55 -523l-7 -208l-414 0l-415 0l65 123c35 67 174 338 307 602c134 264 250 488 258 498c12 14 13 22 4 42l-12 25l-1511 -2c-1373 -3 -1513 -4 -1522 -19c-8 -12 5 -46 56 -145c456 -897 567 -1117 567 -1120c0 -2 -184 -4 -408 -4l-408 0l-12 238c-13 251 -33 434 -57 518c-8 28 -33 89 -56 134c-49 98 -152 208 -239 258c-129 72 -344 122 -615 142c-160 11 -934 11 -1100 -1zm4766 -391c-69 -133 -371 -718 -760 -1472c-114 -220 -211 -401 -217 -403c-6 -2 -64 101 -129 229c-65 128 -180 352 -255 498c-213 412 -650 1268 -650 1274c0 3 468 6 1040 6l1040 0l-69 -132zm-3621 41c256 -18 383 -57 454 -141c42 -49 92 -165 112 -258c14 -70 34 -337 34 -467l0 -73l-1182 0l-1181 0l7 178c23 602 120 727 587 761c169 12 1001 12 1169 0zm6460 0c256 -18 383 -57 454 -141c42 -49 92 -165 112 -258c14 -70 34 -337 34 -467l0 -73l-1182 0l-1181 0l7 178c23 602 120 727 587 761c169 12 1001 12 1169 0zm-5873 -1266c-12 -289 -50 -426 -147 -524c-103 -105 -202 -125 -674 -140c-400 -12 -976 1 -1116 26c-156 29 -260 96 -315 205c-48 95 -85 314 -85 506l0 84l1172 0l1171 0l-6 -157zm6460 0c-12 -289 -50 -426 -147 -524c-103 -105 -202 -125 -674 -140c-400 -12 -976 1 -1116 26c-156 29 -260 96 -315 205c-48 95 -85 314 -85 506l0 84l1172 0l1171 0l-6 -157z\"/>\n" +
+    "        </symbol>\n" +
+    "      </svg>\n" +
+    "\n" +
+    "      <!-- this is a box... with some text n vids n stuff-->\n" +
+    "      <div class=\"box-with-text\">\n" +
+    "        <div class=\"text-fill\">\n" +
+    "          <video \n" +
+    "              class=\"video\" \n" +
+    "              src=\"//secure-c.vimeocdn.com/p/video/yosemite_hd_ii_hd.webm#t=97,300\" \n" +
+    "              preload=\"auto\" \n" +
+    "              autoplay=\"autoplay\" \n" +
+    "              loop=\"loop\" \n" +
+    "              muted=\"muted\">\n" +
+    "          </video>\n" +
+    "        </div>\n" +
+    "        <!-- this is the sweet, visible novo one -->\n" +
+    "        <svg class=\"svg-inverted-mask\" viewBox=\"0 0 1920 1080\" viewPort=\"0 0 1920 1080\" \n" +
+    "             preserveAspectRatio=\"xMidYMid slice\" xmlns=\"http://www.w3.org/2000/svg\">\n" +
+    "          <rect\n" +
+    "            width=\"100%\"\n" +
+    "            height=\"100%\"\n" +
+    "            mask=\"url(#intro-desktop-mask)\"\n" +
+    "            class=\"shape--fill\"/>\n" +
+    "          <use xlink:href=\"#intro-desktop-text\"\n" +
+    "              class=\"text--transparent\">\n" +
+    "          </use>\n" +
+    "        </svg> \n" +
     "      </div>\n" +
-    "\n" +
-    "      <!-- mobile classes yo - mobile, small, smallest -->\n" +
-    "        <div class=\"mobile\">\n" +
-    "          <svg class=\"svg-defs\" viewBox=\"0 0 1920 1080\" viewPort=\"0 0 1920 1080\" preserveAspectRatio=\"xMidYMid slice\" xmlns=\"http://www.w3.org/2000/svg\">\n" +
-    "            <symbol id=\"intro-mobile-txt\">\n" +
-    "              <text text-anchor=\"middle\"\n" +
-    "                    x=\"960\"  \n" +
-    "                    y=\"560\"\n" +
-    "                    dy=\".35em\"\n" +
-    "                    class=\"small-text\"\n" +
-    "                    >\n" +
-    "                full-stack design,\n" +
-    "              </text> \n" +
-    "              <text text-anchor=\"middle\"\n" +
-    "                    x=\"960\"  \n" +
-    "                    y=\"575\"\n" +
-    "                    dy=\"1.5em\"\n" +
-    "                    class=\"small-text\"\n" +
-    "                    >\n" +
-    "                development, and marketing\n" +
-    "              </text>   \n" +
-    "            </symbol>\n" +
-    "            <mask id=\"intro-mobile-mask\"\n" +
-    "                  maskunits=\"userSpaceOnUse\"\n" +
-    "                  maskcontentunits=\"userSpaceOnUse\">\n" +
-    "              <rect\n" +
-    "                    width=\"100%\"\n" +
-    "                    height=\"100%\"\n" +
-    "                    class=\"mask__shape\">\n" +
-    "              </rect>\n" +
-    "              <use xlink:href=\"#intro-mobile-txt\"\n" +
-    "                   class=\"mask__text\"\n" +
-    "                   ></use>\n" +
-    "              <use xlink:href=\"#intro-mobile-novo\" />\n" +
-    "            </mask>\n" +
+    "  <!--<div class=\"continue-wrap\">\n" +
+    "        <div class=\"svg-wrapper\">\n" +
+    "          <svg height=\"60\" width=\"320\" xmlns=\"http://www.w3.org/2000/svg\">\n" +
+    "            <rect class=\"shape\" height=\"60\" width=\"320\" />\n" +
     "          </svg>\n" +
-    "\n" +
-    "          <svg style=\"display: none;\" viewBox=\"0 0 1920 1080\" viewPort=\"0 0 1920 1080\" xmlns=\"http://www.w3.org/2000/svg\">\n" +
-    "            <symbol id=\"intro-mobile-novo\">\n" +
-    "              <path transform=\"translate(515,530) scale(0.07,-0.07)\" d=\"m4315 3849c-390 -27 -601 -107 -745 -281c-136 -162 -180 -345 -196 -800l-7 -208l-158 0l-159 0l-2 643l-3 642l-156 3c-123 2 -159 0 -168 -11c-8 -10 -12 -309 -13 -1112l-3 -1098l-350 415c-192 229 -608 722 -922 1096c-315 374 -580 687 -589 696c-14 14 -53 16 -327 14l-312 -3l0 -1315l0 -1315l154 -3c104 -2 158 1 167 9c12 10 14 197 14 1180l0 1169l39 0l38 0l1004 -1180l1004 -1180l210 2l210 3l3 588l2 587l164 0l163 0l6 -172c13 -368 58 -541 181 -704c117 -156 303 -240 618 -280c176 -22 971 -32 1226 -15c198 13 369 40 463 72c277 94 430 284 483 599c17 105 36 327 36 433l0 67l456 -2l456 -3l297 -585l297 -585l210 -2l209 -3l300 590l300 590l461 0l461 0l6 -172c19 -517 122 -741 406 -883c184 -92 378 -116 985 -122c617 -7 909 14 1097 78c277 94 430 284 483 599c17 105 36 327 36 433l0 67l380 0l380 0l0 85l0 85l-378 0l-378 0l-12 238c-13 251 -33 434 -57 518c-30 103 -94 214 -169 289c-83 84 -147 122 -273 165c-206 69 -444 90 -1008 90c-748 0 -983 -37 -1191 -185c-121 -87 -215 -228 -255 -384c-28 -109 -47 -286 -55 -523l-7 -208l-414 0l-415 0l65 123c35 67 174 338 307 602c134 264 250 488 258 498c12 14 13 22 4 42l-12 25l-1511 -2c-1373 -3 -1513 -4 -1522 -19c-8 -12 5 -46 56 -145c456 -897 567 -1117 567 -1120c0 -2 -184 -4 -408 -4l-408 0l-12 238c-13 251 -33 434 -57 518c-8 28 -33 89 -56 134c-49 98 -152 208 -239 258c-129 72 -344 122 -615 142c-160 11 -934 11 -1100 -1zm4766 -391c-69 -133 -371 -718 -760 -1472c-114 -220 -211 -401 -217 -403c-6 -2 -64 101 -129 229c-65 128 -180 352 -255 498c-213 412 -650 1268 -650 1274c0 3 468 6 1040 6l1040 0l-69 -132zm-3621 41c256 -18 383 -57 454 -141c42 -49 92 -165 112 -258c14 -70 34 -337 34 -467l0 -73l-1182 0l-1181 0l7 178c23 602 120 727 587 761c169 12 1001 12 1169 0zm6460 0c256 -18 383 -57 454 -141c42 -49 92 -165 112 -258c14 -70 34 -337 34 -467l0 -73l-1182 0l-1181 0l7 178c23 602 120 727 587 761c169 12 1001 12 1169 0zm-5873 -1266c-12 -289 -50 -426 -147 -524c-103 -105 -202 -125 -674 -140c-400 -12 -976 1 -1116 26c-156 29 -260 96 -315 205c-48 95 -85 314 -85 506l0 84l1172 0l1171 0l-6 -157zm6460 0c-12 -289 -50 -426 -147 -524c-103 -105 -202 -125 -674 -140c-400 -12 -976 1 -1116 26c-156 29 -260 96 -315 205c-48 95 -85 314 -85 506l0 84l1172 0l1171 0l-6 -157z\"/>\n" +
-    "            </symbol>\n" +
-    "          </svg>\n" +
-    "\n" +
-    "          <div class=\"box-with-text\">\n" +
-    "            <div class=\"text-fill\">\n" +
-    "              <video \n" +
-    "                  class=\"video\" \n" +
-    "                  src=\"//secure-c.vimeocdn.com/p/video/yosemite_hd_ii_hd.webm#t=97,300\" \n" +
-    "                  preload=\"auto\" \n" +
-    "                  autoplay=\"autoplay\" \n" +
-    "                  loop=\"loop\" \n" +
-    "                  muted=\"muted\">\n" +
-    "              </video>\n" +
-    "            </div>\n" +
-    "\n" +
-    "            <svg class=\"svg-inverted-mask\" viewBox=\"0 0 1920 1080\" viewPort=\"0 0 1920 1080\" \n" +
-    "                 preserveAspectRatio=\"xMidYMid slice\" xmlns=\"http://www.w3.org/2000/svg\">\n" +
-    "              <rect\n" +
-    "                width=\"100%\"\n" +
-    "                height=\"100%\"\n" +
-    "                mask=\"url(#intro-mobile-mask)\"\n" +
-    "                class=\"shape--fill\"/>\n" +
-    "              <use xlink:href=\"#intro-mobile-txt\"\n" +
-    "                  class=\"text--transparent\">\n" +
-    "              </use>\n" +
-    "            </svg> \n" +
-    "          </div>\n" +
+    "          <a ng-click=\"scrollTo('about-top')\"><div class=\"text\">Continue</div></a>\n" +
     "        </div>\n" +
-    "\n" +
-    "        <div class=\"mobile-small\">\n" +
-    "          <svg class=\"svg-defs\" viewBox=\"0 0 1920 1080\" viewPort=\"0 0 1920 1080\" preserveAspectRatio=\"xMidYMid slice\" xmlns=\"http://www.w3.org/2000/svg\">\n" +
-    "            <symbol id=\"intro-small-txt\">\n" +
-    "              <text text-anchor=\"middle\"\n" +
-    "                    x=\"950\"  \n" +
-    "                    y=\"400\"\n" +
-    "                    dy=\".35em\"\n" +
-    "                    class=\"small-text\"\n" +
-    "                    >\n" +
-    "                full-stack design,\n" +
-    "              </text> \n" +
-    "              <text text-anchor=\"middle\"\n" +
-    "                    x=\"950\"  \n" +
-    "                    y=\"420\"\n" +
-    "                    dy=\"1.5em\"\n" +
-    "                    class=\"small-text\"\n" +
-    "                    >\n" +
-    "                development, and marketing\n" +
-    "              </text>   \n" +
-    "            </symbol>\n" +
-    "            <mask id=\"intro-small-mask\"\n" +
-    "                  maskunits=\"userSpaceOnUse\"\n" +
-    "                  maskcontentunits=\"userSpaceOnUse\">\n" +
-    "              <rect\n" +
-    "                    width=\"100%\"\n" +
-    "                    height=\"100%\"\n" +
-    "                    class=\"mask__shape\">\n" +
-    "              </rect>\n" +
-    "              <use xlink:href=\"#intro-small-txt\"\n" +
-    "                   class=\"mask__text\"\n" +
-    "                   ></use>\n" +
-    "              <use xlink:href=\"#intro-small-novo\" />\n" +
-    "            </mask>\n" +
-    "          </svg>\n" +
-    "\n" +
-    "          <svg style=\"display: none;\" viewBox=\"0 0 1920 1080\" viewPort=\"0 0 1920 1080\" xmlns=\"http://www.w3.org/2000/svg\">\n" +
-    "            <symbol id=\"intro-small-novo\">\n" +
-    "              <path transform=\"translate(620,340) scale(0.05,-0.05)\" d=\"m4315 3849c-390 -27 -601 -107 -745 -281c-136 -162 -180 -345 -196 -800l-7 -208l-158 0l-159 0l-2 643l-3 642l-156 3c-123 2 -159 0 -168 -11c-8 -10 -12 -309 -13 -1112l-3 -1098l-350 415c-192 229 -608 722 -922 1096c-315 374 -580 687 -589 696c-14 14 -53 16 -327 14l-312 -3l0 -1315l0 -1315l154 -3c104 -2 158 1 167 9c12 10 14 197 14 1180l0 1169l39 0l38 0l1004 -1180l1004 -1180l210 2l210 3l3 588l2 587l164 0l163 0l6 -172c13 -368 58 -541 181 -704c117 -156 303 -240 618 -280c176 -22 971 -32 1226 -15c198 13 369 40 463 72c277 94 430 284 483 599c17 105 36 327 36 433l0 67l456 -2l456 -3l297 -585l297 -585l210 -2l209 -3l300 590l300 590l461 0l461 0l6 -172c19 -517 122 -741 406 -883c184 -92 378 -116 985 -122c617 -7 909 14 1097 78c277 94 430 284 483 599c17 105 36 327 36 433l0 67l380 0l380 0l0 85l0 85l-378 0l-378 0l-12 238c-13 251 -33 434 -57 518c-30 103 -94 214 -169 289c-83 84 -147 122 -273 165c-206 69 -444 90 -1008 90c-748 0 -983 -37 -1191 -185c-121 -87 -215 -228 -255 -384c-28 -109 -47 -286 -55 -523l-7 -208l-414 0l-415 0l65 123c35 67 174 338 307 602c134 264 250 488 258 498c12 14 13 22 4 42l-12 25l-1511 -2c-1373 -3 -1513 -4 -1522 -19c-8 -12 5 -46 56 -145c456 -897 567 -1117 567 -1120c0 -2 -184 -4 -408 -4l-408 0l-12 238c-13 251 -33 434 -57 518c-8 28 -33 89 -56 134c-49 98 -152 208 -239 258c-129 72 -344 122 -615 142c-160 11 -934 11 -1100 -1zm4766 -391c-69 -133 -371 -718 -760 -1472c-114 -220 -211 -401 -217 -403c-6 -2 -64 101 -129 229c-65 128 -180 352 -255 498c-213 412 -650 1268 -650 1274c0 3 468 6 1040 6l1040 0l-69 -132zm-3621 41c256 -18 383 -57 454 -141c42 -49 92 -165 112 -258c14 -70 34 -337 34 -467l0 -73l-1182 0l-1181 0l7 178c23 602 120 727 587 761c169 12 1001 12 1169 0zm6460 0c256 -18 383 -57 454 -141c42 -49 92 -165 112 -258c14 -70 34 -337 34 -467l0 -73l-1182 0l-1181 0l7 178c23 602 120 727 587 761c169 12 1001 12 1169 0zm-5873 -1266c-12 -289 -50 -426 -147 -524c-103 -105 -202 -125 -674 -140c-400 -12 -976 1 -1116 26c-156 29 -260 96 -315 205c-48 95 -85 314 -85 506l0 84l1172 0l1171 0l-6 -157zm6460 0c-12 -289 -50 -426 -147 -524c-103 -105 -202 -125 -674 -140c-400 -12 -976 1 -1116 26c-156 29 -260 96 -315 205c-48 95 -85 314 -85 506l0 84l1172 0l1171 0l-6 -157z\"/>\n" +
-    "            </symbol>\n" +
-    "          </svg>\n" +
-    "\n" +
-    "          <div class=\"box-with-text\">\n" +
-    "            <div class=\"text-fill\">\n" +
-    "              <video \n" +
-    "                  class=\"video\" \n" +
-    "                  src=\"//secure-c.vimeocdn.com/p/video/yosemite_hd_ii_hd.webm#t=97,300\" \n" +
-    "                  preload=\"auto\" \n" +
-    "                  autoplay=\"autoplay\" \n" +
-    "                  loop=\"loop\" \n" +
-    "                  muted=\"muted\">\n" +
-    "              </video>\n" +
-    "            </div>\n" +
-    "\n" +
-    "            <svg class=\"svg-inverted-mask\" viewBox=\"0 0 1920 1080\" viewPort=\"0 0 1920 1080\" \n" +
-    "                 preserveAspectRatio=\"xMidYMid slice\" xmlns=\"http://www.w3.org/2000/svg\">\n" +
-    "              <rect\n" +
-    "                width=\"100%\"\n" +
-    "                height=\"100%\"\n" +
-    "                mask=\"url(#intro-small-mask)\"\n" +
-    "                class=\"shape--fill\"/>\n" +
-    "              <use xlink:href=\"#intro-small-txt\"\n" +
-    "                  class=\"text--transparent\">\n" +
-    "              </use>\n" +
-    "            </svg> \n" +
-    "          </div>\n" +
-    "        </div>\n" +
-    "\n" +
-    "        <div class=\"mobile-smallest\">\n" +
-    "          <svg class=\"svg-defs\" viewBox=\"0 0 1920 1080\" viewPort=\"0 0 1920 1080\" preserveAspectRatio=\"xMidYMid slice\" xmlns=\"http://www.w3.org/2000/svg\">\n" +
-    "            <symbol id=\"intro-smallest-txt\">\n" +
-    "              <text text-anchor=\"middle\"\n" +
-    "                    x=\"960\"  \n" +
-    "                    y=\"500\"\n" +
-    "                    dy=\".35em\"\n" +
-    "                    class=\"smaller-text\"\n" +
-    "                    >\n" +
-    "                full-stack design,\n" +
-    "              </text> \n" +
-    "              <text text-anchor=\"middle\"\n" +
-    "                    x=\"960\"  \n" +
-    "                    y=\"520\"\n" +
-    "                    dy=\"1.5em\"\n" +
-    "                    class=\"smaller-text\"\n" +
-    "                    >\n" +
-    "                development, and marketing\n" +
-    "              </text>   \n" +
-    "            </symbol>\n" +
-    "            <mask id=\"intro-smallest-mask\"\n" +
-    "                  maskunits=\"userSpaceOnUse\"\n" +
-    "                  maskcontentunits=\"userSpaceOnUse\">\n" +
-    "              <rect\n" +
-    "                    width=\"100%\"\n" +
-    "                    height=\"100%\"\n" +
-    "                    class=\"mask__shape\">\n" +
-    "              </rect>\n" +
-    "              <use xlink:href=\"#intro-smallest-txt\"\n" +
-    "                   class=\"mask__text\"\n" +
-    "                   ></use>\n" +
-    "              <use xlink:href=\"#intro-smallest-novo\" />\n" +
-    "            </mask>\n" +
-    "          </svg>\n" +
-    "\n" +
-    "          <svg style=\"display: none;\" viewBox=\"0 0 1920 1080\" viewPort=\"0 0 1920 1080\" xmlns=\"http://www.w3.org/2000/svg\">\n" +
-    "            <symbol id=\"intro-smallest-novo\">\n" +
-    "              <path transform=\"translate(730,340) scale(0.035,-0.035)\" d=\"m4315 3849c-390 -27 -601 -107 -745 -281c-136 -162 -180 -345 -196 -800l-7 -208l-158 0l-159 0l-2 643l-3 642l-156 3c-123 2 -159 0 -168 -11c-8 -10 -12 -309 -13 -1112l-3 -1098l-350 415c-192 229 -608 722 -922 1096c-315 374 -580 687 -589 696c-14 14 -53 16 -327 14l-312 -3l0 -1315l0 -1315l154 -3c104 -2 158 1 167 9c12 10 14 197 14 1180l0 1169l39 0l38 0l1004 -1180l1004 -1180l210 2l210 3l3 588l2 587l164 0l163 0l6 -172c13 -368 58 -541 181 -704c117 -156 303 -240 618 -280c176 -22 971 -32 1226 -15c198 13 369 40 463 72c277 94 430 284 483 599c17 105 36 327 36 433l0 67l456 -2l456 -3l297 -585l297 -585l210 -2l209 -3l300 590l300 590l461 0l461 0l6 -172c19 -517 122 -741 406 -883c184 -92 378 -116 985 -122c617 -7 909 14 1097 78c277 94 430 284 483 599c17 105 36 327 36 433l0 67l380 0l380 0l0 85l0 85l-378 0l-378 0l-12 238c-13 251 -33 434 -57 518c-30 103 -94 214 -169 289c-83 84 -147 122 -273 165c-206 69 -444 90 -1008 90c-748 0 -983 -37 -1191 -185c-121 -87 -215 -228 -255 -384c-28 -109 -47 -286 -55 -523l-7 -208l-414 0l-415 0l65 123c35 67 174 338 307 602c134 264 250 488 258 498c12 14 13 22 4 42l-12 25l-1511 -2c-1373 -3 -1513 -4 -1522 -19c-8 -12 5 -46 56 -145c456 -897 567 -1117 567 -1120c0 -2 -184 -4 -408 -4l-408 0l-12 238c-13 251 -33 434 -57 518c-8 28 -33 89 -56 134c-49 98 -152 208 -239 258c-129 72 -344 122 -615 142c-160 11 -934 11 -1100 -1zm4766 -391c-69 -133 -371 -718 -760 -1472c-114 -220 -211 -401 -217 -403c-6 -2 -64 101 -129 229c-65 128 -180 352 -255 498c-213 412 -650 1268 -650 1274c0 3 468 6 1040 6l1040 0l-69 -132zm-3621 41c256 -18 383 -57 454 -141c42 -49 92 -165 112 -258c14 -70 34 -337 34 -467l0 -73l-1182 0l-1181 0l7 178c23 602 120 727 587 761c169 12 1001 12 1169 0zm6460 0c256 -18 383 -57 454 -141c42 -49 92 -165 112 -258c14 -70 34 -337 34 -467l0 -73l-1182 0l-1181 0l7 178c23 602 120 727 587 761c169 12 1001 12 1169 0zm-5873 -1266c-12 -289 -50 -426 -147 -524c-103 -105 -202 -125 -674 -140c-400 -12 -976 1 -1116 26c-156 29 -260 96 -315 205c-48 95 -85 314 -85 506l0 84l1172 0l1171 0l-6 -157zm6460 0c-12 -289 -50 -426 -147 -524c-103 -105 -202 -125 -674 -140c-400 -12 -976 1 -1116 26c-156 29 -260 96 -315 205c-48 95 -85 314 -85 506l0 84l1172 0l1171 0l-6 -157z\"/>\n" +
-    "            </symbol>\n" +
-    "          </svg>\n" +
-    "\n" +
-    "          <div class=\"box-with-text\">\n" +
-    "            <div class=\"text-fill\">\n" +
-    "              <video \n" +
-    "                  class=\"video\" \n" +
-    "                  src=\"//secure-c.vimeocdn.com/p/video/yosemite_hd_ii_hd.webm#t=97,300\" \n" +
-    "                  preload=\"auto\" \n" +
-    "                  autoplay=\"autoplay\" \n" +
-    "                  loop=\"loop\" \n" +
-    "                  muted=\"muted\">\n" +
-    "              </video>\n" +
-    "            </div>\n" +
-    "\n" +
-    "            <svg class=\"svg-inverted-mask\" viewBox=\"0 0 1920 1080\" viewPort=\"0 0 1920 1080\" \n" +
-    "                 preserveAspectRatio=\"xMidYMid slice\" xmlns=\"http://www.w3.org/2000/svg\">\n" +
-    "              <rect\n" +
-    "                width=\"100%\"\n" +
-    "                height=\"100%\"\n" +
-    "                mask=\"url(#intro-smallest-mask)\"\n" +
-    "                class=\"shape--fill\"/>\n" +
-    "              <use id=\"smallest-fill\" xlink:href=\"#intro-smallest-txt\"\n" +
-    "                  class=\"text--transparent\">\n" +
-    "              </use>\n" +
-    "            </svg> \n" +
-    "          </div>\n" +
-    "        </div>\n" +
-    "      <!-- nifty mobile art of yosemite, to keep the theme goin nomesayin -->\n" +
-    "      <div class=\"intro-mobile\"></div>\n" +
+    "      </div>-->\n" +
     "    </div>\n" +
+    "    <!-- nifty mobile art of yosemite, to keep the theme goin nomesayin -->\n" +
+    "    <div class=\"intro-mobile\"></div>\n" +
     "  </div>");
 }]);
 
@@ -989,17 +803,15 @@ angular.module("sidebar/index.tpl.html", []).run(["$templateCache", function($te
     "        <div class=\"flex-item-bottom\"></div>\n" +
     "    </div>\n" +
     "    <div class=\"mobile-menu\">\n" +
-    "        <input type=\"checkbox\" id=\"menu-open\">\n" +
-    "        <nav class=\"menu-list\">\n" +
-    "            <a href=\"/\"><div class=\"list-item\" style=\"display:block\">Home</div></a>\n" +
-    "            <a href=\"/portfolio/\"><div class=\"list-item\" style=\"display:block\">Portfolio</div></a>\n" +
-    "            <a href=\"/contact/\"><div class=\"list-item\" style=\"display:block\">Contact</div></a>\n" +
+    "        <input type=\"checkbox\" id=\"nav-toggle\">\n" +
+    "        <nav class=\"mobile-nav\">\n" +
+    "          <label for=\"nav-toggle\" id=\"toggle\"></label>\n" +
+    "          <ul>\n" +
+    "            <li><a href=\"/\"><div class=\"nav-mobile\">Home</div></a></li>\n" +
+    "            <li><a href=\"/portfolio/\"><div class=\"nav-mobile\">Portfolio</div></a></li>\n" +
+    "            <li><a href=\"/contact/\"><div class=\"nav-mobile\">Contact</div></a></li>\n" +
+    "          </ul>\n" +
     "        </nav>\n" +
-    "        <label for=\"menu-open\" class=\"nav-btn\">\n" +
-    "          <span></span>\n" +
-    "          <span></span>\n" +
-    "          <span></span>\n" +
-    "        </label>\n" +
     "    </div>\n" +
     "</div>\n" +
     "\n" +

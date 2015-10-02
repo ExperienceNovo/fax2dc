@@ -14,28 +14,28 @@ a:hover {
 }
 
 .large-medium-text {
-	font-family:'Jura',sans-serif;
+	font-family:'Play',sans-serif;
 	font-weight:400;
 	font-size:14em;
 	letter-spacing:-.02em
 }
 
 .medium-text {
-	font-family:'Jura',sans-serif;
+	font-family:'Play',sans-serif;
 	font-weight:400;
 	font-size:5em;
-	letter-spacing:-.04em
+	letter-spacing:-.01em
 }
 
 .small-text {
-	font-family:'Jura',sans-serif;
+	font-family:'Monda',sans-serif;
 	font-weight:600;
 	font-size:3em;
 	letter-spacing:2px;
 }
 
 .smaller-text {
-	font-family:'Jura',sans-serif;
+	font-family:'Monda',sans-serif;
 	font-weight:600;
 	color:white;
 	font-size:2.25em;
@@ -43,7 +43,7 @@ a:hover {
 }
 
 .smallest-text {
-	font-family:'Jura',sans-serif;
+	font-family:'Monda',sans-serif;
 	font-weight:600;
 	color:white;
 	font-size:1.5em;
@@ -52,7 +52,7 @@ a:hover {
 
 .learn-more {
 	font-size:2em;
-	font-family:'Jura',sans-serif;
+	font-family:'Monda',sans-serif;
 	font-weight:400;
 	letter-spacing:.35em
 }
@@ -152,7 +152,7 @@ input:focus {
     left: 0;
     right: 0;
     bottom: 0;
-    font-family: 'Jura', sans-serif;
+    font-family: 'Monda', sans-serif;
     color: #fff;
     text-align: center;
     font-size: 2em;
@@ -196,7 +196,7 @@ input:focus {
 }
 
 .section-head h3 {
-	font-family:'Jura',sans-serif;
+	font-family:'Monda',sans-serif;
 	color:#000;
 	font-size:4em;
 	font-weight:600;
@@ -319,7 +319,7 @@ input:focus {
 }
 
 .port-box a #fill-hover {
-    fill: rgba(255,255,255,0.5);
+    fill: rgba(255,255,255,0.15);
 }
 
 .port-box a:hover #fill-hover {
@@ -376,7 +376,7 @@ input:focus {
 }
 
 .contact-box a #fill-hover {
-    fill: rgba(255,255,255,0.55);
+    fill: rgba(255,255,255,0.15);
 }
 
 .contact-box a:hover #fill-hover {

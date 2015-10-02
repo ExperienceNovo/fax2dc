@@ -379,7 +379,7 @@ body {
 	display: block;
 	position: fixed;
 	top: 10px;
-	right: 15px;
+	right: 30px;
 	height: 29px;
 	width: 29px;
 	cursor: pointer;
@@ -581,10 +581,6 @@ body {
     border-style: none!important;
     border-top-style: none!important;
     border:none!important;
-}
-
-#view-eye {
-	margin-top:15px;
 }
 
 .content__item--current {

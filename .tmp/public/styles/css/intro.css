@@ -54,7 +54,7 @@ svg {
 
 .text {
 	color:#fff;
-	font-family:'Jura',sans-serif;
+	font-family:'Play',sans-serif;
 	font-size:22px;
 	letter-spacing:8px;
 	line-height:32px;
@@ -225,12 +225,6 @@ svg {
 	animation-direction:normal,alternate
 }
 
-.mobile-small {
-	visibility:hidden
-}
-.mobile-smallest {
-	visibility:hidden
-}
 /* media queries */
 @media only screen and (max-width: 1024px) {
 video {
@@ -257,6 +251,70 @@ video {
 }
 }
 
+@media only screen and (max-width: 920px) {
+
+.intro-container {
+	zoom: 0.9;
+}
+.continue-wrap {
+	display: none;
+}
+}
+
+@media only screen and (max-width: 850px) {
+
+.intro-container {
+	zoom: 0.8;
+}
+}
+
+@media only screen and (max-width: 740px) {
+
+.intro-container {
+	zoom: 0.7;
+}
+}
+
+@media only screen and (max-width: 640px) {
+
+.intro-container {
+	zoom: 0.65;
+}
+}
+@media only screen and (max-width: 600px) {
+
+.intro-container {
+	zoom: 0.6;
+}
+}
+@media only screen and (max-width: 555px) {
+
+.intro-container {
+	zoom: 0.55;
+}
+}
+@media only screen and (max-width: 510px) {
+
+.intro-container {
+	zoom: 0.5;
+}
+}
+@media only screen and (max-width: 460px) {
+
+.intro-container {
+	zoom: 0.45;
+}
+}
+@media only screen and (max-width: 410px) {
+
+.intro-container {
+	zoom: 0.425;
+}
+}
+
+
+
+
 @media only screen and (max-width: 788px) {
 .desktop {
 	visibility:hidden
@@ -267,25 +325,8 @@ video {
 }
 }
 
-@media only screen and (max-width: 675px) {
-.mobile {
-	visibility:hidden
-}
-
-.mobile-small {
-	visibility:visible
-}
-}
-
 @media only screen and (max-width: 500px) {
-.mobile-small {
-	visibility:hidden
-}
-
-.mobile-smallest {
-	visibility:visible;
-}
 .shape--fill {
-    fill: rgba(0,0,0,0.9);
+    fill: rgba(0,0,0,0.8);
 }
 }
