@@ -1,6 +1,5 @@
-@import "http://fonts.googleapis.com/css?family=Jura";
-
-@import "http://fonts.googleapis.com/css?family=Cantarell";
+@import url(http://weloveiconfonts.com/api/?family=entypo);
+@import url(https://fonts.googleapis.com/css?family=Monda:400,700|Play:400,700);
 
 * {
 	list-style: none;

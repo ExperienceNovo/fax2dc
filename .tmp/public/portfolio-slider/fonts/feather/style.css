@@ -17,20 +17,17 @@
 	font-variant: normal;
 	text-transform: none;
 	line-height: 1;
-
-	/* Better Font Rendering =========== */
+	cursor: pointer!important;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
-.icon--zoom:before {
-	content: "\e036";
-}
-.icon--circle-cross:before {
-	content: "\e602";
-}
+
 .icon--arrow-right:before {
 	content: "\e600";
+	cursor: pointer!important;
 }
+
 .icon--arrow-left:before {
 	content: "\e601";
+	cursor: pointer!important;
 }

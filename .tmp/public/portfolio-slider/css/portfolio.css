@@ -1,5 +1,5 @@
-/* General Blueprint Style */
-@import url(http://fonts.googleapis.com/css?family=Lato:400,700);
+@import url(https://fonts.googleapis.com/css?family=Monda:400,700|Play:400,700);
+
 @font-face {
 	font-family: 'bpicons';
 	font-weight: normal;
@@ -9,13 +9,18 @@
 	url('../fonts/bpicons/bpicons.woff') format('woff'),
 	url('../fonts/bpicons/bpicons.ttf') format('truetype'),
 	url('../fonts/bpicons/bpicons.svg#bpicons') format('svg');
-} /* Made with http://icomoon.io/ */
+}
 
-/* Resets */
 *,
 *:after,
 *:before {
 	box-sizing: border-box;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor:default;
 }
 
 html {
@@ -30,7 +35,6 @@ html {
 	height: 100%;
 }
 
-/* Helper classes */
 .cf:before,
 .cf:after {
 	content: ' ';
@@ -47,11 +51,10 @@ html {
 	pointer-events: none;
 }
 
-/* Main styles */
 body {
-	font-family: "Avenir", 'Helvetica Neue', 'Lato', 'Segoe UI', Helvetica, Arial, sans-serif;
+	font-family: "Monda", sans-serif;
 	color: #CECECE;
-	background: rgba(0,0,0,0.95);
+	background: rgb(255,255,255);
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
@@ -70,7 +73,6 @@ a:hover {
 	color: #fff;
 }
 
-/* Blueprint header */
 .bp-header {
 	margin: 0 auto;
 	padding: 3em 3em 0;

@@ -782,15 +782,7 @@ angular.module("sidebar/index.tpl.html", []).run(["$templateCache", function($te
     "        <div class=\"flex-item-bottom\"></div>\n" +
     "    </div>\n" +
     "    <div class=\"mobile-menu\">\n" +
-    "        <input type=\"checkbox\" id=\"nav-toggle\">\n" +
-    "        <nav class=\"mobile-nav\">\n" +
-    "          <label for=\"nav-toggle\" id=\"toggle\"></label>\n" +
-    "          <ul>\n" +
-    "            <li><a href=\"/\"><div class=\"nav-mobile\">Home</div></a></li>\n" +
-    "            <li><a href=\"/portfolio/\"><div class=\"nav-mobile\">Portfolio</div></a></li>\n" +
-    "            <li><a href=\"/contact/\"><div class=\"nav-mobile\">Contact</div></a></li>\n" +
-    "          </ul>\n" +
-    "        </nav>\n" +
+    "\n" +
     "    </div>\n" +
     "</div>\n" +
     "\n" +
