@@ -87,18 +87,18 @@ figure.about-cards:hover h2 {
     color: #14B795;
 }
 
-figure.about-cards.card-trev {
-    background: url(/images/overlay.png), url(/images/stk3.jpg);
+figure.about-cards.card-design {
+    background: url(/images/util/overlay.png), url(/images/home/design.jpg);
     background-size: cover;
 }
 
-figure.about-cards.card-val {
-    background: url(/images/overlay.png), url(/images/stk2.jpg);
+figure.about-cards.card-development {
+    background: url(/images/util/overlay.png), url(/images/home/development.jpg);
     background-size: cover;
 }
 
-figure.about-cards.card-mt {
-    background: url(/images/overlay.png), url(/images/market.jpg);
+figure.about-cards.card-marketing {
+    background: url(/images/util/overlay.png), url(/images/home/marketing.jpg);
     background-size: cover;
 }
 

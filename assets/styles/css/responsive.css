@@ -230,7 +230,7 @@
 
 @media (min-width: 640px) and (max-width: 768px) {
     .banner {
-        background: url(../images/overlay.png),url(../images/bg.jpg) 
+        background: url(../images/util/overlay.png),url(../images/bg.jpg) 
         no-repeat fixed;
     	-o-background-size:cover;
     	-moz-background-size:cover;
@@ -291,7 +291,7 @@
     }
 
     .desc {
-    	background:url(../images/overlay.png),url(../images/bg.png) no-repeat fixed;
+    	background:url(../images/util/overlay.png),url(../images/bg.png) no-repeat fixed;
     	-o-background-size:cover;
     	-moz-background-size:cover;
     	-webkit-background-size:cover;
@@ -363,7 +363,7 @@
     }
         
     .banner {
-        background: url(../images/overlay.png),url(../images/bg.jpg) 
+        background: url(../images/util/overlay.png),url(../images/bg.jpg) 
         no-repeat fixed;
     	-o-background-size:cover;
     	-moz-background-size:cover;
@@ -493,7 +493,7 @@
     }
 
     .banner {
-        background: url(../images/overlay.png),url(../images/bg.jpg) 
+        background: url(../images/util/overlay.png),url(../images/bg.jpg) 
         no-repeat fixed;
     	-o-background-size:cover;
     	-moz-background-size:cover;

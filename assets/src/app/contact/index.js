@@ -37,7 +37,7 @@ function(uiGmapGoogleMapApiProvider) {
 			longitude: -87.6883857
 		},
 		options: {
-			icon:'/images/tri30.png'
+			icon:'/images/novo/tri30.png'
 		}
     };
 
@@ -48,7 +48,7 @@ function(uiGmapGoogleMapApiProvider) {
 			longitude: -83.9250825
 		},
 		options: {
-			icon:'/images/tri30.png'
+			icon:'/images/novo/tri30.png'
 		}
     };
 
@@ -59,7 +59,7 @@ function(uiGmapGoogleMapApiProvider) {
 			longitude: -79.0392909
 		},
 		options: {
-			icon:'/images/tri30.png'
+			icon:'/images/novo/tri30.png'
 		}
     };
 
@@ -70,7 +70,7 @@ function(uiGmapGoogleMapApiProvider) {
 			longitude: -75.1180329
 		},
 		options: {
-			icon:'/images/tri30.png'
+			icon:'/images/novo/tri30.png'
 		}
     };
 

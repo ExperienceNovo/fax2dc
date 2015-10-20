@@ -381,7 +381,7 @@ angular.module("home/about.tpl.html", []).run(["$templateCache", function($templ
     "<div class=\"about-outter\">\n" +
     "  <div class=\"about-topping\">\n" +
     "    <div class=\"about-title\">\n" +
-    "      <p><span>The <img style=\"height:57px\" src=\"/images/logo.png\"> Experience</span></p>\n" +
+    "      <p><span>The <img style=\"height:57px\" src=\"/images/novo/logo.png\"> Experience</span></p>\n" +
     "      <hr>\n" +
     "    </div>\n" +
     "    <div class=\"about-desc\">\n" +
@@ -400,7 +400,7 @@ angular.module("home/about.tpl.html", []).run(["$templateCache", function($templ
     "      <input type=\"checkbox\" id=\"one\" name=\"one\" />\n" +
     "        <span class=\"child\">\n" +
     "          <span class=\"about-card__front block\">\n" +
-    "            <figure class=\"about-cards card-trev\">\n" +
+    "            <figure class=\"about-cards card-design\">\n" +
     "              <h2>Design</h2>\n" +
     "            </figure>\n" +
     "          </span>\n" +
@@ -416,7 +416,7 @@ angular.module("home/about.tpl.html", []).run(["$templateCache", function($templ
     "      <input type=\"checkbox\" id=\"two\" name=\"two\" />\n" +
     "        <span class=\"child\">\n" +
     "          <span class=\"about-card__front block\">\n" +
-    "            <figure class=\"about-cards card-val\">\n" +
+    "            <figure class=\"about-cards card-development\">\n" +
     "              <h2>Development</h2>\n" +
     "            </figure>\n" +
     "          </span>\n" +
@@ -432,7 +432,7 @@ angular.module("home/about.tpl.html", []).run(["$templateCache", function($templ
     "      <input type=\"checkbox\" id=\"three\" name=\"three\" />\n" +
     "        <span class=\"child\">\n" +
     "          <span class=\"about-card__front block\">\n" +
-    "            <figure class=\"about-cards card-mt\">\n" +
+    "            <figure class=\"about-cards card-marketing\">\n" +
     "              <h2>Marketing</h2>\n" +
     "            </figure>\n" +
     "          </span>\n" +
@@ -497,8 +497,8 @@ angular.module("home/contact.tpl.html", []).run(["$templateCache", function($tem
     "    <div class=\"contact-box\">\n" +
     "      <a href=\"/contact/\">\n" +
     "        <div class=\"text-fill\">\n" +
-    "          <img id=\"contact-img-desktop\" src=\"/images/s1.jpg\"/>\n" +
-    "          <img id=\"contact-img-mobile\" src=\"/images/key-m.jpg\"/>\n" +
+    "          <img id=\"contact-img-desktop\" src=\"/images/home/contact.jpg\"/>\n" +
+    "          <img id=\"contact-img-mobile\" src=\"/images/home/contact-mobile.jpg\"/>\n" +
     "        </div>\n" +
     "        <svg class=\"svg-inverted-mask\" viewBox=\"0 0 1920 1080\" viewcontact=\"0 0 1920 1080\" \n" +
     "             preserveAspectRatio=\"xMidYMid slice\" xmlns=\"http://www.w3.org/2000/svg\">\n" +
@@ -567,8 +567,8 @@ angular.module("home/portfolio.tpl.html", []).run(["$templateCache", function($t
     "    <div class=\"port-box\">\n" +
     "      <a href=\"/portfolio/\">\n" +
     "        <div class=\"text-fill\">\n" +
-    "          <img src=\"/images/s2.jpg\"></img>\n" +
-    "          <img class=\"port-mobile\" src=\"/images/m2.jpg\"></img>\n" +
+    "          <img src=\"/images/home/portfolio.jpg\"></img>\n" +
+    "          <img class=\"port-mobile\" src=\"/images/home/portfolio-mobile.jpg\"></img>\n" +
     "        </div>\n" +
     "        <svg class=\"svg-inverted-mask\" viewBox=\"0 0 1920 1080\" viewPort=\"0 0 1920 1080\" \n" +
     "             preserveAspectRatio=\"xMidYMid slice\" xmlns=\"http://www.w3.org/2000/svg\" >\n" +
@@ -633,7 +633,7 @@ angular.module("intro/index.tpl.html", []).run(["$templateCache", function($temp
     "        <div class=\"text-fill\">\n" +
     "          <video \n" +
     "              class=\"video\" \n" +
-    "              src=\"images/vids.mp4\" \n" +
+    "              src=\"videos/vids.mp4\" \n" +
     "              preload=\"auto\" \n" +
     "              autoplay=\"autoplay\" \n" +
     "              loop=\"loop\" \n" +
@@ -763,7 +763,7 @@ angular.module("sidebar/index.tpl.html", []).run(["$templateCache", function($te
     "        <div class=\"flex-item-top\"></div>\n" +
     "        <div class=\"item-container\" id=\"logo-container\">\n" +
     "            <div class=\"list-item\">\n" +
-    "                <div class=\"nav-large-list nav-logo\"><img id=\"sidebar-logo\" src=\"/images/tri.png\" style=\"max-width:25%\"/></div>\n" +
+    "                <div class=\"nav-large-list nav-logo\"><img id=\"sidebar-logo\" src=\"/images/novo/tri.png\" style=\"max-width:25%\"/></div>\n" +
     "            </div>\n" +
     "        </div>\n" +
     "        <div class=\"item-container\">\n" +

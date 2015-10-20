@@ -49,7 +49,7 @@
     overflow: hidden;
     cursor: default;
     height: 40vh;
-    background: url(/images/overlay.png), url(/images/s3.jpg) no-repeat;
+    background: url(/images/util/overlay.png), url(/images/contact/contact-top.jpg) no-repeat;
     background-size: cover;
 }
 
@@ -293,17 +293,17 @@ figure.cards:hover figcaption:after {
 }
 
 figure.cards.card-trev {
-    background: url(/images/overlay.png), url(/images/contact/nc-bw.jpg);
+    background: url(/images/util/overlay.png), url(/images/contact/nc-bw.jpg);
     background-size: cover;
 }
 
 figure.cards.card-val {
-    background: url(/images/overlay.png), url(/images/contact/chi-bw.jpg);
+    background: url(/images/util/overlay.png), url(/images/contact/chi-bw.jpg);
     background-size: cover;
 }
 
 figure.cards.card-mt {
-    background: url(/images/overlay.png), url(/images/contact/pa-bw.jpg);
+    background: url(/images/util/overlay.png), url(/images/contact/pa-bw.jpg);
     background-size: cover;
 }
 

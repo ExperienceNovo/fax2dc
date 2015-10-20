@@ -23,7 +23,7 @@
 	z-index:-4;
 	overflow:hidden;
 	background-repeat:no-repeat;
-	background:url(/images/mobile.png);
+	background:url(/images/home/mobile.png);
 	-webkit-background-size:cover;
 	-moz-background-size:cover;
 	-o-background-size:cover;
@@ -149,51 +149,51 @@ svg {
 
 /* Bob */
 @-webkit-keyframes hvr-bob {
-0% {
-	-webkit-transform:translateY(-8px);
-	transform:translateY(-8px)
-}
+	0% {
+		-webkit-transform:translateY(-8px);
+		transform:translateY(-8px)
+	}
 
-50% {
-	-webkit-transform:translateY(-4px);
-	transform:translateY(-4px)
-}
+	50% {
+		-webkit-transform:translateY(-4px);
+		transform:translateY(-4px)
+	}
 
-100% {
-	-webkit-transform:translateY(-8px);
-	transform:translateY(-8px)
-}
+	100% {
+		-webkit-transform:translateY(-8px);
+		transform:translateY(-8px)
+	}
 }
 
 @keyframes hvr-bob {
-0% {
-	-webkit-transform:translateY(-8px);
-	transform:translateY(-8px)
-}
+	0% {
+		-webkit-transform:translateY(-8px);
+		transform:translateY(-8px)
+	}
 
-50% {
-	-webkit-transform:translateY(-4px);
-	transform:translateY(-4px)
-}
+	50% {
+		-webkit-transform:translateY(-4px);
+		transform:translateY(-4px)
+	}
 
-100% {
-	-webkit-transform:translateY(-8px);
-	transform:translateY(-8px)
-}
+	100% {
+		-webkit-transform:translateY(-8px);
+		transform:translateY(-8px)
+	}
 }
 
 @-webkit-keyframes hvr-bob-float {
-100% {
-	-webkit-transform:translateY(-8px);
-	transform:translateY(-8px)
-}
+	100% {
+		-webkit-transform:translateY(-8px);
+		transform:translateY(-8px)
+	}
 }
 
 @keyframes hvr-bob-float {
-100% {
-	-webkit-transform:translateY(-8px);
-	transform:translateY(-8px)
-}
+	100% {
+		-webkit-transform:translateY(-8px);
+		transform:translateY(-8px)
+	}
 }
 
 .hvr-bob {
@@ -227,106 +227,97 @@ svg {
 
 /* media queries */
 @media only screen and (max-width: 1024px) {
-video {
-	display:none
-}
+	video {
+		display:none
+	}
 
-.intro-mobile {
-	visibility:visible;
-	height:100%
-}
+	.intro-mobile {
+		visibility:visible;
+		height:100%
+	}
 
-.port-mobile {
-	visibility:visible
-}
+	.port-mobile {
+		visibility:visible
+	}
 
-.port-box a #fill-hover {
-	fill:rgba(255,255,255,0.1);
-	transition:fill .2s
-}
+	.port-box a #fill-hover {
+		fill:rgba(255,255,255,0.1);
+		transition:fill .2s
+	}
 
-.contact-mobile {
-	visibility:visible;
-	height:100%
-}
+	.contact-mobile {
+		visibility:visible;
+		height:100%
+	}
 }
 
 @media only screen and (max-width: 920px) {
-
-.intro-container {
-	zoom: 0.9;
-}
-.continue-wrap {
-	display: none;
-}
+	.intro-container {
+		zoom: 0.9;
+	}
+	.continue-wrap {
+		display: none;
+	}
 }
 
 @media only screen and (max-width: 850px) {
-
-.intro-container {
-	zoom: 0.8;
-}
+	.intro-container {
+		zoom: 0.8;
+	}
 }
 
 @media only screen and (max-width: 740px) {
-
-.intro-container {
-	zoom: 0.7;
-}
+	.intro-container {
+		zoom: 0.7;
+	}
 }
 
 @media only screen and (max-width: 640px) {
-
-.intro-container {
-	zoom: 0.65;
-}
+	.intro-container {
+		zoom: 0.65;
+	}
 }
 @media only screen and (max-width: 600px) {
-
-.intro-container {
-	zoom: 0.6;
-}
+	.intro-container {
+		zoom: 0.6;
+	}
 }
 @media only screen and (max-width: 555px) {
-
-.intro-container {
-	zoom: 0.55;
-}
+	.intro-container {
+		zoom: 0.55;
+	}
 }
 @media only screen and (max-width: 510px) {
-
-.intro-container {
-	zoom: 0.5;
-}
+	.intro-container {
+		zoom: 0.5;
+	}
 }
 @media only screen and (max-width: 460px) {
-
-.intro-container {
-	zoom: 0.45;
-}
+	.intro-container {
+		zoom: 0.45;
+	}
 }
 @media only screen and (max-width: 410px) {
-
-.intro-container {
-	zoom: 0.425;
-}
+	.intro-container {
+		zoom: 0.425;
+	}
 }
 
 
 
 
 @media only screen and (max-width: 788px) {
-.desktop {
-	visibility:hidden
-}
+	.desktop {
+		visibility:hidden
+	}
 
-.mobile {
-	visibility:visible
-}
+	.mobile {
+		visibility:visible
+	}
 }
 
 @media only screen and (max-width: 500px) {
-.shape--fill {
-    fill: rgba(0,0,0,0.8);
-}
+	.shape--fill {
+	    fill: rgba(0,0,0,0.8);
+	}
 }
