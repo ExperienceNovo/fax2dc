@@ -172,5 +172,18 @@ padding:0px;
 	<script src="js/classie.js"></script>
 	<script src="js/dynamics.min.js"></script>
 	<script src="js/main.js"></script>
+	<script type="text/javascript">
+		$('#btn').click(function(e){    
+		    $('#fancy, #btn').fadeOut('slow', function(){
+		        $('#bank, #btn-bk').fadeIn('slow');
+		    });
+		});
+
+		$('#btn-bk').click(function(e){    
+		    $('#bank, #btn-bk').fadeOut('slow', function(){
+		        $('#fancy, #btn').fadeIn('slow');
+		    });
+		});
+	</script>
 </body>
 </html>

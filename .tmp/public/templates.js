@@ -1,94 +1,4 @@
-angular.module('templates-app', ['about/about.tpl.html', 'about/index.tpl.html', 'blog-post/index.tpl.html', 'blog/index.tpl.html', 'contact/contacthead.tpl.html', 'contact/index.tpl.html', 'home/contact.tpl.html', 'home/index.tpl.html', 'home/portfolio.tpl.html', 'intro/index.tpl.html', 'portfolio/index.tpl.html', 'portfolio/portfoliohead.tpl.html', 'sidebar/index.tpl.html']);
-
-angular.module("about/about.tpl.html", []).run(["$templateCache", function($templateCache) {
-  $templateCache.put("about/about.tpl.html",
-    "<div class=\"about-outter\">\n" +
-    "  <div class=\"about-topping\">\n" +
-    "    <div class=\"about-title\">\n" +
-    "      <p><span>The <img style=\"height:57px\" src=\"/images/logo.png\"> Experience</span></p>\n" +
-    "      <hr>\n" +
-    "    </div>\n" +
-    "    <div class=\"about-desc\">\n" +
-    "      Crafting an effective message is about delivering the right words in a way that&nbsp;will&nbsp;be&nbsp;remembered.\n" +
-    "      <br>\n" +
-    "      To us, that means transforming a vision into creative design engineered with&nbsp;the&nbsp;latest&nbsp;technology.\n" +
-    "      <br>\n" +
-    "      Each step is closely tailored to fit your identity, because at NOVO you're&nbsp;more&nbsp;than&nbsp;just&nbsp;a&nbsp;client&nbsp;— you're&nbsp;a&nbsp;partner.\n" +
-    "      <br><br><br>\n" +
-    "      <strong style=\"letter-spacing:5px;color:#14B795\">Let's bring your ideas&nbsp;to&nbsp;life.</strong>\n" +
-    "    </div>\n" +
-    "  </div>\n" +
-    "  <div class=\"about-outter\">\n" +
-    "    <div class=\"col-md-4 about-col\">\n" +
-    "      <label class=\"card effect__check\" for=\"one\">\n" +
-    "      <input type=\"checkbox\" id=\"one\" name=\"one\" />\n" +
-    "        <span class=\"child\">\n" +
-    "          <span class=\"about-card__front block\">\n" +
-    "            <figure class=\"about-cards card-trev\">\n" +
-    "              <h2>Design</h2>\n" +
-    "            </figure>\n" +
-    "          </span>\n" +
-    "          <span class=\"about-card__back block\">\n" +
-    "            <p>\n" +
-    "            Our creative team's first and most important step is understanding who you are. Once we're sure that's achieved, there are no limits. From logos and print-work to fully formed brands, NOVO translates skill and experience into striking visuals that embody your core.<br> Design is in our DNA.</p>\n" +
-    "          </span>\n" +
-    "        </span>\n" +
-    "      </label>\n" +
-    "    </div>\n" +
-    "    <div class=\"col-md-4 about-col\">\n" +
-    "      <label class=\"card effect__check\" for=\"two\">\n" +
-    "      <input type=\"checkbox\" id=\"two\" name=\"two\" />\n" +
-    "        <span class=\"child\">\n" +
-    "          <span class=\"about-card__front block\">\n" +
-    "            <figure class=\"about-cards card-val\">\n" +
-    "              <h2>Development</h2>\n" +
-    "            </figure>\n" +
-    "          </span>\n" +
-    "          <span class=\"about-card__back block\">\n" +
-    "            <p>\n" +
-    "            Building websites with powerful, reliable, and modern technology is a given. Beyond that, user experience is the focus. Each click should lead an audience on a journey through your vision. <br>Tell your story with elements that seamlessly flow into each other.<br> Mobile-ready. Universally compatibale.</p>\n" +
-    "          </span>\n" +
-    "        </span>\n" +
-    "      </label>\n" +
-    "    </div>\n" +
-    "    <div class=\"col-md-4 about-col\">\n" +
-    "      <label class=\"card effect__check\" for=\"three\">\n" +
-    "      <input type=\"checkbox\" id=\"three\" name=\"three\" />\n" +
-    "        <span class=\"child\">\n" +
-    "          <span class=\"about-card__front block\">\n" +
-    "            <figure class=\"about-cards card-mt\">\n" +
-    "              <h2>Marketing</h2>\n" +
-    "            </figure>\n" +
-    "          </span>\n" +
-    "          <span class=\"about-card__back block\">\n" +
-    "            <p>\n" +
-    "            Extend your influence through comprehensive and efficient strategies. Our clients, on average, see a 500% increase in social media and domain traffic. Our marketing team is composed of experts in fields ranging from data science to content creation. Tell us where you want to go.<br> We'll tell you how to get there.</p>\n" +
-    "          </span>\n" +
-    "        </span>\n" +
-    "      </label>\n" +
-    "    </div>\n" +
-    "  </div>\n" +
-    "<!--\n" +
-    "  <div class=\"about-topping\">\n" +
-    "    <div class=\"about-title\">\n" +
-    "      <p>poop</p>\n" +
-    "      <hr>\n" +
-    "    </div>\n" +
-    "    <form class=\"ctr newsletter-input\" action=\"//projectnovo.us11.list-manage.com/subscribe/post?u=a56f7f3f876fa9db4c36328af&amp;id=ff3d3ae826\" method=\"post\">\n" +
-    "        <div class=\"loader\"></div>\n" +
-    "        <input type=\"email\" name=\"EMAIL\" required>\n" +
-    "        <div class=\"indicator\" data-content=\"Type Your Email Address\"></div>\n" +
-    "    </form>-->\n" +
-    "\n" +
-    "    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->\n" +
-    "<!--  <div class=\"display-none\">\n" +
-    "        <div style=\"position: absolute; left: -5000px;\"><input type=\"text\" name=\"b_a56f7f3f876fa9db4c36328af_ff3d3ae826\" tabindex=\"-1\" value=\"\"></div>\n" +
-    "        <div class=\"clear\"><input type=\"submit\" value=\"Subscribe\" name=\"subscribe\" id=\"mc-embedded-subscribe\" class=\"button\"></div>\n" +
-    "    </div>\n" +
-    "  </div>-->\n" +
-    "</div>\n" +
-    "");
-}]);
+angular.module('templates-app', ['about/index.tpl.html', 'blog-post/index.tpl.html', 'blog/index.tpl.html', 'contact/contacthead.tpl.html', 'contact/index.tpl.html', 'home/about.tpl.html', 'home/contact.tpl.html', 'home/index.tpl.html', 'home/portfolio.tpl.html', 'intro/index.tpl.html', 'portfolio/index.tpl.html', 'portfolio/portfoliohead.tpl.html', 'sidebar/index.tpl.html']);
 
 angular.module("about/index.tpl.html", []).run(["$templateCache", function($templateCache) {
   $templateCache.put("about/index.tpl.html",
@@ -201,6 +111,11 @@ angular.module("blog-post/index.tpl.html", []).run(["$templateCache", function($
     "<div ng-controller=\"BlogPostCtrl\">\n" +
     "	<div class=\"blog-post-container\">\n" +
     "		<div style=\"height:100px;\"></div>\n" +
+    "\n" +
+    "		<div ng-show=\"currentUser\">\n" +
+    "			<button class=\"btn btn-primary\" ng-click=\"edit_post_toggle()\">edit</button>\n" +
+    "		</div>\n" +
+    "\n" +
     "		<div class=\"post-title-container\">\n" +
     "			<h1>{{post.title}}</h1>\n" +
     "		</div>\n" +
@@ -213,7 +128,27 @@ angular.module("blog-post/index.tpl.html", []).run(["$templateCache", function($
     "\n" +
     "		<br><br>\n" +
     "	</div>\n" +
-    "</div>");
+    "\n" +
+    "	<div ng-show=\"currentUser\">\n" +
+    "		<div ng-show=\"edit\">\n" +
+    "			<form class=\"blog-input\" role=\"form\" ng-submit=\"editPost(post)\">\n" +
+    "				<div class=\"form-group\">\n" +
+    "					<input type=\"text\" ng-model=\"post.title\" class=\"form-control\" id=\"postTitle\">\n" +
+    "					<input type=\"text\" ng-model=\"post.url_title\" class=\"form-control\" id=\"postTitle\">\n" +
+    "					<textarea ng-model=\"post.post_content\" class=\"form-control\" id=\"postContent\"></textarea>\n" +
+    "				</div>\n" +
+    "				<button type=\"submit\" class=\"btn btn-primary\">Submit</button>\n" +
+    "			</form>\n" +
+    "\n" +
+    "			<button class=\"btn btn-primary\" ng-click=\"destroyPost(post)\">delete</button>\n" +
+    "\n" +
+    "		</div>\n" +
+    "	</div>\n" +
+    "\n" +
+    "</div>\n" +
+    "\n" +
+    "\n" +
+    "");
 }]);
 
 angular.module("blog/index.tpl.html", []).run(["$templateCache", function($templateCache) {
@@ -441,6 +376,96 @@ angular.module("contact/index.tpl.html", []).run(["$templateCache", function($te
     "");
 }]);
 
+angular.module("home/about.tpl.html", []).run(["$templateCache", function($templateCache) {
+  $templateCache.put("home/about.tpl.html",
+    "<div class=\"about-outter\">\n" +
+    "  <div class=\"about-topping\">\n" +
+    "    <div class=\"about-title\">\n" +
+    "      <p><span>The <img style=\"height:57px\" src=\"/images/logo.png\"> Experience</span></p>\n" +
+    "      <hr>\n" +
+    "    </div>\n" +
+    "    <div class=\"about-desc\">\n" +
+    "      Crafting an effective message is about delivering the right words in a way that&nbsp;will&nbsp;be&nbsp;remembered.\n" +
+    "      <br>\n" +
+    "      To us, that means transforming a vision into creative design engineered with&nbsp;the&nbsp;latest&nbsp;technology.\n" +
+    "      <br>\n" +
+    "      Each step is closely tailored to fit your identity, because at NOVO you're&nbsp;more&nbsp;than&nbsp;just&nbsp;a&nbsp;client&nbsp;— you're&nbsp;a&nbsp;partner.\n" +
+    "      <br><br><br>\n" +
+    "      <strong style=\"letter-spacing:5px;color:#14B795\">Let's bring your ideas&nbsp;to&nbsp;life.</strong>\n" +
+    "    </div>\n" +
+    "  </div>\n" +
+    "  <div class=\"about-outter\">\n" +
+    "    <div class=\"col-md-4 about-col\">\n" +
+    "      <label class=\"card effect__check\" for=\"one\">\n" +
+    "      <input type=\"checkbox\" id=\"one\" name=\"one\" />\n" +
+    "        <span class=\"child\">\n" +
+    "          <span class=\"about-card__front block\">\n" +
+    "            <figure class=\"about-cards card-trev\">\n" +
+    "              <h2>Design</h2>\n" +
+    "            </figure>\n" +
+    "          </span>\n" +
+    "          <span class=\"about-card__back block\">\n" +
+    "            <p>\n" +
+    "            Our creative team's first and most important step is understanding who you are. Once we're sure that's achieved, there are no limits. From logos and print-work to fully formed brands, NOVO translates skill and experience into striking visuals that embody your core.<br> Design is in our DNA.</p>\n" +
+    "          </span>\n" +
+    "        </span>\n" +
+    "      </label>\n" +
+    "    </div>\n" +
+    "    <div class=\"col-md-4 about-col\">\n" +
+    "      <label class=\"card effect__check\" for=\"two\">\n" +
+    "      <input type=\"checkbox\" id=\"two\" name=\"two\" />\n" +
+    "        <span class=\"child\">\n" +
+    "          <span class=\"about-card__front block\">\n" +
+    "            <figure class=\"about-cards card-val\">\n" +
+    "              <h2>Development</h2>\n" +
+    "            </figure>\n" +
+    "          </span>\n" +
+    "          <span class=\"about-card__back block\">\n" +
+    "            <p>\n" +
+    "            Building websites with powerful, reliable, and modern technology is a given. Beyond that, user experience is the focus. Each click should lead an audience on a journey through your vision. <br>Tell your story with elements that seamlessly flow into each other.<br> Mobile-ready. Universally compatibale.</p>\n" +
+    "          </span>\n" +
+    "        </span>\n" +
+    "      </label>\n" +
+    "    </div>\n" +
+    "    <div class=\"col-md-4 about-col\">\n" +
+    "      <label class=\"card effect__check\" for=\"three\">\n" +
+    "      <input type=\"checkbox\" id=\"three\" name=\"three\" />\n" +
+    "        <span class=\"child\">\n" +
+    "          <span class=\"about-card__front block\">\n" +
+    "            <figure class=\"about-cards card-mt\">\n" +
+    "              <h2>Marketing</h2>\n" +
+    "            </figure>\n" +
+    "          </span>\n" +
+    "          <span class=\"about-card__back block\">\n" +
+    "            <p>\n" +
+    "            Extend your influence through comprehensive and efficient strategies. Our clients, on average, see a 500% increase in social media and domain traffic. Our marketing team is composed of experts in fields ranging from data science to content creation. Tell us where you want to go.<br> We'll tell you how to get there.</p>\n" +
+    "          </span>\n" +
+    "        </span>\n" +
+    "      </label>\n" +
+    "    </div>\n" +
+    "  </div>\n" +
+    "<!--\n" +
+    "  <div class=\"about-topping\">\n" +
+    "    <div class=\"about-title\">\n" +
+    "      <p>poop</p>\n" +
+    "      <hr>\n" +
+    "    </div>\n" +
+    "    <form class=\"ctr newsletter-input\" action=\"//projectnovo.us11.list-manage.com/subscribe/post?u=a56f7f3f876fa9db4c36328af&amp;id=ff3d3ae826\" method=\"post\">\n" +
+    "        <div class=\"loader\"></div>\n" +
+    "        <input type=\"email\" name=\"EMAIL\" required>\n" +
+    "        <div class=\"indicator\" data-content=\"Type Your Email Address\"></div>\n" +
+    "    </form>-->\n" +
+    "\n" +
+    "    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->\n" +
+    "<!--  <div class=\"display-none\">\n" +
+    "        <div style=\"position: absolute; left: -5000px;\"><input type=\"text\" name=\"b_a56f7f3f876fa9db4c36328af_ff3d3ae826\" tabindex=\"-1\" value=\"\"></div>\n" +
+    "        <div class=\"clear\"><input type=\"submit\" value=\"Subscribe\" name=\"subscribe\" id=\"mc-embedded-subscribe\" class=\"button\"></div>\n" +
+    "    </div>\n" +
+    "  </div>-->\n" +
+    "</div>\n" +
+    "");
+}]);
+
 angular.module("home/contact.tpl.html", []).run(["$templateCache", function($templateCache) {
   $templateCache.put("home/contact.tpl.html",
     "<div class=\"col-md-6 bottom-contain\">\n" +
@@ -501,8 +526,8 @@ angular.module("home/index.tpl.html", []).run(["$templateCache", function($templ
     "	\n" +
     "    <div ng-include=\"'intro/index.tpl.html'\"></div>\n" +
     "\n" +
-    "    <div ng-include=\"'about/about.tpl.html'\"></div>\n" +
-    "		\n" +
+    "    <div ng-include=\"'home/about.tpl.html'\"></div>\n" +
+    "	<br><br><br><br>\n" +
     "    <div ng-include=\"'home/portfolio.tpl.html'\"></div>\n" +
     "\n" +
     "    <div ng-include=\"'home/contact.tpl.html'\"></div>\n" +
@@ -771,14 +796,13 @@ angular.module("sidebar/index.tpl.html", []).run(["$templateCache", function($te
     "                </div>\n" +
     "            </a>\n" +
     "        </div>\n" +
-    "        <!--\n" +
     "        <div class=\"item-container\">\n" +
     "            <a href=\"/blog/\">\n" +
     "                <div class=\"list-item\">\n" +
     "                    <div class=\"nav-large-list\">Blog</div>\n" +
     "                </div>\n" +
     "            </a>\n" +
-    "        </div> -->\n" +
+    "        </div>\n" +
     "        <div class=\"flex-item-bottom\"></div>\n" +
     "    </div>\n" +
     "    <div class=\"mobile-menu\">\n" +

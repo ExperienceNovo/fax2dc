@@ -8,14 +8,14 @@ angular.module( 'novo', [
     'templates-app',
     'services',
     'models',
-    'novo.sidebar',
-    'novo.home',
     'novo.about',
     'novo.blog',
+    'novo.blog-post',
     'novo.contact',
-    'novo.portfolio',
+    'novo.home',
     'novo.intro',
-    'novo.blog-post'
+    'novo.portfolio',
+    'novo.sidebar'
 ])
 
 .config( function myAppConfig ( $stateProvider, $urlRouterProvider, $locationProvider ) {

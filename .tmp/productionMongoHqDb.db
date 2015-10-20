@@ -1,0 +1,151 @@
+{
+  "data": {
+    "passport": [
+      {
+        "protocol": "local",
+        "password": "$2a$10$.5yn4C8oOtiStBZm6tZTB.ev32Q1xTMR5YdwYFgTdG2YuMNvCYtua",
+        "user": 1,
+        "createdAt": "2015-09-10T23:14:21.552Z",
+        "updatedAt": "2015-09-10T23:14:21.552Z",
+        "id": 1
+      }
+    ],
+    "post": [
+      {
+        "title": "2432",
+        "url_title": "23423",
+        "post_content": "4234234",
+        "user": 1,
+        "createdAt": "2015-09-18T21:14:42.453Z",
+        "updatedAt": "2015-09-18T21:14:42.453Z",
+        "id": 9
+      },
+      {
+        "title": "324",
+        "url_title": "234",
+        "post_content": "234",
+        "user": 1,
+        "createdAt": "2015-09-18T21:14:56.682Z",
+        "updatedAt": "2015-09-18T21:14:56.682Z",
+        "id": 10
+      }
+    ],
+    "user": [
+      {
+        "username": "troverman",
+        "email": "troverman@gmail.com",
+        "first_name": "Trevor",
+        "createdAt": "2015-09-10T23:14:21.308Z",
+        "updatedAt": "2015-09-10T23:14:21.308Z",
+        "id": 1
+      }
+    ]
+  },
+  "schema": {
+    "passport": {
+      "protocol": {
+        "type": "string"
+      },
+      "password": {
+        "type": "string"
+      },
+      "provider": {
+        "type": "string"
+      },
+      "identifier": {
+        "type": "string"
+      },
+      "tokens": {
+        "type": "json"
+      },
+      "user": {
+        "type": "integer",
+        "model": "user",
+        "foreignKey": true,
+        "alias": "user"
+      },
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "primaryKey": true,
+        "unique": true
+      },
+      "createdAt": {
+        "type": "datetime"
+      },
+      "updatedAt": {
+        "type": "datetime"
+      }
+    },
+    "post": {
+      "title": {
+        "type": "string",
+        "unique": true
+      },
+      "post_content": {
+        "type": "string"
+      },
+      "url_title": {
+        "type": "string",
+        "unique": true
+      },
+      "user": {
+        "type": "integer",
+        "model": "user",
+        "foreignKey": true,
+        "alias": "user"
+      },
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "primaryKey": true,
+        "unique": true
+      },
+      "createdAt": {
+        "type": "datetime"
+      },
+      "updatedAt": {
+        "type": "datetime"
+      }
+    },
+    "user": {
+      "username": {
+        "type": "string",
+        "unique": true
+      },
+      "email": {
+        "type": "string",
+        "unique": true
+      },
+      "first_name": {
+        "type": "string"
+      },
+      "message_count": {
+        "type": "string"
+      },
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "primaryKey": true,
+        "unique": true
+      },
+      "createdAt": {
+        "type": "datetime"
+      },
+      "updatedAt": {
+        "type": "datetime"
+      }
+    }
+  },
+  "counters": {
+    "passport": {
+      "id": 1
+    },
+    "post": {
+      "id": 15
+    },
+    "user": {
+      "id": 1
+    }
+  }
+}
