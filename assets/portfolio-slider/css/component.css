@@ -2,17 +2,18 @@
 
 html,
 body {
-	overflow: hidden;
-	height: 100%;
+    overflow: hidden!important;
+    height: 100%;
 }
 
 .container {
-	position: relative;
-	overflow: hidden;
-	overflow-y: scroll;
-	width: 100%;
-	height: 100%;
-	-webkit-overflow-scrolling: touch;
+	position: absolute;
+    width: 100%;
+    -webkit-overflow-scrolling: touch;
+    height: 100%;
+    overflow: hidden!important;
+    max-width: 100%!important;
+    min-width: 100vw !important;
 }
 
 .noscroll .container {
@@ -20,62 +21,94 @@ body {
 }
 
 .slider {
-	position: relative;
-	z-index: 200;
-	top:50px;
-	width: 100%;
-	margin: 0 auto;
-	padding: 0 0 7em;
-	-webkit-user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
-	user-select: none;
-	-webkit-touch-callout: none;
-	-khtml-user-select: none;
+	position: absolute;
+    z-index: 200;
+    margin: 0 auto;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-touch-callout: none;
+    -khtml-user-select: none;
+    max-width: 100% !important;
+    min-width: 100%;
+    min-height: 100% !important;
+    overflow-x: hidden!important;
 }
 
 .slide {
-	position: absolute;
-	top: 0;
-	visibility: hidden;
-	width: 100%;
-	opacity: 0;
+    position: absolute;
+    top: 0;
+    visibility: hidden;
+    width: 100%;
+    min-height: 100%;
+    opacity: 0;
+    min-height: 100% !important;
+    max-width: 100% !important;
+    overflow: hidden!important;
 }
 
 .slide--current {
-	position: relative;
-	z-index: 100;
-	visibility: visible;
-	opacity: 1;
+    position: absolute;
+    z-index: 100;
+    visibility: visible;
+    opacity: 1;
+    overflow: hidden!important;
+    max-width: 100% !important;
+}
+
+.laptop-top {
+	margin-top: 125px;
+}
+
+.zoom-lower {
+	background:rgba(0,0,0,0.95);
+	border-top:2.5px solid #14B795;
 }
 
 .slide__mover {
 	position: relative;
-	z-index: 100;
+    z-index: 100;
+    overflow: hidden!important;
+    margin: 0;
+    padding: 0;
+    min-height: 100% !important;
+    max-height: 100% !important;
+    max-width: 100%!important;
 }
 
 .slide__title {
-	font-size: 1.75em;
-	font-weight: normal;
-	color:rgba(0,0,0,0.95);
-	margin: 0 auto;
-	padding: 1em 0 0 0;
-	text-align: center;
-    float: left;
-    width: 100%;
-}
-
-.project-desc {
-	padding: 50px;
-    margin: 50px;
-}
-
-.project__title {
 	font-size: 1.75em;
     font-weight: normal;
     color: rgba(0,0,0,0.95);
     margin: 0 auto;
     text-align: center;
+    float: left;
+    width: 100%;
+    position: absolute;
+    top: 50px;
+}
+
+.project-desc {
+	padding: 50px;
+    text-align: center;
+}
+
+.project__title {
+	font-size: 1.75em;
+    font-weight: normal;
+    color: #14B795;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.project-info {
+	font-size: 1em;
+    font-weight: normal;
+    color: #fff;
+    padding-top: 25px;
+    width: 75%;
+    margin: 0 auto;
 }
 
 .slide__title span {
@@ -88,11 +121,12 @@ body {
 }
 
 .slider__nav {
-	position: relative;
-    bottom: -2em;
+	position: absolute;
+	top: 150px;
     width: 100%;
     text-align: center;
     float: left;
+    z-index: 500;
 }
 
 .devices {
@@ -164,65 +198,6 @@ body {
 	border-radius: 100%
 }
 
-@keyframes bounceInDown {
-0% {
-	opacity: 0;
-	transform: translateY(-2000px)
-}
-
-60% {
-	opacity: 1;
-	transform: translateY(30px)
-}
-
-80% {
-	transform: translateY(-10px)
-}
-
-100% {
-	transform: translateY(0)
-}
-}
-
-@keyframes bounceInLeft {
-0% {
-	opacity: 0;
-	transform: translateX(-2000px)
-}
-
-60% {
-	opacity: 1;
-	transform: translateX(30px)
-}
-
-80% {
-	transform: translateX(-10px)
-}
-
-100% {
-	transform: translateX(0)
-}
-}
-
-@keyframes bounceInRight {
-0% {
-	opacity: 0;
-	transform: translateX(2000px)
-}
-
-60% {
-	opacity: 1;
-	transform: translateX(-30px)
-}
-
-80% {
-	transform: translateX(10px)
-}
-
-100% {
-	transform: translateX(0)
-}
-}
 
 .button {
 	font-size: 1.31em;
@@ -244,7 +219,7 @@ body {
 }
 
 .button:hover {
-	color: #1c1c1c;
+	color: #000;
 }
 
 .text-hidden {
@@ -343,10 +318,12 @@ body {
 }
 
 .zoomer {
-	position: relative;
-	height: 360px;
+    position: relative;
     float: left;
-    width: 50%;
+    width: 100%;
+    height: 50%;
+    max-width: 100%!important;
+    min-width: 100vw !important;
 }
 
 .flex-center {
@@ -526,7 +503,7 @@ body {
 }
 
 
-.zoomer {
+.laptop-top {
 	-webkit-transition: -webkit-transform 0.5s;
 	transition: transform 0.5s;
 	-webkit-transition-timing-function: cubic-bezier(0.7,0,0.3,1);
@@ -544,6 +521,17 @@ body {
 }
 
 .zoomer--active .zoomer__image {
+	opacity: 0;
+	-webkit-transition-delay: 0s;
+	transition-delay: 0s;
+}
+
+.zoom-lower {
+	-webkit-transition: opacity 0.3s 0.3s;
+	transition: opacity 0.3s 0.3s;
+}
+
+.zoomer--active .zoom-lower {
 	opacity: 0;
 	-webkit-transition-delay: 0s;
 	transition-delay: 0s;
