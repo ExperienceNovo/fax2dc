@@ -30,6 +30,21 @@ function(uiGmapGoogleMapApiProvider) {
 	$scope.options = {scrollwheel: false};
 	$scope.windowOptions = {visible: false};
 
+    $scope.toggle_card = function(card){
+
+        if (card == 'raleigh'){
+            $scope.raleigh = $scope.raleigh ? false : true;
+        }
+        else if (card == 'chicago'){
+            $scope.chicago = $scope.chicago ? false : true;
+        }
+        else if (card == 'philadelphia'){
+            $scope.philadelphia = $scope.philadelphia ? false : true;
+        }
+        
+    }
+
+
 	$scope.marker1 = {
 		id: 1,
 		coords: {

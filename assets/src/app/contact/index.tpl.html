@@ -9,60 +9,30 @@
             <p>three locations nationwide</p>
             <hr>
         </div>
-        <div class="card-wrapper">
-            <div class="col-md-4">
-                <label class="card effect__check" for="one">
-                <input type="checkbox" id="one" name="one" />
-                <span class="child">
-                    <span class="card__front block">
-                        <figure class="cards card-trev">
-                            <figcaption>
-                                <h2>Raleigh  <span>NC</span></h2>
-                            </figcaption>
-                        </figure>
-                    </span>
-                    <span class="card__back block">
-                        <span class="card__name smallest-text">Trevor Overman</span>
-                        <span class="card__phone smallest-text">(865) 679-7229</span>
-                    </span>
-                </span>
-                </label>
+        <div class="contact-outter">
+            <div class="col-md-4 contact-col">
+              <div class="new-container">
+                <div class="new-card" ng-click="toggle_card('raleigh')" ng-class="{'flipped': raleigh == true}">
+                  <div class="front front-one">design</div>
+                  <div class="back">Our creative team's first and most important step is understanding who you are. Once we're sure that's achieved, there are no limits. From logos and print-work to fully formed brands, NOVO translates skill and experience into striking visuals that embody your core.<br> Design is in our DNA.</div>
+                </div>
+              </div>
             </div>
-            <div class="col-md-4">
-                <label class="card effect__check" for="two">
-                <input type="checkbox" id="two" name="two" />
-                <span class="child">
-                    <span class="card__front block">
-                        <figure class="cards card-val">
-                            <figcaption>
-                                <h2>Chicago  <span>IL</span></h2>
-                            </figcaption>
-                        </figure>
-                    </span>
-                    <span class="card__back block">
-                        <span class="card__name smallest-text">Valentino Constantinou</span>
-                        <span class="card__phone smallest-text">(865) 387-6121</span>
-                    </span>
-                </span>
-                </label>
+            <div class="col-md-4 contact-col">
+              <div class="new-container">
+                <div class="new-card" ng-click="toggle_card('chicago')" ng-class="{'flipped': chicago == true}">
+                  <div class="front front-two">development</div>
+                  <div class="back">Building websites with powerful, reliable, and modern technology is a given. Beyond that, user experience is the focus. Each click should lead an audience on a journey through your vision. <br>Tell your story with elements that seamlessly flow into each other.<br> Mobile-ready. Universally compatibale.</div>
+                </div>
+              </div>
             </div>
-            <div class="col-md-4">
-                <label class="card effect__check" for="three">
-                <input type="checkbox" id="three" name="three" />
-                <span class="child">
-                    <span class="card__front block">
-                        <figure class="cards card-mt">
-                            <figcaption>
-                                <h2>Philadelphia  <span>PA</span></h2>
-                            </figcaption>
-                        </figure>
-                    </span>
-                    <span class="card__back block">
-                        <span class="card__name smallest-text">Michael Thompson</span>
-                        <span class="card__phone smallest-text">(336) 580-0855</span>
-                    </span>
-                </span>
-                </label>
+            <div class="col-md-4 contact-col">
+              <div class="new-container">
+                <div class="new-card" ng-click="toggle_card('philadelphia')" ng-class="{'flipped': philadelphia == true}">
+                  <div class="front front-three">marketing</div>
+                  <div class="back">Extend your influence through comprehensive and efficient strategies. Our clients, on average, see a 500% increase in social media and domain traffic. Our marketing team is composed of experts in fields ranging from data science to content creation. Tell us where you want to go.<br> We'll tell you how to get there.</div>
+                </div>
+              </div>
             </div>
         </div>
         <div class="work-outter bottom-contact">
@@ -101,7 +71,7 @@
                                 <div style="font-size: 15px;">Evanston, IL (Chicago)</div>
                                 <br>Valentino Constantinou
                                 <br>phone: (865) 387-6121
-                                <br>email: <a href="mailto:info@projectnovo.com">info@projectnovo.com</a>
+                                <br>email: <a href="mailto:info@projectnovo.co">info@projectnovo.co</a>
                                 <br>
                             </div>
                         </ui-gmap-window>
@@ -112,7 +82,7 @@
                                 <div style="font-size: 15px;">Chapel Hill, NC (Raleigh)</div>
                                 <br>Trevor Overman
                                 <br>phone: (865) 679-7229
-                                <br>email: <a href="mailto:info@projectnovo.com">info@projectnovo.com</a>
+                                <br>email: <a href="mailto:info@projectnovo.co">info@projectnovo.co</a>
                                 <br>
                             </div>
                         </ui-gmap-window>
@@ -123,7 +93,7 @@
                                 <div style="font-size: 15px;">Philadelphia, PA</div>
                                 <br>Michael Thompson
                                 <br>phone: (336) 580-0855
-                                <br>email: <a href="mailto:info@projectnovo.com">info@projectnovo.com</a>
+                                <br>email: <a href="mailto:info@projectnovo.co">info@projectnovo.co</a>
                                 <br>
                             </div>
                         </ui-gmap-window>
@@ -136,36 +106,3 @@
         <div class="footer-text">© 2015 NOVO, LLC.</div>
     </div>
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        <!--
--->
-
-
