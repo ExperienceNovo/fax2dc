@@ -90,8 +90,26 @@ body {
 }
 
 .project-desc {
-	padding: 50px;
+    padding: 50px;
+    text-align: left;
+    width: 50%;
+}
+
+.client-social { 
+	display: inline-block;
+    position: relative;
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
     text-align: center;
+    color: #fff;
+    font-size: 30px;
+    height: 30px;
+    width: 30px;
+    line-height: 30px;
+    -webkit-transition: .4s ease-in-out background-color;
+    -moz-transition: .4s ease-in-out background-color;
+    -o-transition: .4s ease-in-out background-color;
+    transition: .4s ease-in-out background-color;
 }
 
 .project__title {
@@ -107,8 +125,20 @@ body {
     font-weight: normal;
     color: #fff;
     padding-top: 25px;
-    width: 75%;
+    width: 100%;
     margin: 0 auto;
+}
+
+.zoom-lower {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: flex-start!important;
+    -ms-flex-align:  flex-start!important;
+    align-items:  flex-start!important;
+    -webkit-justify-content:  flex-start!important;
+    -ms-flex-pack:  flex-start!important;
+    justify-content:  flex-start!important;
 }
 
 .slide__title span {
@@ -529,6 +559,7 @@ body {
 .zoom-lower {
 	-webkit-transition: opacity 0.3s 0.3s;
 	transition: opacity 0.3s 0.3s;
+	height: 50vh;
 }
 
 .zoomer--active .zoom-lower {

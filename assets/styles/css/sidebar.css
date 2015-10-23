@@ -54,12 +54,16 @@
 }
 
 .nav-logo {
-    transition: none!important;
-  -webkit-animation: floating-text 2s ease alternate infinite;
-     -moz-animation: floating-text 2s ease alternate infinite;
-      -ms-animation: floating-text 2s ease alternate infinite;
-       -o-animation: floating-text 2s ease alternate infinite;
-          animation: floating-text 2s ease alternate infinite;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+
+    -webkit-animation: floating-text 2s ease alternate infinite;
+    -moz-animation: floating-text 2s ease alternate infinite;
+    -ms-animation: floating-text 2s ease alternate infinite;
+    -o-animation: floating-text 2s ease alternate infinite;
+    animation: floating-text 2s ease alternate infinite;
 }
 
 #logo-container {
@@ -78,13 +82,21 @@
     align-items: center;
 }
 
+#sidebar-logo {
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
 .page-nav-zone:hover .nav-large-list #sidebar-logo {
-    margin-left: 0px;
+    width:100%;
+    opacity:1;
 }
 
 #sidebar-logo {
-    margin-top:0px;
-    margin-left: -500px;
+    width:0%;
+    opacity:0;
 }
 
 
