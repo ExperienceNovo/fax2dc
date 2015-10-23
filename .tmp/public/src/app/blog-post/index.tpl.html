@@ -1,0 +1,40 @@
+<div ng-controller="BlogPostCtrl">
+	<div class="blog-post-container">
+		<div style="height:100px;"></div>
+
+		<div ng-show="currentUser">
+			<button class="btn btn-primary" ng-click="edit_post_toggle()">edit</button>
+		</div>
+
+		<div class="post-title-container">
+			<h1>{{post.title}}</h1>
+		</div>
+
+		<hr>
+
+		<div class="post-content-container">
+			<div ng-bind-html="renderHtml(post.post_content)"></div>
+		</div>
+
+		<br><br>
+	</div>
+
+	<div ng-show="currentUser">
+		<div ng-show="edit">
+			<form class="blog-input" role="form" ng-submit="editPost(post)">
+				<div class="form-group">
+					<input type="text" ng-model="post.title" class="form-control" id="postTitle">
+					<input type="text" ng-model="post.url_title" class="form-control" id="postTitle">
+					<textarea ng-model="post.post_content" class="form-control" id="postContent"></textarea>
+				</div>
+				<button type="submit" class="btn btn-primary">Submit</button>
+			</form>
+
+			<button class="btn btn-primary" ng-click="destroyPost(post)">delete</button>
+
+		</div>
+	</div>
+
+</div>
+
+
