@@ -21,6 +21,10 @@
     perspective: 800px;
 }
 
+.about-col {
+    padding:0!important;
+}
+
 .about-topping {
     /*border-top: 3px solid #14B795;*/
     height: 100%;
@@ -45,24 +49,6 @@
     position: absolute;
     width: 100%;
     height: 100%;
-    -webkit-backface-visibility: hidden;
-    -ms-backface-visibility: hidden;
-    backface-visibility: hidden;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: box;
-    display: flex;
-    -webkit-box-pack: center;
-    -o-box-pack: center;
-    -ms-flex-pack: center;
-    -webkit-justify-content: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -o-box-align: center;
-    -ms-flex-align: center;
-    -webkit-align-items: center;
-    align-items: center;
     -webkit-font-smoothing: antialiased;
     -webkit-transition: all .35s ease-in-out;
     transition: all .35s ease-in-out;
@@ -78,6 +64,15 @@
     -webkit-transform: rotateY(180deg);
     -ms-transform: rotateY(180deg);
     transform: rotateY(180deg);
+    -webkit-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.about-card.flipped .front {
+    -webkit-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    backface-visibility: hidden;
 }
 
 .about-card.flipped {
@@ -149,27 +144,12 @@
     letter-spacing: 5px;
     font-size: 3em;
     font-weight: 100;
-    width: 100vw;
+    width: 100%;
     background: #0A0A0A;
     display: table;
     text-transform: uppercase;
     padding: 20px;
     padding-top:25px;
-}
-
-.about-title p {
-    margin:0;
-    display: table-cell;
-    vertical-align:middle;
-    color: #14B795;
-}
-
-.about-desktop {
-    height: 75vh;
-}
-
-.about-title strong {
-    color: #0F0F0F;
 }
 
 .about-desc {
@@ -178,8 +158,7 @@
     width: 100%;
     font-weight: 700;
     font-size: 1.6em;
-    padding: 35px;
-    padding-bottom: 40px;
+    padding: 35px 10px 40px 10px;
     line-height: 200%;
     display: table;
     border-top: 2.5px solid #14B795;
@@ -187,13 +166,89 @@
     background: #eee;
 }
 
-.about-desc > p {
+.rw-sentence {
     display: table-cell;
     vertical-align:middle;
+    color: #14B795;
 }
 
-.about-col {
-    padding: 0 !important;
+.rw-words img {
+    display: inline;
+}
+
+.rw-words span{
+    display: inline;
+    text-indent: 10px;
+    position: absolute;
+    opacity: 0;
+    overflow: hidden;
+    color: #6b969d;
+    -webkit-animation: rotateWord 9s linear infinite 0s;
+    -ms-animation: rotateWord 9s linear infinite 0s;
+    animation: rotateWord 9s linear infinite 0s;
+}
+
+.rw-words span:nth-child(2) { 
+      -webkit-animation-delay: 3s; 
+    -ms-animation-delay: 3s; 
+    animation-delay: 3s; 
+    color: #6b889d;
+}
+
+.rw-words span:nth-child(3) { 
+      -webkit-animation-delay: 6s; 
+    -ms-animation-delay: 6s; 
+    animation-delay: 6s; 
+    color: #6b739d; 
+}
+
+.rw-words span:nth-child(4) { 
+      -webkit-animation-delay: 9s; 
+    -ms-animation-delay: 9s; 
+    animation-delay: 9s; 
+    color: #7a6b9d;
+}
+
+@-webkit-keyframes rotateWord {
+    0% { opacity: 0; }
+    2% { opacity: 0; -webkit-transform: translateY(-30px); }
+  5% { opacity: 1; -webkit-transform: translateY(0px);}
+    17% { opacity: 1; -webkit-transform: translateY(0px); }
+  20% { opacity: 0; -webkit-transform: translateY(30px); }
+  80% { opacity: 0; }
+    100% { opacity: 0; }
+}
+
+@-ms-keyframes rotateWord {
+    0% { opacity: 0; }
+    2% { opacity: 0; -ms-transform: translateY(-30px); }
+  5% { opacity: 1; -ms-transform: translateY(0px);}
+    17% { opacity: 1; -ms-transform: translateY(0px); }
+  20% { opacity: 0; -ms-transform: translateY(30px); }
+  80% { opacity: 0; }
+    100% { opacity: 0; }
+}
+
+@keyframes rotateWord {
+    0% { opacity: 0; }
+    2% { opacity: 0; -webkit-transform: translateY(-30px); transform: translateY(-30px); }
+  5% { opacity: 1; -webkit-transform: translateY(0px); transform: translateY(0px);}
+    17% { opacity: 1; -webkit-transform: translateY(0px); transform: translateY(0px); }
+  20% { opacity: 0; -webkit-transform: translateY(30px); transform: translateY(30px); }
+  80% { opacity: 0; }
+    100% { opacity: 0; }
+}
+
+@media screen and (max-width: 768px){
+    .rw-sentence { font-size: 18px; }
+}
+
+@media screen and (max-width: 320px){
+    .rw-sentence { font-size: 9px; }
+}
+
+.about-desktop {
+    height: 75vh;
 }
 
 .ctr input:focus {

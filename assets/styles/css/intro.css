@@ -23,7 +23,7 @@
 	z-index:-4;
 	overflow:hidden;
 	background-repeat:no-repeat;
-	background:url(/images/home/mobile.png);
+	background:url();
 	-webkit-background-size:cover;
 	-moz-background-size:cover;
 	-o-background-size:cover;
