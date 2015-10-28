@@ -1,4 +1,4 @@
-angular.module('templates-app', ['about/about.tpl.html', 'about/index.tpl.html', 'blog-post/index.tpl.html', 'blog/index.tpl.html', 'contact/contacthead.tpl.html', 'contact/index.tpl.html', 'home/about.tpl.html', 'home/contact.tpl.html', 'home/index.tpl.html', 'home/portfolio.tpl.html', 'intro/index.tpl.html', 'portfolio/index.tpl.html', 'portfolio/portfoliohead.tpl.html', 'sidebar/index.tpl.html']);
+angular.module('templates-app', ['about/about.tpl.html', 'about/index.tpl.html', 'blog-post/index.tpl.html', 'blog/index.tpl.html', 'contact/contacthead.tpl.html', 'contact/index.tpl.html', 'home/about.tpl.html', 'home/contact.tpl.html', 'home/index.tpl.html', 'home/portfolio.tpl.html', 'intro/index.tpl.html', 'login/index.tpl.html', 'portfolio/index.tpl.html', 'portfolio/portfoliohead.tpl.html', 'register/index.tpl.html', 'sidebar/index.tpl.html']);
 
 angular.module("about/about.tpl.html", []).run(["$templateCache", function($templateCache) {
   $templateCache.put("about/about.tpl.html",
@@ -678,6 +678,38 @@ angular.module("intro/index.tpl.html", []).run(["$templateCache", function($temp
     "  </div>");
 }]);
 
+angular.module("login/index.tpl.html", []).run(["$templateCache", function($templateCache) {
+  $templateCache.put("login/index.tpl.html",
+    "<!--login-->\n" +
+    "<div class=\"row\">\n" +
+    "    <div class=\"col-md-6\">\n" +
+    "        <h3>Login</h3>\n" +
+    "        <form class=\"form-horizontal\" role=\"form\" action=\"/auth/local\" method=\"post\">\n" +
+    "            <div class=\"form-group\">\n" +
+    "                <label for=\"inputUsername3\" class=\"col-sm-2 control-label\">Username</label>\n" +
+    "                <div class=\"col-sm-10\">\n" +
+    "                    <input type=\"text\" class=\"form-control\" id=\"inputUsername3\" name=\"identifier\" placeholder=\"Username\">\n" +
+    "                </div>\n" +
+    "            </div>\n" +
+    "            <div class=\"form-group\">\n" +
+    "                <label for=\"inputPassword3\" class=\"col-sm-2 control-label\">Password</label>\n" +
+    "                <div class=\"col-sm-10\">\n" +
+    "                    <input type=\"password\" class=\"form-control\" id=\"inputPassword3\" name=\"password\" placeholder=\"Password\">\n" +
+    "                </div>\n" +
+    "            </div>\n" +
+    "            <div class=\"form-group\">\n" +
+    "                <div class=\"col-sm-offset-2 col-sm-10\">\n" +
+    "                    <button type=\"submit\" class=\"btn btn-default\">Sign in</button>\n" +
+    "                </div>\n" +
+    "            </div>\n" +
+    "        </form>\n" +
+    "    </div>\n" +
+    "</div>\n" +
+    "\n" +
+    "\n" +
+    "");
+}]);
+
 angular.module("portfolio/index.tpl.html", []).run(["$templateCache", function($templateCache) {
   $templateCache.put("portfolio/index.tpl.html",
     "<style type=\"text/css\">\n" +
@@ -760,6 +792,49 @@ angular.module("portfolio/portfoliohead.tpl.html", []).run(["$templateCache", fu
     "                \n" +
     "\n" +
     "              ");
+}]);
+
+angular.module("register/index.tpl.html", []).run(["$templateCache", function($templateCache) {
+  $templateCache.put("register/index.tpl.html",
+    "<!--register-->\n" +
+    "<div class=\"row\">\n" +
+    "    <div class=\"col-md-6\">\n" +
+    "        <h3>Create an Account</h3>\n" +
+    "        <form class=\"form-horizontal\" role=\"form\" action=\"/auth/local/register\" method=\"post\">\n" +
+    "            <div class=\"form-group\">\n" +
+    "                <label for=\"inputUsername3\" class=\"col-sm-2 control-label\">Username</label>\n" +
+    "                <div class=\"col-sm-10\">\n" +
+    "                    <input type=\"text\" class=\"form-control\" id=\"inputUsername3\" name=\"username\" placeholder=\"Username\" value=\"\">\n" +
+    "                </div>\n" +
+    "            </div>\n" +
+    "            <div class=\"form-group\">\n" +
+    "                <label for=\"inputPassword3\" class=\"col-sm-2 control-label\">Password</label>\n" +
+    "                <div class=\"col-sm-10\">\n" +
+    "                    <input type=\"password\" class=\"form-control\" id=\"inputPassword3\" name=\"password\" placeholder=\"Password\" value=\"\">\n" +
+    "                </div>\n" +
+    "            </div>\n" +
+    "            <div class=\"form-group\">\n" +
+    "                <label for=\"inputEmail3\" class=\"col-sm-2 control-label\">Email</label>\n" +
+    "                <div class=\"col-sm-10\">\n" +
+    "                    <input type=\"email\" class=\"form-control\" id=\"inputEmail3\" name=\"email\" placeholder=\"Email\" value=\"\">\n" +
+    "                </div>\n" +
+    "            </div>\n" +
+    "            <div class=\"form-group\">\n" +
+    "                <label for=\"inputFirstName3\" class=\"col-sm-2 control-label\">First Name</label>\n" +
+    "                <div class=\"col-sm-10\">\n" +
+    "                    <input type=\"text\" class=\"form-control\" id=\"inputFirstName3\" name=\"first_name\" placeholder=\"First Name\" value=\"\">\n" +
+    "                </div>\n" +
+    "            </div>\n" +
+    "            <div class=\"form-group\">\n" +
+    "                <div class=\"col-sm-offset-2 col-sm-10\">\n" +
+    "                    <button type=\"submit\" class=\"btn btn-default\">Sign in</button>\n" +
+    "                </div>\n" +
+    "            </div>\n" +
+    "        </form>\n" +
+    "    </div>\n" +
+    "</div>\n" +
+    "\n" +
+    "<a href=\"/login\">already have an account?</a>");
 }]);
 
 angular.module("sidebar/index.tpl.html", []).run(["$templateCache", function($templateCache) {
