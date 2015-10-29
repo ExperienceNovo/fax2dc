@@ -73,6 +73,9 @@
     -webkit-backface-visibility: hidden;
     -ms-backface-visibility: hidden;
     backface-visibility: hidden;
+    visibility: hidden;
+    opacity: 0;
+
 }
 
 .about-card.flipped {
@@ -96,7 +99,7 @@
     background-size: cover;
 }
 
-.front h2 {
+.about-card .front h2 {
     font-family: 'Quicksand',sans-serif;
     letter-spacing: 10px;
     color: #fff;
@@ -110,11 +113,11 @@
     transform: translateX(-50%) translateY(-50%);
 }
 
-.front:hover h2 {
+.about-card .front:hover h2 {
     color: #14B795;
 }
 
-.back p {
+.about-card .back p {
     font-family: 'Monda',sans-serif;
     color: #000;
     padding: 30px;

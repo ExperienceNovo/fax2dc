@@ -1,118 +1,8 @@
-.contact-col {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: box;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -o-box-orient: vertical;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-pack: center;
-  -o-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -o-box-align: center;
-  -ms-flex-align: center;
-  -webkit-align-items: center;
-  align-items: center;
-}
-
-.new-container {
-  width: 300px;
-  height: 200px;
-  position: relative;
-  -webkit-perspective: 800px;
-  -ms-perspective: 800px;
-  perspective: 800px;
-}
-
-.contact-card {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  -webkit-transform-style: preserve-3d;
-  -o-transform-style: preserve-3d;
-  -ms-transform-style: preserve-3d;
-  transform-style: preserve-3d;
-  -webkit-transition: -webkit-transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  transition: transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
-  cursor: pointer;
-}
-
-.contact-card div {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  -webkit-backface-visibility: hidden;
-  -ms-backface-visibility: hidden;
-  backface-visibility: hidden;
-  background: #fff;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: box;
-  display: flex;
-  -webkit-box-pack: center;
-  -o-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -o-box-align: center;
-  -ms-flex-align: center;
-  -webkit-align-items: center;
-  align-items: center;
-  font: 16px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  color: #47525d;
-}
-
-.contact-card .back {
-  -webkit-transform: rotateY(180deg);
-  -ms-transform: rotateY(180deg);
-  transform: rotateY(180deg);
-}
-
-.contact-card.flipped {
-  -webkit-transform: rotateY(180deg);
-  -ms-transform: rotateY(180deg);
-  transform: rotateY(180deg);
-}
-
-.contact-card .front.contact-one {
-    background: url(/images/util/overlay.png), url(/images/contact/nc-bw.jpg);
-    background-size: cover;
-}
-
-.contact-card .front.contact-two {
-    background: url(/images/util/overlay.png), url(/images/contact/chi-bw.jpg);
-    background-size: cover;
-}
-
-.contact-card .front.contact-three {
-    background: url(/images/util/overlay.png), url(/images/contact/pa-bw.jpg);
-    background-size: cover;
-}
-
 .contact-outter {
-    display:inline-block;
-    height:100%;
-    width:100%;
-    position: relative;
-}
-
-.contact-col .contact-card {
     height: 100%;
     width: 100%;
-    margin: 0!important;
-    display: block;
+    margin-top:50px;
 }
-
 
 .contact-outter * {
     -webkit-touch-callout: none;
@@ -121,6 +11,187 @@
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+}
+
+.contact-card-container {
+    width: 310px;
+    height: 310px;
+    position: relative;
+    margin:0 auto 25px auto;
+    -webkit-perspective: 800px;
+    -ms-perspective: 800px;
+    perspective: 800px;
+}
+
+.contact-topping {
+    /*border-top: 3px solid #14B795;*/
+    height: 100%;
+    width: 100%;
+}
+
+.contact-card {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    -webkit-transform-style: preserve-3d;
+    -o-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-transition: -webkit-transform .8s cubic-bezier(0.175,0.885,0.32,1.275);
+    transition: transform .8s cubic-bezier(0.175,0.885,0.32,1.275);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+    cursor: pointer;
+}
+
+.contact-card div {
+    position: absolute;
+    width: 310px;
+    height: 310px;
+    -webkit-font-smoothing: antialiased;
+    -webkit-transition: all .35s ease-in-out;
+    transition: all .35s ease-in-out;
+    background: #fff;
+    overflow: hidden;
+}
+
+.contact-card div * {
+    -webkit-transition: all .35s ease-in-out;
+    transition: all .35s ease-in-out;
+}
+
+.contact-card .front h2 {
+    font-family: 'Quicksand',sans-serif;
+    letter-spacing: 3px;
+    color: #fff;
+    font-size: 150%;
+    text-transform: uppercase;
+    margin: 0;
+    padding:10px 0;
+    position: absolute;
+    font-weight: 100;
+}
+
+.contact-card .front:hover h2 {
+    color: #14B795;
+}
+
+.contact-card .back p {
+    font-family: 'Monda',sans-serif;
+    color: #000;
+    font-size: 150%;
+    text-align: center;
+    font-weight: 600;
+    position: absolute;
+    top: 40%;
+    width: 100%;
+}
+
+.contact-card .back p strong {
+    color:#14B795
+}
+
+.contact-card .back p:hover {
+    color: #14B795;
+    cursor:url(/images/util/phone.png), auto;
+}
+
+.contact-card .back p:hover strong {
+    color: #000;
+}
+
+.contact-card .front h2 {
+    position: absolute;
+    top: 50%;
+    left: 30px;
+    right: 30px;
+    -webkit-transform: rotate(0deg) translateY(-50%) scale(1);
+    transform: rotate(0deg) translateY(-50%) scale(1);
+    -webkit-transform-origin: center 0;
+    transform-origin: center 0
+}
+
+.contact-card .front h2 span {
+    font-weight: 900;
+    color: #14B795;
+}
+
+.contact-card .front:hover h2 span  {
+    color: #fff;
+}
+
+.contact-card .front:hover h2:before,
+.contact-card .front:hover h2:after {
+    background-color: #fff;
+}
+
+.contact-card .front h2:before,
+.contact-card .front h2:after {
+    background-color: #14B795;
+    width: 100%;
+    height: 2px;
+    position: absolute;
+    content: "";
+    display: block;
+    -webkit-transition: all .7s ease-in-out;
+    transition: all .7s ease-in-out
+}
+
+.contact-card .front h2:before {
+    left: 0;
+    top: 0
+}
+
+.contact-card .front h2:after {
+    bottom: 0;
+    right: 0
+}
+
+.contact-card .front:hover h2 {
+    -webkit-transform: rotate(-45deg) translateY(-50%) scale(0.9);
+    transform: rotate(-45deg) translateY(-50%) scale(0.9)
+}
+
+.contact-card .front:hover h2:before,
+.contact-card .front:hover h2:after {
+    width: 200%
+}
+
+.contact-card .back {
+    -webkit-transform: rotateY(180deg);
+    -ms-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+    -webkit-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.contact-card.flipped .front {
+    -webkit-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    backface-visibility: hidden;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.contact-card.flipped {
+    -webkit-transform: rotateY(180deg);
+    -ms-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+}
+
+.contact-card .front.front-one {
+    background: url(/images/util/overlay.png), url(/images/contact/nc-bw.jpg);
+    background-size: cover;
+}
+
+.contact-card .front.front-two {
+    background: url(/images/util/overlay.png), url(/images/contact/chi-bw.jpg);
+    background-size: cover;
+}
+
+.contact-card .front.front-three {
+    background: url(/images/util/overlay.png), url(/images/contact/pa-bw.jpg);
+    background-size: cover;
 }
 
 .contact-page-container {
@@ -382,121 +453,6 @@ button:hover {
 button:active {
     top:6px;
     box-shadow:0 0
-}
-
-figure.cards * {
-    -webkit-transition: all .35s ease-in-out;
-    transition: all .35s ease-in-out
-}
-
-figure.cards {
-    font-family: 'Quicksand',sans-serif;
-    position: relative;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top:0;
-    margin-bottom:25px;
-    width: 310px;
-    height: 310px;
-    overflow: hidden;
-    text-align: center;
-    box-shadow: 0 0 5px rgba(0,0,0,0.5)
-}
-
-figure.cards:hover figcaption h2 {
-    color: #14B795;
-    font-weight: 900;
-}
-
-figure.cards:hover span {
-    color: #fff;
-}
-
-figure.cards:hover figcaption:before,
-figure.cards:hover figcaption:after {
-    background-color: #fff;
-}
-
-figure.cards.card-trev {
-    background: url(/images/util/overlay.png), url(/images/contact/nc-bw.jpg);
-    background-size: cover;
-}
-
-figure.cards.card-val {
-    background: url(/images/util/overlay.png), url(/images/contact/chi-bw.jpg);
-    background-size: cover;
-}
-
-figure.cards.card-mt {
-    background: url(/images/util/overlay.png), url(/images/contact/pa-bw.jpg);
-    background-size: cover;
-}
-
-figure.cards figcaption {
-    position: absolute;
-    top: 50%;
-    left: 30px;
-    right: 30px;
-    -webkit-transform: rotate(0deg) translateY(-50%) scale(1);
-    transform: rotate(0deg) translateY(-50%) scale(1);
-    -webkit-transform-origin: center 0;
-    transform-origin: center 0
-}
-
-figure.cards figcaption h2 {
-    top: 50%;
-    letter-spacing: -1px;
-    color: #fff;
-    font-size: 25px;
-    text-transform: uppercase;
-    padding: 10px 0;
-    margin: 0;
-    font-weight: 400
-}
-
-figure.cards figcaption h2 span {
-    font-weight: 900
-}
-
-figure.cards figcaption:before,figure.cards figcaption:after {
-    background-color: #14B795;
-    width: 100%;
-    height: 2px;
-    position: absolute;
-    content: "";
-    display: block;
-    -webkit-transition: all .7s ease-in-out;
-    transition: all .7s ease-in-out
-}
-
-figure.cards figcaption:before {
-    left: 0;
-    top: 0
-}
-
-figure.cards figcaption:after {
-    bottom: 0;
-    right: 0
-}
-
-figure.cards a {
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    position: absolute
-}
-
-figure.cards:hover figcaption,figure.cards.hover figcaption {
-    -webkit-transform: rotate(-45deg) translateY(-50%) scale(0.9);
-    transform: rotate(-45deg) translateY(-50%) scale(0.9)
-}
-
-figure.cards:hover figcaption:before,
-figure.cards.hover figcaption:before,
-figure.cards:hover figcaption:after,
-figure.cards.hover figcaption:after {
-    width: 200%
 }
 
 .map-outter {
