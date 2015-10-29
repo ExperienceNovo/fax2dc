@@ -41,25 +41,25 @@
                 <hr>
             </div>
             <div class="margin">
-            <!--did someone already set up form submission code? -->
-            <form action="mailto:info@projectnovo.com">
-                <div class="inputGroup">
-                    <input required="" type="text"> 
-                    <span class="inputBar"></span> 
-                    <label>Name</label>
-                </div>
-                <div class="inputGroup">
-                    <input required="" type="text"> 
-                    <span class="inputBar"></span> 
-                    <label>Email</label>
-                </div>
-                <div class="inputGroup">
-                    <textarea required=""></textarea> 
-                    <span class="inputBar"></span> 
-                    <label>Message</label>
-                </div>
-                <button>Send</button>
-            </form>
+                <form role="form" ng-submit="submitEmail(newEmail)">
+                    <div class="inputGroup">
+                        <input required="" type="text" ng-model="newEmail.name"> 
+                        <span class="inputBar"></span> 
+                        <label>Name</label>
+                    </div>
+                    <div class="inputGroup">
+                        <!--type == email, css -->
+                        <input required="" type="text" ng-model="newEmail.email">
+                        <span class="inputBar"></span> 
+                        <label>Email</label>
+                    </div>
+                    <div class="inputGroup">
+                        <textarea required="" ng-model="newEmail.message"></textarea>
+                        <span class="inputBar"></span> 
+                        <label>Message</label>
+                    </div>
+                    <button type="submit">Submit</button>
+                </form>
             </div>
         </div>
         <div class="map-outter bottom-contact">

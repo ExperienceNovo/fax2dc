@@ -8,7 +8,6 @@ angular.module( 'novo', [
     'templates-app',
     'services',
     'models',
-    'novo.about',
     'novo.blog',
     'novo.blog-post',
     'novo.contact',

@@ -24,11 +24,12 @@ function(uiGmapGoogleMapApiProvider) {
 
 )
 
-.controller( 'ContactCtrl', function AboutController( $scope, titleService, uiGmapGoogleMapApi ) {
+.controller( 'ContactCtrl', function AboutController( $scope, $http, titleService, uiGmapGoogleMapApi ) {
 	titleService.setTitle('Contact - NOVO');
 	$scope.map = {center: {latitude: 39.443659, longitude: -83.082276 }, zoom: 4 };
 	$scope.options = {scrollwheel: false};
 	$scope.windowOptions = {visible: false};
+    $scope.newEmail = {}
 
     $scope.toggle_card = function(card){
 
@@ -42,7 +43,21 @@ function(uiGmapGoogleMapApiProvider) {
             $scope.philadelphia = $scope.philadelphia ? false : true;
         }
         
-    }
+    };
+
+
+    $scope.submitEmail = function(newEmail){
+
+        console.log(newEmail);
+        $http.post("/contact/email/", newEmail).
+            success(function(data, status) {
+                $scope.newEmail = {}
+                //animate 'sent' or something like that
+            }).
+            error(function(data, status) {
+        });
+
+    };
 
 
 	$scope.marker1 = {

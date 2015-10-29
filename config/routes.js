@@ -42,6 +42,7 @@ module.exports.routes = {
   'get /blog/:id': 'HomeController.index',
 
   'get /contact': 'HomeController.index',
+  'post /contact/email': 'EmailController.send',
   'get /portfolio': 'HomeController.index',
   'get /templates': 'HomeController.index',
 
