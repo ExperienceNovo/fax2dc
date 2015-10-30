@@ -1,9 +1,14 @@
 <div ng-controller="SidebarCtrl">
-    <div class="side-bars">
+    <div ng-show="sidebar_color == 'white'" class="side-bars">
         <div class="icon-bar"></div>
         <div class="icon-bar"></div>
         <div class="icon-bar"></div>
-    </div>   
+    </div>
+    <div ng-show="sidebar_color == 'black'" class="side-bars">
+        <div class="icon-bar-black"></div>
+        <div class="icon-bar-black"></div>
+        <div class="icon-bar-black"></div>
+    </div>      
     <div class="page-nav-zone">
         <div class="flex-item-top"></div>
         <div class="item-container" id="logo-container">

@@ -195,6 +195,13 @@
     box-shadow: 1px 2px 3px rgba(0,0,0,.5);
 }
 
+.icon-bar-black {
+    background: #000;
+    width: 35px;
+    height: 5px;
+    margin-bottom: 5px;
+}
+
 .page-nav-zone:hover .nav-large-list {
     width: 284px;
 }
