@@ -23,7 +23,7 @@
 	z-index:-4;
 	overflow:hidden;
 	background-repeat:no-repeat;
-	background:url();
+	background:url(/images/home/mobile.png);
 	-webkit-background-size:cover;
 	-moz-background-size:cover;
 	-o-background-size:cover;
@@ -60,6 +60,10 @@ svg {
 	line-height:32px;
 	position:relative;
 	top:-48px
+}
+
+#novo-svg {
+	fill:#fff;
 }
 
 .shape {
