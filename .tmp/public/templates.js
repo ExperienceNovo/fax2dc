@@ -257,7 +257,7 @@ angular.module("home/about.tpl.html", []).run(["$templateCache", function($templ
     "    <div class=\"about-container\">\n" +
     "      <div class=\"about-card\" ng-click=\"toggle_card('marketing')\" ng-class=\"{'flipped': marketing == true}\">\n" +
     "        <div class=\"front front-three\"><h2>marketing</h2></div>\n" +
-    "        <div class=\"back\"><p><strong style=\"color:#14B795\">Marketing</strong><br>Extend your influence through comprehensive, efficient, and effective strategies. Our clients often see 400% increase in social media followers after launching with NOVO. Our marketing team consists of data scientists, designers, and advertisers. <br>Tell&nbsp;us&nbsp;where&nbsp;you&nbsp;want&nbsp;to&nbsp;go.<br><strong style=\"color:#14B795\"> We'll get you there..</strong></p></div>\n" +
+    "        <div class=\"back\"><p><strong style=\"color:#14B795\">Marketing</strong><br>Extend your influence through comprehensive, efficient, and effective strategies. Our clients often see 400% increase in social media followers after launching with NOVO. Our marketing team consists of data scientists, designers, and advertisers. <br>Tell&nbsp;us&nbsp;where&nbsp;you&nbsp;want&nbsp;to&nbsp;go.<br><strong style=\"color:#14B795\"> We'll get you there.</strong></p></div>\n" +
     "      </div>\n" +
     "    </div>\n" +
     "  </div>\n" +
