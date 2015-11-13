@@ -15,6 +15,52 @@
 .blog-button{
 }
 
-.blog-post-container{
+.post-container{
+    #background-color: #14B795;
 }
 
+.header-box{
+  background-color: black;
+  width: 500px;
+  height: 150px;
+  max-width: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: -2;
+}
+
+.title-box{
+  background-color: black;
+  width: auto;
+  height: 150px;
+  max-width: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: -2;
+  padding: 2%;
+}
+
+.header-text{
+  position: relative;
+  color: white;
+  font-size: 10.2em;
+  font-family: 'Open Sans', sans-serif;
+  font-weight:800;
+  text-align: right;
+  margin-right: -1%;
+  z-index: -1;
+}
+
+.title-text{
+  position: relative;
+  color: white;
+  font-size: 6em;
+  font-family: 'Open Sans', sans-serif;
+  font-weight:700;
+  text-align: right;
+  margin-right: -1%;
+  z-index: -1;
+  top: 39%;
+}

@@ -2,7 +2,20 @@ angular.module('templates-app', ['blog-post/index.tpl.html', 'blog/index.tpl.htm
 
 angular.module("blog-post/index.tpl.html", []).run(["$templateCache", function($templateCache) {
   $templateCache.put("blog-post/index.tpl.html",
+    "<!--Specific to Blog page. Font not used elsewhere.-->\n" +
+    "<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700,800,600' rel='stylesheet' type='text/css'>\n" +
+    "\n" +
     "<div ng-controller=\"BlogPostCtrl\">\n" +
+    "    <!--Header Box-->\n" +
+    "    <div class=\"title-box\">\n" +
+    "        <div class=\"title-text\">{{post.title}}</div>\n" +
+    "    </div>\n" +
+    "\n" +
+    "    <br>\n" +
+    "    <br>\n" +
+    "    <br>\n" +
+    "    <br>\n" +
+    "\n" +
     "	<div class=\"blog-post-container\">\n" +
     "		<div style=\"height:100px;\"></div>\n" +
     "\n" +
@@ -10,9 +23,9 @@ angular.module("blog-post/index.tpl.html", []).run(["$templateCache", function($
     "			<button class=\"btn btn-primary\" ng-click=\"edit_post_toggle()\">edit</button>\n" +
     "		</div>\n" +
     "\n" +
-    "		<div class=\"post-title-container\">\n" +
+    "		<!--<div class=\"post-title-container\">\n" +
     "			<h1>{{post.title}}</h1>\n" +
-    "		</div>\n" +
+    "		</div>-->\n" +
     "\n" +
     "		<hr>\n" +
     "\n" +
@@ -47,6 +60,9 @@ angular.module("blog-post/index.tpl.html", []).run(["$templateCache", function($
 
 angular.module("blog/index.tpl.html", []).run(["$templateCache", function($templateCache) {
   $templateCache.put("blog/index.tpl.html",
+    "<!--Specific to Blog page. Font not used elsewhere.-->\n" +
+    "<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700,800,600' rel='stylesheet' type='text/css'>\n" +
+    "\n" +
     "<!--if logged in-->\n" +
     "<div style=\"height:100px;\"></div>\n" +
     "<div ng-show=\"currentUser\">\n" +
@@ -68,6 +84,11 @@ angular.module("blog/index.tpl.html", []).run(["$templateCache", function($templ
     "  </div>\n" +
     "</div>\n" +
     "<!--/if logged in-->\n" +
+    "\n" +
+    "<!--Header Box-->\n" +
+    "<div class=\"header-box\">\n" +
+    "    <div class=\"header-text\">Blog</div>\n" +
+    "</div>\n" +
     "\n" +
     "<div itemscope itemtype=\"Article\" class=\"post-list-container\">\n" +
     "  <br><br>\n" +
