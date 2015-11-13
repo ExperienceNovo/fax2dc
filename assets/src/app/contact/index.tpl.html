@@ -2,7 +2,7 @@
     .angular-google-map-container { height: 400px; box-shadow: 0 0 10px rgba(0,0,0,0.5); }
 </style>
 <div ng-include="'contact/contacthead.tpl.html'"></div>
-<div class="contact-page-container">
+<div itemscope itemtype="ContactPage" class="contact-page-container">
     <br><br>
     <div class="row contact-page-lower">
         <div class="contact-title">
@@ -41,7 +41,7 @@
                 <hr>
             </div>
             <div class="margin">
-                <form role="form" ng-submit="submitEmail(newEmail)">
+                <form itemscope itemtype="InterAction" role="form" ng-submit="submitEmail(newEmail)">
                     <div class="inputGroup">
                         <input required="" type="text" ng-model="newEmail.name"> 
                         <span class="inputBar"></span> 
@@ -58,11 +58,11 @@
                         <span class="inputBar"></span> 
                         <label>Message</label>
                     </div>
-                    <button type="submit">Submit</button>
+                    <button itemprop="RegisterAction" type="submit">Submit</button>
                 </form>
             </div>
         </div>
-        <div class="map-outter bottom-contact">
+        <div itemscope itemtype="Map" class="map-outter bottom-contact">
             <div class="gmap-container" id="gmap">
                 <ui-gmap-google-map center="map.center" zoom="map.zoom" options="options">
                     <ui-gmap-marker coords="marker1.coords" options="marker1.options" idkey="marker1.id">

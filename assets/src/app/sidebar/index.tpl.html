@@ -1,4 +1,4 @@
-<div ng-controller="SidebarCtrl">
+<div itemscope itemtype="SiteNavigationElement" ng-controller="SidebarCtrl">
     <div ng-show="sidebar_color == 'white'" class="side-bars">
         <div class="icon-bar"></div>
         <div class="icon-bar"></div>
@@ -13,7 +13,7 @@
         <div class="flex-item-top"></div>
         <div class="item-container" id="logo-container">
             <div class="list-item">
-                <div class="nav-large-list nav-logo"><img id="sidebar-logo" src="https://s3.amazonaws.com/novollc/images/novo/tri.png" style="max-width:25%"/></div>
+                <div class="nav-large-list nav-logo"><img itemscope itemtype="ImageObject" id="sidebar-logo" src="https://s3.amazonaws.com/novollc/images/novo/tri.png" style="max-width:25%"/></div>
             </div>
         </div>
         <div class="item-container">

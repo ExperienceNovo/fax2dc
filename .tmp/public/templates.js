@@ -69,10 +69,10 @@ angular.module("blog/index.tpl.html", []).run(["$templateCache", function($templ
     "</div>\n" +
     "<!--/if logged in-->\n" +
     "\n" +
-    "<div class=\"post-list-container\">\n" +
+    "<div itemscope itemtype=\"Article\" class=\"post-list-container\">\n" +
     "  <br><br>\n" +
-    "  <div class=\"post-container\" ng-repeat=\"post in posts | orderBy:'-createdAt'\">\n" +
-    "    <h1 class=\"title\"><a href=\"/blog/{{post.url_title}}\">{{post.title}}</a></h1>\n" +
+    "  <div itemprop=\"SocialMediaPosting\" class=\"post-container\" ng-repeat=\"post in posts | orderBy:'-createdAt'\">\n" +
+    "    <h1 itemprop=\"BlogPosting\" class=\"title\"><a href=\"/blog/{{post.url_title}}\">{{post.title}}</a></h1>\n" +
     "  </div>\n" +
     "  <br><br>\n" +
     "</div>\n" +
@@ -105,7 +105,7 @@ angular.module("contact/index.tpl.html", []).run(["$templateCache", function($te
     "    .angular-google-map-container { height: 400px; box-shadow: 0 0 10px rgba(0,0,0,0.5); }\n" +
     "</style>\n" +
     "<div ng-include=\"'contact/contacthead.tpl.html'\"></div>\n" +
-    "<div class=\"contact-page-container\">\n" +
+    "<div itemscope itemtype=\"ContactPage\" class=\"contact-page-container\">\n" +
     "    <br><br>\n" +
     "    <div class=\"row contact-page-lower\">\n" +
     "        <div class=\"contact-title\">\n" +
@@ -144,7 +144,7 @@ angular.module("contact/index.tpl.html", []).run(["$templateCache", function($te
     "                <hr>\n" +
     "            </div>\n" +
     "            <div class=\"margin\">\n" +
-    "                <form role=\"form\" ng-submit=\"submitEmail(newEmail)\">\n" +
+    "                <form itemscope itemtype=\"InterAction\" role=\"form\" ng-submit=\"submitEmail(newEmail)\">\n" +
     "                    <div class=\"inputGroup\">\n" +
     "                        <input required=\"\" type=\"text\" ng-model=\"newEmail.name\"> \n" +
     "                        <span class=\"inputBar\"></span> \n" +
@@ -161,11 +161,11 @@ angular.module("contact/index.tpl.html", []).run(["$templateCache", function($te
     "                        <span class=\"inputBar\"></span> \n" +
     "                        <label>Message</label>\n" +
     "                    </div>\n" +
-    "                    <button type=\"submit\">Submit</button>\n" +
+    "                    <button itemprop=\"RegisterAction\" type=\"submit\">Submit</button>\n" +
     "                </form>\n" +
     "            </div>\n" +
     "        </div>\n" +
-    "        <div class=\"map-outter bottom-contact\">\n" +
+    "        <div itemscope itemtype=\"Map\" class=\"map-outter bottom-contact\">\n" +
     "            <div class=\"gmap-container\" id=\"gmap\">\n" +
     "                <ui-gmap-google-map center=\"map.center\" zoom=\"map.zoom\" options=\"options\">\n" +
     "                    <ui-gmap-marker coords=\"marker1.coords\" options=\"marker1.options\" idkey=\"marker1.id\">\n" +
@@ -217,7 +217,7 @@ angular.module("home/about.tpl.html", []).run(["$templateCache", function($templ
     "  <div class=\"about-topping\">\n" +
     "    <div class=\"about-title\">\n" +
     "      The\n" +
-    "      <img src=\"https://s3.amazonaws.com/novollc/images/novo/logo-w.png\">\n" +
+    "      <img itemscope itemtype=\"ImageObject Brand\" src=\"https://s3.amazonaws.com/novollc/images/novo/logo-w.png\">\n" +
     "      Experience\n" +
     "    </div>\n" +
     "    <div class=\"about-desc\">\n" +
@@ -307,8 +307,8 @@ angular.module("home/contact.tpl.html", []).run(["$templateCache", function($tem
     "    <div class=\"contact-box\">\n" +
     "      <a href=\"/contact/\">\n" +
     "        <div class=\"text-fill\">\n" +
-    "          <img id=\"contact-img-desktop\" src=\"https://s3.amazonaws.com/novollc/images/home/contact.jpg\"/>\n" +
-    "          <img id=\"contact-img-mobile\" src=\"https://s3.amazonaws.com/novollc/images/home/contact-mobile.jpg\"/>\n" +
+    "          <img itemscope itemtype=\"ImageObject\" id=\"contact-img-desktop\" src=\"https://s3.amazonaws.com/novollc/images/home/contact.jpg\"/>\n" +
+    "          <img itemscope itemtype=\"ImageObject\" id=\"contact-img-mobile\" src=\"https://s3.amazonaws.com/novollc/images/home/contact-mobile.jpg\"/>\n" +
     "        </div>\n" +
     "        <svg class=\"svg-inverted-mask\" viewBox=\"0 0 1920 1080\" viewcontact=\"0 0 1920 1080\" \n" +
     "             preserveAspectRatio=\"xMidYMid slice\" xmlns=\"http://www.w3.org/2000/svg\">\n" +
@@ -332,7 +332,7 @@ angular.module("home/contact.tpl.html", []).run(["$templateCache", function($tem
 
 angular.module("home/index.tpl.html", []).run(["$templateCache", function($templateCache) {
   $templateCache.put("home/index.tpl.html",
-    "<div class=\"surface-container-home\" ng-controller=\"HomeCtrl\">\n" +
+    "<div itemscope=\"LocalBusiness\" itemtype=\"ProfessionalService\" class=\"surface-container-home\" ng-controller=\"HomeCtrl\">\n" +
     "	\n" +
     "    <div ng-include=\"'intro/index.tpl.html'\"></div>\n" +
     "\n" +
@@ -377,8 +377,8 @@ angular.module("home/portfolio.tpl.html", []).run(["$templateCache", function($t
     "    <div class=\"port-box\">\n" +
     "      <a href=\"/portfolio/\">\n" +
     "        <div class=\"text-fill\">\n" +
-    "          <img src=\"https://s3.amazonaws.com/novollc/images/home/portfolio.jpg\"></img>\n" +
-    "          <img class=\"port-mobile\" src=\"https://s3.amazonaws.com/novollc/images/home/portfolio-mobile.jpg\"></img>\n" +
+    "          <img itemscope itemtype=\"ImageObject\" src=\"https://s3.amazonaws.com/novollc/images/home/portfolio.jpg\"></img>\n" +
+    "          <img itemscope itemtype=\"ImageObject\" class=\"port-mobile\" src=\"https://s3.amazonaws.com/novollc/images/home/portfolio-mobile.jpg\"></img>\n" +
     "        </div>\n" +
     "        <svg class=\"svg-inverted-mask\" viewBox=\"0 0 1920 1080\" viewPort=\"0 0 1920 1080\" \n" +
     "             preserveAspectRatio=\"xMidYMid slice\" xmlns=\"http://www.w3.org/2000/svg\" >\n" +
@@ -516,7 +516,7 @@ angular.module("intro/index.tpl.html", []).run(["$templateCache", function($temp
     "\n" +
     "      <div class=\"box-with-text\">\n" +
     "        <div class=\"text-fill\">\n" +
-    "          <video \n" +
+    "          <video itemscope itemtype=\"VideoObject\"\n" +
     "              class=\"video\" \n" +
     "              src=\"https://s3.amazonaws.com/novollc/videos/geometry.mp4\"\n" +
     "              preload=\"auto\" \n" +
@@ -595,7 +595,7 @@ angular.module("portfolio/index.tpl.html", []).run(["$templateCache", function($
     "	} \n" +
     "</style>\n" +
     "\n" +
-    "<iframe class=\"content-iframe\" src=\"portfolio-slider/index.html\" \n" +
+    "<iframe itemscope itemtype=\"CollectionPage\" class=\"content-iframe\" src=\"portfolio-slider/index.html\"\n" +
     "		allowfullscreen \n" +
     "		align=\"middle\" \n" +
     "		frameborder=\"0\" \n" +
@@ -637,8 +637,8 @@ angular.module("portfolio/portfoliohead.tpl.html", []).run(["$templateCache", fu
     "    </svg>\n" +
     "    <div class=\"portfolio-top-box\">\n" +
     "      <div class=\"text-fill\">\n" +
-    "        <img id=\"portfolio-top-img-desktop\" src=\"/images/s1.jpg\"/>\n" +
-    "        <img id=\"portfolio-top-img-mobile\" src=\"/images/key-m.jpg\"/>\n" +
+    "        <img itemscope itemtype=\"ImageObject\" id=\"portfolio-top-img-desktop\" src=\"/images/s1.jpg\"/>\n" +
+    "        <img itemscope itemtype=\"ImageObject\" id=\"portfolio-top-img-mobile\" src=\"/images/key-m.jpg\"/>\n" +
     "      </div>\n" +
     "      <svg class=\"svg-inverted-mask\" viewBox=\"0 0 1920 1080\" viewPort=\"0 0 1920 1080\" \n" +
     "           preserveAspectRatio=\"xMidYMid slice\" xmlns=\"http://www.w3.org/2000/svg\">\n" +
@@ -710,7 +710,7 @@ angular.module("register/index.tpl.html", []).run(["$templateCache", function($t
 
 angular.module("sidebar/index.tpl.html", []).run(["$templateCache", function($templateCache) {
   $templateCache.put("sidebar/index.tpl.html",
-    "<div ng-controller=\"SidebarCtrl\">\n" +
+    "<div itemscope itemtype=\"SiteNavigationElement\" ng-controller=\"SidebarCtrl\">\n" +
     "    <div ng-show=\"sidebar_color == 'white'\" class=\"side-bars\">\n" +
     "        <div class=\"icon-bar\"></div>\n" +
     "        <div class=\"icon-bar\"></div>\n" +
@@ -725,7 +725,7 @@ angular.module("sidebar/index.tpl.html", []).run(["$templateCache", function($te
     "        <div class=\"flex-item-top\"></div>\n" +
     "        <div class=\"item-container\" id=\"logo-container\">\n" +
     "            <div class=\"list-item\">\n" +
-    "                <div class=\"nav-large-list nav-logo\"><img id=\"sidebar-logo\" src=\"https://s3.amazonaws.com/novollc/images/novo/tri.png\" style=\"max-width:25%\"/></div>\n" +
+    "                <div class=\"nav-large-list nav-logo\"><img itemscope itemtype=\"ImageObject\" id=\"sidebar-logo\" src=\"https://s3.amazonaws.com/novollc/images/novo/tri.png\" style=\"max-width:25%\"/></div>\n" +
     "            </div>\n" +
     "        </div>\n" +
     "        <div class=\"item-container\">\n" +

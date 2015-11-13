@@ -20,10 +20,10 @@
 </div>
 <!--/if logged in-->
 
-<div class="post-list-container">
+<div itemscope itemtype="Article" class="post-list-container">
   <br><br>
-  <div class="post-container" ng-repeat="post in posts | orderBy:'-createdAt'">
-    <h1 class="title"><a href="/blog/{{post.url_title}}">{{post.title}}</a></h1>
+  <div itemprop="SocialMediaPosting" class="post-container" ng-repeat="post in posts | orderBy:'-createdAt'">
+    <h1 itemprop="BlogPosting" class="title"><a href="/blog/{{post.url_title}}">{{post.title}}</a></h1>
   </div>
   <br><br>
 </div>
