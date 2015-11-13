@@ -56,5 +56,3 @@ angular.module( 'novo.blog', [
 
 
 
-
-

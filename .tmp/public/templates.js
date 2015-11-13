@@ -98,6 +98,9 @@ angular.module("blog/index.tpl.html", []).run(["$templateCache", function($templ
     "  <br><br>\n" +
     "</div>\n" +
     "\n" +
+    "<div class=\"footer-box\">\n" +
+    "    <!--scrolling blog titles and other stats (fb likes, insta followers, etc.) here.-->\n" +
+    "</div>\n" +
     "\n" +
     "<div style=\"height:100px;\"></div>");
 }]);
