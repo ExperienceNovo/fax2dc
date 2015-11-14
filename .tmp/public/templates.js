@@ -85,13 +85,15 @@ angular.module("blog/index.tpl.html", []).run(["$templateCache", function($templ
     "</div>\n" +
     "<!--/if logged in-->\n" +
     "\n" +
+    "<img itemscope itemtype=\"ImageObject\" id=\"\" class=\"blog-logo\" src=\"https://s3.amazonaws.com/novollc/images/novo/tri.png\" style=\"\"/></div>\n" +
+    "\n" +
     "<!--Header Box-->\n" +
     "<div class=\"header-box\">\n" +
     "    <div class=\"header-text\">Blog</div>\n" +
     "</div>\n" +
     "\n" +
     "<div itemscope itemtype=\"Article\" class=\"post-list-container\">\n" +
-    "  <br><br>\n" +
+    "  <br><br><br><br><br>\n" +
     "  <div itemprop=\"SocialMediaPosting\" class=\"post-container\" ng-repeat=\"post in posts | orderBy:'-createdAt'\">\n" +
     "    <h1 itemprop=\"BlogPosting\" class=\"title\"><a href=\"/blog/{{post.url_title}}\">{{post.title}}</a></h1>\n" +
     "  </div>\n" +

@@ -23,13 +23,15 @@
 </div>
 <!--/if logged in-->
 
+<img itemscope itemtype="ImageObject" id="" class="blog-logo" src="https://s3.amazonaws.com/novollc/images/novo/tri.png" style=""/></div>
+
 <!--Header Box-->
 <div class="header-box">
     <div class="header-text">Blog</div>
 </div>
 
 <div itemscope itemtype="Article" class="post-list-container">
-  <br><br>
+  <br><br><br><br><br>
   <div itemprop="SocialMediaPosting" class="post-container" ng-repeat="post in posts | orderBy:'-createdAt'">
     <h1 itemprop="BlogPosting" class="title"><a href="/blog/{{post.url_title}}">{{post.title}}</a></h1>
   </div>
