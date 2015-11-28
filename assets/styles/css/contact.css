@@ -556,9 +556,14 @@ input[type="checkbox"]:checked + .child .card__back {
     transform: rotateY(0)
 }
 
-/* media queries */
 @media only screen and (max-width: 568px) {
 .stay-connected {
     font-size: 5em;
+}
+.social-wrapper {
+    margin-top:10%;
+}
+.stay-top { 
+    font-size: 1.75em;
 }
 }

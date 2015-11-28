@@ -30,7 +30,6 @@
 	background-size:cover
 }
 
-/* new intro shit */
 svg {
 	max-width:100%;
 	max-height:100%;
@@ -148,10 +147,6 @@ svg {
 	height:0;
 }
 
-/* end intro shit */
-
-
-/* Bob */
 @-webkit-keyframes hvr-bob {
 	0% {
 		-webkit-transform:translateY(-8px);
@@ -306,9 +301,6 @@ svg {
 		zoom: 0.425;
 	}
 }
-
-
-
 
 @media only screen and (max-width: 788px) {
 	.desktop {

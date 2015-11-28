@@ -31,6 +31,6 @@
 <meta name="msapplication-config" content="images/favicons/browserconfig.xml?v=477gbg4rWN">
 <meta name="theme-color" content="#ffffff">
 
-<div ng-include="'sidebar/index.tpl.html'"></div>
+<div ng-include="'sidebar/index.tpl.html'" data-ng-view data-autoscroll></div>
 
-<div class=" no-y" ui-view="main" id="main-container" style="width:100%;margin:0px"></div>
+<div class=" no-y" ui-view="main" id="main-container" style="width:100%;margin:0px" data-ng-view data-autoscroll></div>

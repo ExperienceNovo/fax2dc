@@ -241,13 +241,13 @@ angular.module("home/about.tpl.html", []).run(["$templateCache", function($templ
   $templateCache.put("home/about.tpl.html",
     "<div class=\"about-outter\">\n" +
     "  <div class=\"about-topping\">\n" +
-    "    <div class=\"about-title\">\n" +
+    "    <div class=\"about-title\" id=\"about-title\">\n" +
     "      The\n" +
-    "      <img itemscope itemtype=\"ImageObject Brand\" src=\"https://s3.amazonaws.com/novollc/images/novo/logo-w.png\">\n" +
+    "      <img itemscope itemtype=\"ImageObject Brand\" src=\"https://s3.amazonaws.com/novollc/images/novo/logo.png\">\n" +
     "      Experience\n" +
     "    </div>\n" +
     "    <div class=\"about-desc\">\n" +
-    "      <hr style=\"margin-bottom: -45px;border-top: 1px solid #000;width: 90%;\">\n" +
+    "      <hr style=\"margin-bottom: -45px;border-top: 2px solid #fff;width: 90%;\">\n" +
     "      <hr>\n" +
     "      <p>\n" +
     "        Crafting an effective message is about communicating your vision in a way that&nbsp;will&nbsp;always&nbsp;be&nbsp;remembered.\n" +
@@ -257,10 +257,10 @@ angular.module("home/about.tpl.html", []).run(["$templateCache", function($templ
     "        Each step is tailored to your identity, because at NOVO you're&nbsp;more&nbsp;than&nbsp;just&nbsp;a&nbsp;client&nbsp;— you're&nbsp;a&nbsp;partner.\n" +
     "      </p>\n" +
     "      <hr>\n" +
-    "      <hr style=\"margin-top: -45px;border-top: 1px solid #000;width: 90%;\">\n" +
+    "      <hr style=\"margin-top: -45px;border-top: 2px solid #fff;width: 90%;\">\n" +
     "    </div>\n" +
-    "    <div class=\"about-bar\">\n" +
-    "      Let's bring your ideas to <span style=\"color:#fff\">life</span>\n" +
+    "    <div class=\"about-bar\" style=\"color:#0A0A0A;font-weight:bold\">\n" +
+    "      Let's bring your ideas to life\n" +
     "    </div>\n" +
     "  </div>\n" +
     "  <div class=\"col-md-4 about-col\">\n" +
@@ -434,11 +434,11 @@ angular.module("intro/index.tpl.html", []).run(["$templateCache", function($temp
     "        <symbol id=\"intro-desktop-text\">\n" +
     "          <text text-anchor=\"middle\"\n" +
     "                x=\"960\"  \n" +
-    "                y=\"560\"\n" +
+    "                y=\"570\"\n" +
     "                dy=\".35em\"\n" +
     "                class=\"medium-text\"\n" +
     "                >\n" +
-    "            full-stack design, development, and marketing\n" +
+    "            Creative Group\n" +
     "          </text>    \n" +
     "        </symbol>\n" +
     "        <mask id=\"intro-desktop-mask\"\n" +
@@ -562,17 +562,9 @@ angular.module("intro/index.tpl.html", []).run(["$templateCache", function($temp
     "          <use xmlns:xlink=\"http://www.w3.org/1999/xlink\" xlink:href=\"#intro-desktop-novo\" class=\"text--transparent\"></use>\n" +
     "        </svg> \n" +
     "      </div>\n" +
-    "  <!--<div class=\"continue-wrap\">\n" +
-    "        <div class=\"svg-wrapper\">\n" +
-    "          <svg height=\"60\" width=\"320\" xmlns=\"http://www.w3.org/2000/svg\">\n" +
-    "            <rect class=\"shape\" height=\"60\" width=\"320\" />\n" +
-    "          </svg>\n" +
-    "          <a ng-click=\"scrollTo('about-top')\"><div class=\"text\">Continue</div></a>\n" +
-    "        </div>\n" +
-    "      </div>-->\n" +
     "    </div>\n" +
-    "    <div class=\"intro-mobile\"></div>\n" +
-    "  </div>");
+    "  <div class=\"intro-mobile\"></div>\n" +
+    "</div>");
 }]);
 
 angular.module("login/index.tpl.html", []).run(["$templateCache", function($templateCache) {

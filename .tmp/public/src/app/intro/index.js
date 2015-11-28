@@ -12,5 +12,4 @@ angular.module( 'novo.intro', [])
 	else if (random == 3){
 		
 	}*/
-
 });

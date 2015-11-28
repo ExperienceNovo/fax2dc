@@ -19,6 +19,7 @@
     -webkit-perspective: 800px;
     -ms-perspective: 800px;
     perspective: 800px;
+    border-top: 2.5px solid #14B795;
 }
 
 .about-col {
@@ -26,7 +27,6 @@
 }
 
 .about-topping {
-    /*border-top: 3px solid #14B795;*/
     height: 100%;
     width: 100%;
 }
@@ -100,7 +100,7 @@
 }
 
 .about-card .front h2 {
-    font-family: 'Quicksand',sans-serif;
+    font-family: 'Monda',sans-serif;
     letter-spacing: 10px;
     color: #fff;
     font-size: 2em;
@@ -125,14 +125,15 @@
     text-align: left;
     font-weight: 600;
     line-height: 185%;
+    max-height: 100%;
 }
 
 .about-bar {
     font-family: 'Monda',sans-serif;
-    font-size: 1.45em;
+    font-size: 1.65em;
     font-weight: 600;
     padding: 25px;
-    background: #0A0A0A;
+    background: #fff;
     letter-spacing: 5px;
     color: #14B795;    
     text-transform: uppercase;
@@ -141,29 +142,31 @@
 .about-title {
     font-family: 'Monda',sans-serif;
     letter-spacing: 5px;
-    font-size: 2em;
+    font-size: 2.5em;
     font-weight: 600;
     color: #14B795;
-    background: #0A0A0A;
+    background: #fff;
     text-transform: uppercase;
     padding: 25px 0px 15px 0px;
+    text-shadow: 2px 2px #222;
 }
+
 .about-title img {
     height: 60px;
-    margin-top: -2px;
+    margin-top: -5px;
 }
 
 .about-desc {
     font-family:'Monda',sans-serif;
-    color: #0A0A0A;
+    color: #fff;
     width: 100%;
-    font-weight: 700;
+    font-weight: 100;
     font-size: 1.6em;
     padding: 0px 15px 0px 15px;
     line-height: 200%;
     border-top: 2.5px solid #14B795;
     border-bottom: 2.5px solid #14B795;
-    background: #fff;
+    background: #0A0A0A;
 }
 
 .about-desc hr {
@@ -295,7 +298,7 @@
 }
 
 .indicator {
-    font-family: 'Quicksand',sans-serif;
+    font-family: 'Monda',sans-serif;
     position: absolute;
     left: 0;
     bottom: 0;
@@ -363,5 +366,21 @@
     z-index: 999;
     text-align: center;
     font-weight: 300;
+}
+
+.about-title {
+    display:none;
+}
+
+.about-bar {
+    font-size: 1em;
+}
+
+.about-desc p {
+    font-size: 0.75em;
+}
+
+.about-card .back p {
+    font-size: 1.1em;
 }
 }
