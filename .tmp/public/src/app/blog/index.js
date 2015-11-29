@@ -1,0 +1,58 @@
+angular.module( 'novo.blog', [
+])
+
+.config(function config( $stateProvider ) {
+	$stateProvider.state( 'post', {
+		url: '/blog',
+		views: {
+			"main": {
+				controller: 'BlogCtrl',
+				templateUrl: 'blog/index.tpl.html'
+			}
+		},
+		resolve: {
+			posts: function(PostModel) {
+            	return PostModel.getAll().then(function(models) {
+                	return models;
+            	});
+        	}
+		}
+	});
+})
+
+.controller( 'BlogCtrl', function BlogController( $scope, $sailsSocket, lodash, titleService, config, PostModel, posts) {
+	titleService.setTitle('Blog - NOVO');
+	$scope.newPost = {};
+    $scope.posts = posts;
+    $scope.currentUser = config.currentUser;
+
+    $sailsSocket.subscribe('post', function (envelope) {
+	    switch(envelope.verb) {
+	        case 'created':
+	            $scope.posts.unshift(envelope.data);
+	            break;
+	        case 'destroyed':
+	            lodash.remove($scope.posts, {id: envelope.id});
+	            break;
+	    }
+    });
+
+    $scope.new_post_toggle = function () {
+		$scope.new_post = $scope.new_post ? false : true;
+	};
+
+	$scope.createPost = function(newPost) {
+        newPost.user = config.currentUser.id;
+        PostModel.create(newPost).then(function(model) {
+            $scope.newPost = {};
+        });
+    };
+
+});
+
+
+
+
+
+
+

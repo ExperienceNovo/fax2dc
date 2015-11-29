@@ -1,0 +1,94 @@
+.blog-input{
+ 	width:48%;
+ 	margin:0px auto;
+}
+
+.blog-input input:focus{
+ 	color:rgb(0,0,0);
+}
+
+.post-list-container{
+	margin-left:10%;
+	margin-right:10%;
+	position: relative;
+	z-index: 0;
+	overflow-7: auto;
+	top: 0%;
+	max-height: 55%;
+	padding-bottom: 5%;
+}
+
+.blog-button{
+}
+
+.post-container{
+    #background-color: #14B795;
+}
+
+.header-box{
+  background-color: black;
+  width: 500px;
+  height: 150px;
+  max-width: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 1;
+  box-shadow: 2px 2px 3px #888;
+}
+
+.title-box{
+  background-color: black;
+  width: auto;
+  height: 150px;
+  max-width: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 2;
+  padding: 2%;
+  box-shadow: 1px 1px 1px #888;
+}
+
+.header-text{
+  position: relative;
+  color: white;
+  font-size: 10.2em;
+  font-family: 'Open Sans', sans-serif;
+  font-weight:800;
+  text-align: right;
+  margin-right: -1%;
+  z-index: 1;
+}
+
+.title-text{
+  position: relative;
+  color: white;
+  font-size: 6em;
+  font-family: 'Open Sans', sans-serif;
+  font-weight:700;
+  text-align: right;
+  margin-right: -1%;
+  z-index: 2;
+  top: 39%;
+}
+
+.footer-box{
+    width: 900px;
+    height: 50px;
+    max-width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: #14B795;
+    z-index: 5;
+}
+
+.blog-logo{
+    position: absolute;
+    z-index: -1;
+    right: 0;
+    left: 65%;
+    top: 55%;
+    opacity: 0.3;
+}
