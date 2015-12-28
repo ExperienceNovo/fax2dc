@@ -1,3 +1,6 @@
+<!--Specific to Blog page. Font not used elsewhere.-->
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700,800,600' rel='stylesheet' type='text/css'>
+
 <!--if logged in-->
 <div style="height:100px;"></div>
 <div ng-show="currentUser">
@@ -20,13 +23,23 @@
 </div>
 <!--/if logged in-->
 
-<div class="post-list-container">
-  <br><br>
-  <div class="post-container" ng-repeat="post in posts | orderBy:'-createdAt'">
-    <h1 class="title"><a href="/blog/{{post.url_title}}">{{post.title}}</a></h1>
+<img itemscope itemtype="ImageObject" id="" class="blog-logo" src="https://s3.amazonaws.com/novollc/images/novo/tri.png" style=""/></div>
+
+<!--Header Box-->
+<div class="header-box">
+    <div class="header-text">Blog</div>
+</div>
+
+<div itemscope itemtype="Article" class="post-list-container">
+  <br><br><br><br><br>
+  <div itemprop="SocialMediaPosting" class="post-container" ng-repeat="post in posts | orderBy:'-createdAt'">
+    <h1 itemprop="BlogPosting" class="title"><a href="/blog/{{post.url_title}}">{{post.title}}</a></h1>
   </div>
   <br><br>
 </div>
 
+<div class="footer-box">
+    <!--scrolling blog titles and other stats (fb likes, insta followers, etc.) here.-->
+</div>
 
 <div style="height:100px;"></div>

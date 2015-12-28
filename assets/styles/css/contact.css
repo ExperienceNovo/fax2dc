@@ -180,17 +180,17 @@
 }
 
 .contact-card .front.front-one {
-    background: url(/images/util/overlay.png), url(/images/contact/nc-bw.jpg);
+    background: url(https://s3.amazonaws.com/novollc/images/util/overlay.png), url(https://s3.amazonaws.com/novollc/images/contact/nc-bw.jpg);
     background-size: cover;
 }
 
 .contact-card .front.front-two {
-    background: url(/images/util/overlay.png), url(/images/contact/chi-bw.jpg);
+    background: url(https://s3.amazonaws.com/novollc/images/util/overlay.png), url(https://s3.amazonaws.com/novollc/images/contact/chi-bw.jpg);
     background-size: cover;
 }
 
 .contact-card .front.front-three {
-    background: url(/images/util/overlay.png), url(/images/contact/pa-bw.jpg);
+    background: url(https://s3.amazonaws.com/novollc/images/util/overlay.png), url(https://s3.amazonaws.com/novollc/images/contact/pa-bw.jpg);
     background-size: cover;
 }
 
@@ -245,7 +245,7 @@
     overflow: hidden;
     cursor: default;
     height: 40vh;
-    background: url(/images/util/overlay.png), url(/images/contact/contact-top.jpg) no-repeat;
+    background: url(https://s3.amazonaws.com/novollc/images/util/overlay.png), url(https://s3.amazonaws.com/novollc/images/contact/contact-top.jpg) no-repeat;
     background-size: cover;
 }
 
@@ -556,9 +556,14 @@ input[type="checkbox"]:checked + .child .card__back {
     transform: rotateY(0)
 }
 
-/* media queries */
 @media only screen and (max-width: 568px) {
 .stay-connected {
     font-size: 5em;
+}
+.social-wrapper {
+    margin-top:10%;
+}
+.stay-top { 
+    font-size: 1.75em;
 }
 }

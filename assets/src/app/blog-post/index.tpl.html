@@ -1,4 +1,17 @@
+<!--Specific to Blog page. Font not used elsewhere.-->
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700,800,600' rel='stylesheet' type='text/css'>
+
 <div ng-controller="BlogPostCtrl">
+    <!--Header Box-->
+    <div class="title-box">
+        <div class="title-text">{{post.title}}</div>
+    </div>
+
+    <br>
+    <br>
+    <br>
+    <br>
+
 	<div class="blog-post-container">
 		<div style="height:100px;"></div>
 
@@ -6,9 +19,9 @@
 			<button class="btn btn-primary" ng-click="edit_post_toggle()">edit</button>
 		</div>
 
-		<div class="post-title-container">
+		<!--<div class="post-title-container">
 			<h1>{{post.title}}</h1>
-		</div>
+		</div>-->
 
 		<hr>
 
