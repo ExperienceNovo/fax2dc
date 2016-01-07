@@ -1,5 +1,5 @@
 /**
-* Finance.js
+* Entry.js
 *
 * @description :: TODO: You might write a short summary of how this model works and what it represents here.
 * @docs        :: http://sailsjs.org/#!documentation/models
@@ -8,10 +8,14 @@
 module.exports = {
 
 	attributes: {
-        type: {
+        title: {
             type: 'string',
             required: true,
             unique: true
+        },
+        type: {
+            type: 'string',
+            required: true
         },
         amount: {
             type: 'string',
@@ -24,7 +28,7 @@ module.exports = {
     },
 
     getAll: function() {
-        return Finance.find()
+        return Entry.find()
         .sort({createdAt: 'asc'})
         .then(function (models) {
             return [models];
@@ -32,7 +36,7 @@ module.exports = {
     },
 
     getOne: function(id) {
-        return Finance.findOne(id)
+        return Entry.findOne(id)
         .then(function (model) {
             return [model];
         });

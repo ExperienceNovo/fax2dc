@@ -2,7 +2,20 @@ angular.module('templates-app', ['blog-post/index.tpl.html', 'blog/index.tpl.htm
 
 angular.module("blog-post/index.tpl.html", []).run(["$templateCache", function($templateCache) {
   $templateCache.put("blog-post/index.tpl.html",
+    "<!--Specific to Blog page. Font not used elsewhere.-->\n" +
+    "<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700,800,600' rel='stylesheet' type='text/css'>\n" +
+    "\n" +
     "<div ng-controller=\"BlogPostCtrl\">\n" +
+    "    <!--Header Box-->\n" +
+    "    <div class=\"title-box\">\n" +
+    "        <div class=\"title-text\">{{post.title}}</div>\n" +
+    "    </div>\n" +
+    "\n" +
+    "    <br>\n" +
+    "    <br>\n" +
+    "    <br>\n" +
+    "    <br>\n" +
+    "\n" +
     "	<div class=\"blog-post-container\">\n" +
     "		<div style=\"height:100px;\"></div>\n" +
     "\n" +
@@ -10,9 +23,9 @@ angular.module("blog-post/index.tpl.html", []).run(["$templateCache", function($
     "			<button class=\"btn btn-primary\" ng-click=\"edit_post_toggle()\">edit</button>\n" +
     "		</div>\n" +
     "\n" +
-    "		<div class=\"post-title-container\">\n" +
+    "		<!--<div class=\"post-title-container\">\n" +
     "			<h1>{{post.title}}</h1>\n" +
-    "		</div>\n" +
+    "		</div>-->\n" +
     "\n" +
     "		<hr>\n" +
     "\n" +
@@ -47,6 +60,9 @@ angular.module("blog-post/index.tpl.html", []).run(["$templateCache", function($
 
 angular.module("blog/index.tpl.html", []).run(["$templateCache", function($templateCache) {
   $templateCache.put("blog/index.tpl.html",
+    "<!--Specific to Blog page. Font not used elsewhere.-->\n" +
+    "<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700,800,600' rel='stylesheet' type='text/css'>\n" +
+    "\n" +
     "<!--if logged in-->\n" +
     "<div style=\"height:100px;\"></div>\n" +
     "<div ng-show=\"currentUser\">\n" +
@@ -69,14 +85,24 @@ angular.module("blog/index.tpl.html", []).run(["$templateCache", function($templ
     "</div>\n" +
     "<!--/if logged in-->\n" +
     "\n" +
-    "<div class=\"post-list-container\">\n" +
-    "  <br><br>\n" +
-    "  <div class=\"post-container\" ng-repeat=\"post in posts | orderBy:'-createdAt'\">\n" +
-    "    <h1 class=\"title\"><a href=\"/blog/{{post.url_title}}\">{{post.title}}</a></h1>\n" +
+    "<img itemscope itemtype=\"ImageObject\" id=\"\" class=\"blog-logo\" src=\"https://s3.amazonaws.com/novollc/images/novo/tri.png\" style=\"\"/></div>\n" +
+    "\n" +
+    "<!--Header Box-->\n" +
+    "<div class=\"header-box\">\n" +
+    "    <div class=\"header-text\">Blog</div>\n" +
+    "</div>\n" +
+    "\n" +
+    "<div itemscope itemtype=\"Article\" class=\"post-list-container\">\n" +
+    "  <br><br><br><br><br>\n" +
+    "  <div itemprop=\"SocialMediaPosting\" class=\"post-container\" ng-repeat=\"post in posts | orderBy:'-createdAt'\">\n" +
+    "    <h1 itemprop=\"BlogPosting\" class=\"title\"><a href=\"/blog/{{post.url_title}}\">{{post.title}}</a></h1>\n" +
     "  </div>\n" +
     "  <br><br>\n" +
     "</div>\n" +
     "\n" +
+    "<div class=\"footer-box\">\n" +
+    "    <!--scrolling blog titles and other stats (fb likes, insta followers, etc.) here.-->\n" +
+    "</div>\n" +
     "\n" +
     "<div style=\"height:100px;\"></div>");
 }]);
@@ -105,7 +131,7 @@ angular.module("contact/index.tpl.html", []).run(["$templateCache", function($te
     "    .angular-google-map-container { height: 400px; box-shadow: 0 0 10px rgba(0,0,0,0.5); }\n" +
     "</style>\n" +
     "<div ng-include=\"'contact/contacthead.tpl.html'\"></div>\n" +
-    "<div class=\"contact-page-container\">\n" +
+    "<div itemscope itemtype=\"ContactPage\" class=\"contact-page-container\">\n" +
     "    <br><br>\n" +
     "    <div class=\"row contact-page-lower\">\n" +
     "        <div class=\"contact-title\">\n" +
@@ -144,7 +170,7 @@ angular.module("contact/index.tpl.html", []).run(["$templateCache", function($te
     "                <hr>\n" +
     "            </div>\n" +
     "            <div class=\"margin\">\n" +
-    "                <form role=\"form\" ng-submit=\"submitEmail(newEmail)\">\n" +
+    "                <form itemscope itemtype=\"InterAction\" role=\"form\" ng-submit=\"submitEmail(newEmail)\">\n" +
     "                    <div class=\"inputGroup\">\n" +
     "                        <input required=\"\" type=\"text\" ng-model=\"newEmail.name\"> \n" +
     "                        <span class=\"inputBar\"></span> \n" +
@@ -161,11 +187,11 @@ angular.module("contact/index.tpl.html", []).run(["$templateCache", function($te
     "                        <span class=\"inputBar\"></span> \n" +
     "                        <label>Message</label>\n" +
     "                    </div>\n" +
-    "                    <button type=\"submit\">Submit</button>\n" +
+    "                    <button itemprop=\"RegisterAction\" type=\"submit\">Submit</button>\n" +
     "                </form>\n" +
     "            </div>\n" +
     "        </div>\n" +
-    "        <div class=\"map-outter bottom-contact\">\n" +
+    "        <div itemscope itemtype=\"Map\" class=\"map-outter bottom-contact\">\n" +
     "            <div class=\"gmap-container\" id=\"gmap\">\n" +
     "                <ui-gmap-google-map center=\"map.center\" zoom=\"map.zoom\" options=\"options\">\n" +
     "                    <ui-gmap-marker coords=\"marker1.coords\" options=\"marker1.options\" idkey=\"marker1.id\">\n" +
@@ -215,35 +241,57 @@ angular.module("dashboard/index.tpl.html", []).run(["$templateCache", function($
   $templateCache.put("dashboard/index.tpl.html",
     "<div ng-show=\"currentUser\">\n" +
     "	<p>dashboard</p>\n" +
-    "	<p>finance</p>\n" +
+    "	<p>financial entries</p>\n" +
+    "	<button class=\"btn btn-primary blog-button\" ng-click=\"new_entry_toggle()\">+ entry</button>\n" +
+    "	<div ng-show=\"newEntryToggle\">\n" +
+    "	    <div>\n" +
+    "	      <form class=\"blog-input\" role=\"form\" ng-submit=\"createEntry(newEntry)\">\n" +
+    "	        <div class=\"form-group\">\n" +
+    "	       		<input type=\"text\" placeholder= \"entry type\" ng-model=\"newEntry.type\" class=\"form-control\" id=\"\">\n" +
+    "	         	<input type=\"text\" placeholder= \"entry title\" ng-model=\"newEntry.title\" class=\"form-control\" id=\"\">\n" +
+    "	         	<input type=\"text\" placeholder= \"entry amount\" ng-model=\"newEntry.amount\" class=\"form-control\" id=\"\">\n" +
+    "	        </div>\n" +
+    "	        <button type=\"submit\" class=\"btn btn-primary\">Submit</button>\n" +
+    "	      </form>\n" +
+    "	    </div>\n" +
+    "  	</div>\n" +
+    "  	<div class=\"entry-container\" ng-repeat=\"entry in entries\">\n" +
+    "		{{entry}}\n" +
+    "	</div>\n" +
+    "  	<br><br><br><br>\n" +
     "	<p>members</p>\n" +
-    "</div>");
+    "	<div class=\"member-container\" ng-repeat=\"member in members\">\n" +
+    "		{{member.username}}\n" +
+    "	</div>\n" +
+    "</div>\n" +
+    "\n" +
+    "");
 }]);
 
 angular.module("home/about.tpl.html", []).run(["$templateCache", function($templateCache) {
   $templateCache.put("home/about.tpl.html",
     "<div class=\"about-outter\">\n" +
     "  <div class=\"about-topping\">\n" +
-    "    <div class=\"about-title\">\n" +
+    "    <div class=\"about-title\" id=\"about-title\">\n" +
     "      The\n" +
-    "      <img src=\"images/novo/logo-w.png\">\n" +
+    "      <img itemscope itemtype=\"ImageObject Brand\" src=\"https://s3.amazonaws.com/novollc/images/novo/logo.png\">\n" +
     "      Experience\n" +
     "    </div>\n" +
     "    <div class=\"about-desc\">\n" +
-    "      <hr style=\"margin-bottom: -45px;border-top: 1px solid #000;width: 90%;\">\n" +
+    "      <hr style=\"margin-bottom: -45px;border-top: 2px solid #fff;width: 90%;\">\n" +
     "      <hr>\n" +
     "      <p>\n" +
-    "        Crafting an effective message is about delivering the right words in a way that&nbsp;will&nbsp;be&nbsp;remembered.\n" +
+    "        Crafting an effective message is about communicating your vision in a way that&nbsp;will&nbsp;always&nbsp;be&nbsp;remembered.\n" +
     "        <br>\n" +
-    "        To us, that means transforming a vision into creative solutions engineered with&nbsp;the&nbsp;latest&nbsp;technology.\n" +
+    "        To us, that means transforming a vision into creative solutions, engineered to deliver with&nbsp;the&nbsp;latest&nbsp;technology.\n" +
     "        <br>\n" +
     "        Each step is tailored to your identity, because at NOVO you're&nbsp;more&nbsp;than&nbsp;just&nbsp;a&nbsp;client&nbsp;— you're&nbsp;a&nbsp;partner.\n" +
     "      </p>\n" +
     "      <hr>\n" +
-    "      <hr style=\"margin-top: -45px;border-top: 1px solid #000;width: 90%;\">\n" +
+    "      <hr style=\"margin-top: -45px;border-top: 2px solid #fff;width: 90%;\">\n" +
     "    </div>\n" +
-    "    <div class=\"about-bar\">\n" +
-    "      Let's bring your ideas to <span style=\"color:#fff\">life</span>\n" +
+    "    <div class=\"about-bar\" style=\"color:#0A0A0A;font-weight:bold\">\n" +
+    "      Let's bring your ideas to life\n" +
     "    </div>\n" +
     "  </div>\n" +
     "  <div class=\"col-md-4 about-col\">\n" +
@@ -266,7 +314,7 @@ angular.module("home/about.tpl.html", []).run(["$templateCache", function($templ
     "    <div class=\"about-container\">\n" +
     "      <div class=\"about-card\" ng-click=\"toggle_card('marketing')\" ng-class=\"{'flipped': marketing == true}\">\n" +
     "        <div class=\"front front-three\"><h2>marketing</h2></div>\n" +
-    "        <div class=\"back\"><p><strong style=\"color:#14B795\">Marketing</strong><br>Extend your influence through comprehensive and efficient strategies. Our clients, on average, see a 500% increase in social media and domain traffic. Our marketing team is composed of experts in fields ranging from data science to content creation. <br>Tell&nbsp;us&nbsp;where&nbsp;you&nbsp;want&nbsp;to&nbsp;go.<br><strong style=\"color:#14B795\"> We'll tell you how to get there.</strong></p></div>\n" +
+    "        <div class=\"back\"><p><strong style=\"color:#14B795\">Marketing</strong><br>Extend your influence through comprehensive, efficient, and effective strategies. Our clients often see 400% increase in social media followers after launching with NOVO. Our marketing team consists of data scientists, designers, and advertisers. <br>Tell&nbsp;us&nbsp;where&nbsp;you&nbsp;want&nbsp;to&nbsp;go.<br><strong style=\"color:#14B795\"> We'll get you there.</strong></p></div>\n" +
     "      </div>\n" +
     "    </div>\n" +
     "  </div>\n" +
@@ -316,8 +364,8 @@ angular.module("home/contact.tpl.html", []).run(["$templateCache", function($tem
     "    <div class=\"contact-box\">\n" +
     "      <a href=\"/contact/\">\n" +
     "        <div class=\"text-fill\">\n" +
-    "          <img id=\"contact-img-desktop\" src=\"/images/home/contact.jpg\"/>\n" +
-    "          <img id=\"contact-img-mobile\" src=\"/images/home/contact-mobile.jpg\"/>\n" +
+    "          <img itemscope itemtype=\"ImageObject\" id=\"contact-img-desktop\" src=\"https://s3.amazonaws.com/novollc/images/home/contact.jpg\"/>\n" +
+    "          <img itemscope itemtype=\"ImageObject\" id=\"contact-img-mobile\" src=\"https://s3.amazonaws.com/novollc/images/home/contact-mobile.jpg\"/>\n" +
     "        </div>\n" +
     "        <svg class=\"svg-inverted-mask\" viewBox=\"0 0 1920 1080\" viewcontact=\"0 0 1920 1080\" \n" +
     "             preserveAspectRatio=\"xMidYMid slice\" xmlns=\"http://www.w3.org/2000/svg\">\n" +
@@ -341,7 +389,7 @@ angular.module("home/contact.tpl.html", []).run(["$templateCache", function($tem
 
 angular.module("home/index.tpl.html", []).run(["$templateCache", function($templateCache) {
   $templateCache.put("home/index.tpl.html",
-    "<div class=\"surface-container-home\" ng-controller=\"HomeCtrl\">\n" +
+    "<div itemscope=\"LocalBusiness\" itemtype=\"ProfessionalService\" class=\"surface-container-home\" ng-controller=\"HomeCtrl\">\n" +
     "	\n" +
     "    <div ng-include=\"'intro/index.tpl.html'\"></div>\n" +
     "\n" +
@@ -386,8 +434,8 @@ angular.module("home/portfolio.tpl.html", []).run(["$templateCache", function($t
     "    <div class=\"port-box\">\n" +
     "      <a href=\"/portfolio/\">\n" +
     "        <div class=\"text-fill\">\n" +
-    "          <img src=\"/images/home/portfolio.jpg\"></img>\n" +
-    "          <img class=\"port-mobile\" src=\"/images/home/portfolio-mobile.jpg\"></img>\n" +
+    "          <img itemscope itemtype=\"ImageObject\" src=\"https://s3.amazonaws.com/novollc/images/home/portfolio.jpg\"></img>\n" +
+    "          <img itemscope itemtype=\"ImageObject\" class=\"port-mobile\" src=\"https://s3.amazonaws.com/novollc/images/home/portfolio-mobile.jpg\"></img>\n" +
     "        </div>\n" +
     "        <svg class=\"svg-inverted-mask\" viewBox=\"0 0 1920 1080\" viewPort=\"0 0 1920 1080\" \n" +
     "             preserveAspectRatio=\"xMidYMid slice\" xmlns=\"http://www.w3.org/2000/svg\" >\n" +
@@ -417,7 +465,7 @@ angular.module("intro/index.tpl.html", []).run(["$templateCache", function($temp
     "        <symbol id=\"intro-desktop-text\">\n" +
     "          <text text-anchor=\"middle\"\n" +
     "                x=\"960\"  \n" +
-    "                y=\"560\"\n" +
+    "                y=\"570\"\n" +
     "                dy=\".35em\"\n" +
     "                class=\"medium-text\"\n" +
     "                >\n" +
@@ -525,9 +573,9 @@ angular.module("intro/index.tpl.html", []).run(["$templateCache", function($temp
     "\n" +
     "      <div class=\"box-with-text\">\n" +
     "        <div class=\"text-fill\">\n" +
-    "          <video \n" +
+    "          <video itemscope itemtype=\"VideoObject\"\n" +
     "              class=\"video\" \n" +
-    "              src=\"videos/geometry.mp4\" \n" +
+    "              src=\"https://s3.amazonaws.com/novollc/videos/geometry.mp4\"\n" +
     "              preload=\"auto\" \n" +
     "              autoplay=\"autoplay\" \n" +
     "              loop=\"loop\" \n" +
@@ -545,17 +593,9 @@ angular.module("intro/index.tpl.html", []).run(["$templateCache", function($temp
     "          <use xmlns:xlink=\"http://www.w3.org/1999/xlink\" xlink:href=\"#intro-desktop-novo\" class=\"text--transparent\"></use>\n" +
     "        </svg> \n" +
     "      </div>\n" +
-    "  <!--<div class=\"continue-wrap\">\n" +
-    "        <div class=\"svg-wrapper\">\n" +
-    "          <svg height=\"60\" width=\"320\" xmlns=\"http://www.w3.org/2000/svg\">\n" +
-    "            <rect class=\"shape\" height=\"60\" width=\"320\" />\n" +
-    "          </svg>\n" +
-    "          <a ng-click=\"scrollTo('about-top')\"><div class=\"text\">Continue</div></a>\n" +
-    "        </div>\n" +
-    "      </div>-->\n" +
     "    </div>\n" +
-    "    <div class=\"intro-mobile\"></div>\n" +
-    "  </div>");
+    "  <div class=\"intro-mobile\"></div>\n" +
+    "</div>");
 }]);
 
 angular.module("login/index.tpl.html", []).run(["$templateCache", function($templateCache) {
@@ -604,7 +644,7 @@ angular.module("portfolio/index.tpl.html", []).run(["$templateCache", function($
     "	} \n" +
     "</style>\n" +
     "\n" +
-    "<iframe class=\"content-iframe\" src=\"portfolio-slider/index.html\" \n" +
+    "<iframe itemscope itemtype=\"CollectionPage\" class=\"content-iframe\" src=\"portfolio-slider/index.html\"\n" +
     "		allowfullscreen \n" +
     "		align=\"middle\" \n" +
     "		frameborder=\"0\" \n" +
@@ -646,8 +686,8 @@ angular.module("portfolio/portfoliohead.tpl.html", []).run(["$templateCache", fu
     "    </svg>\n" +
     "    <div class=\"portfolio-top-box\">\n" +
     "      <div class=\"text-fill\">\n" +
-    "        <img id=\"portfolio-top-img-desktop\" src=\"/images/s1.jpg\"/>\n" +
-    "        <img id=\"portfolio-top-img-mobile\" src=\"/images/key-m.jpg\"/>\n" +
+    "        <img itemscope itemtype=\"ImageObject\" id=\"portfolio-top-img-desktop\" src=\"/images/s1.jpg\"/>\n" +
+    "        <img itemscope itemtype=\"ImageObject\" id=\"portfolio-top-img-mobile\" src=\"/images/key-m.jpg\"/>\n" +
     "      </div>\n" +
     "      <svg class=\"svg-inverted-mask\" viewBox=\"0 0 1920 1080\" viewPort=\"0 0 1920 1080\" \n" +
     "           preserveAspectRatio=\"xMidYMid slice\" xmlns=\"http://www.w3.org/2000/svg\">\n" +
@@ -719,7 +759,7 @@ angular.module("register/index.tpl.html", []).run(["$templateCache", function($t
 
 angular.module("sidebar/index.tpl.html", []).run(["$templateCache", function($templateCache) {
   $templateCache.put("sidebar/index.tpl.html",
-    "<div ng-controller=\"SidebarCtrl\">\n" +
+    "<div itemscope itemtype=\"SiteNavigationElement\" ng-controller=\"SidebarCtrl\">\n" +
     "    <div ng-show=\"sidebar_color == 'white'\" class=\"side-bars\">\n" +
     "        <div class=\"icon-bar\"></div>\n" +
     "        <div class=\"icon-bar\"></div>\n" +
@@ -734,7 +774,7 @@ angular.module("sidebar/index.tpl.html", []).run(["$templateCache", function($te
     "        <div class=\"flex-item-top\"></div>\n" +
     "        <div class=\"item-container\" id=\"logo-container\">\n" +
     "            <div class=\"list-item\">\n" +
-    "                <div class=\"nav-large-list nav-logo\"><img id=\"sidebar-logo\" src=\"/images/novo/tri.png\" style=\"max-width:25%\"/></div>\n" +
+    "                <div class=\"nav-large-list nav-logo\"><img itemscope itemtype=\"ImageObject\" id=\"sidebar-logo\" src=\"https://s3.amazonaws.com/novollc/images/novo/tri.png\" style=\"max-width:25%\"/></div>\n" +
     "            </div>\n" +
     "        </div>\n" +
     "        <div class=\"item-container\">\n" +

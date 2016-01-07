@@ -1,6 +1,7 @@
 .about-outter {
     height: 100%;
     width: 100%;
+    position: relative;
 }
 
 .about-outter * {
@@ -14,7 +15,7 @@
 
 .about-container {
     width: 100%;
-    height: 55vh;
+    height: 350px;
     position: relative;
     -webkit-perspective: 800px;
     -ms-perspective: 800px;
@@ -26,15 +27,16 @@
 }
 
 .about-topping {
-    /*border-top: 3px solid #14B795;*/
     height: 100%;
     width: 100%;
 }
 
 .about-card {
     width: 100%;
-    height: 100%;
+    height: 350px;
     position: absolute;
+    border: 1.25px solid #14B795;
+    border-top: 2.5px solid #14B795;
     -webkit-transform-style: preserve-3d;
     -o-transform-style: preserve-3d;
     -ms-transform-style: preserve-3d;
@@ -48,7 +50,7 @@
 .about-card div {
     position: absolute;
     width: 100%;
-    height: 100%;
+    height: 350px;
     -webkit-font-smoothing: antialiased;
     -webkit-transition: all .35s ease-in-out;
     transition: all .35s ease-in-out;
@@ -85,22 +87,22 @@
 }
 
 .about-card .front.front-one {
-    background: url(/images/util/overlay.png),url(/images/home/design.jpg);
+    background: url(https://s3.amazonaws.com/novollc/images/util/overlay.png),url(https://s3.amazonaws.com/novollc/images/home/design.jpg);
     background-size: cover;
 }
 
 .about-card .front.front-two {
-    background: url(/images/util/overlay.png),url(/images/home/development.jpg);
+    background: url(https://s3.amazonaws.com/novollc/images/util/overlay.png),url(https://s3.amazonaws.com/novollc/images/home/development.jpg);
     background-size: cover;
 }
 
 .about-card .front.front-three {
-    background: url(/images/util/overlay.png),url(/images/home/marketing.jpg);
+    background: url(https://s3.amazonaws.com/novollc/images/util/overlay.png),url(https://s3.amazonaws.com/novollc/images/home/marketing.jpg);
     background-size: cover;
 }
 
 .about-card .front h2 {
-    font-family: 'Quicksand',sans-serif;
+    font-family: 'Monda',sans-serif;
     letter-spacing: 10px;
     color: #fff;
     font-size: 2em;
@@ -124,15 +126,20 @@
     font-size: 1.25em;
     text-align: left;
     font-weight: 600;
-    line-height: 185%;
+    display: table-cell;
+    position: relative;
+    height: 350px;
+    vertical-align: middle;
 }
+
+//pooppppppppyyyyyyy
 
 .about-bar {
     font-family: 'Monda',sans-serif;
-    font-size: 1.45em;
+    font-size: 1.65em;
     font-weight: 600;
     padding: 25px;
-    background: #0A0A0A;
+    background: #fff;
     letter-spacing: 5px;
     color: #14B795;    
     text-transform: uppercase;
@@ -141,29 +148,31 @@
 .about-title {
     font-family: 'Monda',sans-serif;
     letter-spacing: 5px;
-    font-size: 2em;
+    font-size: 2.5em;
     font-weight: 600;
     color: #14B795;
-    background: #0A0A0A;
+    background: #fff;
     text-transform: uppercase;
     padding: 25px 0px 15px 0px;
+    text-shadow: 2px 2px #111;
 }
+
 .about-title img {
     height: 60px;
-    margin-top: -2px;
+    margin-top: -5px;
 }
 
 .about-desc {
     font-family:'Monda',sans-serif;
-    color: #0A0A0A;
+    color: #fff;
     width: 100%;
-    font-weight: 700;
+    font-weight: 100;
     font-size: 1.6em;
     padding: 0px 15px 0px 15px;
     line-height: 200%;
     border-top: 2.5px solid #14B795;
     border-bottom: 2.5px solid #14B795;
-    background: #fff;
+    background: #0A0A0A;
 }
 
 .about-desc hr {
@@ -295,7 +304,7 @@
 }
 
 .indicator {
-    font-family: 'Quicksand',sans-serif;
+    font-family: 'Monda',sans-serif;
     position: absolute;
     left: 0;
     bottom: 0;
@@ -363,5 +372,21 @@
     z-index: 999;
     text-align: center;
     font-weight: 300;
+}
+
+.about-title {
+    display:none;
+}
+
+.about-bar {
+    font-size: 1em;
+}
+
+.about-desc p {
+    font-size: 0.75em;
+}
+
+.about-card .back p {
+    font-size: 1.1em;
 }
 }

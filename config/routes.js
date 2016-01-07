@@ -71,6 +71,22 @@ module.exports.routes = {
   'post /api/post': 'PostController.create',
   'delete /api/post/:id': 'PostController.destroy',
 
+  /**
+   * Entry routes
+   */
+  'get /api/entry': 'EntryController.getAll',
+  'get /api/entry/:id': 'EntryController.getOne',
+  'post /api/entry': 'EntryController.create',
+  'delete /api/entry/:id': 'EntryController.destroy',
+
+  /**
+   * Task routes
+   */
+  'get /api/task': 'TaskController.getAll',
+  'get /api/task/:id': 'TaskController.getOne',
+  'post /api/task': 'TaskController.create',
+  'delete /api/task/:id': 'TaskController.destroy',
+
 
   // If a request to a URL doesn't match any of the custom routes above, it is matched 
   // against Sails route blueprints.  See `config/blueprints.js` for configuration options
