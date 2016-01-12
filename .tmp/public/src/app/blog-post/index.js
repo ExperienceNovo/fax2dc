@@ -41,6 +41,7 @@ angular.module( 'novo.blog-post', [
 
 	$scope.editPost = function (post) {
 		$scope.edit = $scope.edit ? false : true;
+		post.user = config.currentUser.id;
         PostModel.update(post).then(function(model) {
             $location.url('blog/' + post.url_title);
         });

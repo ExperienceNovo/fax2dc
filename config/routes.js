@@ -69,6 +69,8 @@ module.exports.routes = {
   'get /api/post/:id': 'PostController.getOne',
   'get /api/post/url/:path': 'PostController.getByUrlTitle',
   'post /api/post': 'PostController.create',
+  'post /api/post/:id': 'PostController.update',
+
   'delete /api/post/:id': 'PostController.destroy',
 
   /**

@@ -31,6 +31,24 @@ module.exports = {
 		});
 	},
 
+	update: function(req, res) {
+		var id = req.param('id');
+		var userId = req.param('user');
+
+		var model = {
+			title: req.param('title'),
+			url_title: req.param('url_title'),
+			post_content: req.param('post_content'),
+			user: userId
+		};
+
+		Post.update( {id: id}, model).exec(function afterwards(err, updated){
+		  if (err) {
+		    return;
+		  }
+		});
+	},
+
 	getByUrlTitle: function(req, res) {
 		Post.find()
 		.where({url_title: req.param('path')})
