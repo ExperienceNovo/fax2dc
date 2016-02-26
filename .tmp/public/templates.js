@@ -122,6 +122,8 @@ angular.module("contact/contacthead.tpl.html", []).run(["$templateCache", functi
     "        <a target=\"_blank\" href=\"https://www.linkedin.com/company/novo---web-design-web-development-&-online-marketing?trk=biz-companies-cym\">&#62232;</a>\n" +
     "      </div>\n" +
     "  </div>\n" +
+    "  <br>\n" +
+    "  <a href=\"mailTo:experiencenovo@gmail.com\" style=\"font-size:25px;color:#fff;font-family:'Monda',sans-serif;\">experiencenovo@gmail.com</a>\n" +
     "</div>");
 }]);
 
@@ -289,9 +291,6 @@ angular.module("home/about.tpl.html", []).run(["$templateCache", function($templ
     "      </p>\n" +
     "      <hr>\n" +
     "      <hr style=\"margin-top: -45px;border-top: 2px solid #fff;width: 90%;\">\n" +
-    "    </div>\n" +
-    "    <div class=\"about-bar\" style=\"color:#0A0A0A;font-weight:bold\">\n" +
-    "      Let's bring your ideas to life\n" +
     "    </div>\n" +
     "  </div>\n" +
     "  <div class=\"col-md-4 about-col\">\n" +
