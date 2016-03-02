@@ -31,6 +31,19 @@ module.exports = {
 		});
 	},
 
+	getByUser: function(req, res) {
+		Task.find()
+		.where({user: req.param('id')})
+		.then(function(models) {
+			Task.subscribe(req, models);
+			res.json(models);
+		})
+		.fail(function(err) {
+			res.send(404);
+		});
+	},
+
+
 	create: function (req, res) {
 		var userId = req.param('user');
 		var model = {

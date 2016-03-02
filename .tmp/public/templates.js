@@ -1,4 +1,4 @@
-angular.module('templates-app', ['blog-post/index.tpl.html', 'blog/index.tpl.html', 'contact/contacthead.tpl.html', 'contact/index.tpl.html', 'dashboard/index.tpl.html', 'home/about.tpl.html', 'home/contact.tpl.html', 'home/index.tpl.html', 'home/portfolio.tpl.html', 'intro/index.tpl.html', 'login/index.tpl.html', 'portfolio/index.tpl.html', 'portfolio/portfoliohead.tpl.html', 'register/index.tpl.html', 'sidebar/index.tpl.html']);
+angular.module('templates-app', ['blog-post/index.tpl.html', 'blog/index.tpl.html', 'contact/contacthead.tpl.html', 'contact/index.tpl.html', 'dashboard/index.tpl.html', 'home/about.tpl.html', 'home/contact.tpl.html', 'home/index.tpl.html', 'home/portfolio.tpl.html', 'intro/index.tpl.html', 'login/index.tpl.html', 'member/index.tpl.html', 'portfolio/index.tpl.html', 'portfolio/portfoliohead.tpl.html', 'register/index.tpl.html', 'sidebar/index.tpl.html']);
 
 angular.module("blog-post/index.tpl.html", []).run(["$templateCache", function($templateCache) {
   $templateCache.put("blog-post/index.tpl.html",
@@ -52,10 +52,7 @@ angular.module("blog-post/index.tpl.html", []).run(["$templateCache", function($
     "		</div>\n" +
     "	</div>\n" +
     "\n" +
-    "</div>\n" +
-    "\n" +
-    "\n" +
-    "");
+    "</div>");
 }]);
 
 angular.module("blog/index.tpl.html", []).run(["$templateCache", function($templateCache) {
@@ -242,7 +239,7 @@ angular.module("dashboard/index.tpl.html", []).run(["$templateCache", function($
     "<div ng-show=\"currentUser\">\n" +
     "	<p>dashboard</p>\n" +
     "	<p>financial entries</p>\n" +
-    "	<button class=\"btn btn-primary blog-button\" ng-click=\"new_entry_toggle()\">+ entry</button>\n" +
+    "	<button class=\"btn btn-primary blog-button\" ng-click=\"newEntryToggleFunction()\">+ entry</button>\n" +
     "	<div ng-show=\"newEntryToggle\">\n" +
     "	    <div>\n" +
     "	      <form class=\"blog-input\" role=\"form\" ng-submit=\"createEntry(newEntry)\">\n" +
@@ -258,10 +255,25 @@ angular.module("dashboard/index.tpl.html", []).run(["$templateCache", function($
     "  	<div class=\"entry-container\" ng-repeat=\"entry in entries\">\n" +
     "		{{entry}}\n" +
     "	</div>\n" +
+    "	<button class=\"btn btn-primary blog-button\" ng-click=\"newTaskToggleFunction()\">+ task</button>\n" +
+    "	<div ng-show=\"newTaskToggle\">\n" +
+    "	    <div>\n" +
+    "	      <form class=\"blog-input\" role=\"form\" ng-submit=\"createTask(newTask)\">\n" +
+    "	        <div class=\"form-group\">\n" +
+    "	       		<input type=\"text\" placeholder= \"task title\" ng-model=\"newTask.title\" class=\"form-control\" id=\"\">\n" +
+    "	         	<input type=\"text\" placeholder= \"task content\" ng-model=\"newTask.content\" class=\"form-control\" id=\"\">\n" +
+    "	        </div>\n" +
+    "	        <button type=\"submit\" class=\"btn btn-primary\">Submit</button>\n" +
+    "	      </form>\n" +
+    "	    </div>\n" +
+    "  	</div>\n" +
+    "  	 <div class=\"task-container\" ng-repeat=\"task in tasks\">\n" +
+    "		{{task}}\n" +
+    "	</div>\n" +
     "  	<br><br><br><br>\n" +
     "	<p>members</p>\n" +
     "	<div class=\"member-container\" ng-repeat=\"member in members\">\n" +
-    "		{{member.username}}\n" +
+    "		<a href=\"/member/{{member.username}}\">{{member.username}}</a>\n" +
     "	</div>\n" +
     "</div>\n" +
     "\n" +
@@ -630,6 +642,18 @@ angular.module("login/index.tpl.html", []).run(["$templateCache", function($temp
     "");
 }]);
 
+angular.module("member/index.tpl.html", []).run(["$templateCache", function($templateCache) {
+  $templateCache.put("member/index.tpl.html",
+    "<h1>{{member.username}}</h1>\n" +
+    "\n" +
+    "<p>past work</p>\n" +
+    "<p>current tasks</p>\n" +
+    "{{tasks}}\n" +
+    "<p>open payment?</p>\n" +
+    "<p>message - follow - ???</p>\n" +
+    "");
+}]);
+
 angular.module("portfolio/index.tpl.html", []).run(["$templateCache", function($templateCache) {
   $templateCache.put("portfolio/index.tpl.html",
     "<style type=\"text/css\">\n" +
@@ -742,7 +766,7 @@ angular.module("register/index.tpl.html", []).run(["$templateCache", function($t
     "            <div class=\"form-group\">\n" +
     "                <label for=\"inputFirstName3\" class=\"col-sm-2 control-label\">First Name</label>\n" +
     "                <div class=\"col-sm-10\">\n" +
-    "                    <input type=\"text\" class=\"form-control\" id=\"inputFirstName3\" name=\"first_name\" placeholder=\"First Name\" value=\"\">\n" +
+    "                    <input type=\"text\" class=\"form-control\" id=\"inputFirstName3\" name=\"firstName\" placeholder=\"First Name\" value=\"\">\n" +
     "                </div>\n" +
     "            </div>\n" +
     "            <div class=\"form-group\">\n" +

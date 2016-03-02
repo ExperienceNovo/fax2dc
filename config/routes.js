@@ -44,6 +44,7 @@ module.exports.routes = {
   'get /contact': 'HomeController.index',
   'post /contact/email': 'EmailController.send',
   'get /dashboard': 'HomeController.index',
+  'get /member/:path': 'HomeController.index',
   'get /portfolio': 'HomeController.index',
   'get /templates': 'HomeController.index',
 
@@ -60,6 +61,7 @@ module.exports.routes = {
    */
   'get /api/user': 'UserController.getAll',
   'get /api/user/:id': 'UserController.getOne',
+  'get /api/user/username/:path': 'UserController.getByUsername',
   'post /api/user': 'UserController.create',
 
   /**
@@ -70,7 +72,6 @@ module.exports.routes = {
   'get /api/post/url/:path': 'PostController.getByUrlTitle',
   'post /api/post': 'PostController.create',
   'post /api/post/:id': 'PostController.update',
-
   'delete /api/post/:id': 'PostController.destroy',
 
   /**
@@ -86,6 +87,7 @@ module.exports.routes = {
    */
   'get /api/task': 'TaskController.getAll',
   'get /api/task/:id': 'TaskController.getOne',
+  'get /api/task/user/:id': 'TaskController.getByUser',
   'post /api/task': 'TaskController.create',
   'delete /api/task/:id': 'TaskController.destroy',
 

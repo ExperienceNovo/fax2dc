@@ -10,17 +10,13 @@ module.exports = {
             required: true,
             unique: true
         },
-        first_name: {
+        firstName: {
             type: 'string',
             required: true
         },
-        message_count: {
-            type: 'number'
-        },
-        // A User can have many messages
-        posts: {
-            collection: 'post',
-            via: 'user'
+        lastName: {
+            type: 'string',
+            required: true
         },
         passports : { collection: 'Passport', via: 'user' }
     },

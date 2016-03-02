@@ -17,20 +17,23 @@ angular.module( 'novo.dashboard', [
 			entries: function(EntryModel) {
                 return EntryModel.getAll();
             },
-
+			tasks: function(TaskModel) {
+                return TaskModel.getAll();
+            },
 		}
 	});
 })
 
-.controller( 'DashboardCtrl', function DashboardController( $scope, config, $http, titleService, members, entries, EntryModel, TaskModel ) {
+.controller( 'DashboardCtrl', function DashboardController( $scope, config, $http, titleService, members, entries, tasks, EntryModel, TaskModel ) {
 	titleService.setTitle('Dashboard - NOVO');
     $scope.currentUser = config.currentUser;
     $scope.members = members;
     $scope.entries = entries;
+    $scope.tasks = tasks;
 	$scope.newEntry = {};
 	$scope.newTask = {};
 
-    $scope.new_entry_toggle = function () {
+    $scope.newEntryToggleFunction = function () {
 		$scope.newEntryToggle = $scope.newEntryToggle ? false : true;
 	};
 
@@ -41,8 +44,8 @@ angular.module( 'novo.dashboard', [
         });
     };
 
-    $scope.new_task_toggle = function () {
-		$scope.newEntryToggle = $scope.newEntryToggle ? false : true;
+    $scope.newTaskToggleFunction = function () {
+		$scope.newTaskToggle = $scope.newTaskToggle ? false : true;
 	};
 
 	$scope.createTask = function(newTask) {
