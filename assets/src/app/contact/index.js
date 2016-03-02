@@ -26,7 +26,7 @@ function(uiGmapGoogleMapApiProvider) {
 
 .controller( 'ContactCtrl', function AboutController( $scope, $http, titleService, uiGmapGoogleMapApi ) {
 	titleService.setTitle('Contact - NOVO');
-	$scope.map = {center: {latitude: 39.443659, longitude: -83.082276 }, zoom: 4 };
+	$scope.map = {center: {latitude: 39.443659, longitude: -83.082276 }, zoom: 5 };
 	$scope.options = {scrollwheel: false};
 	$scope.windowOptions = {visible: false};
     $scope.newEmail = {}

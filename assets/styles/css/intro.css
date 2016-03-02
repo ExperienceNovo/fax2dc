@@ -139,7 +139,7 @@ svg {
 }
 
 .text--transparent {
-	fill:rgba(255,255,255,0.25);
+	fill:rgba(255,255,255,0.35);
 }
 
 .svg-defs {
@@ -252,7 +252,16 @@ svg {
 
 @media only screen and (max-width: 920px) {
 	.intro-container {
-		zoom: 0.8;
+		zoom: 0.6;
+	}
+	.continue-wrap {
+		display: none;
+	}
+}
+
+@media only screen and (max-width: 920px) {
+	.intro-container {
+		zoom: 0.6;
 	}
 	.continue-wrap {
 		display: none;
@@ -261,44 +270,39 @@ svg {
 
 @media only screen and (max-width: 850px) {
 	.intro-container {
-		zoom: 0.7;
+		zoom: 0.5;
 	}
 }
 
 @media only screen and (max-width: 740px) {
 	.intro-container {
-		zoom: 0.6;
+		zoom: 0.45;
 	}
 }
 
 @media only screen and (max-width: 640px) {
 	.intro-container {
-		zoom: 0.55;
+		zoom: 0.4;
 	}
 }
 @media only screen and (max-width: 600px) {
 	.intro-container {
-		zoom: 0.5;
-	}
-}
-@media only screen and (max-width: 555px) {
-	.intro-container {
-		zoom: 0.45;
+		zoom: 0.4;
 	}
 }
 @media only screen and (max-width: 510px) {
 	.intro-container {
-		zoom: 0.4;
+		zoom: 0.35;
 	}
 }
 @media only screen and (max-width: 460px) {
 	.intro-container {
-		zoom: 0.35;
+		zoom: 0.3;
 	}
 }
 @media only screen and (max-width: 410px) {
 	.intro-container {
-		zoom: 0.325;
+		zoom: 0.25;
 	}
 }
 
