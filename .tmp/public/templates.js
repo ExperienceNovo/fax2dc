@@ -584,14 +584,6 @@ angular.module("intro/index.tpl.html", []).run(["$templateCache", function($temp
     "\n" +
     "      <div class=\"box-with-text\">\n" +
     "        <div class=\"text-fill\">\n" +
-    "          <video itemscope itemtype=\"VideoObject\"\n" +
-    "              class=\"video\" \n" +
-    "              src=\"https://s3.amazonaws.com/novollc/videos/geometry.mp4\"\n" +
-    "              preload=\"auto\" \n" +
-    "              autoplay=\"autoplay\" \n" +
-    "              loop=\"loop\" \n" +
-    "              muted=\"muted\">\n" +
-    "          </video>\n" +
     "        </div>\n" +
     "        <svg class=\"svg-inverted-mask\" viewBox=\"0 0 1920 1080\" viewPort=\"0 0 1920 1080\" \n" +
     "             preserveAspectRatio=\"xMidYMid slice\" xmlns=\"http://www.w3.org/2000/svg\">\n" +
@@ -808,23 +800,9 @@ angular.module("sidebar/index.tpl.html", []).run(["$templateCache", function($te
     "            </a>\n" +
     "        </div>\n" +
     "        <div class=\"item-container\">\n" +
-    "            <a href=\"/portfolio/\">\n" +
-    "                <div class=\"list-item\">\n" +
-    "                    <div class=\"nav-large-list\">Portfolio</div>\n" +
-    "                </div>\n" +
-    "            </a>\n" +
-    "        </div>\n" +
-    "        <div class=\"item-container\">\n" +
     "            <a href=\"/contact/\">\n" +
     "                <div class=\"list-item\">\n" +
     "                    <div class=\"nav-large-list\">Contact</div>\n" +
-    "                </div>\n" +
-    "            </a>\n" +
-    "        </div>\n" +
-    "        <div class=\"item-container\">\n" +
-    "            <a href=\"/blog/\">\n" +
-    "                <div class=\"list-item\">\n" +
-    "                    <div class=\"nav-large-list\">Blog</div>\n" +
     "                </div>\n" +
     "            </a>\n" +
     "        </div>\n" +
