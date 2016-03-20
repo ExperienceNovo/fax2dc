@@ -1,13 +1,13 @@
-angular.module( 'novo.contact', [
+angular.module( 'novo.about', [
 ])
 
 .config(function config( $stateProvider ) {
-	$stateProvider.state( 'contact', {
-		url: '/contact',
+	$stateProvider.state( 'about', {
+		url: '/about',
 		views: {
 			"main": {
 				controller: 'ContactCtrl',
-				templateUrl: 'contact/index.tpl.html'
+				templateUrl: 'about/index.tpl.html'
 			}
 		}
 	});
@@ -25,11 +25,11 @@ function(uiGmapGoogleMapApiProvider) {
 )
 
 .controller( 'ContactCtrl', function AboutController( $scope, $http, titleService, uiGmapGoogleMapApi ) {
-	titleService.setTitle('Contact - NOVO');
+	titleService.setTitle('About - NOVO');
 	$scope.map = {center: {latitude: 39.443659, longitude: -83.082276 }, zoom: 5 };
 	$scope.options = {scrollwheel: false};
 	$scope.windowOptions = {visible: false};
-    $scope.newEmail = {}
+    $scope.newEmail = {};
 
     $scope.toggle_card = function(card){
 
@@ -43,20 +43,6 @@ function(uiGmapGoogleMapApiProvider) {
             $scope.philadelphia = $scope.philadelphia ? false : true;
         }
         
-    };
-
-
-    $scope.submitEmail = function(newEmail){
-
-        console.log(newEmail);
-        $http.post("/contact/email/", newEmail).
-            success(function(data, status) {
-                $scope.newEmail = {}
-                //animate 'sent' or something like that
-            }).
-            error(function(data, status) {
-        });
-
     };
 
 

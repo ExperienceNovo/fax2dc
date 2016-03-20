@@ -38,8 +38,6 @@ module.exports.routes = {
   },
 
   'get /about': 'HomeController.index',
-  'get /blog': 'HomeController.index',
-  'get /blog/:id': 'HomeController.index',
 
   'get /contact': 'HomeController.index',
   'post /contact/email': 'EmailController.send',

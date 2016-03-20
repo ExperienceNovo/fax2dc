@@ -8,16 +8,9 @@ angular.module( 'novo', [
     'templates-app',
     'services',
     'models',
-    'novo.blog',
-    'novo.blog-post',
-    'novo.contact',
-    'novo.dashboard',
+    'novo.about',
     'novo.home',
-    'novo.intro',
-    'novo.login',
-    'novo.member',
-    'novo.portfolio',
-    'novo.register',
+    'novo.intro',,
     'novo.sidebar'
 ])
 
