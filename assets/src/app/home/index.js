@@ -13,22 +13,6 @@ angular.module( 'novo.home', [])
 })
 
 .controller( 'HomeCtrl', function HomeController( $scope, titleService, config, lodash ) {
-	titleService.setTitle('NOVO');
+	titleService.setTitle('Fax2DC');
 	$scope.currentUser = config.currentUser;
-
-	$scope.toggle_card = function(card){
-
-		if (card == 'design'){
-			$scope.design = $scope.design ? false : true;
-		}
-		else if (card == 'development'){
-			$scope.development = $scope.development ? false : true;
-		}
-		else if (card == 'marketing'){
-			$scope.marketing = $scope.marketing ? false : true;
-		}
-
-	}
-
-
 });

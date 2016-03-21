@@ -10,7 +10,7 @@ angular.module( 'novo', [
     'models',
     'novo.about',
     'novo.home',
-    'novo.intro',,
+    'novo.intro',
     'novo.sidebar'
 ])
 

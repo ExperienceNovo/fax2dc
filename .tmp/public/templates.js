@@ -2,7 +2,7 @@ angular.module('templates-app', ['about/index.tpl.html', 'home/about.tpl.html', 
 
 angular.module("about/index.tpl.html", []).run(["$templateCache", function($templateCache) {
   $templateCache.put("about/index.tpl.html",
-    "<h1>Good God the About page link finally works!</h1>");
+    "<h1>About Page</h1>");
 }]);
 
 angular.module("home/about.tpl.html", []).run(["$templateCache", function($templateCache) {
@@ -16,11 +16,7 @@ angular.module("home/about.tpl.html", []).run(["$templateCache", function($templ
     "      <hr style=\"margin-bottom: -45px;border-top: 2px solid #fff;width: 90%;\">\n" +
     "      <hr>\n" +
     "      <p>\n" +
-    "        Crafting an effective message is about communicating your vision in a way that&nbsp;will&nbsp;always&nbsp;be&nbsp;remembered.\n" +
-    "        <br>\n" +
-    "        To us, that means transforming a vision into creative solutions, engineered to deliver with&nbsp;the&nbsp;latest&nbsp;technology.\n" +
-    "        <br>\n" +
-    "        Each step is tailored to your identity, because at NOVO you're&nbsp;more&nbsp;than&nbsp;just&nbsp;a&nbsp;client&nbsp;— you're&nbsp;a&nbsp;partner.\n" +
+    "      Fax2DC is a quick and easy way to send faxes to Congress!\n" +
     "      </p>\n" +
     "      <hr>\n" +
     "      <hr style=\"margin-top: -45px;border-top: 2px solid #fff;width: 90%;\">\n" +
@@ -55,7 +51,7 @@ angular.module("intro/index.tpl.html", []).run(["$templateCache", function($temp
     "                dy=\".35em\"\n" +
     "                class=\"medium-text\"\n" +
     "                >\n" +
-    "            fax2dc is the place to be!\n" +
+    "            Fax2DC is the place to be!\n" +
     "          </text>    \n" +
     "        </symbol>\n" +
     "        <mask id=\"intro-desktop-mask\"\n" +
