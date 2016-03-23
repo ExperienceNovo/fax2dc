@@ -8,12 +8,15 @@ angular.module("about/index.tpl.html", []).run(["$templateCache", function($temp
 
 angular.module("home/index.tpl.html", []).run(["$templateCache", function($templateCache) {
   $templateCache.put("home/index.tpl.html",
-    "<div ng-app=\"form\" align=\"center\">\n" +
-    "  <div ng-controller=\"formController\">\n" +
+    "<style>\n" +
+    "  .selected {\n" +
+    "    background-color: lightblue;\n" +
+    "  }\n" +
+    "</style>\n" +
+    "\n" +
+    "<div align=\"center\">\n" +
+    "  <div ng-controller=\"HomeCtrl\">\n" +
     "  <script type=\"text/javascript\" src=\"index.js\"></script>\n" +
-    "\n" +
-    "    <h1>{{1+1}}</h1>\n" +
-    "\n" +
     "\n" +
     "    <h3>Send Fax</h3>\n" +
     "\n" +
@@ -28,13 +31,20 @@ angular.module("home/index.tpl.html", []).run(["$templateCache", function($templ
     "      </br>\n" +
     "      <input type=\"submit\" value=\"Send Fax\" />\n" +
     "    </form>\n" +
-    "    {{faxObject}}\n" +
-    "    <ul>\n" +
-    "      <li ng-repeat=\"congressMan in congressMen\">\n" +
-    "      <input type=\"checkbox\" />{{congressMan.firstName}}, {{congressMan.lastName}}, {{congressMan.state}}\n" +
-    "      </li>\n" +
-    "    </ul>\n" +
-    "  </div>\n" +
+    "    <table class='table'>\n" +
+    "     <tr>\n" +
+    "       <th><a href=\"#\" ng-click=\"sortField = 'lastName'; reverse = !reverse\">Last</a></th>\n" +
+    "       <th><a href=\"#\" ng-click=\"sortField = 'firstName'; reverse = !reverse\">First</a></th>\n" +
+    "       <th><a href=\"#\" ng-click=\"sortField = 'state'; reverse = !reverse\">State</a></th>\n" +
+    "     </tr>\n" +
+    "      Search:<input ng-model=\"query\" type=\"text\"/>\n" +
+    "     <tr ng-repeat=\"idiot in congressMen | filter:query | orderBy:sortField:reverse\" ng-click=\"idiot.selected = !idiot.selected\" ng-class=\"{'selected' : idiot.selected}\">\n" +
+    "         <td>{{idiot.lastName}}</td>\n" +
+    "         <td>{{idiot.firstName}} </td>\n" +
+    "         <td>{{idiot.state}}</td>\n" +
+    "     </tr>\n" +
+    "   </table>\n" +
+    " </div>\n" +
     "</div>");
 }]);
 

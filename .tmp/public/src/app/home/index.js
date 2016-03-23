@@ -5,7 +5,7 @@ angular.module('fax2dc.home', [])
     url: '/',
     views: {
       "main": {
-        controller: 'formCtrl',
+        controller: 'HomeCtrl',
         templateUrl: 'home/index.tpl.html'
       }
     }
@@ -13,16 +13,20 @@ angular.module('fax2dc.home', [])
 })
 
 
-.controller('formCtrl', function FormController( $scope ) {
-		titleService.setTitle('lololol');
-    $scope.monkey = 10;
+.controller('HomeCtrl', function HomeController( $scope, titleService ) {
+		titleService.setTitle('Title Service is Working');
+
+		$scope.count=0;
+  	$scope.selected = false;
+  	$scope.reverse = true;
+  	$scope.sortField = 'firstName';
 
     $scope.congressMen = [{
       firstName: 'Guy',
       lastName: 'Fieri',
       state: 'AZ'
     }, {
-      firstName: 'Jeckel',
+      firstName: 'Jeckel', 
       lastName: 'Goldbloom',
       state: 'CA'
     }, {
@@ -36,7 +40,6 @@ angular.module('fax2dc.home', [])
     }];
 
     $scope.submitFax = function() {
-      $scope.faxObject = $scope.newFax;
       // Call the send fax api.
       // Store in database.
       console.log($scope.newFax);
