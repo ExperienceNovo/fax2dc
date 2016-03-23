@@ -23,7 +23,7 @@
 	z-index:-4;
 	overflow:hidden;
 	background-repeat:no-repeat;
-	background:url(https://s3.amazonaws.com/novollc/images/home/mobile.png);
+	background:url(https://s3.amazonaws.com/fax2dcllc/images/home/mobile.png);
 	-webkit-background-size:cover;
 	-moz-background-size:cover;
 	-o-background-size:cover;
@@ -61,7 +61,7 @@ svg {
 	top:-48px
 }
 
-#novo-svg {
+#fax2dc-svg {
 	fill:#fff;
 }
 

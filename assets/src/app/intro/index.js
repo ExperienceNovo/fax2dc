@@ -1,4 +1,4 @@
-angular.module( 'novo.intro', [])
+angular.module( 'fax2dc.intro', [])
 
 .controller( 'IntroCtrl', function IntroController( $scope, $state, config ) {
 

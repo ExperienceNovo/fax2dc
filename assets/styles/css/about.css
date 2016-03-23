@@ -87,17 +87,17 @@
 }
 
 .about-card .front.front-one {
-    background: url(https://s3.amazonaws.com/novollc/images/util/overlay.png),url(https://s3.amazonaws.com/novollc/images/home/design.jpg);
+    background: url(https://s3.amazonaws.com/fax2dcllc/images/util/overlay.png),url(https://s3.amazonaws.com/fax2dcllc/images/home/design.jpg);
     background-size: cover;
 }
 
 .about-card .front.front-two {
-    background: url(https://s3.amazonaws.com/novollc/images/util/overlay.png),url(https://s3.amazonaws.com/novollc/images/home/development.jpg);
+    background: url(https://s3.amazonaws.com/fax2dcllc/images/util/overlay.png),url(https://s3.amazonaws.com/fax2dcllc/images/home/development.jpg);
     background-size: cover;
 }
 
 .about-card .front.front-three {
-    background: url(https://s3.amazonaws.com/novollc/images/util/overlay.png),url(https://s3.amazonaws.com/novollc/images/home/marketing.jpg);
+    background: url(https://s3.amazonaws.com/fax2dcllc/images/util/overlay.png),url(https://s3.amazonaws.com/fax2dcllc/images/home/marketing.jpg);
     background-size: cover;
 }
 

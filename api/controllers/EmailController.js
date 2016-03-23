@@ -9,7 +9,7 @@ module.exports = {
 		var transporter = nodemailer.createTransport({
 		    service: 'Gmail',
 		    auth: {
-		        user: 'experienceNOVO@gmail.com', //new email bc new pass --- yeah
+		        user: 'experienceFax2DC@gmail.com', //new email bc new pass --- yeah
 		        pass: 'four4guys'
 		    }
 		});
@@ -17,7 +17,7 @@ module.exports = {
 		// setup e-mail data with unicode symbols
 		var mailOptions = {
 		    from: from, // sender address
-		    to: 'experienceNOVO@gmail.com', // list of receivers
+		    to: 'experienceFax2DC@gmail.com', // list of receivers
 		    subject: name + ' <'+from+'>', // Subject line
 		    text: message // plaintext body
 		};
@@ -35,12 +35,12 @@ module.exports = {
 
 		/*
 		var data = {
-        	recipientName: "NOVO",
+        	recipientName: "Fax2DC",
         	senderName: name
     	};
     	var options = {
 			from: 'troverman@gmail.com',
-        	to: "experienceNOVO@gmail.com",
+        	to: "experienceFax2DC@gmail.com",
         	subject: name,
         	html: 'message'
       	};

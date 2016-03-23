@@ -1,42 +1,39 @@
-angular.module('templates-app', ['about/index.tpl.html', 'home/about.tpl.html', 'home/index.tpl.html', 'intro/index.tpl.html', 'sidebar/index.tpl.html']);
+angular.module('templates-app', ['about/index.tpl.html', 'home/index.tpl.html', 'intro/index.tpl.html', 'sidebar/index.tpl.html']);
 
 angular.module("about/index.tpl.html", []).run(["$templateCache", function($templateCache) {
   $templateCache.put("about/index.tpl.html",
-    "<h1>About Page</h1>");
-}]);
-
-angular.module("home/about.tpl.html", []).run(["$templateCache", function($templateCache) {
-  $templateCache.put("home/about.tpl.html",
-    "<div class=\"about-outter\">\n" +
-    "  <div class=\"about-topping\">\n" +
-    "    <div class=\"about-title\" id=\"about-title\">\n" +
-    "      Stick it to the man, man.\n" +
-    "    </div>\n" +
-    "    <div class=\"about-desc\">\n" +
-    "      <hr style=\"margin-bottom: -45px;border-top: 2px solid #fff;width: 90%;\">\n" +
-    "      <hr>\n" +
-    "      <p>\n" +
-    "      Fax2DC is a quick and easy way to send faxes to Congress!\n" +
-    "      </p>\n" +
-    "      <hr>\n" +
-    "      <hr style=\"margin-top: -45px;border-top: 2px solid #fff;width: 90%;\">\n" +
-    "    </div>\n" +
-    "  </div>\n" +
-    "</div>\n" +
+    "<h1>test test test ok saving</h1>\n" +
     "");
 }]);
 
 angular.module("home/index.tpl.html", []).run(["$templateCache", function($templateCache) {
   $templateCache.put("home/index.tpl.html",
-    "<div itemscope=\"LocalBusiness\" itemtype=\"ProfessionalService\" class=\"surface-container-home\" ng-controller=\"HomeCtrl\">\n" +
-    "	\n" +
-    "    <div ng-include=\"'intro/index.tpl.html'\"></div>\n" +
+    "<div ng-app=\"form\" align=\"center\">\n" +
+    "  <div ng-controller=\"formController\">\n" +
     "\n" +
-    "    <div ng-include=\"'home/about.tpl.html'\"></div>\n" +
+    "    <h1>{{title}}</h1>\n" +
     "\n" +
-    "</div>\n" +
+    "    <h3>Send Fax</h3>\n" +
     "\n" +
-    "");
+    "    <form id=\"faxForm\" ng-submit=\"submitFax()\">\n" +
+    "      <label>Name</label><br>\n" +
+    "      <input type=\"text\" ng-model=\"newFax.name\" /><br>\n" +
+    "      <label>Email</label><br>\n" +
+    "      <input type=\"email\" ng-model=\"newFax.email\" />\n" +
+    "      <br>\n" +
+    "      <label>Message</label><br>\n" +
+    "      <textarea type=\"text\" rows=\"10\" cols=\"50\" ng-model=\"newFax.message\"></textarea>\n" +
+    "      </br>\n" +
+    "      <input type=\"submit\" value=\"Send Fax\" />\n" +
+    "    </form>\n" +
+    "    {{faxObject}}\n" +
+    "    <ul>\n" +
+    "      <li ng-repeat=\"congressMan in congressMen\">\n" +
+    "      <input type=\"checkbox\" />{{congressMan.firstName}}, {{congressMan.lastName}}, {{congressMan.state}}\n" +
+    "      </li>\n" +
+    "    </ul>\n" +
+    "  </div>\n" +
+    "</div>");
 }]);
 
 angular.module("intro/index.tpl.html", []).run(["$templateCache", function($templateCache) {
@@ -65,7 +62,7 @@ angular.module("intro/index.tpl.html", []).run(["$templateCache", function($temp
     "          <use xlink:href=\"#intro-desktop-text\"\n" +
     "               class=\"mask__text\"\n" +
     "               ></use>\n" +
-    "          <use xlink:href=\"#intro-desktop-novo\" />\n" +
+    "          <use xlink:href=\"#intro-desktop-fax2dc\" />\n" +
     "        </mask>\n" +
     "      </svg>\n" +
     "\n" +
@@ -80,7 +77,7 @@ angular.module("intro/index.tpl.html", []).run(["$templateCache", function($temp
     "            mask=\"url(#intro-desktop-mask)\"\n" +
     "            class=\"shape--fill\"/>\n" +
     "          <use xmlns:xlink=\"http://www.w3.org/1999/xlink\" xlink:href=\"#intro-desktop-text\" class=\"text--transparent\"></use>\n" +
-    "          <use xmlns:xlink=\"http://www.w3.org/1999/xlink\" xlink:href=\"#intro-desktop-novo\" class=\"text--transparent\"></use>\n" +
+    "          <use xmlns:xlink=\"http://www.w3.org/1999/xlink\" xlink:href=\"#intro-desktop-fax2dc\" class=\"text--transparent\"></use>\n" +
     "        </svg> \n" +
     "      </div>\n" +
     "    </div>\n" +

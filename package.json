@@ -2,7 +2,7 @@
   "name": "1.0.0",
   "private": true,
   "version": "0.0.0",
-  "description": "NOVO LLC",
+  "description": "Fax2DC LLC",
   "keywords": [],
   "dependencies": {
     "bcryptjs": "~2.1.0",
@@ -45,13 +45,13 @@
   "main": "app.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/NovoExperience/NOVO.git"
+    "url": "git+https://github.com/NovoExperience/Fax2DC.git"
   },
-  "author": "NOVO",
+  "author": "Fax2DC",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/NovoExperience/NOVO/issues"
+    "url": "https://github.com/NovoExperience/Fax2DC/issues"
   },
-  "homepage": "https://github.com/NovoExperience/NOVO#readme",
+  "homepage": "https://github.com/NovoExperience/Fax2DC#readme",
   "devDependencies": {}
 }

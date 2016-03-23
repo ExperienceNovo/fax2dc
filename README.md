@@ -1,6 +1,6 @@
-# NOVO #
+# Fax2DC #
 
-The new novo site.
+The new fax2dc site.
 
 equipped with:
 

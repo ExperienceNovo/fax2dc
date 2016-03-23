@@ -1,4 +1,4 @@
-angular.module( 'novo.sidebar', [
+angular.module( 'fax2dc.sidebar', [
 ])
 
 .controller( 'SidebarCtrl', function SidebarController( $scope, $state, $location, $rootScope, config ) {

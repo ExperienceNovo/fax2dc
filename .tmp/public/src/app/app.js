@@ -1,4 +1,4 @@
-angular.module( 'novo', [
+angular.module( 'fax2dc', [
     'ui.router',
     'sails.io',
     'angularMoment',
@@ -8,10 +8,10 @@ angular.module( 'novo', [
     'templates-app',
     'services',
     'models',
-    'novo.about',
-    'novo.home',
-    'novo.intro',
-    'novo.sidebar'
+    'fax2dc.about',
+    'fax2dc.home',
+    'fax2dc.intro',
+    'fax2dc.sidebar'
 ])
 
 .config( function myAppConfig ( $stateProvider, $urlRouterProvider, $locationProvider ) {

@@ -1,8 +1,26 @@
-<div itemscope="LocalBusiness" itemtype="ProfessionalService" class="surface-container-home" ng-controller="HomeCtrl">
-	
-    <div ng-include="'intro/index.tpl.html'"></div>
+<div ng-app="form" align="center">
+  <div ng-controller="formController">
 
-    <div ng-include="'home/about.tpl.html'"></div>
+    <h1>{{title}}</h1>
 
+    <h3>Send Fax</h3>
+
+    <form id="faxForm" ng-submit="submitFax()">
+      <label>Name</label><br>
+      <input type="text" ng-model="newFax.name" /><br>
+      <label>Email</label><br>
+      <input type="email" ng-model="newFax.email" />
+      <br>
+      <label>Message</label><br>
+      <textarea type="text" rows="10" cols="50" ng-model="newFax.message"></textarea>
+      </br>
+      <input type="submit" value="Send Fax" />
+    </form>
+    {{faxObject}}
+    <ul>
+      <li ng-repeat="congressMan in congressMen">
+      <input type="checkbox" />{{congressMan.firstName}}, {{congressMan.lastName}}, {{congressMan.state}}
+      </li>
+    </ul>
+  </div>
 </div>
-

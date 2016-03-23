@@ -534,7 +534,7 @@
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="DefaultHtmlFileTemplate" value="Html5" />
-    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file:///Files/Coding Stuff/Web/NOVO/Site/assets/styles/css/sidebar.css" />
+    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file:///Files/Coding Stuff/Web/Fax2DC/Site/assets/styles/css/sidebar.css" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">

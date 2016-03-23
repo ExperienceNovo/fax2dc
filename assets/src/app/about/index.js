@@ -1,4 +1,4 @@
-angular.module( 'novo.about', [
+angular.module( 'fax2dc.about', [
 ])
 
 .config(function config( $stateProvider ) {
@@ -25,7 +25,7 @@ function(uiGmapGoogleMapApiProvider) {
 )
 
 .controller( 'ContactCtrl', function AboutController( $scope, $http, titleService, uiGmapGoogleMapApi ) {
-	titleService.setTitle('About - NOVO');
+	titleService.setTitle('About - Fax2DC');
 	$scope.map = {center: {latitude: 39.443659, longitude: -83.082276 }, zoom: 5 };
 	$scope.options = {scrollwheel: false};
 	$scope.windowOptions = {visible: false};
@@ -53,7 +53,7 @@ function(uiGmapGoogleMapApiProvider) {
 			longitude: -87.6883857
 		},
 		options: {
-			icon:'/images/novo/tri30.png'
+			icon:'/images/fax2dc/tri30.png'
 		}
     };
 
@@ -64,7 +64,7 @@ function(uiGmapGoogleMapApiProvider) {
 			longitude: -83.9250825
 		},
 		options: {
-			icon:'/images/novo/tri30.png'
+			icon:'/images/fax2dc/tri30.png'
 		}
     };
 
@@ -75,7 +75,7 @@ function(uiGmapGoogleMapApiProvider) {
 			longitude: -79.0392909
 		},
 		options: {
-			icon:'/images/novo/tri30.png'
+			icon:'/images/fax2dc/tri30.png'
 		}
     };
 
@@ -86,7 +86,7 @@ function(uiGmapGoogleMapApiProvider) {
 			longitude: -75.1180329
 		},
 		options: {
-			icon:'/images/novo/tri30.png'
+			icon:'/images/fax2dc/tri30.png'
 		}
     };
 
