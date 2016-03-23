@@ -8,12 +8,6 @@ angular.module("about/index.tpl.html", []).run(["$templateCache", function($temp
 
 angular.module("home/index.tpl.html", []).run(["$templateCache", function($templateCache) {
   $templateCache.put("home/index.tpl.html",
-    "<style>\n" +
-    "  .selected {\n" +
-    "    background-color: lightblue;\n" +
-    "  }\n" +
-    "</style>\n" +
-    "\n" +
     "<div align=\"center\">\n" +
     "  <div ng-controller=\"HomeCtrl\">\n" +
     "  <script type=\"text/javascript\" src=\"index.js\"></script>\n" +
