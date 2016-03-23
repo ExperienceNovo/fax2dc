@@ -17,8 +17,6 @@ angular.module( 'fax2dc', [
 .config( function myAppConfig ( $stateProvider, $urlRouterProvider, $locationProvider ) {
 
     $urlRouterProvider.when('/about/', '/about');
-    $urlRouterProvider.when('/contact/', '/contact');
-    $urlRouterProvider.when('/portfolio/', '/portfolio');
 
     $urlRouterProvider.otherwise(function ($injector, $location) {
         if ($location.$$url === '/') {

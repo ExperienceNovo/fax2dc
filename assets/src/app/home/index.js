@@ -5,23 +5,17 @@ angular.module('fax2dc.home', [])
     url: '/',
     views: {
       "main": {
-        controller: 'HomeCtrl',
+        controller: 'formCtrl',
         templateUrl: 'home/index.tpl.html'
       }
     }
   });
 })
 
-.controller('HomeCtrl', function HomeController($scope) {
-  titleService.setTitle('Fax2DC');
-  $scope.currentUser = config.currentUser;
-  $scope.form = document.createElement("FORM");
-});
 
-var app = angular.module('form', []);
-  app.controller('formController', function($scope) {
-
-    $scope.title = "Fax2DC";
+.controller('formCtrl', function FormController( $scope ) {
+		titleService.setTitle('lololol');
+    $scope.monkey = 10;
 
     $scope.congressMen = [{
       firstName: 'Guy',

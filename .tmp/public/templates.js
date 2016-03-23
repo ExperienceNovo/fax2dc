@@ -10,8 +10,10 @@ angular.module("home/index.tpl.html", []).run(["$templateCache", function($templ
   $templateCache.put("home/index.tpl.html",
     "<div ng-app=\"form\" align=\"center\">\n" +
     "  <div ng-controller=\"formController\">\n" +
+    "  <script type=\"text/javascript\" src=\"index.js\"></script>\n" +
     "\n" +
-    "    <h1>{{title}}</h1>\n" +
+    "    <h1>{{1+1}}</h1>\n" +
+    "\n" +
     "\n" +
     "    <h3>Send Fax</h3>\n" +
     "\n" +
