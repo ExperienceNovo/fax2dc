@@ -1,5 +1,4 @@
-angular.module( 'fax2dc.home' , [
-])
+angular.module( 'fax2dc.home' , [])
 
 .config(function config( $stateProvider ) {
     $stateProvider.state('home', {
@@ -13,7 +12,8 @@ angular.module( 'fax2dc.home' , [
     });
 })
 
-.controller('HomeCtrl', function HomeController( $scope, titleService ) {
+
+.controller('HomeCtrl', function HomeController( $scope, config, FaxModel, $stateParams, $location, titleService) {
 	titleService.setTitle('Fax2DC');
 
 	$scope.count=0;
@@ -35,13 +35,13 @@ angular.module( 'fax2dc.home' , [
         firstName: 'Jeckel',
         lastName: 'Goldbloom',
         state: 'CA',
-    }, 
+    },
     {
       	party: "Hos",
         firstName: 'Hey',
         lastName: 'Guys',
         state: 'HI',
-    }, 
+    },
     {
       	party: "Hos",
         firstName: 'Whats',
@@ -54,32 +54,22 @@ angular.module( 'fax2dc.home' , [
         var selectedCongressMen = $scope.congressMen.filter(function(val, ind, arr) {
             return val.hasOwnProperty('selected') && val.selected === true;
         });
-        $scope.newFax.sendTo = selectedCongressMen;
+        $scope.newFax.legislatorList = selectedCongressMen;
 
         //Store in database.
         //Call the send fax api.
-        //FaxModel.create($scope.newFax).then(function(){
+        console.log($scope.newFax)
+        FaxModel.create($scope.newFax).then(function(){
             //reinitialize
             //$scope.name = "";
             //$scope.email = "";
             //$scope.message = "";
-        //});
+        });
 
-        console.log($scope.newFax);
-        //reinitialize
-        $scope.name = "";
-        $scope.email = "";
-        $scope.message = "";
+        //  console.log($scope.newFax);
+        // //reinitialize
+        // $scope.name = "";
+        // $scope.email = "";
+        // $scope.message = "";
     };
 });
-
-
-
-
-
-
-
-
-
-
-
