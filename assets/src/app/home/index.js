@@ -21,48 +21,40 @@ angular.module('fax2dc.home', [])
   	$scope.reverse = true;
   	$scope.sortField = 'firstName';
 
-  	
-
-
-
     $scope.congressMen = [{
     	party: "Bros",
       firstName: 'Guy',
       lastName: 'Fieri',
       state: 'AZ',
-      selected: false 
     }, {
     	party: "Bros",
-      firstName: 'Jeckel', 
+      firstName: 'Jeckel',
       lastName: 'Goldbloom',
       state: 'CA',
-      selected: false 
     }, {
     	party: "Hos",
       firstName: 'Hey',
       lastName: 'Guys',
       state: 'HI',
-      selected: false 
     }, {
     	party: "Hos",
       firstName: 'Whats',
       lastName: 'Hecking',
       state: 'UP',
-      selected: false 
     }];
 
     $scope.submitFax = function() {
       // Call the send fax api.
       // Store in database.
+      var selectedIdiots = $scope.congressMen.filter(function(val, ind, arr) {
+        return val.hasOwnProperty('selected') && val.selected === true;
+      });
+      $scope.newFax.sendTo = selectedIdiots;
+
       console.log($scope.newFax);
+
       $scope.name = "";
       $scope.email = "";
       $scope.message = "";
-    };
-    $scope.consoleSelected = function() {
-    var selectedIdiots = $scope.congressMen.filter(function(val, ind, arr) {
-      return val.hasOwnProperty('selected') && val.selected === true;
-    });
-    console.log(selectedIdiots);
-  };  
-  });
+  };
+});
