@@ -10,39 +10,39 @@ angular.module("home/index.tpl.html", []).run(["$templateCache", function($templ
   $templateCache.put("home/index.tpl.html",
     "<div align=\"center\">\n" +
     "  <div ng-controller=\"HomeCtrl\">\n" +
-    "  <script type=\"text/javascript\" src=\"index.js\"></script>\n" +
+    "    <script type=\"text/javascript\" src=\"index.js\"></script>\n" +
     "\n" +
     "    <h3>Send Fax</h3>\n" +
     "\n" +
-    "    <form id=\"faxForm\" ng-submit=\"submitFax()\">\n" +
-    "      <label>Name</label><br>\n" +
-    "      <input type=\"text\" ng-model=\"newFax.name\" /><br>\n" +
-    "      <label>Email</label><br>\n" +
-    "      <input type=\"email\" ng-model=\"newFax.email\" />\n" +
-    "      <br>\n" +
-    "      <label>Message</label><br>\n" +
-    "      <textarea type=\"text\" rows=\"10\" cols=\"50\" ng-model=\"newFax.message\"></textarea>\n" +
-    "      </br>\n" +
-    "      <input type=\"submit\" value=\"Send Fax\" />\n" +
-    "    </form>\n" +
     "    <table class='table'>\n" +
-    "     <tr>\n" +
+    "      <tr>\n" +
     "       <th><a href=\"#\" ng-click=\"sortField = 'lastName'; reverse = !reverse\">Last</a></th>\n" +
     "       <th><a href=\"#\" ng-click=\"sortField = 'firstName'; reverse = !reverse\">First</a></th>\n" +
     "       <th><a href=\"#\" ng-click=\"sortField = 'state'; reverse = !reverse\">State</a></th>\n" +
     "       <th><a href=\"#\" ng-click=\"sortField = 'party'; reverse = !reverse\">Party</a></th>\n" +
     "     </tr>\n" +
-    "      Search:<input ng-model=\"query\" type=\"text\"/>\n" +
-    "     <tr ng-repeat=\"idiot in congressMen | filter:query | orderBy:sortField:reverse\" ng-click=\"idiot.selected = !idiot.selected\" ng-class=\"{'selected' : idiot.selected}\">\n" +
-    "         <td>{{idiot.lastName}}</td>\n" +
-    "         <td>{{idiot.firstName}} </td>\n" +
-    "         <td>{{idiot.state}}</td>\n" +
-    "         <td>{{idiot.party}}</td>\n" +
+    "      <label>Search:</label>\n" +
+    "      <input ng-model=\"query\" type=\"text\"/>\n" +
+    "    <tr ng-repeat=\"idiot in congressMen | filter:query | orderBy:sortField:reverse\" ng-click=\"idiot.selected = !idiot.selected\" ng-class=\"{'selected' : idiot.selected}\">\n" +
+    "       <td>{{idiot.lastName}}</td>\n" +
+    "       <td>{{idiot.firstName}} </td>\n" +
+    "       <td>{{idiot.state}}</td>\n" +
+    "       <td>{{idiot.party}}</td>\n" +
     "     </tr>\n" +
     "   </table>\n" +
-    "   <button id='consoleSelected' ng-click=\"consoleSelected()\">console selected</button>\n" +
-    " </div>\n" +
-    "</div>");
+    "\n" +
+    "   <form id=\"faxForm\" ng-submit=\"submitFax()\">\n" +
+    "      <label>Name</label><br>\n" +
+    "      <input type=\"text\" ng-model=\"newFax.name\" /><br>\n" +
+    "      <label>Email</label><br>\n" +
+    "      <input type=\"email\" ng-model=\"newFax.email\" /><br>\n" +
+    "      <label>Message</label><br>\n" +
+    "      <textarea type=\"text\" rows=\"10\" cols=\"50\" ng-model=\"newFax.message\"></textarea></br>\n" +
+    "      <input type=\"submit\" value=\"Send Fax\" />\n" +
+    "    </form>\n" +
+    "  </div>\n" +
+    "</div>\n" +
+    "");
 }]);
 
 angular.module("intro/index.tpl.html", []).run(["$templateCache", function($templateCache) {
