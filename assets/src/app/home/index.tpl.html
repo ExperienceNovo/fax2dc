@@ -1,34 +1,35 @@
 <div align="center">
-  <div ng-controller="HomeCtrl">
-    <script type="text/javascript" src="index.js"></script>
+    <img src="images/capitol.jpg">
 
+    <br><br>
     <h3>Send Fax</h3>
-
     <table class='table'>
-      <tr>
-       <th><a href="#" ng-click="sortField = 'lastName'; reverse = !reverse">Last</a></th>
-       <th><a href="#" ng-click="sortField = 'firstName'; reverse = !reverse">First</a></th>
-       <th><a href="#" ng-click="sortField = 'state'; reverse = !reverse">State</a></th>
-       <th><a href="#" ng-click="sortField = 'party'; reverse = !reverse">Party</a></th>
-     </tr>
-      <label>Search:</label>
-      <input ng-model="query" type="text"/>
-    <tr ng-repeat="congressMan in congressMen | filter:query | orderBy:sortField:reverse" ng-click="congressMan.selected = !congressMan.selected" ng-class="{'selected' : congressMan.selected}">
-       <td>{{congressMan.lastName}}</td>
-       <td>{{congressMan.firstName}} </td>
-       <td>{{congressMan.state}}</td>
-       <td>{{congressMan.party}}</td>
-     </tr>
-   </table>
+        <tr>
+            <th><a href="#" ng-click="sortField = 'lastName'; reverse = !reverse">Last</a></th>
+            <th><a href="#" ng-click="sortField = 'firstName'; reverse = !reverse">First</a></th>
+            <th><a href="#" ng-click="sortField = 'state'; reverse = !reverse">State</a></th>
+            <th><a href="#" ng-click="sortField = 'party'; reverse = !reverse">Party</a></th>
+        </tr>
+        <label>Search:</label>
+        <input ng-model="query" type="text"/>
+        <tr ng-repeat="congressMan in congressMen | filter:query | orderBy:sortField:reverse" ng-click="congressMan.selected = !congressMan.selected" ng-class="{'selected' : congressMan.selected}">
+            <td>{{congressMan.lastName}}</td>
+            <td>{{congressMan.firstName}} </td>
+            <td>{{congressMan.state}}</td>
+            <td>{{congressMan.party}}</td>
+        </tr>
+    </table>
 
-   <form id="faxForm" ng-submit="submitFax()">
-      <label>Name</label><br>
-      <input type="text" ng-model="newFax.name" /><br>
-      <label>Email</label><br>
-      <input type="email" ng-model="newFax.email" /><br>
-      <label>Message</label><br>
-      <textarea type="text" rows="10" cols="50" ng-model="newFax.message"></textarea></br>
-      <input type="submit" value="Send Fax" />
+    <form id="faxForm" ng-submit="submitFax()">
+        <label>Name</label><br>
+        <input type="text" ng-model="newFax.name" /><br>
+        <label>Email</label><br>
+        <input type="email" ng-model="newFax.email" /><br>
+        <label>Message</label><br>
+        <textarea type="text" rows="10" cols="50" ng-model="newFax.message"></textarea></br>
+        <input type="submit" value="Send Fax" />
     </form>
-  </div>
+    <br><br>
+    
+    <img src="images/congress.jpg">
 </div>

@@ -1,11 +1,7 @@
 # Fax2DC #
 
-The new fax2dc site.
+fax your representatives in congress 
 
-equipped with:
-
-1. Login Portal
-2. Blog Api
-3. Angular Frontend
-
-runnnig on sails.js
+https://fax2dc.herokuapp.com
+http://www.fax2dc.com
+http://www.faxtodc.com

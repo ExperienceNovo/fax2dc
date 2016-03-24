@@ -2,45 +2,50 @@ angular.module('templates-app', ['about/index.tpl.html', 'home/index.tpl.html', 
 
 angular.module("about/index.tpl.html", []).run(["$templateCache", function($templateCache) {
   $templateCache.put("about/index.tpl.html",
-    "<h1>test test test ok saving</h1>\n" +
-    "");
+    "<h1>Fax2DC</h1>\n" +
+    "\n" +
+    "<p>Grassroots lobbying is a key to political change.</p><br>\n" +
+    "<p>Mail is slow, email is ignored, but a fax is quick, physical and easy.</p><br>\n" +
+    "\n" +
+    "<img src=\"images/congress.jpg\">");
 }]);
 
 angular.module("home/index.tpl.html", []).run(["$templateCache", function($templateCache) {
   $templateCache.put("home/index.tpl.html",
     "<div align=\"center\">\n" +
-    "  <div ng-controller=\"HomeCtrl\">\n" +
-    "    <script type=\"text/javascript\" src=\"index.js\"></script>\n" +
+    "    <img src=\"images/capitol.jpg\">\n" +
     "\n" +
+    "    <br><br>\n" +
     "    <h3>Send Fax</h3>\n" +
-    "\n" +
     "    <table class='table'>\n" +
-    "      <tr>\n" +
-    "       <th><a href=\"#\" ng-click=\"sortField = 'lastName'; reverse = !reverse\">Last</a></th>\n" +
-    "       <th><a href=\"#\" ng-click=\"sortField = 'firstName'; reverse = !reverse\">First</a></th>\n" +
-    "       <th><a href=\"#\" ng-click=\"sortField = 'state'; reverse = !reverse\">State</a></th>\n" +
-    "       <th><a href=\"#\" ng-click=\"sortField = 'party'; reverse = !reverse\">Party</a></th>\n" +
-    "     </tr>\n" +
-    "      <label>Search:</label>\n" +
-    "      <input ng-model=\"query\" type=\"text\"/>\n" +
-    "    <tr ng-repeat=\"congressMan in congressMen | filter:query | orderBy:sortField:reverse\" ng-click=\"congressMan.selected = !congressMan.selected\" ng-class=\"{'selected' : congressMan.selected}\">\n" +
-    "       <td>{{congressMan.lastName}}</td>\n" +
-    "       <td>{{congressMan.firstName}} </td>\n" +
-    "       <td>{{congressMan.state}}</td>\n" +
-    "       <td>{{congressMan.party}}</td>\n" +
-    "     </tr>\n" +
-    "   </table>\n" +
+    "        <tr>\n" +
+    "            <th><a href=\"#\" ng-click=\"sortField = 'lastName'; reverse = !reverse\">Last</a></th>\n" +
+    "            <th><a href=\"#\" ng-click=\"sortField = 'firstName'; reverse = !reverse\">First</a></th>\n" +
+    "            <th><a href=\"#\" ng-click=\"sortField = 'state'; reverse = !reverse\">State</a></th>\n" +
+    "            <th><a href=\"#\" ng-click=\"sortField = 'party'; reverse = !reverse\">Party</a></th>\n" +
+    "        </tr>\n" +
+    "        <label>Search:</label>\n" +
+    "        <input ng-model=\"query\" type=\"text\"/>\n" +
+    "        <tr ng-repeat=\"congressMan in congressMen | filter:query | orderBy:sortField:reverse\" ng-click=\"congressMan.selected = !congressMan.selected\" ng-class=\"{'selected' : congressMan.selected}\">\n" +
+    "            <td>{{congressMan.lastName}}</td>\n" +
+    "            <td>{{congressMan.firstName}} </td>\n" +
+    "            <td>{{congressMan.state}}</td>\n" +
+    "            <td>{{congressMan.party}}</td>\n" +
+    "        </tr>\n" +
+    "    </table>\n" +
     "\n" +
-    "   <form id=\"faxForm\" ng-submit=\"submitFax()\">\n" +
-    "      <label>Name</label><br>\n" +
-    "      <input type=\"text\" ng-model=\"newFax.name\" /><br>\n" +
-    "      <label>Email</label><br>\n" +
-    "      <input type=\"email\" ng-model=\"newFax.email\" /><br>\n" +
-    "      <label>Message</label><br>\n" +
-    "      <textarea type=\"text\" rows=\"10\" cols=\"50\" ng-model=\"newFax.message\"></textarea></br>\n" +
-    "      <input type=\"submit\" value=\"Send Fax\" />\n" +
+    "    <form id=\"faxForm\" ng-submit=\"submitFax()\">\n" +
+    "        <label>Name</label><br>\n" +
+    "        <input type=\"text\" ng-model=\"newFax.name\" /><br>\n" +
+    "        <label>Email</label><br>\n" +
+    "        <input type=\"email\" ng-model=\"newFax.email\" /><br>\n" +
+    "        <label>Message</label><br>\n" +
+    "        <textarea type=\"text\" rows=\"10\" cols=\"50\" ng-model=\"newFax.message\"></textarea></br>\n" +
+    "        <input type=\"submit\" value=\"Send Fax\" />\n" +
     "    </form>\n" +
-    "  </div>\n" +
+    "    <br><br>\n" +
+    "    \n" +
+    "    <img src=\"images/congress.jpg\">\n" +
     "</div>\n" +
     "");
 }]);

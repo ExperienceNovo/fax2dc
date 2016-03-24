@@ -45,13 +45,13 @@
   "main": "app.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/NovoExperience/Fax2DC.git"
+    "url": "git+https://github.com/ExperienceNOVO/Fax2DC.git"
   },
   "author": "Fax2DC",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/NovoExperience/Fax2DC/issues"
+    "url": "https://github.com/ExperienceNOVO/Fax2DC/issues"
   },
-  "homepage": "https://github.com/NovoExperience/Fax2DC#readme",
+  "homepage": "https://github.com/ExperienceNOVO/Fax2DC#readme",
   "devDependencies": {}
 }

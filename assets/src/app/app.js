@@ -15,9 +15,7 @@ angular.module( 'fax2dc', [
 ])
 
 .config( function myAppConfig ( $stateProvider, $urlRouterProvider, $locationProvider ) {
-
     $urlRouterProvider.when('/about/', '/about');
-
     $urlRouterProvider.otherwise(function ($injector, $location) {
         if ($location.$$url === '/') {
             window.location = '/';
@@ -27,9 +25,7 @@ angular.module( 'fax2dc', [
             window.location = $location.$$absUrl;
         }
     });
-
     $locationProvider.html5Mode(true);
-
 })
 
 .run( function run () {
@@ -37,10 +33,6 @@ angular.module( 'fax2dc', [
 })
 
 .controller( 'AppCtrl', function AppCtrl ( $scope, config, $rootScope ) {
-    config.currentUser = window.currentUser; 
-    $scope.scrollTo = function(div) {
-    $location.hash('about-top');
-    $anchorScroll();
-    }
+    config.currentUser = window.currentUser;
 });
 
