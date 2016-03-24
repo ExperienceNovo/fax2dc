@@ -21,7 +21,7 @@
 module.exports.connections = {
 
   productionMongoHqDb: {
-    adapter: 'sails-local',
+    adapter: 'sails-disk',
   }
 
 };
