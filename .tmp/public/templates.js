@@ -23,11 +23,11 @@ angular.module("home/index.tpl.html", []).run(["$templateCache", function($templ
     "     </tr>\n" +
     "      <label>Search:</label>\n" +
     "      <input ng-model=\"query\" type=\"text\"/>\n" +
-    "    <tr ng-repeat=\"idiot in congressMen | filter:query | orderBy:sortField:reverse\" ng-click=\"idiot.selected = !idiot.selected\" ng-class=\"{'selected' : idiot.selected}\">\n" +
-    "       <td>{{idiot.lastName}}</td>\n" +
-    "       <td>{{idiot.firstName}} </td>\n" +
-    "       <td>{{idiot.state}}</td>\n" +
-    "       <td>{{idiot.party}}</td>\n" +
+    "    <tr ng-repeat=\"congressMan in congressMen | filter:query | orderBy:sortField:reverse\" ng-click=\"congressMan.selected = !congressMan.selected\" ng-class=\"{'selected' : congressMan.selected}\">\n" +
+    "       <td>{{congressMan.lastName}}</td>\n" +
+    "       <td>{{congressMan.firstName}} </td>\n" +
+    "       <td>{{congressMan.state}}</td>\n" +
+    "       <td>{{congressMan.party}}</td>\n" +
     "     </tr>\n" +
     "   </table>\n" +
     "\n" +

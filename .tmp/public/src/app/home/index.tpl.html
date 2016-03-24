@@ -13,11 +13,11 @@
      </tr>
       <label>Search:</label>
       <input ng-model="query" type="text"/>
-    <tr ng-repeat="idiot in congressMen | filter:query | orderBy:sortField:reverse" ng-click="idiot.selected = !idiot.selected" ng-class="{'selected' : idiot.selected}">
-       <td>{{idiot.lastName}}</td>
-       <td>{{idiot.firstName}} </td>
-       <td>{{idiot.state}}</td>
-       <td>{{idiot.party}}</td>
+    <tr ng-repeat="congressMan in congressMen | filter:query | orderBy:sortField:reverse" ng-click="congressMan.selected = !congressMan.selected" ng-class="{'selected' : congressMan.selected}">
+       <td>{{congressMan.lastName}}</td>
+       <td>{{congressMan.firstName}} </td>
+       <td>{{congressMan.state}}</td>
+       <td>{{congressMan.party}}</td>
      </tr>
    </table>
 

@@ -12,7 +12,6 @@ angular.module('fax2dc.home', [])
   });
 })
 
-
 .controller('HomeCtrl', function HomeController( $scope, titleService ) {
 		titleService.setTitle('Title Service is Working');
 
@@ -45,16 +44,16 @@ angular.module('fax2dc.home', [])
 
     $scope.submitFax = function() {
 
-      var selectedIdiots = $scope.congressMen.filter(function(val, ind, arr) {
+      var selectedCongressMen = $scope.congressMen.filter(function(val, ind, arr) {
         return val.hasOwnProperty('selected') && val.selected === true;
       });
-      $scope.newFax.sendTo = selectedIdiots;
+      $scope.newFax.sendTo = selectedCongressMen;
 
       // Call the send fax api.
       // Store in database.
       console.log($scope.newFax);
 
-      //reinitialize 
+      //reinitialize
       $scope.name = "";
       $scope.email = "";
       $scope.message = "";
