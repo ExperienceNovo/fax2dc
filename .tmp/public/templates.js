@@ -30,14 +30,17 @@ angular.module("home/index.tpl.html", []).run(["$templateCache", function($templ
     "       <th><a href=\"#\" ng-click=\"sortField = 'lastName'; reverse = !reverse\">Last</a></th>\n" +
     "       <th><a href=\"#\" ng-click=\"sortField = 'firstName'; reverse = !reverse\">First</a></th>\n" +
     "       <th><a href=\"#\" ng-click=\"sortField = 'state'; reverse = !reverse\">State</a></th>\n" +
+    "       <th><a href=\"#\" ng-click=\"sortField = 'party'; reverse = !reverse\">Party</a></th>\n" +
     "     </tr>\n" +
     "      Search:<input ng-model=\"query\" type=\"text\"/>\n" +
     "     <tr ng-repeat=\"idiot in congressMen | filter:query | orderBy:sortField:reverse\" ng-click=\"idiot.selected = !idiot.selected\" ng-class=\"{'selected' : idiot.selected}\">\n" +
     "         <td>{{idiot.lastName}}</td>\n" +
     "         <td>{{idiot.firstName}} </td>\n" +
     "         <td>{{idiot.state}}</td>\n" +
+    "         <td>{{idiot.party}}</td>\n" +
     "     </tr>\n" +
     "   </table>\n" +
+    "   <button id='consoleSelected' ng-click=\"consoleSelected()\">console selected</button>\n" +
     " </div>\n" +
     "</div>");
 }]);

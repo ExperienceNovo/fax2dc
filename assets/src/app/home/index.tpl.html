@@ -20,13 +20,16 @@
        <th><a href="#" ng-click="sortField = 'lastName'; reverse = !reverse">Last</a></th>
        <th><a href="#" ng-click="sortField = 'firstName'; reverse = !reverse">First</a></th>
        <th><a href="#" ng-click="sortField = 'state'; reverse = !reverse">State</a></th>
+       <th><a href="#" ng-click="sortField = 'party'; reverse = !reverse">Party</a></th>
      </tr>
       Search:<input ng-model="query" type="text"/>
      <tr ng-repeat="idiot in congressMen | filter:query | orderBy:sortField:reverse" ng-click="idiot.selected = !idiot.selected" ng-class="{'selected' : idiot.selected}">
          <td>{{idiot.lastName}}</td>
          <td>{{idiot.firstName}} </td>
          <td>{{idiot.state}}</td>
+         <td>{{idiot.party}}</td>
      </tr>
    </table>
+   <button id='consoleSelected' ng-click="consoleSelected()">console selected</button>
  </div>
 </div>
