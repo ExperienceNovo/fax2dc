@@ -13,7 +13,7 @@ angular.module( 'fax2dc.home' , [
     });
 })
 
-.controller('HomeCtrl', function HomeController( $scope, titleService ) {
+.controller('HomeCtrl', function HomeController( $scope, titleService, FaxModel ) {
 	titleService.setTitle('Fax2DC');
 
 	$scope.count=0;
@@ -58,12 +58,12 @@ angular.module( 'fax2dc.home' , [
 
         //Store in database.
         //Call the send fax api.
-        //FaxModel.create($scope.newFax).then(function(){
+        FaxModel.create($scope.newFax).then(function(){
             //reinitialize
             //$scope.name = "";
             //$scope.email = "";
             //$scope.message = "";
-        //});
+        });
 
         console.log($scope.newFax);
         //reinitialize

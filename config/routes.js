@@ -50,6 +50,7 @@ module.exports.routes = {
   'get /api/user/username/:path': 'UserController.getByUsername',
   'post /api/user': 'UserController.create',
 
+
   /**
    * Post routes
    */
