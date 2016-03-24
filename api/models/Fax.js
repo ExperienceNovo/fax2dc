@@ -8,47 +8,45 @@
 module.exports = {
 
 	attributes: {
-        title: {
+				name: {
             type: 'string',
             required: true,
-            unique: true
         },
-        post_content: {
+        email: {
+            type: 'string',
+            required: true,
+        },
+				fax_content: {
             type: 'string',
             required: true
         },
-        url_title: {
-            type: 'string',
-            required: true,
-            unique: true
-        },
-        user: {
-            model: 'user',
+        legislators: {
+            type: 'array',
             required: true
         }
     },
 
-    afterCreate: function (post, next) {
-        // set message.user = to appropriate user model
-        User.getOne(post.user)
-        .spread(function(user) {
-            post.user = user;
-            next(null, post);
-        });
-    },
+    // afterCreate: function (post, next) {
+    //     // set message.user = to appropriate user model
+    //     User.getOne(post.user)
+    //     .spread(function(user) {
+    //         post.user = user;
+    //         next(null, post);
+    //     });
+    // },
 
-    getAll: function() {
-        return Post.find()
-        .sort({createdAt: 'asc'})
-        .then(function (models) {
-            return [models];
-        });
-    },
-
-    getOne: function(id) {
-        return Post.findOne(id)
-        .then(function (model) {
-            return [model];
-        });
-    }
+    // getAll: function() {
+    //     return Post.find()
+    //     .sort({createdAt: 'asc'})
+    //     .then(function (models) {
+    //         return [models];
+    //     });
+    // },
+		//
+    // getOne: function(id) {
+    //     return Post.findOne(id)
+    //     .then(function (model) {
+    //         return [model];
+    //     });
+    // }
 };

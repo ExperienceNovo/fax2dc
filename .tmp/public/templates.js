@@ -13,7 +13,7 @@ angular.module("about/index.tpl.html", []).run(["$templateCache", function($temp
 angular.module("home/index.tpl.html", []).run(["$templateCache", function($templateCache) {
   $templateCache.put("home/index.tpl.html",
     "<div align=\"center\">\n" +
-    "    <img src=\"images/capitol.jpg\">\n" +
+    "    <!--img src=\"images/capitol.jpg\"-->\n" +
     "\n" +
     "    <br><br>\n" +
     "    <h3>Send Fax</h3>\n" +
@@ -38,13 +38,13 @@ angular.module("home/index.tpl.html", []).run(["$templateCache", function($templ
     "        <label>Name</label><br>\n" +
     "        <input type=\"text\" ng-model=\"newFax.name\" /><br>\n" +
     "        <label>Email</label><br>\n" +
-    "        <input type=\"email\" ng-model=\"newFax.email\" /><br>\n" +
+    "        <input type=\"text\" ng-model=\"newFax.email\" /><br> <!--check type-->\n" +
     "        <label>Message</label><br>\n" +
-    "        <textarea type=\"text\" rows=\"10\" cols=\"50\" ng-model=\"newFax.message\"></textarea></br>\n" +
+    "        <textarea type=\"text\" rows=\"10\" cols=\"50\" ng-model=\"newFax.fax_content\"></textarea></br>\n" +
     "        <input type=\"submit\" value=\"Send Fax\" />\n" +
     "    </form>\n" +
     "    <br><br>\n" +
-    "    \n" +
+    "\n" +
     "    <img src=\"images/congress.jpg\">\n" +
     "</div>\n" +
     "");

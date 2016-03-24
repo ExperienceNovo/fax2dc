@@ -53,8 +53,8 @@ module.exports.routes = {
   /**
    * Fax routes
    */
-  'get /api/fax': 'FaxController.getAll',
-  'get /api/fax/:id': 'FaxController.getOne',
+  //'get /api/fax': 'FaxController.getAll',
+  //'get /api/fax/:id': 'FaxController.getOne',
   'post /api/fax': 'FaxController.create',
 
   /**
