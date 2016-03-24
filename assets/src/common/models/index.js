@@ -1,4 +1,5 @@
 angular.module('models', [
 	'models.post',
-	'models.user'
+	'models.user',
+	'models.fax'
 ]);

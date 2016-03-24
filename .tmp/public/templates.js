@@ -5,7 +5,7 @@ angular.module("about/index.tpl.html", []).run(["$templateCache", function($temp
     "<h1>Fax2DC</h1>\n" +
     "\n" +
     "<p>Grassroots lobbying is a key to political change.</p><br>\n" +
-    "<p>Mail is slow, email is ignored, but a fax is quick, physical and easy.</p><br>\n" +
+    "<p>Mail is slow, email is ignored, but a fax is quick, physical, and easy.</p><br>\n" +
     "\n" +
     "<img src=\"images/congress.jpg\">");
 }]);

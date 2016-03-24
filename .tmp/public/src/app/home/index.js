@@ -35,13 +35,13 @@ angular.module( 'fax2dc.home' , [
         firstName: 'Jeckel',
         lastName: 'Goldbloom',
         state: 'CA',
-    }, 
+    },
     {
       	party: "Hos",
         firstName: 'Hey',
         lastName: 'Guys',
         state: 'HI',
-    }, 
+    },
     {
       	party: "Hos",
         firstName: 'Whats',
@@ -58,12 +58,12 @@ angular.module( 'fax2dc.home' , [
 
         //Store in database.
         //Call the send fax api.
-        //FaxModel.create($scope.newFax).then(function(){
+        FaxModel.create($scope.newFax).then(function(){
             //reinitialize
-            //$scope.name = "";
-            //$scope.email = "";
-            //$scope.message = "";
-        //});
+            $scope.name = "";
+            $scope.email = "";
+            $scope.message = "";
+        });
 
         console.log($scope.newFax);
         //reinitialize
@@ -72,14 +72,3 @@ angular.module( 'fax2dc.home' , [
         $scope.message = "";
     };
 });
-
-
-
-
-
-
-
-
-
-
-

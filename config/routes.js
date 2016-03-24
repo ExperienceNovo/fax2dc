@@ -51,6 +51,13 @@ module.exports.routes = {
   'post /api/user': 'UserController.create',
 
   /**
+   * Fax routes
+   */
+  'get /api/fax': 'FaxController.getAll',
+  'get /api/fax/:id': 'FaxController.getOne',
+  'post /api/fax': 'FaxController.create',
+
+  /**
    * Post routes
    */
   'get /api/post': 'PostController.getAll',
@@ -60,7 +67,7 @@ module.exports.routes = {
   'post /api/post/:id': 'PostController.update',
   'delete /api/post/:id': 'PostController.destroy',
 
-  // If a request to a URL doesn't match any of the custom routes above, it is matched 
+  // If a request to a URL doesn't match any of the custom routes above, it is matched
   // against Sails route blueprints.  See `config/blueprints.js` for configuration options
   // and examples.
 
