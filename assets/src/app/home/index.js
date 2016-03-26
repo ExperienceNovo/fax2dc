@@ -26,111 +26,32 @@ var homeCtrl = app.controller('HomeCtrl', function HomeController( $scope, confi
   	$scope.sortField = 'state';
 
     $scope.legislators = legislators;
-    console.log($scope.legislators)
+    //console.log($scope.legislators)
 
-    // $scope.congressMen = [{
-    //   	party: "Bros",
-    //     firstName: 'Guy',
-    //     lastName: 'Fieri',
-    //     state: 'AZ',
-    // },
-    // {
-    //   	party: "Bros",
-    //     firstName: 'Jeckel',
-    //     lastName: 'Goldbloom',
-    //     state: 'CA',
-    // },
-    // {
-    //   	party: "Hos",
-    //     firstName: 'Hey',
-    //     lastName: 'Guys',
-    //     state: 'HI',
-    // },
-    // {
-    //   	party: "Bros",
-    //     firstName: 'Jeckel',
-    //     lastName: 'Goldbloom',
-    //     state: 'CA',
-    // },
-    // {
-    //   	party: "Hos",
-    //     firstName: 'Hey',
-    //     lastName: 'Guys',
-    //     state: 'HI',
-    // },
-    // {
-    //   	party: "Bros",
-    //     firstName: 'Jeckel',
-    //     lastName: 'Goldbloom',
-    //     state: 'CA',
-    // },
-    // {
-    //   	party: "Hos",
-    //     firstName: 'Hey',
-    //     lastName: 'Guys',
-    //     state: 'HI',
-    // },
-    // {
-    //   	party: "Bros",
-    //     firstName: 'Jeckel',
-    //     lastName: 'Goldbloom',
-    //     state: 'CA',
-    // },
-    // {
-    //   	party: "Hos",
-    //     firstName: 'Hey',
-    //     lastName: 'Guys',
-    //     state: 'HI',
-    // },
-    // {
-    //   	party: "Bros",
-    //     firstName: 'Jeckel',
-    //     lastName: 'Goldbloom',
-    //     state: 'CA',
-    // },
-    // {
-    //   	party: "Hos",
-    //     firstName: 'Hey',
-    //     lastName: 'Guys',
-    //     state: 'HI',
-    // },
-    // {
-    //   	party: "Hos",
-    //     firstName: 'Whats',
-    //     lastName: 'Hecking',
-    //     state: 'UP',
-    // }];
 
     $scope.submitFax = function() {
 
-        var selectedCongressMen = $scope.congressMen.filter(function(val, ind, arr) {
+        var selectedLegislators = $scope.legislators.filter(function(val, ind, arr) {
             return val.hasOwnProperty('selected') && val.selected === true;
         });
-        $scope.newFax.legislatorList = selectedCongressMen;
+        $scope.newFax.legislatorList = selectedLegislators;
 
-        //Store in database.
-        //Call the send fax api.
         console.log($scope.newFax)
 
-        //console.log('attempting to get legislators...')
-
-        //console.log(LegislatorModel.getAll())
-
         FaxModel.create($scope.newFax).then(function(){
+
             //reinitialize
             //$scope.name = "";
             //$scope.email = "";
             //$scope.message = "";
-        });
 
-        //  console.log($scope.newFax);
-        // //reinitialize
-        // $scope.name = "";
-        // $scope.email = "";
-        // $scope.message = "";
+        });
     };
 
     $scope.changeSorting = function(field) {
+      //
+      // LOGIC to set SORTFIELD and REVERSE
+      //
       alert(field);
     }
 });

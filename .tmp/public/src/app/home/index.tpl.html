@@ -1,28 +1,8 @@
 <div align="center">
     <!--img src="images/capitol.jpg"-->
-    <style>
-    .table-fixed thead {
-      width: 100%;
-    }
-    .table-fixed tbody {
-      height: 230px;
-      overflow-y: auto;
-      width: 100%;
-    }
-    .table-fixed thead, .table-fixed tbody, .table-fixed tr, .table-fixed td, .table-fixed th {
-      display: block;
-    }
-    .table-fixed tbody td, .table-fixed thead > tr> th {
-      float: left;
-      border-bottom-width: 0;
-    }
-
-    </style>
-
 
     <label>Search:</label>
     <input ng-model="query" type="text"/>
-
 
     <br><br>
     <h3>Send Fax</h3>
@@ -42,7 +22,7 @@
                 </tr>
               </thead>
               <tbody>
-                <tr ng-repeat="legislator in legislators | filter:query | orderBy:sortField:reverse" ng-click="legislator.selected = !legislator.selected" ng-class="{'selected' : legislator.selected}">
+                <tr ng-repeat="legislator in legislators | filter:query | orderBy:sortField:reverse" ng-click="legislator.selecteded = !legislator.selecteded" ng-class="{'selecteded' : legislator.selecteded}">
                     <td class="col-xs-4">{{legislator.last_name}}</td>
                     <td class="col-xs-4">{{legislator.first_name}} </td>
                     <td class="col-xs-2">{{legislator.state}}</td>
