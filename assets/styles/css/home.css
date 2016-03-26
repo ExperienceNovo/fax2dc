@@ -16,7 +16,11 @@
 .table-fixed tbody td, .table-fixed thead > tr> th {
 	float: left;
 	border-bottom-width: 0;
+	background-color: inherit;
 }
-.selecteded {
-		font-style: italic;
+.table > tbody > tr > td {
+	border-top-color: rgb(150, 150, 150);
+}
+.selected {
+		font-weight: bolder;
 }

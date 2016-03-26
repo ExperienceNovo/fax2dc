@@ -49,10 +49,14 @@ var homeCtrl = app.controller('HomeCtrl', function HomeController( $scope, confi
     };
 
     $scope.changeSorting = function(field) {
-      //
-      // LOGIC to set SORTFIELD and REVERSE
-      //
-      alert(field);
+      $scope.reverse = $scope.sortField === field ? !$scope.reverse : false;
+      $scope.sortField = field;
+    }
+
+    $scope.getClass = function(legislator) {
+      var klass = legislator.selected ? 'selected' : '';
+      return klass += legislator.party === 'D' ? ' info'
+                    : legislator.party === 'R' ? ' danger' : ' warning';
     }
 });
 

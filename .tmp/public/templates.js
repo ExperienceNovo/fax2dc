@@ -12,54 +12,71 @@ angular.module("about/index.tpl.html", []).run(["$templateCache", function($temp
 
 angular.module("home/index.tpl.html", []).run(["$templateCache", function($templateCache) {
   $templateCache.put("home/index.tpl.html",
-    "<div align=\"center\">\n" +
-    "    <!--img src=\"images/capitol.jpg\"-->\n" +
+    "<!--img src=\"images/capitol.jpg\"-->\n" +
     "\n" +
-    "    <label>Search:</label>\n" +
-    "    <input ng-model=\"query\" type=\"text\"/>\n" +
-    "\n" +
-    "    <br><br>\n" +
     "    <h3>Send Fax</h3>\n" +
     "    <div class=\"container\">\n" +
+    "\n" +
     "      <div class=\"row\">\n" +
     "        <div class=\"panel panel-default\">\n" +
     "          <div class=\"panel-heading\">\n" +
     "            <h3>Legislators</h3>\n" +
+    "            <form>\n" +
+    "              <div class=\"form-group\">\n" +
+    "                <label>Search:</label>\n" +
+    "                <input ng-model=\"query\" class=\"form-control\" type=\"text\"/>\n" +
+    "              </div>\n" +
+    "            </form>\n" +
     "          </div>\n" +
     "          <table class='table table-fixed'>\n" +
     "            <thead>\n" +
-    "                <tr>\n" +
-    "                  <th class=\"col-xs-4\"><a href=\"#\" ng-click=\"changeSorting('last_name')\">Last</a></th>\n" +
-    "                  <th class=\"col-xs-4\"><a href=\"#\" ng-click=\"sortField = 'first_name'; reverse = !reverse\">First</a></th>\n" +
-    "                  <th class=\"col-xs-2\"><a href=\"#\" ng-click=\"sortField = 'state'; reverse = !reverse\">State</a></th>\n" +
-    "                  <th class=\"col-xs-2\"><a href=\"#\" ng-click=\"sortField = 'party'; reverse = !reverse\">Party</a></th>\n" +
-    "                </tr>\n" +
-    "              </thead>\n" +
+    "              <tr>\n" +
+    "                <th class=\"col-xs-4\"><a href=\"#\" ng-click=\"changeSorting('last_name')\">Last</a></th>\n" +
+    "                <th class=\"col-xs-4\"><a href=\"#\" ng-click=\"changeSorting('first_name')\">First</a></th>\n" +
+    "                <th class=\"col-xs-2\"><a href=\"#\" ng-click=\"changeSorting('state')\">State</a></th>\n" +
+    "                <th class=\"col-xs-2\"><a href=\"#\" ng-click=\"changeSorting('party')\">Party</a></th>\n" +
+    "              </tr>\n" +
+    "            </thead>\n" +
     "              <tbody>\n" +
-    "                <tr ng-repeat=\"legislator in legislators | filter:query | orderBy:sortField:reverse\" ng-click=\"legislator.selecteded = !legislator.selecteded\" ng-class=\"{'selecteded' : legislator.selecteded}\">\n" +
-    "                    <td class=\"col-xs-4\">{{legislator.last_name}}</td>\n" +
-    "                    <td class=\"col-xs-4\">{{legislator.first_name}} </td>\n" +
-    "                    <td class=\"col-xs-2\">{{legislator.state}}</td>\n" +
-    "                    <td class=\"col-xs-2\">{{legislator.party}}</td>\n" +
+    "                <tr ng-repeat=\"legislator in legislators | filter:query | orderBy:sortField:reverse\" ng-click=\"legislator.selected = !legislator.selected\" ng-class=\"getClass(legislator)\">\n" +
+    "                  <td class=\"col-xs-4\">{{legislator.last_name}}</td>\n" +
+    "                  <td class=\"col-xs-4\">{{legislator.first_name}} </td>\n" +
+    "                  <td class=\"col-xs-2\">{{legislator.state}}</td>\n" +
+    "                  <td class=\"col-xs-2\">{{legislator.party}}</td>\n" +
     "                </tr>\n" +
     "              </tbody>\n" +
     "          </table>\n" +
     "        </div>\n" +
     "      </div>\n" +
+    "\n" +
+    "      <div class='row form-container'>\n" +
+    "        <form id=\"faxForm\" ng-submit=\"submitFax()\">\n" +
+    "          <div class=\"col-xs-6\">\n" +
+    "            <div class=\"form-group\">\n" +
+    "              <label>message</label>\n" +
+    "              <textarea class=\"form-control\" rows=\"7\" ng-model=\"newFax.faxContent\"></textarea>\n" +
+    "            </div>\n" +
+    "          </div>\n" +
+    "          <div class=\"col-xs-4\">\n" +
+    "            <div class=\"form-group\">\n" +
+    "              <label>name</label>\n" +
+    "              <input type=\"text\" class=\"form-control\" placeholder=\"your name\"ng-model=\"newFax.name\" />\n" +
+    "            </div>\n" +
+    "            <div class=\"form-group\">\n" +
+    "              <label>email</label>\n" +
+    "              <input type=\"email\" class=\"form-control\" placeholder=\"wow.look@you.com\"ng-model=\"newFax.email\" />\n" +
+    "            </div>\n" +
+    "            <input class=\"btn btn-default\" type=\"submit\" id=\"submit-form\" value=\"Send Fax\" />\n" +
+    "          </div>\n" +
+    "          <div class=\"col-xs-2\"></div>\n" +
+    "        </form>\n" +
+    "      </div>\n" +
+    "\n" +
     "    </div>\n" +
-    "    <form id=\"faxForm\" ng-submit=\"submitFax()\">\n" +
-    "        <label>Name</label><br>\n" +
-    "        <input type=\"text\" ng-model=\"newFax.name\" /><br>\n" +
-    "        <label>Email</label><br>\n" +
-    "        <input type=\"text\" ng-model=\"newFax.email\" /><br> <!--check type-->\n" +
-    "        <label>Message</label><br>\n" +
-    "        <textarea type=\"text\" rows=\"10\" cols=\"50\" ng-model=\"newFax.faxContent\"></textarea></br>\n" +
-    "        <input type=\"submit\" value=\"Send Fax\" />\n" +
-    "    </form>\n" +
+    "\n" +
     "    <br><br>\n" +
     "\n" +
     "    <img src=\"images/congress.jpg\">\n" +
-    "</div>\n" +
     "");
 }]);
 
