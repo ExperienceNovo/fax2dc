@@ -50,13 +50,18 @@ module.exports.routes = {
   'get /api/user/username/:path': 'UserController.getByUsername',
   'post /api/user': 'UserController.create',
 
-
   /**
    * Fax routes
    */
   //'get /api/fax': 'FaxController.getAll',
   //'get /api/fax/:id': 'FaxController.getOne',
   'post /api/fax': 'FaxController.create',
+
+  /**
+   * Legislator routes
+   */
+  'get /api/legislator': 'LegislatorController.getAll',
+
 
   /**
    * Post routes

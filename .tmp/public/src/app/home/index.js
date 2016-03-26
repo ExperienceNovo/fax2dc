@@ -1,4 +1,4 @@
-angular.module( 'fax2dc.home' , [])
+var app = angular.module( 'fax2dc.home' , [])
 
 .config(function config( $stateProvider ) {
     $stateProvider.state('home', {
@@ -8,46 +8,98 @@ angular.module( 'fax2dc.home' , [])
                 controller: 'HomeCtrl',
                 templateUrl: 'home/index.tpl.html'
             }
+        },
+        resolve: {
+            legislators: function(LegislatorModel) {
+                return LegislatorModel.getAll();
+            }
         }
     });
-})
+});
 
 
-.controller('HomeCtrl', function HomeController( $scope, config, FaxModel, $stateParams, $location, titleService) {
-	titleService.setTitle('Fax2DC');
+var homeCtrl = app.controller('HomeCtrl', function HomeController( $scope, config, FaxModel, $stateParams, $location, titleService, legislators) {
 
-	$scope.count=0;
-  	$scope.selected = false;
-  	$scope.reverse = true;
-  	$scope.sortField = 'firstName';
+    titleService.setTitle('Fax2DC');
 
-    //dynamically loadedin via a resolve statement
-    //$scope.representatives = representatives;
+  	$scope.reverse = false;
+  	$scope.sortField = 'state';
 
-    $scope.congressMen = [{
-      	party: "Bros",
-        firstName: 'Guy',
-        lastName: 'Fieri',
-        state: 'AZ',
-    },
-    {
-      	party: "Bros",
-        firstName: 'Jeckel',
-        lastName: 'Goldbloom',
-        state: 'CA',
-    },
-    {
-      	party: "Hos",
-        firstName: 'Hey',
-        lastName: 'Guys',
-        state: 'HI',
-    },
-    {
-      	party: "Hos",
-        firstName: 'Whats',
-        lastName: 'Hecking',
-        state: 'UP',
-    }];
+    $scope.legislators = legislators;
+    console.log($scope.legislators)
+
+    // $scope.congressMen = [{
+    //   	party: "Bros",
+    //     firstName: 'Guy',
+    //     lastName: 'Fieri',
+    //     state: 'AZ',
+    // },
+    // {
+    //   	party: "Bros",
+    //     firstName: 'Jeckel',
+    //     lastName: 'Goldbloom',
+    //     state: 'CA',
+    // },
+    // {
+    //   	party: "Hos",
+    //     firstName: 'Hey',
+    //     lastName: 'Guys',
+    //     state: 'HI',
+    // },
+    // {
+    //   	party: "Bros",
+    //     firstName: 'Jeckel',
+    //     lastName: 'Goldbloom',
+    //     state: 'CA',
+    // },
+    // {
+    //   	party: "Hos",
+    //     firstName: 'Hey',
+    //     lastName: 'Guys',
+    //     state: 'HI',
+    // },
+    // {
+    //   	party: "Bros",
+    //     firstName: 'Jeckel',
+    //     lastName: 'Goldbloom',
+    //     state: 'CA',
+    // },
+    // {
+    //   	party: "Hos",
+    //     firstName: 'Hey',
+    //     lastName: 'Guys',
+    //     state: 'HI',
+    // },
+    // {
+    //   	party: "Bros",
+    //     firstName: 'Jeckel',
+    //     lastName: 'Goldbloom',
+    //     state: 'CA',
+    // },
+    // {
+    //   	party: "Hos",
+    //     firstName: 'Hey',
+    //     lastName: 'Guys',
+    //     state: 'HI',
+    // },
+    // {
+    //   	party: "Bros",
+    //     firstName: 'Jeckel',
+    //     lastName: 'Goldbloom',
+    //     state: 'CA',
+    // },
+    // {
+    //   	party: "Hos",
+    //     firstName: 'Hey',
+    //     lastName: 'Guys',
+    //     state: 'HI',
+    // },
+    // {
+    //   	party: "Hos",
+    //     firstName: 'Whats',
+    //     lastName: 'Hecking',
+    //     state: 'UP',
+    // }];
 
     $scope.submitFax = function() {
 
@@ -59,6 +111,11 @@ angular.module( 'fax2dc.home' , [])
         //Store in database.
         //Call the send fax api.
         console.log($scope.newFax)
+
+        //console.log('attempting to get legislators...')
+
+        //console.log(LegislatorModel.getAll())
+
         FaxModel.create($scope.newFax).then(function(){
             //reinitialize
             //$scope.name = "";
@@ -72,4 +129,12 @@ angular.module( 'fax2dc.home' , [])
         // $scope.email = "";
         // $scope.message = "";
     };
+
+    $scope.changeSorting = function(field) {
+      alert(field);
+    }
 });
+
+// homeCtrl.loadLegislators = function() {
+//
+// }

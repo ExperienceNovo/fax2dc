@@ -14,26 +14,59 @@ angular.module("home/index.tpl.html", []).run(["$templateCache", function($templ
   $templateCache.put("home/index.tpl.html",
     "<div align=\"center\">\n" +
     "    <!--img src=\"images/capitol.jpg\"-->\n" +
+    "    <style>\n" +
+    "    .table-fixed thead {\n" +
+    "      width: 100%;\n" +
+    "    }\n" +
+    "    .table-fixed tbody {\n" +
+    "      height: 230px;\n" +
+    "      overflow-y: auto;\n" +
+    "      width: 100%;\n" +
+    "    }\n" +
+    "    .table-fixed thead, .table-fixed tbody, .table-fixed tr, .table-fixed td, .table-fixed th {\n" +
+    "      display: block;\n" +
+    "    }\n" +
+    "    .table-fixed tbody td, .table-fixed thead > tr> th {\n" +
+    "      float: left;\n" +
+    "      border-bottom-width: 0;\n" +
+    "    }\n" +
+    "\n" +
+    "    </style>\n" +
+    "\n" +
+    "\n" +
+    "    <label>Search:</label>\n" +
+    "    <input ng-model=\"query\" type=\"text\"/>\n" +
+    "\n" +
     "\n" +
     "    <br><br>\n" +
     "    <h3>Send Fax</h3>\n" +
-    "    <table class='table'>\n" +
-    "        <tr>\n" +
-    "            <th><a href=\"#\" ng-click=\"sortField = 'lastName'; reverse = !reverse\">Last</a></th>\n" +
-    "            <th><a href=\"#\" ng-click=\"sortField = 'firstName'; reverse = !reverse\">First</a></th>\n" +
-    "            <th><a href=\"#\" ng-click=\"sortField = 'state'; reverse = !reverse\">State</a></th>\n" +
-    "            <th><a href=\"#\" ng-click=\"sortField = 'party'; reverse = !reverse\">Party</a></th>\n" +
-    "        </tr>\n" +
-    "        <label>Search:</label>\n" +
-    "        <input ng-model=\"query\" type=\"text\"/>\n" +
-    "        <tr ng-repeat=\"congressMan in congressMen | filter:query | orderBy:sortField:reverse\" ng-click=\"congressMan.selected = !congressMan.selected\" ng-class=\"{'selected' : congressMan.selected}\">\n" +
-    "            <td>{{congressMan.lastName}}</td>\n" +
-    "            <td>{{congressMan.firstName}} </td>\n" +
-    "            <td>{{congressMan.state}}</td>\n" +
-    "            <td>{{congressMan.party}}</td>\n" +
-    "        </tr>\n" +
-    "    </table>\n" +
-    "\n" +
+    "    <div class=\"container\">\n" +
+    "      <div class=\"row\">\n" +
+    "        <div class=\"panel panel-default\">\n" +
+    "          <div class=\"panel-heading\">\n" +
+    "            <h3>Legislators</h3>\n" +
+    "          </div>\n" +
+    "          <table class='table table-fixed'>\n" +
+    "            <thead>\n" +
+    "                <tr>\n" +
+    "                  <th class=\"col-xs-4\"><a href=\"#\" ng-click=\"changeSorting('last_name')\">Last</a></th>\n" +
+    "                  <th class=\"col-xs-4\"><a href=\"#\" ng-click=\"sortField = 'first_name'; reverse = !reverse\">First</a></th>\n" +
+    "                  <th class=\"col-xs-2\"><a href=\"#\" ng-click=\"sortField = 'state'; reverse = !reverse\">State</a></th>\n" +
+    "                  <th class=\"col-xs-2\"><a href=\"#\" ng-click=\"sortField = 'party'; reverse = !reverse\">Party</a></th>\n" +
+    "                </tr>\n" +
+    "              </thead>\n" +
+    "              <tbody>\n" +
+    "                <tr ng-repeat=\"legislator in legislators | filter:query | orderBy:sortField:reverse\" ng-click=\"legislator.selected = !legislator.selected\" ng-class=\"{'selected' : legislator.selected}\">\n" +
+    "                    <td class=\"col-xs-4\">{{legislator.last_name}}</td>\n" +
+    "                    <td class=\"col-xs-4\">{{legislator.first_name}} </td>\n" +
+    "                    <td class=\"col-xs-2\">{{legislator.state}}</td>\n" +
+    "                    <td class=\"col-xs-2\">{{legislator.party}}</td>\n" +
+    "                </tr>\n" +
+    "              </tbody>\n" +
+    "          </table>\n" +
+    "        </div>\n" +
+    "      </div>\n" +
+    "    </div>\n" +
     "    <form id=\"faxForm\" ng-submit=\"submitFax()\">\n" +
     "        <label>Name</label><br>\n" +
     "        <input type=\"text\" ng-model=\"newFax.name\" /><br>\n" +
