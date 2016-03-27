@@ -1,99 +1,99 @@
-    <!--img src="images/capitol.jpg"-->
+<img src="images/capitol.jpg">
 
-    <h3>Send Fax</h3>
-    <div class="container">
+<h3>Send Fax</h3>
+<div class="container">
 
-      <div class="row">
-        <div class="panel panel-default">
-          <div class="panel-heading">
+  <div class="row">
+    <div class="panel panel-default">
+      <div class="panel-heading">
 
-            <form id="tableFilters" class="row">
-              <!--Search bar-->
-              <div class="form-group col-xs-3">
-                <input ng-model="legislatorFilter.$" class="form-control" type="text" placeholder="search"/>
-              </div>
-              <!--State select-->
-              <div class="form-group col-xs-1">
-                <select ng-model="legislatorFilter.state" class="form-control">
-                  <option value="">state</option>
-                  <option ng-repeat="stateAbrv in stateAbrvs" value="{{stateAbrv}}">{{stateAbrv}}</option>
-                </select>
-              </div>
-              <!--democrat filter-->
-              <div class="form-group filterCheckbox col-xs-2">
-                <label>
-                  <input ng-click="includeParty('D')" type="checkbox" value="D">
-                  democrat
-                </label>
-              </div>
-              <!--republican filter-->
-              <div class="form-group filterCheckbox col-xs-2">
-                <label>
-                  <input ng-click="includeParty('R')" type="checkbox" value="R">
-                  republican
-                </label>
-              </div>
-              <!--independent filter-->
-              <div class="form-group filterCheckbox col-xs-2">
-                <label>
-                  <input ng-click="includeParty('I')" type="checkbox" value="I">
-                  independent
-                </label>
-              </div>
-              <!--selected filter-->
-              <div class="form-group filterCheckbox col-xs-2">
-                <label>
-                  <input ng-click="showSelected = !showSelected" type="checkbox" value="">
-                  show selected
-                </label>
-              </div>
-            </form>
+        <form id="tableFilters" class="row">
+          <!--Search bar-->
+          <div class="form-group col-xs-3">
+            <input ng-model="legislatorFilter.$" class="form-control" type="text" placeholder="search"/>
           </div>
-          <table class='table table-fixed'>
-            <thead>
-              <tr>
-                <th class="col-xs-4"><a href="#" ng-click="changeSorting('last_name')">Last</a></th>
-                <th class="col-xs-4"><a href="#" ng-click="changeSorting('first_name')">First</a></th>
-                <th class="col-xs-2"><a href="#" ng-click="changeSorting('state')">State</a></th>
-                <th class="col-xs-2"><a href="#" ng-click="changeSorting('party')">Party</a></th>
-              </tr>
-            </thead>
-              <tbody>
-                <tr ng-repeat="legislator in legislators | filter:legislatorFilter | filter:partyFilter | filter:selectedFilter | orderBy:sortField:reverse" ng-click="legislator.selected = !legislator.selected" ng-class="getClass(legislator)">
-                  <td class="col-xs-4">{{legislator.last_name}}</td>
-                  <td class="col-xs-4">{{legislator.first_name}} </td>
-                  <td class="col-xs-2">{{legislator.state}}</td>
-                  <td class="col-xs-2">{{legislator.party}}</td>
-                </tr>
-              </tbody>
-          </table>
-        </div>
-      </div>
-
-      <div class='row form-container'>
-        <form id="faxForm" ng-submit="submitFax()">
-          <div class="col-xs-8">
-            <div class="form-group">
-              <label>message</label>
-              <textarea class="form-control" rows="7" required="true" ng-model="newFax.faxContent"></textarea>
-            </div>
+          <!--State select-->
+          <div class="form-group col-xs-1">
+            <select ng-model="legislatorFilter.state" class="form-control">
+              <option value="">state</option>
+              <option ng-repeat="stateAbrv in stateAbrvs" value="{{stateAbrv}}">{{stateAbrv}}</option>
+            </select>
           </div>
-          <div class="col-xs-4">
-            <div class="form-group">
-              <label>name</label>
-              <input type="text" class="form-control" required="true" placeholder="your name"ng-model="newFax.name" />
-            </div>
-            <div class="form-group">
-              <label>email</label>
-              <input type="email" class="form-control" required="true" placeholder="wow.look@you.com"ng-model="newFax.email" />
-            </div>
-            <label style="display:none">leave this field blank:</label>
-            <input type="text" style="display:none" autofill="off" ng-model="newFax.trap" />
-            <input class="btn btn-primary" type="submit" id="submit-form" value="Send Fax" />
+          <!--democrat filter-->
+          <div class="form-group filterCheckbox col-xs-2">
+            <label>
+              <input ng-click="includeParty('D')" type="checkbox" value="D">
+              democrat
+            </label>
+          </div>
+          <!--republican filter-->
+          <div class="form-group filterCheckbox col-xs-2">
+            <label>
+              <input ng-click="includeParty('R')" type="checkbox" value="R">
+              republican
+            </label>
+          </div>
+          <!--independent filter-->
+          <div class="form-group filterCheckbox col-xs-2">
+            <label>
+              <input ng-click="includeParty('I')" type="checkbox" value="I">
+              independent
+            </label>
+          </div>
+          <!--selected filter-->
+          <div class="form-group filterCheckbox col-xs-2">
+            <label>
+              <input ng-click="showSelected = !showSelected" type="checkbox" value="">
+              show selected
+            </label>
           </div>
         </form>
       </div>
-
+      <table class='table table-fixed'>
+        <thead>
+          <tr>
+            <th class="col-xs-4"><a href="#" ng-click="changeSorting('last_name')">Last</a></th>
+            <th class="col-xs-4"><a href="#" ng-click="changeSorting('first_name')">First</a></th>
+            <th class="col-xs-2"><a href="#" ng-click="changeSorting('state')">State</a></th>
+            <th class="col-xs-2"><a href="#" ng-click="changeSorting('party')">Party</a></th>
+          </tr>
+        </thead>
+          <tbody>
+            <tr ng-repeat="legislator in legislators | filter:legislatorFilter | filter:partyFilter | filter:selectedFilter | orderBy:sortField:reverse" ng-click="legislator.selected = !legislator.selected" ng-class="getClass(legislator)">
+              <td class="col-xs-4">{{legislator.last_name}}</td>
+              <td class="col-xs-4">{{legislator.first_name}} </td>
+              <td class="col-xs-2">{{legislator.state}}</td>
+              <td class="col-xs-2">{{legislator.party}}</td>
+            </tr>
+          </tbody>
+      </table>
     </div>
+  </div>
 
-    <img src="images/congress.jpg">
+  <div class='row form-container'>
+    <form id="faxForm" ng-submit="submitFax()">
+      <div class="col-xs-8">
+        <div class="form-group">
+          <label>message</label>
+          <textarea class="form-control" rows="7" required="true" ng-model="newFax.faxContent"></textarea>
+        </div>
+      </div>
+      <div class="col-xs-4">
+        <div class="form-group">
+          <label>name</label>
+          <input type="text" class="form-control" required="true" placeholder="your name"ng-model="newFax.name" />
+        </div>
+        <div class="form-group">
+          <label>email</label>
+          <input type="email" class="form-control" required="true" placeholder="wow.look@you.com"ng-model="newFax.email" />
+        </div>
+        <label style="display:none">leave this field blank:</label>
+        <input type="text" style="display:none" autofill="off" ng-model="newFax.trap" />
+        <input class="btn btn-primary" type="submit" id="submit-form" value="Send Fax" />
+      </div>
+    </form>
+  </div>
+
+</div>
+
+<img src="images/congress.jpg">
