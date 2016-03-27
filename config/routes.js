@@ -63,16 +63,6 @@ module.exports.routes = {
   'get /api/legislator': 'LegislatorController.getAll',
 
 
-  /**
-   * Post routes
-   */
-  'get /api/post': 'PostController.getAll',
-  'get /api/post/:id': 'PostController.getOne',
-  'get /api/post/url/:path': 'PostController.getByUrlTitle',
-  'post /api/post': 'PostController.create',
-  'post /api/post/:id': 'PostController.update',
-  'delete /api/post/:id': 'PostController.destroy',
-
   // If a request to a URL doesn't match any of the custom routes above, it is matched
   // against Sails route blueprints.  See `config/blueprints.js` for configuration options
   // and examples.

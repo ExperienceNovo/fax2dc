@@ -77,7 +77,7 @@ module.exports = {
 						legislators.push(model);
 
 				}
-	    }
+	    	}
 
 			res.json(legislators);
 

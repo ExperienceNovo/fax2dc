@@ -9,10 +9,10 @@ var _ = require('lodash');
 module.exports = {
 
 	// getAll: function(req, res) {
-	// 	Post.getAll()
+	//	Fax.getAll()
 	// 	.spread(function(models) {
-	// 		Post.watch(req);
-	// 		Post.subscribe(req, models);
+	// 		Fax.watch(req);
+	// 		Fax.subscribe(req, models);
 	// 		res.json(models);
 	// 	})
 	// 	.fail(function(err) {
@@ -21,39 +21,9 @@ module.exports = {
 	// },
 	//
 	// getOne: function(req, res) {
-	// 	Post.getOne(req.param('id'))
+	// 	Fax.getOne(req.param('id'))
 	// 	.spread(function(model) {
-	// 		Post.subscribe(req, model);
-	// 		res.json(model);
-	// 	})
-	// 	.fail(function(err) {
-	// 		res.send(404);
-	// 	});
-	// },
-	//
-	// update: function(req, res) {
-	// 	var id = req.param('id');
-	// 	var userId = req.param('user');
-	//
-	// 	var model = {
-	// 		title: req.param('title'),
-	// 		url_title: req.param('url_title'),
-	// 		post_content: req.param('post_content'),
-	// 		user: userId
-	// 	};
-	//
-	// 	Post.update( {id: id}, model).exec(function afterwards(err, updated){
-	// 	  if (err) {
-	// 	    return;
-	// 	  }
-	// 	});
-	// },
-	//
-	// getByUrlTitle: function(req, res) {
-	// 	Post.find()
-	// 	.where({url_title: req.param('path')})
-	// 	.spread(function(model) {
-	// 		Post.subscribe(req, model);
+	// 		Fax.subscribe(req, model);
 	// 		res.json(model);
 	// 	})
 	// 	.fail(function(err) {
@@ -69,9 +39,7 @@ module.exports = {
 			faxContent: req.param('faxContent'),
 			//user: userId
 			legislatorList: req.param('legislatorList')
-		};
-		
-		console.log('hi from controller.create!')
+		};		
 		console.log(model);
 
 		Fax.create(model)
@@ -80,11 +48,26 @@ module.exports = {
 				return console.log(err);
 			}
 			else {
-
 				Fax.publishCreate(fax);
 				res.json(fax);
 			}
 		});
+
+
+		//7cents per page... too much
+
+		//var Phaxio = require('phaxio'),
+		//  phaxio = new Phaxio('e222........................', '62e5........................'),
+		//  callback = function(err,data){console.log(data);};
+
+		//phaxio.sendFax({
+		//    to: '13165555555',
+		//  string_data: 'Faxing from Node.js',
+		//  string_data_type: 'text'
+		//},callback);
+
+		//we can use a hacky solution to send though a free fax api as well.. 
+
 	},
 
 	// destroy: function (req, res) {
@@ -94,7 +77,7 @@ module.exports = {
 	// 	}
 	//
 	// 	// Otherwise, find and destroy the model in question
-	// 	Post.findOne(id).exec(function(err, model) {
+	// 	Fax.findOne(id).exec(function(err, model) {
 	// 		if (err) {
 	// 			return res.serverError(err);
 	// 		}
@@ -102,12 +85,12 @@ module.exports = {
 	// 			return res.notFound();
 	// 		}
 	//
-	// 		Post.destroy(id, function(err) {
+	// 		Fax.destroy(id, function(err) {
 	// 			if (err) {
 	// 				return res.serverError(err);
 	// 			}
 	//
-	// 			Post.publishDestroy(model.id);
+	// 			Fax.publishDestroy(model.id);
 	// 			return res.json(model);
 	// 		});
 	// 	});
