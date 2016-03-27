@@ -20,11 +20,46 @@ angular.module("home/index.tpl.html", []).run(["$templateCache", function($templ
     "      <div class=\"row\">\n" +
     "        <div class=\"panel panel-default\">\n" +
     "          <div class=\"panel-heading\">\n" +
-    "            <h3>Legislators</h3>\n" +
-    "            <form>\n" +
-    "              <div class=\"form-group\">\n" +
-    "                <label>Search:</label>\n" +
-    "                <input ng-model=\"query\" class=\"form-control\" type=\"text\"/>\n" +
+    "\n" +
+    "            <form id=\"tableFilters\" class=\"row\">\n" +
+    "              <!--Search bar-->\n" +
+    "              <div class=\"form-group col-xs-3\">\n" +
+    "                <input ng-model=\"query\" class=\"form-control\" type=\"text\" placeholder=\"search\"/>\n" +
+    "              </div>\n" +
+    "              <!--State select-->\n" +
+    "              <div class=\"form-group col-xs-1\">\n" +
+    "                <select class=\"form-control\">\n" +
+    "                  <option value=\"\">state</option>\n" +
+    "                  <option ng-repeat=\"stateAbrv in stateAbrvs\" value=\"{{stateAbrv}}\">{{stateAbrv}}</option>\n" +
+    "                </select>\n" +
+    "              </div>\n" +
+    "              <!--democrat filter-->\n" +
+    "              <div class=\"form-group filterCheckbox col-xs-2\">\n" +
+    "                <label>\n" +
+    "                  <input type=\"checkbox\" value=\"\">\n" +
+    "                  democrat\n" +
+    "                </label>\n" +
+    "              </div>\n" +
+    "              <!--republican filter-->\n" +
+    "              <div class=\"form-group filterCheckbox col-xs-2\">\n" +
+    "                <label>\n" +
+    "                  <input type=\"checkbox\" value=\"\">\n" +
+    "                  republican\n" +
+    "                </label>\n" +
+    "              </div>\n" +
+    "              <!--independent filter-->\n" +
+    "              <div class=\"form-group filterCheckbox col-xs-2\">\n" +
+    "                <label>\n" +
+    "                  <input type=\"checkbox\" value=\"\">\n" +
+    "                  independent\n" +
+    "                </label>\n" +
+    "              </div>\n" +
+    "              <!--selected filter-->\n" +
+    "              <div class=\"form-group filterCheckbox col-xs-2\">\n" +
+    "                <label>\n" +
+    "                  <input type=\"checkbox\" value=\"\">\n" +
+    "                  show selected\n" +
+    "                </label>\n" +
     "              </div>\n" +
     "            </form>\n" +
     "          </div>\n" +
@@ -51,30 +86,29 @@ angular.module("home/index.tpl.html", []).run(["$templateCache", function($templ
     "\n" +
     "      <div class='row form-container'>\n" +
     "        <form id=\"faxForm\" ng-submit=\"submitFax()\">\n" +
-    "          <div class=\"col-xs-6\">\n" +
+    "          <div class=\"col-xs-8\">\n" +
     "            <div class=\"form-group\">\n" +
     "              <label>message</label>\n" +
-    "              <textarea class=\"form-control\" rows=\"7\" ng-model=\"newFax.faxContent\"></textarea>\n" +
+    "              <textarea class=\"form-control\" rows=\"7\" required=\"true\" ng-model=\"newFax.faxContent\"></textarea>\n" +
     "            </div>\n" +
     "          </div>\n" +
     "          <div class=\"col-xs-4\">\n" +
     "            <div class=\"form-group\">\n" +
     "              <label>name</label>\n" +
-    "              <input type=\"text\" class=\"form-control\" placeholder=\"your name\"ng-model=\"newFax.name\" />\n" +
+    "              <input type=\"text\" class=\"form-control\" required=\"true\" placeholder=\"your name\"ng-model=\"newFax.name\" />\n" +
     "            </div>\n" +
     "            <div class=\"form-group\">\n" +
     "              <label>email</label>\n" +
-    "              <input type=\"email\" class=\"form-control\" placeholder=\"wow.look@you.com\"ng-model=\"newFax.email\" />\n" +
+    "              <input type=\"email\" class=\"form-control\" required=\"true\" placeholder=\"wow.look@you.com\"ng-model=\"newFax.email\" />\n" +
     "            </div>\n" +
-    "            <input class=\"btn btn-default\" type=\"submit\" id=\"submit-form\" value=\"Send Fax\" />\n" +
+    "            <label style=\"display:none\">leave this field blank:</label>\n" +
+    "            <input type=\"text\" style=\"display:none\" autofill=\"off\" ng-model=\"newFax.trap\" />\n" +
+    "            <input class=\"btn btn-primary\" type=\"submit\" id=\"submit-form\" value=\"Send Fax\" />\n" +
     "          </div>\n" +
-    "          <div class=\"col-xs-2\"></div>\n" +
     "        </form>\n" +
     "      </div>\n" +
     "\n" +
     "    </div>\n" +
-    "\n" +
-    "    <br><br>\n" +
     "\n" +
     "    <img src=\"images/congress.jpg\">\n" +
     "");

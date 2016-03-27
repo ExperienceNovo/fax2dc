@@ -26,11 +26,16 @@ var homeCtrl = app.controller('HomeCtrl', function HomeController( $scope, confi
   	$scope.sortField = 'state';
 
     $scope.legislators = legislators;
+    $scope.stateAbrvs = _.uniq(legislators.map(function(curr, val, index) {
+      return curr.state;
+    })).sort();
     //console.log($scope.legislators)
 
 
     $scope.submitFax = function() {
-
+      if ($scope.newFax.trap !== undefined)
+        console.log('get out'); // display fake successful form submission
+      else {
         var selectedLegislators = $scope.legislators.filter(function(val, ind, arr) {
             return val.hasOwnProperty('selected') && val.selected === true;
         });
@@ -46,6 +51,11 @@ var homeCtrl = app.controller('HomeCtrl', function HomeController( $scope, confi
             //$scope.message = "";
 
         });
+
+      }
+
+      //redirect?
+
     };
 
     $scope.changeSorting = function(field) {

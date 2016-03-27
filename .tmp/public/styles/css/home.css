@@ -20,7 +20,20 @@
 }
 .table > tbody > tr > td {
 	border-top-color: rgb(150, 150, 150);
+	text-align: left;
 }
 .selected {
 		font-weight: bolder;
+}
+#tableFilters > .form-group {
+	margin-bottom: 0px;
+}
+.filterCheckbox {
+	height: 34px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+.filterCheckbox > label {
+	margin-bottom: 0px;
 }
