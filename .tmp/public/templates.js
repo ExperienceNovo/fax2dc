@@ -24,11 +24,11 @@ angular.module("home/index.tpl.html", []).run(["$templateCache", function($templ
     "            <form id=\"tableFilters\" class=\"row\">\n" +
     "              <!--Search bar-->\n" +
     "              <div class=\"form-group col-xs-3\">\n" +
-    "                <input ng-model=\"query\" class=\"form-control\" type=\"text\" placeholder=\"search\"/>\n" +
+    "                <input ng-model=\"legislatorFilter.$\" class=\"form-control\" type=\"text\" placeholder=\"search\"/>\n" +
     "              </div>\n" +
     "              <!--State select-->\n" +
     "              <div class=\"form-group col-xs-1\">\n" +
-    "                <select class=\"form-control\">\n" +
+    "                <select ng-model=\"legislatorFilter.state\" class=\"form-control\">\n" +
     "                  <option value=\"\">state</option>\n" +
     "                  <option ng-repeat=\"stateAbrv in stateAbrvs\" value=\"{{stateAbrv}}\">{{stateAbrv}}</option>\n" +
     "                </select>\n" +
@@ -36,28 +36,28 @@ angular.module("home/index.tpl.html", []).run(["$templateCache", function($templ
     "              <!--democrat filter-->\n" +
     "              <div class=\"form-group filterCheckbox col-xs-2\">\n" +
     "                <label>\n" +
-    "                  <input type=\"checkbox\" value=\"\">\n" +
+    "                  <input ng-click=\"includeParty('D')\" type=\"checkbox\" value=\"D\">\n" +
     "                  democrat\n" +
     "                </label>\n" +
     "              </div>\n" +
     "              <!--republican filter-->\n" +
     "              <div class=\"form-group filterCheckbox col-xs-2\">\n" +
     "                <label>\n" +
-    "                  <input type=\"checkbox\" value=\"\">\n" +
+    "                  <input ng-click=\"includeParty('R')\" type=\"checkbox\" value=\"R\">\n" +
     "                  republican\n" +
     "                </label>\n" +
     "              </div>\n" +
     "              <!--independent filter-->\n" +
     "              <div class=\"form-group filterCheckbox col-xs-2\">\n" +
     "                <label>\n" +
-    "                  <input type=\"checkbox\" value=\"\">\n" +
+    "                  <input ng-click=\"includeParty('I')\" type=\"checkbox\" value=\"I\">\n" +
     "                  independent\n" +
     "                </label>\n" +
     "              </div>\n" +
     "              <!--selected filter-->\n" +
     "              <div class=\"form-group filterCheckbox col-xs-2\">\n" +
     "                <label>\n" +
-    "                  <input type=\"checkbox\" value=\"\">\n" +
+    "                  <input ng-click=\"showSelected = !showSelected\" type=\"checkbox\" value=\"\">\n" +
     "                  show selected\n" +
     "                </label>\n" +
     "              </div>\n" +
@@ -73,7 +73,7 @@ angular.module("home/index.tpl.html", []).run(["$templateCache", function($templ
     "              </tr>\n" +
     "            </thead>\n" +
     "              <tbody>\n" +
-    "                <tr ng-repeat=\"legislator in legislators | filter:query | orderBy:sortField:reverse\" ng-click=\"legislator.selected = !legislator.selected\" ng-class=\"getClass(legislator)\">\n" +
+    "                <tr ng-repeat=\"legislator in legislators | filter:legislatorFilter | filter:partyFilter | filter:selectedFilter | orderBy:sortField:reverse\" ng-click=\"legislator.selected = !legislator.selected\" ng-class=\"getClass(legislator)\">\n" +
     "                  <td class=\"col-xs-4\">{{legislator.last_name}}</td>\n" +
     "                  <td class=\"col-xs-4\">{{legislator.first_name}} </td>\n" +
     "                  <td class=\"col-xs-2\">{{legislator.state}}</td>\n" +

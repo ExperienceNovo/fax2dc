@@ -24,11 +24,13 @@ var homeCtrl = app.controller('HomeCtrl', function HomeController( $scope, confi
 
   	$scope.reverse = false;
   	$scope.sortField = 'state';
+    $scope.showSelected = false;
 
     $scope.legislators = legislators;
     $scope.stateAbrvs = _.uniq(legislators.map(function(curr, val, index) {
       return curr.state;
     })).sort();
+    $scope.partyIncludes = [];
     //console.log($scope.legislators)
 
 
@@ -61,6 +63,31 @@ var homeCtrl = app.controller('HomeCtrl', function HomeController( $scope, confi
     $scope.changeSorting = function(field) {
       $scope.reverse = $scope.sortField === field ? !$scope.reverse : false;
       $scope.sortField = field;
+    }
+
+    $scope.includeParty = function(party) {
+      var i = _.indexOf($scope.partyIncludes, party);
+      if (i > -1)
+        $scope.partyIncludes.splice(i, 1);
+      else
+        $scope.partyIncludes.push(party);
+    }
+
+    $scope.partyFilter = function(legislator) {
+      if ($scope.partyIncludes.length > 0) {
+        if (_.indexOf($scope.partyIncludes, legislator.party) < 0)
+          return;
+      }
+      return legislator;
+    }
+    $scope.selectedFilter = function(legislator) {
+      if ($scope.showSelected) {
+        if (legislator.selected === true)
+          return legislator;
+        return;
+      } else {
+        return legislator;
+      }
     }
 
     $scope.getClass = function(legislator) {

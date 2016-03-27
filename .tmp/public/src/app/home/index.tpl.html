@@ -10,11 +10,11 @@
             <form id="tableFilters" class="row">
               <!--Search bar-->
               <div class="form-group col-xs-3">
-                <input ng-model="query" class="form-control" type="text" placeholder="search"/>
+                <input ng-model="legislatorFilter.$" class="form-control" type="text" placeholder="search"/>
               </div>
               <!--State select-->
               <div class="form-group col-xs-1">
-                <select class="form-control">
+                <select ng-model="legislatorFilter.state" class="form-control">
                   <option value="">state</option>
                   <option ng-repeat="stateAbrv in stateAbrvs" value="{{stateAbrv}}">{{stateAbrv}}</option>
                 </select>
@@ -22,28 +22,28 @@
               <!--democrat filter-->
               <div class="form-group filterCheckbox col-xs-2">
                 <label>
-                  <input type="checkbox" value="">
+                  <input ng-click="includeParty('D')" type="checkbox" value="D">
                   democrat
                 </label>
               </div>
               <!--republican filter-->
               <div class="form-group filterCheckbox col-xs-2">
                 <label>
-                  <input type="checkbox" value="">
+                  <input ng-click="includeParty('R')" type="checkbox" value="R">
                   republican
                 </label>
               </div>
               <!--independent filter-->
               <div class="form-group filterCheckbox col-xs-2">
                 <label>
-                  <input type="checkbox" value="">
+                  <input ng-click="includeParty('I')" type="checkbox" value="I">
                   independent
                 </label>
               </div>
               <!--selected filter-->
               <div class="form-group filterCheckbox col-xs-2">
                 <label>
-                  <input type="checkbox" value="">
+                  <input ng-click="showSelected = !showSelected" type="checkbox" value="">
                   show selected
                 </label>
               </div>
@@ -59,7 +59,7 @@
               </tr>
             </thead>
               <tbody>
-                <tr ng-repeat="legislator in legislators | filter:query | orderBy:sortField:reverse" ng-click="legislator.selected = !legislator.selected" ng-class="getClass(legislator)">
+                <tr ng-repeat="legislator in legislators | filter:legislatorFilter | filter:partyFilter | filter:selectedFilter | orderBy:sortField:reverse" ng-click="legislator.selected = !legislator.selected" ng-class="getClass(legislator)">
                   <td class="col-xs-4">{{legislator.last_name}}</td>
                   <td class="col-xs-4">{{legislator.first_name}} </td>
                   <td class="col-xs-2">{{legislator.state}}</td>
