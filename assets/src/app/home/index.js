@@ -43,7 +43,7 @@ var homeCtrl = app.controller('HomeCtrl', function HomeController( $scope, confi
         });
         $scope.newFax.legislatorList = selectedLegislators;
 
-        console.log($scope.newFax)
+        console.log($scope.newFax);
 
         FaxModel.create($scope.newFax).then(function(){
 
@@ -63,7 +63,7 @@ var homeCtrl = app.controller('HomeCtrl', function HomeController( $scope, confi
     $scope.changeSorting = function(field) {
       $scope.reverse = $scope.sortField === field ? !$scope.reverse : false;
       $scope.sortField = field;
-    }
+    };
 
     $scope.includeParty = function(party) {
       var i = _.indexOf($scope.partyIncludes, party);
@@ -71,7 +71,7 @@ var homeCtrl = app.controller('HomeCtrl', function HomeController( $scope, confi
         $scope.partyIncludes.splice(i, 1);
       else
         $scope.partyIncludes.push(party);
-    }
+    };
 
     $scope.partyFilter = function(legislator) {
       if ($scope.partyIncludes.length > 0) {
@@ -79,7 +79,7 @@ var homeCtrl = app.controller('HomeCtrl', function HomeController( $scope, confi
           return;
       }
       return legislator;
-    }
+    };
     $scope.selectedFilter = function(legislator) {
       if ($scope.showSelected) {
         if (legislator.selected === true)
@@ -88,13 +88,13 @@ var homeCtrl = app.controller('HomeCtrl', function HomeController( $scope, confi
       } else {
         return legislator;
       }
-    }
+    };
 
     $scope.getClass = function(legislator) {
       var klass = legislator.selected ? 'selected' : '';
       return klass += legislator.party === 'D' ? ' info'
                     : legislator.party === 'R' ? ' danger' : ' warning';
-    }
+    };
 });
 
 // homeCtrl.loadLegislators = function() {
