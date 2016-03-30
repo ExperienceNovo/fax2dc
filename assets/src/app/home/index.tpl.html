@@ -59,7 +59,11 @@
           </tr>
         </thead>
           <tbody>
-            <tr ng-repeat="legislator in legislators | filter:legislatorFilter | filter:partyFilter | filter:selectedFilter | orderBy:sortField:reverse" ng-click="legislator.selected = !legislator.selected" ng-class="getClass(legislator)">
+            <tr ng-repeat="legislator in legislators | filter:legislatorFilter
+                            | filter:partyFilter | filter:selectedFilter
+                            | orderBy:sortField:reverse"
+                ng-click="selectLegislator(legislator)"
+                ng-class="getClass(legislator)">
               <td class="col-xs-4">{{legislator.last_name}}</td>
               <td class="col-xs-4">{{legislator.first_name}} </td>
               <td class="col-xs-2">{{legislator.state}}</td>
@@ -89,7 +93,8 @@
         </div>
         <label style="display:none">Leave this field blank:</label>
         <input type="text" style="display:none" autofill="off" ng-model="newFax.trap" />
-        <input class="btn btn-primary" type="submit" id="submit-form" value="Send Fax" />
+        <p>{{legislatorRequiredMessage}}</p>
+        <input class="btn btn-primary" type="submit" value="Send Fax" />
       </div>
     </form>
   </div>

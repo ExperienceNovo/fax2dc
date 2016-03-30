@@ -35,13 +35,13 @@ module.exports = {
     //     });
     // },
 
-    // getAll: function() {
-    //     return Post.find()
-    //     .sort({createdAt: 'asc'})
-    //     .then(function (models) {
-    //         return [models];
-    //     });
-    // },
+    getAll: function() {
+        return Fax.find()
+        .sort({createdAt: 'asc'})
+        .then(function (models) {
+            return [models];
+        });
+    }
 		//
     // getOne: function(id) {
     //     return Post.findOne(id)

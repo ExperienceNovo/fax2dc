@@ -1,10 +1,10 @@
 angular.module('models.fax', ['lodash', 'services', 'sails.io',])
 
 .service('FaxModel', function(lodash, utils, $sailsSocket) {
-    // this.getAll = function() {
-    //     var url = utils.prepareUrl('fax');
-    //     return $sailsSocket.get(url).then(success, error);
-    // };
+    this.getAll = function() {
+        var url = utils.prepareUrl('fax');
+        return $sailsSocket.get(url).then(success, error);
+    };
 
     this.create = function(newModel) {
         var url = utils.prepareUrl('fax');

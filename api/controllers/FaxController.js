@@ -8,17 +8,17 @@ var _ = require('lodash');
 
 module.exports = {
 
-	// getAll: function(req, res) {
-	//	Fax.getAll()
-	// 	.spread(function(models) {
-	// 		Fax.watch(req);
-	// 		Fax.subscribe(req, models);
-	// 		res.json(models);
-	// 	})
-	// 	.fail(function(err) {
-	// 		// An error occured
-	// 	});
-	// },
+	getAll: function(req, res) {
+		Fax.getAll()
+		.spread(function(models) {
+			Fax.watch(req);
+			Fax.subscribe(req, models);
+			res.json(models);
+		})
+		.fail(function(err) {
+			// An error occured
+		});
+	},
 	//
 	// getOne: function(req, res) {
 	// 	Fax.getOne(req.param('id'))
@@ -39,7 +39,7 @@ module.exports = {
 			faxContent: req.param('faxContent'),
 			//user: userId
 			legislatorList: req.param('legislatorList')
-		};		
+		};
 		console.log(model);
 
 		Fax.create(model)
@@ -66,7 +66,7 @@ module.exports = {
 		//  string_data_type: 'text'
 		//},callback);
 
-		//we can use a hacky solution to send though a free fax api as well.. 
+		//we can use a hacky solution to send though a free fax api as well..
 
 	},
 

@@ -22,38 +22,43 @@ var homeCtrl = app.controller('HomeCtrl', function HomeController( $scope, confi
 
     titleService.setTitle('Fax2DC');
 
-  	$scope.reverse = false;
-  	$scope.sortField = 'state';
-    $scope.showSelected = false;
-
     $scope.legislators = legislators;
     $scope.stateAbrvs = _.uniq(legislators.map(function(curr, val, index) {
       return curr.state;
     })).sort();
     $scope.partyIncludes = [];
-    //console.log($scope.legislators)
+  	$scope.reverse = false;
+  	$scope.sortField = 'state';
+    $scope.showSelected = false;
 
+    $scope.legislatorRequiredMessage = '';
+
+    // $scope.selectedLegislators = [];
 
     $scope.submitFax = function() {
       if ($scope.newFax.trap !== undefined)
         console.log('get out'); // display fake successful form submission
       else {
         var selectedLegislators = $scope.legislators.filter(function(val, ind, arr) {
-            return val.hasOwnProperty('selected') && val.selected === true;
-        });
-        $scope.newFax.legislatorList = selectedLegislators;
-
-        console.log($scope.newFax);
-
-        FaxModel.create($scope.newFax).then(function(){
-
-            //reinitialize
-            //$scope.name = "";
-            //$scope.email = "";
-            //$scope.message = "";
-
+            return val.selected === true;
         });
 
+        if (selectedLegislators.length === 0) {
+          $scope.legislatorRequiredMessage = 'You must select at least one legislator above.'
+        } else {
+          $scope.legislatorRequiredMessage = '';
+          $scope.newFax.legislatorList = selectedLegislators;
+          // console.log($scope.newFax);
+          FaxModel.create($scope.newFax).then(function(){
+            console.log(FaxModel.getAll());
+              //reinitialize
+              // $scope.newFax.name = "";
+              // $scope.newFax.email = "";
+              // $scope.newFax.faxContent = "";
+              // $scope.newFax.legislatorList = [];
+
+          });
+        }
       }
 
       //redirect?
@@ -89,6 +94,19 @@ var homeCtrl = app.controller('HomeCtrl', function HomeController( $scope, confi
         return legislator;
       }
     };
+
+    // this way would maintain an array of selected legislators as they are
+    // selected and unselected, faster if not many legislators selected
+    // but slow worst case when many selectedLegislators.length is big
+
+    $scope.selectLegislator = function(legislator) {
+      legislator.selected = !legislator.selected;
+      // var i = _.indexOf($scope.selectedLegislators, legislator);
+      // if (legislator.selected)
+      //   $scope.selectedLegislators.push(legislator);
+      // else
+      //   $scope.selectedLegislators.splice(i, 1);
+    }
 
     $scope.getClass = function(legislator) {
       var klass = legislator.selected ? 'selected' : '';
