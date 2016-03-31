@@ -19,7 +19,6 @@ var app = angular.module( 'fax2dc.home' , [])
 
 
 var homeCtrl = app.controller('HomeCtrl', function HomeController( $scope, config, FaxModel, $stateParams, $location, titleService, legislators) {
-
     titleService.setTitle('Fax2DC');
 
   	$scope.reverse = false;
@@ -31,8 +30,6 @@ var homeCtrl = app.controller('HomeCtrl', function HomeController( $scope, confi
       return curr.state;
     })).sort();
     $scope.partyIncludes = [];
-    //console.log($scope.legislators)
-
 
     $scope.submitFax = function() {
       if ($scope.newFax.trap !== undefined)
@@ -42,22 +39,15 @@ var homeCtrl = app.controller('HomeCtrl', function HomeController( $scope, confi
             return val.hasOwnProperty('selected') && val.selected === true;
         });
         $scope.newFax.legislatorList = selectedLegislators;
-
         console.log($scope.newFax)
-
         FaxModel.create($scope.newFax).then(function(){
-
             //reinitialize
             //$scope.name = "";
             //$scope.email = "";
             //$scope.message = "";
-
         });
-
       }
-
       //redirect?
-
     };
 
     $scope.changeSorting = function(field) {
@@ -67,25 +57,31 @@ var homeCtrl = app.controller('HomeCtrl', function HomeController( $scope, confi
 
     $scope.includeParty = function(party) {
       var i = _.indexOf($scope.partyIncludes, party);
-      if (i > -1)
+      if (i > -1){
         $scope.partyIncludes.splice(i, 1);
-      else
+      }
+      else{
         $scope.partyIncludes.push(party);
+      }
     }
 
     $scope.partyFilter = function(legislator) {
       if ($scope.partyIncludes.length > 0) {
-        if (_.indexOf($scope.partyIncludes, legislator.party) < 0)
+        if (_.indexOf($scope.partyIncludes, legislator.party) < 0){
           return;
+        }
       }
       return legislator;
     }
+
     $scope.selectedFilter = function(legislator) {
       if ($scope.showSelected) {
-        if (legislator.selected === true)
+        if (legislator.selected === true){
           return legislator;
+        }
         return;
-      } else {
+      }
+      else {
         return legislator;
       }
     }
@@ -94,9 +90,6 @@ var homeCtrl = app.controller('HomeCtrl', function HomeController( $scope, confi
       var klass = legislator.selected ? 'selected' : '';
       return klass += legislator.party === 'D' ? ' info'
                     : legislator.party === 'R' ? ' danger' : ' warning';
+
     }
 });
-
-// homeCtrl.loadLegislators = function() {
-//
-// }

@@ -47,7 +47,7 @@ module.exports = {
 						// var term_end = congressData[key].term_end;
 						// var term_start = congressData[key].term_start;
 						// var thomas_id = congressData[key].thomas_id;
-						// var title = congressData[key].title;
+						var title = congressData[key].title;
 						// var twitter_id = congressData[key].twitter_id;
 						// var website = congressData[key].website;
 
@@ -61,6 +61,7 @@ module.exports = {
 						var model = {
 							first_name: first_name,
 							last_name: last_name,
+							title: title,
 							state: state,
 							party: party,
 							phone: phone,
