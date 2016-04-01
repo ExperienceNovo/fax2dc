@@ -56,14 +56,14 @@
           <!--house filter-->
           <div class="form-group filterCheckbox col-xs-2">
             <label>
-              <input ng-click="includeOffice('Rep')" type="checkbox" value="Rep">
+              <input ng-click="includeTitle('Rep')" type="checkbox" value="Rep">
               House
             </label>
           </div>
           <!--senate filter-->
           <div class="form-group filterCheckbox col-xs-2">
             <label>
-              <input ng-click="includeOffice('Sen')" type="checkbox" value="Sen">
+              <input ng-click="includeTitle('Sen')" type="checkbox" value="Sen">
               Senate
             </label>
           </div>
@@ -80,7 +80,7 @@
         </thead>
           <tbody>
             <tr ng-repeat="legislator in legislators | filter:legislatorFilter
-                            | filter:partyFilter | filter:officeFilter
+                            | filter:partyFilter | filter:titleFilter
                             | filter:selectedFilter
                             | orderBy:sortField:reverse"
                 ng-click="selectLegislator(legislator)"

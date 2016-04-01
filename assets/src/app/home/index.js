@@ -22,14 +22,12 @@ var homeCtrl = app.controller('HomeCtrl', function HomeController( $scope, confi
 
     titleService.setTitle('Fax2DC');
 
-    console.log(legislators)
-
     $scope.legislators = legislators;
     $scope.stateAbrvs = _.uniq(legislators.map(function(curr, val, index) {
       return curr.state;
     })).sort();
     $scope.partyIncludes = [];
-    $scope.officeIncludes = [];
+    $scope.titleIncludes = [];
   	$scope.reverse = false;
   	$scope.sortField = 'state';
     $scope.showSelected = false;
@@ -81,12 +79,12 @@ var homeCtrl = app.controller('HomeCtrl', function HomeController( $scope, confi
         $scope.partyIncludes.push(party);
     };
 
-    $scope.includeOffice = function(office) {
-      var i = _.indexOf($scope.officeIncludes, office);
+    $scope.includeTitle = function(title) {
+      var i = _.indexOf($scope.titleIncludes, title);
       if (i > -1)
-        $scope.officeIncludes.splice(i, 1);
+        $scope.titleIncludes.splice(i, 1);
       else
-        $scope.officeIncludes.push(office);
+        $scope.titleIncludes.push(title);
     };
 
     $scope.partyFilter = function(legislator) {
@@ -97,9 +95,9 @@ var homeCtrl = app.controller('HomeCtrl', function HomeController( $scope, confi
       return legislator;
     };
 
-    $scope.officeFilter = function(legislator) {
-      if ($scope.officeIncludes.length > 0) {
-        if (_.indexOf($scope.officeIncludes, legislator.title) < 0)
+    $scope.titleFilter = function(legislator) {
+      if ($scope.titleIncludes.length > 0) {
+        if (_.indexOf($scope.titleIncludes, legislator.title) < 0)
           return;
       }
       return legislator;
