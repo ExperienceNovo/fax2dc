@@ -47,7 +47,7 @@ module.exports = {
 						// var term_end = congressData[key].term_end;
 						// var term_start = congressData[key].term_start;
 						// var thomas_id = congressData[key].thomas_id;
-						// var title = congressData[key].title;
+						var title = congressData[key].title;
 						// var twitter_id = congressData[key].twitter_id;
 						// var website = congressData[key].website;
 
@@ -65,7 +65,9 @@ module.exports = {
 							party: party,
 							phone: phone,
 							fax: fax,
-							email: email
+							email: email,
+							title: title
+
 							/*username: username,
 							socialMedia: socialMedia,
 							leadership_role:leadership_role,
@@ -73,7 +75,7 @@ module.exports = {
 							term_start: term_start,
 							bioguide_id: bioguide_id*/
 						};
-
+						console.log(model);
 						legislators.push(model);
 
 				}

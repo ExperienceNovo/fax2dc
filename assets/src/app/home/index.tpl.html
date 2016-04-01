@@ -19,6 +19,9 @@
               <option ng-repeat="stateAbrv in stateAbrvs" value="{{stateAbrv}}">{{stateAbrv}}</option>
             </select>
           </div>
+
+          <div class="col-xs-1"></div>
+
           <!--democrat filter-->
           <div class="form-group filterCheckbox col-xs-2">
             <label>
@@ -47,6 +50,23 @@
               Show Selected
             </label>
           </div>
+
+          <div class="col-xs-6"></div>
+
+          <!--house filter-->
+          <div class="form-group filterCheckbox col-xs-2">
+            <label>
+              <input ng-click="includeOffice('Rep')" type="checkbox" value="Rep">
+              House
+            </label>
+          </div>
+          <!--senate filter-->
+          <div class="form-group filterCheckbox col-xs-2">
+            <label>
+              <input ng-click="includeOffice('Sen')" type="checkbox" value="Sen">
+              Senate
+            </label>
+          </div>
         </form>
       </div>
       <table class='table table-fixed'>
@@ -60,7 +80,8 @@
         </thead>
           <tbody>
             <tr ng-repeat="legislator in legislators | filter:legislatorFilter
-                            | filter:partyFilter | filter:selectedFilter
+                            | filter:partyFilter | filter:officeFilter
+                            | filter:selectedFilter
                             | orderBy:sortField:reverse"
                 ng-click="selectLegislator(legislator)"
                 ng-class="getClass(legislator)">

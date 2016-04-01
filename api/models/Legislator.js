@@ -25,7 +25,12 @@ module.exports = {
         email: {
           type: 'email',
           require: true,
+        },
+        title: {
+          type: 'string',
+          require: true,
         }
+
         /*username: {
             type: 'string',
         },

@@ -22,11 +22,14 @@ var homeCtrl = app.controller('HomeCtrl', function HomeController( $scope, confi
 
     titleService.setTitle('Fax2DC');
 
+    console.log(legislators)
+
     $scope.legislators = legislators;
     $scope.stateAbrvs = _.uniq(legislators.map(function(curr, val, index) {
       return curr.state;
     })).sort();
     $scope.partyIncludes = [];
+    $scope.officeIncludes = [];
   	$scope.reverse = false;
   	$scope.sortField = 'state';
     $scope.showSelected = false;
@@ -78,6 +81,14 @@ var homeCtrl = app.controller('HomeCtrl', function HomeController( $scope, confi
         $scope.partyIncludes.push(party);
     };
 
+    $scope.includeOffice = function(office) {
+      var i = _.indexOf($scope.officeIncludes, office);
+      if (i > -1)
+        $scope.officeIncludes.splice(i, 1);
+      else
+        $scope.officeIncludes.push(office);
+    };
+
     $scope.partyFilter = function(legislator) {
       if ($scope.partyIncludes.length > 0) {
         if (_.indexOf($scope.partyIncludes, legislator.party) < 0)
@@ -85,6 +96,15 @@ var homeCtrl = app.controller('HomeCtrl', function HomeController( $scope, confi
       }
       return legislator;
     };
+
+    $scope.officeFilter = function(legislator) {
+      if ($scope.officeIncludes.length > 0) {
+        if (_.indexOf($scope.officeIncludes, legislator.title) < 0)
+          return;
+      }
+      return legislator;
+    };
+
     $scope.selectedFilter = function(legislator) {
       if ($scope.showSelected) {
         if (legislator.selected === true)
@@ -114,7 +134,3 @@ var homeCtrl = app.controller('HomeCtrl', function HomeController( $scope, confi
                     : legislator.party === 'R' ? ' danger' : ' warning';
     };
 });
-
-// homeCtrl.loadLegislators = function() {
-//
-// }
