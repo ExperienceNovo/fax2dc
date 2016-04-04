@@ -1,4 +1,4 @@
-var app = angular.module( 'fax2dc.home' , [])
+angular.module( 'fax2dc.home' , [])
 
 .config(function config( $stateProvider ) {
     $stateProvider.state('home', {
@@ -15,10 +15,9 @@ var app = angular.module( 'fax2dc.home' , [])
             }
         }
     });
-});
+})
 
-
-var homeCtrl = app.controller('HomeCtrl', function HomeController( $scope, config, FaxModel, $stateParams, $location, titleService, legislators) {
+.controller('HomeCtrl', function HomeController( $scope, config, FaxModel, $stateParams, $location, titleService, legislators) {
 
     titleService.setTitle('Fax2DC');
 
@@ -28,8 +27,8 @@ var homeCtrl = app.controller('HomeCtrl', function HomeController( $scope, confi
     })).sort();
     $scope.partyIncludes = [];
     $scope.titleIncludes = [];
-  	$scope.reverse = false;
-  	$scope.sortField = 'state';
+    $scope.reverse = false;
+    $scope.sortField = 'state';
     $scope.showSelected = false;
 
     $scope.legislatorRequiredMessage = '';

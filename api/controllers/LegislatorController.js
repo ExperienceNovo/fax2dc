@@ -61,6 +61,7 @@ module.exports = {
 						var model = {
 							first_name: first_name,
 							last_name: last_name,
+							title: title,
 							state: state,
 							party: party,
 							phone: phone,

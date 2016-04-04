@@ -1,4 +1,9 @@
-<img class="img-responsive" src="images/capitol.jpg">
+
+<div>
+  <img class="img-responsive" src="images/capitol.jpg">
+  <img class="img-responsive" src="images/capitol-icon.png">
+</div>
+
 
 <h3>Send Fax</h3>
 <div class="container">
@@ -41,6 +46,18 @@
             <label>
               <input ng-click="includeParty('I')" type="checkbox" value="I">
               Independent
+            </label>
+          </div>
+          <div class="form-group filterCheckbox col-xs-2">
+            <label>
+              <input ng-click="includeParty('Sen')" type="checkbox" value="I">
+              Senate
+            </label>
+          </div>
+          <div class="form-group filterCheckbox col-xs-2">
+            <label>
+              <input ng-click="includeParty('Rep')" type="checkbox" value="I">
+              House
             </label>
           </div>
           <!--selected filter-->
@@ -121,5 +138,5 @@
   </div>
 
 </div>
-
+<img class="img-responsive" src="images/capitol-icon.png">
 <img class="img-responsive" src="images/congress.jpg">
