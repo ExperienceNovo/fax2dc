@@ -23,7 +23,10 @@ module.exports = {
 	getCount: function(req, res) {
 		Fax.count()
 		.exec(function(err, faxCount) {
-			if (!err){res.json({ count: faxCount });}
+			if (!err){
+				Fax.watch(req);
+				res.json({ count: faxCount });
+			}
 		});
 	},
 

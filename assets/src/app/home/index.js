@@ -20,7 +20,7 @@ angular.module( 'fax2dc.home' , [])
     });
 })
 
-.controller('HomeCtrl', function HomeController( $scope, config, FaxModel, $stateParams, $location, titleService, legislators, faxCount) {
+.controller('HomeCtrl', function HomeController( $scope, config, FaxModel, $stateParams, $location, titleService, legislators, faxCount, FaxModel, $sailsSocket) {
     titleService.setTitle('Fax2DC');
     //we need to set a cap on faxes sent by donations recieved.. popup after sent fax
 
@@ -44,7 +44,7 @@ angular.module( 'fax2dc.home' , [])
         console.log('get out'); // display fake successful form submission
       }
       else {
-        
+
         var selectedLegislators = $scope.legislators.filter(function(val, ind, arr) {
             return val.selected === true;
         });
@@ -147,4 +147,15 @@ angular.module( 'fax2dc.home' , [])
       return klass += legislator.party === 'D' ? ' info'
                     : legislator.party === 'R' ? ' danger' : ' warning';
     };
+
+    $sailsSocket.subscribe('fax', function (envelope) {
+        switch(envelope.verb) {
+            case 'created':
+                FaxModel.count().then(function(faxCount){
+                  $scope.faxCount = faxCount.count
+                });
+                break;
+        }
+    });
+
 });
