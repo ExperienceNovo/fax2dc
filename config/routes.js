@@ -34,6 +34,7 @@ module.exports.routes = {
 
   'get /': 'HomeController.index',
   'get /about': 'HomeController.index',
+  'get /donate': 'HomeController.index',
 
   'get /login': 'HomeController.index',
   'get /logout': 'AuthController.logout',
@@ -54,6 +55,8 @@ module.exports.routes = {
    * Fax routes
    */
   'get /api/fax': 'FaxController.getAll',
+  'get /api/fax/count': 'FaxController.getCount',
+
   //'get /api/fax/:id': 'FaxController.getOne',
   'post /api/fax': 'FaxController.create',
 

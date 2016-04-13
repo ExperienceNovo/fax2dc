@@ -19,28 +19,33 @@ module.exports = {
 			// An error occured
 		});
 	},
-	//
-	// getOne: function(req, res) {
-	// 	Fax.getOne(req.param('id'))
-	// 	.spread(function(model) {
-	// 		Fax.subscribe(req, model);
-	// 		res.json(model);
-	// 	})
-	// 	.fail(function(err) {
-	// 		res.send(404);
-	// 	});
-	// },
+
+	getCount: function(req, res) {
+		Fax.count()
+		.exec(function(err, faxCount) {
+			if (!err){res.json({ count: faxCount });}
+		});
+	},
+
+	getByLegislator: function(req, res) {
+		//Fax.find()
+		//.where()
+
+	},
+
 
 	create: function (req, res) {
+
+		//we need to make a new fax object per selected legislator and not store an array... ?? maybe..?? 
+		//or have a list of legislators stored in the db.. save them as a related model
+		//since we have to pay 7cents per page.. lets think about it. 
 
 		var model = {
 			name: req.param('name'),
 			email: req.param('email'),
 			faxContent: req.param('faxContent'),
-			//user: userId
 			legislatorList: req.param('legislatorList')
 		};
-		console.log(model);
 
 		Fax.create(model)
 		.exec(function(err, fax) {
@@ -53,9 +58,7 @@ module.exports = {
 			}
 		});
 
-
 		//7cents per page... too much
-
 		//var Phaxio = require('phaxio'),
 		//  phaxio = new Phaxio('e222........................', '62e5........................'),
 		//  callback = function(err,data){console.log(data);};
@@ -65,35 +68,9 @@ module.exports = {
 		//  string_data: 'Faxing from Node.js',
 		//  string_data_type: 'text'
 		//},callback);
-
 		//we can use a hacky solution to send though a free fax api as well..
 
 	},
 
-	// destroy: function (req, res) {
-	// 	var id = req.param('id');
-	// 	if (!id) {
-	// 		return res.badRequest('No id provided.');
-	// 	}
-	//
-	// 	// Otherwise, find and destroy the model in question
-	// 	Fax.findOne(id).exec(function(err, model) {
-	// 		if (err) {
-	// 			return res.serverError(err);
-	// 		}
-	// 		if (!model) {
-	// 			return res.notFound();
-	// 		}
-	//
-	// 		Fax.destroy(id, function(err) {
-	// 			if (err) {
-	// 				return res.serverError(err);
-	// 			}
-	//
-	// 			Fax.publishDestroy(model.id);
-	// 			return res.json(model);
-	// 		});
-	// 	});
-	// }
 
 };

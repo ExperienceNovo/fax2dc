@@ -9,6 +9,7 @@ angular.module( 'fax2dc', [
     'services',
     'models',
     'fax2dc.about',
+    'fax2dc.donate',
     'fax2dc.home',
     'fax2dc.intro',
     'fax2dc.sidebar'

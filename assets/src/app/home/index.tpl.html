@@ -28,47 +28,26 @@
           <div class="col-xs-1"></div>
 
           <!--democrat filter-->
-          <div class="form-group filterCheckbox col-xs-2">
+          <!--<div class="form-group filterCheckbox col-xs-2">
             <label>
               <input ng-click="includeParty('D')" type="checkbox" value="D">
               Democrat
             </label>
-          </div>
+          </div>-->
           <!--republican filter-->
-          <div class="form-group filterCheckbox col-xs-2">
+          <!--<div class="form-group filterCheckbox col-xs-2">
             <label>
               <input ng-click="includeParty('R')" type="checkbox" value="R">
               Republican
             </label>
-          </div>
+          </div>-->
           <!--independent filter-->
-          <div class="form-group filterCheckbox col-xs-2">
+          <!--<div class="form-group filterCheckbox col-xs-2">
             <label>
               <input ng-click="includeParty('I')" type="checkbox" value="I">
               Independent
             </label>
-          </div>
-          <div class="form-group filterCheckbox col-xs-2">
-            <label>
-              <input ng-click="includeParty('Sen')" type="checkbox" value="I">
-              Senate
-            </label>
-          </div>
-          <div class="form-group filterCheckbox col-xs-2">
-            <label>
-              <input ng-click="includeParty('Rep')" type="checkbox" value="I">
-              House
-            </label>
-          </div>
-          <!--selected filter-->
-          <div class="form-group filterCheckbox col-xs-2">
-            <label>
-              <input ng-click="showSelected = !showSelected" type="checkbox" value="">
-              Show Selected
-            </label>
-          </div>
-
-          <div class="col-xs-6"></div>
+          </div>-->
 
           <!--house filter-->
           <div class="form-group filterCheckbox col-xs-2">
@@ -84,6 +63,16 @@
               Senate
             </label>
           </div>
+          <!--selected filter-->
+          <div class="form-group filterCheckbox col-xs-2">
+            <label>
+              <input ng-click="showSelected = !showSelected" type="checkbox" value="">
+              Show Selected
+            </label>
+          </div>
+
+          <div class="col-xs-6"></div>
+
         </form>
       </div>
       <table class='table table-fixed'>
@@ -96,8 +85,10 @@
           </tr>
         </thead>
           <tbody>
-            <tr ng-repeat="legislator in legislators | filter:legislatorFilter
-                            | filter:partyFilter | filter:titleFilter
+            <tr ng-repeat="legislator in legislators 
+                            | filter:legislatorFilter
+                            | filter:partyFilter 
+                            | filter:titleFilter
                             | filter:selectedFilter
                             | orderBy:sortField:reverse"
                 ng-click="selectLegislator(legislator)"
@@ -113,7 +104,7 @@
   </div>
 
   <div class='row form-container'>
-    <form name="faxForm" id="faxForm" ng-submit="faxForm.$valid && submitFax()" novalidate>
+    <form name="faxForm" id="faxForm" ng-submit="submitFax()" novalidate>
       <div class="col-xs-8">
         <div class="form-group">
           <label>Message</label>
@@ -123,11 +114,11 @@
       <div class="col-xs-4">
         <div class="form-group">
           <label>Name</label>
-          <input type="text" class="form-control" required="true" placeholder="your name"ng-model="newFax.name" required/>
+          <input type="text" class="form-control" required="true" placeholder="your name" ng-model="newFax.name" required/>
         </div>
         <div class="form-group">
           <label>Email</label>
-          <input type="email" class="form-control" required="true" placeholder="wow.look@you.com"ng-model="newFax.email" required/>
+          <input type="email" class="form-control" required="true" placeholder="cre8@fax2dc.com" ng-model="newFax.email" required/>
         </div>
         <label style="display:none">Leave this field blank:</label>
         <input type="text" style="display:none" autofill="off" ng-model="newFax.trap" />
@@ -136,7 +127,14 @@
       </div>
     </form>
   </div>
-
 </div>
+
+
+<h3>{{faxCount}} faxes sent!</h3>
+<h5>{{faxCount * .07}} dollars spent!</h4>
+<a href="/donate">donate</a>
+<p>donations recieved</p>
+<p>sponsor area!</p>
+
 <img class="img-responsive" src="images/capitol-icon.png">
 <img class="img-responsive" src="images/congress.jpg">

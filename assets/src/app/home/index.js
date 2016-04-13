@@ -12,16 +12,21 @@ angular.module( 'fax2dc.home' , [])
         resolve: {
             legislators: function(LegislatorModel) {
                 return LegislatorModel.getAll();
+            },
+            faxCount: function(FaxModel){
+                return FaxModel.count();
             }
         }
     });
 })
 
-.controller('HomeCtrl', function HomeController( $scope, config, FaxModel, $stateParams, $location, titleService, legislators) {
-
+.controller('HomeCtrl', function HomeController( $scope, config, FaxModel, $stateParams, $location, titleService, legislators, faxCount) {
     titleService.setTitle('Fax2DC');
+    //we need to set a cap on faxes sent by donations recieved.. popup after sent fax
 
     $scope.legislators = legislators;
+    $scope.faxCount = faxCount.count;
+    $scope.newFax = {}
     $scope.stateAbrvs = _.uniq(legislators.map(function(curr, val, index) {
       return curr.state;
     })).sort();
@@ -32,37 +37,42 @@ angular.module( 'fax2dc.home' , [])
     $scope.showSelected = false;
 
     $scope.legislatorRequiredMessage = '';
-
     // $scope.selectedLegislators = [];
 
     $scope.submitFax = function() {
-      if ($scope.newFax.trap !== undefined)
+      if ($scope.newFax.trap !== undefined){
         console.log('get out'); // display fake successful form submission
+      }
       else {
+        
         var selectedLegislators = $scope.legislators.filter(function(val, ind, arr) {
             return val.selected === true;
         });
 
         if (selectedLegislators.length === 0) {
           $scope.legislatorRequiredMessage = 'You must select at least one legislator above.'
-        } else {
+        } 
+        else if (!$scope.newFax.faxContent) {
+          $scope.legislatorRequiredMessage = 'Say Something!';
+        } 
+        else if (!$scope.newFax.name) {
+          $scope.legislatorRequiredMessage = 'where\'s your name?';
+        } 
+        else if (!$scope.newFax.email) {
+          $scope.legislatorRequiredMessage = 'where\'s your email?';
+        } 
+
+        else {
           $scope.legislatorRequiredMessage = '';
           $scope.newFax.legislatorList = selectedLegislators;
-          // console.log($scope.newFax);
+          //add confirmation modal popup
+          //spam detection etc
           FaxModel.create($scope.newFax).then(function(){
-            console.log(FaxModel.getAll());
-              //reinitialize
-              // $scope.newFax.name = "";
-              // $scope.newFax.email = "";
-              // $scope.newFax.faxContent = "";
-              // $scope.newFax.legislatorList = [];
-
+            //console.log(FaxModel.getAll());
           });
         }
+
       }
-
-      //redirect?
-
     };
 
     $scope.changeSorting = function(field) {
@@ -72,24 +82,29 @@ angular.module( 'fax2dc.home' , [])
 
     $scope.includeParty = function(party) {
       var i = _.indexOf($scope.partyIncludes, party);
-      if (i > -1)
+      if (i > -1){
         $scope.partyIncludes.splice(i, 1);
-      else
+      }
+      else{
         $scope.partyIncludes.push(party);
+      }
     };
 
     $scope.includeTitle = function(title) {
       var i = _.indexOf($scope.titleIncludes, title);
-      if (i > -1)
+      if (i > -1){
         $scope.titleIncludes.splice(i, 1);
-      else
+      }
+      else{
         $scope.titleIncludes.push(title);
+      }
     };
 
     $scope.partyFilter = function(legislator) {
       if ($scope.partyIncludes.length > 0) {
-        if (_.indexOf($scope.partyIncludes, legislator.party) < 0)
+        if (_.indexOf($scope.partyIncludes, legislator.party) < 0){
           return;
+        }
       }
       return legislator;
     };
@@ -104,10 +119,12 @@ angular.module( 'fax2dc.home' , [])
 
     $scope.selectedFilter = function(legislator) {
       if ($scope.showSelected) {
-        if (legislator.selected === true)
+        if (legislator.selected === true){
           return legislator;
+        }
         return;
-      } else {
+      } 
+      else {
         return legislator;
       }
     };
