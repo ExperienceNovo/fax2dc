@@ -1,17 +1,15 @@
-
-<div>
-  <img class="img-responsive" src="images/capitol.jpg">
-  <img class="img-responsive" src="images/capitol-icon.png">
+<div style="position: relative; left: 0; top: 0;">
+  <img class="img-responsive" src="images/capitol.jpg" style="position: relative; top: 0; left: 0;"/>
+  <p style="position: absolute; top: 150px; left: 250px;color: white; font-size: 24px;">Fax2DC</p>
+  <img class="img-responsive" src="images/capitol-icon.png" style="position: absolute; top: 150px; left: 250px;"/>
 </div>
+<div style="height:100px;"></div>
 
-
-<h3>Send Fax</h3>
+<h3>Send Fax</h3><hr><br>
 <div class="container">
-
   <div class="row">
     <div class="panel panel-default">
       <div class="panel-heading">
-
         <form id="tableFilters" class="row">
           <!--Search bar-->
           <div class="form-group col-xs-3">
@@ -24,31 +22,7 @@
               <option ng-repeat="stateAbrv in stateAbrvs" value="{{stateAbrv}}">{{stateAbrv}}</option>
             </select>
           </div>
-
           <div class="col-xs-1"></div>
-
-          <!--democrat filter-->
-          <!--<div class="form-group filterCheckbox col-xs-2">
-            <label>
-              <input ng-click="includeParty('D')" type="checkbox" value="D">
-              Democrat
-            </label>
-          </div>-->
-          <!--republican filter-->
-          <!--<div class="form-group filterCheckbox col-xs-2">
-            <label>
-              <input ng-click="includeParty('R')" type="checkbox" value="R">
-              Republican
-            </label>
-          </div>-->
-          <!--independent filter-->
-          <!--<div class="form-group filterCheckbox col-xs-2">
-            <label>
-              <input ng-click="includeParty('I')" type="checkbox" value="I">
-              Independent
-            </label>
-          </div>-->
-
           <!--house filter-->
           <div class="form-group filterCheckbox col-xs-2">
             <label>
@@ -70,9 +44,7 @@
               Show Selected
             </label>
           </div>
-
           <div class="col-xs-6"></div>
-
         </form>
       </div>
       <table class='table table-fixed'>
@@ -102,7 +74,6 @@
       </table>
     </div>
   </div>
-
   <div class='row form-container'>
     <form name="faxForm" id="faxForm" ng-submit="submitFax()" novalidate>
       <div class="col-xs-8">
@@ -129,12 +100,23 @@
   </div>
 </div>
 
+<div style="height:100px;"></div>
 
-<h3>{{faxCount}} faxes sent!</h3>
-<h5>{{faxCount * .07}} dollars spent!</h4>
-<a href="/donate">donate</a>
-<p>donations recieved</p>
-<p>sponsor area!</p>
+<div>
+  <h3>{{faxCount}} faxes sent.</h3>
+  <h5>{{faxCount * .07}} dollars spent.</h5>
+  <h5>{{faxCount * .07}} donated.</h5>
+  <br><br>
+  <a class="btn btn-info" href="/donate"><h5>donate</h5></a>
+  <a class="btn btn-info" href="#"><h5>sponsor</h5></a>
+  <!--<p>donations recieved</p>-->
+  <!--<p>sponsor area!</p>-->
+</div>
 
-<img class="img-responsive" src="images/capitol-icon.png">
-<img class="img-responsive" src="images/congress.jpg">
+<div style="height:100px;"></div>
+
+<div style="position: relative; left: 0; top: 0;">
+  <img class="img-responsive" src="images/congress.jpg" style="position: relative; top: 0; left: 0;"/>
+  <img class="img-responsive" src="images/capitol-icon.png" style="position: absolute; top: 30px; left: 70px;"/>
+</div>
+
