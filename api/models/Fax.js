@@ -20,20 +20,11 @@ module.exports = {
             type: 'string',
             required: true
         },
-        legislatorList: {
-            type: 'array',
+        legislator: {
+            type: 'json',
             required: true
         }
     },
-
-    // afterCreate: function (post, next) {
-    //     // set message.user = to appropriate user model
-    //     User.getOne(post.user)
-    //     .spread(function(user) {
-    //         post.user = user;
-    //         next(null, post);
-    //     });
-    // },
 
     getAll: function() {
         return Fax.find()
@@ -41,12 +32,13 @@ module.exports = {
         .then(function (models) {
             return [models];
         });
+    },
+
+    getOne: function(id) {
+        return Fax.findOne(id)
+        .then(function (model) {
+            return [model];
+        });
     }
-		//
-    // getOne: function(id) {
-    //     return Post.findOne(id)
-    //     .then(function (model) {
-    //         return [model];
-    //     });
-    // }
+    
 };

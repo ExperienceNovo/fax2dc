@@ -43,35 +43,42 @@ module.exports = {
 		//or have a list of legislators stored in the db.. save them as a related model
 		//since we have to pay 7cents per page.. lets think about it. 
 
-		var model = {
-			name: req.param('name'),
-			email: req.param('email'),
-			faxContent: req.param('faxContent'),
-			legislatorList: req.param('legislatorList')
-		};
+		var legislatorList = req.param('legislatorList')
 
-		Fax.create(model)
-		.exec(function(err, fax) {
-			if (err) {
-				return console.log(err);
-			}
-			else {
-				Fax.publishCreate(fax);
-				res.json(fax);
-			}
-		});
+		for (x in legislatorList){
+			console.log(legislatorList[x])
 
-		//7cents per page... too much
-		//var Phaxio = require('phaxio'),
-		//  phaxio = new Phaxio('e222........................', '62e5........................'),
-		//  callback = function(err,data){console.log(data);};
+			var model = {
+				name: req.param('name'),
+				email: req.param('email'),
+				faxContent: req.param('faxContent'),
+				legislator: legislatorList[x]
+			};
 
-		//phaxio.sendFax({
-		//    to: '13165555555',
-		//  string_data: 'Faxing from Node.js',
-		//  string_data_type: 'text'
-		//},callback);
-		//we can use a hacky solution to send though a free fax api as well..
+			Fax.create(model)
+			.exec(function(err, fax) {
+				if (err) {
+					return console.log(err);
+				}
+				else {
+					Fax.publishCreate(fax);
+					//res.json(fax);
+				}
+			});
+
+			//7cents per page... too much
+			//var Phaxio = require('phaxio'),
+			//  phaxio = new Phaxio('e222........................', '62e5........................'),
+			//  callback = function(err,data){console.log(data);};
+
+			//phaxio.sendFax({
+			//    to: '13165555555',
+			//  string_data: 'Faxing from Node.js',
+			//  string_data_type: 'text'
+			//},callback);
+			//we can use a hacky solution to send though a free fax api as well..
+
+		}
 
 	},
 

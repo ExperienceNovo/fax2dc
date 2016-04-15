@@ -37,7 +37,6 @@ angular.module( 'fax2dc.home' , [])
     $scope.showSelected = false;
 
     $scope.legislatorRequiredMessage = '';
-    // $scope.selectedLegislators = [];
 
     $scope.submitFax = function() {
       if ($scope.newFax.trap !== undefined){
@@ -51,6 +50,9 @@ angular.module( 'fax2dc.home' , [])
 
         if (selectedLegislators.length === 0) {
           $scope.legislatorRequiredMessage = 'You must select at least one legislator above.'
+        } 
+        else if (selectedLegislators.length >= 8) {
+          $scope.legislatorRequiredMessage = 'You can only select a max of 8 legislators at once'
         } 
         else if (!$scope.newFax.faxContent) {
           $scope.legislatorRequiredMessage = 'Say Something!';
@@ -159,3 +161,55 @@ angular.module( 'fax2dc.home' , [])
     });
 
 });
+
+
+/*
+$scope.openLogin = function (size) {
+var modalInstance = $uibModal.open({
+animation: $scope.animationsEnabled,
+templateUrl: 'game/loginmodal.tpl.html',
+controller: 'LoginModalInstanceCtrl',
+size: size,
+resolve: {
+selectedProducts: function () {
+return $scope.selectedProducts;
+},
+newBox: function () {
+return $scope.newBox;
+},
+game: function () {
+return $scope.game;
+}
+}
+});
+
+modalInstance.result.then(function () {
+}, function () {
+console.log('Modal dismissed at: ' + new Date());
+});
+};
+
+$scope.toggleAnimation = function () {
+$scope.animationsEnabled = !$scope.animationsEnabled;
+};
+
+
+.controller('ModalInstanceCtrl', function ($scope, $uibModalInstance) {
+$scope.ok = function () {
+$uibModalInstance.close();
+};
+$scope.cancel = function () {
+$uibModalInstance.dismiss('cancel');
+};
+})
+*/
+
+
+
+
+
+
+
+
+
+
