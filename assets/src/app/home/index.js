@@ -1,4 +1,5 @@
-angular.module( 'fax2dc.home' , [])
+angular.module( 'fax2dc.home', [
+])
 
 .config(function config( $stateProvider ) {
     $stateProvider.state('home', {
@@ -20,61 +21,57 @@ angular.module( 'fax2dc.home' , [])
     });
 })
 
-.controller('HomeCtrl', function HomeController( $scope, config, FaxModel, $stateParams, $location, titleService, legislators, faxCount, FaxModel, $sailsSocket) {
+.controller('HomeCtrl', function HomeController( $scope, config, FaxModel, $stateParams, $location, titleService, legislators, faxCount, FaxModel, $uibModal, $sailsSocket) {
     titleService.setTitle('Fax2DC');
-    //we need to set a cap on faxes sent by donations recieved.. popup after sent fax
-
     $scope.legislators = legislators;
     $scope.faxCount = faxCount.count;
     $scope.newFax = {}
     $scope.stateAbrvs = _.uniq(legislators.map(function(curr, val, index) {
-      return curr.state;
+        return curr.state;
     })).sort();
     $scope.partyIncludes = [];
     $scope.titleIncludes = [];
     $scope.reverse = false;
     $scope.sortField = 'state';
     $scope.showSelected = false;
-
     $scope.legislatorRequiredMessage = '';
+    $scope.confirm='';
 
     $scope.submitFax = function() {
-      if ($scope.newFax.trap !== undefined){
-        console.log('get out'); // display fake successful form submission
-      }
-      else {
-
-        var selectedLegislators = $scope.legislators.filter(function(val, ind, arr) {
-            return val.selected === true;
-        });
-
-        if (selectedLegislators.length === 0) {
-          $scope.legislatorRequiredMessage = 'You must select at least one legislator above.'
-        } 
-        else if (selectedLegislators.length >= 8) {
-          $scope.legislatorRequiredMessage = 'You can only select a max of 8 legislators at once'
-        } 
-        else if (!$scope.newFax.faxContent) {
-          $scope.legislatorRequiredMessage = 'Say Something!';
-        } 
-        else if (!$scope.newFax.name) {
-          $scope.legislatorRequiredMessage = 'where\'s your name?';
-        } 
-        else if (!$scope.newFax.email) {
-          $scope.legislatorRequiredMessage = 'where\'s your email?';
-        } 
-
-        else {
-          $scope.legislatorRequiredMessage = '';
-          $scope.newFax.legislatorList = selectedLegislators;
-          //add confirmation modal popup
-          //spam detection etc
-          FaxModel.create($scope.newFax).then(function(){
-            //console.log(FaxModel.getAll());
-          });
+        if ($scope.newFax.trap !== undefined){
+            console.log('get out'); // display fake successful form submission
         }
+        else {
+            var selectedLegislators = $scope.legislators.filter(function(val, ind, arr) {
+                return val.selected === true;
+            });
 
-      }
+            if (selectedLegislators.length === 0) {
+                $scope.legislatorRequiredMessage = 'You must select at least one legislator above.'
+            } 
+            else if (selectedLegislators.length >= 8) {
+                $scope.legislatorRequiredMessage = 'You can only select a max of 8 legislators at once'
+            } 
+            else if (!$scope.newFax.faxContent) {
+                $scope.legislatorRequiredMessage = 'Say Something!';
+            } 
+            else if (!$scope.newFax.name) {
+                $scope.legislatorRequiredMessage = 'where\'s your name?';
+            } 
+            else if (!$scope.newFax.email) {
+                $scope.legislatorRequiredMessage = 'where\'s your email?';
+            } 
+
+            else {
+                $scope.legislatorRequiredMessage = '';
+                $scope.newFax.legislatorList = selectedLegislators;
+                $scope.openConfirmation();
+                //FaxModel.create($scope.newFax).then(function(){
+                //    $scope.newFax = {}
+                //});
+            }
+
+        }
     };
 
     $scope.changeSorting = function(field) {
@@ -150,6 +147,29 @@ angular.module( 'fax2dc.home' , [])
                     : legislator.party === 'R' ? ' danger' : ' warning';
     };
 
+    $scope.openConfirmation = function (size) {
+        var modalInstance = $uibModal.open({
+            animation: $scope.animationsEnabled,
+            templateUrl: 'home/confirmation.tpl.html',
+            controller: 'ConfirmationModalInstanceCtrl',
+            size: size,
+            resolve: {
+                newFax: function () {
+                    return $scope.newFax;
+                },
+            }
+        })
+        .result
+        .then(function (newFax) {
+          $scope.newFax = {}
+          $scope.confirm = 'plase confirm your email to send your fax!';
+        });
+    };
+
+    $scope.toggleAnimation = function () {
+        $scope.animationsEnabled = !$scope.animationsEnabled;
+    };
+
     $sailsSocket.subscribe('fax', function (envelope) {
         switch(envelope.verb) {
             case 'created':
@@ -160,49 +180,20 @@ angular.module( 'fax2dc.home' , [])
         }
     });
 
-});
-
-
-/*
-$scope.openLogin = function (size) {
-var modalInstance = $uibModal.open({
-animation: $scope.animationsEnabled,
-templateUrl: 'game/loginmodal.tpl.html',
-controller: 'LoginModalInstanceCtrl',
-size: size,
-resolve: {
-selectedProducts: function () {
-return $scope.selectedProducts;
-},
-newBox: function () {
-return $scope.newBox;
-},
-game: function () {
-return $scope.game;
-}
-}
-});
-
-modalInstance.result.then(function () {
-}, function () {
-console.log('Modal dismissed at: ' + new Date());
-});
-};
-
-$scope.toggleAnimation = function () {
-$scope.animationsEnabled = !$scope.animationsEnabled;
-};
-
-
-.controller('ModalInstanceCtrl', function ($scope, $uibModalInstance) {
-$scope.ok = function () {
-$uibModalInstance.close();
-};
-$scope.cancel = function () {
-$uibModalInstance.dismiss('cancel');
-};
 })
-*/
+
+.controller('ConfirmationModalInstanceCtrl', function ($scope, $uibModalInstance, FaxModel, newFax) {
+    $scope.newFax = newFax;
+    $scope.ok = function () {
+        FaxModel.create($scope.newFax);
+        $scope.newFax = {}
+        $uibModalInstance.close($scope.newFax);
+    };
+    $scope.cancel = function () {
+        $uibModalInstance.dismiss('cancel');
+    };
+})
+
 
 
 

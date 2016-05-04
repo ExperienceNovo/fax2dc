@@ -33,7 +33,8 @@ angular.module( 'fax2dc', [
     moment.locale('en');
 })
 
-.controller( 'AppCtrl', function AppCtrl ( $scope, config, $rootScope ) {
+.controller( 'AppCtrl', function AppCtrl ( $scope, config, $rootScope) {
     config.currentUser = window.currentUser;
+
 });
 

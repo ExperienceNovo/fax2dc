@@ -10,41 +10,43 @@
   <div class="row">
     <div class="panel panel-default">
       <div class="panel-heading">
-        <form id="tableFilters" class="row">
-          <!--Search bar-->
-          <div class="form-group col-xs-3">
-            <input ng-model="legislatorFilter.$" class="form-control" type="text" placeholder="search"/>
+        <form id="tableFilters">
+          <div class="row">
+            <!--Search bar-->
+            <div class="form-group col-xs-6">
+              <input ng-model="legislatorFilter.$" class="form-control" type="text" placeholder="search"/>
+            </div>
+            <!--State select-->
+            <div class="form-group col-xs-6">
+              <select ng-model="legislatorFilter.state" class="form-control">
+                <option value="">state</option>
+                <option ng-repeat="stateAbrv in stateAbrvs" value="{{stateAbrv}}">{{stateAbrv}}</option>
+              </select>
+            </div>
           </div>
-          <!--State select-->
-          <div class="form-group col-xs-2">
-            <select ng-model="legislatorFilter.state" class="form-control">
-              <option value="">state</option>
-              <option ng-repeat="stateAbrv in stateAbrvs" value="{{stateAbrv}}">{{stateAbrv}}</option>
-            </select>
+          <div class="row">
+            <!--house filter-->
+            <div class="form-group filterCheckbox col-xs-6">
+              <label>
+                <input ng-click="includeTitle('Rep')" type="checkbox" value="Rep">
+                House
+              </label>
+            </div>
+            <!--senate filter-->
+            <div class="form-group filterCheckbox col-xs-6">
+              <label>
+                <input ng-click="includeTitle('Sen')" type="checkbox" value="Sen">
+                Senate
+              </label>
+            </div>
+            <!--selected filter-->
+            <!--<div class="form-group filterCheckbox col-xs-4">
+              <label>
+                <input ng-click="showSelected = !showSelected" type="checkbox" value="">
+                Show Selected
+              </label>
+            </div>-->
           </div>
-          <div class="col-xs-1"></div>
-          <!--house filter-->
-          <div class="form-group filterCheckbox col-xs-2">
-            <label>
-              <input ng-click="includeTitle('Rep')" type="checkbox" value="Rep">
-              House
-            </label>
-          </div>
-          <!--senate filter-->
-          <div class="form-group filterCheckbox col-xs-2">
-            <label>
-              <input ng-click="includeTitle('Sen')" type="checkbox" value="Sen">
-              Senate
-            </label>
-          </div>
-          <!--selected filter-->
-          <div class="form-group filterCheckbox col-xs-2">
-            <label>
-              <input ng-click="showSelected = !showSelected" type="checkbox" value="">
-              Show Selected
-            </label>
-          </div>
-          <div class="col-xs-6"></div>
         </form>
       </div>
       <table class='table table-fixed'>
@@ -102,13 +104,13 @@
 
 <div style="height:100px;"></div>
 
+<h1>{{confirm}}</h1>
+
 <div>
   <h3>{{faxCount}} faxes sent.</h3>
   <h5>{{faxCount * .07}} dollars spent.</h5>
-  <h5>{{faxCount * .07}} donated.</h5>
   <br><br>
   <a class="btn btn-info" href="/donate"><h5>donate</h5></a>
-  <a class="btn btn-info" href="#"><h5>sponsor</h5></a>
   <!--<p>donations recieved</p>-->
   <!--<p>sponsor area!</p>-->
 </div>
