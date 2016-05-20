@@ -20,6 +20,28 @@ module.exports = {
 		});
 	},
 
+	getOne: function(req, res) {
+		Post.getOne(req.param('id'))
+		.spread(function(model) {
+			Post.subscribe(req, model);
+			res.json(model);
+		})
+		.fail(function(err) {
+			res.send(404);
+		});
+	},
+
+	getUnapproved: function(req, res) {
+		Fax.find()
+		.where({isApproved:false})
+		.then(function(models){
+			res.json(models);
+		})
+		.catch(function(err){
+			console.log(err);
+		})
+	},
+
 	getCount: function(req, res) {
 		Fax.count()
 		.exec(function(err, faxCount) {
@@ -33,7 +55,6 @@ module.exports = {
 	getByLegislator: function(req, res) {
 		//Fax.find()
 		//.where()
-
 	},
 
 
@@ -76,11 +97,27 @@ module.exports = {
 			//  string_data: 'Faxing from Node.js',
 			//  string_data_type: 'text'
 			//},callback);
-			//we can use a hacky solution to send though a free fax api as well..
 
 		}
 
 	},
+
+	update: function(req, res) {
+		var model = {
+			id: req.param('id'),
+		}
+		if (req.param('isApproved')){
+			model.isApproved = true
+		}
+		Fax.update({id: req.param('id')}, model)
+		.then(function(result){
+			return res.json(result);
+		})
+		.catch(function(err){
+			return res.negotiate(err);
+		})
+	},
+
 
 
 };

@@ -6,6 +6,16 @@ angular.module('models.fax', ['lodash', 'services', 'sails.io',])
         return $sailsSocket.get(url).then(success, error);
     };
 
+    this.getOne = function(model) {
+        var url = utils.prepareUrl('fax/'+model);
+        return $sailsSocket.get(url).then(success, error);
+    };
+
+    this.getUnApproved = function(model) {
+        var url = utils.prepareUrl('fax/unapproved/');
+        return $sailsSocket.get(url).then(success, error);
+    };
+
     this.count = function(newModel) {
         var url = utils.prepareUrl('fax/count');
         return $sailsSocket.get(url).then(success, error);
@@ -13,6 +23,11 @@ angular.module('models.fax', ['lodash', 'services', 'sails.io',])
 
     this.create = function(newModel) {
         var url = utils.prepareUrl('fax');
+        return $sailsSocket.post(url, newModel).then(success, error);
+    };
+
+    this.create = function(newModel) {
+        var url = utils.prepareUrl('fax/update/'+newModel);
         return $sailsSocket.post(url, newModel).then(success, error);
     };
 
