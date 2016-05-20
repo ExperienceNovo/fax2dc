@@ -11,12 +11,12 @@ angular.module('models.fax', ['lodash', 'services', 'sails.io',])
         return $sailsSocket.get(url).then(success, error);
     };
 
-    this.getUnApproved = function(model) {
-        var url = utils.prepareUrl('fax/unapproved/');
+    this.getUnApproved = function() {
+        var url = utils.prepareUrl('fax/unapproved');
         return $sailsSocket.get(url).then(success, error);
     };
 
-    this.count = function(newModel) {
+    this.count = function() {
         var url = utils.prepareUrl('fax/count');
         return $sailsSocket.get(url).then(success, error);
     };

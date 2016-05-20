@@ -21,9 +21,9 @@ module.exports = {
 	},
 
 	getOne: function(req, res) {
-		Post.getOne(req.param('id'))
+		Fax.getOne(req.param('id'))
 		.spread(function(model) {
-			Post.subscribe(req, model);
+			Fax.subscribe(req, model);
 			res.json(model);
 		})
 		.fail(function(err) {

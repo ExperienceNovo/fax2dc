@@ -36,8 +36,7 @@ module.exports.routes = {
   'get /admin': 'HomeController.index',
   'get /about': 'HomeController.index',
   'get /donate': 'HomeController.index',
-  'get /fax/:id': 'FaxController.getOne',
-
+  'get /fax/:id': 'HomeController.index',
 
   'get /login': 'HomeController.index',
   'get /logout': 'AuthController.logout',
@@ -58,11 +57,11 @@ module.exports.routes = {
    * Fax routes
    */
   'get /api/fax': 'FaxController.getAll',
-  'get /api/fax/:id': 'FaxController.getOne',
   'get /api/fax/count': 'FaxController.getCount',
   'get /api/fax/unapproved': 'FaxController.getUnapproved',
   'post /api/fax/update': 'FaxController.update',
   'post /api/fax': 'FaxController.create',
+  'get /api/fax/:id': 'FaxController.getOne',
 
   /**
    * Legislator routes
