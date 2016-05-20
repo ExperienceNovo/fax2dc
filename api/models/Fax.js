@@ -23,7 +23,15 @@ module.exports = {
         legislator: {
             type: 'json',
             required: true
-        }
+        },
+        isApproved: {
+            type: 'boolean',
+            defaultsTo: false,
+        },
+        isVerified: {
+            type: 'boolean',
+            defaultsTo: false,
+        },
     },
 
     getAll: function() {

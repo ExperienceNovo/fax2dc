@@ -18,7 +18,7 @@ angular.module( 'fax2dc.admin', [
 	});
 })
 
-.controller( 'AdminCtrl', function AdminCtrl(config, faxes, FaxModel, $location, $scope, titleService, ) {
+.controller( 'AdminCtrl', function AdminCtrl(config, faxes, FaxModel, $location, $scope, titleService ) {
 	titleService.setTitle('Admin - Fax2DC');
 	//if(!config.currentUser){$location.path('/')}
 	$scope.faxes = faxes;
