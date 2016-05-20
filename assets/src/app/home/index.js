@@ -185,10 +185,9 @@ angular.module( 'fax2dc.home', [
 .controller('ConfirmationModalInstanceCtrl', function ($scope, $uibModalInstance, FaxModel, newFax) {
     $scope.newFax = newFax;
     $scope.ok = function () {
-        FaxModel.create($scope.newFax).then(function(){
-          $scope.newFax = {}
-          $uibModalInstance.close($scope.newFax);
-        });
+        FaxModel.create($scope.newFax);
+        $scope.newFax = {}
+        $uibModalInstance.close($scope.newFax);
     };
     $scope.cancel = function () {
         $uibModalInstance.dismiss('cancel');
