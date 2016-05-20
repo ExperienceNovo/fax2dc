@@ -10,7 +10,7 @@ angular.module( 'fax2dc.admin', [
 				templateUrl: 'admin/index.tpl.html'
 			}
 		},
-		resolve{
+		resolve:{
 			faxes: function(FaxModel){
 				return FaxModel.getUnApproved();
 			}
