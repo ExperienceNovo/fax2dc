@@ -26,7 +26,7 @@ angular.module('models.fax', ['lodash', 'services', 'sails.io',])
         return $sailsSocket.post(url, newModel).then(success, error);
     };
 
-    this.create = function(newModel) {
+    this.update = function(newModel) {
         var url = utils.prepareUrl('fax/update/'+newModel);
         return $sailsSocket.post(url, newModel).then(success, error);
     };
