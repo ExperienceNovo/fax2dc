@@ -60,10 +60,6 @@ module.exports = {
 
 	create: function (req, res) {
 
-		//we need to make a new fax object per selected legislator and not store an array... ?? maybe..?? 
-		//or have a list of legislators stored in the db.. save them as a related model
-		//since we have to pay 7cents per page.. lets think about it. 
-
 		var legislatorList = req.param('legislatorList')
 
 		for (x in legislatorList){
@@ -87,15 +83,15 @@ module.exports = {
 				}
 			});
 
-			//7cents per page... too much
+			//3cents per page.
 			//var Phaxio = require('phaxio'),
 			//  phaxio = new Phaxio('e222........................', '62e5........................'),
 			//  callback = function(err,data){console.log(data);};
 
 			//phaxio.sendFax({
-			//    to: '13165555555',
+			//  to: '13165555555',
 			//  string_data: 'Faxing from Node.js',
-			//  string_data_type: 'text'
+			//  string_data_type: 'html'
 			//},callback);
 
 		}
