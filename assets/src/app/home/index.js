@@ -22,7 +22,7 @@ angular.module( 'fax2dc.home', [
 })
 
 .controller('HomeCtrl', function HomeController( $scope, config, FaxModel, $stateParams, $location, titleService, legislators, faxCount, FaxModel, $uibModal, $sailsSocket) {
-    titleService.setTitle('Fax2DC');
+    titleService.setTitle('FAX2DC');
     $scope.legislators = legislators;
     $scope.faxCount = faxCount.count;
     $scope.newFax = {}
