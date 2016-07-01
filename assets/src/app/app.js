@@ -13,8 +13,7 @@ angular.module( 'fax2dc', [
     'fax2dc.donate',
     'fax2dc.fax',
     'fax2dc.home',
-    'fax2dc.intro',
-    'fax2dc.sidebar'
+    'fax2dc.intro'
 ])
 
 .config( function myAppConfig ( $stateProvider, $urlRouterProvider, $locationProvider ) {

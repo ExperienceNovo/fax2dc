@@ -110,13 +110,6 @@ h1,h2,h3 {
 	font-weight:800
 }
 
-hr {
-	margin-top:20px;
-	margin-bottom:20px;
-	border:0;
-	width:20%;
-	border-top:1px solid #14B795
-}
 
 .flex {
 	display:flex;
