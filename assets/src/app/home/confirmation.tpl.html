@@ -1,6 +1,6 @@
 <div>
   <div class="modal-header">
-    <h3 class="modal-title" style="font-weight:bold">Send the fax</h3>
+    <h2>is this correct?</h2>
   </div>
   <div class="modal-body">
 
@@ -9,18 +9,20 @@
     <p>{{newFax.name}}</p>
 
     <h4>Email:</h4>
-    {{newFax.email}}
+    <p>{{newFax.email}}</p>
 
     <h4>Legislator List:</h4>
     <div ng-repeat="legislator in newFax.legislatorList">
       <p>{{legislator.first_name}} {{legislator.last_name}}</p>
     </div>
 
-    <h4>Fax Content:</h4>
+    <h4>Fax:</h4>
+
+    <img src="images/FAXbuilding.svg"/>
     <p>{{newFax.faxContent}}</p>
 
     <br>
-    <p>fax2dc is offered as a free ervices and is supported by perople like you</p>
+    <p>Fax2DC is offered as a free service and is supported by people like you!</p>
     <a class="btn btn-info" href="/donate"><h5>donate</h5></a>
 
   </div>
