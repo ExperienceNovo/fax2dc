@@ -12,8 +12,7 @@ angular.module( 'fax2dc', [
     'fax2dc.admin',
     'fax2dc.donate',
     'fax2dc.fax',
-    'fax2dc.home',
-    'fax2dc.intro'
+    'fax2dc.home'
 ])
 
 .config( function myAppConfig ( $stateProvider, $urlRouterProvider, $locationProvider ) {
@@ -36,6 +35,5 @@ angular.module( 'fax2dc', [
 
 .controller( 'AppCtrl', function AppCtrl ( $scope, config, $rootScope) {
     config.currentUser = window.currentUser;
-
 });
 
