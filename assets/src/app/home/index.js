@@ -21,7 +21,7 @@ angular.module( 'fax2dc.home', [
     });
 })
 
-.controller('HomeCtrl', function HomeController( $scope, config, FaxModel, $stateParams, $location, titleService, legislators, faxCount, FaxModel, $uibModal, $sailsSocket) {
+.controller('HomeCtrl',['$scope', 'config', 'FaxModel', '$stateParams', '$location', 'titleService', 'legislators', 'faxCount', 'FaxModel', '$uibModal', '$sailsSocket', function HomeController( $scope, config, FaxModel, $stateParams, $location, titleService, legislators, faxCount, FaxModel, $uibModal, $sailsSocket) {
     titleService.setTitle('FAX2DC');
     $scope.legislators = legislators;
     $scope.faxCount = faxCount.count;
@@ -174,25 +174,25 @@ angular.module( 'fax2dc.home', [
         switch(envelope.verb) {
             case 'created':
                 FaxModel.count().then(function(faxCount){
-                  $scope.faxCount = faxCount.count
+                  $scope.faxCount = faxCount.count;
                 });
                 break;
         }
     });
 
-})
+}])
 
-.controller('ConfirmationModalInstanceCtrl', function ($scope, $uibModalInstance, FaxModel, newFax) {
+.controller('ConfirmationModalInstanceCtrl',['$scope', '$uibModalInstance', 'FaxModel', 'newFax', function ($scope, $uibModalInstance, FaxModel, newFax) {
     $scope.newFax = newFax;
     $scope.ok = function () {
         FaxModel.create($scope.newFax);
-        $scope.newFax = {}
+        $scope.newFax = {};
         $uibModalInstance.close($scope.newFax);
     };
     $scope.cancel = function () {
         $uibModalInstance.dismiss('cancel');
     };
-})
+}]);
 
 
 

@@ -18,12 +18,12 @@ angular.module( 'fax2dc.admin', [
 	});
 })
 
-.controller( 'AdminCtrl', function AdminCtrl(config, faxes, FaxModel, $location, $scope, titleService ) {
+.controller( 'AdminCtrl',['config', 'faxes', 'FaxModel', '$location', '$scope', 'titleService', function AdminCtrl(config, faxes, FaxModel, $location, $scope, titleService ) {
 	titleService.setTitle('Admin - Fax2DC');
 	//if(!config.currentUser){$location.path('/')}
 	$scope.faxes = faxes;
 	$scope.approve = function(fax){
 		fax.isApproved = true;
 		FaxModel.update(fax);
-	}
-});
+	};
+}]);
