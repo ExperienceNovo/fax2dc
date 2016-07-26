@@ -18,7 +18,7 @@ angular.module( 'fax2dc.fax', [
 	});
 })
 
-.controller( 'FaxCtrl',['$scope', '$http', 'titleService', 'fax', function DonateController( $scope, $http, titleService, fax ) {
+.controller( 'FaxCtrl',['$http', '$scope', 'fax', 'titleService', function DonateController( $http, $scope, fax, titleService ) {
 	titleService.setTitle('Fax - Fax2DC');
 	$scope.fax = fax;
 }]);

@@ -13,6 +13,6 @@ angular.module( 'fax2dc.about', [
 	});
 })
 
-.controller( 'AboutCtrl', ['$scope', '$http', 'titleService', 'uiGmapGoogleMapApi', function AboutController( $scope, $http, titleService, uiGmapGoogleMapApi ) {
+.controller( 'AboutCtrl', [ '$http', '$scope', 'titleService', 'uiGmapGoogleMapApi', function AboutController( $http, $scope, titleService, uiGmapGoogleMapApi ) {
 	titleService.setTitle('About - Fax2DC');
 }]);

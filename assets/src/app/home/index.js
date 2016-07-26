@@ -21,11 +21,11 @@ angular.module( 'fax2dc.home', [
     });
 })
 
-.controller('HomeCtrl',['$scope', 'config', 'FaxModel', '$stateParams', '$location', 'titleService', 'legislators', 'faxCount', 'FaxModel', '$uibModal', '$sailsSocket', function HomeController( $scope, config, FaxModel, $stateParams, $location, titleService, legislators, faxCount, FaxModel, $uibModal, $sailsSocket) {
+.controller('HomeCtrl',['$location', '$sailsSocket', '$scope', '$stateParams', '$uibModal', 'config', 'faxCount', 'FaxModel', 'legislators', 'titleService', function HomeController( $location, $sailsSocket, $scope, $stateParams, $uibModal, config, faxCount, FaxModel, legislators, titleService ) {
     titleService.setTitle('FAX2DC');
     $scope.legislators = legislators;
     $scope.faxCount = faxCount.count;
-    $scope.newFax = {}
+    $scope.newFax = {};
     $scope.stateAbrvs = _.uniq(legislators.map(function(curr, val, index) {
         return curr.state;
     })).sort();
@@ -47,10 +47,10 @@ angular.module( 'fax2dc.home', [
             });
 
             if (selectedLegislators.length === 0) {
-                $scope.legislatorRequiredMessage = 'You must select at least one legislator above.'
+                $scope.legislatorRequiredMessage = 'You must select at least one legislator above.';
             } 
             else if (selectedLegislators.length >= 8) {
-                $scope.legislatorRequiredMessage = 'You can only select a max of 8 legislators at once'
+                $scope.legislatorRequiredMessage = 'You can only select a max of 8 legislators at once';
             } 
             else if (!$scope.newFax.faxContent) {
                 $scope.legislatorRequiredMessage = 'Say Something!';
@@ -139,7 +139,7 @@ angular.module( 'fax2dc.home', [
       //   $scope.selectedLegislators.push(legislator);
       // else
       //   $scope.selectedLegislators.splice(i, 1);
-    }
+    };
 
     $scope.getClass = function(legislator) {
       var klass = legislator.selected ? 'selected' : '';
@@ -161,7 +161,7 @@ angular.module( 'fax2dc.home', [
         })
         .result
         .then(function (newFax) {
-          $scope.newFax = {}
+          $scope.newFax = {};
           $scope.confirm = 'plase confirm your email to send your fax!';
         });
     };

@@ -13,6 +13,6 @@ angular.module( 'fax2dc.donate', [
 	});
 })
 
-.controller( 'DonateCtrl',[ '$scope', '$http', 'titleService', 'uiGmapGoogleMapApi', function DonateController( $scope, $http, titleService, uiGmapGoogleMapApi ) {
+.controller( 'DonateCtrl',[ '$http', '$scope', 'titleService', 'uiGmapGoogleMapApi', function DonateController( $http, $scope, titleService, uiGmapGoogleMapApi ) {
 	titleService.setTitle('Donate - Fax2DC');
 }]);
