@@ -11,9 +11,6 @@ angular.module( 'fax2dc.home', [
             }
         },
         resolve: {
-            legislators: function(LegislatorModel) {
-                return LegislatorModel.getAll();
-            },
             faxCount: function(FaxModel){
                 return FaxModel.count();
             }
@@ -21,14 +18,22 @@ angular.module( 'fax2dc.home', [
     });
 })
 
-.controller('HomeCtrl', function HomeController( $scope, config, FaxModel, $stateParams, $location, titleService, legislators, faxCount, FaxModel, $uibModal, $sailsSocket) {
+.controller('HomeCtrl', function HomeController( $scope, config, FaxModel, $stateParams, $location, titleService, faxCount, FaxModel, LegislatorModel, $uibModal, $sailsSocket) {
     titleService.setTitle('FAX2DC');
-    $scope.legislators = legislators;
+    $scope.loading = true;
+    //$scope.legislators = {};
+    LegislatorModel.getAll().then(function(legislators){
+      $scope.loading = false;
+      $scope.legislators = legislators;
+      $scope.stateAbrvs = _.uniq($scope.legislators.map(function(curr, val, index) {
+        return curr.state;
+      })).sort();
+    });
     $scope.faxCount = faxCount.count;
     $scope.newFax = {}
-    $scope.stateAbrvs = _.uniq(legislators.map(function(curr, val, index) {
-        return curr.state;
-    })).sort();
+    //$scope.stateAbrvs = _.uniq($scope.legislators.map(function(curr, val, index) {
+    //    return curr.state;
+    //})).sort();
     $scope.partyIncludes = [];
     $scope.titleIncludes = [];
     $scope.reverse = false;
@@ -47,28 +52,25 @@ angular.module( 'fax2dc.home', [
             });
 
             if (selectedLegislators.length === 0) {
-                $scope.legislatorRequiredMessage = 'You must select at least one legislator above.'
+                $scope.validationMessage = 'You must select at least one legislator above.'
             } 
             else if (selectedLegislators.length >= 8) {
-                $scope.legislatorRequiredMessage = 'You can only select a max of 8 legislators at once'
+                $scope.validationMessage = 'You can only select a max of 8 legislators at once'
             } 
             else if (!$scope.newFax.faxContent) {
-                $scope.legislatorRequiredMessage = 'Say Something!';
+                $scope.validationMessage = 'Say Something!';
             } 
             else if (!$scope.newFax.name) {
-                $scope.legislatorRequiredMessage = 'where\'s your name?';
+                $scope.validationMessage = 'where\'s your name?';
             } 
             else if (!$scope.newFax.email) {
-                $scope.legislatorRequiredMessage = 'where\'s your email?';
+                $scope.validationMessage = 'where\'s your email?';
             } 
 
             else {
-                $scope.legislatorRequiredMessage = '';
+                $scope.validationMessage = '';
                 $scope.newFax.legislatorList = selectedLegislators;
                 $scope.openConfirmation();
-                //FaxModel.create($scope.newFax).then(function(){
-                //    $scope.newFax = {}
-                //});
             }
 
         }
@@ -162,7 +164,7 @@ angular.module( 'fax2dc.home', [
         .result
         .then(function (newFax) {
           $scope.newFax = {}
-          $scope.confirm = 'plase confirm your email to send your fax!';
+          $scope.confirm = 'please confirm your email to send your fax!';
         });
     };
 
@@ -186,7 +188,6 @@ angular.module( 'fax2dc.home', [
     $scope.newFax = newFax;
     $scope.ok = function () {
         FaxModel.create($scope.newFax);
-        $scope.newFax = {}
         $uibModalInstance.close($scope.newFax);
     };
     $scope.cancel = function () {
