@@ -12,13 +12,13 @@ angular.module( 'fax2dc.fax', [
 		},
 		resolve:{
 			fax: function(FaxModel, $stateParams){
-				return FaxModel.getOne($stateParams.id)
+				return FaxModel.getOne($stateParams.id);
 			}
 		}
 	});
 })
 
-.controller( 'FaxCtrl', function DonateController( $scope, $http, titleService, fax ) {
+.controller( 'FaxCtrl',['$http', '$scope', 'fax', 'titleService', function DonateController( $http, $scope, fax, titleService ) {
 	titleService.setTitle('Fax - Fax2DC');
 	$scope.fax = fax;
-});
+}]);
