@@ -19,6 +19,7 @@
         <div class="col-lg-8 col-lg-offset-2">
             <h2>{{faxCount}} Faxes Sent.</h2>
             <div class="spacing-25"></div>
+            <h2 ng-show="confrim">{{confirm}}</h2>
         </div>
     </div>
     <form name="faxForm" id="faxForm" ng-submit="submitFax()" novalidate>
