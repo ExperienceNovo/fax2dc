@@ -21,7 +21,6 @@ angular.module( 'fax2dc.home', [
 .controller('HomeCtrl', function HomeController( $scope, config, FaxModel, $stateParams, $location, titleService, faxCount, FaxModel, LegislatorModel, $uibModal, $sailsSocket) {
     titleService.setTitle('FAX2DC');
     $scope.loading = true;
-    //$scope.legislators = {};
     LegislatorModel.getAll().then(function(legislators){
       $scope.loading = false;
       $scope.legislators = legislators;
@@ -31,9 +30,6 @@ angular.module( 'fax2dc.home', [
     });
     $scope.faxCount = faxCount.count;
     $scope.newFax = {}
-    //$scope.stateAbrvs = _.uniq($scope.legislators.map(function(curr, val, index) {
-    //    return curr.state;
-    //})).sort();
     $scope.partyIncludes = [];
     $scope.titleIncludes = [];
     $scope.reverse = false;

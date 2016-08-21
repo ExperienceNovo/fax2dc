@@ -2,6 +2,7 @@ angular.module( 'fax2dc', [
     'ui.router',
     'sails.io',
     'angularMoment',
+    'duScroll',
     'lodash',
     'ui.bootstrap',
     'uiGmapgoogle-maps',
