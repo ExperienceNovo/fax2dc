@@ -23,11 +23,11 @@
               <h2>{{confirm}}</h2>
               <div class="spacing-25"></div>
             </div>
-
         </div>
     </div>
     <form name="faxForm" id="faxForm" ng-submit="submitFax()">
       <div class="col-xs-8">
+        <div class="spacing-5"></div>
         <div class="form-group">
           <label>Message</label>
           <textarea class="form-control" rows="10" ng-model="newFax.faxContent"></textarea>
@@ -35,10 +35,12 @@
       </div>
       <div class="col-xs-4">
         <div class="form-group">
+          <div class="spacing-5"></div>
           <label>Name</label>
           <input type="text" class="form-control" placeholder="your name" ng-model="newFax.name"/>
         </div>
         <div class="form-group">
+          <div class="spacing-5"></div>
           <label>Email</label>
           <input type="email" class="form-control" placeholder="cre8@fax2dc.com" ng-model="newFax.email"/>
         </div>
@@ -89,34 +91,39 @@
           </div>
         </form>
       </div>
-      <table class='table table-fixed'>
-        <span ng-show="loading == true">
-          Loading&nbsp;<i class="fa fa-spinner fa-spin"></i>
-        </span>
-        <thead>
-          <tr>
-            <th class="col-xs-4"><a ng-click="changeSorting('last_name')">Last</a></th>
-            <th class="col-xs-4"><a ng-click="changeSorting('first_name')">First</a></th>
-            <th class="col-xs-2"><a ng-click="changeSorting('state')">State</a></th>
-            <th class="col-xs-2"><a ng-click="changeSorting('party')">Party</a></th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr ng-repeat="legislator in legislators 
-                          | filter:legislatorFilter
-                          | filter:partyFilter 
-                          | filter:titleFilter
-                          | filter:selectedFilter
-                          | orderBy:sortField:reverse"
-              ng-click="selectLegislator(legislator)"
-              ng-class="getClass(legislator)">
-            <td class="col-xs-4">{{legislator.last_name}}</td>
-            <td class="col-xs-4">{{legislator.first_name}} </td>
-            <td class="col-xs-2">{{legislator.state}}</td>
-            <td class="col-xs-2">{{legislator.party}}</td>
-          </tr>
-        </tbody>
-      </table>
+      <div class="spacing-10"></div>
+      <h4 style="text-align:left;padding-left:25px">Select fax recipients:</h4>
+      <div class="spacing-5"></div>
+      <div class="table-padding">
+        <table class='table table-fixed'>
+          <span ng-show="loading == true">
+            Loading&nbsp;<i class="fa fa-spinner fa-spin"></i>
+          </span>
+          <thead>
+            <tr>
+              <th class="col-xs-4"><a ng-click="changeSorting('last_name')">Last</a></th>
+              <th class="col-xs-4"><a ng-click="changeSorting('first_name')">First</a></th>
+              <th class="col-xs-2"><a ng-click="changeSorting('state')">State</a></th>
+              <th class="col-xs-2"><a ng-click="changeSorting('party')">Party</a></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr ng-repeat="legislator in legislators 
+                            | filter:legislatorFilter
+                            | filter:partyFilter 
+                            | filter:titleFilter
+                            | filter:selectedFilter
+                            | orderBy:sortField:reverse"
+                ng-click="selectLegislator(legislator)"
+                ng-class="getClass(legislator)">
+              <td class="col-xs-4">{{legislator.last_name}}</td>
+              <td class="col-xs-4">{{legislator.first_name}} </td>
+              <td class="col-xs-2">{{legislator.state}}</td>
+              <td class="col-xs-2">{{legislator.party}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
 </section>
 <section id="about-1" class="content-section text-center">
