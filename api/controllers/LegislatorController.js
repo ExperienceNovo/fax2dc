@@ -76,7 +76,7 @@ module.exports = {
 							term_start: term_start,
 							bioguide_id: bioguide_id*/
 						};
-						// console.log(model);
+						console.log(model);
 						legislators.push(model);
 
 				}

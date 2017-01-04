@@ -84,15 +84,18 @@ module.exports = {
 			});
 
 			//3cents per page.
-			//var Phaxio = require('phaxio'),
-			//  phaxio = new Phaxio('e222........................', '62e5........................'),
-			//  callback = function(err,data){console.log(data);};
-
-			//phaxio.sendFax({
-			//  to: '13165555555',
-			//  string_data: 'Faxing from Node.js',
-			//  string_data_type: 'html'
-			//},callback);
+			var Phaxio = require('phaxio'),
+			phaxio = new Phaxio('7ecfca62ffeb3d94703e64060673331d507e099a', '40fcd093885df4547301829fbc63723329e489d4');
+			console.log(legislatorList[x])
+			phaxio.sendFax({
+			  to: legislatorList[x].fax,
+			  string_data: model.faxContent,
+			  string_data_type: 'html'
+			},
+			function(err, data){
+				console.log(err)
+				console.log(data);
+			});
 
 		}
 
