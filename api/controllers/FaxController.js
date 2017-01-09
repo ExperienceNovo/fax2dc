@@ -62,6 +62,7 @@ module.exports = {
 
 		console.log('create Fax . . . .')
 		console.log(req.body)
+		console.log(req.param('mes'))
 
 		var legislatorList = req.param('legislatorList')
 
