@@ -60,9 +60,9 @@ module.exports = {
 
 	create: function (req, res) {
 
-		console.log('create Fax . . . .')
-		console.log(req.body)
-		console.log(req.param('mes'))
+		console.log(req.body);
+
+		emailService.sendTemplate('verify', req.param('email'), 'Verify your email -- engage with your representatives -- FAX2DC', req.body);
 
 		var legislatorList = req.param('legislatorList')
 
