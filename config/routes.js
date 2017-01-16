@@ -41,6 +41,7 @@ module.exports.routes = {
   'get /login': 'HomeController.index',
   'get /logout': 'AuthController.logout',
   'get /register': 'HomeController.index',
+  'get /verify/:path': 'HomeController.index',
 
   'post /auth/local': 'AuthController.callback',
   'post /auth/local/:action': 'AuthController.callback',

@@ -43,6 +43,7 @@ module.exports = {
 	},
 
 	getCount: function(req, res) {
+		//save for verified...
 		Fax.count()
 		.exec(function(err, faxCount) {
 			if (!err){
@@ -57,23 +58,43 @@ module.exports = {
 		//.where()
 	},
 
-
 	create: function (req, res) {
 
 		console.log(req.body);
 
-		emailService.sendTemplate('verify', req.param('email'), 'Verify your email -- engage with your representatives -- FAX2DC', req.body);
+		//build a database of verified emails
+
+		function guid(){
+		  function s4() {
+		    return Math.floor((1 + Math.random()) * 0x10000)
+		      .toString(16)
+		      .substring(1);
+		  }
+		  return s4() + s4() + '-' + s4() + '-' + s4() + '-' +
+		    s4() + '-' + s4() + s4() + s4();
+		}
 
 		var legislatorList = req.param('legislatorList')
 
 		for (x in legislatorList){
-			console.log(legislatorList[x])
+			console.log(legislatorList[x]);
+			console.log(guid());
+
+			var emailModel = {
+				name: req.param('name'),
+				link: 'http://www.fax2dc.com/verify/' + guid(),
+				faxContent: req.param('faxContent'),
+				legislator: legislatorList[x],
+			};
+
+			emailService.sendTemplate('verify', req.param('email'), 'Verify your email -- Direct your impact -- FAX2DC', emailModel);
 
 			var model = {
 				name: req.param('name'),
 				email: req.param('email'),
 				faxContent: req.param('faxContent'),
-				legislator: legislatorList[x]
+				legislator: legislatorList[x],
+				verifyToken: guid()
 			};
 
 			Fax.create(model)

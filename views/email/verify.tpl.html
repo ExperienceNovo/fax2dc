@@ -1,8 +1,9 @@
 <div style="height:100vh">
-	<p>Name, click this link to verify your email address and send your fax.</p>
-	<h3><a href="#">Verification Link</a></h3>
+	<p>{{name}}, click this link to verify your email address and send your fax.</p>
+	<h3><a href="{{link}}">Verification Link</a></h3>
 	<div>
-		<p>faxContent</p>
-		<p>Legislator</p>
+		<p>to: {{legislator.title}} {{legislator.first_name}} {{legislator.last_name}} of {{legislator.state}}</p>
+		<hr>
+		<p>{{faxContent}}</p>
 	</div>
 </div>
