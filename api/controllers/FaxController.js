@@ -56,8 +56,6 @@ module.exports = {
 	},
 
 	getByLegislator: function(req, res) {
-		//Fax.find()
-		//.where()
 	},
 
 	create: function (req, res) {
@@ -87,18 +85,6 @@ module.exports = {
 					//res.json(fax);
 				}
 			});
-
-			//3cents per page.
-			/*console.log(legislatorList[x])
-			phaxio.sendFax({
-			  to: legislatorList[x].fax,
-			  string_data: model.faxContent,
-			  string_data_type: 'html'
-			},
-			function(err, data){
-				console.log(err)
-				console.log(data);
-			});*/
 
 		}
 
@@ -136,7 +122,5 @@ module.exports = {
 			return res.negotiate(err);
 		})
 	},
-
-
 
 };

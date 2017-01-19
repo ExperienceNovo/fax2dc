@@ -3,7 +3,7 @@ angular.module( 'fax2dc.verify', [
 
 .config(function config( $stateProvider ) {
 	$stateProvider.state( 'verify', {
-		url: '/verify/:path',
+		url: '/verify/:id',
 		views: {
 			"main": {
 				controller: 'VerifyCtrl',
@@ -18,12 +18,11 @@ angular.module( 'fax2dc.verify', [
 	});
 })
 
-.controller( 'VerifyCtrl', [ '$http', '$scope', '$stateParams', 'fax', 'FaxModel', 'titleService', function VerifyController( $http, $scope, $stateParams, fax, FaxModel, titleService ) {
+.controller( 'VerifyCtrl', [ '$location', '$scope', '$stateParams', 'fax', 'FaxModel', 'titleService', function VerifyController( $location, $scope, $stateParams, fax, FaxModel, titleService ) {
 	titleService.setTitle('About - Fax2DC');
 	$scope.fax = fax;
 	$scope.verify = function(){
-		FaxModel.verify($stateParams.id).then(function(){
-			$location.path('/');
-		});
+		FaxModel.verify($stateParams.id);
+		$location.path('/');
 	};
 }]);
