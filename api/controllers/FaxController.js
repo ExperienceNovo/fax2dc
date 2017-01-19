@@ -113,9 +113,9 @@ module.exports = {
 			emailService.sendTemplate('sent', model[0].email, 'Fax Sent! -- Direct your impact -- FAX2DC', model[0]);
 			Fax.update({id: model[0].id}, model[0]);
 			phaxio.sendFax({
-			  to: model[0].legislator.fax,
-			  string_data: model[0].faxContent,
-			  string_data_type: 'html'
+				to: model[0].legislator.fax,
+				string_data: model[0].faxContent,
+				string_data_type: 'html'
 			},
 			function(err, data){
 				console.log(err)
