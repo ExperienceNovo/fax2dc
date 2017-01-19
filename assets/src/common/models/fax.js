@@ -32,7 +32,7 @@ angular.module('models.fax', ['lodash', 'services', 'sails.io',])
     };
 
     this.verify = function(newModel) {
-        var url = utils.prepareUrl('fax/verify/'+newModel;);
+        var url = utils.prepareUrl('fax/verify/'+newModel);
         return $sailsSocket.post(url, newModel).then(success, error);
     };
 

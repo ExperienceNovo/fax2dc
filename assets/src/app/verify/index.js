@@ -13,11 +13,11 @@ angular.module( 'fax2dc.verify', [
 	});
 })
 
-.controller( 'VerifyCtrl', [ '$http', '$scope', 'titleService', function VerifyController( $http, $scope, titleService ) {
+.controller( 'VerifyCtrl', [ '$http', '$scope', 'FaxModel', 'titleService', function VerifyController( $http, $scope, FaxModel, titleService ) {
 	titleService.setTitle('About - Fax2DC');
-	//$scope.verify = function(){
-		//FaxModel.verify(:path).then(function(){
-			//$location.path('/');
-		//});
-	//}
+	$scope.verify = function(){
+		FaxModel.verify(:path).then(function(){
+			$location.path('/');
+		});
+	}
 }]);
