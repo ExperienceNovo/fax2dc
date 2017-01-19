@@ -18,13 +18,22 @@
   left: 150px;
   top: 350px;
 }
+.faxArea{
+  background-color:rgba(0,0,0,0.77);
+}
 </style>
 <div id="container">
 	<img src="images/congress.jpg">
 	<div id="text">
 		<h1>Verify</h1>
 		<p class="btn btn-default" ng-click="verify()">Send your Fax</p><br>
-    {{fax}}
+    <div class="faxArea">
+      {{fax.name}}
+      <br><br>
+      {{fax.legislator.first_name}} {{fax.legislator.last_name}}
+      <br><br>
+      {{fax.faxContent}}
+    </div>
 	</div>
 </div>
 

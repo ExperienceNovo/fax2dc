@@ -1,7 +1,43 @@
-{{fax.legislator.first_name}}
-{{fax.legislator.last_name}}
-{{fax.legislator.title}}
-{{fax.legislator.state}}
-<br><hr><br>
-{{fax.faxContent}}
-<a>share!</a>
+<style>
+#container {
+  height: 400px;
+  width: 400px;
+  position: relative;
+}
+#image {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+#text {
+  z-index: 100;
+  position: absolute;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  left: 150px;
+  top: 350px;
+}
+.faxArea{
+  background-color:rgba(0,0,0,0.77);
+}
+</style>
+<div id="container">
+	<img src="images/congress.jpg">
+	<div id="text">
+	    <div class="faxArea">
+		  {{fax.name}}
+	      {{fax.legislator.first_name}} {{fax.legislator.last_name}}
+	      <br><br>
+	      {{fax.faxContent}}
+	      <br>
+	      <a>share!</a>
+	    </div>
+	</div>
+</div>
+
+
+
+
+
+

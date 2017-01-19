@@ -18,7 +18,7 @@ module.exports = {
 			res.json(models);
 		})
 		.fail(function(err) {
-			// An error occured
+			res.send(404);
 		});
 	},
 
@@ -46,6 +46,7 @@ module.exports = {
 
 	getCount: function(req, res) {
 		//save for verified...
+		//.find({isVerified:true})
 		Fax.count()
 		.exec(function(err, faxCount) {
 			if (!err){
@@ -64,14 +65,12 @@ module.exports = {
 
 		var legislatorList = req.param('legislatorList')
 		for (x in legislatorList){
-
 			var model = {
 				name: req.param('name'),
 				email: req.param('email'),
 				faxContent: req.param('faxContent'),
 				legislator: legislatorList[x]
 			};
-
 			Fax.create(model)
 			.exec(function(err, model) {
 				if (err) {
@@ -82,10 +81,8 @@ module.exports = {
 					var emailModel = model;
 					emailModel.link = 'http://www.fax2dc.com/verify/' + model.id;
 					emailService.sendTemplate('verify', req.param('email'), 'Verify your email -- Direct your impact -- FAX2DC', emailModel);
-					//res.json(fax);
 				}
 			});
-
 		}
 
 	},
@@ -109,18 +106,20 @@ module.exports = {
 	verify: function(req, res) {
 		Fax.find({id:req.param('id')})
 		.then(function(model){
-			model[0].isVerified = true;
-			emailService.sendTemplate('sent', model[0].email, 'Fax Sent! -- Direct your impact -- FAX2DC', model[0]);
-			Fax.update({id: model[0].id}, model[0]);
-			phaxio.sendFax({
-				to: model[0].legislator.fax,
-				string_data: model[0].faxContent,
-				string_data_type: 'html'
-			},
-			function(err, data){
-				console.log(err)
-				console.log(data);
-			});
+			if (!model[0].isVerified){
+				model[0].isVerified = true;
+				emailService.sendTemplate('sent', model[0].email, 'Fax Sent! -- Direct your impact -- FAX2DC', model[0]);
+				Fax.update({id: model[0].id}, model[0]);
+				phaxio.sendFax({
+					to: model[0].legislator.fax,
+					string_data: model[0].faxContent,
+					string_data_type: 'html'
+				},
+				function(err, data){
+					console.log(err)
+					console.log(data);
+				});
+			}
 		})
 		.catch(function(err){
 			return res.negotiate(err);
