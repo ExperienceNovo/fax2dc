@@ -31,10 +31,7 @@ module.exports = {
         isVerified: {
             type: 'boolean',
             defaultsTo: false,
-        },
-        verifyToken: {
-            type: 'string'
-        },
+        }
     },
 
     getAll: function() {

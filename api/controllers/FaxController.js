@@ -64,54 +64,32 @@ module.exports = {
 
 		console.log(req.body);
 
-		//build a database of verified emails
-
-		function guid(){
-		  function s4() {
-		    return Math.floor((1 + Math.random()) * 0x10000)
-		      .toString(16)
-		      .substring(1);
-		  }
-		  return s4() + s4() + '-' + s4() + '-' + s4() + '-' +
-		    s4() + '-' + s4() + s4() + s4();
-		}
-
 		var legislatorList = req.param('legislatorList')
-
 		for (x in legislatorList){
-			console.log(legislatorList[x]);
-			console.log(guid());
-
-			var emailModel = {
-				name: req.param('name'),
-				link: 'http://www.fax2dc.com/verify/' + guid(),
-				faxContent: req.param('faxContent'),
-				legislator: legislatorList[x],
-			};
-
-			emailService.sendTemplate('verify', req.param('email'), 'Verify your email -- Direct your impact -- FAX2DC', emailModel);
 
 			var model = {
 				name: req.param('name'),
 				email: req.param('email'),
 				faxContent: req.param('faxContent'),
-				legislator: legislatorList[x],
-				verifyToken: guid()
+				legislator: legislatorList[x]
 			};
 
 			Fax.create(model)
-			.exec(function(err, fax) {
+			.exec(function(err, model) {
 				if (err) {
 					return console.log(err);
 				}
 				else {
-					Fax.publishCreate(fax);
+					Fax.publishCreate(model);
+					var emailModel = model;
+					emailModel.link = 'http://www.fax2dc.com/verify/' + model.id;
+					emailService.sendTemplate('verify', req.param('email'), 'Verify your email -- Direct your impact -- FAX2DC', emailModel);
 					//res.json(fax);
 				}
 			});
 
 			//3cents per page.
-			console.log(legislatorList[x])
+			/*console.log(legislatorList[x])
 			phaxio.sendFax({
 			  to: legislatorList[x].fax,
 			  string_data: model.faxContent,
@@ -120,7 +98,7 @@ module.exports = {
 			function(err, data){
 				console.log(err)
 				console.log(data);
-			});
+			});*/
 
 		}
 
@@ -143,8 +121,7 @@ module.exports = {
 	},
 
 	verify: function(req, res) {
-		req.param('path'),
-		Fax.find({verifyToken:req.param('id')})
+		Fax.find({id:req.param('id')})
 		.then(function(model){
 			model.isVerified = true;
 			emailService.sendTemplate('sent', model.email, 'Fax Sent! -- Direct your impact -- FAX2DC', model);
