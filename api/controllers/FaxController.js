@@ -108,8 +108,8 @@ module.exports = {
 		.then(function(model){
 			if (!model[0].isVerified){
 				model[0].isVerified = true;
-				emailService.sendTemplate('sent', model[0].email, 'Fax Sent! -- Direct your impact -- FAX2DC', model[0]);
 				Fax.update({id: model[0].id}, model[0]);
+				emailService.sendTemplate('sent', model[0].email, 'Fax Sent! -- Direct your impact -- FAX2DC', model[0]);
 				phaxio.sendFax({
 					to: model[0].legislator.fax,
 					string_data: model[0].faxContent,
