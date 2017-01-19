@@ -62,6 +62,7 @@ module.exports.routes = {
   'get /api/fax/unapproved': 'FaxController.getUnapproved',
   'post /api/fax/update': 'FaxController.update',
   'post /api/fax': 'FaxController.create',
+  'post /api/fax/verify/:path': 'FaxController.verify',
   'get /api/fax/:id': 'FaxController.getOne',
 
   /**

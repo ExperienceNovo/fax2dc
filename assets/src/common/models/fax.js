@@ -31,6 +31,11 @@ angular.module('models.fax', ['lodash', 'services', 'sails.io',])
         return $sailsSocket.post(url, newModel).then(success, error);
     };
 
+    this.verify = function(newModel) {
+        var url = utils.prepareUrl('fax/verify/'+newModel;);
+        return $sailsSocket.post(url, newModel).then(success, error);
+    };
+
     var success = function(response) {
         return response.data;
     };

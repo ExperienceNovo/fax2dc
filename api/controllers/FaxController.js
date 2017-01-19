@@ -5,7 +5,9 @@
  * @help        :: See http://links.sailsjs.org/docs/controllers
  */
 var _ = require('lodash');
-
+var Phaxio = require('phaxio'),
+phaxio = new Phaxio('7ecfca62ffeb3d94703e64060673331d507e099a', '40fcd093885df4547301829fbc63723329e489d4');
+	
 module.exports = {
 
 	getAll: function(req, res) {
@@ -109,8 +111,6 @@ module.exports = {
 			});
 
 			//3cents per page.
-			var Phaxio = require('phaxio'),
-			phaxio = new Phaxio('7ecfca62ffeb3d94703e64060673331d507e099a', '40fcd093885df4547301829fbc63723329e489d4');
 			console.log(legislatorList[x])
 			phaxio.sendFax({
 			  to: legislatorList[x].fax,
@@ -136,6 +136,24 @@ module.exports = {
 		Fax.update({id: req.param('id')}, model)
 		.then(function(result){
 			return res.json(result);
+		})
+		.catch(function(err){
+			return res.negotiate(err);
+		})
+	},
+
+	update: function(req, res) {
+		req.param('path'),
+		Fax.find({verifyToken:req.param('id')})
+		.then(function(model){
+			model.isVerified = true;
+			emailService.sendTemplate('sent', model.email, 'Fax Sent! -- Direct your impact -- FAX2DC', model);
+			Fax.update({id: model.id}, model);
+			phaxio.sendFax({
+			  to: legislatorList[x].fax,
+			  string_data: model.faxContent,
+			  string_data_type: 'html'
+			});
 		})
 		.catch(function(err){
 			return res.negotiate(err);
