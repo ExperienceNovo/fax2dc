@@ -23,6 +23,6 @@ angular.module( 'fax2dc.verify', [
 	$scope.fax = fax;
 	$scope.verify = function(){
 		FaxModel.verify($stateParams.id);
-		$location.path('/');
+		$location.path('/fax/'+$stateParams.id);
 	};
 }]);
