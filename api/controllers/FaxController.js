@@ -142,7 +142,7 @@ module.exports = {
 		})
 	},
 
-	update: function(req, res) {
+	verify: function(req, res) {
 		req.param('path'),
 		Fax.find({verifyToken:req.param('id')})
 		.then(function(model){
