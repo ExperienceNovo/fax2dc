@@ -12,7 +12,7 @@ angular.module( 'fax2dc.verify', [
 		},
 		resolve:{
 			fax: function(FaxModel, $stateParams){
-				FaxModel.getOne($stateParams.id);
+				return FaxModel.getOne($stateParams.id);
 			}
 		}
 	});
@@ -21,8 +21,9 @@ angular.module( 'fax2dc.verify', [
 .controller( 'VerifyCtrl', [ '$location', '$scope', '$stateParams', 'fax', 'FaxModel', 'titleService', function VerifyController( $location, $scope, $stateParams, fax, FaxModel, titleService ) {
 	titleService.setTitle('About - Fax2DC');
 	$scope.fax = fax;
+	if ($scope.fax.isVerified){$location.path('/fax/'+$stateParams.id)}
 	$scope.verify = function(){
 		FaxModel.verify($stateParams.id);
-		$location.path('/fax/'+$stateParams.id);
+		//$location.path('/fax/'+$stateParams.id);
 	};
 }]);

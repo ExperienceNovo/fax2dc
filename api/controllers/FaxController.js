@@ -109,13 +109,17 @@ module.exports = {
 	verify: function(req, res) {
 		Fax.find({id:req.param('id')})
 		.then(function(model){
-			model.isVerified = true;
-			emailService.sendTemplate('sent', model.email, 'Fax Sent! -- Direct your impact -- FAX2DC', model);
-			Fax.update({id: model.id}, model);
+			model[0].isVerified = true;
+			emailService.sendTemplate('sent', model[0].email, 'Fax Sent! -- Direct your impact -- FAX2DC', model[0]);
+			Fax.update({id: model[0].id}, model[0]);
 			phaxio.sendFax({
-			  to: legislatorList[x].fax,
-			  string_data: model.faxContent,
+			  to: model[0].legislator.fax,
+			  string_data: model[0].faxContent,
 			  string_data_type: 'html'
+			},
+			function(err, data){
+				console.log(err)
+				console.log(data);
 			});
 		})
 		.catch(function(err){
