@@ -86,21 +86,21 @@ html,body {
     float: left;
 }
 
-@media (min-width: 768px) {
+@media all and (min-width: 768px) {
     .col-sm-5ths {
         width: 20%;
         float: left;
     }
 }
 
-@media (min-width: 992px) {
+@media all and (min-width: 992px) {
     .col-md-5ths {
         width: 20%;
         float: left;
     }
 }
 
-@media (min-width: 1200px) {
+@media all and (min-width: 1200px) {
     .col-lg-5ths {
         width: 20%;
         float: left;
@@ -531,18 +531,15 @@ a:hover, a:focus {
 
 .panel-default .panel-heading {
 	background-color:#f9fafb;
-	color:#555
+	color:#555;
+	padding-top: 25px
 }
 
 .col-sm-9.full {
 	width:100%
 }
 
-small.text-muted {
-	font-family:courier,courier-new,monospace
-}
-
-@media (max-width: 768px) {
+@media all and (max-width: 768px) {
 	.column .padding {
 		padding:7px
 	}
