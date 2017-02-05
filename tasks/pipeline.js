@@ -35,6 +35,8 @@ var jsFilesToInject = [
   'bower_components/angular-google-maps/dist/angular-google-maps.js',
   'bower_components/angular-scroll/angular-scroll.js',
   'bower_components/bootstrap/dist/js/bootstrap.js',
+  'bower_components/froala-wysiwyg-editor/js/froala_editor.min.js',
+  'bower_components/angular-froala/src/angular-froala.js',
 
 
 

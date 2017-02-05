@@ -61,8 +61,6 @@ module.exports = {
 
 	create: function (req, res) {
 
-		console.log(req.body);
-
 		var legislatorList = req.param('legislatorList')
 		for (x in legislatorList){
 			var model = {
@@ -71,6 +69,8 @@ module.exports = {
 				faxContent: req.param('faxContent'),
 				legislator: legislatorList[x]
 			};
+			var html_content = emailService.prepareTemplate('fax', model);
+			model.faxContent = html_content;
 			Fax.create(model)
 			.exec(function(err, model) {
 				if (err) {
@@ -109,10 +109,12 @@ module.exports = {
 			if (!model[0].isVerified){
 				model[0].isVerified = true;
 				Fax.update({id: model[0].id}, model[0]);
+				var html_content = emailService.prepareTemplate('fax', model[0]);
+				model[0].faxContent = html_content;
 				emailService.sendTemplate('sent', model[0].email, 'Fax Sent! -- Direct your impact -- FAX2DC', model[0]);
 				phaxio.sendFax({
 					to: model[0].legislator.fax,
-					string_data: model[0].faxContent,
+					string_data: html_content,
 					string_data_type: 'html'
 				},
 				function(err, data){

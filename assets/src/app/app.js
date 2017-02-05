@@ -9,6 +9,7 @@ angular.module( 'fax2dc', [
     'templates-app',
     'services',
     'models',
+    'froala',
     'fax2dc.about',
     'fax2dc.admin',
     'fax2dc.donate',
