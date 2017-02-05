@@ -6,7 +6,7 @@
                     <img class="intro-img" src="images/FAXLOGO1.svg">
                     <div class="spacing-15"></div>
                     <p class="intro-text">Are they listening?<br><br>Let's find out.</p>
-                    <a href="#about-1" class="btn btn-circle page-scroll" du-smooth-scroll>
+                    <a href="#about" class="btn btn-circle page-scroll" du-smooth-scroll>
                         <i class="fa fa-angle-double-down animated"></i>
                     </a>
                 </div>
@@ -14,14 +14,6 @@
         </div>
     </div>
 </header>
-<section id="about-1" class="content-section text-center">
-    <div class="about-section">
-        <div class="container">
-          <p>Grassroots lobbying is a key to political change. <br> 
-          <span style="color:#bd1f2f">Mail is slow,</span> email is ignored, <span style="color:#3b5999">but a fax is quick, physical, and easy.</span></p>
-        </div>
-    </div>
-</section>
 <section id="about" class="container content-section text-center">
   <div class="spacing-25"></div>
   <div class="row">
@@ -65,13 +57,6 @@
             <input ng-click="includeTitle('Sen')" type="checkbox" name="sen" value="Sen"> <label for="sen"> Senate</label>
             <div class="spacing-10"></div>
           </div>
-          <!--selected filter-->
-          <!--<div class="form-group filterCheckbox col-xs-4">
-            <label>
-              <input ng-click="showSelected = !showSelected" type="checkbox" value="">
-              Show Selected
-            </label>
-          </div>-->
         </div>
       </form>
     </div>
@@ -110,7 +95,7 @@
       <div class="form-group">
         <h3>Write Message</h3>
         <div class="spacing-15"></div>
-        <textarea class="form-control" rows="10" ng-model="newFax.faxContent" placeholder="Your Text..."></textarea>
+        <textarea class="form-control" rows="10" ng-model="newFax.faxContent" placeholder="Your Fax..."></textarea>
       </div>
     </div>
     <div class="col-md-6">
@@ -136,10 +121,18 @@
       <input class="btn btn-primary sendFax" type="submit" value="Send Fax" />
     </div>
   </form>
-  <div class="spacing-50"></div>
+</section>
+<div class="spacing-50"></div>
+<section id="about-1" class="content-section text-center">
+    <div class="about-section">
+        <div class="container">
+          <p>Grassroots lobbying is a key to political change. <br> 
+          <span style="color:#bd1f2f">Mail is slow,</span> email is ignored, <span style="color:#3b5999">but a fax is quick, physical, and easy.</span></p>
+        </div>
+    </div>
 </section>
 <section id="about-2" class="content-section text-center">
-    <div class="about-section">
+    <div style="padding:100px">
         <div class="container">
             <div class="col-lg-8 col-lg-offset-2">
               <h2>Sponsors</h2>
@@ -150,3 +143,12 @@
         </div>
     </div>
 </section>
+<!--footer-->
+<!--<section id="about-3" class="content-section text-center">
+    <div class="about-section">
+        <div class="container">
+            <div class="col-lg-2 col-lg-offset-2">
+            </div>
+        </div>
+    </div>
+</section>-->

@@ -30,7 +30,7 @@
 }
 
 .table-fixed tbody {
-    height: 350px;
+    height: 230px;
     overflow-y: auto;
     width: 100%;
     //padding: 25px;
