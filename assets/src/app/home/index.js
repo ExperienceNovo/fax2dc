@@ -141,8 +141,8 @@ angular.module( 'fax2dc.home', [
 
     $scope.getClass = function(legislator) {
       var klass = legislator.selected ? 'selected' : '';
-      return klass += legislator.party === 'D' ? ' info'
-                    : legislator.party === 'R' ? ' danger' : ' warning';
+      return klass += legislator.party === 'D' ? ' democrat'
+                    : legislator.party === 'R' ? ' republican' : 'independant';
     };
 
     $scope.openConfirmation = function (size) {

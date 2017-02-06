@@ -33,8 +33,6 @@
     height: 230px;
     overflow-y: auto;
     width: 100%;
-    //padding: 25px;
-    //margin-bottom: 25px;
 }
 
 .table-fixed thead,.table-fixed tbody,.table-fixed tr,.table-fixed td,.table-fixed th {
@@ -47,11 +45,36 @@
     background-color: inherit;
 }
 
+tr{ cursor: pointer; }
+
 .table > tbody > tr > td {
     border-top-color: #969696;
     text-align: left;
 }
-
+.table > tbody > tr.democrat > td {
+    background-color:#d9edf7;
+}
+.table > tbody > tr.democrat:hover > td {
+    background-color:rgba(217,237,247,0.5);
+}
+.table > tbody > tr.republican > td {
+    background-color:#f2dede;
+}
+.table > tbody > tr.republican:hover > td {
+    background-color:rgba(217,237,247,0.5);
+}
+.table > tbody > tr.independant > td {
+    background-color:#fcf8e3;
+}
+.table > tbody > tr.independant:hover > td {
+    background-color:rgba(217,237,247,0.5);
+}
+.table > tbody > tr.selected > td {
+    background-color: rgba(217,237,247,0.5)!important;
+}
+.table > tbody > tr.selected:hover > td {
+    background-color:rgba(217,237,247,0.25)!important;
+}
 .table-padding {
     padding:25px;
     padding-top: 0px
