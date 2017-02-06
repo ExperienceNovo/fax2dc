@@ -73,7 +73,7 @@ tr{ cursor: pointer; }
     background-color: rgba(217,237,247,0.5)!important;
 }
 .table > tbody > tr.selected:hover > td {
-    background-color:rgba(217,237,247,0.25)!important;
+    background-color:rgba(217,237,247,0.5)!important;
 }
 .table-padding {
     padding:25px;
