@@ -1,7 +1,7 @@
 angular.module( 'fax2dc.fax', [
 ])
 
-.config(function config( $stateProvider ) {
+.config(['$stateProvider', function config( $stateProvider ) {
 	$stateProvider.state( 'fax', {
 		url: '/fax/:id',
 		views: {
@@ -11,14 +11,14 @@ angular.module( 'fax2dc.fax', [
 			}
 		},
 		resolve:{
-			fax: function(FaxModel, $stateParams){
+			fax: ['$stateParams','FaxModel', function($stateParams, FaxModel) {
 				return FaxModel.getOne($stateParams.id);
-			}
+			}]
 		}
 	});
-})
+}])
 
-.controller( 'FaxCtrl',['$http', '$scope', 'fax', 'titleService', function DonateController( $http, $scope, fax, titleService ) {
+.controller( 'FaxCtrl',['$scope', 'fax', 'titleService', function DonateController( $scope, fax, titleService ) {
 	titleService.setTitle('Fax - Fax2DC');
 	$scope.fax = fax;
 }]);

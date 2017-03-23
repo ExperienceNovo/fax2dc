@@ -1,7 +1,7 @@
 angular.module( 'fax2dc.verify', [
 ])
 
-.config(function config( $stateProvider ) {
+.config(['$stateProvider', function config( $stateProvider ) {
 	$stateProvider.state( 'verify', {
 		url: '/verify/:id',
 		views: {
@@ -11,12 +11,12 @@ angular.module( 'fax2dc.verify', [
 			}
 		},
 		resolve:{
-			fax: function(FaxModel, $stateParams){
+			fax: ['$stateParams','FaxModel', function($stateParams, FaxModel) {
 				return FaxModel.getOne($stateParams.id);
-			}
+			}]
 		}
 	});
-})
+}])
 
 .controller( 'VerifyCtrl', [ '$location', '$scope', '$stateParams', 'fax', 'FaxModel', 'titleService', function VerifyController( $location, $scope, $stateParams, fax, FaxModel, titleService ) {
 	titleService.setTitle('About - Fax2DC');

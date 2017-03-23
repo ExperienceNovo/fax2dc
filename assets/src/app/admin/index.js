@@ -1,7 +1,7 @@
 angular.module( 'fax2dc.admin', [
 ])
 
-.config(function config( $stateProvider ) {
+.config(['$stateProvider', function config( $stateProvider ) {
 	$stateProvider.state( 'admin', {
 		url: '/admin',
 		views: {
@@ -11,12 +11,12 @@ angular.module( 'fax2dc.admin', [
 			}
 		},
 		resolve:{
-			faxes: function(FaxModel){
+			faxes: ['FaxModel', function(FaxModel) {
 				return FaxModel.getUnApproved();
-			}
+			}]
 		}
 	});
-})
+}])
 
 .controller(['$location', '$scope', 'config', 'faxes', 'FaxModel', 'titleService', function AdminCtrl($location, $scope, config, faxes, FaxModel, titleService ) {
 	titleService.setTitle('Admin - Fax2DC');

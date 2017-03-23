@@ -1,7 +1,7 @@
 angular.module( 'fax2dc.donate', [
 ])
 
-.config(function config( $stateProvider ) {
+.config(['$stateProvider', function config( $stateProvider ) {
 	$stateProvider.state( 'donate', {
 		url: '/donate',
 		views: {
@@ -11,8 +11,8 @@ angular.module( 'fax2dc.donate', [
 			}
 		}
 	});
-})
+}])
 
-.controller( 'DonateCtrl',[ '$http', '$scope', 'titleService', 'uiGmapGoogleMapApi', function DonateController( $http, $scope, titleService, uiGmapGoogleMapApi ) {
+.controller( 'DonateCtrl',['$scope', 'titleService', function DonateController($scope, titleService ) {
 	titleService.setTitle('Donate - Fax2DC');
 }]);

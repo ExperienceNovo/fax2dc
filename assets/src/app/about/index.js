@@ -1,7 +1,7 @@
 angular.module( 'fax2dc.about', [
 ])
 
-.config(function config( $stateProvider ) {
+.config(['$stateProvider', function config( $stateProvider ) {
 	$stateProvider.state( 'about', {
 		url: '/about',
 		views: {
@@ -11,8 +11,8 @@ angular.module( 'fax2dc.about', [
 			}
 		}
 	});
-})
+}])
 
-.controller( 'AboutCtrl', [ '$http', '$scope', 'titleService', 'uiGmapGoogleMapApi', function AboutController( $http, $scope, titleService, uiGmapGoogleMapApi ) {
+.controller( 'AboutCtrl', ['$scope', 'titleService', function AboutController( $scope, titleService ) {
 	titleService.setTitle('About - Fax2DC');
 }]);

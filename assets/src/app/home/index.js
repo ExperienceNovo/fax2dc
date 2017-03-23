@@ -1,7 +1,7 @@
 angular.module( 'fax2dc.home', [
 ])
 
-.config(function config( $stateProvider ) {
+.config(['$stateProvider', function config( $stateProvider ) {
     $stateProvider.state('home', {
         url: '/',
         views: {
@@ -11,14 +11,13 @@ angular.module( 'fax2dc.home', [
             }
         },
         resolve: {
-            faxCount: function(FaxModel){
+            faxCount: ['FaxModel', function(FaxModel) {
                 return FaxModel.count();
-            }
+            }]
         }
     });
-})
-
-.controller('HomeCtrl', function HomeController( $scope, config, FaxModel, $stateParams, $location, titleService, faxCount, FaxModel, LegislatorModel, $uibModal, $sailsSocket) {
+}])
+.controller('HomeCtrl', ['$location', '$sailsSocket', '$scope', '$stateParams', '$uibModal', 'config', 'faxCount', 'FaxModel', 'LegislatorModel', 'titleService', function HomeController( $location, $sailsSocket, $scope, $stateParams, $uibModal, config, faxCount, FaxModel, LegislatorModel, titleService) {
     titleService.setTitle('FAX2DC');
     $scope.loading = true;
     LegislatorModel.getAll().then(function(legislators){
@@ -178,9 +177,8 @@ angular.module( 'fax2dc.home', [
         }
     });
 
-})
-
-.controller('ConfirmationModalInstanceCtrl', function ($scope, $uibModalInstance, FaxModel, newFax) {
+}])
+.controller('ConfirmationModalInstanceCtrl', ['$scope', '$uibModalInstance', 'FaxModel', 'newFax', function ($scope, $uibModalInstance, FaxModel, newFax) {
     $scope.newFax = newFax;
     $scope.ok = function () {
         FaxModel.create($scope.newFax);
@@ -189,15 +187,4 @@ angular.module( 'fax2dc.home', [
     $scope.cancel = function () {
         $uibModalInstance.dismiss('cancel');
     };
-})
-
-
-
-
-
-
-
-
-
-
-
+}]);

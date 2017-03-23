@@ -1,6 +1,7 @@
 angular.module('models.fax', ['lodash', 'services', 'sails.io',])
 
-.service('FaxModel', function(lodash, utils, $sailsSocket) {
+.service('FaxModel',['lodash', 'utils', '$sailsSocket', function(lodash, utils, $sailsSocket) {
+    
     this.getAll = function() {
         var url = utils.prepareUrl('fax');
         return $sailsSocket.get(url).then(success, error);
@@ -44,4 +45,4 @@ angular.module('models.fax', ['lodash', 'services', 'sails.io',])
     var error = function(error) {
         console.log(error);
     };
-});
+}]);
