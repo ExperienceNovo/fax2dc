@@ -41,7 +41,7 @@ module.exports = {
 							email: email,
 							title: title
 						};
-						console.log(model);
+						//console.log(model);
 						//do a db for manual update..
 						//if (fax!=null){legislators.push(model);}
 						legislators.push(model);
@@ -53,15 +53,4 @@ module.exports = {
 		});
 	}
 
-	/*getAll: function(req, res) {
-		Fax.getAll()
-		.spread(function(models) {
-			Fax.watch(req);
-			Fax.subscribe(req, models);
-			res.json(models);
-		})
-		.fail(function(err) {
-			res.send(404);
-		});
-	},*/
 }
