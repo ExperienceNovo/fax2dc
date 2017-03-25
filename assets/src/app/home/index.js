@@ -20,9 +20,11 @@ angular.module( 'fax2dc.home', [
 .controller('HomeCtrl', ['$location', '$sailsSocket', '$scope', '$stateParams', '$uibModal', 'config', 'faxCount', 'FaxModel', 'LegislatorModel', 'titleService', function HomeController( $location, $sailsSocket, $scope, $stateParams, $uibModal, config, faxCount, FaxModel, LegislatorModel, titleService) {
     titleService.setTitle('FAX2DC');
     $scope.loading = true;
+    $scope.legislators = [];
     LegislatorModel.getAll().then(function(legislators){
       $scope.loading = false;
       $scope.legislators = legislators;
+      console.log(legislators)
       $scope.stateAbrvs = _.uniq($scope.legislators.map(function(curr, val, index) {
         return curr.state;
       })).sort();
@@ -45,8 +47,13 @@ angular.module( 'fax2dc.home', [
                 lat = position.coords.latitude; 
                 lng = position.coords.longitude;
                 LegislatorModel.getByLocation(lat, lng).then(function(representatives){
-                    $scope.officialRepresentatives = representatives;
+                    console.log(representatives);
+                    $scope.officialRepresentatives = representatives.map(function(obj){return obj.bioguide_id});
                     $scope.loading = false;
+                    for (x in $scope.officialRepresentatives){
+                      var index = $scope.legislators.map(function(e) { return e.bioguide_id; }).indexOf($scope.officialRepresentatives[x]);
+                      $scope.selectLegislator($scope.legislators[index]);
+                    }
                 });
             });
         }

@@ -27,6 +27,7 @@ module.exports = {
 						var phone = congressData[key].phone;
 						var state = congressData[key].state;
 						var title = congressData[key].title;
+						var bioguide_id = congressData[key].bioguide_id;
 						var email = first_name.replace('.','').replace(' ','.') + '.' + last_name.replace(' ','.') + '@gmail.com';
 						var model = {
 							first_name: first_name,
@@ -37,7 +38,8 @@ module.exports = {
 							phone: phone,
 							fax: fax,
 							email: email,
-							title: title
+							title: title,
+							bioguide_id:bioguide_id
 						};
 						//console.log(model);
 						//do a db for manual update..
@@ -49,9 +51,10 @@ module.exports = {
 		});
 	},
 
-	getByLocation: function(lat, lng){
+	getByLocation: function(req, res){
 		var lat = req.query.lat;
 		var lng = req.query.lng;
+
 		var stateModel= {
 			url: 'http://openstates.org/api/v1/legislators/geo/?lat='+lat+'&long='+lng+'&active=true&apikey=c16a6c623ee54948bac2a010ea6fab70',
 			json: true
