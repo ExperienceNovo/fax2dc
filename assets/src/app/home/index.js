@@ -24,7 +24,6 @@ angular.module( 'fax2dc.home', [
     LegislatorModel.getAll().then(function(legislators){
       $scope.loading = false;
       $scope.legislators = legislators;
-      console.log(legislators)
       $scope.stateAbrvs = _.uniq($scope.legislators.map(function(curr, val, index) {
         return curr.state;
       })).sort();
@@ -42,7 +41,6 @@ angular.module( 'fax2dc.home', [
     $scope.getLegislators = function() {
         if (navigator.geolocation) {
             $scope.loading = true;
-            //$rootScope.stateIsLoading = true;
             navigator.geolocation.getCurrentPosition(function (position) {
                 lat = position.coords.latitude; 
                 lng = position.coords.longitude;

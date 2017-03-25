@@ -18,6 +18,7 @@ module.exports = {
 			    if (!error && response.statusCode === 200) {
 					var congressData = body.results;
 					var legislators = [];
+					var nullArray = [];
 					for (var key in congressData) {
 
 						var fax = congressData[key].fax;
@@ -43,10 +44,12 @@ module.exports = {
 						};
 						//console.log(model);
 						//do a db for manual update..
-						//if (fax!=null){legislators.push(model);}
+						if (fax==null){nullArray.push(model);}
 						legislators.push(model);
 				}
 	    	}
+	    	console.log(nullArray.length);
+	    	//Legislator.create(legislators);
 			res.json(legislators);
 		});
 	},
