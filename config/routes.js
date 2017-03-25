@@ -69,6 +69,7 @@ module.exports.routes = {
    * Legislator routes
    */
   'get /api/legislator': 'LegislatorController.getAll',
+  'get /api/legislator/location': 'LegislatorController.getAll',
 
 
   // If a request to a URL doesn't match any of the custom routes above, it is matched

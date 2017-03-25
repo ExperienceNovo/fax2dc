@@ -1,9 +1,8 @@
 /**
  * FaxController
  *
- * @description :: Server-side logic for managing posts
- * @help        :: See http://links.sailsjs.org/docs/controllers
  */
+ 
 var _ = require('lodash');
 var Phaxio = require('phaxio'),
 phaxio = new Phaxio('7ecfca62ffeb3d94703e64060673331d507e099a', '40fcd093885df4547301829fbc63723329e489d4');
@@ -73,9 +72,7 @@ module.exports = {
 			model.faxContent = html_content;
 			Fax.create(model)
 			.exec(function(err, model) {
-				if (err) {
-					return console.log(err);
-				}
+				if (err) {return console.log(err);}
 				else {
 					Fax.publishCreate(model);
 					var emailModel = model;

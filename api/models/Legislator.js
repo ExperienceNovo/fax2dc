@@ -1,10 +1,10 @@
 module.exports = {
     attributes: {
-        first_name: {
+        firstName: {
           type: 'string',
           require: true,
         },
-        last_name: {
+        lastName: {
           type: 'string',
           require: true,
         },
@@ -29,39 +29,10 @@ module.exports = {
         title: {
           type: 'string',
           require: true,
-        }
-
-        /*username: {
-            type: 'string',
         },
-        socialMedia: {
-          type: 'json'
-        },
-        leadership_role: {
+        officialId: {
           type: 'string'
         },
-        term_end: {
-          type: 'string'
-        },
-        term_start: {
-          type: 'string'
-        },
-        bioguide_id: {
-          type: 'string'
-        },*/
-    },
-
-    // getAll: function() {
-    //     return User.find()
-    //     .then(function (models) {
-    //         return [models];
-    //     });
-    // },
-    //
-    // getOne: function(id) {
-    //     return User.findOne(id)
-    //     .then(function (model) {
-    //         return [model];
-    //     });
-    // }
+ 
+      }
 };

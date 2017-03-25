@@ -37,6 +37,21 @@ angular.module( 'fax2dc.home', [
     $scope.legislatorRequiredMessage = '';
     $scope.confirm='';
 
+    $scope.getLegislators = function() {
+        if (navigator.geolocation) {
+            $scope.loading = true;
+            //$rootScope.stateIsLoading = true;
+            navigator.geolocation.getCurrentPosition(function (position) {
+                lat = position.coords.latitude; 
+                lng = position.coords.longitude;
+                LegislatorModel.getByLocation(lat, lng).then(function(representatives){
+                    $scope.officialRepresentatives = representatives;
+                    $scope.loading = false;
+                });
+            });
+        }
+    };
+
     $scope.submitFax = function() {
         if ($scope.newFax.trap !== undefined){
             console.log('get out'); // display fake successful form submission
@@ -67,7 +82,6 @@ angular.module( 'fax2dc.home', [
                 $scope.newFax.legislatorList = selectedLegislators;
                 $scope.openConfirmation();
             }
-
         }
     };
 

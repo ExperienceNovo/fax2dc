@@ -6,6 +6,12 @@ angular.module('models.legislator', ['lodash', 'services', 'sails.io',])
         return $sailsSocket.get(url).then(success, error);
     };
 
+    this.getByLocation = function(lat, lng) {
+        var url = utils.prepareUrl('legislator/location');
+        var query = {params:{lat:lat, lng:lng}};
+        return $sailsSocket.get(url, query).then(success, error);
+    };
+
     this.getOne = function(model) {
         var url = utils.prepareUrl('legislator/'+model);
         return $sailsSocket.get(url).then(success, error);
