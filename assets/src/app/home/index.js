@@ -35,8 +35,8 @@ angular.module( 'fax2dc.home', [
     $scope.reverse = false;
     $scope.sortField = 'state';
     $scope.showSelected = false;
-    $scope.legislatorRequiredMessage = '';
     $scope.confirm='';
+    $scope.validationMessage = '';
 
     $scope.getLegislators = function() {
         if (navigator.geolocation) {
@@ -76,10 +76,10 @@ angular.module( 'fax2dc.home', [
                 $scope.validationMessage = 'Say Something!';
             } 
             else if (!$scope.newFax.name) {
-                $scope.validationMessage = 'where\'s your name?';
+                $scope.validationMessage = 'What\'s your name?';
             } 
             else if (!$scope.newFax.email) {
-                $scope.validationMessage = 'where\'s your email?';
+                $scope.validationMessage = 'What\'s your email?';
             } 
 
             else {

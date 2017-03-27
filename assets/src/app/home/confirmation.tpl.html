@@ -1,34 +1,34 @@
 <style>
-.modal-dialog{width:84%!important;}
+  .modal-dialog{width:84%!important;}
 </style>
 <div>
-  <div class="modal-header">
-    <h2>is this correct?</h2>
-  </div>
   <div class="modal-body">
-
-    <h4>Name:</h4>
-    <p>{{newFax.name}}</p>
-
-    <h4>Email:</h4>
-    <p>{{newFax.email}}</p>
-
-    <h4>Legislator List:</h4>
-    <div ng-repeat="legislator in newFax.legislatorList">
-      <p>{{legislator.first_name}} {{legislator.last_name}}</p>
+    <div class="row">
+      <div class="col-md-12">
+        <h4>{{newFax.name}}</h4>
+        <h4>{{newFax.email}}</h4>
+        <!--<h4 style="text-align:left">Legislator:</h4>-->
+        <p>
+          <span ng-repeat="legislator in newFax.legislatorList">
+            {{legislator.first_name}} {{legislator.last_name}}{{$last ? '' : ($index==newFax.legislatorList.length-2) ? ' and ' : ', '}}
+          </span>
+        </p>
+      </div>
     </div>
-
-    <h4>Fax:</h4>
-
-    <img src="images/FAXbuilding.svg" style="height:150px;"/>
-    <p>{{newFax.faxContent}}</p>
-
-    <br>
-    <p>Fax2DC is offered as a free service and is supported by people like you!</p>
-    <a class="btn btn-info" href="/donate"><h5>donate</h5></a>
-
+    <div class="row">
+      <div class="col-md-12" style="text-align:center">
+        <img src="images/FAXbuilding.svg" style="height:150px;"/>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12" style="text-align:left;overflow-wrap: break-word;">
+        {{newFax.faxContent}}
+      </div>
+    </div>
   </div>
-  <div class="modal-footer" style="display:inline-block;width:100%;text-align:center;">
-      <button class="btn btn-info" style="float:none;display:inline-block;" type="button" ng-click="ok()">Send!</button>
+  <div class="modal-footer" style="display:inline-block;width:100%;text-align:center">
+    <!--<p>Fax2DC is offered as a free service and is supported by people like you!</p>-->
+    <button class="btn btn-info" style="display:inline-block;width:40%" type="button"><a href="/donate" target="_blank">Donate</a></button>
+    <button class="btn btn-info" style="display:inline-block;width:40%" type="button" ng-click="ok()">Send your fax!</button>
   </div>
 </div>

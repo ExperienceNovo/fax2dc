@@ -33,35 +33,32 @@
   <div class="panel panel-default">
     <div class="panel-heading">
       <form id="tableFilters">
-        <h3>Select Representatives</h3>
-        <div class="spacing-10"></div>
         <div class="row">
-          <!--Search bar-->
-          <div class="form-group col-md-12">
-            <input ng-model="legislatorFilter.$" class="form-control" type="text" placeholder="Search..."/>
-            <div class="spacing-10"></div>
-          </div>
-        </div>
-        <div class="row">
-          <!--State select-->
+          <h3>Select Representatives</h3>
+          <div class="spacing-10"></div>
           <div class="form-group col-md-4">
             <select ng-model="legislatorFilter.state" class="form-control">
-              <option value="">Select State</option>
+              <option value="">State Filter</option>
               <option ng-repeat="stateAbrv in stateAbrvs" value="{{stateAbrv}}">{{stateAbrv}}</option>
             </select>
-            <div class="spacing-10"></div>
           </div>
-          <!--house filter-->
-          <div class="form-group filterCheckbox col-md-2">
+          <!--<div class="form-group filterCheckbox col-md-2">
             <input ng-click="includeTitle('Rep')" type="checkbox" name="rep" value="Rep"> <label for="rep"> House</label>
             <div class="spacing-10"></div>
           </div>
-          <!--senate filter-->
           <div class="form-group filterCheckbox col-md-2">
             <input ng-click="includeTitle('Sen')" type="checkbox" name="sen" value="Sen"> <label for="sen"> Senate</label>
             <div class="spacing-10"></div>
+          </div>-->
+          <div class="form-group filterCheckbox col-md-8">
+            <button style="width:100%;" class="btn btn-primary" ng-click="getLegislators()">select reps by location</button>
           </div>
-          <button ng-click="getLegislators()">select reps</button>
+        </div>
+        <div class="row">
+          <div class="form-group col-md-12">
+            <input ng-model="legislatorFilter.$" class="form-control" type="text" placeholder="Search Representatives..."/>
+            <div class="spacing-10"></div>
+          </div>
         </div>
       </form>
     </div>
@@ -98,7 +95,7 @@
     <div class="col-md-12">
       <div class="spacing-5"></div>
       <div class="form-group">
-        <h3>Write Message</h3>
+        <h3 style="float:left">Write Message</h3>
         <div class="spacing-15"></div>
         <textarea class="form-control" rows="10" ng-model="newFax.faxContent" placeholder="Are they listening?"></textarea>
       </div>
@@ -106,7 +103,7 @@
     <div class="col-md-6">
       <div class="form-group">
         <div class="spacing-10"></div>
-        <label>Name</label>
+        <label style="float:left">Name</label>
         <div class="spacing-10"></div>
         <input type="text" class="form-control" placeholder="Name" ng-model="newFax.name"/>
       </div>
@@ -114,7 +111,7 @@
     <div class="col-md-6">
       <div class="form-group">
         <div class="spacing-10"></div>
-        <label>Email</label>
+        <label style="float:left">Email</label>
         <div class="spacing-10"></div>
         <input type="email" class="form-control" placeholder="email@example.com" ng-model="newFax.email"/>
       </div>
@@ -123,7 +120,8 @@
       <div class="spacing-25"></div>
       <input type="text" style="display:none" autofill="off" ng-model="newFax.trap" />
       <p>{{validationMessage}}</p>
-      <input class="btn btn-primary sendFax" type="submit" value="Send Fax" />
+      <div ng-show="validationMessage != ''"class="spacing-25"></div>
+      <input style="width:100%" class="btn btn-primary sendFax" type="submit" value="Send Fax" />
     </div>
   </form>
 </section>
@@ -141,7 +139,7 @@
               <a href="https://www.experiencenovo.io" target="_blank" class="spacing-25"><img src="https://s3.amazonaws.com/novollc/images/novo/logo-w.png"></a>
               <a href="https://www.phaxio.com/" target="_blank" class="spacing-25"><img src="images/phax.png"></a>
               <div class="spacing-25"></div>
-              <a class="btn btn-primary sendFax" href="#"><h5>Become A Sponsor!</h5></a>
+              <a class="btn btn-primary sendFax" href="/donate" target="_blank"><h5>Become A Sponsor!</h5></a>
             </div>
         </div>
     </div>
