@@ -9,10 +9,16 @@ angular.module( 'fax2dc.donate', [
 				controller: 'DonateCtrl',
 				templateUrl: 'donate/index.tpl.html'
 			}
-		}
+		},
+        resolve: {
+            faxCount: ['FaxModel', function(FaxModel) {
+                return FaxModel.count();
+            }],
+        }
 	});
 }])
 
-.controller( 'DonateCtrl',['$scope', 'titleService', function DonateController($scope, titleService ) {
+.controller( 'DonateCtrl',['$scope', 'faxCount', 'titleService', function DonateController($scope, faxCount, titleService ) {
 	titleService.setTitle('Donate - Fax2DC');
+	$scope.faxCount = faxCount;
 }]);
