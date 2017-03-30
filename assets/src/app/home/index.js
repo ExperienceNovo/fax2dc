@@ -41,17 +41,19 @@ angular.module( 'fax2dc.home', [
     $scope.getLegislators = function() {
         if (navigator.geolocation) {
             $scope.loading = true;
+            console.log('ok')
             navigator.geolocation.getCurrentPosition(function (position) {
                 lat = position.coords.latitude; 
                 lng = position.coords.longitude;
+                console.log(lng)
                 LegislatorModel.getByLocation(lat, lng).then(function(representatives){
                     $scope.officialRepresentatives = representatives.map(function(obj){return obj.bioguide_id});
                     $scope.loading = false;
-                    $scope.showSelected = true;
                     for (x in $scope.officialRepresentatives){
                       var index = $scope.legislators.map(function(e) { return e.bioguide_id; }).indexOf($scope.officialRepresentatives[x]);
                       $scope.selectLegislator($scope.legislators[index]);
                     }
+                    $scope.showSelected = true;
                 });
             });
         }

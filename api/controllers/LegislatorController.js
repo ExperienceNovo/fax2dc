@@ -57,7 +57,7 @@ module.exports = {
 	getByLocation: function(req, res){
 		var lat = req.query.lat;
 		var lng = req.query.lng;
-
+		console.log(lat)
 		var stateModel= {
 			url: 'http://openstates.org/api/v1/legislators/geo/?lat='+lat+'&long='+lng+'&active=true&apikey=c16a6c623ee54948bac2a010ea6fab70',
 			json: true
@@ -72,6 +72,7 @@ module.exports = {
 			return [federalRepresentatives.results, stateRepresentatives];
 		}).then(function(representatives){
 			var federalRepresentatives = representatives[0];
+			console.log(federalRepresentatives)
 			res.json(federalRepresentatives);
 			//var stateRepresentatives = representatives[1];
 			//var bioguide_id = federalRepresentatives.map(function(obj){return obj.bioguide_id});
