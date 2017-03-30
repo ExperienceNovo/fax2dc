@@ -68,8 +68,8 @@ module.exports = {
 				faxContent: req.param('faxContent'),
 				legislator: legislatorList[x]
 			};
-			var html_content = emailService.prepareTemplate('fax', model);
-			model.faxContent = html_content;
+			//var html_content = emailService.prepareTemplate('fax', model);
+			//model.faxContent = html_content;
 			Fax.create(model)
 			.exec(function(err, model) {
 				if (err) {return console.log(err);}
