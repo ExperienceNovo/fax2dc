@@ -144,17 +144,8 @@ angular.module( 'fax2dc.home', [
       }
     };
 
-    // this way would maintain an array of selected legislators as they are
-    // selected and unselected, faster if not many legislators selected
-    // but slow worst case when many selectedLegislators.length is big
-
     $scope.selectLegislator = function(legislator) {
       legislator.selected = !legislator.selected;
-      // var i = _.indexOf($scope.selectedLegislators, legislator);
-      // if (legislator.selected)
-      //   $scope.selectedLegislators.push(legislator);
-      // else
-      //   $scope.selectedLegislators.splice(i, 1);
     }
 
     $scope.getClass = function(legislator) {
