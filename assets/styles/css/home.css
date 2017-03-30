@@ -366,16 +366,16 @@ input.sendFax {
     color:black;
 }
 
-#faxForm p {
-    color:black;
-}
-
 #faxForm h3 {
     font-size: 1.25em;
 }
 
 #faxForm label {
     font-size: 1.25em;
+}
+
+#faxInputArea p {
+    color:black;
 }
 
 #tableFilters h3 {

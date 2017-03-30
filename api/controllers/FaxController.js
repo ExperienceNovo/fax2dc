@@ -108,6 +108,7 @@ module.exports = {
 				Fax.update({id: model[0].id}, model[0]);
 				//var html_content = emailService.prepareTemplate('fax', model[0]);
 				//model[0].faxContent = html_content;
+				var html_content = model[0].faxContent;
 				emailService.sendTemplate('sent', model[0].email, 'Fax Sent! -- Direct your impact -- FAX2DC', model[0]);
 				phaxio.sendFax({
 					to: model[0].legislator.fax,
