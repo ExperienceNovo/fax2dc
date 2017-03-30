@@ -16,13 +16,13 @@
       </div>
     </div>
     <div class="row">
-      <div class="col-md-12" style="text-align:center">
+      <!--<div class="col-md-12" style="text-align:center">
         <img src="images/FAXbuilding.svg" style="height:150px;"/>
-      </div>
+      </div>-->
     </div>
     <div class="row">
       <div class="col-md-12" style="text-align:left;overflow-wrap: break-word;">
-        {{newFax.faxContent}}
+        <div ng-bind-html="renderHtml(newFax.faxContent)"></div>
       </div>
     </div>
   </div>

@@ -86,13 +86,16 @@
       </tbody>
     </table>
   </div>
-  <form name="faxForm" id="faxForm" ng-submit="submitFax()">
+  <form name="faxForm" id="faxForm" ng-submit="submitFax()" style="text-align:left">
     <div class="col-md-12">
       <div class="spacing-5"></div>
       <div class="form-group">
         <h3 style="float:left">Write Message</h3>
-        <div class="spacing-15"></div>
-        <textarea class="form-control" rows="10" ng-model="newFax.faxContent" placeholder="Are they listening?"></textarea>
+        <div class="spacing-25"></div>
+        <div class="spacing-5"></div>
+        <!--<textarea class="form-control" rows="10" ng-model="newFax.faxContent" placeholder="Are they listening?"></textarea>-->
+        <text-angular ng-model="newFax.faxContent" ta-toolbar="[['h1','h2','h3', 'p'],['bold','italics','justifyLeft', 'justifyCenter', 'justifyRight', 'justifyFull', 'indent', 'outdent', 'insertImage']]" placeholder="Are they listening?"></text-angular>
+
       </div>
     </div>
     <div class="col-md-6">

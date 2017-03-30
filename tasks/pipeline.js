@@ -15,7 +15,8 @@
 // (if you're using LESS with the built-in default config, you'll want
 //  to change `assets/styles/importer.less` instead.)
 var cssFilesToInject = [
-  'styles/**/*.css'
+  'styles/**/*.css',
+  'bower_components/textAngular/dist/textAngular.css'
 ];
 
 
@@ -32,13 +33,11 @@ var jsFilesToInject = [
   'bower_components/lodash/lodash.js',
   'bower_components/moment/moment.js',
   'bower_components/angular-moment/angular-moment.js',
-  'bower_components/angular-google-maps/dist/angular-google-maps.js',
   'bower_components/angular-scroll/angular-scroll.js',
   'bower_components/bootstrap/dist/js/bootstrap.js',
-  'bower_components/froala-wysiwyg-editor/js/froala_editor.min.js',
-  'bower_components/angular-froala/src/angular-froala.js',
-
-
+  'bower_components/textAngular/dist/textAngular-rangy.min.js',
+  'bower_components/textAngular/dist/textAngular-sanitize.min.js',
+  'bower_components/textAngular/dist/textAngular.min.js',
 
   //
   // *->    you might put other dependencies like jQuery or Angular here   <-*

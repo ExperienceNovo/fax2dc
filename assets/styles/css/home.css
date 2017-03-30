@@ -362,6 +362,14 @@ input.sendFax {
     font-size: 1.25em;
 }
 
+#faxForm h1 {
+    color:black;
+}
+
+#faxForm p {
+    color:black;
+}
+
 #faxForm h3 {
     font-size: 1.25em;
 }

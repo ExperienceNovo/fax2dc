@@ -197,8 +197,10 @@ angular.module( 'fax2dc.home', [
     });
 
 }])
-.controller('ConfirmationModalInstanceCtrl', ['$scope', '$uibModalInstance', 'FaxModel', 'newFax', function ($scope, $uibModalInstance, FaxModel, newFax) {
+.controller('ConfirmationModalInstanceCtrl', ['$sce','$scope', '$uibModalInstance', 'FaxModel', 'newFax', function ($sce, $scope, $uibModalInstance, FaxModel, newFax) {
     $scope.newFax = newFax;
+    $scope.renderHtml = function (htmlCode) {return $sce.trustAsHtml(htmlCode);};
+    console.log(newFax)
     $scope.ok = function () {
         FaxModel.create($scope.newFax);
         $uibModalInstance.close($scope.newFax);
