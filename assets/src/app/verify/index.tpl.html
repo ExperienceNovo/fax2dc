@@ -5,10 +5,9 @@
                 <div class="col-md-8 col-md-offset-2">
                     <img class="intro-img" src="images/FAXLOGO1.svg">
                     <div class="spacing-15"></div>
-                    <p class="intro-text">{{fax.name}}<br><br>Send your fax</p>
-                    <a href="#" ng-click="verify()" class="btn btn-circle page-scroll" du-smooth-scroll>
-                        <i class="fa fa-check animated"></i>
-                    </a>
+                    <p class="intro-text">To: {{fax.legislator.first_name}} {{fax.legislator.last_name}}</p>
+                    <p class="intro-text">From: {{fax.name}}</p>
+                    <p class="intro-text btn btn-primary" ng-click="verify()">Send your fax</p>
                 </div>
             </div>
         </div>
@@ -17,9 +16,7 @@
 <section id="about" class="container content-section text-center">
   <div class="about-section">
         <div class="container">
-          {{fax.legislator.first_name}} {{fax.legislator.last_name}}
-          {{fax.faxContent}}
-          <!--trust as html-->
+          <div ng-bind-html="renderHtml(fax.faxContent)"></div>
         </div>
     </div>
 </section>
