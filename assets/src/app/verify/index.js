@@ -19,7 +19,7 @@ angular.module( 'fax2dc.verify', [
 }])
 
 .controller( 'VerifyCtrl', [ '$location',  '$sce', '$scope', '$stateParams', 'fax', 'FaxModel', 'titleService', function VerifyController( $location, $sce, $scope, $stateParams, fax, FaxModel, titleService ) {
-	titleService.setTitle('About - Fax2DC');
+	titleService.setTitle('Verify - Fax2DC');
 	$scope.fax = fax;
 	if ($scope.fax.isVerified){$location.path('/fax/'+$stateParams.id)};
 	$scope.renderHtml = function (htmlCode) {return $sce.trustAsHtml(htmlCode);};
