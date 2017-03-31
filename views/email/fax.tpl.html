@@ -2,8 +2,11 @@
 <html xmlns="http://www.w3.org/1999/xhtml" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin: 0;">
 	<body>
 		<img src="https://www.fax2dc.com/images/FAXLOGO1.png" style="height:150px;">
+		<h2>To: {{legislator.title}} {{legislator.first_name}} {{legislator.last_name}} of {{legislator.state}}</h2>
 		<br><br>
 		{{{faxContent}}}
+		<br><br>
+		<p>sent by: {{name}} - {{email}}</p>
 		<br><br>
 		sponsored by<br>
 		https://www.experiencenovo.io
