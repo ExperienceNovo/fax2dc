@@ -5,7 +5,10 @@
  
 var _ = require('lodash');
 var Phaxio = require('phaxio'),
-phaxio = new Phaxio('66a159a76ea1af4944f35313e8301cb5255bbe7e', 'e9778ac940f12c59771356f99676a9f93ebca16c');
+//TEST
+//phaxio = new Phaxio('66a159a76ea1af4944f35313e8301cb5255bbe7e', 'e9778ac940f12c59771356f99676a9f93ebca16c');
+//LIVE
+phaxio = new Phaxio('d7fefc0ec1cf08505312ca9339e89673f8e2147c', 'f9ad188f9abdc8734b58ff744ab9112b68f51ae6');
 	
 module.exports = {
 
