@@ -45,7 +45,7 @@ module.exports.routes = {
   'get /api/legislator': 'LegislatorController.getAll',
   'get /api/legislator/location': 'LegislatorController.getByLocation',
 
-  '/.well-known/acme-challenge/Dtkozjq3bbAFbmG2JYv2KB9RFoUIzyBiVd3Zxo0l7aM': 'HomeController.ssl',
+  '/.well-known/acme-challenge/wuaw9YapGnbIPnGhXYRxlZoka1sYoT9AFF1AoNjlWNE': 'HomeController.ssl',
 
 
 };
