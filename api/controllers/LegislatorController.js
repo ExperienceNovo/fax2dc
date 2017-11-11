@@ -3,13 +3,10 @@
  *
  */
 
-var _ = require('lodash');
 var request = require('request');
 var async = require('async');
-var rp = require('request-promise');
 
 module.exports = {
-	//DOESNT WORK ANYMORE -- PROPUBLICA FXD IT UP -- SWITCH TO GOOGLE TO FIND VIA LAT LNG
 	getAll: function(req, res) {
 		var url = "https://api.propublica.org/congress/v1/{congress}/{chamber}/members.json";
 		var chambers = ['house', 'senate'];
@@ -61,11 +58,6 @@ module.exports = {
 		});
 	},
 
-	//DOESNT WORK ANYMORE -- PROPUBLICA FXD IT UP -- SWITCH TO GOOGLE TO FIND VIA LAT LNG
-	//https://developers.google.com/civic-information/
-	//https://www.googleapis.com/civicinfo/v2/elections?key=<YOUR_API_KEY>
-	//reverse geocode
-
 	getByLocation: function(req, res){
 		var model = {
 			url: 'https://www.googleapis.com/civicinfo/v2/representatives/?key=AIzaSyDuNNenJANprqe8vwdk_v6wuN38EEUkJPs&address='+req.query.lat+','+req.query.lng+'&roles=legislatorlowerbody&roles=legislatorupperbody',
@@ -90,8 +82,6 @@ module.exports = {
 				});
 			}
 		});
-
-
 	},
 
 }
