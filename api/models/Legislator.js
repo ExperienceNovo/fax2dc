@@ -1,9 +1,9 @@
 module.exports = {
     attributes: {
-        firstName: {
+        first_name: {
           type: 'string',
         },
-        lastName: {
+        last_name: {
           type: 'string',
         },
         state: {
@@ -27,6 +27,5 @@ module.exports = {
         officialId: {
           type: 'string'
         },
- 
       }
 };

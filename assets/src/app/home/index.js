@@ -47,10 +47,11 @@ angular.module( 'fax2dc.home', [
                 lng = position.coords.longitude;
                 console.log(lng)
                 LegislatorModel.getByLocation(lat, lng).then(function(representatives){
-                    $scope.officialRepresentatives = representatives.map(function(obj){return obj.bioguide_id});
+                    console.log(representatives)
+                    $scope.officialRepresentatives = representatives.map(function(obj){return obj.officialId});
                     $scope.loading = false;
                     for (x in $scope.officialRepresentatives){
-                      var index = $scope.legislators.map(function(e) { return e.bioguide_id; }).indexOf($scope.officialRepresentatives[x]);
+                      var index = $scope.legislators.map(function(e) { return e.officialId; }).indexOf($scope.officialRepresentatives[x]);
                       $scope.selectLegislator($scope.legislators[index]);
                     }
                     $scope.showSelected = true;

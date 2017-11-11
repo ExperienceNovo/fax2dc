@@ -5,22 +5,26 @@
 
 var _ = require('lodash');
 var request = require('request');
+var async = require('async');
 var rp = require('request-promise');
 
 module.exports = {
+	//DOESNT WORK ANYMORE -- PROPUBLICA FXD IT UP -- SWITCH TO GOOGLE TO FIND VIA LAT LNG
 	getAll: function(req, res) {
-		var url = "http://congress.api.sunlightfoundation.com/legislators?per_page=all&apikey=c16a6c623ee54948bac2a010ea6fab70";
-		request({
-			    url: url,
-			    json: true
-			}, function (error, response, body) {
-
-			    if (!error && response.statusCode === 200) {
-					var congressData = body.results;
-					var legislators = [];
+		var url = "https://api.propublica.org/congress/v1/{congress}/{chamber}/members.json";
+		var chambers = ['house', 'senate'];
+		var legislators = [];
+		async.eachSeries(chambers, function (chamber, nextChamber){
+			var model = {
+				url: 'https://api.propublica.org/congress/v1/115/' + chamber + '/members.json',
+				json: true,
+				headers: {'X-API-Key': 'hkxQrlrF0ba6dZdSxJMIC4B60JxKMtmm8GR5YuRx'},
+			};
+			request(model, function (error, response, body) {
+			    if (!error) {
+					var congressData = body.results[0].members;
 					var nullArray = [];
 					for (var key in congressData) {
-
 						var fax = congressData[key].fax;
 						var first_name = congressData[key].first_name;
 						var last_name = congressData[key].last_name;
@@ -28,7 +32,7 @@ module.exports = {
 						var phone = congressData[key].phone;
 						var state = congressData[key].state;
 						var title = congressData[key].title;
-						var bioguide_id = congressData[key].bioguide_id;
+						var id = congressData[key].id;
 						var email = first_name.replace('.','').replace(' ','.') + '.' + last_name.replace(' ','.') + '@gmail.com';
 						var model = {
 							first_name: first_name,
@@ -40,52 +44,54 @@ module.exports = {
 							fax: fax,
 							email: email,
 							title: title,
-							bioguide_id:bioguide_id
+							officialId:id
 						};
 						//console.log(model);
 						//do a db for manual update..
+						Legislator.findOrCreate({officialId:model.officialId}, model);//.then(function(model){console.log(model)});
 						if (fax==null){nullArray.push(model);}
 						legislators.push(model);
-				}
-	    	}
-	    	console.log(nullArray.length);
-	    	//Legislator.create(legislators);
+					}
+					process.nextTick(nextChamber);
+		    	}
+		    	console.log(nullArray.length);
+			});
+		}, function(err, results) {
 			res.json(legislators);
 		});
 	},
 
+	//DOESNT WORK ANYMORE -- PROPUBLICA FXD IT UP -- SWITCH TO GOOGLE TO FIND VIA LAT LNG
+	//https://developers.google.com/civic-information/
+	//https://www.googleapis.com/civicinfo/v2/elections?key=<YOUR_API_KEY>
+	//reverse geocode
+
 	getByLocation: function(req, res){
-		var lat = req.query.lat;
-		var lng = req.query.lng;
-		console.log(lat)
-		var stateModel= {
-			url: 'http://openstates.org/api/v1/legislators/geo/?lat='+lat+'&long='+lng+'&active=true&apikey=f6907ad0-1af4-4656-add7-657931b439ef',
-			json: true
+		var model = {
+			url: 'https://www.googleapis.com/civicinfo/v2/representatives/?key=AIzaSyDuNNenJANprqe8vwdk_v6wuN38EEUkJPs&address='+req.query.lat+','+req.query.lng+'&roles=legislatorlowerbody&roles=legislatorupperbody',
+			json: true,
 		};
-		var federalModel = {
-			url: 'http://congress.api.sunlightfoundation.com/legislators/locate?latitude='+lat+'&longitude='+lng+'&per_page=all&apikey=hkxQrlrF0ba6dZdSxJMIC4B60JxKMtmm8GR5YuRx',
-			json: true
-		};
-		rp(stateModel).then(function(stateRepresentatives){
-			return [rp(federalModel), stateRepresentatives];
-		}).spread(function(federalRepresentatives, stateRepresentatives) {
-			return [federalRepresentatives.results, stateRepresentatives];
-		}).then(function(representatives){
-			var federalRepresentatives = representatives[0];
-			console.log(federalRepresentatives)
-			res.json(federalRepresentatives);
-			//var stateRepresentatives = representatives[1];
-			//var bioguide_id = federalRepresentatives.map(function(obj){return obj.bioguide_id});
-			//var leg_id = stateRepresentatives.map(function(obj){return obj.leg_id});
-			//User.find({bioguide_id:bioguide_id}).then(function(federalRepresentatives){
-				//var federalRepresentativesModel = federalRepresentatives;
-				//representatives.concat(federalRepresentatives);
-				//User.find({leg_id:leg_id}).then(function(stateRepresentatives){
-					//var representatives = federalRepresentativesModel.concat(stateRepresentatives)
-					//res.json(representatives)
-		    	//});
-	    	//});
-		}).catch(function(err) {console.log(err)});	
+		var modelArray = [];
+		request(model, function (error, response, body) {
+			console.log(body);
+			if(!error){
+				console.log(body.officials);
+				for (x in body.officials){
+					var first_name = body.officials[x].name.split(' ')[0];
+					var last_name = body.officials[x].name.split(' ').slice(-1)[0];
+					if (last_name.endsWith('.')){last_name = body.officials[x].name.split(' ')[body.officials[x].name.split(' ').length - 2] + ' ' + body.officials[x].name.split(' ').slice(-1)[0]}
+					var model = {first_name:first_name, last_name:last_name};
+					console.log(first_name, last_name);
+					modelArray.push(model)
+				}
+				Legislator.find(modelArray).then(function(models){
+					console.log(models);
+					res.json(models)
+				});
+			}
+		});
+
+
 	},
 
 }
