@@ -69,6 +69,7 @@ module.exports = {
 			if(!error){
 				console.log(body.officials);
 				for (x in body.officials){
+					//ID IS ALSO IN PIC URL..
 					var first_name = body.officials[x].name.split(' ')[0];
 					var last_name = body.officials[x].name.split(' ').slice(-1)[0];
 					if (last_name.endsWith('.')){last_name = body.officials[x].name.split(' ')[body.officials[x].name.split(' ').length - 2] + ' ' + body.officials[x].name.split(' ').slice(-1)[0]}
