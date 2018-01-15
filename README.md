@@ -1,9 +1,5 @@
-# Fax2DC
-
-###### fax your representatives in congress 
-
-https://fax2dc.herokuapp.com
-
-http://www.fax2dc.com
-
-http://www.faxtodc.com
+![alt text](https://www.fax2dc.com/images/FAXLOGO1.png "FAX2DC")
+#Fax2DC
+####fax your representatives in congress 
+[https://www.fax2dc.com](https://www.fax2dc.com)
+[https://www.faxtodc.com](https://www.faxtodc.com)
